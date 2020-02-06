@@ -148,7 +148,7 @@ function handleMessage(sender_psid, received_message) {
   }
   else if (received_message.text == "hello") {
     response = {
-      "text":'Hello..Min Ga Lar Par'
+      "text":'Say'
     }
   }
   else if (received_message.text == "ni hao") {    
