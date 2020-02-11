@@ -151,6 +151,33 @@ function handleMessage(sender_psid, received_message) {
       "text":'Say'
     }
   }
+  else if (received_message.text == "button") {
+    response = {
+      "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"button",
+        "text":"Try the postback button!",
+         "buttons":[
+            {
+              "type":"postback",
+              "title":"Button 1",
+              "payload": "one"
+            },
+            {
+              "type":"postback",
+              "title":"Button 2",
+              "payload":"two"
+            },
+            {
+              "type":"postback",
+              "title":"Button 3",
+              "payload":"three"
+            }                            
+          ]      
+      }
+    }
+  }
   else if (received_message.text == "ni hao") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
