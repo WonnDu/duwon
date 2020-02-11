@@ -153,28 +153,28 @@ function handleMessage(sender_psid, received_message) {
   }
   else if (received_message.text == "button") {
     response = {
-      "attachment":{
+    "attachment":{
       "type":"template",
       "payload":{
         "template_type":"button",
         "text":"Try the postback button!",
-         "buttons":[
-            {
-              "type":"postback",
-              "title":"Button 1",
-              "payload": "one"
-            },
-            {
-              "type":"postback",
-              "title":"Button 2",
-              "payload":"two"
-            },
-            {
-              "type":"postback",
-              "title":"Button 3",
-              "payload":"three"
-            }                            
-          ]      
+        "buttons":[ 
+          {
+            "type":"postback",
+            "title":"button 1",
+            "payload":"one"
+          },
+          {
+            "type":"postback",
+            "title":"button 2",
+            "payload":"two"
+          },
+          {
+            "type":"postback",
+            "title":"button 3",
+            "payload":"three"
+          }
+        ]
       }
     }
   }
