@@ -300,7 +300,7 @@ function handlePostback(sender_psid, received_postback) {
                     "template_type": "generic",
                     "elements": [{
                       "title": "D",
-                      "subtitle": "Office Address",
+                      "subtitle": "Office Address: No-117, Shwe Li Road, Pobba Thiri Township, Nyapyitaw, Myanmar",
                       "buttons": [
                         {
                           "type": "postback",
