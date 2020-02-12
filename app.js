@@ -125,7 +125,7 @@ function handleMessage(sender_psid, received_message) {
   let response;
   
   // Checks if the message contains text
-  if (received_message.text == "hi") {    
+  if (received_message.text == "hii") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
@@ -151,34 +151,34 @@ function handleMessage(sender_psid, received_message) {
       "text":'Say'
     }
   }
-  else if (received_message.text == "Main Menu") {
-    response = {
-      "attachment":{
+  else if (received_message.text == "hi") {
+    response = { "attachment":{
       "type":"template",
       "payload":{
         "template_type":"button",
-        "text":"We have informed our admins. Please leave a message with detailed information. Thank for you contacting us. Have a nice day!",
+        "text":"Hi, You are warmly welcomed. Thank you for contacting us. Have a nice day!",
          "buttons":[
               {
-                "type":"To Sell",
+                "type":"postback",
                 "title":"Main Menu",
-                "payload": "one1"
+                "payload": "onee"
               },
               {
                 "type":"postback",
-                "title":"To Buy",
+                "title":"Contact us",
                 "payload":"two2"
               },
                 {
                 "type":"postback",
-                "title":"To Rent",
+                "title":"About us",
                 "payload":"three3"
               }                            
             ]      
         }
       }
-    }
+   }
   }
+
   else if (received_message.text == "ni hao") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
