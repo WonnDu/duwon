@@ -288,12 +288,41 @@ function handlePostback(sender_psid, received_postback) {
                           "title": "To Rent",
                           "payload": "n",
                         }
-                      ],
-                    }]
+                      ]
+                    }],
             }
         }
     }
-  } 
+  }else if (payload === 'two2') {
+    response = { "attachment": {
+                  "type": "template",
+                  "payload": {
+                    "template_type": "generic",
+                    "elements": [{
+                      "title": "In shop",
+                      "subtitle": "jewellery",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "Ring",
+                          "payload": "r",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "Earring",
+                          "payload": "e",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "Necklace",
+                          "payload": "n",
+                        }
+                      ],
+                    }]
+                  }
+                }
+              }
+  }
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
 }
