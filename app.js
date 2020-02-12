@@ -151,7 +151,7 @@ function handleMessage(sender_psid, received_message) {
       "text":'Say'
     }
   }
-  else if (received_message.text == "button") {
+  else if (payload== "Main Menu") {
     response = {
       "attachment":{
       "type":"template",
@@ -160,18 +160,18 @@ function handleMessage(sender_psid, received_message) {
         "text":"We have informed our admins. Please leave a message with detailed information. Thank for you contacting us. Have a nice day!",
          "buttons":[
               {
-                "type":"postback",
+                "type":"To Sell",
                 "title":"Main Menu",
                 "payload": "one"
               },
               {
                 "type":"postback",
-                "title":"Contact us",
+                "title":"To Buy",
                 "payload":"two"
               },
                 {
                 "type":"postback",
-                "title":"About us",
+                "title":"To Rent",
                 "payload":"three"
               }                            
             ]      
