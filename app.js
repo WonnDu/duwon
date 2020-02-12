@@ -309,11 +309,12 @@ function handlePostback(sender_psid, received_postback) {
                         },
                         {
                           "type": "postback",
-                          "title": "To Buy",
-                          "payload": "About us",
-                        }
+                          "title": "About us",
+                          "payload": "three3",
+                        },
                       ]
                     }],
+                  }
             }
         }
     }
