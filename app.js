@@ -125,7 +125,7 @@ function handleMessage(sender_psid, received_message) {
   let response;
   
   // Checks if the message contains text
-  if (received_message.text == "hii") {    
+  if (received_message.text == "ahii") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
@@ -146,12 +146,12 @@ function handleMessage(sender_psid, received_message) {
     ]
     }
   }
-  else if (received_message.text == "helloo") {
+  else if (received_message.text == "ahelloo") {
     response = {
       "text":'Say'
     }
   }
-  else if (received_message.text == "hi", "hello") {
+  else if (received_message.text == "hi", "hii", "hiii", "hiiii", "hiiiii", "hiiiiii", "hello", "hello admin", "helloo" ) {
     response = { "attachment":{
       "type":"template",
       "payload":{
