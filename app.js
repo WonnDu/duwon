@@ -288,8 +288,8 @@ function handlePostback(sender_psid, received_postback) {
                           "title": "To Rent",
                           "payload": "n",
                         }
-                      ]
-                    }],
+                      ],
+                    }]
             }
         }
     }
