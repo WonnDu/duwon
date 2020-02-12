@@ -293,31 +293,7 @@ function handlePostback(sender_psid, received_postback) {
             }
         }
     }
-  } else if (payload === 'two2') {
-     response = { "attachment": {
-                  "type": "template",
-                  "payload": {
-                    "template_type": "generic",
-                    "elements": [{
-                      "title": "",
-                      "subtitle": "Office Address: No-117, Shwe Li Road, Pobba Thiri Township, Naypyitaw, Myanmar Contact Number: (+95)-9-5567626 (+95)-9-4367116 Email: info@duwonrealestate.com",
-                      "buttons": [
-                        {
-                          "type": "postback",
-                          "title": "Main Menu",
-                          "payload": "one1",
-                        },
-                        {
-                          "type": "postback",
-                          "title": "About us",
-                          "payload": "three3",
-                        }
-                      ]
-                    }],
-                  }
-            }
-        }
-    }
+  } 
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
 }
