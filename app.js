@@ -248,7 +248,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"Main Menu",
-                "payload": "one1"
+                "payload": "onee"
               },
               {
                 "type":"postback",
@@ -264,13 +264,13 @@ function handlePostback(sender_psid, received_postback) {
         }
       }
    }
-  } else if (payload === 'one1') {
+  } else if (payload === 'onee') {
      response = { "attachment": {
                   "type": "template",
                   "payload": {
                     "template_type": "generic",
                     "elements": [{
-                      "title": "",
+                      "title": "k",
                       "subtitle": "To find the properties, please choose an option below:",
                       "buttons": [
                         {
