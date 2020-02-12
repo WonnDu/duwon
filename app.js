@@ -276,17 +276,17 @@ function handlePostback(sender_psid, received_postback) {
                         {
                           "type": "postback",
                           "title": "To Sell",
-                          "payload": "r",
+                          "payload": "tosel",
                         },
                         {
                           "type": "postback",
                           "title": "To Buy",
-                          "payload": "e",
+                          "payload": "tobu",
                         },
                         {
                           "type": "postback",
                           "title": "To Rent",
-                          "payload": "n",
+                          "payload": "tore",
                         }
                       ],
                     }]
@@ -305,7 +305,7 @@ function handlePostback(sender_psid, received_postback) {
                         {
                           "type": "postback",
                           "title": "Main Menu",
-                          "payload": "mame",
+                          "payload": "onee",
                         },
                         {
                           "type": "postback",
