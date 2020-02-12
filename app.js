@@ -151,7 +151,7 @@ function handleMessage(sender_psid, received_message) {
       "text":'Say'
     }
   }
-  else if (payload === "Main Menu") {
+  else if (received_message.text == "Main Menu") {
     response = {
       "attachment":{
       "type":"template",
