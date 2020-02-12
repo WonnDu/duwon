@@ -243,7 +243,7 @@ function handlePostback(sender_psid, received_postback) {
       "type":"template",
       "payload":{
         "template_type":"button",
-        "text":"We have informed our admins. Please leave a message with detailed information. Thank for you contacting us. Have a nice day!",
+        "text":"Hi, You are warmly welcomed. Thank you for contacting us. Have a nice day!",
          "buttons":[
               {
                 "type":"postback",
