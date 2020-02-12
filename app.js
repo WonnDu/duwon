@@ -145,6 +145,10 @@ function handleMessage(sender_psid, received_message) {
     ]
     }
   }
+  else if (received_message.text == "get_started") {
+    response = {
+      "text":'Hi, You are warmly welcome.'
+    }
   else if (received_message.text == "hello") {
     response = {
       "text":'Hello..Min Ga Lar Par Shint. What can I help You?'
