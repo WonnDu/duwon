@@ -146,12 +146,12 @@ function handleMessage(sender_psid, received_message) {
     ]
     }
   }
-  else if (received_message.text == "hello") {
+  else if (received_message.text == "helloo") {
     response = {
       "text":'Say'
     }
   }
-  else if (received_message.text == "hi") {
+  else if (received_message.text == "hi, hello") {
     response = { "attachment":{
       "type":"template",
       "payload":{
