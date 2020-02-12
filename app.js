@@ -309,11 +309,6 @@ function handlePostback(sender_psid, received_postback) {
                         },
                         {
                           "type": "postback",
-                          "title": "Earring",
-                          "payload": "e",
-                        },
-                        {
-                          "type": "postback",
                           "title": "Necklace",
                           "payload": "n",
                         }
