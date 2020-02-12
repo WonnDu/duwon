@@ -226,6 +226,24 @@ function handleMessage(sender_psid, received_message) {
   callSendAPI(sender_psid, response);    
 }
 
+var mainme = [
+              {
+                "type":"postback",
+                "title":"Main Menu",
+                "payload": "one"
+              },
+              {
+                "type":"postback",
+                "title":"Contact us",
+                "payload":"two"
+              },
+                {
+                "type":"postback",
+                "title":"About us",
+                "payload":"three"
+              }                            
+            ]
+
 function handlePostback(sender_psid, received_postback) {
   console.log('ok')
    let response;
@@ -238,7 +256,7 @@ function handlePostback(sender_psid, received_postback) {
   } else if (payload === 'no') {
     response = { "text": "Oops, try sending another image." }
   } else if (payload === 'get_started') {
-    response = { "text": "Hi, You are warmly welcomed." }
+    response = { "text": "Hi, You are warmly welcomed." + mainme  }
   }
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
