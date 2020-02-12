@@ -159,22 +159,23 @@ function handleMessage(sender_psid, received_message) {
         "template_type":"button",
         "text":"Try the postback button!",
          "buttons":[
-            {
-              "type":"postback",
-              "title":"Button 1",
-              "payload": "one"
-            },
-            {
-              "type":"postback",
-              "title":"Button 2",
-              "payload":"two"
-             },
               {
-              "type":"postback",
-              "title":"Button 3",
-              "payload":"three"
+                "type":"postback",
+                "title":"Button 1",
+                "payload": "one"
+              },
+              {
+                "type":"postback",
+                "title":"Button 2",
+                "payload":"two"
+              },
+                {
+                "type":"postback",
+                "title":"Button 3",
+                "payload":"three"
               }                            
-          ]      
+            ]      
+        }
       }
     }
   }
