@@ -299,18 +299,18 @@ function handlePostback(sender_psid, received_postback) {
                   "payload": {
                     "template_type": "generic",
                     "elements": [{
-                      "title": "In shop",
-                      "subtitle": "jewellery",
+                      "title": "D",
+                      "subtitle": "Office Address",
                       "buttons": [
                         {
                           "type": "postback",
-                          "title": "Ring",
-                          "payload": "r",
+                          "title": "Main Menu",
+                          "payload": "mame",
                         },
                         {
                           "type": "postback",
-                          "title": "Necklace",
-                          "payload": "n",
+                          "title": "About us",
+                          "payload": "abus",
                         }
                       ],
                     }]
