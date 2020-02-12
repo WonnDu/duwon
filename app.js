@@ -162,17 +162,17 @@ function handleMessage(sender_psid, received_message) {
               {
                 "type":"To Sell",
                 "title":"Main Menu",
-                "payload": "one"
+                "payload": "one1"
               },
               {
                 "type":"postback",
                 "title":"To Buy",
-                "payload":"two"
+                "payload":"two2"
               },
                 {
                 "type":"postback",
                 "title":"To Rent",
-                "payload":"three"
+                "payload":"three3"
               }                            
             ]      
         }
@@ -248,23 +248,50 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"Main Menu",
-                "payload": "one"
+                "payload": "one1"
               },
               {
                 "type":"postback",
                 "title":"Contact us",
-                "payload":"two"
+                "payload":"two2"
               },
                 {
                 "type":"postback",
                 "title":"About us",
-                "payload":"three"
+                "payload":"three3"
               }                            
             ]      
         }
       }
    }
-  } 
+  } else if (payload === 'one1') {
+     response = { "attachment": {
+                  "type": "template",
+                  "payload": {
+                    "template_type": "generic",
+                    "elements": [{
+                      "title": "In shop",
+                      "subtitle": "jewellery",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "To Sell",
+                          "payload": "r",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "To Buy",
+                          "payload": "e",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "To rent",
+                          "payload": "n",
+                        }
+                      ],
+                    }]
+                  }
+                }
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
 }
