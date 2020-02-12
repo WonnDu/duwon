@@ -239,7 +239,12 @@ function handlePostback(sender_psid, received_postback) {
   } else if (payload === 'no') {
     response = { "text": "Oops, try sending another image." }
   } else if (payload === 'get_started') {
-    response = { "text": "Hi, You are warmly welcomed." + "buttons":[
+    response = { "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"button",
+        "text":"We have informed our admins. Please leave a message with detailed information. Thank for you contacting us. Have a nice day!",
+         "buttons":[
               {
                 "type":"postback",
                 "title":"Main Menu",
@@ -255,8 +260,11 @@ function handlePostback(sender_psid, received_postback) {
                 "title":"About us",
                 "payload":"three"
               }                            
-            ] }
-  
+            ]      
+        }
+      }
+   }
+  } 
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
 }
