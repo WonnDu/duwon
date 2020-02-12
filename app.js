@@ -151,7 +151,7 @@ function handleMessage(sender_psid, received_message) {
       "text":'Say'
     }
   }
-  else if (received_message.text == "hi, hello") {
+  else if (received_message.text == "hi", "hello") {
     response = { "attachment":{
       "type":"template",
       "payload":{
