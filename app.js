@@ -1,3 +1,4 @@
+
 /**
  * Copyright 2017-present, Facebook, Inc. All rights reserved.
  *
@@ -132,7 +133,7 @@ function handleMessage(sender_psid, received_message) {
       "quick_replies":[
       {
         "content_type":"text",
-        "title":"Red", 
+        "title":"Red",
         "payload":"<POSTBACK_PAYLOAD>",
         "image_url":"http://example.com/img/red.png"
       },
@@ -145,13 +146,9 @@ function handleMessage(sender_psid, received_message) {
     ]
     }
   }
-  else if (received_message.text == "get_started") {
-    response = {
-      "text":'Hi, You are warmly welcome.'
-    }
   else if (received_message.text == "hello") {
     response = {
-      "text":'Hello..Min Ga Lar Par Shint. What can I help You?'
+      "text":'Say'
     }
   }
   else if (received_message.text == "button") {
@@ -164,97 +161,22 @@ function handleMessage(sender_psid, received_message) {
         "buttons":[ 
           {
             "type":"postback",
-            "title":"Sell",
+            "title":"button 1",
             "payload":"one"
           },
           {
             "type":"postback",
-            "title":"Buy",
+            "title":"button 2",
             "payload":"two"
           },
           {
             "type":"postback",
-            "title":"Trend",
+            "title":"button 3",
             "payload":"three"
           }
         ]
       }
     }
-  }
-  }else if (received_message.text == "slide") {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements":[
-           {
-            "title":"Welcome!",
-            "image_url":"https://petersfancybrownhats.com/company_image.png",
-            "subtitle":"We have the right hat for everyone.",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://petersfancybrownhats.com/view?item=103",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://petersfancybrownhats.com",
-                "title":"View Website"
-              },{
-                "type":"postback",
-                "title":"Start Chatting",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD"
-              }              
-            ]      
-          },
-          {
-            "title":"Welcome!",
-            "image_url":"https://petersfancybrownhats.com/company_image.png",
-            "subtitle":"We have the right hat for everyone.",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://petersfancybrownhats.com/view?item=103",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://petersfancybrownhats.com",
-                "title":"View Website"
-              },{
-                "type":"postback",
-                "title":"Start Chatting",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD"
-              }              
-            ]      
-          },
-          {
-            "title":"Welcome!",
-            "image_url":"https://petersfancybrownhats.com/company_image.png",
-            "subtitle":"We have the right hat for everyone.",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://petersfancybrownhats.com/view?item=103",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://petersfancybrownhats.com",
-                "title":"View Website"
-              },{
-                "type":"postback",
-                "title":"Start Chatting",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD"
-              }              
-            ]      
-          }
-        ]
-      }
-    }
-  }
   }
   else if (received_message.text == "ni hao") {    
     // Create the payload for a basic text message, which
@@ -314,6 +236,8 @@ function handlePostback(sender_psid, received_postback) {
     response = { "text": "Thanks!" }
   } else if (payload === 'no') {
     response = { "text": "Oops, try sending another image." }
+  } else if (payload === 'get_started') {
+    response = { "text": "Hi, You are warmly welcomed." }
   }
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
@@ -347,7 +271,7 @@ function callSendAPI(sender_psid, response) {
 
 function setupGetStartedButton(res){
         var messageData = {
-                "get_started":{"payload":"USER_DEFINED_PAYLOAD"}                
+                "get_started":{"payload":"get_started"}                
         };
         // Start the request
         request({
