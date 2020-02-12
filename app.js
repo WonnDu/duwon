@@ -157,21 +157,21 @@ function handleMessage(sender_psid, received_message) {
       "type":"template",
       "payload":{
         "template_type":"button",
-        "text":"Try the postback button!",
+        "text":"We have informed our admins. Please leave a message with detailed information. Thank for you contacting us. Have a nice day!",
          "buttons":[
               {
                 "type":"postback",
-                "title":"Button 1",
+                "title":"Main Menu",
                 "payload": "one"
               },
               {
                 "type":"postback",
-                "title":"Button 2",
+                "title":"Contact us",
                 "payload":"two"
               },
                 {
                 "type":"postback",
-                "title":"Button 3",
+                "title":"About us",
                 "payload":"three"
               }                            
             ]      
