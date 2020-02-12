@@ -311,7 +311,7 @@ function handlePostback(sender_psid, received_postback) {
                           "type": "postback",
                           "title": "About us",
                           "payload": "three3",
-                        },
+                        }
                       ]
                     }],
                   }
