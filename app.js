@@ -317,6 +317,30 @@ function handlePostback(sender_psid, received_postback) {
                   }
                 }
               }
+  }else if (payload === 'tore') {
+    response = { "attachment": {
+                  "type": "template",
+                  "payload": {
+                    "template_type": "generic",
+                    "elements": [{
+                      "title": "F",
+                      "subtitle": "Please choose below options:",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "Landlord",
+                          "payload": "ldld",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "Tenant",
+                          "payload": "tnan",
+                        }
+                      ],
+                    }]
+                  }
+                }
+              }
   }
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
