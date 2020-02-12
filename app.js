@@ -342,8 +342,8 @@ function handlePostback(sender_psid, received_postback) {
                 }
               }
   }else if (payload === 'ldld') {
-    response = { "text":"You have chose to rent out the property as a landlord."}
-
+    response = { "text": "You have chose to rent out the property as a Landlord." }
+  }
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
 }
