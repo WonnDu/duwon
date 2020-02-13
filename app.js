@@ -263,8 +263,21 @@ function handlePostback(sender_psid, received_postback) {
                     }                            
                   ]  
                 }
+                              },
+                  "attachment":{
 
-      }
+      "type":"template",
+      "payload":{
+        "template_type":"button",
+        "text":"You",
+         "buttons":[
+                    {
+                    "type":"postback",
+                    "title":"Service charges",
+                    "payload":"sech"
+                    }                            
+                  ]  
+                }
    }
   } else if (payload === 'onee') {
      response = { "attachment": {
