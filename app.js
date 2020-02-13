@@ -453,7 +453,7 @@ function handlePostback(sender_psid, received_postback) {
               }
   } 
 
-  else if (payload === 'ab1000') {
+  else if (payload === 'ab10') {
     response = {
     "attachment":{
       "type":"template",
