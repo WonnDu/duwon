@@ -397,7 +397,7 @@ function handlePostback(sender_psid, received_postback) {
                   }
                 }
               }
-  } else if (received_message.text === 'un500') {
+  } else if (payload === 'un500') {
     response = {
     "attachment":{
       "type":"template",
