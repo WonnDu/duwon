@@ -375,6 +375,31 @@ function handlePostback(sender_psid, received_postback) {
                     "template_type": "generic",
                     "elements": [{
                       "title": "F",
+                      "subtitle": "Please choose the place in which you want to buy",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "Within Five Thri Township",
+                          "payload": "fethri",
+                        },
+                         {
+                          "type": "postback",
+                          "title": "Pyinmana Township",
+                          "payload": "pyintwp",
+                        }
+                      ],
+                    }]
+                  }
+                }
+              }
+  } 
+  else if (payload === 'pyintwp') {
+    response = { "attachment": {
+                  "type": "template",
+                  "payload": {
+                    "template_type": "generic",
+                    "elements": [{
+                      "title": "F",
                       "subtitle": "Please choose the amount you are avaliable:",
                       "buttons": [
                         {
@@ -397,7 +422,9 @@ function handlePostback(sender_psid, received_postback) {
                   }
                 }
               }
-  } else if (payload === 'un500') {
+  } 
+  
+  else if (payload === 'un500') {
     response = {
     "attachment":{
       "type":"template",
@@ -405,9 +432,9 @@ function handlePostback(sender_psid, received_postback) {
         "template_type":"generic",
         "elements":[
            {
-            "title":"2005 Toyota Harrier",
+            "title":"In Pyinmana Township",
             "image_url":"https://scontent.fmdl4-2.fna.fbcdn.net/v/t1.0-9/84501492_102529838002288_7785866037869674496_n.jpg?_nc_cat=104&_nc_eui2=AeECr4wM5QRK-nr2Mg8DzpC9QMaPApvwDcI6Nz0Eo1B0qlgVeLCVCv7uOwtq96bIRaSXFLctzBDEjfQeEIvRf7qAEiUtGxqZCdp9K23qU24UFw&_nc_ohc=CuU9i3fo2fcAX-tcpL6&_nc_pt=1&_nc_ht=scontent.fmdl4-2.fna&oh=f019efe897280ba54aa900ca817d2e3c&oe=5ED40444",
-            "subtitle":"MMK : 445 lkh",
+            "subtitle":"350, negotiable",
             "default_action": {
               "type": "web_url",
               "url": "https://www.car-tana.com/detail/61e16398ab9e67ec5a55c8d8b4cda413",
