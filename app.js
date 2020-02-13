@@ -361,7 +361,7 @@ function handlePostback(sender_psid, received_postback) {
                         {
                           "type": "postback",
                           "title": "Land",
-                          "payload": "lan",
+                          "payload": "lann",
                         }
                       ],
                     }]
@@ -487,7 +487,7 @@ function handlePostback(sender_psid, received_postback) {
     }
   }
   }
-  else if (payload === 'lan') {
+  else if (payload === 'lann') {
     response = { "attachment": {
                   "type": "template",
                   "payload": {
@@ -511,6 +511,7 @@ function handlePostback(sender_psid, received_postback) {
                   }
                 }
               }
+            }
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
 }
