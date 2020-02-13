@@ -150,7 +150,36 @@ function handleMessage(sender_psid, received_message) {
     response = {
       "text":'Say'
     }
-  }else if (received_message.text == "ni hao") {    
+  }
+  else if (received_message.text == "hi", "hello" ) {
+    response = { "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"button",
+        "text":"Hi, You are warmly welcomed. Thank you for contacting us. Have a nice day!",
+         "buttons":[
+              {
+                "type":"postback",
+                "title":"Main Menu",
+                "payload": "onee"
+              },
+              {
+                "type":"postback",
+                "title":"Contact us",
+                "payload":"two2"
+              },
+                {
+                "type":"postback",
+                "title":"About us",
+                "payload":"three3"
+              }                            
+            ]      
+        }
+      }
+   }
+  }
+
+  else if (received_message.text == "ni hao") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
@@ -209,36 +238,7 @@ function handlePostback(sender_psid, received_postback) {
     response = { "text": "Thanks!" }
   } else if (payload === 'no') {
     response = { "text": "Oops, try sending another image." }
-  }
- else if (payload === "hi", "hii", "hiii", "hiiii", "hiiiii", "hiiiiii", "hello", "hello admin", "helloo" ) {
-    response = { "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"button",
-        "text":"Hi, You are warmly welcomed. Thank you for contacting us. Have a nice day!",
-         "buttons":[
-              {
-                "type":"postback",
-                "title":"Main Menu",
-                "payload": "onee"
-              },
-              {
-                "type":"postback",
-                "title":"Contact us",
-                "payload":"two2"
-              },
-                {
-                "type":"postback",
-                "title":"About us",
-                "payload":"three3"
-              }                            
-            ]      
-        }
-      }
-   }
-  }
-
-   else if (payload === 'get_started') {
+  } else if (payload === 'get_started') {
     response = { "attachment":{
       "type":"template",
       "payload":{
