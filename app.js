@@ -466,19 +466,19 @@ function handlePostback(sender_psid, received_postback) {
             "subtitle":"350 lkh, 4 mb",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.car-tana.com/detail/61e16398ab9e67ec5a55c8d8b4cda413",
+              "url": "https://www.duwonduwon.com",
               "webview_height_ratio": "tall",
              },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.car-tana.com/detail/61e16398ab9e67ec5a55c8d8b4cda413",
+                "url":"",
                 "title":"More Information"
               },
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"sc6"
+                "payload":"inter"
               }              
                    ]      
           }
