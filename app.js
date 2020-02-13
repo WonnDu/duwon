@@ -392,8 +392,37 @@ function handlePostback(sender_psid, received_postback) {
                   }
                 }
               }
+  } else if (payload === 'pyintwp') {
+    response = { "attachment": {
+                  "type": "template",
+                  "payload": {
+                    "template_type": "generic",
+                    "elements": [{
+                      "title": "F",
+                      "subtitle": "Please choose the area ",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "40-60 ft",
+                          "payload": "46ft",
+                        },
+                         {
+                          "type": "postback",
+                          "title": "60-80 ft",
+                          "payload": "68ft",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "other",
+                          "payload": "othft",
+                        }
+                      ],
+                    }]
+                  }
+                }
+              }
   } 
-  else if (payload === 'pyintwp') {
+  else if (payload === '46th') {
     response = { "attachment": {
                   "type": "template",
                   "payload": {
@@ -423,7 +452,7 @@ function handlePostback(sender_psid, received_postback) {
                 }
               }
   } 
-  
+
   else if (payload === 'un500') {
     response = {
     "attachment":{
