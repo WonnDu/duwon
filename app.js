@@ -262,7 +262,7 @@ function handlePostback(sender_psid, received_postback) {
                     "payload":"three3"
                     }                            
                   ]  
-                }
+                } ,
                               },
                   "attachment":{
 
