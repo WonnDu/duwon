@@ -240,6 +240,7 @@ function handlePostback(sender_psid, received_postback) {
     response = { "text": "Oops, try sending another image." }
   } else if (payload === 'get_started') {
     response = { "attachment":{
+
       "type":"template",
       "payload":{
         "template_type":"button",
@@ -260,16 +261,18 @@ function handlePostback(sender_psid, received_postback) {
                 "title":"About us",
                 "payload":"three3"
               }                            
-            ]
-          "template_type":"button",
-           "buttons":[
-               {
+            ]  
+        },
+        "payload":{
+        "template_type":"button",
+        "text":"Hi",
+         "buttons":[
+              {
                 "type":"postback",
                 "title":"Service charges",
-                "payload":"three3"
-              }                            
-            ]  
-        }
+                "payload": "sech"
+              }
+
       }
    }
   } else if (payload === 'onee') {
