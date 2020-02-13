@@ -472,7 +472,7 @@ function handlePostback(sender_psid, received_postback) {
             "buttons":[
               {
                 "type":"web_url",
-                "url":"",
+                "url":"https://www.duwonduwon.com",
                 "title":"More Information"
               },
               {
