@@ -368,6 +368,35 @@ function handlePostback(sender_psid, received_postback) {
                   }
                 }
               }
+  }else if (payload === 'hou') {
+    response = { "attachment": {
+                  "type": "template",
+                  "payload": {
+                    "template_type": "generic",
+                    "elements": [{
+                      "title": "F",
+                      "subtitle": "Please choose the amount you are avaliable:",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "under 500",
+                          "payload": "un500",
+                        },
+                         {
+                          "type": "postback",
+                          "title": "from 500 to 1000",
+                          "payload": "f5t1",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "above 1000",
+                          "payload": "ab10",
+                        }
+                      ],
+                    }]
+                  }
+                }
+              }
   }
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
