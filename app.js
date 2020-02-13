@@ -344,6 +344,30 @@ function handlePostback(sender_psid, received_postback) {
               }
   }else if (payload === 'ldld') {
     response = { "text": "You have chose to rent out the property as a Landlord." }
+  }else if (payload === 'tobu') {
+    response = { "attachment": {
+                  "type": "template",
+                  "payload": {
+                    "template_type": "generic",
+                    "elements": [{
+                      "title": "F",
+                      "subtitle": "Please choose below options:",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "House",
+                          "payload": "hou",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "Land",
+                          "payload": "lan",
+                        }
+                      ],
+                    }]
+                  }
+                }
+              }
   }
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
