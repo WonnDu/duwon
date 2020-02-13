@@ -260,7 +260,14 @@ function handlePostback(sender_psid, received_postback) {
                 "title":"About us",
                 "payload":"three3"
               }                            
-            ]      
+            ]
+          "buttons":[  
+              {
+                "type":"postback",
+                "title":"Service charges",
+                "payload": "sech"
+              }
+            ]    
         }
       }
    }
