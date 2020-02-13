@@ -262,16 +262,6 @@ function handlePostback(sender_psid, received_postback) {
                     "payload":"three3"
                     }                            
                   ]  
-                },
-      "type":"template",
-      "payload":{
-      "template_type":"button",
-      "text":"Hi",
-      "buttons":[
-                {
-                "type":"postback",
-                "title":"Service charges",
-                "payload": "sech"
                 }
 
       }
