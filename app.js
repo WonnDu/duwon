@@ -422,7 +422,7 @@ function handlePostback(sender_psid, received_postback) {
                 }
               }
   } 
-  else if (payload === '46ft') {
+  else if (payload === '46ft','68ft','othft') {
     response = { "attachment": {
                   "type": "template",
                   "payload": {
