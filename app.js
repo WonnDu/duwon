@@ -259,7 +259,12 @@ function handlePostback(sender_psid, received_postback) {
                 "type":"postback",
                 "title":"About us",
                 "payload":"three3"
-              }                            
+              },
+              {
+                "type":"postback",
+                "title":"Service charges",
+                "payload":"four4"
+              }
             ]      
         }
       }
