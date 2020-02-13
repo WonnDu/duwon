@@ -487,6 +487,30 @@ function handlePostback(sender_psid, received_postback) {
     }
   }
   }
+  else if (payload === 'lan') {
+    response = { "attachment": {
+                  "type": "template",
+                  "payload": {
+                    "template_type": "generic",
+                    "elements": [{
+                      "title": "F",
+                      "subtitle": "Please choose the place in which you want to buy",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "Within 5 Thri Township",
+                          "payload": "5thri",
+                        },
+                         {
+                          "type": "postback",
+                          "title": "Pyinmana Township",
+                          "payload": "pyi",
+                        }
+                      ],
+                    }]
+                  }
+                }
+              }
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
 }
