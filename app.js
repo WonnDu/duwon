@@ -246,32 +246,33 @@ function handlePostback(sender_psid, received_postback) {
         "template_type":"button",
         "text":"Hi, You are warmly welcomed. Thank you for contacting us. Have a nice day!",
          "buttons":[
-              {
-                "type":"postback",
-                "title":"Main Menu",
-                "payload": "onee"
-              },
-              {
-                "type":"postback",
-                "title":"Contact us",
-                "payload":"two2"
-              },
-               {
-                "type":"postback",
-                "title":"About us",
-                "payload":"three3"
-              }                            
-            ]  
-        },
-        "payload":{
-        "template_type":"button",
-        "text":"Hi",
-         "buttons":[
-              {
+                    {
+                    "type":"postback",
+                    "title":"Main Menu",
+                    "payload": "onee"
+                    },
+                    {
+                    "type":"postback",
+                    "title":"Contact us",
+                    "payload":"two2"
+                    },
+                    {
+                    "type":"postback",
+                    "title":"About us",
+                    "payload":"three3"
+                    }                            
+                  ]  
+                },
+      "type":"template",
+      "payload":{
+      "template_type":"button",
+      "text":"Hi",
+      "buttons":[
+                {
                 "type":"postback",
                 "title":"Service charges",
                 "payload": "sech"
-              }
+                }
 
       }
    }
