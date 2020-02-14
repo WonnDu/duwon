@@ -239,7 +239,7 @@ function handlePostback(sender_psid, received_postback) {
   } else if (payload === 'no') {
     response = { "text": "Oops, try sending another image." }
   } else if (payload === 'get_started') {
-    response = { "attachment":{
+    response1 = { "attachment":{
 
       "type":"template",
       "payload":{
@@ -260,6 +260,22 @@ function handlePostback(sender_psid, received_postback) {
                     "type":"postback",
                     "title":"About us",
                     "payload":"three3"
+                    }                            
+                  ]  
+                }
+        }
+   },
+   response2 = { "attachment":{
+
+      "type":"template",
+      "payload":{
+        "template_type":"button",
+        "text":"Hee",
+         "buttons":[
+                    {
+                    "type":"postback",
+                    "title":"Service charges",
+                    "payload": "onee"
                     }                            
                   ]  
                 }
