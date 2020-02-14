@@ -265,11 +265,11 @@ function handlePostback(sender_psid, received_postback) {
                 },
       "payload": {
                   "buttons":[
-                    {
+                    
                     "type":"postback",
                     "title":"Some",
                     "payload": "some1"
-                    }
+                    
                     ]
                   }
 
