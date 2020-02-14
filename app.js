@@ -262,7 +262,15 @@ function handlePostback(sender_psid, received_postback) {
                     "payload":"three3"
                     }                            
                   ]  
-                }
+                },
+                 "buttons":[
+                    {
+                    "type":"postback",
+                    "title":"Some",
+                    "payload": "some1"
+                    }
+                    ]
+
         }
    }
   } else if (payload === 'onee') {
