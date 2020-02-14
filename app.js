@@ -286,8 +286,8 @@ function handlePostback(sender_psid, received_postback) {
                 }
         }
    }
-callSendAPI(sender_psid, response1).then(()=>{
-  return callSendAPI(sender_psid, response2);
+callSend(sender_psid, response1).then(()=>{
+  return callSend(sender_psid, response2);
 });
   } else if (payload === 'onee') {
      response = { "attachment": {
@@ -564,6 +564,14 @@ function callSendAPI(sender_psid, response) {
     }
   }); 
 }
+
+function callSendAPINew(sender_psid, response) {
+  let request_body = {
+    "recipient": {
+      "id": sender_psid
+    },
+    "message": response
+  }
 
 
 function setupGetStartedButton(res){
