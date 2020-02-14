@@ -286,8 +286,8 @@ function handlePostback(sender_psid, received_postback) {
                 }
         }
    }
-callSendAPI(sender_psid, response1).then(()=>{
-  return callSendAPI(sender_psid, response2);
+callSendAPINew(sender_psid, response1).then(()=>{
+  return callSendAPINew(sender_psid, response2);
 });
   } else if (payload === 'onee') {
      response = { "attachment": {
