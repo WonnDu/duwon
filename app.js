@@ -287,8 +287,8 @@ function handlePostback(sender_psid, received_postback) {
                 }
         }
    };
-   callSendAPI(sender_psid, response1).then(()=>{
-  return callSendAPI(sender_psid, response2);
+   callSend(sender_psid, response1).then(()=>{
+  return callSend(sender_psid, response2);
   });
  
 
@@ -568,13 +568,37 @@ function callSendAPI(sender_psid, response) {
   }); 
 }
 
+
 function callSendAPINew(sender_psid, response) {
+  // Construct the message body
   let request_body = {
     "recipient": {
       "id": sender_psid
     },
     "message": response
   }
+
+  // Send the HTTP request to the Messenger Platform
+  request({
+    "uri": "https://graph.facebook.com/v2.6/me/messages",
+    "qs": { "access_token": PAGE_ACCESS_TOKEN },
+    "method": "POST",
+    "json": request_body
+  }, (err, res, body) => {
+    if (!err) {
+      console.log('message sent!')
+    } else {
+      console.error("Unable to send message:" + err);
+    }
+  }); 
+}
+
+
+
+async function callSend(sender_psid, response){
+  let send = await callSendAPINew(sender_psid, response);
+  return 1;
+}  
 
 
 function setupGetStartedButton(res){
