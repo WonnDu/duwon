@@ -239,7 +239,8 @@ function handlePostback(sender_psid, received_postback) {
   } else if (payload === 'no') {
     response = { "text": "Oops, try sending another image." }
   } else if (payload === 'get_started') {
-    let response1 = { "attachment":{
+    let response1 = { 
+      "attachment":{
 
       "type":"template",
       "payload":{
@@ -264,7 +265,7 @@ function handlePostback(sender_psid, received_postback) {
                   ]  
                 }
         }
-   }
+   };
    let response2 = { "attachment":{
 
       "type":"template",
@@ -285,11 +286,12 @@ function handlePostback(sender_psid, received_postback) {
                   ]  
                 }
         }
-   }
-  }
-callSendAPINew(sender_psid, response1).then(()=>{
-  return callSendAPINew(sender_psid, response2);
-});
+   };
+   callSendAPI(sender_psid, response1).then(()=>{
+  return callSendAPI(sender_psid, response2);
+  });
+ 
+
   } else if (payload === 'onee') {
      response = { "attachment": {
                   "type": "template",
