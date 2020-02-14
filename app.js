@@ -239,7 +239,7 @@ function handlePostback(sender_psid, received_postback) {
   } else if (payload === 'no') {
     response = { "text": "Oops, try sending another image." }
   } else if (payload === 'get_started') {
-    response = { "attachment":{
+    let response1 = { "attachment":{
 
       "type":"template",
       "payload":{
@@ -262,19 +262,33 @@ function handlePostback(sender_psid, received_postback) {
                     "payload":"three3"
                     }                            
                   ]  
-                },
-      "payload": {
-                  "buttons":[
-                    
-                    "type":"postback",
-                    "title":"Some",
-                    "payload": "some1"
-                    
-                    ]
-                  }
-
+                }
         }
    }
+   let response2 = { "attachment":{
+
+      "type":"template",
+      "payload":{
+        "template_type":"button",
+        "text":"nw",
+         "buttons":[
+                    {
+                    "type":"postback",
+                    "title":"Service charges",
+                    "payload": "ownee"
+                    },
+                    {
+                    "type":"postback",
+                    "title":"Abo us",
+                    "payload":"fe4"
+                    }                            
+                  ]  
+                }
+        }
+   }
+callSendAPI(sender_psid, response1).then(()=>{
+  return callSendAPI(sender_psid, response2);
+});
   } else if (payload === 'onee') {
      response = { "attachment": {
                   "type": "template",
