@@ -431,17 +431,17 @@ function handlePostback(sender_psid, received_postback) {
                         {
                           "type": "postback",
                           "title": "Zaya Thiri Twp",
-                          "payload": "fethri",
+                          "payload": "zaytwp",
                         },
                          {
                           "type": "postback",
                           "title": "Zabu Thiri Twp",
-                          "payload": "pyintwp",
+                          "payload": "zabtwp",
                         },
                         {
                           "type": "postback",
                           "title": "Dekkhina Thiri Twp",
-                          "payload": "pyintwp",
+                          "payload": "dektwp",
                         }
                       ],
                     }]
