@@ -406,7 +406,7 @@ function handlePostback(sender_psid, received_postback) {
                       "buttons": [
                         {
                           "type": "postback",
-                          "title": "Within Five Thri Township",
+                          "title": "In Five Thri Township",
                           "payload": "fethri",
                         },
                          {
@@ -419,7 +419,61 @@ function handlePostback(sender_psid, received_postback) {
                   }
                 }
               }
-  } else if (payload === 'pyintwp') {
+  } else if (payload === 'fethri') {
+    let response3 = { "attachment": {
+                  "type": "template",
+                  "payload": {
+                    "template_type": "generic",
+                    "elements": [{
+                      "title": "F",
+                      "subtitle": "Please choose the township in which you want to buy",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "Zaya Thiri Twp",
+                          "payload": "fethri",
+                        },
+                         {
+                          "type": "postback",
+                          "title": "Zabu Thiri Twp",
+                          "payload": "pyintwp",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "Dekkhina Thiri Twp",
+                          "payload": "pyintwp",
+                        }
+                      ],
+                    }]
+                  }
+                }
+              };
+    let response4 = { "attachment":{
+
+      "type":"template",
+      "payload":{
+        "template_type":"button",
+        "text":"nw",
+         "buttons":[
+                    {
+                    "type":"postback",
+                    "title":"Ottara Thiri Twp",
+                    "payload": "ottwp"
+                    },
+                    {
+                    "type":"postback",
+                    "title":"Pobba Thiri Twp",
+                    "payload":"potwp"
+                    }                            
+                  ]  
+                }
+        }
+   };
+   callSend(sender_psid, response3).then(()=>{
+  return callSend(sender_psid, response4);
+  });
+  }
+  else if (payload === 'pyintwp') {
     response = { "attachment": {
                   "type": "template",
                   "payload": {
