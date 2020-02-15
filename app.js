@@ -425,6 +425,7 @@ function handlePostback(sender_psid, received_postback) {
                   "payload": {
                     "template_type": "generic",
                     "elements": [{
+                      "title": "",
                       "subtitle": "Please choose the township in which you want to buy",
                       "buttons": [
                         {
@@ -452,6 +453,7 @@ function handlePostback(sender_psid, received_postback) {
       "type":"template",
       "payload":{
         "template_type":"button",
+        "text":"",
          "buttons":[
                     {
                     "type":"postback",
