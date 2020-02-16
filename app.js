@@ -280,9 +280,14 @@ function handlePostback(sender_psid, received_postback) {
                     },
                     {
                     "type":"postback",
-                    "title":"Abo us",
-                    "payload":"fe4"
-                    }                            
+                    "title":"Moving House Service",
+                    "payload":"movehou"
+                    },
+                    {
+                    "type":"postback",
+                    "title":"Deep Cleaning Service",
+                    "payload":"deepclean"
+                    }                           
                   ]  
                 }
         }
@@ -634,12 +639,12 @@ function handlePostback(sender_psid, received_postback) {
       "text": "Please choose one of the options to tell what you want to sell",
       "quick_replies":[
       {
-        "content_type":"postback",
+        "content_type":"text",
         "title":"House",
         "payload":"hoou2"
       },
       {
-        "content_type":"postback",
+        "content_type":"text",
         "title":"Land",
         "payload":"laan2"
       }
