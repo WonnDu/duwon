@@ -276,7 +276,7 @@ function handlePostback(sender_psid, received_postback) {
                     {
                     "type":"postback",
                     "title":"Service charges",
-                    "payload": "ownee"
+                    "payload": "servch"
                     },
                     {
                     "type":"postback",
@@ -593,6 +593,41 @@ function handlePostback(sender_psid, received_postback) {
                 }
               }
             }
+
+    else if (payload === 'servch') {
+    let response1  = { "text": "Please chose one of the service charges that you want to know." };
+    let response2 = { "attachment":{
+
+      "type":"template",
+      "payload":{
+        "template_type":"button",
+        "text":"For",
+         "buttons":[
+                    {
+                    "type":"postback",
+                    "title":"Sell",
+                    "payload": "se1"
+                    },
+                    {
+                    "type":"postback",
+                    "title":"Buy",
+                    "payload":"bu2"
+                    },
+                    {
+                    "type":"postback",
+                    "title":"Rent",
+                    "payload":"ren3"
+                    }                            
+                  ]  
+                }
+        }
+   };
+   callSend(sender_psid, response1).then(()=>{
+  return callSend(sender_psid, response2);
+  });
+ 
+
+  }
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
 }
