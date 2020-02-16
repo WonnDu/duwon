@@ -626,7 +626,7 @@ function handlePostback(sender_psid, received_postback) {
   return callSend(sender_psid, response2);
   });
  } else if (payload === 'se1') {
-    response  = { "text": "3% service charge for the property that has value under 1000 lakhs!!              2% service charge for the property that has value 1000 lakhs and above 1000 lakhs!!" };
+    response  = { "text": "3% service charge for the property that has value under 1000 lakhs!!   And 2% service charge for the property that has value 1000 lakhs and above 1000 lakhs!!" };
   }
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
