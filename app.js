@@ -151,7 +151,7 @@ function handleMessage(sender_psid, received_message) {
       "text":'Say'
     }
   }
-  else if (received_message.text == "hi", "hello" ) {
+  else if (received_message.text == "hi") {
     response = { "attachment":{
       "type":"template",
       "payload":{
@@ -629,6 +629,23 @@ function handlePostback(sender_psid, received_postback) {
     response  = { "text": "3% service charge for the property that has value under 1000 lakhs!!   And 2% service charge for the property that has value 1000 lakhs and above 1000 lakhs!!" };
   } else if (payload === 'ren3') {
     response  = { "text": "Take rent of a month from both sides whether the period is rented or not." };
+  } else if (payload === 'tosel') {
+
+    response = {
+      "text": "Please choose one of the options to tell what you want to sell",
+      "quick_replies":[
+      {
+        "content_type":"postback",
+        "title":"House",
+        "payload":"hou2",
+      },
+      {
+        "content_type":"text",
+        "title":"Land",
+        "payload":"lann2",
+      }
+    ]
+    }
   }
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
