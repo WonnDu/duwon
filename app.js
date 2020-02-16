@@ -650,7 +650,51 @@ function handlePostback(sender_psid, received_postback) {
       }
     ]
     }
+} else if (payload === 'hoou2') {
+    response = { "attachment": {
+                  "type": "template",
+                  "payload": {
+                    "template_type": "button",
+                      "text": "Please choose the place in which your property is located",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "In Five Thri Township",
+                          "payload": "fethri",
+                        },
+                         {
+                          "type": "postback",
+                          "title": "Pyinmana Township",
+                          "payload": "pyintwp",
+                        }
+                      ]
+                  }
+                }
+              }
+  } else if (payload === 'laan2') {
+    response = { "attachment": {
+                  "type": "template",
+                  "payload": {
+                    "template_type": "button",
+                      "text": "Please choose the place in which your property is located",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "In Five Thri Township",
+                          "payload": "fethri",
+                        },
+                         {
+                          "type": "postback",
+                          "title": "Pyinmana Township",
+                          "payload": "pyintwp",
+                        }
+                      ]
+                  }
+                }
+              }
   }
+
+
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
 }
