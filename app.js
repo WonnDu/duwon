@@ -640,7 +640,7 @@ function handlePostback(sender_psid, received_postback) {
         "payload":"hou2",
       },
       {
-        "content_type":"text",
+        "content_type":"postback",
         "title":"Land",
         "payload":"lann2",
       }
