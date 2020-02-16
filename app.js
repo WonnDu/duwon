@@ -186,13 +186,13 @@ function handleMessage(sender_psid, received_message) {
       "text": `Hao Xie Xie. Ni Hao Mah!`
     }
   }
-   else if (received_message.text) {    
+   else if (received_message.text == "hhhhlp") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
       "text": `You sent the message: "${received_message.text}". Now send me an attachment!`
     }
-  } else if (received_message.attachments) {
+  } else if (received_message.attachments == "bububtyt") {
     // Get the URL of the message attachment
     let attachment_url = received_message.attachments[0].payload.url;
     response = {
@@ -650,7 +650,7 @@ function handlePostback(sender_psid, received_postback) {
       }
     ]
     }
-} else if (received_message.text === 'hoou2') {
+} else if (payload === 'hoou2') {
     response = { "attachment": {
                   "type": "template",
                   "payload": {
@@ -671,7 +671,7 @@ function handlePostback(sender_psid, received_postback) {
                   }
                 }
               }
-  } else if (received_message.text === 'laan2') {
+  } else if (payload === 'laan2') {
     response = { "attachment": {
                   "type": "template",
                   "payload": {
