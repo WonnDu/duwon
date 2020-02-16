@@ -625,8 +625,9 @@ function handlePostback(sender_psid, received_postback) {
    callSend(sender_psid, response1).then(()=>{
   return callSend(sender_psid, response2);
   });
- }  else if (payload === 'se1') {
-    let response1  = { "text": "3% service charge for the property that has value under 1000 lakhs!! <br> 2% service charge for the property that has value 1000 lakhs and above lakhs!!" };
+ } else if (payload === 'se1') {
+    response  = { "text": "3% service charge for the property that has value under 1000 lakhs!! <br/> 2% service charge for the property that has value 1000 lakhs and above lakhs!!" };
+  }
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
 }
