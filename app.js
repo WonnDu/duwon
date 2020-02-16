@@ -627,6 +627,8 @@ function handlePostback(sender_psid, received_postback) {
   });
  } else if (payload === 'se1') {
     response  = { "text": "3% service charge for the property that has value under 1000 lakhs!!   And 2% service charge for the property that has value 1000 lakhs and above 1000 lakhs!!" };
+  } else if (payload === 'ren3') {
+    response  = { "text": "Take rent of a month from both sides whether the period is rented or not." };
   }
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
