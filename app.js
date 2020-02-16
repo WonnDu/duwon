@@ -650,7 +650,7 @@ function handlePostback(sender_psid, received_postback) {
       }
     ]
     }
-} else if (payload === 'hoou2') {
+} else if (received_message.text === 'hoou2') {
     response = { "attachment": {
                   "type": "template",
                   "payload": {
@@ -671,7 +671,7 @@ function handlePostback(sender_psid, received_postback) {
                   }
                 }
               }
-  } else if (payload === 'laan2') {
+  } else if (received_message.text === 'laan2') {
     response = { "attachment": {
                   "type": "template",
                   "payload": {
