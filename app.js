@@ -420,7 +420,7 @@ function handlePostback(sender_psid, received_postback) {
                 }
               }
   } else if (payload === 'fethri') {
-    let response3 = { "attachment": {
+    let response1 = { "attachment": {
                   "type": "template",
                   "payload": {
                     "template_type": "generic",
@@ -448,7 +448,7 @@ function handlePostback(sender_psid, received_postback) {
                   }
                 }
               };
-    let response4 = { "attachment":{
+    let response2 = { "attachment":{
 
       "type":"template",
       "payload":{
@@ -469,8 +469,8 @@ function handlePostback(sender_psid, received_postback) {
                 }
         }
    };
-   callSend(sender_psid, response3).then(()=>{
-  return callSend(sender_psid, response4);
+   callSend(sender_psid, response1).then(()=>{
+  return callSend(sender_psid, response2);
   });
   }
   else if (payload === 'pyintwp') {
