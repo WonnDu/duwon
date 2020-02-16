@@ -634,14 +634,14 @@ function handlePostback(sender_psid, received_postback) {
       "text": "Please choose one of the options to tell what you want to sell",
       "quick_replies":[
       {
-        "content_type":"text",
+        "content_type":"postback",
         "title":"House",
-        "payload":"hou2"
+        "payload":"hoou2"
       },
       {
-        "content_type":"text",
+        "content_type":"postback",
         "title":"Land",
-        "payload":"lann2"
+        "payload":"laan2"
       }
     ]
     }
