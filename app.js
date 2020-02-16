@@ -637,12 +637,12 @@ function handlePostback(sender_psid, received_postback) {
       {
         "content_type":"postback",
         "title":"House",
-        "payload":"hou2",
+        "payload":"hou2"
       },
       {
         "content_type":"postback",
         "title":"Land",
-        "payload":"lann2",
+        "payload":"lann2"
       }
     ]
     }
