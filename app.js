@@ -301,10 +301,8 @@ function handlePostback(sender_psid, received_postback) {
      response = { "attachment": {
                   "type": "template",
                   "payload": {
-                    "template_type": "generic",
-                    "elements": [{
-                      "title": "k",
-                      "subtitle": "To find the properties, please choose an option below:",
+                    "template_type": "button",
+                      "text": "To find the properties, please choose an option below:",
                       "buttons": [
                         {
                           "type": "postback",
@@ -321,8 +319,7 @@ function handlePostback(sender_psid, received_postback) {
                           "title": "To Rent",
                           "payload": "tore",
                         }
-                      ],
-                    }]
+                      ]
             }
         }
     }
