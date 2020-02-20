@@ -635,21 +635,26 @@ function handlePostback(sender_psid, received_postback) {
  } else if (payload === 'ren3') {
     response  = { "text": "Take rent of a month from both sides whether the period is rented or not." };
  } else if (payload === 'tosel') {
-    response = {
-      "text": "Please choose one of the options to tell what you want to sell",
-      "quick_replies":[
-      {
-        "content_type":"text",
-        "title":"House",
-        "payload":"hoou2"
-      },
-      {
-        "content_type":"text",
-        "title":"Land",
-        "payload":"laan2"
-      }
-    ]
-    }
+    response = { "attachment": {
+                  "type": "template",
+                  "payload": {
+                    "template_type": "button",
+                      "text": "Please choose one of the options to tell what you want to sell",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "House",
+                          "payload": "hoou2",
+                        },
+                         {
+                          "type": "postback",
+                          "title": "Land",
+                          "payload": "laan2",
+                        }
+                      ]
+                  }
+                }
+              }
 } else if (payload === 'hoou2') {
     response = { "attachment": {
                   "type": "template",
