@@ -377,10 +377,8 @@ function handlePostback(sender_psid, received_postback) {
     response = { "attachment": {
                   "type": "template",
                   "payload": {
-                    "template_type": "generic",
-                    "elements": [{
-                      "title": "F",
-                      "subtitle": "Please choose below options:",
+                    "template_type": "button",
+                     "text": "Please choose below options:",
                       "buttons": [
                         {
                           "type": "postback",
@@ -392,8 +390,8 @@ function handlePostback(sender_psid, received_postback) {
                           "title": "Land",
                           "payload": "lann",
                         }
-                      ],
-                    }]
+                      ]
+                    
                   }
                 }
               }
