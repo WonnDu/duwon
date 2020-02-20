@@ -528,7 +528,7 @@ function handlePostback(sender_psid, received_postback) {
     response = {
       "text": ` Now send me the picture of your house that you want to sell!`
     }
-  else if (payload === 'ab10') {
+  }else if (payload === 'ab10') {
     response = {
     "attachment":{
       "type":"template",
