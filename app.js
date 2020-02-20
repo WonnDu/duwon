@@ -271,7 +271,7 @@ function handlePostback(sender_psid, received_postback) {
       "type":"template",
       "payload":{
         "template_type":"button",
-        "text":"________________________",
+        "text":"________________________________",
          "buttons":[
                     {
                     "type":"postback",
@@ -521,6 +521,9 @@ function handlePostback(sender_psid, received_postback) {
                   }
                 }
               }
+  } 
+  else if (payload === 'othft') {
+    response = { "text": "Please write the area of your property!" }
   } 
 
   else if (payload === 'ab10') {
