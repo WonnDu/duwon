@@ -271,7 +271,7 @@ function handlePostback(sender_psid, received_postback) {
       "type":"template",
       "payload":{
         "template_type":"button",
-        "text":"",
+        "text":".",
          "buttons":[
                     {
                     "type":"postback",
