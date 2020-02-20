@@ -399,10 +399,8 @@ function handlePostback(sender_psid, received_postback) {
     response = { "attachment": {
                   "type": "template",
                   "payload": {
-                    "template_type": "generic",
-                    "elements": [{
-                      "title": "F",
-                      "subtitle": "Please choose the place in which you want to buy",
+                    "template_type": "button",
+                      "text": "Please choose the place in which you want to buy",
                       "buttons": [
                         {
                           "type": "postback",
@@ -414,8 +412,8 @@ function handlePostback(sender_psid, received_postback) {
                           "title": "Pyinmana Township",
                           "payload": "pyintwp",
                         }
-                      ],
-                    }]
+                      ]
+                    
                   }
                 }
               }
@@ -423,10 +421,8 @@ function handlePostback(sender_psid, received_postback) {
     let response1 = { "attachment": {
                   "type": "template",
                   "payload": {
-                    "template_type": "generic",
-                    "elements": [{
-                      "title": "F",
-                      "subtitle": "Please choose the township in which you want to buy",
+                    "template_type": "button",
+                      "text": "Please choose the township in which you want to buy",
                       "buttons": [
                         {
                           "type": "postback",
@@ -443,8 +439,7 @@ function handlePostback(sender_psid, received_postback) {
                           "title": "Dekkhina Thiri Twp",
                           "payload": "dektwp",
                         }
-                      ],
-                    }]
+                      ]
                   }
                 }
               };
@@ -477,11 +472,9 @@ function handlePostback(sender_psid, received_postback) {
     response = { "attachment": {
                   "type": "template",
                   "payload": {
-                    "template_type": "generic",
-                    "elements": [{
-                      "title": "F",
-                      "subtitle": "Please choose the area ",
-                      "buttons": [
+                    "template_type": "button",
+                    "text": "Please choose the area ",
+                    "buttons": [
                         {
                           "type": "postback",
                           "title": "40-60 ft",
@@ -497,8 +490,7 @@ function handlePostback(sender_psid, received_postback) {
                           "title": "other",
                           "payload": "othft",
                         }
-                      ],
-                    }]
+                      ]
                   }
                 }
               }
@@ -507,11 +499,9 @@ function handlePostback(sender_psid, received_postback) {
     response = { "attachment": {
                   "type": "template",
                   "payload": {
-                    "template_type": "generic",
-                    "elements": [{
-                      "title": "F",
-                      "subtitle": "Please choose the amount you are avaliable:",
-                      "buttons": [
+                    "template_type": "button",
+                    "text": "Please choose the amount you are avaliable:",
+                    "buttons": [
                         {
                           "type": "postback",
                           "title": "under 500",
@@ -527,8 +517,7 @@ function handlePostback(sender_psid, received_postback) {
                           "title": "above 1000",
                           "payload": "ab10",
                         }
-                      ],
-                    }]
+                      ]
                   }
                 }
               }
@@ -572,11 +561,9 @@ function handlePostback(sender_psid, received_postback) {
     response = { "attachment": {
                   "type": "template",
                   "payload": {
-                    "template_type": "generic",
-                    "elements": [{
-                      "title": "F",
-                      "subtitle": "Please choose the place in which you want to buy",
-                      "buttons": [
+                    "template_type": "button",
+                    "text": "Please choose the place in which you want to buy",
+                    "buttons": [
                         {
                           "type": "postback",
                           "title": "Within 5 Thri Township",
@@ -587,8 +574,7 @@ function handlePostback(sender_psid, received_postback) {
                           "title": "Pyinmana Township",
                           "payload": "pyi",
                         }
-                      ],
-                    }]
+                      ]
                   }
                 }
               }
