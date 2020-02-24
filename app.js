@@ -690,7 +690,7 @@ function handlePostback(sender_psid, received_postback) {
         "elements":[
            {
             "title":"Hijet",
-            "image_url":"https://scontent.fmdl4-2.fna.fbcdn.net/v/t1.0-9/86171030_102456341342971_5236349205873688576_n.jpg?_nc_cat=110&_nc_eui2=AeGdBiFegBevbDZIyGu26Qc3KzsAcpqTop4NCWUksAqWDi3r7YKSKb6B-Oyq1R6FyzPQmynZQq70AxV5CMCtH028kJrtQiO5BCyKKWhww8LQWQ&_nc_ohc=97aIkwvxUh4AX8Yz77e&_nc_pt=1&_nc_ht=scontent.fmdl4-2.fna&oh=89ff1b619ffd67704ea2d2809bdd145d&oe=5EB9E396",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/87795714_131104691768664_5331501195544494080_n.jpg?_nc_cat=105&_nc_sid=a61e81&_nc_ohc=wzIfTKWOloQAX9AfZN8&_nc_ht=scontent.fmdl2-2.fna&oh=4ab72315c30f728bfdc83d57dd274725&oe=5EF9BF44",
             "subtitle":"Four wheels",
             "default_action": {
               "type": "web_url",
@@ -711,7 +711,7 @@ function handlePostback(sender_psid, received_postback) {
           },
            {
             "title":"Motorbike",
-            "image_url":"https://scontent.fmdl4-2.fna.fbcdn.net/v/t1.0-9/84394208_102497734672165_2684528394506338304_n.jpg?_nc_cat=106&_nc_eui2=AeGMGmlfPWwAp5gBHq21VT1FkcQtaTsDc0yycvz3h59qLeuZV-mThfM7g0ImjAZ63pQoG0QSaYTrsCzDo1DgtPZ52M9UK9IszNiwHQ6_oOLp5A&_nc_ohc=c3beta0dbM8AX95CPhc&_nc_pt=1&_nc_ht=scontent.fmdl4-2.fna&oh=9e3f27692acf5de198eddf6de0ba8bf9&oe=5ED293FF",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/87687473_131104698435330_2366752654857601024_n.jpg?_nc_cat=106&_nc_sid=a61e81&_nc_ohc=PohMBJmw7NsAX8QK734&_nc_ht=scontent.fmdl2-2.fna&oh=73aba7740a2aa1439873b30243ba1ea1&oe=5EC277A3",
             "subtitle":"Three wheels",
             "default_action": {
               "type": "web_url",
@@ -732,7 +732,7 @@ function handlePostback(sender_psid, received_postback) {
           },
           {
             "title":"Light Truck",
-            "image_url":"https://scontent.fmdl4-2.fna.fbcdn.net/v/t1.0-9/84663096_102520038003268_3565139283100565504_n.jpg?_nc_cat=106&_nc_eui2=AeGKcsR5tyDJwoS8vvkGl6rn8_LcH0OkYbNSPZ0GMAT40Ynv3jTF8xeY2urRUl_PczC2v-URviXgPomifWJIMkeW5JsDPxCm8RjnF1makXhZpA&_nc_ohc=0tdY9XY8r7QAX9hiq36&_nc_pt=1&_nc_ht=scontent.fmdl4-2.fna&oh=e0f5b850f1c4824ca4ced1f3ae98453d&oe=5EC3C5A6",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/87693358_131104725101994_936300748814155776_n.jpg?_nc_cat=108&_nc_sid=a61e81&_nc_ohc=74rZDH6-GEoAX9XVmVg&_nc_ht=scontent.fmdl2-2.fna&oh=32c6396df6233d929915858c6c4eb5d1&oe=5EEEE1B0",
             "subtitle":"Four wheels",
             "default_action": {
               "type": "web_url",
@@ -753,7 +753,7 @@ function handlePostback(sender_psid, received_postback) {
           },
            {
             "title":"Truck Car",
-            "image_url":"https://scontent.fmdl4-2.fna.fbcdn.net/v/t1.0-9/84663096_102520038003268_3565139283100565504_n.jpg?_nc_cat=106&_nc_eui2=AeGKcsR5tyDJwoS8vvkGl6rn8_LcH0OkYbNSPZ0GMAT40Ynv3jTF8xeY2urRUl_PczC2v-URviXgPomifWJIMkeW5JsDPxCm8RjnF1makXhZpA&_nc_ohc=0tdY9XY8r7QAX9hiq36&_nc_pt=1&_nc_ht=scontent.fmdl4-2.fna&oh=e0f5b850f1c4824ca4ced1f3ae98453d&oe=5EC3C5A6",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/87693358_131104725101994_936300748814155776_n.jpg?_nc_cat=108&_nc_sid=a61e81&_nc_ohc=74rZDH6-GEoAX9XVmVg&_nc_ht=scontent.fmdl2-2.fna&oh=32c6396df6233d929915858c6c4eb5d1&oe=5EEEE1B0",
             "subtitle":"Six wheels",
             "default_action": {
               "type": "web_url",
