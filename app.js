@@ -715,13 +715,13 @@ function handlePostback(sender_psid, received_postback) {
             "subtitle":"Three wheels",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.heincarrental.com/vehicles/toyota-wish/",
+              "url": "https://www.facebook.com/ajax/sharer/?s=2&appid=2305272732&id=131104738435326&p[0]=131104738435326&sharer_type=all_modes&av=105772414301892",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.heincarrental.com/vehicles/toyota-wish/",
+                "url":"https://www.facebook.com/ajax/sharer/?s=2&appid=2305272732&id=131104738435326&p[0]=131104738435326&sharer_type=all_modes&av=105772414301892",
                 "title":"More Information"
               },{
                 "type":"postback",
@@ -736,13 +736,13 @@ function handlePostback(sender_psid, received_postback) {
             "subtitle":"Four wheels",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.myanmarcarmarketplace.com/for-sale/volkswagen/volkswagen-new-beetle_i8",
+              "url": "https://www.facebook.com/ajax/sharer/?s=2&appid=2305272732&id=131104738435326&p[0]=131104738435326&sharer_type=all_modes&av=105772414301892",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.myanmarcarmarketplace.com/for-sale/volkswagen/volkswagen-new-beetle_i8",
+                "url":"https://www.facebook.com/ajax/sharer/?s=2&appid=2305272732&id=131104738435326&p[0]=131104738435326&sharer_type=all_modes&av=105772414301892",
                 "title":"More Information"
               },{
                 "type":"postback",
@@ -757,13 +757,13 @@ function handlePostback(sender_psid, received_postback) {
             "subtitle":"Six wheels",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.myanmarcarmarketplace.com/for-sale/volkswagen/volkswagen-new-beetle_i8",
+              "url": "https://www.facebook.com/ajax/sharer/?s=2&appid=2305272732&id=131104738435326&p[0]=131104738435326&sharer_type=all_modes&av=105772414301892",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.myanmarcarmarketplace.com/for-sale/volkswagen/volkswagen-new-beetle_i8",
+                "url":"https://www.facebook.com/ajax/sharer/?s=2&appid=2305272732&id=131104738435326&p[0]=131104738435326&sharer_type=all_modes&av=105772414301892",
                 "title":"More Information"
               },{
                 "type":"postback",
@@ -778,13 +778,13 @@ function handlePostback(sender_psid, received_postback) {
             "subtitle":"Ten wheels",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.myanmarcarmarketplace.com/for-sale/volkswagen/volkswagen-new-beetle_i8",
+              "url": "https://www.facebook.com/ajax/sharer/?s=2&appid=2305272732&id=131104738435326&p[0]=131104738435326&sharer_type=all_modes&av=105772414301892",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.myanmarcarmarketplace.com/for-sale/volkswagen/volkswagen-new-beetle_i8",
+                "url":"https://www.facebook.com/ajax/sharer/?s=2&appid=2305272732&id=131104738435326&p[0]=131104738435326&sharer_type=all_modes&av=105772414301892",
                 "title":"More Information"
               },{
                 "type":"postback",
