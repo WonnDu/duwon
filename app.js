@@ -705,7 +705,7 @@ function handlePostback(sender_psid, received_postback) {
               },{
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"scc1"
+                "payload":"hijet11"
               }              
             ]      
           },
@@ -796,8 +796,28 @@ function handlePostback(sender_psid, received_postback) {
         ]
       }
     }
-  }
-  }
+  } else if (payload === 'hijet11') {
+    response = { "attachment": {
+                  "type": "template",
+                  "payload": {
+                    "template_type": "button",
+                    "text": "Do you want to move within township in which you are living?",
+                    "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "Yes!",
+                          "payload": "yes-wt",
+                        },
+                         {
+                          "type": "postback",
+                          "title": "No!",
+                          "payload": "no-wt",
+                        }
+                      ]
+                  }
+                }
+              }
+            }
 
 
   // Send the message to acknowledge the postback
