@@ -796,6 +796,7 @@ function handlePostback(sender_psid, received_postback) {
         ]
       }
     }
+  }
   } else if (payload === 'hijet11') {
     response = { "attachment": {
                   "type": "template",
@@ -806,12 +807,12 @@ function handlePostback(sender_psid, received_postback) {
                         {
                           "type": "postback",
                           "title": "Yes!",
-                          "payload": "yeswt",
+                          "payload": "yes-1",
                         },
                          {
                           "type": "postback",
                           "title": "No!",
-                          "payload": "nowt",
+                          "payload": "no-1",
                         }
                       ]
                   }
