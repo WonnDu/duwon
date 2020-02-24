@@ -700,7 +700,7 @@ function handlePostback(sender_psid, received_postback) {
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.everycar.jp/detail.php?make=honda&model=fit-shuttle&id=725721",
+                "url":"https://www.facebook.com/ajax/sharer/?s=2&appid=2305272732&id=131104738435326&p[0]=131104738435326&sharer_type=all_modes&av=105772414301892",
                 "title":"More Information"
               },{
                 "type":"postback",
@@ -753,7 +753,7 @@ function handlePostback(sender_psid, received_postback) {
           },
            {
             "title":"Truck Car",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/87693358_131104725101994_936300748814155776_n.jpg?_nc_cat=108&_nc_sid=a61e81&_nc_ohc=74rZDH6-GEoAX9XVmVg&_nc_ht=scontent.fmdl2-2.fna&oh=32c6396df6233d929915858c6c4eb5d1&oe=5EEEE1B0",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/87529724_131104741768659_4560297288781529088_n.jpg?_nc_cat=103&_nc_sid=a61e81&_nc_ohc=hUMhbxC5AVsAX-xiklU&_nc_ht=scontent.fmdl2-1.fna&oh=fc041fee94b9bbd1b4c9973816546bce&oe=5EBC527B",
             "subtitle":"Six wheels",
             "default_action": {
               "type": "web_url",
