@@ -806,12 +806,12 @@ function handlePostback(sender_psid, received_postback) {
                         {
                           "type": "postback",
                           "title": "Yes!",
-                          "payload": "yes-wt",
+                          "payload": "yeswt",
                         },
                          {
                           "type": "postback",
                           "title": "No!",
-                          "payload": "no-wt",
+                          "payload": "nowt",
                         }
                       ]
                   }
