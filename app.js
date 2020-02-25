@@ -378,7 +378,7 @@ function handlePostback(sender_psid, received_postback) {
                   "type": "template",
                   "payload": {
                     "template_type": "button",
-                     "text": "Please choose below options:",
+                     "text": "Please choose below options to buy:",
                       "buttons": [
                         {
                           "type": "postback",
@@ -400,7 +400,7 @@ function handlePostback(sender_psid, received_postback) {
                   "type": "template",
                   "payload": {
                     "template_type": "button",
-                      "text": "Please choose the place in which you want to buy",
+                      "text": "Please choose the place in which you want to buy house",
                       "buttons": [
                         {
                           "type": "postback",
@@ -422,7 +422,7 @@ function handlePostback(sender_psid, received_postback) {
                   "type": "template",
                   "payload": {
                     "template_type": "button",
-                      "text": "Please choose the township in which you want to buy",
+                      "text": "Please choose the township in which you want to buy house",
                       "buttons": [
                         {
                           "type": "postback",
@@ -448,7 +448,7 @@ function handlePostback(sender_psid, received_postback) {
       "type":"template",
       "payload":{
         "template_type":"button",
-        "text":"nw",
+        "text":".",
          "buttons":[
                     {
                     "type":"postback",
@@ -473,7 +473,7 @@ function handlePostback(sender_psid, received_postback) {
                   "type": "template",
                   "payload": {
                     "template_type": "button",
-                    "text": "Please choose the area ",
+                    "text": "Please choose the area of house that you want to buy",
                     "buttons": [
                         {
                           "type": "postback",
@@ -500,7 +500,7 @@ function handlePostback(sender_psid, received_postback) {
                   "type": "template",
                   "payload": {
                     "template_type": "button",
-                    "text": "Please choose the amount you are avaliable:",
+                    "text": "Please choose the amount that you are avaliable to buy a house:",
                     "buttons": [
                         {
                           "type": "postback",
@@ -565,24 +565,101 @@ function handlePostback(sender_psid, received_postback) {
                   "type": "template",
                   "payload": {
                     "template_type": "button",
-                    "text": "Please choose the place in which you want to buy",
+                    "text": "Please choose the place in which you want to buy land",
                     "buttons": [
                         {
                           "type": "postback",
                           "title": "Within 5 Thri Township",
-                          "payload": "5thri",
+                          "payload": "5fthri",
                         },
                          {
                           "type": "postback",
                           "title": "Pyinmana Township",
-                          "payload": "pyi",
+                          "payload": "pyi5",
+                        }
+                              ]
+                            }
+                              }
+                }
+  }
+  else if (payload === '5fthri') {
+    let response1 = { "attachment": {
+                  "type": "template",
+                  "payload": {
+                    "template_type": "button",
+                      "text": "Please choose the township in which you want to buy land",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "Zaya Thiri Twp",
+                          "payload": "zayathi",
+                        },
+                         {
+                          "type": "postback",
+                          "title": "Zabu Thiri Twp",
+                          "payload": "zabuthi",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "Dekkhina Thiri Twp",
+                          "payload": "dekthi",
+                        }
+                      ]
+                  }
+                }
+              };
+    let response2 = { "attachment":{
+
+      "type":"template",
+      "payload":{
+        "template_type":"button",
+        "text":"nw",
+         "buttons":[
+                    {
+                    "type":"postback",
+                    "title":"Ottara Thiri Twp",
+                    "payload": "otthi"
+                    },
+                    {
+                    "type":"postback",
+                    "title":"Pobba Thiri Twp",
+                    "payload":"pobthi"
+                    }                            
+                  ]  
+                }
+        }
+   };
+   callSend(sender_psid, response1).then(()=>{
+  return callSend(sender_psid, response2);
+  });
+  }
+  else if (payload === 'pyi5') {
+    response = { "attachment": {
+                  "type": "template",
+                  "payload": {
+                    "template_type": "button",
+                    "text": "Please choose the area of land that you want to buy ",
+                    "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "40-60 ft",
+                          "payload": "46ft",
+                        },
+                         {
+                          "type": "postback",
+                          "title": "60-80 ft",
+                          "payload": "68ft",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "other",
+                          "payload": "othft",
                         }
                       ]
                   }
                 }
               }
-            }
-
+  } 
     else if (payload === 'servch') {
     let response1  = { "text": "Please chose one of the service charges that you want to know." };
     let response2 = { "attachment":{
@@ -649,12 +726,12 @@ function handlePostback(sender_psid, received_postback) {
                         {
                           "type": "postback",
                           "title": "In Five Thri Township",
-                          "payload": "fethri",
+                          "payload": "toselhou5",
                         },
                          {
                           "type": "postback",
                           "title": "Pyinmana Township",
-                          "payload": "pyintwp",
+                          "payload": "toselhoupyin",
                         }
                       ]
                   }
@@ -670,12 +747,12 @@ function handlePostback(sender_psid, received_postback) {
                         {
                           "type": "postback",
                           "title": "In Five Thri Township",
-                          "payload": "fethri",
+                          "payload": "tosel5lan",
                         },
                          {
                           "type": "postback",
                           "title": "Pyinmana Township",
-                          "payload": "pyintwp",
+                          "payload": "toselpyinlan",
                         }
                       ]
                   }
