@@ -734,7 +734,7 @@ function handlePostback(sender_psid, received_postback) {
                   "type": "template",
                   "payload": {
                     "template_type": "button",
-                    "text": "Please choose the place in which you want to buy land",
+                    "text": "Please choose the place in which you want to buy land:",
                     "buttons": [
                         {
                           "type": "postback",
@@ -756,7 +756,7 @@ function handlePostback(sender_psid, received_postback) {
                   "type": "template",
                   "payload": {
                     "template_type": "button",
-                      "text": "Please choose the township in which you want to buy land",
+                      "text": "Please choose the township in which you want to buy land:",
                       "buttons": [
                         {
                           "type": "postback",
@@ -807,7 +807,7 @@ function handlePostback(sender_psid, received_postback) {
                   "type": "template",
                   "payload": {
                     "template_type": "button",
-                    "text": "Please choose the area of land that you want to buy ",
+                    "text": "Please choose the area of land that you want to buy:",
                     "buttons": [
                         {
                           "type": "postback",
@@ -869,7 +869,7 @@ function handlePostback(sender_psid, received_postback) {
                   "type": "template",
                   "payload": {
                     "template_type": "button",
-                      "text": "Please choose one of the options to tell what you want to sell",
+                      "text": "Please choose one of the options to tell what you want to sell:",
                       "buttons": [
                         {
                           "type": "postback",
@@ -890,7 +890,7 @@ function handlePostback(sender_psid, received_postback) {
                   "type": "template",
                   "payload": {
                     "template_type": "button",
-                      "text": "Please choose the place in which your property is located",
+                      "text": "Please choose the place in which your property is located:",
                       "buttons": [
                         {
                           "type": "postback",
@@ -912,7 +912,7 @@ function handlePostback(sender_psid, received_postback) {
                   "type": "template",
                   "payload": {
                     "template_type": "button",
-                      "text": "Please choose the township in which you want to buy land",
+                      "text": "Please choose the township in which you want to buy house:",
                       "buttons": [
                         {
                           "type": "postback",
@@ -963,7 +963,7 @@ function handlePostback(sender_psid, received_postback) {
                   "type": "template",
                   "payload": {
                     "template_type": "button",
-                      "text": "Please choose the place in which your property is located",
+                      "text": "Please choose the place in which your property is located:",
                       "buttons": [
                         {
                           "type": "postback",
@@ -979,7 +979,59 @@ function handlePostback(sender_psid, received_postback) {
                   }
                 }
               }
-  }  else if (payload === 'movehou') {
+  } 
+  else if (payload === 'tosel5lan') {
+    let response1 = { "attachment": {
+                  "type": "template",
+                  "payload": {
+                    "template_type": "button",
+                      "text": "Please choose the township in which you want to buy land.",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "Zaya Thiri Twp",
+                          "payload": "tselzayalan",
+                        },
+                         {
+                          "type": "postback",
+                          "title": "Zabu Thiri Twp",
+                          "payload": "tselzabulan",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "Dekkhina Thiri Twp",
+                          "payload": "tseldeklan",
+                        }
+                      ]
+                  }
+                }
+              };
+    let response2 = { "attachment":{
+
+      "type":"template",
+      "payload":{
+        "template_type":"button",
+        "text":".",
+         "buttons":[
+                    {
+                    "type":"postback",
+                    "title":"Ottara Thiri Twp",
+                    "payload": "tselottlan"
+                    },
+                    {
+                    "type":"postback",
+                    "title":"Pobba Thiri Twp",
+                    "payload":"tselpoblan"
+                    }                            
+                  ]  
+                }
+        }
+   };
+   callSend(sender_psid, response1).then(()=>{
+  return callSend(sender_psid, response2);
+  });
+  }
+   else if (payload === 'movehou') {
     response = {
     "attachment":{
       "type":"template",
