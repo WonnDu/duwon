@@ -252,7 +252,7 @@ function handlePostback(sender_psid, received_postback) {
           "locale":"en_US",
           "text":"Timeless apparel for the masses."
       }
-                ],
+                ];
       
       "payload":{
         "template_type":"button",
