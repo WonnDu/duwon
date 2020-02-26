@@ -241,7 +241,7 @@ function handlePostback(sender_psid, received_postback) {
   }
 
   else if (payload === 'redd1') {
-    response = { " text": "Xie Xie Nin" } 
+    response = { "text": `Nin hao !!!!` } 
   }
   else if (payload === 'gree1') {
     response = { "text": "You have chose to rent out the property as a Landlord." }
