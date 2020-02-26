@@ -1270,14 +1270,24 @@ function setupPersistentMenu(res){
                         "type":"nested",
                         "call_to_actions":[
                             {
-                              "title":"Help",
+                              "title":"Main Menu",
                               "type":"postback",
-                              "payload":"HELP_PAYLOAD"
+                              "payload":"onee"
                             },
                             {
-                              "title":"Contact Me",
+                              "title":"Service Charges",
                               "type":"postback",
-                              "payload":"CONTACT_INFO_PAYLOAD"
+                              "payload":"servch"
+                            },
+                            {
+                              "title":"Contact Us",
+                              "type":"postback",
+                              "payload":"two2"
+                            },
+                             {
+                              "title":"About Us",
+                              "type":"postback",
+                              "payload":"three3"
                             }
                         ]
                       },
