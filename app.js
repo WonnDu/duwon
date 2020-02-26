@@ -246,6 +246,15 @@ function handlePostback(sender_psid, received_postback) {
       "payload":{
         "template_type":"button",
         "text":"Hi, You are warmly welcomed. Thank you for contacting us. Have a nice day!",
+
+        "greeting":[
+  {
+    "locale":"default",
+    "text":"Hello {{user_full_name}}!"
+  }
+],
+
+
          "buttons":[
                     {
                     "type":"postback",
@@ -1272,12 +1281,12 @@ function setupPersistentMenu(res){
                             {
                               "title":"Some",
                               "type":"postback",
-                              "payload":"sum1"
+                              "payload":"HELP_PAYLOAD"
                             },
                             {
-                              "title":"conme",
+                              "title":"Contact Me",
                               "type":"postback",
-                              "payload":"conn1"
+                              "payload":"CONTACT_INFO_PAYLOAD"
                             }
                         ]
                       },
