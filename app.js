@@ -243,18 +243,20 @@ function handlePostback(sender_psid, received_postback) {
       "attachment":{
 
       "type":"template",
+      "greeting":[
+      {
+          "locale":"default",
+          "text":"Hello!"
+      }, 
+      {
+          "locale":"en_US",
+          "text":"Timeless apparel for the masses."
+      }
+                ],
+      
       "payload":{
         "template_type":"button",
         "text":"Hi, You are warmly welcomed. Thank you for contacting us. Have a nice day!",
-
-        "greeting":[
-  {
-    "locale":"default",
-    "text":"Hello {{user_full_name}}!"
-  }
-],
-
-
          "buttons":[
                     {
                     "type":"postback",
