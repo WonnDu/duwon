@@ -242,18 +242,7 @@ function handlePostback(sender_psid, received_postback) {
     let response1 = { 
       "attachment":{
 
-      "type":"template",
-      "greeting":[
-      {
-          "locale":"default",
-          "text":"Hello!"
-      }, 
-      {
-          "locale":"en_US",
-          "text":"Timeless apparel for the masses."
-      }
-                ];
-      
+      "type":"template",     
       "payload":{
         "template_type":"button",
         "text":"Hi, You are warmly welcomed. Thank you for contacting us. Have a nice day!",
