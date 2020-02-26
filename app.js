@@ -134,13 +134,13 @@ function handleMessage(sender_psid, received_message) {
       {
         "content_type":"text",
         "title":"Red",
-        "payload":"<POSTBACK_PAYLOAD>",
+        "payload":"redd1",
         "image_url":"http://example.com/img/red.png"
       },
       {
         "content_type":"text",
         "title":"Green",
-        "payload":"<POSTBACK_PAYLOAD>",
+        "payload":"gree1",
         "image_url":"http://example.com/img/green.png"
       }
     ]
@@ -238,7 +238,13 @@ function handlePostback(sender_psid, received_postback) {
     response = { "text": "Thanks!" }
   } else if (payload === 'no') {
     response = { "text": "Oops, try sending another image." }
-  } else if (payload === 'get_started') {
+  }
+
+  else if (payload === 'redd1') {
+    response = { " text": "Xie Xie Nin" } 
+  }
+
+   else if (payload === 'get_started') {
     let response1 = { 
       "attachment":{
 
