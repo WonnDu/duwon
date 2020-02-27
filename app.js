@@ -29,12 +29,12 @@ const
   body_parser = require('body-parser'),
   app = express().use(body_parser.json()); // creates express http server
 
-let measurement = {
-  chest:false,
-  upperArm:false,
+let contactct = {
+  numberno:false,
+  thakk:false,
 }
 
-let userEnteredMeasurement = {};
+let userEnteredPhonenum = {};
 
 // Sets server port and logs message on success
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
@@ -185,19 +185,23 @@ function handleMessage(sender_psid, received_message) {
       }
    }
   }
-  else if (received_message.text == "Sata") {
+  else if (received_message.text == "Yes!!!") {
     response = {
-      "text": "First lets measure Chest."
+      "text": "Please leave your contact number."
     }
-    measurement.chest = true;
+    contactct.numberno = true;
   }
-   else if (received_message.text && measurement.chest == true) {
-    userEnteredMeasurement.chest = received_message.text;
+   else if (received_message.text && contactct.numberno == true) {
+    userEnteredPhonenum.numberno = received_message.text;
     response = {
       "text":"Text your phone number!"
     }
-    measurement.chest = false;
-    measurement.upperArm = false;
+    contactct.numberno = false;
+    contactct.thakk = true;
+  } else if (received_message.text = contactct.thakk) {
+    response = {
+      "text":" We have received your phone number. We will contact you within 24 hours. Thank you for contacting us. Have a nice day!"
+    }
   }
 
   else if (received_message.text == "ni hao") {    
@@ -752,6 +756,26 @@ function handlePostback(sender_psid, received_postback) {
   }
 
 else if (payload === 'inter') {
+  response ={
+    "text" : "Please leave your contact number.", 
+     "quick_replies":[
+      {
+        "content_type":"text",
+        "title":"Yes!!!",
+        "payload":"Yes!!!"
+        
+      },
+      {
+        "content_type":"text",
+        "title":"No!!!",
+        "payload":"No!!!"
+        
+      }
+    ]
+
+  }
+}
+else if (payload === 'innnter') {
   response ={
     "text" : "Please leave your contact number.", 
      "quick_replies":[
