@@ -29,12 +29,12 @@ const
   body_parser = require('body-parser'),
   app = express().use(body_parser.json()); // creates express http server
 
-Let measurement = {
+let measurement = {
   chest:false,
   upperArm:false,
 }
 
-Let userEnteredMeasurement = {};
+let userEnteredMeasurement = {};
 
 // Sets server port and logs message on success
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
