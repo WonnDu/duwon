@@ -178,6 +178,11 @@ function handleMessage(sender_psid, received_message) {
       }
    }
   }
+   else if (received_message.text) {
+    response = {
+      "text":'Thanks!'
+    }
+  }
 
   else if (received_message.text == "ni hao") {    
     // Create the payload for a basic text message, which
@@ -692,7 +697,7 @@ function handlePostback(sender_psid, received_postback) {
               }
   } 
   else if (payload === 'othft') {
-    response = { "text": "Please write the area of your property!" }
+    response = { "text": "Please write the area of  property that you want to buy!" }
   } 
 
   else if (payload === 'ab10') {
@@ -732,25 +737,10 @@ function handlePostback(sender_psid, received_postback) {
 
   else if (payload === 'inter') {
   response ={
-    "text" : "Please leave your phone number.", 
-     "quick_replies":[
-      {
-        "content_type":"text",
-        "title":"Yes!!",
-        "payload":"filly"
-        
-      },
-      {
-        "content_type":"text",
-        "title":"No!!",
-        "payload":"filln"
-        
-      }
-    ]
-
-  }
+    "text" : "Please leave your contact number."
+  } 
 }
-
+  
   else if (payload === 'lann') {
     response = { "attachment": {
                   "type": "template",
