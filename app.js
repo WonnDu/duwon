@@ -134,13 +134,13 @@ function handleMessage(sender_psid, received_message) {
       {
         "content_type":"text",
         "title":"Red",
-        "payload":"redd1",
+        "payload":"<POSTBACK_PAYLOAD>",
         "image_url":"http://example.com/img/red.png"
       },
       {
         "content_type":"text",
         "title":"Green",
-        "payload":"gree1",
+        "payload":"<POSTBACK_PAYLOAD>",
         "image_url":"http://example.com/img/green.png"
       }
     ]
@@ -238,19 +238,11 @@ function handlePostback(sender_psid, received_postback) {
     response = { "text": "Thanks!" }
   } else if (payload === 'no') {
     response = { "text": "Oops, try sending another image." }
-  }
-
-  else if (payload === 'redd1') {
-    response = { "text": `Nin hao !!!!` } 
-  }
-  else if (payload === 'gree1') {
-    response = { "text": "You have chose to rent out the property as a Landlord." }
-  }
-   else if (payload === 'get_started') {
+  } else if (payload === 'get_started') {
     let response1 = { 
       "attachment":{
 
-      "type":"template",     
+      "type":"template",
       "payload":{
         "template_type":"button",
         "text":"Hi, You are warmly welcomed. Thank you for contacting us. Have a nice day!",
@@ -737,6 +729,28 @@ function handlePostback(sender_psid, received_postback) {
     }
   }
   }
+
+  else if (payload === 'inter') {
+  response ={
+    "text" : "Please leave your phone number.", 
+     "quick_replies":[
+      {
+        "content_type":"text",
+        "title":"Yes!!",
+        "payload":"filly"
+        
+      },
+      {
+        "content_type":"text",
+        "title":"No!!",
+        "payload":"filln"
+        
+      }
+    ]
+
+  }
+}
+
   else if (payload === 'lann') {
     response = { "attachment": {
                   "type": "template",
@@ -1278,7 +1292,7 @@ function setupPersistentMenu(res){
                         "type":"nested",
                         "call_to_actions":[
                             {
-                              "title":"Some",
+                              "title":"Help",
                               "type":"postback",
                               "payload":"HELP_PAYLOAD"
                             },
