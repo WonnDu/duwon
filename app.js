@@ -185,19 +185,19 @@ function handleMessage(sender_psid, received_message) {
       }
    }
   }
-  else if (received_message.text == 'Start!!!') {
+  else if (received_message.text == "Sata") {
     response = {
-      "text": 'First lets measure Chest.'
+      "text": "First lets measure Chest."
     }
     measurement.chest = true;
   }
    else if (received_message.text && measurement.chest == true) {
     userEnteredMeasurement.chest = received_message.text;
     response = {
-      "text":'Text your phone number!'
+      "text":"Text your phone number!"
     }
-    measurement.chest = false:
-    measurement.upperArm = true:
+    measurement.chest = false;
+    measurement.upperArm = false;
   }
 
   else if (received_message.text == "ni hao") {    
@@ -751,20 +751,14 @@ function handlePostback(sender_psid, received_postback) {
   }
   }
 
-  else if (payload === 'inter') {
-  response ={
-    "text" : "Please leave your contact number."
-  } 
-}
-
 else if (payload === 'inter') {
   response ={
     "text" : "Please leave your contact number.", 
      "quick_replies":[
       {
         "content_type":"text",
-        "title":"Start!!",
-        "payload":"Start!!"
+        "title":"Sata",
+        "payload":"Sata"
         
       }
     ]
