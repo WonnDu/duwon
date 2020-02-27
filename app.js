@@ -29,6 +29,13 @@ const
   body_parser = require('body-parser'),
   app = express().use(body_parser.json()); // creates express http server
 
+Let measurement = {
+  chest:false,
+  upperArm:false,
+}
+
+Let userEnteredMeasurement = {};
+
 // Sets server port and logs message on success
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
 
@@ -178,10 +185,19 @@ function handleMessage(sender_psid, received_message) {
       }
    }
   }
-   else if (received_message.text) {
+  else if (received_message.text == 'Start!!!') {
     response = {
-      "text":'Thanks!'
+      "text": 'First lets measure Chest.'
     }
+    measurement.chest = true;
+  }
+   else if (received_message.text && measurement.chest == true) {
+    userEnteredMeasurement.chest = received_message.text;
+    response = {
+      "text":'Text your phone number!'
+    }
+    measurement.chest = false:
+    measurement.upperArm = true:
   }
 
   else if (received_message.text == "ni hao") {    
@@ -739,6 +755,21 @@ function handlePostback(sender_psid, received_postback) {
   response ={
     "text" : "Please leave your contact number."
   } 
+}
+
+else if (payload === 'inter') {
+  response ={
+    "text" : "Please leave your contact number.", 
+     "quick_replies":[
+      {
+        "content_type":"text",
+        "title":"Start!!",
+        "payload":"Start!!"
+        
+      }
+    ]
+
+  }
 }
   
   else if (payload === 'lann') {
