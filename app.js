@@ -1363,8 +1363,6 @@ function setupPersistentMenu(res){
                         "title":"Visit website ",
                         "url":"http://www.google.com",
                         "webview_height_ratio":"full"
-                    }
-                ]
             },
             {
               "locale":"zh_CN",
