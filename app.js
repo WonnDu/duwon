@@ -1346,6 +1346,11 @@ function setupPersistentMenu(res){
                         "type":"postback",
                         "payload":"mainme1"
                     },
+                     {
+                        "title":"Service Charges",
+                        "type":"postback",
+                        "payload":"sevic"
+                    },
                       {
                         "type":"web_url",
                         "title":"Visit website ",
