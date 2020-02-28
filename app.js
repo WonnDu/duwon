@@ -1330,22 +1330,34 @@ function setupPersistentMenu(res){
                         "type":"nested",
                         "call_to_actions":[
                             {
-                              "title":"About Us",
+                              "title":"Main Menu ",
                               "type":"postback",
-                              "payload":"abbus"
+                              "payload":"onee"
                             },
-                            {
+                              {
                               "title":"Contact Us",
                               "type":"postback",
-                              "payload":"contus"
+                              "payload":"two2"
+                            },
+                            {
+                              "title":"About Us",
+                              "type":"postback",
+                              "payload":"three3"
                             }
+                          
                         ]
                       },
-                        {
-                        "title":"Main Menu ",
-                        "type":"postback",
-                        "payload":"mainme1"
-                    },
+                              {
+                              "title":"Service charges",
+                              "type":"postback",
+                              "payload":"servch"
+                            },
+                              {
+                              "title":"Moving House Service",
+                              "type":"postback",
+                              "payload":"movehou"
+                            },
+
                       {
                         "type":"web_url",
                         "title":"Visit website ",
