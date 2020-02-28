@@ -140,7 +140,13 @@ function handleMessage(sender_psid, received_message) {
       {
         "content_type":"text",
         "title":"Red",
-        "payload":"<POSTBACK_PAYLOAD>",
+        "payload":"red-1",
+        "image_url":"http://example.com/img/red.png"
+      },
+      {
+        "content_type":"text",
+        "title":"Red",
+        "payload":"red-2",
         "image_url":"http://example.com/img/red.png"
       },
       {
@@ -188,6 +194,7 @@ function handleMessage(sender_psid, received_message) {
     response = {
       "text": "Please leave your contact number."
     }
+    received_message.text = false;
     contactct.numberno = true;
   }
    else if (received_message.text && contactct.numberno == true) {
