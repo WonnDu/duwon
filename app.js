@@ -1334,17 +1334,16 @@ function setupPersistentMenu(res){
                               "type":"postback",
                               "payload":"onee"
                             },
-                              {
-                              "title":"Contact Us",
-                              "type":"postback",
-                              "payload":"two2"
-                            },
                             {
                               "title":"About Us",
                               "type":"postback",
                               "payload":"three3"
+                            },
+                            {
+                              "title":"Contact Us",
+                              "type":"postback",
+                              "payload":"two2"
                             }
-                          
                         ]
                       },
                               {
@@ -1363,6 +1362,8 @@ function setupPersistentMenu(res){
                         "title":"Visit website ",
                         "url":"http://www.google.com",
                         "webview_height_ratio":"full"
+                    }
+                ]
             },
             {
               "locale":"zh_CN",
