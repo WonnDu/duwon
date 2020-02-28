@@ -1330,17 +1330,23 @@ function setupPersistentMenu(res){
                         "type":"nested",
                         "call_to_actions":[
                             {
-                              "title":"Help",
+                              "title":"About Us",
                               "type":"postback",
-                              "payload":"HELP_PAYLOAD"
+                              "payload":"abbus"
                             },
                             {
-                              "title":"Contact Me",
+                              "title":"Contact Us",
                               "type":"postback",
-                              "payload":"CONTACT_INFO_PAYLOAD"
+                              "payload":"contus"
                             }
                         ]
                       },
+                        {
+                        "type":"web_url",
+                        "title":"Main Menu",
+                        "payload":"mainme1"
+                        "webview_height_ratio":"full"
+                    },
                       {
                         "type":"web_url",
                         "title":"Visit website ",
