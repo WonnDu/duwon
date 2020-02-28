@@ -1342,10 +1342,9 @@ function setupPersistentMenu(res){
                         ]
                       },
                         {
-                        "type":"web_url",
-                        "title":"Main Menu",
+                        "title":"Main Menu ",
+                        "type":"postback",
                         "payload":"mainme1"
-                        "webview_height_ratio":"full"
                     },
                       {
                         "type":"web_url",
