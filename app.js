@@ -1332,25 +1332,20 @@ function setupPersistentMenu(res){
                             {
                               "title":"About Us",
                               "type":"postback",
-                              "payload":"three3"
+                              "payload":"abbus"
                             },
                             {
                               "title":"Contact Us",
                               "type":"postback",
-                              "payload":"two2"
+                              "payload":"contus"
                             }
                         ]
                       },
-                              {
-                              "title":"Main Menu ",
-                              "type":"postback",
-                              "payload":"onee"
-                            },
-                              {
-                              "title":"Service Charges",
-                              "type":"postback",
-                              "payload":"servch"
-                            },
+                        {
+                        "title":"Main Menu ",
+                        "type":"postback",
+                        "payload":"mainme1"
+                    },
                       {
                         "type":"web_url",
                         "title":"Visit website ",
