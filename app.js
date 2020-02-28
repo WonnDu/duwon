@@ -1337,26 +1337,20 @@ function setupPersistentMenu(res){
                             {
                               "title":"About Us",
                               "type":"postback",
-                              "payload":"three3"
+                              "payload":"abbus"
                             },
                             {
                               "title":"Contact Us",
                               "type":"postback",
-                              "payload":"two2"
+                              "payload":"contus"
                             }
                         ]
                       },
                               {
-                              "title":"Service charges",
+                              "title":"Service Charges",
                               "type":"postback",
                               "payload":"servch"
                             },
-                              {
-                              "title":"Moving House Service",
-                              "type":"postback",
-                              "payload":"movehou"
-                            },
-
                       {
                         "type":"web_url",
                         "title":"Visit website ",
