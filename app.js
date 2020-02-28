@@ -191,9 +191,7 @@ function handleMessage(sender_psid, received_message) {
    }
   }
   else if (received_message.text == "Yes!!!") {
-    response = {
-      "text": "Please leave your contact number."
-    }
+   
     received_message.text = false;
     contactct.numberno = true;
   }
