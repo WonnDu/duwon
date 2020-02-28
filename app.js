@@ -1330,22 +1330,22 @@ function setupPersistentMenu(res){
                         "type":"nested",
                         "call_to_actions":[
                             {
-                              "title":"Main Menu ",
-                              "type":"postback",
-                              "payload":"onee"
-                            },
-                            {
                               "title":"About Us",
                               "type":"postback",
-                              "payload":"abbus"
+                              "payload":"three3"
                             },
                             {
                               "title":"Contact Us",
                               "type":"postback",
-                              "payload":"contus"
+                              "payload":"two2"
                             }
                         ]
                       },
+                              {
+                              "title":"Main Menu ",
+                              "type":"postback",
+                              "payload":"onee"
+                            },
                               {
                               "title":"Service Charges",
                               "type":"postback",
