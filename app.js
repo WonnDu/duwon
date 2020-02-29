@@ -1219,11 +1219,11 @@ else if (payload === 'innnter') {
                          {
                           "content_type": "text",
                           "title": "Five Thiri Twp",
-                          "payload": "5thitwp",
+                          "payload": "fivethi1",
                         }
                       ]
               }
-    } else if (payload === '5thitwp') {
+    } else if (payload === 'fivethi1') {
               response = { 
                     "text": "Please choose:",
                     "quick_replies": [
