@@ -35,6 +35,12 @@ let contactct = {
 
 let userEnteredPhonenum = {};
 
+let townshipnm = {
+  twpenter:false,
+}
+
+let userChosetwpname = {};
+
 // Sets server port and logs message on success
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
 
@@ -201,8 +207,29 @@ function handleMessage(sender_psid, received_message) {
       "text":"We have received your phone number. We will contact you within 24 hours. Thank you for contacting us. Have a nice day!"
     }
     contactct.numberno = false;
+    received_message.payload = true;
   } 
-
+    else if (received_postback.payload == "fivethi1") {
+      userChosetwpname.movehousetwp= received_postback.payload;
+      response =  { 
+                    "text": "Please choose:",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Ottara",
+                          "payload": "ottta",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "Pobba",
+                          "payload": "pobbb",
+                        }
+                      ]
+              }
+            }
+      received_postback.payload = false;
+      twpnamee.twpenter = true;
+    }
   else if (received_message.text == "ni hao") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
@@ -1223,23 +1250,7 @@ else if (payload === 'innnter') {
                         }
                       ]
               }
-    } else if (payload === 'fivethi1') {
-              response = { 
-                    "text": "Please choose:",
-                    "quick_replies": [
-                        {
-                          "content_type": "text",
-                          "title": "Ottara",
-                          "payload": "ottta",
-                        },
-                         {
-                          "content_type": "text",
-                          "title": "Pobba",
-                          "payload": "pobbb",
-                        }
-                      ]
-              }
-            }
+    } 
 
 
 
