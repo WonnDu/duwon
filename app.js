@@ -207,7 +207,7 @@ function handleMessage(sender_psid, received_message) {
       "text":"We have received your phone number. We will contact you within 24 hours. Thank you for contacting us. Have a nice day!"
     }
     contactct.numberno = false;
-    received_message.payload = true;
+    received_postback.payload = true;
   } 
     else if (received_postback.payload == "fivethi1") {
       userChosetwpname.movehousetwp= received_postback.payload;
