@@ -1230,12 +1230,12 @@ else if (payload === 'innnter') {
                         {
                           "content_type": "text",
                           "title": "Ottara",
-                          "payload": "ott1",
+                          "payload": "ottta",
                         },
                          {
                           "content_type": "text",
                           "title": "Pobba",
-                          "payload": "pobb1",
+                          "payload": "pobbb",
                         }
                       ]
               }
