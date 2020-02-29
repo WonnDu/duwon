@@ -1246,11 +1246,6 @@ else if (payload === 'innnter') {
                           "content_type": "text",
                           "title": "Zaya",
                           "payload": "zay1",
-                        },
-                          {
-                          "content_type": "text",
-                          "title": "Zabu1",
-                          "payload": "zabb1",
                         }
                       ]
               }
