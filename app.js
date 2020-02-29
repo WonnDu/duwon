@@ -1350,12 +1350,7 @@ function setupPersistentMenu(res){
                         "title":"Moving House Service ",
                         "type":"postback",
                         "payload":"movehou"
-                    },
-                     {
-                              "title":"Give Feedback",
-                              "type":"postback",
-                              "payload":"givefe"
-                            }
+                    }
                 ]
             },
             {
