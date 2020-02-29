@@ -1225,6 +1225,7 @@ else if (payload === 'innnter') {
               }
     } else if (payload === '5thitwp') {
               response = { 
+                    "text": "Please choose:",
                     "quick_replies": [
                         {
                           "content_type": "text",
