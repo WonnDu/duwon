@@ -1332,30 +1332,34 @@ function setupPersistentMenu(res){
                             {
                               "title":"About Us",
                               "type":"postback",
-                              "payload":"abbus"
+                              "payload":"three3"
                             },
                             {
                               "title":"Contact Us",
                               "type":"postback",
-                              "payload":"contus"
+                              "payload":"two2"
+                            },
+                             {
+                              "title":"Give Feedback",
+                              "type":"postback",
+                              "payload":"givefe"
                             }
                         ]
                       },
                         {
                         "title":"Main Menu ",
                         "type":"postback",
-                        "payload":"mainme1"
+                        "payload":"onee"
+                    },
+                       {
+                        "title":"Moving House Service ",
+                        "type":"postback",
+                        "payload":"movehou"
                     },
                      {
                         "title":"Service Charges",
                         "type":"postback",
-                        "payload":"sevic"
-                    },
-                      {
-                        "type":"web_url",
-                        "title":"Visit website ",
-                        "url":"http://www.google.com",
-                        "webview_height_ratio":"full"
+                        "payload":"servch"
                     }
                 ]
             },
