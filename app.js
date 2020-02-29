@@ -1219,11 +1219,42 @@ else if (payload === 'innnter') {
                          {
                           "content_type": "text",
                           "title": "Five Thiri Twp",
-                          "payload": "5hthitwp",
+                          "payload": "5thitwp",
+                        }
+                      ]
+              }
+    } else if (payload === '5thitwp') {
+              response = { 
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Ottara",
+                          "payload": "ott1",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "Pobba",
+                          "payload": "pobb1",
+                        },
+                          {
+                          "content_type": "text",
+                          "title": "Dekkhina",
+                          "payload": "dekk1",
+                        },
+                          {
+                          "content_type": "text",
+                          "title": "Zaya",
+                          "payload": "zay1",
+                        },
+                          {
+                          "content_type": "text",
+                          "title": "Zabu1",
+                          "payload": "zabb1",
                         }
                       ]
               }
             }
+
 
 
   // Send the message to acknowledge the postback
