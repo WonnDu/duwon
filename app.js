@@ -209,20 +209,19 @@ function handleMessage(sender_psid, received_message) {
     contactct.numberno = false;
     received_postback.payload = true;
   } 
-    else if (received_postback.payload == "fivethi1") {
-      userChosetwpname.movehousetwp= received_postback.payload;
+    else if (received_postback.payload == "fivethithi") {
       response =  { 
                     "text": "Please choose:",
                     "quick_replies": [
                         {
-                          "content_type": "text",
-                          "title": "Ottara",
-                          "payload": "ottta",
+                          "content_type":"text",
+                          "title":"Ottara",
+                          "payload":"ottta",
                         },
                          {
-                          "content_type": "text",
-                          "title": "Pobba",
-                          "payload": "pobbb",
+                          "content_type":"text",
+                          "title":"Pobba",
+                          "payload":"pobbb",
                         }
                       ]
               }
@@ -1243,7 +1242,7 @@ else if (payload === 'innnter') {
                          {
                           "content_type": "text",
                           "title": "Five Thiri Twp",
-                          "payload": "fivethi1",
+                          "payload": "fivethithi",
                         }
                       ]
               }
