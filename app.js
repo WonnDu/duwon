@@ -1208,25 +1208,20 @@ else if (payload === 'innnter') {
     }
   }
   } else if (payload === 'hijet11') {
-    response = { "attachment": {
-                  "type": "template",
-                  "payload": {
-                    "template_type": "button",
-                    "text": "Do you want to move within township in which you are living?",
-                    "buttons": [
+              response = { 
+                    "text": "Please choose the name of township from which you want to move:",
+                    "quick_replies": [
                         {
-                          "type": "postback",
-                          "title": "Yes!",
-                          "payload": "yes-1",
+                          "content_type": "text",
+                          "title": "Pyinmana Twp",
+                          "payload": "pytwp",
                         },
                          {
-                          "type": "postback",
-                          "title": "No!",
-                          "payload": "no-1",
+                          "content_type": "text",
+                          "title": "Five Thiri Twp",
+                          "payload": "5hthitwp",
                         }
                       ]
-                  }
-                }
               }
             }
 
