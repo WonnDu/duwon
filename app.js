@@ -1241,11 +1241,6 @@ else if (payload === 'innnter') {
                           "content_type": "text",
                           "title": "Dekkhina",
                           "payload": "dekk1",
-                        },
-                          {
-                          "content_type": "text",
-                          "title": "Zaya",
-                          "payload": "zay1",
                         }
                       ]
               }
