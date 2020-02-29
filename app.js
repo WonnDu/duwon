@@ -1338,11 +1338,6 @@ function setupPersistentMenu(res){
                               "title":"Contact Us",
                               "type":"postback",
                               "payload":"two2"
-                            },
-                             {
-                              "title":"Give Feedback",
-                              "type":"postback",
-                              "payload":"givefe"
                             }
                         ]
                       },
@@ -1357,10 +1352,10 @@ function setupPersistentMenu(res){
                         "payload":"movehou"
                     },
                      {
-                        "title":"Service Charges",
-                        "type":"postback",
-                        "payload":"servch"
-                    }
+                              "title":"Give Feedback",
+                              "type":"postback",
+                              "payload":"givefe"
+                            }
                 ]
             },
             {
