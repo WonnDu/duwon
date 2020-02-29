@@ -207,9 +207,9 @@ function handleMessage(sender_psid, received_message) {
       "text":"We have received your phone number. We will contact you within 24 hours. Thank you for contacting us. Have a nice day!"
     }
     contactct.numberno = false;
-    payload = true;
+    received_message.payload = true;
   } 
-    else if (payload == "fivethithi") {
+    else if (received_message.payload == "fivethithi") {
       response =  { 
                     "text": "Please choose:",
                     "quick_replies": [
