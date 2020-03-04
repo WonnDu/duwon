@@ -207,25 +207,8 @@ function handleMessage(sender_psid, received_message) {
       "text":"We have received your phone number. We will contact you within 24 hours. Thank you for contacting us. Have a nice day!"
     }
     contactct.numberno = false;
-    payload = true;
   } 
-    else if (payload == "fivethithi") {
-      response =  { 
-                    "text": "Please choose:",
-                    "quick_replies": [
-                        {
-                          "content_type":"text",
-                          "title":"Ottara",
-                          "payload":"ottta",
-                        },
-                         {
-                          "content_type":"text",
-                          "title":"Pobba",
-                          "payload":"pobbb",
-                        }
-                      ]
-              }
-            }
+    
   else if (received_message.text == "ni hao") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
@@ -1246,7 +1229,23 @@ else if (payload === 'innnter') {
                         }
                       ]
               }
-    } 
+    } else if (payload === 'fivethithi') {
+      response =  { 
+                    "text": "Please choose:",
+                    "quick_replies": [
+                        {
+                          "content_type":"text",
+                          "title":"Ottara",
+                          "payload":"ottta",
+                        },
+                         {
+                          "content_type":"text",
+                          "title":"Pobba",
+                          "payload":"pobbb",
+                        }
+                      ]
+              }
+            }
 
 
 
