@@ -1229,7 +1229,7 @@ else if (payload === 'innnter') {
                         }
                       ]
               }
-    } else if (payload === 'fivethithi') {
+    } else if (payload == 'fivethithi') {
       response =  { 
                     "text": "Please choose:",
                     "quick_replies": [
