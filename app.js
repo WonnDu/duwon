@@ -290,27 +290,27 @@ function handleMessage(sender_psid, received_message) {
                         {
                           "content_type": "text",
                           "title": "Ottara",
-                          "payload": "ft1",
+                          "payload": "ft11",
                         },
                          {
                           "content_type": "text",
                           "title": "Pobba",
-                          "payload": "ft2",
+                          "payload": "ft22",
                         },
                         {
                           "content_type": "text",
                           "title": "Dekkhina",
-                          "payload": "ft3",
+                          "payload": "ft33",
                         },
                         {
                           "content_type": "text",
                           "title": "Zaya Thiri",
-                          "payload": "ft4",
+                          "payload": "ft44",
                         },
                         {
                           "content_type": "text",
                           "title": "Zabu Thiri",
-                          "payload": "ft5",
+                          "payload": "ft55",
                         }
                       ]
               }
@@ -323,27 +323,27 @@ function handleMessage(sender_psid, received_message) {
                         {
                           "content_type": "text",
                           "title": "Ottara",
-                          "payload": "ft1",
+                          "payload": "ft01",
                         },
                          {
                           "content_type": "text",
                           "title": "Pobba",
-                          "payload": "ft2",
+                          "payload": "ft02",
                         },
                         {
                           "content_type": "text",
                           "title": "Dekkhina",
-                          "payload": "ft3",
+                          "payload": "ft03",
                         },
                         {
                           "content_type": "text",
                           "title": "Zaya Thiri",
-                          "payload": "ft4",
+                          "payload": "ft04",
                         },
                         {
                           "content_type": "text",
                           "title": "Zabu Thiri",
-                          "payload": "ft5",
+                          "payload": "ft05",
                         }
                       ]
               }
@@ -356,27 +356,27 @@ function handleMessage(sender_psid, received_message) {
                         {
                           "content_type": "text",
                           "title": "Ottara",
-                          "payload": "ft1",
+                          "payload": "ft10",
                         },
                          {
                           "content_type": "text",
                           "title": "Pobba",
-                          "payload": "ft2",
+                          "payload": "ft20",
                         },
                         {
                           "content_type": "text",
                           "title": "Dekkhina",
-                          "payload": "ft3",
+                          "payload": "ft30",
                         },
                         {
                           "content_type": "text",
                           "title": "Zaya Thiri",
-                          "payload": "ft4",
+                          "payload": "ft40",
                         },
                         {
                           "content_type": "text",
                           "title": "Zabu Thiri",
-                          "payload": "ft5",
+                          "payload": "ft50",
                         }
                       ]
               }
@@ -389,27 +389,27 @@ function handleMessage(sender_psid, received_message) {
                         {
                           "content_type": "text",
                           "title": "Ottara",
-                          "payload": "ft1",
+                          "payload": "ft111",
                         },
                          {
                           "content_type": "text",
                           "title": "Pobba",
-                          "payload": "ft2",
+                          "payload": "ft112",
                         },
                         {
                           "content_type": "text",
                           "title": "Dekkhina",
-                          "payload": "ft3",
+                          "payload": "ft113",
                         },
                         {
                           "content_type": "text",
                           "title": "Zaya Thiri",
-                          "payload": "ft4",
+                          "payload": "ft114",
                         },
                         {
                           "content_type": "text",
                           "title": "Zabu Thiri",
-                          "payload": "ft5",
+                          "payload": "ft115",
                         }
                       ]
               }
@@ -433,7 +433,39 @@ function handleMessage(sender_psid, received_message) {
               }
 
     } 
+    else if (received_message.payload === "ft1") {
+      response = {
+                  "text": "Now, please you the one name of townships to which you want to move:",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Ottara",
+                          "payload": "fft1",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "Pobba",
+                          "payload": "fft2",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Dekkhina",
+                          "payload": "fft3",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zaya Thiri",
+                          "payload": "fft4",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zabu Thiri",
+                          "payload": "fft5",
+                        }
+                      ]
 
+      }
+    }
 
    
   
