@@ -257,13 +257,28 @@ function handleMessage(sender_psid, received_message) {
                     "quick_replies": [
                         {
                           "content_type": "text",
-                          "title": "Five Thiri 1",
+                          "title": "Ottara",
                           "payload": "ft1",
                         },
                          {
                           "content_type": "text",
-                          "title": "Five Thiri 2",
+                          "title": "Pobba",
                           "payload": "ft2",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Dekkhina",
+                          "payload": "ft3",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zaya Thiri",
+                          "payload": "ft4",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zabu Thiri",
+                          "payload": "ft5",
                         }
                       ]
               }
