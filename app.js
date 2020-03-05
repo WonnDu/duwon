@@ -1155,17 +1155,36 @@ else if (payload === 'innnter') {
                     "text": "Please choose the name of township from which you want to move:",
                     "quick_replies": [
                         {
-                          "content_type": "text",
+                          //"content_type": "text",
                           "title": "Pyinmana Twp",
                           "payload": "pytwp",
                         },
                          {
-                          "content_type": "text",
+                          //"content_type": "text",
                           "title": "Five Thiri Twp",
                           "payload": "fivethiri",
                         }
                       ]
               }
+    }
+
+    else if (payload === "fivethiri") {
+        response =  { 
+                    "text": "Please choose:",
+                    "quick_replies": [
+                        {
+                          "content_type":"text",
+                          "title":"Ottara",
+                          "payload":"ottta",
+                        },
+                         {
+                          "content_type":"text",
+                          "title":"Pobba",
+                          "payload":"pobbb",
+                        }
+                      ]
+              }
+
     } 
 
 
