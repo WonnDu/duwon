@@ -1093,13 +1093,14 @@ else if (payload === 'innnter') {
   return callSend(sender_psid, response2);
   });
   }
-   else if (payload === 'movehou') {
+  //start
+  else if (payload === 'movehou') {
     response = {
     "attachment":{
       "type":"template",
       "payload":{
         "template_type":"generic",
-        "elements":[
+        "elements": [ 
            {
             "title":"Hijet",
             "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/87795714_131104691768664_5331501195544494080_n.jpg?_nc_cat=105&_nc_sid=a61e81&_nc_ohc=wzIfTKWOloQAX9AfZN8&_nc_ht=scontent.fmdl2-2.fna&oh=4ab72315c30f728bfdc83d57dd274725&oe=5EF9BF44",
@@ -1209,7 +1210,12 @@ else if (payload === 'innnter') {
       }
     }
   }
-  } else if (payload === 'hijet11') {
+}
+
+  //end
+
+
+  else if (payload === 'hijet11') {
               response = { 
                     "text": "Please choose the name of township from which you want to move:",
                     "quick_replies": [
@@ -1225,8 +1231,12 @@ else if (payload === 'innnter') {
                         }
                       ]
               }
-    } else if (payload === "fivethithi") {
-      response =  { 
+    } 
+
+
+
+    else if (payload === "fivethithi") {
+        response =  { 
                     "text": "Please choose:",
                     "quick_replies": [
                         {
@@ -1241,7 +1251,8 @@ else if (payload === 'innnter') {
                         }
                       ]
               }
-            }
+              callSendAPI(sender_psid, response);
+      }
 
 
 
