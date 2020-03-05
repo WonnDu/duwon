@@ -68,7 +68,7 @@ app.post('/webhook', (req, res) => {
       // pass the event to the appropriate handler function
       if (webhook_event.message) {        
         if(webhook_event.message.quick_reply){
-          handleMessage(sender_psid, webhook_event.message);
+          handleMessage(sender_psid, webhook_event.message.quick_reply);
         }else{
           handleMessage(sender_psid, webhook_event.message);
         }
@@ -251,7 +251,7 @@ function handleMessage(sender_psid, received_message) {
       }
     }
   } 
-  else if (received_message.text === "Five Thiri Twp") {
+  else if (received_message.payload === "fivethiri") {
         response = { 
                     "text": "Choose one option",
                     "quick_replies": [
@@ -271,24 +271,7 @@ function handleMessage(sender_psid, received_message) {
     } 
 
 
-    else if (received_message.text === "Five Thiri 1") {
-        response = { 
-                    "text": "you are here Five Thiri 1",
-                    "quick_replies": [
-                        {
-                          "content_type": "text",
-                          "title": "button 1",
-                          "payload": "b1",
-                        },
-                         {
-                          "content_type": "text",
-                          "title": "button 2",
-                          "payload": "b2",
-                        }
-                      ]
-              }
-
-    } 
+   
   
   
   // Send the response message
