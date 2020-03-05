@@ -67,9 +67,13 @@ app.post('/webhook', (req, res) => {
       // Check if the event is a message or postback and
       // pass the event to the appropriate handler function
       if (webhook_event.message) {
-        handleMessage(sender_psid, webhook_event.message);        
-      } else if (webhook_event.postback) {
-        
+        if(webhook_event.message.quick_reply){
+          handleMessage(sender_psid, webhook_event.message.quick_reply);
+        }else{
+          handleMessage(sender_psid, webhook_event.message);
+        }
+                
+      } else if (webhook_event.postback) {        
         handlePostback(sender_psid, webhook_event.postback);
       }
       
@@ -248,23 +252,24 @@ function handleMessage(sender_psid, received_message) {
     }
   } 
   else if (received_message.text === "fivethiri") {
-        response =  { 
-                    "text": "Please choose:",
+        response = { 
+                    "text": "Five Thiri",
                     "quick_replies": [
                         {
-                          "content_type":"text",
-                          "title":"Ottara",
-                          "payload":"ottta",
+                          "content_type": "text",
+                          "title": "Pyinmana Twp",
+                          "payload": "pytwp",
                         },
                          {
-                          "content_type":"text",
-                          "title":"Pobba",
-                          "payload":"pobbb",
+                          "content_type": "text",
+                          "title": "Five Thiri Twp",
+                          "payload": "fivethiri",
                         }
                       ]
               }
 
-    }
+    } 
+  
   
   // Send the response message
   callSendAPI(sender_psid, response);    
@@ -1168,24 +1173,7 @@ else if (payload === 'innnter') {
               }
     }
 
-    else if (payload === "fivethiri") {
-        response = { 
-                    "text": "Five Thiri",
-                    "quick_replies": [
-                        {
-                          "content_type": "text",
-                          "title": "Pyinmana Twp",
-                          "payload": "pytwp",
-                        },
-                         {
-                          "content_type": "text",
-                          "title": "Five Thiri Twp",
-                          "payload": "fivethiri",
-                        }
-                      ]
-              }
-
-    } 
+    
 
 
 
