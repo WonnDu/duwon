@@ -68,7 +68,7 @@ app.post('/webhook', (req, res) => {
       // pass the event to the appropriate handler function
       if (webhook_event.message) {
         if(webhook_event.message.quick_reply){
-          handleMessage(sender_psid, webhook_event.message.quick_reply);
+          handleMessage(sender_psid, webhook_event.message.quick_reply.payload);
         }else{
           handleMessage(sender_psid, webhook_event.message);
         }
@@ -251,7 +251,7 @@ function handleMessage(sender_psid, received_message) {
       }
     }
   } 
-  else if (received_message.text === "fivethiri") {
+  else if (received_message.text === "Five Thiri Twp") {
         response = { 
                     "text": "Five Thiri",
                     "quick_replies": [
