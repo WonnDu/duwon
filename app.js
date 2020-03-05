@@ -36,7 +36,6 @@ let contactct = {
 let userEnteredPhonenum = {};
 
 
-
 // Sets server port and logs message on success
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
 
@@ -169,7 +168,7 @@ function handleMessage(sender_psid, received_message) {
       "text":'Say'
     }
   }
-  else if (received_message.text == "hi,hay,how,what") {
+  else if (received_message.text == "hi" || received_message.text == "hello" || received_message.text == "Hi") {
     response = { "attachment":{
       "type":"template",
       "payload":{
