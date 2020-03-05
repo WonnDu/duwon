@@ -68,8 +68,9 @@ app.post('/webhook', (req, res) => {
       // pass the event to the appropriate handler function
       if (webhook_event.message) {
         console.log("webhook_event.message", webhook_event.message);
+        //console.log("webhook_event.message.quickreply",webhook_event.message.quickreply);
         if(webhook_event.message.quick_reply){
-          handleMessage(sender_psid, webhook_event.message.quick_reply.payload);
+          handleMessage(sender_psid, webhook_event.message);
         }else{
           handleMessage(sender_psid, webhook_event.message);
         }
