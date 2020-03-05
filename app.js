@@ -66,9 +66,7 @@ app.post('/webhook', (req, res) => {
 
       // Check if the event is a message or postback and
       // pass the event to the appropriate handler function
-      if (webhook_event.message) {
-        console.log("webhook_event.message", webhook_event.message);
-        //console.log("webhook_event.message.quickreply",webhook_event.message.quickreply);
+      if (webhook_event.message) {        
         if(webhook_event.message.quick_reply){
           handleMessage(sender_psid, webhook_event.message);
         }else{
@@ -255,17 +253,37 @@ function handleMessage(sender_psid, received_message) {
   } 
   else if (received_message.text === "Five Thiri Twp") {
         response = { 
-                    "text": "Five Thiri",
+                    "text": "Choose one option",
                     "quick_replies": [
                         {
                           "content_type": "text",
-                          "title": "Pyinmana Twp",
-                          "payload": "pytwp",
+                          "title": "Five Thiri 1",
+                          "payload": "ft1",
                         },
                          {
                           "content_type": "text",
-                          "title": "Five Thiri Twp",
-                          "payload": "fivethiri",
+                          "title": "Five Thiri 2",
+                          "payload": "ft2",
+                        }
+                      ]
+              }
+
+    } 
+
+
+    else if (received_message.text === "Five Thiri 1") {
+        response = { 
+                    "text": "you are here Five Thiri 1",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "button 1",
+                          "payload": "b1",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "button 2",
+                          "payload": "b2",
                         }
                       ]
               }
