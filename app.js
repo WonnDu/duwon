@@ -251,7 +251,7 @@ function handleMessage(sender_psid, received_message) {
       }
     }
   } 
-  else if (received_message.payload === "fivethiri") {
+  else if (received_message.payload === "fivethi1") {
         response = { 
                     "text": "Choose one option",
                     "quick_replies": [
@@ -1199,7 +1199,7 @@ else if (payload === 'innnter') {
               },{
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"scc2"
+                "payload":"motor11"
               }              
             ]      
           },
@@ -1220,7 +1220,7 @@ else if (payload === 'innnter') {
               },{
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"scc5"
+                "payload":"ltruck11"
               }              
             ]      
           },
@@ -1241,7 +1241,7 @@ else if (payload === 'innnter') {
               },{
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"svc5"
+                "payload":"tcar11"
               }              
             ]      
           },
@@ -1262,7 +1262,7 @@ else if (payload === 'innnter') {
               },{
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"scvvc5"
+                "payload":"tcar22"
               }              
             ]      
           }
@@ -1287,14 +1287,79 @@ else if (payload === 'innnter') {
                          {
                           "content_type": "text",
                           "title": "Five Thiri Twp",
-                          "payload": "fivethiri",
+                          "payload": "fivethi1",
                         }
                       ]
               }
     }
-
-    
-
+    else if (payload === 'motor11') {
+              response = { 
+                    "text": "Please choose the name of township from which you want to move:",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Pyinmana Twp",
+                          "payload": "pytwp2",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "Five Thiri Twp",
+                          "payload": "fivethi2",
+                        }
+                      ]
+              }
+    }
+    else if (payload === 'ltruck11') {
+              response = { 
+                    "text": "Please choose the name of township from which you want to move:",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Pyinmana Twp",
+                          "payload": "pytwp3",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "Five Thiri Twp",
+                          "payload": "fivethi3",
+                        }
+                      ]
+              }
+    }
+     else if (payload === 'tcar11') {
+              response = { 
+                    "text": "Please choose the name of township from which you want to move:",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Pyinmana Twp",
+                          "payload": "pytwp4",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "Five Thiri Twp",
+                          "payload": "fivethi4",
+                        }
+                      ]
+              }
+    } 
+  else if (payload === 'tcar22') {
+              response = { 
+                    "text": "Please choose the name of township from which you want to move:",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Pyinmana Twp",
+                          "payload": "pytwp5",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "Five Thiri Twp",
+                          "payload": "fivethi5",
+                        }
+                      ]
+              }
+    }
 
 
     
