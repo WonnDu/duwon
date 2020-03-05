@@ -284,6 +284,138 @@ function handleMessage(sender_psid, received_message) {
               }
 
     } 
+    else if (received_message.payload === "fivethi2") {
+        response = { 
+                    "text": "Choose one option",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Ottara",
+                          "payload": "ft1",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "Pobba",
+                          "payload": "ft2",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Dekkhina",
+                          "payload": "ft3",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zaya Thiri",
+                          "payload": "ft4",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zabu Thiri",
+                          "payload": "ft5",
+                        }
+                      ]
+              }
+
+    }
+      else if (received_message.payload === "fivethi3") {
+        response = { 
+                    "text": "Choose one option",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Ottara",
+                          "payload": "ft1",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "Pobba",
+                          "payload": "ft2",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Dekkhina",
+                          "payload": "ft3",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zaya Thiri",
+                          "payload": "ft4",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zabu Thiri",
+                          "payload": "ft5",
+                        }
+                      ]
+              }
+
+    } 
+      else if (received_message.payload === "fivethi4") {
+        response = { 
+                    "text": "Choose one option",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Ottara",
+                          "payload": "ft1",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "Pobba",
+                          "payload": "ft2",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Dekkhina",
+                          "payload": "ft3",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zaya Thiri",
+                          "payload": "ft4",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zabu Thiri",
+                          "payload": "ft5",
+                        }
+                      ]
+              }
+
+    } 
+      else if (received_message.payload === "fivethi5") {
+        response = { 
+                    "text": "Choose one option",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Ottara",
+                          "payload": "ft1",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "Pobba",
+                          "payload": "ft2",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Dekkhina",
+                          "payload": "ft3",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zaya Thiri",
+                          "payload": "ft4",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zabu Thiri",
+                          "payload": "ft5",
+                        }
+                      ]
+              }
+
+    } 
     else if (received_message.payload === "ft1") {
         response = { 
                     "text": "FT1",
@@ -1282,7 +1414,7 @@ else if (payload === 'innnter') {
                         {
                           "content_type": "text",
                           "title": "Pyinmana Twp",
-                          "payload": "pytwp",
+                          "payload": "pytwp1",
                         },
                          {
                           "content_type": "text",
