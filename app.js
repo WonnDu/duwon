@@ -1621,6 +1621,22 @@ function setupPersistentMenu(res){
                             }
                         ]
                       },
+                      {
+                        "title":"Some22",
+                        "type":"nested",
+                        "call_to_actions":[
+                            {
+                              "title":"dddd",
+                              "type":"postback",
+                              "payload":"ddddd"
+                            },
+                            {
+                              "title":"ffff",
+                              "type":"postback",
+                              "payload":"fffff"
+                            }
+                        ]
+                      },
                         {
                         "title":"Main Menu ",
                         "type":"postback",
