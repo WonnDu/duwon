@@ -247,6 +247,24 @@ function handleMessage(sender_psid, received_message) {
       }
     }
   } 
+  else if (received_message.text === "fivethiri") {
+        response =  { 
+                    "text": "Please choose:",
+                    "quick_replies": [
+                        {
+                          "content_type":"text",
+                          "title":"Ottara",
+                          "payload":"ottta",
+                        },
+                         {
+                          "content_type":"text",
+                          "title":"Pobba",
+                          "payload":"pobbb",
+                        }
+                      ]
+              }
+
+    }
   
   // Send the response message
   callSendAPI(sender_psid, response);    
@@ -1152,24 +1170,7 @@ else if (payload === 'innnter') {
 
 
 
-    else if (payload === "fivethiri") {
-        response =  { 
-                    "text": "Please choose:",
-                    "quick_replies": [
-                        {
-                          "content_type":"text",
-                          "title":"Ottara",
-                          "payload":"ottta",
-                        },
-                         {
-                          "content_type":"text",
-                          "title":"Pobba",
-                          "payload":"pobbb",
-                        }
-                      ]
-              }
-
-      }
+    
 
 
 
