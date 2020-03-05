@@ -817,55 +817,37 @@ function handlePostback(sender_psid, received_postback) {
                 }
               }
   } else if (payload === 'fethri') {
-    let response1 = { "attachment": {
-                  "type": "template",
-                  "payload": {
-                    "template_type": "button",
-                      "text": "Please choose the township in which you want to buy house",
-                      "buttons": [
+    let response1 = {
+                  "text": "Please choose the one name of townships in which you want to buy a house:",
+                    "quick_replies": [
                         {
-                          "type": "postback",
-                          "title": "Zaya Thiri Twp",
-                          "payload": "zaytwp",
+                          "content_type": "text",
+                          "title": "Ottara",
+                          "payload": "ottwp",
                         },
                          {
-                          "type": "postback",
-                          "title": "Zabu Thiri Twp",
-                          "payload": "zabtwp",
+                          "content_type": "text",
+                          "title": "Pobba",
+                          "payload": "potwp",
                         },
                         {
-                          "type": "postback",
-                          "title": "Dekkhina Thiri Twp",
+                          "content_type": "text",
+                          "title": "Dekkhina",
                           "payload": "dektwp",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zaya Thiri",
+                          "payload": "zaytwp",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zabu Thiri",
+                          "payload": "zabtwp",
                         }
                       ]
-                  }
-                }
-              };
-    let response2 = { "attachment":{
 
-      "type":"template",
-      "payload":{
-        "template_type":"button",
-        "text":".",
-         "buttons":[
-                    {
-                    "type":"postback",
-                    "title":"Ottara Thiri Twp",
-                    "payload": "ottwp"
-                    },
-                    {
-                    "type":"postback",
-                    "title":"Pobba Thiri Twp",
-                    "payload":"potwp"
-                    }                            
-                  ]  
-                }
-        }
-   };
-   callSend(sender_psid, response1).then(()=>{
-  return callSend(sender_psid, response2);
-  });
+      }
   }
   else if (payload === 'pyintwp') {
     response = { "attachment": {
@@ -1178,7 +1160,7 @@ else if (payload === 'innnter') {
                   "type": "template",
                   "payload": {
                     "template_type": "button",
-                      "text": "Please choose the township in which you want to buy house:",
+                      "text": "Please choose the township in which you want to sell house:",
                       "buttons": [
                         {
                           "type": "postback",
@@ -1618,22 +1600,6 @@ function setupPersistentMenu(res){
                               "title":"Contact Us",
                               "type":"postback",
                               "payload":"two2"
-                            }
-                        ]
-                      },
-                      {
-                        "title":"Some22",
-                        "type":"nested",
-                        "call_to_actions":[
-                            {
-                              "title":"dddd",
-                              "type":"postback",
-                              "payload":"ddddd"
-                            },
-                            {
-                              "title":"ffff",
-                              "type":"postback",
-                              "payload":"fffff"
                             }
                         ]
                       },
