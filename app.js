@@ -1094,6 +1094,7 @@ else if (payload === 'innnter') {
   });
   }
   //start
+  
   else if (payload === 'movehou') {
     response = {
     "attachment":{
@@ -1122,90 +1123,6 @@ else if (payload === 'innnter') {
               }              
             ]      
           },
-           {
-            "title":"Motorbike",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/87687473_131104698435330_2366752654857601024_n.jpg?_nc_cat=106&_nc_sid=a61e81&_nc_ohc=PohMBJmw7NsAX8QK734&_nc_ht=scontent.fmdl2-2.fna&oh=73aba7740a2aa1439873b30243ba1ea1&oe=5EC277A3",
-            "subtitle":"Three wheels",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/ajax/sharer/?s=2&appid=2305272732&id=131104738435326&p[0]=131104738435326&sharer_type=all_modes&av=105772414301892",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/ajax/sharer/?s=2&appid=2305272732&id=131104738435326&p[0]=131104738435326&sharer_type=all_modes&av=105772414301892",
-                "title":"More Information"
-              },{
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"scc2"
-              }              
-            ]      
-          },
-          {
-            "title":"Light Truck",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/87693358_131104725101994_936300748814155776_n.jpg?_nc_cat=108&_nc_sid=a61e81&_nc_ohc=74rZDH6-GEoAX9XVmVg&_nc_ht=scontent.fmdl2-2.fna&oh=32c6396df6233d929915858c6c4eb5d1&oe=5EEEE1B0",
-            "subtitle":"Four wheels",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/ajax/sharer/?s=2&appid=2305272732&id=131104738435326&p[0]=131104738435326&sharer_type=all_modes&av=105772414301892",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/ajax/sharer/?s=2&appid=2305272732&id=131104738435326&p[0]=131104738435326&sharer_type=all_modes&av=105772414301892",
-                "title":"More Information"
-              },{
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"scc5"
-              }              
-            ]      
-          },
-           {
-            "title":"Truck Car",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/87529724_131104741768659_4560297288781529088_n.jpg?_nc_cat=103&_nc_sid=a61e81&_nc_ohc=hUMhbxC5AVsAX-xiklU&_nc_ht=scontent.fmdl2-1.fna&oh=fc041fee94b9bbd1b4c9973816546bce&oe=5EBC527B",
-            "subtitle":"Six wheels",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/ajax/sharer/?s=2&appid=2305272732&id=131104738435326&p[0]=131104738435326&sharer_type=all_modes&av=105772414301892",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/ajax/sharer/?s=2&appid=2305272732&id=131104738435326&p[0]=131104738435326&sharer_type=all_modes&av=105772414301892",
-                "title":"More Information"
-              },{
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"svc5"
-              }              
-            ]      
-          },
-           {
-            "title":"Truck Car",
-            "image_url":"https://scontent.fmdl4-2.fna.fbcdn.net/v/t1.0-9/84663096_102520038003268_3565139283100565504_n.jpg?_nc_cat=106&_nc_eui2=AeGKcsR5tyDJwoS8vvkGl6rn8_LcH0OkYbNSPZ0GMAT40Ynv3jTF8xeY2urRUl_PczC2v-URviXgPomifWJIMkeW5JsDPxCm8RjnF1makXhZpA&_nc_ohc=0tdY9XY8r7QAX9hiq36&_nc_pt=1&_nc_ht=scontent.fmdl4-2.fna&oh=e0f5b850f1c4824ca4ced1f3ae98453d&oe=5EC3C5A6",
-            "subtitle":"Ten wheels",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/ajax/sharer/?s=2&appid=2305272732&id=131104738435326&p[0]=131104738435326&sharer_type=all_modes&av=105772414301892",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/ajax/sharer/?s=2&appid=2305272732&id=131104738435326&p[0]=131104738435326&sharer_type=all_modes&av=105772414301892",
-                "title":"More Information"
-              },{
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"scvvc5"
-              }              
-            ]      
-          }
         ]
       }
     }
@@ -1251,7 +1168,7 @@ else if (payload === 'innnter') {
                         }
                       ]
               }
-              callSendAPI(sender_psid, response);
+
       }
 
 
