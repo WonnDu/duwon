@@ -1630,6 +1630,11 @@ function setupPersistentMenu(res){
                         "title":"Moving House Service ",
                         "type":"postback",
                         "payload":"movehou"
+                    },
+                    {
+                        "title":"Something",
+                        "type":"postback",
+                        "payload":"some2"
                     }
                 ]
             },
