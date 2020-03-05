@@ -1169,18 +1169,18 @@ else if (payload === 'innnter') {
     }
 
     else if (payload === "fivethiri") {
-        response =  { 
-                    "text": "Please choose:",
+        response = { 
+                    "text": "Five Thiri",
                     "quick_replies": [
                         {
-                          "content_type":"text",
-                          "title":"Ottara",
-                          "payload":"ottta",
+                          "content_type": "text",
+                          "title": "Pyinmana Twp",
+                          "payload": "pytwp",
                         },
                          {
-                          "content_type":"text",
-                          "title":"Pobba",
-                          "payload":"pobbb",
+                          "content_type": "text",
+                          "title": "Five Thiri Twp",
+                          "payload": "fivethiri",
                         }
                       ]
               }
