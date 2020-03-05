@@ -1144,7 +1144,7 @@ else if (payload === 'innnter') {
                          {
                           "content_type": "text",
                           "title": "Five Thiri Twp",
-                          "payload": "fivethithi",
+                          "payload": "fivethiri",
                         }
                       ]
               }
@@ -1152,7 +1152,7 @@ else if (payload === 'innnter') {
 
 
 
-    else if (payload === "fivethithi" || received_message.text === "fivethithi") {
+    else if (payload === "fivethiri") {
         response =  { 
                     "text": "Please choose:",
                     "quick_replies": [
