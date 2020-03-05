@@ -1152,7 +1152,7 @@ else if (payload === 'innnter') {
 
 
 
-    else if (payload === "fivethithi") {
+    else if (payload === "fivethithi" || received_message.text === "fivethithi") {
         response =  { 
                     "text": "Please choose:",
                     "quick_replies": [
