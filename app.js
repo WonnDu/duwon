@@ -817,7 +817,7 @@ function handlePostback(sender_psid, received_postback) {
                 }
               }
   } else if (payload === 'fethri') {
-    let response1 = {
+         response = {
                   "text": "Please choose the one name of townships in which you want to buy a house:",
                     "quick_replies": [
                         {
