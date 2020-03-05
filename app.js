@@ -416,24 +416,6 @@ function handleMessage(sender_psid, received_message) {
 
     } 
     else if (received_message.payload === "ft1") {
-        response = { 
-                    "text": "FT1",
-                    "quick_replies": [
-                        {
-                          "content_type": "text",
-                          "title": "eeee",
-                          "payload": "eeee",
-                        },
-                         {
-                          "content_type": "text",
-                          "title": "ffff",
-                          "payload": "ffff",
-                        }
-                      ]
-              }
-
-    } 
-    else if (received_message.payload === "ft1") {
       response = {
                   "text": "Now, please you the one name of townships to which you want to move:",
                     "quick_replies": [
