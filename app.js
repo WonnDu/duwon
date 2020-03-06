@@ -849,7 +849,7 @@ function handlePostback(sender_psid, received_postback) {
 
       }
   }
-  else if (payload === 'fethri') {
+  else if (payload === 'ottwp') {
          response = {
                   "text": "Are you looking for how much floors for a house?? Please type 'one floor' if you are looking for it. If not, type 'double building' if you are looking for double building. Or else, type 'whatever1' if you are looking for a house whatever how much floors it has.",
                    
