@@ -450,7 +450,7 @@ function handleMessage(sender_psid, received_message) {
     }
 else if (received_message.payload === "ottwp") {
       response = {
-                  "text": "111111111Now, please you the one name of townships to which you want to move:"
+                  "text": "Please type 'onef' if you are looking for one floor. For double building, plz type 'double1', For whatever, plz type 'whatever1':"
 
       }
     } 
