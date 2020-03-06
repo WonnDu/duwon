@@ -450,11 +450,25 @@ function handleMessage(sender_psid, received_message) {
     }
 else if (received_message.payload === "ottwp") {
       response = {
-                  "text": "Please type 'onef' if you are looking for one floor. For double building, plz type 'double1', For whatever, plz type 'whatever1':"
+                  "text": "Please type 'onef' if you are looking for one floor. For double building, plz type 'double1'.For whatever, plz type 'whatever1':"
 
       }
     } 
-  
+  else if (received_message.text == "onef" || received_message.text == "Onef" || received_message.text == "ONEF" ) {
+    response = {
+      "text":'Are you finding RC or Nancat? Plz type RC1 for RC & type Nancat1 for Nancat. Or else, do you get along with whatever RC or Nancat, so type whatever2:'
+    }
+  }
+  else if (received_message.text == "double1" || received_message.text == "Double1" || received_message.text == "DOUBLE1" ) {
+    response = {
+      "text":'Are you finding RC or Nancat? Plz type RC2 for RC & type Nancat2 for Nancat. Or else, do you get along with whatever RC or Nancat, so type whatever3:'
+    }
+  }
+  else if (received_message.text == "whatever1" || received_message.text == "Whatever1" || received_message.text == "WHATEVER1" ) {
+    response = {
+      "text":'Are you finding RC or Nancat? Plz type RC1 for RC & type Nancat1 for Nancat. Or else, do you get along with whatever RC or Nancat, so type whatever2:'
+    }
+  }
   
   // Send the response message
   callSendAPI(sender_psid, response);    
