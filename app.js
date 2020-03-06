@@ -469,6 +469,39 @@ else if (received_message.payload === "ottwp") {
       "text":'Are you finding RC or Nancat? Plz type RC1 for RC & type Nancat1 for Nancat. Or else, do you get along with whatever RC or Nancat, so type whatever2:'
     }
   }
+    else if (received_message.text == "RC1" || received_message.text == "rc1" || received_message.text == "Rc1" || received_message.text == "RC 1" || received_message.text == "rc 1" || received_message.text == "Rc 1") {
+    response = {
+       "text": "Number of rooms",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "1",
+                          "payload": "no_of_room_1",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "2",
+                          "payload": "no_of_room_2",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "3",
+                          "payload": "no_of_room_3",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "4",
+                          "payload": "no_of_room_4",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "5",
+                          "payload": "no_of_room_5",
+                        }
+                      ]
+    }
+  }
+
   
   // Send the response message
   callSendAPI(sender_psid, response);    
