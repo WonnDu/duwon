@@ -459,12 +459,12 @@ else if (received_message.payload === "ottwp") {
       "text":'Are you finding RC or Nancat? Plz type RC1 for RC & type Nancat1 for Nancat. Or else, do you get along with whatever RC or Nancat, so type whatever2:'
     }
   }
-  else if (received_message.text == "double1" || received_message.text == "Double1" || received_message.text == "DOUBLE1" ) {
+  else if (received_message.text == "double1" || received_message.text == "Double1" || received_message.text == "DOUBLE1" || received_message.text == "double 1" || received_message.text == "Double 1" || received_message.text == "DOUBLE 1") {
     response = {
       "text":'Are you finding RC or Nancat? Plz type RC2 for RC & type Nancat2 for Nancat. Or else, do you get along with whatever RC or Nancat, so type whatever3:'
     }
   }
-  else if (received_message.text == "whatever1" || received_message.text == "Whatever1" || received_message.text == "WHATEVER1" ) {
+  else if (received_message.text == "whatever1" || received_message.text == "Whatever1" || received_message.text == "WHATEVER1" || received_message.text == "whatever 1" || received_message.text == "Whatever 1" || received_message.text == "WHATEVER 1") {
     response = {
       "text":'Are you finding RC or Nancat? Plz type RC1 for RC & type Nancat1 for Nancat. Or else, do you get along with whatever RC or Nancat, so type whatever2:'
     }
