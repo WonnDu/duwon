@@ -448,8 +448,12 @@ function handleMessage(sender_psid, received_message) {
 
       }
     }
+else if (received_message.payload === "ottwp") {
+      response = {
+                  "text": "111111111Now, please you the one name of townships to which you want to move:"
 
-   
+      }
+    } 
   
   
   // Send the response message
@@ -849,12 +853,7 @@ function handlePostback(sender_psid, received_postback) {
 
       }
   }
-  else if (payload === 'ottwp') {
-         response = {
-                  "text": `Are you looking for how much floors for a house?? Please type onef if you are looking for it. If not, type double1 if you are looking for double building. Or else, type whatever1 if you are looking for a house whatever how much floors it has.`
-                   
-      }
-  }
+
   else if (payload === 'pyintwp') {
     response = { "attachment": {
                   "type": "template",
