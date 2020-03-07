@@ -223,10 +223,12 @@ function handleMessage(sender_psid, received_message) {
     }
   }  else if (received_message.payload === "ld_ottwp") {    
     response = {
-      "text": `You choose: "${received_message.message}". Now send me outside picture of house as an attachment!`
+      "text": `You choose: "Ottara". Now send me outside picture of house as an attachment!`
     }
+    received_message.payload = false;
+    received_message.attachments = true;
   }
-     else if (received_message.attachments == "bububtyt") {
+     else if (received_message.payload && received_message.attachments == true) {
     // Get the URL of the message attachment
     let attachment_url = received_message.attachments[0].payload.url;
     response = {
