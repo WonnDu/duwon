@@ -235,7 +235,7 @@ function handleMessage(sender_psid, received_message) {
     received_message.payload = false;
     landlordsent.attach = true;
   }
-     else if (received_message.payload && landlordsent.attach == true) {
+     else if (received_message.payload && landlordsent.attach = true) {
       userEnteredldld_attach.attach = received_message.attachments;
     // Get the URL of the message attachment
     let attachment_url = userEnteredldld_attach.attach[0].payload.url;
