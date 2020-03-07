@@ -265,7 +265,7 @@ function handleMessage(sender_psid, received_message) {
       }
     }
   }
-   else if (received_message.payload === "more_attach_enough" || received_message.payload === "attach_no1") {
+   else if (received_message.payload === "more_attach_enough") {
         response = { "attachment":{
 
       "type":"template",
@@ -1661,8 +1661,11 @@ else if (payload === 'innnter') {
       "text": "OK, send me again!"
     }
   }
-
-    
+ else if (payload === "only_master_bed_tenant") {
+    response = {
+      "text":'How many master bed rooms do you have?'
+    }
+  }   
 
 
 
