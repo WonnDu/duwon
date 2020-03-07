@@ -650,7 +650,31 @@ function handlePostback(sender_psid, received_postback) {
                 }
               }
   }else if (payload === 'ldld') {
-    response = { "text": "You have chose to rent out the property as a Landlord." }
+    let response1 = { "text": "You have chose to rent out house as a Landlord." };
+    let response2 = { "attachment":{
+
+      "type":"template",
+      "payload":{
+        "template_type":"button",
+        "text":"In what townships is your house located? Please choose:",
+         "buttons":[
+                    {
+                    "type":"postback",
+                    "title":"Five Thiri Twp",
+                    "payload": "ldld5"
+                    },
+                    {
+                    "type":"postback",
+                    "title":"Pyinmana Twp",
+                    "payload":"ldld_pyin"
+                    }                            
+                  ]  
+                }
+        }
+   };
+   callSend(sender_psid, response1).then(()=>{
+  return callSend(sender_psid, response2);
+  });
   }
   else if (payload === 'tenan') {
     response = { "attachment": {
