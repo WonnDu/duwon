@@ -238,7 +238,7 @@ function handleMessage(sender_psid, received_message) {
      else if (received_message.attachments && landlordsent.attach1 == true) {
       userEnteredldld_attach.attach1 = received_message.attachments;
     // Get the URL of the message attachment
-    let attachment_url = userEnteredldld_attach.attach1[0].payload.url;
+    let attachment_url1 = userEnteredldld_attach.attach1[0].payload.url;
     response = {
       "attachment": {
         "type": "template",
@@ -247,7 +247,7 @@ function handleMessage(sender_psid, received_message) {
           "elements": [{
             "title": "Is this the right picture?",
             "subtitle": "Tap a button to answer.",
-            "image_url": attachment_url,
+            "image_url": attachment_url1,
             "buttons": [
               {
                 "type": "postback",
@@ -265,6 +265,34 @@ function handleMessage(sender_psid, received_message) {
       }
     }
   }
+   else if (received_message.payload === "more_attach_enough" || received_message.payload === "attach_no1") {
+        response = { "attachment":{
+
+      "type":"template",
+      "payload":{
+        "template_type":"button",
+        "text":"Do you have any rooms?",
+         "buttons":[
+                    {
+                    "type":"postback",
+                    "title":"Only master bed room",
+                    "payload": "only_master_bed_tenant"
+                    },
+                    {
+                    "type":"postback",
+                    "title":"Only bed room",
+                    "payload":"only_bed_tenant"
+                    },
+                    {
+                    "type":"postback",
+                    "title":"Both",
+                    "payload": "both_m_bed_tenant"
+                    }                           
+                  ]
+                  }  
+                }
+        }
+   } 
   else if (received_message.payload === "fivethi1") {
         response = { 
                     "text": "Choose one option",
