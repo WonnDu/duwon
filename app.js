@@ -265,7 +265,7 @@ function handleMessage(sender_psid, received_message) {
       }
     }
   }
-  else if (received_message.payload === "attach_yes1") {    
+  else if (payload === "attach_yes1") {    
     response = {
       "text": "Do you want to send more picture!!"
       "quick_replies": [
@@ -282,7 +282,7 @@ function handleMessage(sender_psid, received_message) {
                       ]
     }
   }
-    else if (received_message.payload === "attach_no1") {    
+    else if (payload === "attach_no1") {    
     response = {
       "text": "OK, send me again!"
     }
