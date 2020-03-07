@@ -265,29 +265,6 @@ function handleMessage(sender_psid, received_message) {
       }
     }
   }
-  else if (payload === "attach_yes1") {    
-    response = {
-      "text": "Do you want to send more picture!!"
-      "quick_replies": [
-                        {
-                          "content_type": "text",
-                          "title": "Yes",
-                          "payload": "more_attach_yes",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "No, it is enough",
-                          "payload": "more_attach_enough",
-                        }
-                      ]
-    }
-  }
-    else if (payload === "attach_no1") {    
-    response = {
-      "text": "OK, send me again!"
-    }
-  }
-
   else if (received_message.payload === "fivethi1") {
         response = { 
                     "text": "Choose one option",
@@ -1634,7 +1611,28 @@ else if (payload === 'innnter') {
                       ]
               }
     }
-
+  else if (payload === "attach_yes1") {    
+    response = {
+      "text": "Do you want to send more picture!!"
+      "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Yes",
+                          "payload": "more_attach_yes",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "No, it is enough",
+                          "payload": "more_attach_enough",
+                        }
+                      ]
+    }
+  }
+    else if (payload === "attach_no1") {    
+    response = {
+      "text": "OK, send me again!"
+    }
+  }
 
     
 
