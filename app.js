@@ -1662,9 +1662,15 @@ else if (payload === 'innnter') {
     }
   }
  else if (payload === "only_master_bed_tenant") {
-    response = {
+    let response1 = {
       "text":'How many master bed rooms do you have?'
-    }
+    };
+    let response2 = {
+      "text":'Please write number of rooms with mb word. Like 1mb, 2mb etc. Thank you very much!'
+    };
+   callSend(sender_psid, response1).then(()=>{
+  return callSend(sender_psid, response2);
+  });
   }   
 
 
