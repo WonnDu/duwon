@@ -660,7 +660,7 @@ function handlePostback(sender_psid, received_postback) {
          "buttons":[
                     {
                     "type":"postback",
-                    "title":"Five Thiri Twp",
+                    "title":" In Five Thiri Twp",
                     "payload": "ldld5"
                     },
                     {
@@ -675,6 +675,39 @@ function handlePostback(sender_psid, received_postback) {
    callSend(sender_psid, response1).then(()=>{
   return callSend(sender_psid, response2);
   });
+  }
+  else if (payload === 'ldld5') {
+         response = {
+                  "text": "Please choose the one name of townships in which you want to rent a house:",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Ottara",
+                          "payload": "ld_ottwp",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "Pobba",
+                          "payload": "ld_potwp",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Dekkhina",
+                          "payload": "ld_dektwp",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zaya Thiri",
+                          "payload": "ld_zaytwp",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zabu Thiri",
+                          "payload": "ld_zabtwp",
+                        }
+                      ]
+
+      }
   }
   else if (payload === 'tenan') {
     response = { "attachment": {
