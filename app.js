@@ -1613,7 +1613,7 @@ else if (payload === 'innnter') {
     }
   else if (payload === "attach_yes1") {    
     response = {
-      "text": "Do you want to send more picture!!"
+      "text": "Do you want to send more picture!!",
       "quick_replies": [
                         {
                           "content_type": "text",
