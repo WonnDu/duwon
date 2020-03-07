@@ -223,7 +223,7 @@ function handleMessage(sender_psid, received_message) {
     }
   }  else if (received_message.payload === "ld_ottwp") {    
     response = {
-      "text": `You choose: "${received_message.payload}". Now send me outside picture of house as an attachment!`
+      "text": `You choose: "${received_message.message}". Now send me outside picture of house as an attachment!`
     }
   }
      else if (received_message.attachments == "bububtyt") {
