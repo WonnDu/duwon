@@ -247,7 +247,7 @@ function handleMessage(sender_psid, received_message) {
           "elements": [{
             "title": "Is this the right picture?",
             "subtitle": "Tap a button to answer.",
-            "image_url": attachment_url,
+            "image_url": "attachment_url",
             "buttons": [
               {
                 "type": "postback",
