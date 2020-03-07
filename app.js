@@ -271,7 +271,7 @@ function handleMessage(sender_psid, received_message) {
       "type":"template",
       "payload":{
         "template_type":"button",
-        "text":"Do you have any rooms?",
+        "text":"Do you have what types of room?",
          "buttons":[
                     {
                     "type":"postback",
@@ -297,7 +297,12 @@ function handleMessage(sender_psid, received_message) {
     response = {
       "text": `You sent the message: "${received_message.text}". Please me the area of your land to be sold!`
     }
-  }  
+  } 
+  else if (received_message.text == "1br" || received_message.text == "2br" || received_message.text == "3br" || received_message.text == "4br" || received_message.text == "5br") {
+    response = {
+      "text": `You sent the message: "${received_message.text}". Please me the area of your land to be sold!`
+    }
+  }
   else if (received_message.payload === "fivethi1") {
         response = { 
                     "text": "Choose one option",
@@ -1661,23 +1666,36 @@ else if (payload === 'innnter') {
                       ]
     }
   }
+
     else if (payload === "attach_no1") {    
     response = {
       "text": "OK, send me again!"
     }
   }
+
  else if (payload === "only_master_bed_tenant") {
     let response1 = {
-      "text":'How many master bed rooms do you have?'
+      "text":`How many master bed rooms do you have?`
     };
     let response2 = {
-      "text":'Please write number of rooms with mb word. Like 1mb, 2mb etc. Thank you very much!'
+      "text":`Please write number of rooms with "mb" word. Like 1mb, 2mb etc. Thank you very much!`
+    };
+   callSend(sender_psid, response1).then(()=>{
+  return callSend(sender_psid, response2);
+  });
+  } 
+
+else if (payload === "only_bed_tenant") {
+    let response1 = {
+      "text":`How many bed rooms do you have?`
+    };
+    let response2 = {
+      "text":`Please write number of rooms with "br" word. Like 1br, 2br etc. Thank you very much!`
     };
    callSend(sender_psid, response1).then(()=>{
   return callSend(sender_psid, response2);
   });
   }   
-
 
 
   // Send the message to acknowledge the postback
