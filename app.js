@@ -292,7 +292,12 @@ function handleMessage(sender_psid, received_message) {
                   }  
                 }
         }
-   } 
+}
+  else if (received_message.text == "1mb" || received_message.text == "2mb" || received_message.text == "3mb" || received_message.text == "4mb" || received_message.text == "5mb") {
+    response = {
+      "text": `You sent the message: "${received_message.text}". Please me the area of your land to be sold!`
+    }
+  }  
   else if (received_message.payload === "fivethi1") {
         response = { 
                     "text": "Choose one option",
