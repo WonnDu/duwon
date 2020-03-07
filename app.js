@@ -36,6 +36,13 @@ let contactct = {
 let userEnteredPhonenum = {};
 
 
+let landlordsent = {
+  attach:false,
+}
+
+let userEnteredldld_attach = {};
+
+
 // Sets server port and logs message on success
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
 
@@ -226,9 +233,10 @@ function handleMessage(sender_psid, received_message) {
       "text": `You choose: "Ottara". Now send me outside picture of house as an attachment!`
     }
     received_message.payload = false;
-    received_message.attachments = true;
+    landlordsent.attach = true;
   }
-     else if (received_message.payload && received_message.attachments == true) {
+     else if (received_message.payload && landlordsent.attach == true) {
+      userEnteredldld_attach.attach = received_message.attachments;
     // Get the URL of the message attachment
     let attachment_url = received_message.attachments[0].payload.url;
     response = {
