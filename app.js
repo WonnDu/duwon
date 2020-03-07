@@ -221,7 +221,12 @@ function handleMessage(sender_psid, received_message) {
     response = {
       "text": `You sent the message: "${received_message.text}". Now send me an attachment!`
     }
-  } else if (received_message.attachments == "bububtyt") {
+  }  else if (received_message.payload === "ld_ottwp") {    
+    response = {
+      "text": `You choose: "${received_message.payload}". Now send me outside picture of house as an attachment!`
+    }
+  }
+     else if (received_message.attachments == "bububtyt") {
     // Get the URL of the message attachment
     let attachment_url = received_message.attachments[0].payload.url;
     response = {
