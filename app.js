@@ -1318,55 +1318,36 @@ else if (payload === 'innnter') {
               }
   }
   else if (payload === 'toselhou5') {
-    let response1 = { "attachment": {
-                  "type": "template",
-                  "payload": {
-                    "template_type": "button",
-                      "text": "Please choose the township in which you want to sell house:",
-                      "buttons": [
+        response = {
+                  "text": "Please choose the township in which you want to sell house:",
+                    "quick_replies": [
                         {
-                          "type": "postback",
-                          "title": "Zaya Thiri Twp",
-                          "payload": "tselzaya",
+                          "content_type": "text",
+                          "title": "Ottara",
+                          "payload": "tselott",
                         },
                          {
-                          "type": "postback",
-                          "title": "Zabu Thiri Twp",
-                          "payload": "tselzabu",
+                          "content_type": "text",
+                          "title": "Pobba",
+                          "payload": "tselpob",
                         },
                         {
-                          "type": "postback",
-                          "title": "Dekkhina Thiri Twp",
+                          "content_type": "text",
+                          "title": "Dekkhina",
                           "payload": "tseldek",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zaya Thiri",
+                          "payload": "tselzaya",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zabu Thiri",
+                          "payload": "tselzabu",
                         }
                       ]
-                  }
-                }
-              };
-    let response2 = { "attachment":{
-
-      "type":"template",
-      "payload":{
-        "template_type":"button",
-        "text":".",
-         "buttons":[
-                    {
-                    "type":"postback",
-                    "title":"Ottara Thiri Twp",
-                    "payload": "tselott"
-                    },
-                    {
-                    "type":"postback",
-                    "title":"Pobba Thiri Twp",
-                    "payload":"tselpob"
-                    }                            
-                  ]  
-                }
-        }
-   };
-   callSend(sender_psid, response1).then(()=>{
-  return callSend(sender_psid, response2);
-  });
+      }
   }
    else if (payload === 'laan2') {
     response = { "attachment": {
