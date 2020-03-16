@@ -501,6 +501,40 @@ function handleMessage(sender_psid, received_message) {
 
       }
     }
+    else if (received_message.payload === "5fthri") {
+      response = {
+                  "text": "Please choose the township in which you want to buy land:",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Ottara",
+                          "payload": "otthi",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "Pobba",
+                          "payload": "pobthi",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Dekkhina",
+                          "payload": "dekthi",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zaya Thiri",
+                          "payload": "zayathi",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zabu Thiri",
+                          "payload": "zabuthi",
+                        }
+                      ]
+
+      }
+    }
+    
 else if (received_message.payload === "ottwp") {
       response = {
                   "text": "Please type 'onef' if you are looking for one floor. For double building, plz type 'double1'.For whatever, plz type 'whatever1':"
@@ -1160,57 +1194,6 @@ else if (payload === 'innnter') {
                             }
                               }
                 }
-  }
-  else if (payload === '5fthri') {
-    let response1 = { "attachment": {
-                  "type": "template",
-                  "payload": {
-                    "template_type": "button",
-                      "text": "Please choose the township in which you want to buy land:",
-                      "buttons": [
-                        {
-                          "type": "postback",
-                          "title": "Zaya Thiri Twp",
-                          "payload": "zayathi",
-                        },
-                         {
-                          "type": "postback",
-                          "title": "Zabu Thiri Twp",
-                          "payload": "zabuthi",
-                        },
-                        {
-                          "type": "postback",
-                          "title": "Dekkhina Thiri Twp",
-                          "payload": "dekthi",
-                        }
-                      ]
-                  }
-                }
-              };
-    let response2 = { "attachment":{
-
-      "type":"template",
-      "payload":{
-        "template_type":"button",
-        "text":".",
-         "buttons":[
-                    {
-                    "type":"postback",
-                    "title":"Ottara Thiri Twp",
-                    "payload": "otthi"
-                    },
-                    {
-                    "type":"postback",
-                    "title":"Pobba Thiri Twp",
-                    "payload":"pobthi"
-                    }                            
-                  ]  
-                }
-        }
-   };
-   callSend(sender_psid, response1).then(()=>{
-  return callSend(sender_psid, response2);
-  });
   }
   else if (payload === 'pyi5') {
     response = { "attachment": {
