@@ -501,40 +501,8 @@ function handleMessage(sender_psid, received_message) {
 
       }
     }
-    else if (received_message.payload === "5fthri") {
-      response = {
-                  "text": "Please choose the township in which you want to buy land:",
-                    "quick_replies": [
-                        {
-                          "content_type": "text",
-                          "title": "Ottara",
-                          "payload": "otthi",
-                        },
-                         {
-                          "content_type": "text",
-                          "title": "Pobba",
-                          "payload": "pobthi",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Dekkhina",
-                          "payload": "dekthi",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Zaya Thiri",
-                          "payload": "zayathi",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Zabu Thiri",
-                          "payload": "zabuthi",
-                        }
-                      ]
 
-      }
-    }
-    
+
 else if (received_message.payload === "ottwp") {
       response = {
                   "text": "Please type 'onef' if you are looking for one floor. For double building, plz type 'double1'.For whatever, plz type 'whatever1':"
@@ -1195,6 +1163,39 @@ else if (payload === 'innnter') {
                               }
                 }
   }
+      else if (payload === "5fthri") {
+      response = {
+                  "text": "Please choose the township in which you want to buy land:",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Ottara",
+                          "payload": "otthi",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "Pobba",
+                          "payload": "pobthi",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Dekkhina",
+                          "payload": "dekthi",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zaya Thiri",
+                          "payload": "zayathi",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zabu Thiri",
+                          "payload": "zabuthi",
+                        }
+                      ]
+
+      }
+    }
   else if (payload === 'pyi5') {
     response = { "attachment": {
                   "type": "template",
