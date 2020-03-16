@@ -276,17 +276,17 @@ function handleMessage(sender_psid, received_message) {
                     {
                     "type":"postback",
                     "title":"Only master bed room",
-                    "payload": "only_master_bed_tenant"
+                    "payload": "only_master_bed_landlord"
                     },
                     {
                     "type":"postback",
                     "title":"Only bed room",
-                    "payload":"only_bed_tenant"
+                    "payload":"only_bed_landlord"
                     },
                     {
                     "type":"postback",
                     "title":"Both",
-                    "payload": "both_m_bed_tenant"
+                    "payload": "both_m_bed_landlord"
                     }                           
                   ]
                   }  
@@ -295,12 +295,12 @@ function handleMessage(sender_psid, received_message) {
 }
   else if (received_message.text == "1mb" || received_message.text == "2mb" || received_message.text == "3mb" || received_message.text == "4mb" || received_message.text == "5mb") {
     response = {
-      "text": `You sent the message: "${received_message.text}". Please me the area of your land to be sold!`
+      "text": `You sent the message: "${received_message.text}". Please me the area of your land to be rented!`
     }
   } 
   else if (received_message.text == "1br" || received_message.text == "2br" || received_message.text == "3br" || received_message.text == "4br" || received_message.text == "5br") {
     response = {
-      "text": `You sent the message: "${received_message.text}". Please me the area of your land to be sold!`
+      "text": `You sent the message: "${received_message.text}". Please me the area of your land to be rented!`
     }
   }
   else if (received_message.payload === "fivethi1") {
@@ -810,63 +810,45 @@ function handlePostback(sender_psid, received_postback) {
                 }
               }
   }
-  else if (payload === 'tenan5thi') {
-    let response1 = { "attachment": {
-                  "type": "template",
-                  "payload": {
-                    "template_type": "button",
-                      "text": "Please choose the township in which you want to tenant house",
-                      "buttons": [
+   else if (payload === 'tenan5thi') {
+         response = {
+                  "text": "Please choose the township in which you want to tenant house:",
+                    "quick_replies": [
                         {
-                          "type": "postback",
-                          "title": "Zaya Thiri Twp",
-                          "payload": "tenanzay",
+                          "content_type": "text",
+                          "title": "Ottara",
+                          "payload": "tenanott",
                         },
                          {
-                          "type": "postback",
-                          "title": "Zabu Thiri Twp",
-                          "payload": "tenanzabu",
+                          "content_type": "text",
+                          "title": "Pobba",
+                          "payload": "tenanpob",
                         },
                         {
-                          "type": "postback",
-                          "title": "Dekkhina Thiri Twp",
+                          "content_type": "text",
+                          "title": "Dekkhina",
                           "payload": "tenandek",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zaya Thiri",
+                          "payload": "tenanzay",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zabu Thiri",
+                          "payload": "tenanzabu",
                         }
                       ]
-                  }
-                }
-              };
-    let response2 = { "attachment":{
 
-      "type":"template",
-      "payload":{
-        "template_type":"button",
-        "text":".",
-         "buttons":[
-                    {
-                    "type":"postback",
-                    "title":"Ottara Thiri Twp",
-                    "payload": "tenanott"
-                    },
-                    {
-                    "type":"postback",
-                    "title":"Pobba Thiri Twp",
-                    "payload":"tenanpob"
-                    }                            
-                  ]  
-                }
-        }
-   };
-   callSend(sender_psid, response1).then(()=>{
-  return callSend(sender_psid, response2);
-  });
+      }
   }
   else if (payload === 'tenanlan') {
     response = { "attachment": {
                   "type": "template",
                   "payload": {
                     "template_type": "button",
-                      "text": "Please choose the place in which you want to tenant land",
+                      "text": "Please choose the place in which you want to tenant land:",
                       "buttons": [
                         {
                           "type": "postback",
@@ -884,56 +866,38 @@ function handlePostback(sender_psid, received_postback) {
                 }
               }
   }
-  else if (payload === 'te5lan') {
-    let response1 = { "attachment": {
-                  "type": "template",
-                  "payload": {
-                    "template_type": "button",
-                      "text": "Please choose the township in which you want to tenant land",
-                      "buttons": [
+   else if (payload === 'te5lan') {
+         response = {
+                  "text": "Please choose the township in which you want to tenant land:",
+                    "quick_replies": [
                         {
-                          "type": "postback",
-                          "title": "Zaya Thiri Twp",
-                          "payload": "tezayl",
+                          "content_type": "text",
+                          "title": "Ottara",
+                          "payload": "teottl",
                         },
                          {
-                          "type": "postback",
-                          "title": "Zabu Thiri Twp",
-                          "payload": "tezal",
+                          "content_type": "text",
+                          "title": "Pobba",
+                          "payload": "tepobl",
                         },
                         {
-                          "type": "postback",
-                          "title": "Dekkhina Thiri Twp",
+                          "content_type": "text",
+                          "title": "Dekkhina",
                           "payload": "tedekl",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zaya Thiri",
+                          "payload": "tezayl",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zabu Thiri",
+                          "payload": "tezal",
                         }
                       ]
-                  }
-                }
-              };
-    let response2 = { "attachment":{
 
-      "type":"template",
-      "payload":{
-        "template_type":"button",
-        "text":".",
-         "buttons":[
-                    {
-                    "type":"postback",
-                    "title":"Ottara Thiri Twp",
-                    "payload": "teottl"
-                    },
-                    {
-                    "type":"postback",
-                    "title":"Pobba Thiri Twp",
-                    "payload":"tepobl"
-                    }                            
-                  ]  
-                }
-        }
-   };
-   callSend(sender_psid, response1).then(()=>{
-  return callSend(sender_psid, response2);
-  });
+      }
   }
   else if (payload === 'tobu') {
     response = { "attachment": {
