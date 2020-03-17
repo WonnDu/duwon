@@ -334,7 +334,6 @@ function handleMessage(sender_psid, received_message) {
                         }
                       ]
               }
-
     } 
     else if (received_message.payload === "fivethi2") {
         response = { 
@@ -467,7 +466,97 @@ function handleMessage(sender_psid, received_message) {
                       ]
               }
 
+    }
+    // pytwp1
+     else if (received_message.payload === "pytwp1") {
+        response = { 
+                    "text": "Now, please the one name of townships to which you want to move:",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Ottara",
+                          "payload": "frompyin_ft1",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "Pobba",
+                          "payload": "frompyin_ft2",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Dekkhina",
+                          "payload": "frompyin_ft3",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zaya Thiri",
+                          "payload": "frompyin_ft4",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zabu Thiri",
+                          "payload": "frompyin_ft5",
+                        }
+                      ]
+              }
     } 
+
+    else if (received_message.payload === "frompyin_ft1") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Pyinmana Township to Ottara Thiri Township"};
+    let response2 = {
+      "text": "It will cost 8000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "frompyin_ft2") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Pyinmana Township to Pobba Thiri Township"};
+    let response2 = {
+      "text": "It will cost 15000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "frompyin_ft3") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Pyinmana Township to Dekkhina Thiri Township"};
+    let response2 = {
+      "text": "It will cost 12000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "frompyin_ft4") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Pyinmana Township to Zaya Thiri Township"};
+    let response2 = {
+      "text": "It will cost 14000 kyats."
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "frompyin_ft5") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Pyinmana Township to Zabu Township"};
+    let response2 = {
+      "text": "It will cost 12500 kyats."
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+
     else if (received_message.payload === "ft1") {
       response = {
                   "text": "Now, please the one name of townships to which you want to move:",
@@ -491,11 +580,72 @@ function handleMessage(sender_psid, received_message) {
                           "content_type": "text",
                           "title": "Zabu Thiri",
                           "payload": "fft5",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Pyinmana",
+                          "payload": "fft6",
                         }
                       ]
 
       }
     }
+
+    else if (received_message.payload === "fft2") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Ottara Thiri Township to Pobba Thiri Township"};
+    let response2 = {
+      "text": "It will cost 8000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "fft3") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Ottara Thiri Township to Dekkhina Thiri Township"};
+    let response2 = {
+      "text": "It will cost 15000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "fft4") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Ottara Thiri Township to Zaya Thiri Township"};
+    let response2 = {
+      "text": "It will cost 12000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "fft5") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Ottara Thiri Township to Zabu Thiri Township"};
+    let response2 = {
+      "text": "It will cost 14000 kyats."
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "fft6") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Ottara Thiri Township to Pyinmana Township"};
+    let response2 = {
+      "text": "It will cost 12500 kyats."
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
     else if (received_message.payload === "ft2") {
       response = {
                   "text": "Now, please the one name of townships to which you want to move:",
@@ -519,11 +669,73 @@ function handleMessage(sender_psid, received_message) {
                           "content_type": "text",
                           "title": "Zabu Thiri",
                           "payload": "2nd_fft5",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Pyinmana",
+                          "payload": "2nd_fft6",
                         }
                       ]
 
       }
     }
+
+     else if (received_message.payload === "2nd_fft1") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Pobba Thiri Township to Ottara Thiri Township"};
+    let response2 = {
+      "text": "It will cost 8000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "2nd_fft3") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Pobba Thiri Township to Dekkhina Thiri Township"};
+    let response2 = {
+      "text": "It will cost 20000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "2nd_fft4") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Pobba Thiri Township to Zaya Thiri Township"};
+    let response2 = {
+      "text": "It will cost 9000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "2nd_fft5") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Pobba Thiri Township to Zabu Thiri Township"};
+    let response2 = {
+      "text": "It will cost 9000 kyats."
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "2nd_fft6") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Pobba Thiri Township to Pyinmana Township"};
+    let response2 = {
+      "text": "It will cost 11000 kyats."
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+
     else if (received_message.payload === "ft3") {
       response = {
                   "text": "Now, please you the one name of townships to which you want to move:",
@@ -547,11 +759,73 @@ function handleMessage(sender_psid, received_message) {
                           "content_type": "text",
                           "title": "Zabu Thiri",
                           "payload": "3rd_fft5",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Pyinmana",
+                          "payload": "3rd_fft6",
                         }
                       ]
 
       }
     }
+
+    else if (received_message.payload === "3rd_fft1") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Dekkhina Thiri Township to Ottara Thiri Township"};
+    let response2 = {
+      "text": "It will cost 17000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "3rd_fft2") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Dekkhina Thiri Township to Pobba Thiri Township"};
+    let response2 = {
+      "text": "It will cost 20000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "3rd_fft4") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Dekkhina Thiri Township to Zaya Thiri Township"};
+    let response2 = {
+      "text": "It will cost 9000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "3rd_fft5") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Dekkhina Thiri Township to Zabu Thiri Township"};
+    let response2 = {
+      "text": "It will cost 9000 kyats."
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "3rd_fft6") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Dekkhina Thiri Township to Pyinmana Township"};
+    let response2 = {
+      "text": "It will cost 11000 kyats."
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+
       else if (received_message.payload === "ft4") {
       response = {
                   "text": "Now, please you the one name of townships to which you want to move:",
@@ -575,11 +849,72 @@ function handleMessage(sender_psid, received_message) {
                           "content_type": "text",
                           "title": "Zabu Thiri",
                           "payload": "4th_fft5",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Pyinmana",
+                          "payload": "4th_fft6",
                         }
                       ]
-
       }
     }
+
+    else if (received_message.payload === "4th_fft1") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Zaya Thiri Township to Ottara Thiri Township"};
+    let response2 = {
+      "text": "It will cost 17000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "4th_fft2") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Zaya Thiri Township to Pobba Thiri Township"};
+    let response2 = {
+      "text": "It will cost 20000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "4th_fft3") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Zaya Thiri Township to Dekkhina Thiri Township"};
+    let response2 = {
+      "text": "It will cost 9000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "4th_fft5") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Zaya Thiri Township to Zabu Thiri Township"};
+    let response2 = {
+      "text": "It will cost 9000 kyats."
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "4th_fft6") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Zaya Thiri Township to Pyinmana Township"};
+    let response2 = {
+      "text": "It will cost 11000 kyats."
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+
       else if (received_message.payload === "ft5") {
       response = {
                   "text": "Now, please you the one name of townships to which you want to move:",
@@ -602,12 +937,74 @@ function handleMessage(sender_psid, received_message) {
                         {
                           "content_type": "text",
                           "title": "Zaya Thiri",
-                          "payload": "4th_fft4",
+                          "payload": "5th_fft4",
+                        },
+                          {
+                          "content_type": "text",
+                          "title": "Pyinmana",
+                          "payload": "5th_fft5",
                         }
                       ]
 
       }
     }
+
+    else if (received_message.payload === "5th_fft1") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Zabu Thiri Township to Ottara Thiri Township"};
+    let response2 = {
+      "text": "It will cost 17000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "5th_fft2") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Zabu Thiri Township to Pobba Thiri Township"};
+    let response2 = {
+      "text": "It will cost 20000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "5th_fft3") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Zabu Thiri Township to Dekkhina Thiri Township"};
+    let response2 = {
+      "text": "It will cost 9000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "5th_fft4") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Zabu Thiri Township to Zaya Thiri Township"};
+    let response2 = {
+      "text": "It will cost 9000 kyats."
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "5th_fft5") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Zabu Thiri Township to Pyinmana Township"};
+    let response2 = {
+      "text": "It will cost 11000 kyats."
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+
     
 
 else if (received_message.payload === "ottwp") {
