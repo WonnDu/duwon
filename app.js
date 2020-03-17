@@ -470,13 +470,8 @@ function handleMessage(sender_psid, received_message) {
     } 
     else if (received_message.payload === "ft1") {
       response = {
-                  "text": "Now, please you the one name of townships to which you want to move:",
+                  "text": "Now, please the one name of townships to which you want to move:",
                     "quick_replies": [
-                        {
-                          "content_type": "text",
-                          "title": "Ottara",
-                          "payload": "fft1",
-                        },
                          {
                           "content_type": "text",
                           "title": "Pobba",
@@ -501,7 +496,119 @@ function handleMessage(sender_psid, received_message) {
 
       }
     }
+    else if (received_message.payload === "ft2") {
+      response = {
+                  "text": "Now, please the one name of townships to which you want to move:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "Ottara",
+                          "payload": "2nd_fft1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Dekkhina",
+                          "payload": "2nd_fft3",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zaya Thiri",
+                          "payload": "2nd_fft4",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zabu Thiri",
+                          "payload": "2nd_fft5",
+                        }
+                      ]
 
+      }
+    }
+    else if (received_message.payload === "ft3") {
+      response = {
+                  "text": "Now, please you the one name of townships to which you want to move:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "Ottara",
+                          "payload": "3rd_fft1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Pobba",
+                          "payload": "3rd_fft2",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zaya Thiri",
+                          "payload": "3rd_fft4",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zabu Thiri",
+                          "payload": "3rd_fft5",
+                        }
+                      ]
+
+      }
+    }
+      else if (received_message.payload === "ft4") {
+      response = {
+                  "text": "Now, please you the one name of townships to which you want to move:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "Ottara",
+                          "payload": "4th_fft1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Pobba",
+                          "payload": "4th_fft2",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Dekkhina",
+                          "payload": "4th_fft3",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zabu Thiri",
+                          "payload": "4th_fft5",
+                        }
+                      ]
+
+      }
+    }
+      else if (received_message.payload === "ft5") {
+      response = {
+                  "text": "Now, please you the one name of townships to which you want to move:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "Ottara",
+                          "payload": "5th_fft1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Pobba",
+                          "payload": "5th_fft2",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Dekkhina",
+                          "payload": "5th_fft3",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zaya Thiri",
+                          "payload": "4th_fft4",
+                        }
+                      ]
+
+      }
+    }
+    
 
 else if (received_message.payload === "ottwp") {
       response = {
