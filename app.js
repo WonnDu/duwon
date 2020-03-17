@@ -342,27 +342,27 @@ function handleMessage(sender_psid, received_message) {
                         {
                           "content_type": "text",
                           "title": "Ottara",
-                          "payload": "ft11",
+                          "payload": "ft11_second_motor",  // ft1
                         },
                          {
                           "content_type": "text",
                           "title": "Pobba",
-                          "payload": "ft22",
+                          "payload": "ft22_second_motor",
                         },
                         {
                           "content_type": "text",
                           "title": "Dekkhina",
-                          "payload": "ft33",
+                          "payload": "ft33_second_motor",
                         },
                         {
                           "content_type": "text",
                           "title": "Zaya Thiri",
-                          "payload": "ft44",
+                          "payload": "ft44_second_motor",
                         },
                         {
                           "content_type": "text",
                           "title": "Zabu Thiri",
-                          "payload": "ft55",
+                          "payload": "ft55_second_motor",
                         }
                       ]
               }
@@ -557,6 +557,8 @@ function handleMessage(sender_psid, received_message) {
     }
 
 
+
+    // from ottara to move house 
     else if (received_message.payload === "ft1") {
       response = {
                   "text": "Now, please the one name of townships to which you want to move:",
@@ -1003,6 +1005,554 @@ function handleMessage(sender_psid, received_message) {
     return callSend(sender_psid, response2);
     });
     }
+// end of from ottara to move house
+
+
+
+ // pytwp2
+     else if (received_message.payload === "pytwp2") {
+        response = { 
+                    "text": "Now, please the one name of townships to which you want to move:",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Ottara",
+                          "payload": "frompyin_py1",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "Pobba",
+                          "payload": "frompyin_py2",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Dekkhina",
+                          "payload": "frompyin_py3",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zaya Thiri",
+                          "payload": "frompyin_py4",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zabu Thiri",
+                          "payload": "frompyin_py5",
+                        }
+                      ]
+              }
+    } 
+
+    else if (received_message.payload === "frompyin_py1") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Pyinmana Township to Ottara Thiri Township"};
+    let response2 = {
+      "text": "It will cost 8000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "frompyin_py2") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Pyinmana Township to Pobba Thiri Township"};
+    let response2 = {
+      "text": "It will cost 15000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "frompyin_py3") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Pyinmana Township to Dekkhina Thiri Township"};
+    let response2 = {
+      "text": "It will cost 12000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "frompyin_py4") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Pyinmana Township to Zaya Thiri Township"};
+    let response2 = {
+      "text": "It will cost 14000 kyats."
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "frompyin_py5") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Pyinmana Township to Zabu Township"};
+    let response2 = {
+      "text": "It will cost 12500 kyats."
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+
+
+
+
+
+ // from Second Second ottara to move house 
+    else if (received_message.payload === "ft11_second_motor") {
+      response = {
+                  "text": "Now, please the one name of townships to which you want to move:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "Pobba",
+                          "payload": "pobba11_second_motor",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Dekkhina",
+                          "payload": "dek11_second_motor",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zaya Thiri",
+                          "payload": "zaya11_second_motor",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zabu Thiri",
+                          "payload": "zabu11_second_motor",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Pyinmana",
+                          "payload": "pyin11_second_motor",
+                        }
+                      ]
+
+      }
+    }
+
+    else if (received_message.payload === "pobba11_second_motor") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Ottara Thiri Township to Pobba Thiri Township"};
+    let response2 = {
+      "text": "It will cost 8000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "dek11_second_motor") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Ottara Thiri Township to Dekkhina Thiri Township"};
+    let response2 = {
+      "text": "It will cost 15000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "zaya11_second_motor") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Ottara Thiri Township to Zaya Thiri Township"};
+    let response2 = {
+      "text": "It will cost 12000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "zabu11_second_motor") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Ottara Thiri Township to Zabu Thiri Township"};
+    let response2 = {
+      "text": "It will cost 14000 kyats."
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "pyin11_second_motor") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Ottara Thiri Township to Pyinmana Township"};
+    let response2 = {
+      "text": "It will cost 12500 kyats."
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "ft22_second_motor") {
+      response = {
+                  "text": "Now, please the one name of townships to which you want to move:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "Ottara",
+                          "payload": "ott22_second_motor",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Dekkhina",
+                          "payload": "dek22_second_motor",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zaya Thiri",
+                          "payload": "zaya22_second_motor",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zabu Thiri",
+                          "payload": "zabu22_second_motor",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Pyinmana",
+                          "payload": "pyin22_second_motor",
+                        }
+                      ]
+
+      }
+    }
+
+     else if (received_message.payload === "ott22_second_motor") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Pobba Thiri Township to Ottara Thiri Township"};
+    let response2 = {
+      "text": "It will cost 8000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "dek22_second_motor") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Pobba Thiri Township to Dekkhina Thiri Township"};
+    let response2 = {
+      "text": "It will cost 20000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "zaya22_second_motor") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Pobba Thiri Township to Zaya Thiri Township"};
+    let response2 = {
+      "text": "It will cost 9000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "zabu22_second_motor") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Pobba Thiri Township to Zabu Thiri Township"};
+    let response2 = {
+      "text": "It will cost 9000 kyats."
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "pyin22_second_motor") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Pobba Thiri Township to Pyinmana Township"};
+    let response2 = {
+      "text": "It will cost 11000 kyats."
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+
+    else if (received_message.payload === "ft33_second_motor") {
+      response = {
+                  "text": "Now, please you the one name of townships to which you want to move:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "Ottara",
+                          "payload": "ott33_second_motor",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Pobba",
+                          "payload": "pob33_second_motor",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zaya Thiri",
+                          "payload": "zaya33_second_motor",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zabu Thiri",
+                          "payload": "zabu33_second_motor",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Pyinmana",
+                          "payload": "pyin33_second_motor",
+                        }
+                      ]
+
+      }
+    }
+
+    else if (received_message.payload === "ott33_second_motor") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Dekkhina Thiri Township to Ottara Thiri Township"};
+    let response2 = {
+      "text": "It will cost 17000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "pob33_second_motor") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Dekkhina Thiri Township to Pobba Thiri Township"};
+    let response2 = {
+      "text": "It will cost 20000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "zaya33_second_motor") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Dekkhina Thiri Township to Zaya Thiri Township"};
+    let response2 = {
+      "text": "It will cost 9000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "zabu33_second_motor") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Dekkhina Thiri Township to Zabu Thiri Township"};
+    let response2 = {
+      "text": "It will cost 9000 kyats."
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "pyin33_second_motor") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Dekkhina Thiri Township to Pyinmana Township"};
+    let response2 = {
+      "text": "It will cost 11000 kyats."
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+
+      else if (received_message.payload === "ft44_second_motor") {
+      response = {
+                  "text": "Now, please you the one name of townships to which you want to move:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "Ottara",
+                          "payload": "ott44_second_motor",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Pobba",
+                          "payload": "pob44_second_motor",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Dekkhina",
+                          "payload": "dek44_second_motor",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zabu Thiri",
+                          "payload": "zabu44_second_motor",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Pyinmana",
+                          "payload": "pyin44_second_motor",
+                        }
+                      ]
+      }
+    }
+
+    else if (received_message.payload === "ott44_second_motor") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Zaya Thiri Township to Ottara Thiri Township"};
+    let response2 = {
+      "text": "It will cost 17000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "pob44_second_motor") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Zaya Thiri Township to Pobba Thiri Township"};
+    let response2 = {
+      "text": "It will cost 20000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "dek44_second_motor") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Zaya Thiri Township to Dekkhina Thiri Township"};
+    let response2 = {
+      "text": "It will cost 9000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "zabu44_second_motor") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Zaya Thiri Township to Zabu Thiri Township"};
+    let response2 = {
+      "text": "It will cost 9000 kyats."
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "pyin44_second_motor") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Zaya Thiri Township to Pyinmana Township"};
+    let response2 = {
+      "text": "It will cost 11000 kyats."
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+
+      else if (received_message.payload === "ft55_second_motor") {
+      response = {
+                  "text": "Now, please you the one name of townships to which you want to move:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "Ottara",
+                          "payload": "ott55_second_motor",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Pobba",
+                          "payload": "pob55_second_motor",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Dekkhina",
+                          "payload": "dek55_second_motor",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zaya Thiri",
+                          "payload": "zaya55_second_motor",
+                        },
+                          {
+                          "content_type": "text",
+                          "title": "Pyinmana",
+                          "payload": "pyin55_second_motor",
+                        }
+                      ]
+
+      }
+    }
+
+    else if (received_message.payload === "ott55_second_motor") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Zabu Thiri Township to Ottara Thiri Township"};
+    let response2 = {
+      "text": "It will cost 17000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "pob55_second_motor") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Zabu Thiri Township to Pobba Thiri Township"};
+    let response2 = {
+      "text": "It will cost 20000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "dek55_second_motor") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Zabu Thiri Township to Dekkhina Thiri Township"};
+    let response2 = {
+      "text": "It will cost 9000 kyats"
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "zaya55_second_motor") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Zabu Thiri Township to Zaya Thiri Township"};
+    let response2 = {
+      "text": "It will cost 9000 kyats."
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+
+    else if (received_message.payload === "pyin55_second_motor") {    
+    let response1 = {
+      "text": "You told us that you will transfer from Zabu Thiri Township to Pyinmana Township"};
+    let response2 = {
+      "text": "It will cost 11000 kyats."
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+    }
+// end of from second second ottara to move house
+
+
 
 
     
