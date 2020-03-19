@@ -182,8 +182,8 @@ function handleMessage(sender_psid, received_message) {
     }
   }
   else if {
-      let user_message = received_message.text.toLowerCase();
-      switch(user_message) {
+      let user_messagee = received_message.text.toLowerCase();
+      switch(user_messagee) {
         case "hello":
         case "hi":
             greetUser(sender_psid);
