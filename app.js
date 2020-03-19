@@ -27,7 +27,18 @@ const
   request = require('request'),
   express = require('express'),
   body_parser = require('body-parser'),
+  firebase = require('firebase-admin'),
   app = express().use(body_parser.json()); // creates express http server
+
+  firebase.initializeApp({
+  credential: firebase.credential.cert({
+    "private_key": process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+    "client_email": process.env.FIREBASE_CLIENT_EMAIL,
+    "project_id": process.env.FIREBASE_PROJECT_ID,
+  }),
+  databaseURL: "https://duwon-56700.firebaseio.com"
+  });
+  let db = firebase.firestore(); 
 
 let contactct = {
   numberno:false,
@@ -338,8 +349,8 @@ function handleMessage(sender_psid, received_message) {
     else if (received_message.payload === "fivethi2") {
         response = { 
                     "text": "Choose one option",
-                    "quick_replies": [
-                        {
+                    "quick_replies": [  // array
+                        {               // object
                           "content_type": "text",
                           "title": "Ottara",
                           "payload": "ft11_second_motor",  // ft1
@@ -1580,37 +1591,69 @@ else if (received_message.payload === "ottwp") {
   }
     else if (received_message.text == "RC1" || received_message.text == "rc1" || received_message.text == "Rc1" || received_message.text == "RC 1" || received_message.text == "rc 1" || received_message.text == "Rc 1") {
     response = {
-       "text": "Number of rooms",
+       "text": "How many master bed rooms do you want?",
                     "quick_replies": [
                         {
                           "content_type": "text",
-                          "title": "1",
-                          "payload": "no_of_room_1",
+                          "title": "1mb",
+                          "payload": "no_of_room_1mb",
                         },
                          {
                           "content_type": "text",
-                          "title": "2",
-                          "payload": "no_of_room_2",
+                          "title": "2mb",
+                          "payload": "no_of_room_2mb",
                         },
                         {
                           "content_type": "text",
-                          "title": "3",
-                          "payload": "no_of_room_3",
+                          "title": "3mb",
+                          "payload": "no_of_room_3mb",
                         },
                         {
                           "content_type": "text",
-                          "title": "4",
-                          "payload": "no_of_room_4",
+                          "title": "4mb",
+                          "payload": "no_of_room_4mb",
                         },
                         {
                           "content_type": "text",
-                          "title": "5",
-                          "payload": "no_of_room_5",
+                          "title": "5mb",
+                          "payload": "no_of_room_5mb",
                         }
                       ]
     }
   }
 
+
+/*      response = {
+       "text": "How many master bed rooms do you want?",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "1mb",
+                          "payload": "no_of_room_1mb",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "2mb",
+                          "payload": "no_of_room_2mb",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "3mb",
+                          "payload": "no_of_room_3mb",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "4mb",
+                          "payload": "no_of_room_4mb",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "5mb",
+                          "payload": "no_of_room_5mb",
+                        }
+                      ]
+    }
+*/
   
   // Send the response message
   callSendAPI(sender_psid, response);    
@@ -2726,6 +2769,35 @@ async function callSend(sender_psid, response){
   return 1;
 }  
 
+/***********************
+FUNCTION TO GREET USER 
+************************/
+async function greetUser(sender_psid){  
+  let user = await getUserProfile(sender_psid);   
+  let response;
+  response = {
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "button",
+          "text": "Hello. "+user.first_name+" "+user.last_name+". It's so nice to meet you.What do you want to do next?",
+          "buttons": [
+              {
+                "type": "postback",
+                "title": "View Tasks",
+                "payload": "view-tasks",
+              },
+              {
+                "type": "postback",
+                "title": "Add Task!",
+                "payload": "add-task",
+              }
+            ]
+        }
+      }
+    }
+  callSendAPI(sender_psid, response);
+}
 
 function setupGetStartedButton(res){
         var messageData = {
