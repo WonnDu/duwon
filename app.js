@@ -181,6 +181,39 @@ function handleMessage(sender_psid, received_message) {
     ]
     }
   }
+  else {
+      let user_message = received_message.text.toLowerCase();
+      switch(user_message) {
+        case "hello":
+        case "hi":
+            greetUser(sender_psid);
+          break;
+        case "webview":
+            webviewTest(sender_psid);
+          break;
+        
+
+
+        case "who am i":
+            whoami(sender_psid);
+          break;
+        case "add":
+        case "new":
+            addTask(sender_psid);            
+          break;
+        case "view":
+            viewTasks(sender_psid);
+          break;
+        case "attachment":
+          response = {"text": `You sent the message: "${received_message.text}". Now send me an attachment!`};
+          callSend(sender_psid, response);
+          break;
+        default:
+            unknownCommand(sender_psid);
+        }
+    }
+
+}
   else if (received_message.text == "ahelloo") {
     response = {
       "text":'Say'
