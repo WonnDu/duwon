@@ -181,39 +181,6 @@ function handleMessage(sender_psid, received_message) {
     ]
     }
   }
-  else if {
-      let user_messagee = received_message.text.toLowerCase();
-      switch(user_messagee) {
-        case "hello":
-        case "hi":
-            greetUser(sender_psid);
-          break;
-        case "webview":
-            webviewTest(sender_psid);
-          break;
-        
-
-
-        case "who am i":
-            whoami(sender_psid);
-          break;
-        case "add":
-        case "new":
-            addTask(sender_psid);            
-          break;
-        case "view":
-            viewTasks(sender_psid);
-          break;
-        case "attachment":
-          response = {"text": `You sent the message: "${received_message.text}". Now send me an attachment!`};
-          callSend(sender_psid, response);
-          break;
-        default:
-            unknownCommand(sender_psid);
-        }
-    }
-
-}
   else if (received_message.text == "ahelloo") {
     response = {
       "text":'Say'
@@ -2802,35 +2769,6 @@ async function callSend(sender_psid, response){
   return 1;
 }  
 
-/***********************
-FUNCTION TO GREET USER 
-************************/
-async function greetUser(sender_psid){  
-  let user = await getUserProfile(sender_psid);   
-  let response;
-  response = {
-      "attachment": {
-        "type": "template",
-        "payload": {
-          "template_type": "button",
-          "text": "Hello. "+user.first_name+" "+user.last_name+". It's so nice to meet you.What do you want to do next?",
-          "buttons": [
-              {
-                "type": "postback",
-                "title": "View Tasks",
-                "payload": "view-tasks",
-              },
-              {
-                "type": "postback",
-                "title": "Add Task!",
-                "payload": "add-task",
-              }
-            ]
-        }
-      }
-    }
-  callSendAPI(sender_psid, response);
-}
 
 function setupGetStartedButton(res){
         var messageData = {
