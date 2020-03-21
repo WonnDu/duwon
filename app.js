@@ -314,7 +314,7 @@ function handleMessage(sender_psid, received_message) {
       "text": `You sent the message: "${received_message.text}". Please me the area of your land to be rented!`
     }
   }
-  else if (received_message.payload === "fivethi1") {
+ else if (received_message.payload === "fivethi1") {
         response = { 
                     "text": "Choose one option",
                     "quick_replies": [
@@ -657,7 +657,7 @@ function handleMessage(sender_psid, received_message) {
     callSend(sender_psid, response1).then(()=>{
     return callSend(sender_psid, response2);
     });
-    } */
+    }
 
     else if (received_message.payload === "ft2") {
       response = {
@@ -1622,38 +1622,6 @@ else if (received_message.payload === "ottwp") {
     }
   }
 
-
-/*      response = {
-       "text": "How many master bed rooms do you want?",
-                    "quick_replies": [
-                        {
-                          "content_type": "text",
-                          "title": "1mb",
-                          "payload": "no_of_room_1mb",
-                        },
-                         {
-                          "content_type": "text",
-                          "title": "2mb",
-                          "payload": "no_of_room_2mb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "3mb",
-                          "payload": "no_of_room_3mb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "4mb",
-                          "payload": "no_of_room_4mb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "5mb",
-                          "payload": "no_of_room_5mb",
-                        }
-                      ]
-    }
-*/
   
   // Send the response message
   callSendAPI(sender_psid, response);    
