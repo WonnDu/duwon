@@ -657,7 +657,7 @@ function handleMessage(sender_psid, received_message) {
     callSend(sender_psid, response1).then(()=>{
     return callSend(sender_psid, response2);
     });
-    }
+    } */
 
     else if (received_message.payload === "ft2") {
       response = {
@@ -1704,7 +1704,7 @@ function handlePostback(sender_psid, received_postback) {
       "type":"template",
       "payload":{
         "template_type":"button",
-        "text":"________________________________",
+        "text":".",
          "buttons":[
                     {
                     "type":"postback",
@@ -1715,11 +1715,6 @@ function handlePostback(sender_psid, received_postback) {
                     "type":"postback",
                     "title":"Moving House Service",
                     "payload":"movehou"
-                    },
-                    {
-                    "type":"postback",
-                    "title":"Deep Cleaning Service",
-                    "payload":"deepclean"
                     }                           
                   ]  
                 }
