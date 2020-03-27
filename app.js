@@ -2363,6 +2363,28 @@ else if (payload === 'innnter') {
                       ]
       }
   }
+  else if (payload === 'tselott') {
+        response = {
+                  "text": "Please tell the area of yard:",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "150-150 ft",
+                          "payload": "150ott",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "100-100 ft",
+                          "payload": "100ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "80-80 ft",
+                          "payload": "80ott",
+                        },
+                      ]
+      }
+  }
    else if (payload === 'laan2') {
     response = { "attachment": {
                   "type": "template",
