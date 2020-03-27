@@ -118,6 +118,12 @@ app.get('/clear',function(req,res){
     removePersistentMenu(res);
 });
 
+//whitelist domains
+//eg https://fbstarterbot.herokuapp.com/whitelists
+app.get('/whitelists',function(req,res){    
+    whitelistDomains(res);
+});
+
 
 // Accepts GET requests at the /webhook endpoint
 app.get('/webhook', (req, res) => {
@@ -2850,3 +2856,30 @@ function removePersistentMenu(res){
             }
         });
     } 
+
+
+    function webviewTest(sender_psid){
+  let response;
+  response = {
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "generic",
+          "elements": [{
+            "title": "Click to open webview?",                       
+            "buttons": [              
+              {
+                "type": "web_url",
+                "title": "webview",
+                "url":"https://fbstarterbot.herokuapp.com/webview/"+sender_psid,
+                 "webview_height_ratio": "full",
+                "messenger_extensions": true,          
+              },
+              
+            ],
+          }]
+        }
+      }
+    }
+  callSendAPI(sender_psid, response);
+}
