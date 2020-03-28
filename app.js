@@ -66,6 +66,16 @@ let toselhou_ott_byuser = {
 
 let userEntered_Hou_tosel = {};
 
+
+
+let tellBy_user_howmuchRoom = {
+  howMuchRoom_hou:false,
+}
+
+let userEntered_room_hou= {};
+
+
+
 // Sets server port and logs message on success
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
 
@@ -1696,7 +1706,36 @@ else if (received_message.payload === "ottwp") {
       "text":'How many floors is the house?'
     }
     toselhou_ott_byuser.to_sel_hou = false;
+    tellBy_user_howmuchRoom.howMuchRoom_hou = true;
   }
+   else if (toselhou_ott_byuser.to_sel_hou &&  tellBy_user_howmuchRoom.howMuchRoom_hou === true) {
+   userEntered_room_hou.howMuchRoom_hou = received_message.text;
+         response = {
+       "text": "Do you have what types of room. Please tell me:",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Master Bed",
+                          "payload": "tosel_hou_tell_mb",
+                        },
+                       
+                        {
+                          "content_type": "text",
+                          "title": "Bed room",
+                          "payload": "tosel_hou_tell_mb",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Both",
+                          "payload": "tosel_hou_tell_both",
+                        }
+                      ]
+    }
+  }
+     tellBy_user_howmuchRoom.howMuchRoom_hou = false;
+  }
+
+
 
 
 
