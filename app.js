@@ -2363,7 +2363,23 @@ else if (payload === 'innnter') {
                       ]
       }
   }
-
+ else if (payload === 'tselott') {
+        response = {
+                  "text": "Please choose the area:",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "100-100 ft",
+                          "payload": "100ott",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "150-150 ft",
+                          "payload": "150ott",
+                        }
+                      ]
+      }
+  }
 
    else if (payload === 'laan2') {
     response = { "attachment": {
