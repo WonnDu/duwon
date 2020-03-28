@@ -60,19 +60,24 @@ let userEnteredldld_attach = {};
 
 
 
+
+// for customers who want to sell their house
 let toselhou_ott_byuser = {
   to_sel_hou:false,
 }
-
 let userEntered_Hou_tosel = {};
-
 
 
 let tellBy_user_howmuchRoom = {
   howMuchRoom_hou:false,
 }
-
 let userEntered_room_hou= {};
+
+
+let tellBy_user_area_inOtt = {
+  area_hou_inOtt:false,
+}
+let userEntered_area_ott = {};
 
 
 
@@ -1735,6 +1740,20 @@ else if (received_message.payload === "ottwp") {
   }
 
 
+ else if (received_message.payload === "tosel_hou_tell_mb") {    
+    response = {
+      "text": "How many master bed rooms in your house?"
+    }
+    received_message.payload = false;
+    tellBy_user_area_inOtt.area_hou_inOtt = true;
+  }
+ else if (received_message.text && tellBy_user_area_inOtt.area_hou_inOtt === true) { 
+  userEntered_area_ott.area_hou_inOtt = received_message.text;   
+    response = {
+      "text": "How much area is your yard?"
+    }
+    tellBy_user_area_inOtt.area_hou_inOtt = false;
+  }
 
 
 
