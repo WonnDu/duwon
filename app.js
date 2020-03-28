@@ -79,6 +79,11 @@ let tellBy_user_area_inOtt = {
 }
 let userEntered_area_ott = {};
 
+let photo_inAndOut_ott = {
+  photos_ott:false,
+}
+let userSend_photo_hou_ott ={};
+
 
 
 // Sets server port and logs message on success
@@ -1739,7 +1744,7 @@ else if (received_message.payload === "ottwp") {
     tellBy_user_howmuchRoom.howMuchRoom_hou = false;
   }
 
-
+// for master bed room
  else if (received_message.payload === "tosel_hou_tell_mb") {    
     response = {
       "text": "How many master bed rooms in your house?"
@@ -1753,6 +1758,26 @@ else if (received_message.payload === "ottwp") {
       "text": "How much area is your yard?"
     }
     tellBy_user_area_inOtt.area_hou_inOtt = false;
+    photo_inAndOut_ott.photos_ott = true;
+  }
+  else if (received_message.text && photo_inAndOut_ott.photos_ott  === true) {
+   userSend_photo_hou_ott.photos_ott = received_message.text;
+         response = {
+       "text": "Could you send me inside and outside photos with regard to your house?",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Master Bed",
+                          "payload": "tosel_hou_tell_mb",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Both",
+                          "payload": "tosel_hou_tell_both",
+                        }
+                      ]
+    }
+    photo_inAndOut_ott.photos_ott = false;
   }
 
 
