@@ -84,6 +84,11 @@ let photo_inAndOut_ott = {
 }
 let userSend_photo_hou_ott ={};
 
+let userSend_houPhoto = {
+  attach_photo_hou:false,
+}
+let userSend_attach_photo = {};
+
 
 
 // Sets server port and logs message on success
@@ -1662,45 +1667,7 @@ else if (received_message.payload === "ottwp") {
 
 
 
-/*
- else if (received_message.payload === "ld_ottwp") {    
-    response = {
-      "text": "You choose: Ottara. Now send me outside picture of house as an attachment!"
-    }
-    received_message.payload = false;
-    landlordsent.attach1 = true;
-  }
-     else if (received_message.attachments && landlordsent.attach1 == true) {
-      userEnteredldld_attach.attach1 = received_message.attachments;
-    // Get the URL of the message attachment
-    let attachment_url1 = userEnteredldld_attach.attach1[0].payload.url;
-    response = {
-      "attachment": {
-        "type": "template",
-        "payload": {
-          "template_type": "generic",
-          "elements": [{
-            "title": "Is this the right picture?",
-            "subtitle": "Tap a button to answer.",
-            "image_url": attachment_url1,
-            "buttons": [
-              {
-                "type": "postback",
-                "title": "Yes",
-                "payload": "attach_yes1",
-              },
-              {
-                "type": "postback",
-                "title": "No",
-                "payload": "attach_no1",
-              }
-            ],
-          }]
-        }
-      }
-    }
-  }
-*/
+
 
 
  else if (received_message.payload === "tselott") {
@@ -1767,18 +1734,95 @@ else if (received_message.payload === "ottwp") {
                     "quick_replies": [
                         {
                           "content_type": "text",
-                          "title": "Master Bed",
-                          "payload": "tosel_hou_tell_mb",
+                          "title": "I will send now.",
+                          "payload": "send_now_photos_hou_inAndOut",
                         },
                         {
                           "content_type": "text",
-                          "title": "Both",
+                          "title": "Later",
                           "payload": "tosel_hou_tell_both",
                         }
                       ]
     }
     photo_inAndOut_ott.photos_ott = false;
+    userSend_houPhoto.attach_photo_hou = true;
+
   }
+   else if (received_message.payload === "send_now_photos_hou_inAndOut") { 
+     userSend_attach_photo.attach_photo_hou = received_message.attachments; 
+     // Get the URL of the message attachment
+    let attachment_url_photo_hou = userSend_attach_photo.attach_photo_hou[0].payload.url;  
+    response = {
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "generic",
+          "elements": [{
+            "title": "Is this the right picture?",
+            "subtitle": "Tap a button to answer.",
+            "image_url": attachment_url_photo_hou,
+            "buttons": [
+              {
+                "type": "postback",
+                "title": "Yes",
+                "payload": "attach_yes1",
+              },
+              {
+                "type": "postback",
+                "title": "No",
+                "payload": "attach_no1",
+              }
+            ],
+          }]
+        }
+      }
+    }
+  }
+
+
+
+
+/*
+ else if (received_message.payload === "ld_ottwp") {  
+   userEnteredldld_attach.attach1 = received_message.attachments;  
+    response = {
+      "text": "You choose: Ottara. Now send me outside picture of house as an attachment!"
+    }
+    received_message.payload = false;
+    landlordsent.attach1 = true;
+
+  }
+     else if (received_message.attachments && landlordsent.attach1 == true) {
+      userEnteredldld_attach.attach1 = received_message.attachments;
+    // Get the URL of the message attachment
+    let attachment_url1 = userEnteredldld_attach.attach1[0].payload.url;
+    response = {
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "generic",
+          "elements": [{
+            "title": "Is this the right picture?",
+            "subtitle": "Tap a button to answer.",
+            "image_url": attachment_url1,
+            "buttons": [
+              {
+                "type": "postback",
+                "title": "Yes",
+                "payload": "attach_yes1",
+              },
+              {
+                "type": "postback",
+                "title": "No",
+                "payload": "attach_no1",
+              }
+            ],
+          }]
+        }
+      }
+    }
+  }
+*/
 
 
 
