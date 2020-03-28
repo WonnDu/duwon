@@ -40,11 +40,16 @@ const
   });
   let db = firebase.firestore(); 
 
+
+
+
 let contactct = {
   numberno:false,
 }
 
 let userEnteredPhonenum = {};
+
+
 
 
 let landlordsent = {
@@ -53,6 +58,13 @@ let landlordsent = {
 
 let userEnteredldld_attach = {};
 
+
+
+let toselhou_ott_byuser = {
+  to_sel_hou:false,
+}
+
+let userEntered_Hou_tosel = {};
 
 // Sets server port and logs message on success
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
@@ -1629,16 +1641,86 @@ else if (received_message.payload === "ottwp") {
   }
 
 
+
+/*
+ else if (received_message.payload === "ld_ottwp") {    
+    response = {
+      "text": "You choose: Ottara. Now send me outside picture of house as an attachment!"
+    }
+    received_message.payload = false;
+    landlordsent.attach1 = true;
+  }
+     else if (received_message.attachments && landlordsent.attach1 == true) {
+      userEnteredldld_attach.attach1 = received_message.attachments;
+    // Get the URL of the message attachment
+    let attachment_url1 = userEnteredldld_attach.attach1[0].payload.url;
+    response = {
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "generic",
+          "elements": [{
+            "title": "Is this the right picture?",
+            "subtitle": "Tap a button to answer.",
+            "image_url": attachment_url1,
+            "buttons": [
+              {
+                "type": "postback",
+                "title": "Yes",
+                "payload": "attach_yes1",
+              },
+              {
+                "type": "postback",
+                "title": "No",
+                "payload": "attach_no1",
+              }
+            ],
+          }]
+        }
+      }
+    }
+  }
+*/
+
+
  else if (received_message.payload === "tselott") {
          response = {
       "text":'Please tell the type of house that you want to sell like RC or Nancat'
     }
+    received_message.payload = false;
+    received_message.text = true;
   }
+ else if (received_message.text && toselhou_ott_byuser.to_sel_hou === true) {
+         response = {
+      "text":'How many floors is the house?'
+    }
+  }
+
+
+
+/*
+else if (received_message.text == "Yes!!!") {
+   
+    received_message.text = false;
+    contactct.numberno = true;
+  }
+   else if (received_message.text && contactct.numberno == true) {
+    userEnteredPhonenum.numberno = received_message.text;
+    response = {
+      "text":"We have received your phone number. We will contact you within 24 hours. Thank you for contacting us. Have a nice day!"
+    }
+    contactct.numberno = false;
+  } 
+
+  */
 
   
   // Send the response message
   callSendAPI(sender_psid, response);    
 }
+
+
+
 
 
 function handlePostback(sender_psid, received_postback) {
