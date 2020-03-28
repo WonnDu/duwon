@@ -84,8 +84,8 @@ let photo_inAndOut_ott = {
 }
 let userSend_photo_hou_ott ={};
 
-let userSend_houPhoto = {
-  attach_photo_hou:false,
+let attach_houPhoto = {
+  attach_Hou:false,
 }
 let userSend_attach_photo = {};
 
@@ -1747,19 +1747,18 @@ else if (received_message.payload === "ottwp") {
     photo_inAndOut_ott.photos_ott = false;
 
   }
-/*
+
    else if (received_message.payload === "send_now_photos_hou_inAndOut") { 
-     userSend_attach_photo.attach_photo_hou = received_message.attachments; 
     response = {
       "text": "OK, Send me."
     }
      received_message.payload = false;
-     userSend_houPhoto.attach_photo_hou = true;
+     attach_houPhoto.attach_Hou = true;
   }
-  else if (received_message.attachments && userSend_houPhoto.attach_photo_hou == true) {
-      userSend_attach_photo.attach_photo_hou = received_message.attachments; 
+  else if (received_message.attachments && attach_houPhoto.attach_Hou== true) {
+      userSend_attach_photo.attach_Hou = received_message.attachments; 
     // Get the URL of the message attachment
-    let attachment_url_photo = userSend_attach_photo.attach_photo_hou[0].payload.url;
+    let attachment_url_photo = userSend_attach_photo.attach_Hou[0].payload.url;
     response = {
       "attachment": {
         "type": "template",
@@ -1786,17 +1785,14 @@ else if (received_message.payload === "ottwp") {
       }
     }
   }
-*/
-
+//11111111111111111111111111111111111111111111111111111111111111111111111
 /*
- else if (received_message.payload === "ld_ottwp") {  
-   userEnteredldld_attach.attach1 = received_message.attachments;  
+else if (received_message.payload === "ld_ottwp") {    
     response = {
       "text": "You choose: Ottara. Now send me outside picture of house as an attachment!"
     }
     received_message.payload = false;
     landlordsent.attach1 = true;
-
   }
      else if (received_message.attachments && landlordsent.attach1 == true) {
       userEnteredldld_attach.attach1 = received_message.attachments;
@@ -1829,7 +1825,6 @@ else if (received_message.payload === "ottwp") {
     }
   }
 */
-
 
 
 /*
