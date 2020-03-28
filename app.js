@@ -2385,6 +2385,28 @@ else if (payload === 'innnter') {
                       ]
       }
   }
+    else if (payload === 'tselpob') {
+        response = {
+                  "text": "Please tell the area of yard:",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "150-150 ft",
+                          "payload": "150ottp",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "100-100 ft",
+                          "payload": "100ottp",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "80-80 ft",
+                          "payload": "80ottp",
+                        },
+                      ]
+      }
+  }
    else if (payload === 'laan2') {
     response = { "attachment": {
                   "type": "template",
