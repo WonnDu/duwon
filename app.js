@@ -1630,21 +1630,9 @@ else if (received_message.payload === "ottwp") {
 
 
  else if (received_message.payload === "tselott") {
-        response = {
-                  "text": "Please choose the area:",
-                    "quick_replies": [
-                        {
-                          "content_type": "text",
-                          "title": "100-100 ft",
-                          "payload": "100ott",
-                        },
-                         {
-                          "content_type": "text",
-                          "title": "150-150 ft",
-                          "payload": "150ott",
-                        }
-                      ]
-      }
+         response = {
+      "text":'Please tell the type of house that you want to sell like RC or Nancat'
+    }
   }
 
   
