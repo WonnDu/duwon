@@ -1745,13 +1745,21 @@ else if (received_message.payload === "ottwp") {
                       ]
     }
     photo_inAndOut_ott.photos_ott = false;
-    userSend_houPhoto.attach_photo_hou = true;
 
   }
+/*
    else if (received_message.payload === "send_now_photos_hou_inAndOut") { 
      userSend_attach_photo.attach_photo_hou = received_message.attachments; 
-     // Get the URL of the message attachment
-    let attachment_url_photo_hou = userSend_attach_photo.attach_photo_hou[0].payload.url;  
+    response = {
+      "text": "OK, Send me."
+    }
+     received_message.payload = false;
+     userSend_houPhoto.attach_photo_hou = true;
+  }
+  else if (received_message.attachments && userSend_houPhoto.attach_photo_hou == true) {
+      userSend_attach_photo.attach_photo_hou = received_message.attachments; 
+    // Get the URL of the message attachment
+    let attachment_url_photo = userSend_attach_photo.attach_photo_hou[0].payload.url;
     response = {
       "attachment": {
         "type": "template",
@@ -1760,17 +1768,17 @@ else if (received_message.payload === "ottwp") {
           "elements": [{
             "title": "Is this the right picture?",
             "subtitle": "Tap a button to answer.",
-            "image_url": attachment_url_photo_hou,
+            "image_url": attachment_url_photo,
             "buttons": [
               {
                 "type": "postback",
                 "title": "Yes",
-                "payload": "attach_yes1",
+                "payload": "attach_yes111",
               },
               {
                 "type": "postback",
                 "title": "No",
-                "payload": "attach_no1",
+                "payload": "attach_no111",
               }
             ],
           }]
@@ -1778,9 +1786,7 @@ else if (received_message.payload === "ottwp") {
       }
     }
   }
-
-
-
+*/
 
 /*
  else if (received_message.payload === "ld_ottwp") {  
