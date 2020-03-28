@@ -1708,7 +1708,7 @@ else if (received_message.payload === "ottwp") {
     toselhou_ott_byuser.to_sel_hou = false;
     tellBy_user_howmuchRoom.howMuchRoom_hou = true;
   }
-   else if (toselhou_ott_byuser.to_sel_hou &&  tellBy_user_howmuchRoom.howMuchRoom_hou === true) {
+   else if (received_message.text &&  tellBy_user_howmuchRoom.howMuchRoom_hou === true) {
    userEntered_room_hou.howMuchRoom_hou = received_message.text;
          response = {
        "text": "Do you have what types of room. Please tell me:",
