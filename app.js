@@ -1688,12 +1688,14 @@ else if (received_message.payload === "ottwp") {
       "text":'Please tell the type of house that you want to sell like RC or Nancat'
     }
     received_message.payload = false;
-    received_message.text = true;
+    toselhou_ott_byuser.to_sel_hou = true;
   }
  else if (received_message.text && toselhou_ott_byuser.to_sel_hou === true) {
+  userEntered_Hou_tosel.to_sel_hou = received_message.text;
          response = {
       "text":'How many floors is the house?'
     }
+    toselhou_ott_byuser.to_sel_hou = false;
   }
 
 
@@ -1711,8 +1713,8 @@ else if (received_message.text == "Yes!!!") {
     }
     contactct.numberno = false;
   } 
-
-  */
+*/
+  
 
   
   // Send the response message
