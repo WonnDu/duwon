@@ -1731,8 +1731,7 @@ else if (received_message.payload === "ottwp") {
                         }
                       ]
     }
-  }
-     tellBy_user_howmuchRoom.howMuchRoom_hou = false;
+    tellBy_user_howmuchRoom.howMuchRoom_hou = false;
   }
 
 
