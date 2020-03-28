@@ -1629,7 +1629,7 @@ else if (received_message.payload === "ottwp") {
   }
 
 
- else if (payload === 'tselott') {
+ else if (received_message.payload === "tselott") {
         response = {
                   "text": "Please choose the area:",
                     "quick_replies": [
