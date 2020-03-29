@@ -1655,24 +1655,22 @@ else if (received_message.payload === "ottwp") {
 
 
 
-
-
  else if (received_message.payload === "tselott" || received_message.payload === "tselpob" || received_message.payload === "tseldek" || received_message.payload === "tselzaya" || received_message.payload === "tselzabu") {
          response = {
       "text":'Please tell the type of house that you want to sell like RC or Nancat'
     }
     received_message.payload = false;
-    toselhou_ott_byuser.to_sel_hou = true;
+    toselhou_byuser.to_sel_hou = true;
   }
- else if (received_message.text && toselhou_ott_byuser.to_sel_hou === true) {
+ else if (received_message.text && toselhou_byuser.to_sel_hou === true) {
   userEntered_Hou_tosel.to_sel_hou = received_message.text;
          response = {
       "text":'How many floors is the house?'
     }
-    toselhou_ott_byuser.to_sel_hou = false;
-    toselhou_ott_byuser.howMuchRoom_hou = true;
+    toselhou_byuser.to_sel_hou = false;
+    toselhou_byuser.howMuchRoom_hou = true;
   }
-   else if (received_message.text &&  toselhou_ott_byuser.howMuchRoom_hou === true) {
+   else if (received_message.text &&  toselhou_byuser.howMuchRoom_hou === true) {
    userEntered_Hou_tosel.howMuchRoom_hou = received_message.text;
          response = {
        "text": "Do you have what types of room. Please tell me:",
@@ -1695,10 +1693,18 @@ else if (received_message.payload === "ottwp") {
                         }
                       ]
     }
-    toselhou_ott_byuser.howMuchRoom_hou = false;
+    toselhou_byuser.howMuchRoom_hou = false;
   }
-
-
+/*
+let toselhou_byuser = {
+  to_sel_hou:false,
+  howMuchRoom_hou:false,
+  area_hou_inOtt:false,
+  photos_ott:false,
+  attach_Hou:false,
+  ph_num:false,
+}
+let userEntered_Hou_tosel = {}; */
 
 // for master bed room
  else if (received_message.payload === "tosel_hou_tell_mb") {    
