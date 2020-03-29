@@ -1750,7 +1750,7 @@ let userEntered_Hou_tosel = {}; */
      received_message.payload = false;
      toselhou_byuser.attach_Hou = true;
   }
-  else if (received_message.attachments && toselhou_byuser.attach_Hou== true) {
+  else if (received_message.attachments && toselhou_byuser.attach_Hou == true) {
       userEntered_Hou_tosel.attach_Hou = received_message.attachments; 
     // Get the URL of the message attachment
     let attachment_url_photo = userEntered_Hou_tosel.attach_Hou[0,1].payload.url;
@@ -1779,25 +1779,9 @@ let userEntered_Hou_tosel = {}; */
         }
       }
     }
-    toselhou_byuser.attach_Hou == false;
+    toselhou_byuser.attach_Hou = false;
   }
 //11111111111111111111111111111111111111111111111111111111111111111111111
-
- /* else if (received_message.text == "Yes!!!") {
-   
-    received_message.text = false;
-    contactct.numberno = true;
-  } */
-   else if (received_message.text && toselhou_byuser.ph_num == true) {
-    userEntered_Hou_tosel.ph_num = received_message.text;
-    response = {
-      "text":"Please leave me your phone number and I will contact you later. Thanks for contacting us."
-    }
-    toselhou_byuser.ph_num = false;
-  } 
-
-
-   
 /*
 else if (received_message.payload === "ld_ottwp") {    
     response = {
@@ -1837,6 +1821,23 @@ else if (received_message.payload === "ld_ottwp") {
     }
   }
 */
+
+ /* else if (received_message.text == "Yes!!!") {
+   
+    received_message.text = false;
+    contactct.numberno = true;
+  } */
+   else if (received_message.text && toselhou_byuser.ph_num == true) {
+    userEntered_Hou_tosel.ph_num = received_message.text;
+    response = {
+      "text":"Please leave me your phone number and I will contact you later. Thanks for contacting us."
+    }
+    toselhou_byuser.ph_num = false;
+  } 
+
+
+   
+
 
 
 /*
