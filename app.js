@@ -193,7 +193,7 @@ app.get('/webhook', (req, res) => {
   }
 });
 
-function handleMessage(sender_psid, received_message) {
+function handleMessage(sender_psid, received_message,received_postback) {
   let response;
   
   // Checks if the message contains text
