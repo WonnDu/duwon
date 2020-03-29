@@ -1728,7 +1728,7 @@ else if (received_message.payload === "ottwp") {
     response = {
       "text": "How many bed rooms in your house?"
     }
-    received_message.payload = false;
+    toselhou_byuser.for_both_room = false;
     toselhou_byuser.area_hou_inOtt = true;
   } 
 
