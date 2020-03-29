@@ -1669,7 +1669,7 @@ else if (received_message.payload === "ottwp") {
 
 
 
- else if (received_message.payload === "tselott" || received_message.payload === "tselpob" || received_message.payload === "tseldek" || received_message.payload === "tselzaya" || received_message.payload === "tselzabu" || received_message.payload === "toselhoupyin") {
+ else if (received_message.payload === "tselott" || received_message.payload === "tselpob" || received_message.payload === "tseldek" || received_message.payload === "tselzaya" || received_message.payload === "tselzabu" || payload === "toselhoupyin") {
          response = {
       "text":'Please tell the type of house that you want to sell like RC or Nancat'
     }
