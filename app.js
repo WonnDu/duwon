@@ -76,13 +76,13 @@ let toselhou_byuser = {
 let userEntered_Hou_tosel = {};
 
 
-let tosel_Land_byuser = {
+let tosel_land_byuser = {
   land_type_tosell:false,
   land_name_tosell:false,
-  attach_land:false,
+  attach_land_tosell:false,
 
 }
-let userEntered_Land_tosel = {};
+let userEntered_land_tosel = {};
 
 
 
@@ -1842,18 +1842,18 @@ else if (received_message.payload === "ottwp") {
       "text":'Please tell the area of land that you want to sell.'
     }
     received_message.payload = false;
-    tosel_Land_byuser.land_type_tosell = true;
+    tosel_land_byuser.land_type_tosell = true;
   }
- else if (received_message.text && tosel_Land_byuser.land_type_tosell === true) {
-  userEntered_Land_tosel.land_type_tosell = received_message.text;
+ else if (received_message.text && tosel_land_byuser.land_type_tosell === true) {
+  userEntered_land_tosel.land_type_tosell = received_message.text;
          response = {
       "text":'Please tell the type of land that you want to sell.'
     }
-    tosel_Land_byuser.land_type_tosell = false;
-    tosel_Land_byuser.land_name_tosell = true;
+    tosel_land_byuser.land_type_tosell = false;
+    tosel_land_byuser.land_name_tosell = true;
   }
-   else if (received_message.text &&  tosel_Land_byuser.land_name_tosell === true) {
-   userEntered_Land_tosel.land_name_tosell = received_message.text;
+   else if (received_message.text &&  tosel_land_byuser.land_name_tosell === true) {
+   userEntered_land_tosel.land_name_tosell = received_message.text;
          response = {
        "text": "Min yak land ka min a myie pauk lar?",
                     "quick_replies": [
@@ -1871,7 +1871,7 @@ else if (received_message.payload === "ottwp") {
                         }
                       ]
     }
-    tosel_Land_byuser.land_name_tosell = false;
+    tosel_land_byuser.land_name_tosell = false;
   }
 
  else if (received_message.payload === "tosel_land_yes" || received_message.payload === "tosel_hou_no") {
@@ -1899,12 +1899,12 @@ else if (received_message.payload === "ottwp") {
       "text": "OK, Send me."
     }
      received_message.payload = false;
-     tosel_Land_byuser.attach_land = true;
+     tosel_land_byuser.attach_land_tosell = true;
   }
-  else if (received_message.attachments && tosel_Land_byuser.attach_land == true) {
-      userEntered_Land_tosel.attach_land = received_message.attachments; 
+  else if (received_message.attachments && tosel_land_byuser.attach_land_tosell == true) {
+      userEntered_land_tosel.attach_land_tosell = received_message.attachments; 
     // Get the URL of the message attachment
-    let attachment_url_photo = userEntered_Land_tosel.attach_land[0,1].payload.url;
+    let attachment_url_photo = userEntered_land_tosel.attach_land_tosell[0,1].payload.url;
     response = {
       "attachment": {
         "type": "template",
@@ -1930,8 +1930,9 @@ else if (received_message.payload === "ottwp") {
         }
       }
     }
-    tosel_Land_byuser.attach_land = false;
+    tosel_land_byuser.attach_land_tosell = false;
   }
+
 
 
 /*  if (received_message.text == "ahii") {    
