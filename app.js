@@ -1695,16 +1695,7 @@ else if (received_message.payload === "ottwp") {
     }
     toselhou_byuser.howMuchRoom_hou = false;
   }
-/*
-let toselhou_byuser = {
-  to_sel_hou:false,
-  howMuchRoom_hou:false,
-  area_hou_inOtt:false,
-  photos_ott:false,
-  attach_Hou:false,
-  ph_num:false,
-}
-let userEntered_Hou_tosel = {}; */
+
 
 // for master bed room
  else if (received_message.payload === "tosel_hou_tell_mb") {    
@@ -1741,7 +1732,16 @@ let userEntered_Hou_tosel = {}; */
     }
     toselhou_byuser.photos_ott = false;
   }
-
+/*
+let toselhou_byuser = {
+  to_sel_hou:false,
+  howMuchRoom_hou:false,
+  area_hou_inOtt:false,
+  photos_ott:false,
+  attach_Hou:false,
+  ph_num:false,
+}
+let userEntered_Hou_tosel = {}; */
 
    else if (received_message.payload === "send_now_photos_hou_inAndOut") { 
     response = {
@@ -1751,9 +1751,9 @@ let userEntered_Hou_tosel = {}; */
      toselhou_byuser.attach_Hou = true;
   }
   else if (received_message.attachments && toselhou_byuser.attach_Hou== true) {
-      userEntered_Hou_tose.attach_Hou = received_message.attachments; 
+      userEntered_Hou_tosel.attach_Hou = received_message.attachments; 
     // Get the URL of the message attachment
-    let attachment_url_photo = userEntered_Hou_tose.attach_Hou[0,1].payload.url;
+    let attachment_url_photo = userEntered_Hou_tosel.attach_Hou[0,1].payload.url;
     response = {
       "attachment": {
         "type": "template",
