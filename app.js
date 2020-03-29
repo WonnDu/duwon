@@ -80,6 +80,9 @@ let tosel_land_byuser = {
   land_type_tosell:false,
   land_name_tosell:false,
   attach_land_tosell:false,
+  estimated_price_land:false,
+  address_land_tosell:false,
+  ph_num_land:false,
 
 }
 let userEntered_land_tosel = {};
@@ -1930,8 +1933,32 @@ else if (received_message.payload === "ottwp") {
         }
       }
     }
- //   tosel_land_byuser.attach_land_tosell = false;
+    tosel_land_byuser.attach_land_tosell = false;
   }
+
+    else if (received_message.text && tosel_land_byuser.estimated_price_land == true) {
+    userEntered_land_tosel.estimated_price_land = received_message.text;
+    response = {
+      "text":"Please tell me the address of own land to be sold"
+    }
+    tosel_land_byuser.estimated_price_land = false;
+    tosel_land_byuser.address_land_tosell = true;
+  } 
+  else if (received_message.text && tosel_land_byuser.address_land_tosell == true) {
+    userEntered_land_tosel.address_land_tosell = received_message.text;
+    response = {
+      "text":"Please leave me your phone number and I will contact you later. Thanks for contacting us."
+    }
+    tosel_land_byuser.address_land_tosell = false;
+    tosel_land_byuser.ph_num_land = true;
+  } 
+   else if (received_message.text && tosel_land_byuser.ph_num_land == true) {
+    userEntered_land_tosel.ph_num_land = received_message.text;
+    response = {
+      "text":"Please leave me your phone number and I will contact you later. Thanks for contacting us."
+    }
+    tosel_land_byuser.ph_num_land = false;
+  } 
 
 
 
@@ -2707,6 +2734,12 @@ else if (payload === 'innnter') {
                   "text": "Please tell me the estimated price that you want to get"
       }
       toselhou_byuser.estimated_price_forSell = true;
+  }
+    else if (payload === 'attach_no_sell_land') {
+        response = {
+                  "text": "Please tell me the estimated price that you want to get"
+      }
+      tosel_land_byuser.estimated_price_land = true;
   }
   
 
