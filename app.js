@@ -1788,6 +1788,7 @@ else if (received_message.payload === "ottwp") {
         }
       }
     }
+    attach_houPhoto.attach_Hou == false;
   }
 //11111111111111111111111111111111111111111111111111111111111111111111111
 
