@@ -1757,14 +1757,14 @@ else if (received_message.payload === "ottwp") {
   else if (received_message.attachments && attach_houPhoto.attach_Hou== true) {
       userSend_attach_photo.attach_Hou = received_message.attachments; 
     // Get the URL of the message attachment
-    let attachment_url_photo = userSend_attach_photo.attach_Hou[0].payload.url;
+    let attachment_url_photo = userSend_attach_photo.attach_Hou[0,1].payload.url;
     response = {
       "attachment": {
         "type": "template",
         "payload": {
           "template_type": "generic",
           "elements": [{
-            "title": "Is this the right picture?",
+            "title": "I received your photos. Do you want to send more?",
             "subtitle": "Tap a button to answer.",
             "image_url": attachment_url_photo,
             "buttons": [
