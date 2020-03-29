@@ -46,9 +46,13 @@ const
 let contactct = {
   numberno:false,
 }
-
 let userEnteredPhonenum = {};
 
+
+let phno_forSell_hou = {
+  ph_num:false,
+}
+let userEntered_phNo_hou = {};
 
 
 
@@ -193,9 +197,9 @@ app.get('/webhook', (req, res) => {
   }
 });
 
-function handleMessage(sender_psid, received_message,received_postback) {
+function handleMessage(sender_psid, received_message) {
   let response;
-  let payload_pmn = received_postback.payload;
+
   
   // Checks if the message contains text
   if (received_message.text == "ahii") {    
@@ -1670,7 +1674,7 @@ else if (received_message.payload === "ottwp") {
 
 
 
- else if (received_message.payload === "tselott" || received_message.payload === "tselpob" || received_message.payload === "tseldek" || received_message.payload === "tselzaya" || received_message.payload === "tselzabu" || payload_pmn === "toselhoupyin") {
+ else if (received_message.payload === "tselott" || received_message.payload === "tselpob" || received_message.payload === "tseldek" || received_message.payload === "tselzaya" || received_message.payload === "tselzabu") {
          response = {
       "text":'Please tell the type of house that you want to sell like RC or Nancat'
     }
@@ -1777,7 +1781,7 @@ else if (received_message.payload === "ottwp") {
               {
                 "type": "postback",
                 "title": "No",
-                "payload": "attach_no111",
+                "payload": "attach_no_forSellingHouse",
               }
             ],
           }]
@@ -1786,6 +1790,19 @@ else if (received_message.payload === "ottwp") {
     }
   }
 //11111111111111111111111111111111111111111111111111111111111111111111111
+
+ /* else if (received_message.text == "Yes!!!") {
+   
+    received_message.text = false;
+    contactct.numberno = true;
+  } */
+   else if (received_message.text && phno_forSell_hou.ph_num == true) {
+    userEntered_phNo_hou.ph_num = received_message.text;
+    response = {
+      "text":"ehuiebuie11111222333444555"
+    }
+    phno_forSell_hou.ph_num = false;
+  } 
 /*
 else if (received_message.payload === "ld_ottwp") {    
     response = {
@@ -2581,6 +2598,13 @@ else if (payload === 'innnter') {
                       ]
       }
   }
+    else if (payload === 'attach_no_forSellingHouse') {
+        response = {
+                  "text": "Please tell me the address of own house to be sold"
+      }
+      phno_forSell_hou.ph_num = true;
+  }
+  
 
 
    else if (payload === 'laan2') {
