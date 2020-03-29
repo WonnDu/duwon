@@ -79,8 +79,12 @@ let userEntered_Hou_tosel = {};
 let tosel_Land_byuser = {
   land_type_tosell:false,
   land_name_tosell:false,
+  attach_land:false,
+
 }
 let userEntered_Land_tosel = {};
+
+
 
 
 // Sets server port and logs message on success
@@ -1829,6 +1833,7 @@ else if (received_message.payload === "ottwp") {
   } 
 
 
+
    
 
 // for land to be sold by customer
@@ -1868,6 +1873,67 @@ else if (received_message.payload === "ottwp") {
     }
     tosel_Land_byuser.land_name_tosell = false;
   }
+
+ else if (received_message.payload === "send_now_photos_hou_inAndOut") {
+         response = {
+       "text": "Could you send me photos with regard to your land?",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "I will send now.",
+                          "payload": "send_now_photos_land",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Later",
+                          "payload": "tosel_later_land",
+                        }
+                      ]
+    }
+//    toselhou_byuser.photos_ott = false;
+  }
+
+
+   else if (received_message.payload === "send_now_photos_land") { 
+    response = {
+      "text": "OK, Send me."
+    }
+     received_message.payload = false;
+     tosel_Land_byuser.attach_land = true;
+  }
+  else if (received_message.attachments && tosel_Land_byuser.attach_land == true) {
+      userEntered_Land_tosel.attach_land = received_message.attachments; 
+    // Get the URL of the message attachment
+    let attachment_url_photo = userEntered_Hou_tosel.attach_Hou[0,1].payload.url;
+    response = {
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "generic",
+          "elements": [{
+            "title": "I received your photos. Do you want to send more?",
+            "subtitle": "Tap a button to answer.",
+            "image_url": attachment_url_photo,
+            "buttons": [
+              {
+                "type": "postback",
+                "title": "Yes",
+                "payload": "attach_yes_sell_land",
+              },
+              {
+                "type": "postback",
+                "title": "No, it is enough",
+                "payload": "attach_no_sell_land",
+              }
+            ],
+          }]
+        }
+      }
+    }
+    tosel_Land_byuser.attach_land = false;
+  }
+
+
 /*  if (received_message.text == "ahii") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
