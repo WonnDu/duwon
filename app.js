@@ -71,6 +71,7 @@ let toselhou_byuser = {
   attach_Hou:false,
   ph_num:false,
   forSell_both_room:false,
+  estimated_price_forSell:false,
 }
 let userEntered_Hou_tosel = {};
 
@@ -1857,6 +1858,15 @@ else if (received_message.payload === "ld_ottwp") {
     received_message.text = false;
     contactct.numberno = true;
   } */
+    else if (received_message.text && toselhou_byuser.estimated_price_forSell == true) {
+    userEntered_Hou_tosel.estimated_price_forSell = received_message.text;
+    response = {
+      "text":"Please tell me the address of own house to be sold"
+    }
+    toselhou_byuser.estimated_price_forSell = false;
+    toselhou_byuser.ph_num = true;
+  } 
+
    else if (received_message.text && toselhou_byuser.ph_num == true) {
     userEntered_Hou_tosel.ph_num = received_message.text;
     response = {
@@ -2626,9 +2636,9 @@ else if (payload === 'innnter') {
   }
     else if (payload === 'attach_no_forSellingHouse') {
         response = {
-                  "text": "Please tell me the address of own house to be sold"
+                  "text": "Please tell me the estimated price that you want to get"
       }
-      toselhou_byuser.ph_num = true;
+      toselhou_byuser.estimated_price_forSell = true;
   }
   
 
