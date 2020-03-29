@@ -70,7 +70,6 @@ let toselhou_byuser = {
   photos_ott:false,
   attach_Hou:false,
   ph_num:false,
-  for_both_room:false,
 }
 let userEntered_Hou_tosel = {};
 
@@ -1715,22 +1714,10 @@ else if (received_message.payload === "ottwp") {
     received_message.payload = false;
     toselhou_byuser.area_hou_inOtt = true;
   }
-
   // for both master bed room and bed room
- else if (received_message.payload === "tosel_hou_tell_both") {
-   response  = { "text": "How many master bed rooms in your house?" 
-  }
-  received_message.payload = false;
-  toselhou_byuser.for_both_room = true;
-}
- else if (received_message.text && toselhou_byuser.for_both_room === true) {  
-  userEntered_Hou_tosel.for_both_room = received_message.text; 
-    response = {
-      "text": "How many bed rooms in your house?"
-    }
-    toselhou_byuser.for_both_room = false;
-    toselhou_byuser.area_hou_inOtt = true;
-  } 
+/* else if (payload === "tosel_hou_tell_both") {
+   response  = { "text": "Please chose one of the service charges that you want to know." } 
+  } */
 
 
  else if (received_message.text && toselhou_byuser.area_hou_inOtt === true) { 
