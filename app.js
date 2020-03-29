@@ -1904,7 +1904,7 @@ else if (received_message.payload === "ottwp") {
   else if (received_message.attachments && tosel_Land_byuser.attach_land == true) {
       userEntered_Land_tosel.attach_land = received_message.attachments; 
     // Get the URL of the message attachment
-    let attachment_url_photo = userEntered_Hou_tosel.attach_Hou[0,1].payload.url;
+    let attachment_url_photo = userEntered_Land_tosel.attach_land[0,1].payload.url;
     response = {
       "attachment": {
         "type": "template",
