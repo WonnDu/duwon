@@ -1725,14 +1725,14 @@ else if (received_message.payload === "ottwp") {
   received_message.payload = false;
   toselhou_byuser.forSell_both_room = true;
 }
-/* else if (received_message.text && toselhou_byuser.forSell_both_room === true) {  
+ else if (received_message.text && toselhou_byuser.forSell_both_room === true) {  
   userEntered_Hou_tosel.forSell_both_room = received_message.text; 
     response = {
       "text": "How many bed rooms in your house?"
     }
-    toselhou_byuser.for_both_room = false;
+    toselhou_byuser.forSell_both_room = false;
     toselhou_byuser.area_hou_inOtt = true;
-  } */
+  } 
 
 
  else if (received_message.text && toselhou_byuser.area_hou_inOtt === true) { 
