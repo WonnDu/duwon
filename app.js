@@ -195,6 +195,7 @@ app.get('/webhook', (req, res) => {
 
 function handleMessage(sender_psid, received_message,received_postback) {
   let response;
+  let payload_pmn = received_postback.payload;
   
   // Checks if the message contains text
   if (received_message.text == "ahii") {    
@@ -1669,7 +1670,7 @@ else if (received_message.payload === "ottwp") {
 
 
 
- else if (received_message.payload === "tselott" || received_message.payload === "tselpob" || received_message.payload === "tseldek" || received_message.payload === "tselzaya" || received_message.payload === "tselzabu" || received_postback.payload === "toselhoupyin") {
+ else if (received_message.payload === "tselott" || received_message.payload === "tselpob" || received_message.payload === "tseldek" || received_message.payload === "tselzaya" || received_message.payload === "tselzabu" || payload_pmn === "toselhoupyin") {
          response = {
       "text":'Please tell the type of house that you want to sell like RC or Nancat'
     }
