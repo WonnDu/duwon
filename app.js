@@ -1904,7 +1904,7 @@ else if (received_message.payload === "ottwp") {
   else if (received_message.attachments && tosel_land_byuser.attach_land_tosell == true) {
       userEntered_land_tosel.attach_land_tosell = received_message.attachments; 
     // Get the URL of the message attachment
-    let attachment_url_photo = userEntered_land_tosel.attach_land_tosell[0,1].payload.url;
+    let attachment_url_land = userEntered_land_tosel.attach_land_tosell[0,1].payload.url;
     response = {
       "attachment": {
         "type": "template",
@@ -1913,7 +1913,7 @@ else if (received_message.payload === "ottwp") {
           "elements": [{
             "title": "I received your photos. Do you want to send more?",
             "subtitle": "Tap a button to answer.",
-            "image_url": attachment_url_photo,
+            "image_url": attachment_url_land,
             "buttons": [
               {
                 "type": "postback",
@@ -1930,7 +1930,7 @@ else if (received_message.payload === "ottwp") {
         }
       }
     }
-    tosel_land_byuser.attach_land_tosell = false;
+ //   tosel_land_byuser.attach_land_tosell = false;
   }
 
 
