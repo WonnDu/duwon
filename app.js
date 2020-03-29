@@ -1874,7 +1874,7 @@ else if (received_message.payload === "ottwp") {
     tosel_Land_byuser.land_name_tosell = false;
   }
 
- else if (received_message.payload === "send_now_photos_hou_inAndOut") {
+ else if (received_message.payload === "tosel_land_yes" || received_message.payload === "tosel_hou_no") {
          response = {
        "text": "Could you send me photos with regard to your land?",
                     "quick_replies": [
