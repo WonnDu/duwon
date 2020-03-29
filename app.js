@@ -78,6 +78,7 @@ let userEntered_Hou_tosel = {};
 
 let tosel_Land_byuser = {
   land_type_tosell:false,
+  land_name_tosell:false,
 }
 let userEntered_Land_tosel = {};
 
@@ -1844,10 +1845,57 @@ else if (received_message.payload === "ottwp") {
       "text":'Please tell the type of land that you want to sell.'
     }
     tosel_Land_byuser.land_type_tosell = false;
-//  toselhou_byuser.howMuchRoom_hou = true;
+    tosel_Land_byuser.land_name_tosell = true;
   }
-
-  
+   else if (received_message.text &&  tosel_Land_byuser.land_name_tosell === true) {
+   userEntered_Land_tosel.land_name_tosell = received_message.text;
+         response = {
+       "text": "Min yak land ka min a myie pauk lar?",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": ".Yes.",
+                          "payload": "tosel_land_yes",
+                          "image_url":"http://example.com/img/green.png"
+                        },
+                        {
+                          "content_type": "text",
+                          "title": ".No.",
+                          "payload": "tosel_hou_no",
+                          "image_url":"http://example.com/img/red.png"
+                        }
+                      ]
+    }
+    tosel_Land_byuser.land_name_tosell = false;
+  }
+/*  if (received_message.text == "ahii") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": "Pick a color:",
+      "quick_replies":[
+      {
+        "content_type":"text",
+        "title":"Red",
+        "payload":"red-1",
+        "image_url":"http://example.com/img/red.png"
+      },
+      {
+        "content_type":"text",
+        "title":"Red",
+        "payload":"red-2",
+        "image_url":"http://example.com/img/red.png"
+      },
+      {
+        "content_type":"text",
+        "title":"Green",
+        "payload":"<POSTBACK_PAYLOAD>",
+        "image_url":"http://example.com/img/green.png"
+      }
+    ]
+    }
+  }
+  */
 
   
   // Send the response message
