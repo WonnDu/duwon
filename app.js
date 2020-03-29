@@ -76,6 +76,10 @@ let toselhou_byuser = {
 let userEntered_Hou_tosel = {};
 
 
+let tosel_Land_byuser = {
+  land_type_tosell:false,
+}
+let userEntered_Land_tosel = {};
 
 
 // Sets server port and logs message on success
@@ -1716,10 +1720,9 @@ else if (received_message.payload === "ottwp") {
     received_message.payload = false;
     toselhou_byuser.area_hou_inOtt = true;
   }
+
+
   // for both master bed room and bed room
-/* else if (payload === "tosel_hou_tell_both") {
-   response  = { "text": "Please chose one of the service charges that you want to know." } 
-  } */
  else if (received_message.payload === "tosel_hou_tell_both") {
    response  = { "text": "How many master bed rooms in your house?" 
   }
@@ -1763,16 +1766,7 @@ else if (received_message.payload === "ottwp") {
     }
     toselhou_byuser.photos_ott = false;
   }
-/*
-let toselhou_byuser = {
-  to_sel_hou:false,
-  howMuchRoom_hou:false,
-  area_hou_inOtt:false,
-  photos_ott:false,
-  attach_Hou:false,
-  ph_num:false,
-}
-let userEntered_Hou_tosel = {}; */
+
 
    else if (received_message.payload === "send_now_photos_hou_inAndOut") { 
     response = {
@@ -1812,52 +1806,10 @@ let userEntered_Hou_tosel = {}; */
     }
     toselhou_byuser.attach_Hou = false;
   }
-//11111111111111111111111111111111111111111111111111111111111111111111111
-/*
-else if (received_message.payload === "ld_ottwp") {    
-    response = {
-      "text": "You choose: Ottara. Now send me outside picture of house as an attachment!"
-    }
-    received_message.payload = false;
-    landlordsent.attach1 = true;
-  }
-     else if (received_message.attachments && landlordsent.attach1 == true) {
-      userEnteredldld_attach.attach1 = received_message.attachments;
-    // Get the URL of the message attachment
-    let attachment_url1 = userEnteredldld_attach.attach1[0].payload.url;
-    response = {
-      "attachment": {
-        "type": "template",
-        "payload": {
-          "template_type": "generic",
-          "elements": [{
-            "title": "Is this the right picture?",
-            "subtitle": "Tap a button to answer.",
-            "image_url": attachment_url1,
-            "buttons": [
-              {
-                "type": "postback",
-                "title": "Yes",
-                "payload": "attach_yes1",
-              },
-              {
-                "type": "postback",
-                "title": "No",
-                "payload": "attach_no1",
-              }
-            ],
-          }]
-        }
-      }
-    }
-  }
-*/
 
- /* else if (received_message.text == "Yes!!!") {
-   
-    received_message.text = false;
-    contactct.numberno = true;
-  } */
+
+
+
     else if (received_message.text && toselhou_byuser.estimated_price_forSell == true) {
     userEntered_Hou_tosel.estimated_price_forSell = received_message.text;
     response = {
@@ -1878,22 +1830,23 @@ else if (received_message.payload === "ld_ottwp") {
 
    
 
-
-
-/*
-else if (received_message.text == "Yes!!!") {
-   
-    received_message.text = false;
-    contactct.numberno = true;
-  }
-   else if (received_message.text && contactct.numberno == true) {
-    userEnteredPhonenum.numberno = received_message.text;
-    response = {
-      "text":"We have received your phone number. We will contact you within 24 hours. Thank you for contacting us. Have a nice day!"
+// for land to be sold by customer
+ else if (received_message.payload === "tselottlan" || received_message.payload === "tselpoblan" || received_message.payload === "tseldeklan" || received_message.payload === "tselzayalan" || received_message.payload === "tselzabulan") {
+         response = {
+      "text":'Please tell the area of land that you want to sell.'
     }
-    contactct.numberno = false;
-  } 
-*/
+    received_message.payload = false;
+    tosel_Land_byuser.land_type_tosell = true;
+  }
+ else if (received_message.text && tosel_Land_byuser.land_type_tosell === true) {
+  userEntered_Land_tosel.land_type_tosell = received_message.text;
+         response = {
+      "text":'Please tell the type of land that you want to sell.'
+    }
+    tosel_Land_byuser.land_type_tosell = false;
+//  toselhou_byuser.howMuchRoom_hou = true;
+  }
+
   
 
   
