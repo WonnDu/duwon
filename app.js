@@ -49,10 +49,6 @@ let contactct = {
 let userEnteredPhonenum = {};
 
 
-let phno_forSell_hou = {
-  ph_num:false,
-}
-let userEntered_phNo_hou = {};
 
 
 
@@ -65,33 +61,18 @@ let userEnteredldld_attach = {};
 
 
 
+
 // for customers who want to sell their house
-let toselhou_ott_byuser = {
+let toselhou_byuser = {
   to_sel_hou:false,
+  howMuchRoom_hou:false,
+  area_hou_inOtt:false,
+  photos_ott:false,
+  attach_Hou:false,
+  ph_num:false,
 }
 let userEntered_Hou_tosel = {};
 
-
-let tellBy_user_howmuchRoom = {
-  howMuchRoom_hou:false,
-}
-let userEntered_room_hou= {};
-
-
-let tellBy_user_area_inOtt = {
-  area_hou_inOtt:false,
-}
-let userEntered_area_ott = {};
-
-let photo_inAndOut_ott = {
-  photos_ott:false,
-}
-let userSend_photo_hou_ott ={};
-
-let attach_houPhoto = {
-  attach_Hou:false,
-}
-let userSend_attach_photo = {};
 
 
 
@@ -1674,6 +1655,8 @@ else if (received_message.payload === "ottwp") {
 
 
 
+
+
  else if (received_message.payload === "tselott" || received_message.payload === "tselpob" || received_message.payload === "tseldek" || received_message.payload === "tselzaya" || received_message.payload === "tselzabu") {
          response = {
       "text":'Please tell the type of house that you want to sell like RC or Nancat'
@@ -1687,10 +1670,10 @@ else if (received_message.payload === "ottwp") {
       "text":'How many floors is the house?'
     }
     toselhou_ott_byuser.to_sel_hou = false;
-    tellBy_user_howmuchRoom.howMuchRoom_hou = true;
+    toselhou_ott_byuser.howMuchRoom_hou = true;
   }
-   else if (received_message.text &&  tellBy_user_howmuchRoom.howMuchRoom_hou === true) {
-   userEntered_room_hou.howMuchRoom_hou = received_message.text;
+   else if (received_message.text &&  toselhou_ott_byuser.howMuchRoom_hou === true) {
+   userEntered_Hou_tosel.howMuchRoom_hou = received_message.text;
          response = {
        "text": "Do you have what types of room. Please tell me:",
                     "quick_replies": [
@@ -1712,8 +1695,10 @@ else if (received_message.payload === "ottwp") {
                         }
                       ]
     }
-    tellBy_user_howmuchRoom.howMuchRoom_hou = false;
+    toselhou_ott_byuser.howMuchRoom_hou = false;
   }
+
+
 
 // for master bed room
  else if (received_message.payload === "tosel_hou_tell_mb") {    
@@ -1721,18 +1706,18 @@ else if (received_message.payload === "ottwp") {
       "text": "How many master bed rooms in your house?"
     }
     received_message.payload = false;
-    tellBy_user_area_inOtt.area_hou_inOtt = true;
+    toselhou_byuser.area_hou_inOtt = true;
   }
- else if (received_message.text && tellBy_user_area_inOtt.area_hou_inOtt === true) { 
-  userEntered_area_ott.area_hou_inOtt = received_message.text;   
+ else if (received_message.text && toselhou_byuser.area_hou_inOtt === true) { 
+  userEntered_Hou_tosel.area_hou_inOtt = received_message.text;   
     response = {
       "text": "How much area is your yard?"
     }
-    tellBy_user_area_inOtt.area_hou_inOtt = false;
-    photo_inAndOut_ott.photos_ott = true;
+    toselhou_byuser.area_hou_inOtt = false;
+    toselhou_byuser.photos_ott = true;
   }
-  else if (received_message.text && photo_inAndOut_ott.photos_ott  === true) {
-   userSend_photo_hou_ott.photos_ott = received_message.text;
+  else if (received_message.text && toselhou_byuser.photos_ott  === true) {
+   userEntered_Hou_tosel.photos_ott = received_message.text;
          response = {
        "text": "Could you send me inside and outside photos with regard to your house?",
                     "quick_replies": [
@@ -1748,21 +1733,21 @@ else if (received_message.payload === "ottwp") {
                         }
                       ]
     }
-    photo_inAndOut_ott.photos_ott = false;
-
+    toselhou_byuser.photos_ott = false;
   }
+
 
    else if (received_message.payload === "send_now_photos_hou_inAndOut") { 
     response = {
       "text": "OK, Send me."
     }
      received_message.payload = false;
-     attach_houPhoto.attach_Hou = true;
+     toselhou_byuser.attach_Hou = true;
   }
-  else if (received_message.attachments && attach_houPhoto.attach_Hou== true) {
-      userSend_attach_photo.attach_Hou = received_message.attachments; 
+  else if (received_message.attachments && toselhou_byuser.attach_Hou== true) {
+      userEntered_Hou_tose.attach_Hou = received_message.attachments; 
     // Get the URL of the message attachment
-    let attachment_url_photo = userSend_attach_photo.attach_Hou[0,1].payload.url;
+    let attachment_url_photo = userEntered_Hou_tose.attach_Hou[0,1].payload.url;
     response = {
       "attachment": {
         "type": "template",
@@ -1788,7 +1773,7 @@ else if (received_message.payload === "ottwp") {
         }
       }
     }
-    attach_houPhoto.attach_Hou == false;
+    toselhou_byuser.attach_Hou == false;
   }
 //11111111111111111111111111111111111111111111111111111111111111111111111
 
@@ -1797,13 +1782,16 @@ else if (received_message.payload === "ottwp") {
     received_message.text = false;
     contactct.numberno = true;
   } */
-   else if (received_message.text && phno_forSell_hou.ph_num == true) {
-    userEntered_phNo_hou.ph_num = received_message.text;
+   else if (received_message.text && toselhou_byuser.ph_num == true) {
+    userEntered_Hou_tosel.ph_num = received_message.text;
     response = {
-      "text":"ehuiebuie11111222333444555"
+      "text":"Please leave me your phone number and I will contact you later. Thanks for contacting us."
     }
-    phno_forSell_hou.ph_num = false;
+    toselhou_byuser.ph_num = false;
   } 
+
+
+   
 /*
 else if (received_message.payload === "ld_ottwp") {    
     response = {
@@ -2603,7 +2591,7 @@ else if (payload === 'innnter') {
         response = {
                   "text": "Please tell me the address of own house to be sold"
       }
-      phno_forSell_hou.ph_num = true;
+      toselhou_byuser.ph_num = true;
   }
   
 
