@@ -1684,7 +1684,7 @@ else if (received_message.payload === "ottwp") {
                         {
                           "content_type": "text",
                           "title": "Bed room",
-                          "payload": "tosel_hou_tell_mb",
+                          "payload": "tosel_hou_bedRoom",
                         },
                         {
                           "content_type": "text",
@@ -1705,6 +1705,15 @@ else if (received_message.payload === "ottwp") {
     received_message.payload = false;
     toselhou_byuser.area_hou_inOtt = true;
   }
+  // for bed room
+   else if (received_message.payload === "tosel_hou_bedRoom") {    
+    response = {
+      "text": "How many bed rooms in your house?"
+    }
+    received_message.payload = false;
+    toselhou_byuser.area_hou_inOtt = true;
+  }
+
  else if (received_message.text && toselhou_byuser.area_hou_inOtt === true) { 
   userEntered_Hou_tosel.area_hou_inOtt = received_message.text;   
     response = {
