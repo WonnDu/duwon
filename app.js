@@ -453,7 +453,7 @@ function handleMessage(sender_psid, received_message) {
                         {
                           "content_type": "text",
                           "title": "I will send now.",
-                          "payload": "send_now_ldld", 
+                          "payload": "send_land_ph", 
                         },
                         {
                           "content_type": "text",
@@ -466,7 +466,7 @@ function handleMessage(sender_psid, received_message) {
   }
 
 
-   else if (received_message.payload === "send_now_ldld") { 
+   else if (received_message.payload === "send_land_ph") { 
     response = {
       "text": "OK, Send me."
     }
@@ -476,7 +476,7 @@ function handleMessage(sender_psid, received_message) {
   else if (received_message.attachments && ldld_land_sent.attach_land_ldld == true) {
       userEntered_ldld_land.attach_land_ldld = received_message.attachments; 
     // Get the URL of the message attachment
-    let attachment_url_ldld = userEntered_ldld_land.attach_land_ldld[0,1].payload.url;
+    let attachment_url_phph = userEntered_ldld_land.attach_land_ldld[0].payload.url;
     response = {
       "attachment": {
         "type": "template",
@@ -485,7 +485,7 @@ function handleMessage(sender_psid, received_message) {
           "elements": [{
             "title": "I received your photos. Do you want to send more?",
             "subtitle": "Tap a button to answer.",
-            "image_url": attachment_url_ldld,
+            "image_url": attachment_url_phph,
             "buttons": [
               {
                 "type": "postback",
@@ -1874,7 +1874,7 @@ else if (received_message.payload === "ottwp") {
 
 
 
-
+// to sell house
  else if (received_message.payload === "tselott" || received_message.payload === "tselpob" || received_message.payload === "tseldek" || received_message.payload === "tselzaya" || received_message.payload === "tselzabu") {
          response = {
       "text":'Please tell the type of house that you want to sell like RC or Nancat'
