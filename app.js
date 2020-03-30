@@ -57,7 +57,7 @@ let landlord_sent = {
   typeOf_hou_ldld:false,
   quan_floor:false,
   typeOf_room_ldld:false,
-  area_landlord:false
+  area_landlord:false,
   attach1:false,
 }
 
