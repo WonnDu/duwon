@@ -353,7 +353,7 @@ function handleMessage(sender_psid, received_message) {
      //     landlord_sent.typeOf_room_ldld = true;
   }
   
-
+/*
   else if (received_message.text && landlord_sent.typeOf_room_ldld === true) {
     userEntered_landlord.typeOf_room_ldld = received_message.text;
           response = {
@@ -380,7 +380,7 @@ function handleMessage(sender_psid, received_message) {
           landlord_sent.typeOf_room_ldld = false;
 
   }   
-
+*/
 
   // for master bed room in landlord
  else if (received_message.payload === "hou_ldld_tell_mb") {    
