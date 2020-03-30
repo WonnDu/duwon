@@ -2124,7 +2124,7 @@ function handlePostback(sender_psid, received_postback) {
                       "buttons": [
                         {
                           "type": "postback",
-                          "title": "Landlord landlord",
+                          "title": "Landlord",
                           "payload": "ldld",
                         },
                         {
@@ -2136,14 +2136,37 @@ function handlePostback(sender_psid, received_postback) {
                   }
                 }
               }
-  }else if (payload === 'ldld') {
+  }
+  else if (payload === 'ldld') {
+    response = { "attachment": {
+                  "type": "template",
+                  "payload": {
+                    "template_type": "button",
+                      "text": "Please choose one of  the options to tell what you want to rent",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "House",
+                          "payload": "hou_option",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "Land",
+                          "payload": "land_option",
+                        }
+                      ]
+                  }
+                }
+              }
+  }
+  else if (payload === 'hou_option') {
     let response1 = { "text": "You have chose to rent out house as a Landlord." };
     let response2 = { "attachment":{
 
       "type":"template",
       "payload":{
         "template_type":"button",
-        "text":"In what townships is your house located? Please choose:",
+        "text":"In what township is your house located? Please choose:",
          "buttons":[
                     {
                     "type":"postback",
@@ -2196,6 +2219,72 @@ function handlePostback(sender_psid, received_postback) {
 
       }
   }
+  // for land option
+    else if (payload === 'land_option') {
+    let response1 = { "text": "You have chose to rent out land as a Landlord." };
+    let response2 = { "attachment":{
+
+      "type":"template",
+      "payload":{
+        "template_type":"button",
+        "text":"In what township is your land located? Please choose:",
+         "buttons":[
+                    {
+                    "type":"postback",
+                    "title":" In Five Thiri Twp",
+                    "payload": "ldld5_land"
+                    },
+                    {
+                    "type":"postback",
+                    "title":"Pyinmana Twp",
+                    "payload":"ldld_pyin_land"
+                    }                            
+                  ]  
+                }
+        }
+   };
+   callSend(sender_psid, response1).then(()=>{
+  return callSend(sender_psid, response2);
+  });
+  }
+  else if (payload === 'ldld5_land') {
+         response = {
+                  "text": "Please choose the one name of townships in which you want to rent a house:",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Ottara",
+                          "payload": "ld_ottwp_land",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "Pobba",
+                          "payload": "ld_potwp_land",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Dekkhina",
+                          "payload": "ld_dektwp_land",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zaya Thiri",
+                          "payload": "ld_zaytwp_land",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zabu Thiri",
+                          "payload": "ld_zabtwp_land",
+                        }
+                      ]
+
+      }
+  }
+
+
+
+
+  // for tenant
   else if (payload === 'tenan') {
     response = { "attachment": {
                   "type": "template",
