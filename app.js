@@ -71,7 +71,7 @@ let ldld_land_sent = {
   area_land:false,
   attach_land_ldld:false,
   estimated_price_ldld:false,
-  ldld_ph_num:false;
+  ldld_ph_num:false,
 }
 let userEntered_ldld_land = {};
 
@@ -521,10 +521,7 @@ function handleMessage(sender_psid, received_message) {
       "text":"Thanks for contacting us. Have a nice day!"
     }
     ldld_land_sent.ldld_ph_num = false;
-  }
-
-
-   
+  } 
    
 
 /*****************************************************************/
