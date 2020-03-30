@@ -57,6 +57,7 @@ let landlord_sent = {
   typeOf_hou_ldld:false,
   quan_floor:false,
   typeOf_room_ldld:false,
+  typeOf_both_ldld:false,
   area_landlord:false,
   attach1:false,
 }
@@ -288,7 +289,7 @@ function handleMessage(sender_psid, received_message) {
       "text": `You sent the message: "${received_message.text}". Now send me an attachment!`
     }
   }
-  
+
   // five thiri (house) in landlord
   else if (received_message.payload === "ld_ottwp" || received_message.payload === "ld_potwp" || received_message.payload === "ld_dektwp" || received_message.payload === "ld_zaytwp" || received_message.payload === "ld_zaytwp") {    
     response = {
@@ -314,86 +315,81 @@ function handleMessage(sender_psid, received_message) {
           landlord_sent.typeOf_hou_ldld = false;
           landlord_sent.quan_floor = true;
   }
-    else if (received_message.text && landlord_sent.quan_floor === true) {
+  else if (received_message.text && landlord_sent.quan_floor === true) {
     userEntered_landlord.quan_floor = received_message.text;
           response = {
                       "text":'Do you have what types of room? please tell me.'   
           }
           landlord_sent.quan_floor = false;
-//          landlord_sent.quan_floor = true;
+          landlord_sent.typeOf_room_ldld = true;
   }
-
-
-/*
-  // for land to be sold by customer
- else if (received_message.payload === "tselottlan" || received_message.payload === "tselpoblan" || received_message.payload === "tseldeklan" || received_message.payload === "tselzayalan" || received_message.payload === "tselzabulan") {
-         response = {
-      "text":'Please tell the area of land that you want to sell.'
-    }
-    received_message.payload = false;
-    tosel_land_byuser.land_type_tosell = true;
-  }
- else if (received_message.text && tosel_land_byuser.land_type_tosell === true) {
-  userEntered_land_tosel.land_type_tosell = received_message.text;
-         response = {
-      "text":'Please tell the type of land that you want to sell.'
-    }
-    tosel_land_byuser.land_type_tosell = false;
-    tosel_land_byuser.land_name_tosell = true;
-  }
-   else if (received_message.text &&  tosel_land_byuser.land_name_tosell === true) {
-   userEntered_land_tosel.land_name_tosell = received_message.text;
-         response = {
-       "text": "Min yak land ka min a myie pauk lar?",
+  else if (received_message.text && landlord_sent.typeOf_room_ldld === true) {
+    userEntered_landlord.typeOf_room_ldld = received_message.text;
+          response = {
+       "text": "Do you have what types of room. Please tell me:",
                     "quick_replies": [
                         {
                           "content_type": "text",
-                          "title": ".Yes.",
-                          "payload": "tosel_land_yes",
-                          "image_url":"http://example.com/img/green.png"
+                          "title": "Master Bed",
+                          "payload": "hou_ldld_tell_mb",
+                        },
+                       
+                        {
+                          "content_type": "text",
+                          "title": "Bed room",
+                          "payload": "hou_ldld_br",
                         },
                         {
                           "content_type": "text",
-                          "title": ".No.",
-                          "payload": "tosel_hou_no",
-                          "image_url":"http://example.com/img/red.png"
+                          "title": "Both",
+                          "payload": "hou_ldld_both",
                         }
                       ]
     }
-    tosel_land_byuser.land_name_tosell = false;
-  } */
+          landlord_sent.typeOf_room_ldld = false;
 
- /*    else if (received_message.attachments && landlord_sent.attach1 == true) {
-      userEntered_landlord.attach1 = received_message.attachments;
-    // Get the URL of the message attachment
-    let attachment_url1 = userEntered_landlord.attach1[0].payload.url;
-    response = {
-      "attachment": {
-        "type": "template",
-        "payload": {
-          "template_type": "generic",
-          "elements": [{
-            "title": "Is this the right picture?",
-            "subtitle": "Tap a button to answer.",
-            "image_url": attachment_url1,
-            "buttons": [
-              {
-                "type": "postback",
-                "title": "Yes",
-                "payload": "attach_yes1",
-              },
-              {
-                "type": "postback",
-                "title": "No",
-                "payload": "attach_no1",
-              }
-            ],
-          }]
-        }
-      }
-    }
   }
-  */
+
+
+  // for master bed room in landlord
+ else if (received_message.payload === "hou_ldld_tell_mb") {    
+    response = {
+      "text": "How many master bed rooms in your house?"
+    }
+    received_message.payload = false;
+//    toselhou_byuser.area_hou_inOtt = true;
+  }
+
+  // for bed room in landlord
+   else if (received_message.payload === "hou_ldld_br") {    
+    response = {
+      "text": "How many bed rooms in your house?"
+    }
+    received_message.payload = false;
+//    toselhou_byuser.area_hou_inOtt = true;
+  }
+
+
+  // for both master bed room and bed room in landlord
+ else if (received_message.payload === "hou_ldld_both") {
+   response  = { "text": "How many master bed rooms in your house?" 
+  }
+  received_message.payload = false;
+  landlord_sent.typeOf_both_ldld = true;
+}
+ else if (received_message.text && landlord_sent.typeOf_both_ldld === true) {  
+  userEntered_landlord.typeOf_both_ldld = received_message.text; 
+    response = {
+      "text": "How many bed rooms in your house?"
+    }
+    landlord_sent.typeOf_both_ldld = false;
+//    toselhou_byuser.area_hou_inOtt = true;
+  } 
+
+
+
+
+/*****************************************************************/
    else if (received_message.payload === "more_attach_enough") {
         response = { "attachment":{
 
