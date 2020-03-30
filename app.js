@@ -51,7 +51,7 @@ let userEnteredPhonenum = {};
 
 
 
-
+// for landlord (house)
 let landlord_sent = {
   fully_address:false,
   typeOf_hou_ldld:false,
@@ -61,8 +61,17 @@ let landlord_sent = {
   area_landlord:false,
   attach1:false,
 }
-
 let userEntered_landlord = {};
+
+
+// for landlord (land)
+let ldld_land_sent = {
+  address_land:false,
+  typeOf_land:false,
+  area_land:false,
+  attach_land:false,
+}
+let userEntered_ldld_land = {};
 
 
 
@@ -343,7 +352,7 @@ function handleMessage(sender_psid, received_message) {
   }
   
 
-/*  else if (received_message.text && landlord_sent.typeOf_room_ldld === true) {
+  else if (received_message.text && landlord_sent.typeOf_room_ldld === true) {
     userEntered_landlord.typeOf_room_ldld = received_message.text;
           response = {
        "text": "Do you have what types of room? please tell me.",
@@ -368,7 +377,7 @@ function handleMessage(sender_psid, received_message) {
     }
           landlord_sent.typeOf_room_ldld = false;
 
-  }   */
+  }   
 
 
   // for master bed room in landlord
@@ -405,6 +414,95 @@ function handleMessage(sender_psid, received_message) {
     landlord_sent.typeOf_both_ldld = false;
 //    toselhou_byuser.area_hou_inOtt = true;
   } 
+
+
+
+
+
+// for land in landlordr
+ else if (received_message.payload === "ld_ottwp_land" || received_message.payload === "ld_potwp_land" || received_message.payload === "ld_dektwp_land" || received_message.payload === "ld_zaytwp_land" || received_message.payload === "ld_zabtwp_land") {
+         response = {
+      "text":'Please tell me fully address of your land to be rented out.'
+    }
+    received_message.payload = false;
+    ldld_land_sent.address_land = true;
+  }
+ else if (received_message.text && ldld_land_sent.address_land === true) {
+  userEntered_ldld_land.address_land = received_message.text;
+         response = {
+      "text":'Please tell the type of land that you want to rent out.'
+    }
+    ldld_land_sent.address_land = false;
+    ldld_land_sent.typeOf_land = true;
+  }
+  else if (received_message.text &&  ldld_land_sent.typeOf_land === true) {
+   userEntered_ldld_land.typeOf_land = received_message.text;
+         response = {
+                      "text":'Please tell me the area of land that you want to rent out.'
+    }
+    ldld_land_sent.typeOf_land = false;
+    ldld_land_sent.area_land = true;
+  }
+  else if (received_message.text &&  ldld_land_sent.area_land === true) {
+    userEntered_ldld_land.area_land = received_message.text;
+    response = {
+       "text": "Could you send me some photos of your land?",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "I will send now.",
+                          "payload": "send_now_ldld", 
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Later",
+                          "payload": "later_ldld",
+                        }
+                      ]
+    }
+    ldld_land_sent.area_land = false;
+  }
+
+
+   else if (received_message.payload === "send_now_ldld") { 
+    response = {
+      "text": "OK, Send me."
+    }
+     received_message.payload = false;
+     ldld_land_sent.attach_land = true;
+  }
+  else if (received_message.attachments && ldld_land_sent.attach_land == true) {
+      userEntered_ldld_land.attach_land = received_message.attachments; 
+    // Get the URL of the message attachment
+    let attachment_url_ldld = userEntered_ldld_land.attach_land[0,1].payload.url;
+    response = {
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "generic",
+          "elements": [{
+            "title": "I received your photos. Do you want to send more?",
+            "subtitle": "Tap a button to answer.",
+            "image_url": attachment_url_ldld,
+            "buttons": [
+              {
+                "type": "postback",
+                "title": "Yes",
+                "payload": "attach_yes_ldld_land",
+              },
+              {
+                "type": "postback",
+                "title": "No, it is enough",
+                "payload": "attach_no_ldld_land",
+              }
+            ],
+          }]
+        }
+      }
+    }
+    ldld_land_sent.attach_land = false;
+  }
+
 
 
 
