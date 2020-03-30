@@ -69,9 +69,9 @@ let ldld_land_sent = {
   address_land:false,
   typeOf_land:false,
   area_land:false,
-  attach_land:false,
+  attach_land_ldld:false,
   estimated_price_ldld:false,
-  ldld_ph_num:false,
+  ldld_ph_num:false;
 }
 let userEntered_ldld_land = {};
 
@@ -471,12 +471,12 @@ function handleMessage(sender_psid, received_message) {
       "text": "OK, Send me."
     }
      received_message.payload = false;
-     ldld_land_sent.attach_land = true;
+     ldld_land_sent.attach_land_ldld = true;
   }
-  else if (received_message.attachments && ldld_land_sent.attach_land == true) {
-      userEntered_ldld_land.attach_land = received_message.attachments; 
+  else if (received_message.attachments && ldld_land_sent.attach_land_ldld == true) {
+      userEntered_ldld_land.attach_land_ldld = received_message.attachments; 
     // Get the URL of the message attachment
-    let attachment_url_ldld = userEntered_ldld_land.attach_land[0,1].payload.url;
+    let attachment_url_ldld = userEntered_ldld_land.attach_land_ldld[0,1].payload.url;
     response = {
       "attachment": {
         "type": "template",
@@ -502,35 +502,30 @@ function handleMessage(sender_psid, received_message) {
         }
       }
     }
-    ldld_land_sent.attach_land = false;
+    ldld_land_sent.attach_land_ldld = false;
   }
 
 
 
-  else if (received_message.text && tosel_land_byuser.estimated_price_land == true) {
-    userEntered_land_tosel.estimated_price_land = received_message.text;
+  else if (received_message.text && ldld_land_sent.estimated_price_ldld == true) {
+    userEntered_ldld_land.estimated_price_land = received_message.text;
     response = {
-      "text":"Please tell me the address of own land to be sold"
+      "text":"Please leave me your phone number and I will contact you later."
     }
-    tosel_land_byuser.estimated_price_land = false;
-    tosel_land_byuser.address_land_tosell = true;
+    ldld_land_sent.estimated_price_ldld = false;
+    ldld_land_sent.ldld_ph_num = true;
   } 
-  else if (received_message.text && tosel_land_byuser.address_land_tosell == true) {
-    userEntered_land_tosel.address_land_tosell = received_message.text;
+  else if (received_message.text && ldld_land_sent.ldld_ph_num == true) {
+    userEntered_ldld_land.ldld_ph_num = received_message.text;
     response = {
-      "text":"Please leave me your phone number and I will contact you later. Thanks for contacting us."
+      "text":"Thanks for contacting us. Have a nice day!"
     }
-    tosel_land_byuser.address_land_tosell = false;
-    tosel_land_byuser.ph_num_land = true;
-  } 
-   else if (received_message.text && tosel_land_byuser.ph_num_land == true) {
-    userEntered_land_tosel.ph_num_land = received_message.text;
-    response = {
-      "text":"Please leave me your phone number and I will contact you later. Thanks for contacting us."
-    }
-    tosel_land_byuser.ph_num_land = false;
-  } 
+    ldld_land_sent.ldld_ph_num = false;
+  }
 
+
+   
+   
 
 /*****************************************************************/
    else if (received_message.payload === "more_attach_enough") {
@@ -2150,31 +2145,60 @@ else if (received_message.payload === "ottwp") {
     tosel_land_byuser.attach_land_tosell = false;
   }
 
-    else if (received_message.text && ldld_land_sent.estimated_price_ldld == true) {
-    userEntered_ldld_land.estimated_price_ldld = received_message.text;
+    else if (received_message.text && tosel_land_byuser.estimated_price_land == true) {
+    userEntered_land_tosel.estimated_price_land = received_message.text;
     response = {
-      "text":"Please leave me your phone number and I will contact you later."
+      "text":"Please tell me the address of own land to be sold"
     }
-    ldld_land_sent.estimated_price_ldld = false;
-    ldld_land_sent.ldld_ph_num = true;
+    tosel_land_byuser.estimated_price_land = false;
+    tosel_land_byuser.address_land_tosell = true;
   } 
-  else if (received_message.text && ldld_land_sent.ldld_ph_num == true) {
-    userEntered_ldld_land.ldld_ph_num = received_message.text;
+  else if (received_message.text && tosel_land_byuser.address_land_tosell == true) {
+    userEntered_land_tosel.address_land_tosell = received_message.text;
     response = {
-      "text":"Thanks for contacting us. Have a nice day!"
+      "text":"Please leave me your phone number and I will contact you later. Thanks for contacting us."
     }
-    ldld_land_sent.ldld_ph_num = false;
+    tosel_land_byuser.address_land_tosell = false;
+    tosel_land_byuser.ph_num_land = true;
   } 
-/*   else if (received_message.text && tosel_land_byuser.ph_num_land == true) {
+   else if (received_message.text && tosel_land_byuser.ph_num_land == true) {
     userEntered_land_tosel.ph_num_land = received_message.text;
     response = {
       "text":"Please leave me your phone number and I will contact you later. Thanks for contacting us."
     }
     tosel_land_byuser.ph_num_land = false;
-  }   */
+  } 
 
 
 
+/*  if (received_message.text == "ahii") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": "Pick a color:",
+      "quick_replies":[
+      {
+        "content_type":"text",
+        "title":"Red",
+        "payload":"red-1",
+        "image_url":"http://example.com/img/red.png"
+      },
+      {
+        "content_type":"text",
+        "title":"Red",
+        "payload":"red-2",
+        "image_url":"http://example.com/img/red.png"
+      },
+      {
+        "content_type":"text",
+        "title":"Green",
+        "payload":"<POSTBACK_PAYLOAD>",
+        "image_url":"http://example.com/img/green.png"
+      }
+    ]
+    }
+  }
+  */
 
   
   // Send the response message
