@@ -2460,7 +2460,7 @@ function handlePostback(sender_psid, received_postback) {
   }
   else if (payload === 'ldld5_land') {
          response = {
-                  "text": "Please choose the one name of townships in which you want to rent a house:",
+                  "text": "Please choose the one name of townships in which you want to rent a land.",
                     "quick_replies": [
                         {
                           "content_type": "text",
