@@ -2116,12 +2116,12 @@ else if (received_message.payload === "ottwp") {
       "text": "OK, Send me."
     }
      received_message.payload = false;
-     ldld_land_sent.attach_land = true;
+     tosel_land_byuser.attach_land_tosell = true;
   }
-  else if (received_message.attachments && ldld_land_sent.attach_land == true) {
-      userEntered_ldld_land.attach_land = received_message.attachments; 
+  else if (received_message.attachments && tosel_land_byuser.attach_land_tosell == true) {
+      userEntered_land_tosel.attach_land_tosell = received_message.attachments; 
     // Get the URL of the message attachment
-    let attachment_url_land = userEntered_ldld_land.attach_land[0,1].payload.url;
+    let attachment_url_land = userEntered_land_tosel.attach_land_tosell[0,1].payload.url;
     response = {
       "attachment": {
         "type": "template",
@@ -2147,7 +2147,7 @@ else if (received_message.payload === "ottwp") {
         }
       }
     }
-    ldld_land_sent.attach_land = false;
+    tosel_land_byuser.attach_land_tosell = false;
   }
 
     else if (received_message.text && ldld_land_sent.estimated_price_ldld == true) {
@@ -2172,6 +2172,8 @@ else if (received_message.payload === "ottwp") {
     }
     tosel_land_byuser.ph_num_land = false;
   }   */
+
+
 
 
   
