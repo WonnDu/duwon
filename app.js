@@ -52,11 +52,16 @@ let userEnteredPhonenum = {};
 
 
 
-let landlordsent = {
+let landlord_sent = {
+  fully_address:false,
+  typeOf_hou_ldld:false,
+  quan_floor:false,
+  typeOf_room_ldld:false,
+  area_landlord:false
   attach1:false,
 }
 
-let userEnteredldld_attach = {};
+let userEntered_landlord = {};
 
 
 
@@ -282,17 +287,83 @@ function handleMessage(sender_psid, received_message) {
     response = {
       "text": `You sent the message: "${received_message.text}". Now send me an attachment!`
     }
-  }  else if (received_message.payload === "ld_ottwp") {    
+  }  else if (received_message.payload === "ld_ottwp_land" || received_message.payload === "ld_potwp_land" || received_message.payload === "ld_dektwp_land" || received_message.payload === "ld_zaytwp_land" || received_message.payload === "ld_zaytwp_land") {    
     response = {
-      "text": "You choose: Ottara. Now send me outside picture of house as an attachment!"
+      "text": "Please tell me fully address of your house to be rented out. "
     }
     received_message.payload = false;
-    landlordsent.attach1 = true;
+//  landlord_sent.attach1 = true;
+    landlord_sent.fully_address = true;
   }
-     else if (received_message.attachments && landlordsent.attach1 == true) {
-      userEnteredldld_attach.attach1 = received_message.attachments;
+  else if (received_message.text && landlord_sent.fully_address === true) {
+    userEntered_landlord.fully_address = received_message.text;
+          response = {
+                      "text":'Please tell the type of house that you want to rent out. I mean like RC or Nancat. Please tell me.'
+          }
+          landlord_sent.fully_address = false;
+          landlord_sent.typeOf_hou_ldld = true;
+  }
+  else if (received_message.text && landlord_sent.typeOf_hou_ldld === true) {
+    userEntered_landlord.typeOf_hou_ldld = received_message.text;
+          response = {
+                      "text":'How many floors is the house?'   
+          }
+          landlord_sent.typeOf_hou_ldld = false;
+          landlord_sent.quan_floor = true;
+  }
+    else if (received_message.text && landlord_sent.quan_floor === true) {
+    userEntered_landlord.quan_floor = received_message.text;
+          response = {
+                      "text":'Do you have what types of room? please tell me.'   
+          }
+          landlord_sent.quan_floor = false;
+//          landlord_sent.quan_floor = true;
+  }
+
+
+/*
+  // for land to be sold by customer
+ else if (received_message.payload === "tselottlan" || received_message.payload === "tselpoblan" || received_message.payload === "tseldeklan" || received_message.payload === "tselzayalan" || received_message.payload === "tselzabulan") {
+         response = {
+      "text":'Please tell the area of land that you want to sell.'
+    }
+    received_message.payload = false;
+    tosel_land_byuser.land_type_tosell = true;
+  }
+ else if (received_message.text && tosel_land_byuser.land_type_tosell === true) {
+  userEntered_land_tosel.land_type_tosell = received_message.text;
+         response = {
+      "text":'Please tell the type of land that you want to sell.'
+    }
+    tosel_land_byuser.land_type_tosell = false;
+    tosel_land_byuser.land_name_tosell = true;
+  }
+   else if (received_message.text &&  tosel_land_byuser.land_name_tosell === true) {
+   userEntered_land_tosel.land_name_tosell = received_message.text;
+         response = {
+       "text": "Min yak land ka min a myie pauk lar?",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": ".Yes.",
+                          "payload": "tosel_land_yes",
+                          "image_url":"http://example.com/img/green.png"
+                        },
+                        {
+                          "content_type": "text",
+                          "title": ".No.",
+                          "payload": "tosel_hou_no",
+                          "image_url":"http://example.com/img/red.png"
+                        }
+                      ]
+    }
+    tosel_land_byuser.land_name_tosell = false;
+  } */
+
+ /*    else if (received_message.attachments && landlord_sent.attach1 == true) {
+      userEntered_landlord.attach1 = received_message.attachments;
     // Get the URL of the message attachment
-    let attachment_url1 = userEnteredldld_attach.attach1[0].payload.url;
+    let attachment_url1 = userEntered_landlord.attach1[0].payload.url;
     response = {
       "attachment": {
         "type": "template",
@@ -319,6 +390,7 @@ function handleMessage(sender_psid, received_message) {
       }
     }
   }
+  */
    else if (received_message.payload === "more_attach_enough") {
         response = { "attachment":{
 
