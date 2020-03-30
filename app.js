@@ -318,15 +318,35 @@ function handleMessage(sender_psid, received_message) {
   else if (received_message.text && landlord_sent.quan_floor === true) {
     userEntered_landlord.quan_floor = received_message.text;
           response = {
-                      "text":'Do you have what types of room? please tell me.'   
+                    "text": "Do you have what types of room? please tell me.",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Master Bed",
+                          "payload": "hou_ldld_tell_mb",
+                        },
+                       
+                        {
+                          "content_type": "text",
+                          "title": "Bed room",
+                          "payload": "hou_ldld_br",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Both",
+                          "payload": "hou_ldld_both",
+                        }
+                      ]
           }
           landlord_sent.quan_floor = false;
-          landlord_sent.typeOf_room_ldld = true;
+     //     landlord_sent.typeOf_room_ldld = true;
   }
-  else if (received_message.text && landlord_sent.typeOf_room_ldld === true) {
+  
+
+/*  else if (received_message.text && landlord_sent.typeOf_room_ldld === true) {
     userEntered_landlord.typeOf_room_ldld = received_message.text;
           response = {
-       "text": "Do you have what types of room. Please tell me:",
+       "text": "Do you have what types of room? please tell me.",
                     "quick_replies": [
                         {
                           "content_type": "text",
@@ -348,7 +368,7 @@ function handleMessage(sender_psid, received_message) {
     }
           landlord_sent.typeOf_room_ldld = false;
 
-  }
+  }   */
 
 
   // for master bed room in landlord
