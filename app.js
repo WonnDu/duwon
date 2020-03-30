@@ -287,7 +287,10 @@ function handleMessage(sender_psid, received_message) {
     response = {
       "text": `You sent the message: "${received_message.text}". Now send me an attachment!`
     }
-  }  else if (received_message.payload === "ld_ottwp_land" || received_message.payload === "ld_potwp_land" || received_message.payload === "ld_dektwp_land" || received_message.payload === "ld_zaytwp_land" || received_message.payload === "ld_zaytwp_land") {    
+  }
+  
+  // five thiri (house) in landlord
+  else if (received_message.payload === "ld_ottwp" || received_message.payload === "ld_potwp" || received_message.payload === "ld_dektwp" || received_message.payload === "ld_zaytwp" || received_message.payload === "ld_zaytwp") {    
     response = {
       "text": "Please tell me fully address of your house to be rented out. "
     }
@@ -2187,7 +2190,9 @@ function handlePostback(sender_psid, received_postback) {
                   }
                 }
               }
-  }else if (payload === 'tore') {
+  }
+  // to rent in main menu
+  else if (payload === 'tore') {
     response = { "attachment": {
                   "type": "template",
                   "payload": {
@@ -2209,6 +2214,7 @@ function handlePostback(sender_psid, received_postback) {
                 }
               }
   }
+  // landlord in to rent in main menu
   else if (payload === 'ldld') {
     response = { "attachment": {
                   "type": "template",
@@ -2231,6 +2237,7 @@ function handlePostback(sender_psid, received_postback) {
                 }
               }
   }
+  // house in landlord
   else if (payload === 'hou_option') {
     let response1 = { "text": "You have chose to rent out house as a Landlord." };
     let response2 = { "attachment":{
@@ -2258,6 +2265,7 @@ function handlePostback(sender_psid, received_postback) {
   return callSend(sender_psid, response2);
   });
   }
+  // five thiri (house) in landlord
   else if (payload === 'ldld5') {
          response = {
                   "text": "Please choose the one name of townships in which you want to rent a house:",
