@@ -1870,31 +1870,7 @@ else if (received_message.payload === "ottwp") {
 
       }
   }
-  // for RC to buy house (nancat) in oattra
-  else if (received_message.payload === "nancat_ott") {
-    response = {
-                  "text": "Please choose you want to buy the house in which",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "one floor",
-                          "payload": "onef_nan_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "two floor",
-                          "payload": "fourthf_nan_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whateverf_nan_ott",
-                        }
-                      ]
-
-      }
-  }
-  // one floor(RC) in oattra
+    // one floor(RC) in oattra for types of room
   else if (received_message.payload === "onef_ott") {
     response = {
                   "text": "Do you want what types of room?",
@@ -1922,35 +1898,7 @@ else if (received_message.payload === "ottwp") {
                       ]
       }
   }
-   // two floor(RC) in oattra
-  else if (received_message.payload === "twof_ott") {
-    response = {
-                  "text": "Do you want what types of room?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "MB",
-                          "payload": "twof_mb_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "BD",
-                          "payload": "twof_bed_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "both",
-                          "payload": "twof_both_bed_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "twof_whatever_ott",
-                        }
-                      ]
-      }
-  }
-   // one floor(RC) in oattra
+    // one floor(RC) in oattra for area
   else if (received_message.payload === "onef_mb_ott") {
     response = {
                   "text": "Do you want what area?",
@@ -1978,7 +1926,35 @@ else if (received_message.payload === "ottwp") {
                       ]
       }
   }
-  // two floor(RC) in oattra
+     // two floor(RC) in oattra for types of room
+  else if (received_message.payload === "twof_ott") {
+    response = {
+                  "text": "Do you want what types of room?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "MB",
+                          "payload": "twof_mb_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "BD",
+                          "payload": "twof_bed_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "both",
+                          "payload": "twof_both_bed_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "twof_whatever_ott",
+                        }
+                      ]
+      }
+  }
+    // two floor(RC) in oattra for aea
   else if (received_message.payload === "twof_mb_ott") {
     response = {
                   "text": "Do you want what area?",
@@ -2004,11 +1980,37 @@ else if (received_message.payload === "ottwp") {
 
 
 
+  // for RC to buy house (nancat) in oattra
+  else if (received_message.payload === "nancat_ott") {
+    response = {
+                  "text": "Please choose you want to buy the house in which",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "one floor",
+                          "payload": "onef_nan_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "two floor",
+                          "payload": "fourthf_nan_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whateverf_nan_ott",
+                        }
+                      ]
+
+      }
+  }
 
 
 
 
-// to buy house in pobba
+
+/***************************************/
+// to buy house in pobba for types of house
 else if (received_message.payload === "potwp") {
       response = {
                     "text":'Are you finding RC or Nancat?',
@@ -2031,7 +2033,8 @@ else if (received_message.payload === "potwp") {
                       ]
 
       }
-  } 
+  }
+  // to buy house in pobba for floor 
   else if (received_message.payload === "rc_pobb") {
     response = {
                   "text": "Please choose you want to buy the house in which",
@@ -2054,12 +2057,13 @@ else if (received_message.payload === "potwp") {
                         {
                           "content_type": "text",
                           "title": "whatever",
-                          "payload": "whateverf_ott",
+                          "payload": "whateverf_pobb",
                         }
                       ]
 
       }
   }
+  // to buy house in pobba for types of room
   else if (received_message.payload === "onef_pobb") {
     response = {
                   "text": "Do you want what types of room?",
@@ -2087,6 +2091,7 @@ else if (received_message.payload === "potwp") {
                       ]
       }
   }
+  // to buy house in pobba for area
   else if (received_message.payload === "onef_mb_pobb") {
     response = {
                   "text": "Do you want what area?",
@@ -2109,8 +2114,60 @@ else if (received_message.payload === "potwp") {
                       ]
       }
   }
+    // to buy house (two floor) in pobba for types of room
+  else if (received_message.payload === "twof_pobb") {
+    response = {
+                  "text": "Do you want what types of room?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "MB",
+                          "payload": "twof_mb_pobb",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "BD",
+                          "payload": "twof_bed_pobb",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "both",
+                          "payload": "two_bed_pobb",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whatever_bed_pobb",
+                        }
+                      ]
+      }
+  }
+    // to buy house (two floor) in pobba for area
+  else if (received_message.payload === "twof_mb_pobb") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "twof_40_in_pobb",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "twof_60_in_pobb",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whatever_twof_pobb",
+                        }
+                      ]
+      }
+  }
 
 
+/******************************/
 // to buy house in dekkhina
 else if (received_message.payload === "dektwp") {
       response = {
