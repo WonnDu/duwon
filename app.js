@@ -1950,7 +1950,7 @@ else if (received_message.payload === "ottwp") {
                       ]
       }
   }
-
+   // one floor(RC) in oattra
   else if (received_message.payload === "onef_mb_ott") {
     response = {
                   "text": "Do you want what area?",
@@ -1978,6 +1978,40 @@ else if (received_message.payload === "ottwp") {
                       ]
       }
   }
+  // two floor(RC) in oattra
+  else if (received_message.payload === "twof_mb_ott") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "80*80",
+                          "payload": "80_in_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "100*100",
+                          "payload": "100_in_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "150*150",
+                          "payload": "150_in_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whatever_in_ott",
+                        }
+                      ]
+      }
+  }
+
+
+
+
+
+
 
 // to buy house in pobba
 else if (received_message.payload === "potwp") {
