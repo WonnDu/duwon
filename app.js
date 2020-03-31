@@ -1814,12 +1814,13 @@ function handleMessage(sender_psid, received_message) {
 
 
 
+/*********************************************************************************/
 
     
 // to buy house in oattra
 else if (received_message.payload === "ottwp") {
       response = {
-                    "text":'Are you finding RC or Nancat? Plz type RC1 for RC & type Nancat1 for Nancat.',
+                    "text":'Are you finding RC or Nancat?',
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -1931,7 +1932,7 @@ else if (received_message.payload === "ottwp") {
 // to buy house in pobba
 else if (received_message.payload === "potwp") {
       response = {
-                    "text":'Are you finding RC or Nancat? Plz type RC1 for RC & type Nancat1 for Nancat.',
+                    "text":'Are you finding RC or Nancat?',
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -2031,6 +2032,112 @@ else if (received_message.payload === "potwp") {
   }
 
 
+// to buy house in dekkhina
+else if (received_message.payload === "dektwp") {
+      response = {
+                    "text":'Are you finding RC or Nancat?',
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "RC",
+                          "payload": "rc_dek",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Nancat",
+                          "payload": "nancat_dek",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whatever_dek",
+                        }
+                      ]
+
+      }
+  } 
+  else if (received_message.payload === "rc_dek") {
+    response = {
+                  "text": "Please choose you want to buy the house in which",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "one floor",
+                          "payload": "onef_dek",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "two floor",
+                          "payload": "twof_dek",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "third floor",
+                          "payload": "thirdf_dek",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whateverf_dek",
+                        }
+                      ]
+
+      }
+  }
+  else if (received_message.payload === "onef_dek") {
+    response = {
+                  "text": "Do you want what types of room?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "MB",
+                          "payload": "onef_mb_dek",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "BD",
+                          "payload": "onef_bed_dek",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "both",
+                          "payload": "both_tybed_dek",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whatever_ty_dek",
+                        }
+                      ]
+      }
+  }
+  else if (received_message.payload === "onef_mb_pobb") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "40_in_dek",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "80_in_dek",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "100*100",
+                          "payload": "100_in_dek",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whatever_in_dek",
+                        }
+                      ]
+      }
+  }
 
 
 
