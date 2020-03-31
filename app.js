@@ -1986,17 +1986,12 @@ else if (received_message.payload === "ottwp") {
                          {
                           "content_type": "text",
                           "title": "80*80",
-                          "payload": "80_in_ott",
+                          "payload": "tf_80_in_ott",
                         },
                         {
                           "content_type": "text",
                           "title": "100*100",
-                          "payload": "100_in_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "150*150",
-                          "payload": "150_in_ott",
+                          "payload": "tf_100_in_ott",
                         },
                         {
                           "content_type": "text",
