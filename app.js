@@ -2111,7 +2111,7 @@ else if (received_message.payload === "dektwp") {
                       ]
       }
   }
-  else if (received_message.payload === "onef_mb_pobb") {
+  else if (received_message.payload === "onef_mb_dek") {
     response = {
                   "text": "Do you want what area?",
                     "quick_replies": [
