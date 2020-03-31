@@ -1819,24 +1819,113 @@ function handleMessage(sender_psid, received_message) {
 
 else if (received_message.payload === "ottwp") {
       response = {
-                  "text": "Please type 'onef' if you are looking for one floor. For double building, plz type 'double1'.For whatever, plz type 'whatever1':"
+                    "text":'Are you finding RC or Nancat? Plz type RC1 for RC & type Nancat1 for Nancat.',
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "RC",
+                          "payload": "rc_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Nancat",
+                          "payload": "nancat_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whatever_ott",
+                        }
+                      ]
 
       }
-    } 
-  else if (received_message.text == "onef" || received_message.text == "Onef" || received_message.text == "ONEF" ) {
+  } 
+  else if (received_message.payload === "rc_ott") {
     response = {
-      "text":'Are you finding RC or Nancat? Plz type RC1 for RC & type Nancat1 for Nancat. Or else, do you get along with whatever RC or Nancat, so type whatever2:'
-    }
+                  "text": "Please choose you want to buy the house in which",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "one floor",
+                          "payload": "onef_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "two floor",
+                          "payload": "twof_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "third floor",
+                          "payload": "thirdf_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "fourth floor",
+                          "payload": "fourthf_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whateverf_ott",
+                        }
+                      ]
+
+      }
   }
-  else if (received_message.text == "double1" || received_message.text == "Double1" || received_message.text == "DOUBLE1" || received_message.text == "double 1" || received_message.text == "Double 1" || received_message.text == "DOUBLE 1") {
+  else if (received_message.payload === "onef_ott") {
     response = {
-      "text":'Are you finding RC or Nancat? Plz type RC2 for RC & type Nancat2 for Nancat. Or else, do you get along with whatever RC or Nancat, so type whatever3:'
-    }
+                  "text": "Do you want what types of room?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "MB",
+                          "payload": "onef_mb_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "BD",
+                          "payload": "onef_bed_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "both",
+                          "payload": "both_tybed_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whatever_ty_ott",
+                        }
+                      ]
+      }
   }
-  else if (received_message.text == "whatever1" || received_message.text == "Whatever1" || received_message.text == "WHATEVER1" || received_message.text == "whatever 1" || received_message.text == "Whatever 1" || received_message.text == "WHATEVER 1") {
+  else if (received_message.payload === "onef_mb_ott") {
     response = {
-      "text":'Are you finding RC or Nancat? Plz type RC1 for RC & type Nancat1 for Nancat. Or else, do you get along with whatever RC or Nancat, so type whatever2:'
-    }
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "80*80",
+                          "payload": "80_in_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "100*100",
+                          "payload": "100_in_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "150*150",
+                          "payload": "150_in_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whatever_in_ott",
+                        }
+                      ]
+      }
   }
     else if (received_message.text == "RC1" || received_message.text == "rc1" || received_message.text == "Rc1" || received_message.text == "RC 1" || received_message.text == "rc 1" || received_message.text == "Rc 1") {
     response = {
