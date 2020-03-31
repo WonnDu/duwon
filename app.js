@@ -1841,6 +1841,7 @@ else if (received_message.payload === "ottwp") {
 
       }
   } 
+  // for RC to buy house in oattra
   else if (received_message.payload === "rc_ott") {
     response = {
                   "text": "Please choose you want to buy the house in which",
@@ -1857,13 +1858,8 @@ else if (received_message.payload === "ottwp") {
                         },
                         {
                           "content_type": "text",
-                          "title": "third floor",
-                          "payload": "thirdf_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "fourth floor",
-                          "payload": "fourthf_ott",
+                          "title": "other",
+                          "payload": "otherf_ott",
                         },
                         {
                           "content_type": "text",
@@ -1874,6 +1870,31 @@ else if (received_message.payload === "ottwp") {
 
       }
   }
+  // for RC to buy house (nancat) in oattra
+  else if (received_message.payload === "nancat_ott") {
+    response = {
+                  "text": "Please choose you want to buy the house in which",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "one floor",
+                          "payload": "onef_nan_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "two floor",
+                          "payload": "fourthf_nan_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whateverf_nan_ott",
+                        }
+                      ]
+
+      }
+  }
+  // one floor(RC) in oattra
   else if (received_message.payload === "onef_ott") {
     response = {
                   "text": "Do you want what types of room?",
@@ -1901,6 +1922,35 @@ else if (received_message.payload === "ottwp") {
                       ]
       }
   }
+   // two floor(RC) in oattra
+  else if (received_message.payload === "onef_ott") {
+    response = {
+                  "text": "Do you want what types of room?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "MB",
+                          "payload": "twof_mb_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "BD",
+                          "payload": "twof_bed_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "both",
+                          "payload": "twof_both_bed_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "twof_whatever_ott",
+                        }
+                      ]
+      }
+  }
+
   else if (received_message.payload === "onef_mb_ott") {
     response = {
                   "text": "Do you want what area?",
