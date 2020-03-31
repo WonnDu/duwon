@@ -1816,7 +1816,7 @@ function handleMessage(sender_psid, received_message) {
 
 
     
-
+// to buy house in oattra
 else if (received_message.payload === "ottwp") {
       response = {
                     "text":'Are you finding RC or Nancat? Plz type RC1 for RC & type Nancat1 for Nancat.',
@@ -1927,6 +1927,123 @@ else if (received_message.payload === "ottwp") {
                       ]
       }
   }
+
+// to buy house in pobba
+else if (received_message.payload === "potwp") {
+      response = {
+                    "text":'Are you finding RC or Nancat? Plz type RC1 for RC & type Nancat1 for Nancat.',
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "RC",
+                          "payload": "rc_pobb",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Nancat",
+                          "payload": "nancat_pobb",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whatever_pobb",
+                        }
+                      ]
+
+      }
+  } 
+  else if (received_message.payload === "rc_pobb") {
+    response = {
+                  "text": "Please choose you want to buy the house in which",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "one floor",
+                          "payload": "onef_pobb",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "two floor",
+                          "payload": "twof_pobb",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "third floor",
+                          "payload": "thirdf_pobb",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whateverf_ott",
+                        }
+                      ]
+
+      }
+  }
+  else if (received_message.payload === "onef_pobb") {
+    response = {
+                  "text": "Do you want what types of room?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "MB",
+                          "payload": "onef_mb_pobb",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "BD",
+                          "payload": "onef_bed_pobb",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "both",
+                          "payload": "both_tybed_pobb",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whatever_ty_pobb",
+                        }
+                      ]
+      }
+  }
+  else if (received_message.payload === "onef_mb_pobb") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "80_in_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "100_in_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whatever_in_ott",
+                        }
+                      ]
+      }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /****************************************************************/
     else if (received_message.text == "RC1" || received_message.text == "rc1" || received_message.text == "Rc1" || received_message.text == "RC 1" || received_message.text == "rc 1" || received_message.text == "Rc 1") {
     response = {
        "text": "How many master bed rooms do you want?",
@@ -2720,6 +2837,7 @@ function handlePostback(sender_psid, received_postback) {
 
       }
   }
+  // to buy house 
   else if (payload === 'tobu') {
     response = { "attachment": {
                   "type": "template",
