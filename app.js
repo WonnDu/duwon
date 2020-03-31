@@ -1923,7 +1923,7 @@ else if (received_message.payload === "ottwp") {
       }
   }
    // two floor(RC) in oattra
-  else if (received_message.payload === "onef_ott") {
+  else if (received_message.payload === "twof_ott") {
     response = {
                   "text": "Do you want what types of room?",
                     "quick_replies": [
