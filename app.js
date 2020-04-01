@@ -2430,28 +2430,28 @@ else if (received_message.payload === "otthi") {
       }
   }
   // 100*100 to buy land in Oattra
-    else if (payload === 'land100_ott') {
+    else if (received_message.payload === 'land100_ott') {
     response = {
-                  "text": "So sorry for my customer. There are not vacant land avaliable in Oattra to sell yet. Thanks for contacting us.",
+                  "text": "So sorry for my customer. There are not vacant land avaliable in Oattra to sell yet. Thanks for contacting us."
                     
       }
   }
     // 150*150 to buy land in Oattra
-    else if (payload === 'land150_ott') {
+    else if (received_message.payload === 'land150_ott') {
     response = {
                   "text": "So sorry for my customer. There are not vacant land avaliable in Oattra to sell yet. Thanks for contacting us.",
            
       }
   }
     // 80*80 to buy land in Oattra
-    else if (payload === 'land80_ott') {
+    else if (received_message.payload === 'land80_ott') {
     response = {
                   "text": "So sorry for my customer. There are not vacant land avaliable in Oattra to sell yet. Thanks for contacting us.",
                    
       }
   }
     // other area to buy land in pyinmana
-    else if (payload === 'land_other_ott') {
+    else if (received_message.payload === 'land_other_ott') {
     response = {
                   "text": "So sorry for my customer. There are not vacant land avaliable in Oattra to sell yet. Thanks for contacting us.",
       }
