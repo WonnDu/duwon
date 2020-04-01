@@ -2667,7 +2667,7 @@ else if (received_message.payload === "dektwp") {
                       ]
       }
   }
-    // below 3 bed one floor(RC) in Dek for area
+    // below 3 master bed one floor(RC) in Dek for area
   else if (received_message.payload === "bed3below_onef_rcdek") {
     response = {
                   "text": "Do you want what area?",
@@ -2675,22 +2675,22 @@ else if (received_message.payload === "dektwp") {
                          {
                           "content_type": "text",
                           "title": "40*60",
-                          "payload": "onlybed60_dek",
+                          "payload": "onlymbed60_dek",
                         },
                         {
                           "content_type": "text",
                           "title": "60*80",
-                          "payload": "onlybed100_dek",
+                          "payload": "onlymbed100_dek",
                         },
                         {
                           "content_type": "text",
                           "title": "whatever",
-                          "payload": "onlybed_whatever_dek",
+                          "payload": "onlymbed_whatever_dek",
                         }
                       ]
       }
   }
-    // above 3 bed one floor(RC) in Dek for area
+    // above 3 master bed one floor(RC) in Dek for area
   else if (received_message.payload === "bed3above_onef_rcdek") {
     response = {
                   "text": "Do you want what area?",
@@ -2698,22 +2698,22 @@ else if (received_message.payload === "dektwp") {
                          {
                           "content_type": "text",
                           "title": "40*60",
-                          "payload": "bedroom88_in_dek",
+                          "payload": "mbedroom88_in_dek",
                         },
                         {
                           "content_type": "text",
                           "title": "60*80",
-                          "payload": "bedroom11_in_dek",
+                          "payload": "mbedroom11_in_dek",
                         },
                         {
                           "content_type": "text",
                           "title": "whatever",
-                          "payload": "bedroom_wharea_in_dek",
+                          "payload": "mbedroom_wharea_in_dek",
                         }
                       ]
       }
   }
-// above whatever bed one floor(RC) in Dek for area
+// above whatever master bed one floor(RC) in Dek for area
   else if (received_message.payload === "whtever_onef_onlybed_dek") {
     response = {
                   "text": "Do you want what area?",
@@ -2721,21 +2721,95 @@ else if (received_message.payload === "dektwp") {
                          {
                           "content_type": "text",
                           "title": "40*60",
-                          "payload": "wht8_bedroom_in_dek",
+                          "payload": "wht8_mbedroom_in_dek",
                         },
                         {
                           "content_type": "text",
                           "title": "60*80",
-                          "payload": "wht100_bedroom_in_dek",
+                          "payload": "wht100_mbedroom_in_dek",
                         },
                         {
                           "content_type": "text",
                           "title": "whatever",
-                          "payload": "whtwht_bedroom_in_dek",
+                          "payload": "whtwht_mbedroom_in_dek",
                         }
                       ]
       }
   }
+
+  /**********************/
+
+   // one floor(RC) only bed rooms special in Dek for area
+  else if (received_message.payload === "onef_bed_dek") {
+    response = {
+                  "text": "Please choose the house in which the number of bed room has",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "below 3",
+                          "payload": "bed3below_onef_rdek1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "3 and above",
+                          "payload": "bed3above_onef_rdek1",
+                        },
+                       
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whtever_onef_onlybed_rdek1",
+                        }
+                      ]
+      }
+  }
+    // below 3 bed one floor(RC) in dek for area
+  else if (received_message.payload === "bed3below_onef_rdek1") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "onlybed60_dek1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "onlybed100_dek1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "onlybed_whatever_dek1",
+                        }
+                      ]
+      }
+  }
+    // above 3 bed one floor(RC) in Dek for area
+  else if (received_message.payload === "bed3above_onef_rdek1") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "bedroom88_in_dek1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "bedroom11_in_dek1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "bedroom_wharea_in_dek1",
+                        }
+                      ]
+      }
+  }
+  /************************/
   
 
 
