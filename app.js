@@ -1978,9 +1978,93 @@ else if (received_message.payload === "ottwp") {
                       ]
       }
   }
+/*****************/
+
+ // one floor(RC) only bed rooms special in oattra for area
+  else if (received_message.payload === "onef_bed_ott") {
+    response = {
+                  "text": "Please choose the house in which the number of bed room has",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "below 3",
+                          "payload": "bed3below_onef_rc_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "3 and above",
+                          "payload": "bed3above_onef_rc_ott",
+                        },
+                       
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whtever_onef_rc_onlybed_ott",
+                        }
+                      ]
+      }
+  }
+    // below 3 bed one floor(RC) in oattra for area
+  else if (received_message.payload === "bed3below_onef_rc_ott") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "80*80",
+                          "payload": "onlybed80_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "100*100",
+                          "payload": "onlybed100_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "150*150",
+                          "payload": "onlybed150_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "onlybed_whatever_ott",
+                        }
+                      ]
+      }
+  }
+    // above 3 bed one floor(RC) in oattra for area
+  else if (received_message.payload === "bed3above_onef_rc_ott") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "80*80",
+                          "payload": "bedroom88_in_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "100*100",
+                          "payload": "bedroom11_in_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "150*150",
+                          "payload": "bedroom150_in_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "bedroom_wharea_in_ott",
+                        }
+                      ]
+      }
+  }
 
 
 
+
+/**************************/
      // two floor(RC) in oattra for types of room
   else if (received_message.payload === "twof_ott") {
     response = {
