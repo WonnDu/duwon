@@ -1901,7 +1901,7 @@ else if (received_message.payload === "ottwp") {
       // one floor(RC) in oattra for area
   else if (received_message.payload === "onef_mb_ott") {
     response = {
-                  "text": "Do you want what area?",
+                  "text": "Please choose the house in which the number of master has",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -2158,29 +2158,102 @@ else if (received_message.payload === "potwp") {
                       ]
       }
   }
-  // to buy house in pobba for area
+// to buy house in pobba for numbers of mb room
   else if (received_message.payload === "onef_mb_pobb") {
+    response = {
+                  "text": "Please choose numbers of master bed rooms",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "below 3",
+                          "payload": "onef_b3_mb_pobb",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "3 and above",
+                          "payload": "onef_above_pobb",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whatever_mb3_pobb",
+                        }
+                      ]
+      }
+  }
+  // to buy house in pobba for area
+  else if (received_message.payload === "onef_b3_mb_pobb") {
     response = {
                   "text": "Do you want what area?",
                     "quick_replies": [
                          {
                           "content_type": "text",
                           "title": "40*60",
-                          "payload": "80_in_ott",
+                          "payload": "a46_in_pobb",
                         },
                         {
                           "content_type": "text",
                           "title": "60*80",
-                          "payload": "100_in_ott",
+                          "payload": "a68_in_pobb",
                         },
                         {
                           "content_type": "text",
                           "title": "whatever",
-                          "payload": "whatever_in_ott",
+                          "payload": "whatever_ain_pobb",
                         }
                       ]
       }
   }
+    // to buy house in pobba for area
+  else if (received_message.payload === "onef_above_pobb") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "pobb_area46",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "pobb_area68",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "pobb_area_whatever",
+                        }
+                      ]
+      }
+  }
+    // to buy house in pobba for area
+  else if (received_message.payload === "whatever_mb3_pobb") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "whatever_a46_pobba",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "whatever_a68_pobba",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whatever_aa0_pobba",
+                        }
+                      ]
+      }
+  }
+
+
+
+  /*******************/
     // to buy house (two floor) in pobba for types of room
   else if (received_message.payload === "twof_pobb") {
     response = {
