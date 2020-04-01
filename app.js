@@ -2282,8 +2282,31 @@ else if (received_message.payload === "potwp") {
                       ]
       }
   }
-    // to buy house (two floor) in pobba for area
+   // to buy house (two floor) numbers of master bed in pobba for area
   else if (received_message.payload === "twof_mb_pobb") {
+    response = {
+                  "text": "Please choose the numbers of master bed rooms that you want",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "below 3",
+                          "payload": "below3_twofmb_pobb",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "3 and above",
+                          "payload": "above3_twofmb_pobb",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whatever_twofmb_pobb",
+                        }
+                      ]
+      }
+  }
+    // to buy house (two floor) in pobba for area
+  else if (received_message.payload === "below3_twofmb_pobb") {
     response = {
                   "text": "Do you want what area?",
                     "quick_replies": [
@@ -2301,6 +2324,29 @@ else if (received_message.payload === "potwp") {
                           "content_type": "text",
                           "title": "whatever",
                           "payload": "whatever_twof_pobb",
+                        }
+                      ]
+      }
+  }
+   // to buy house (two floor) in pobba for area
+  else if (received_message.payload === "above3_twofmb_pobb") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "twof46_inpobb",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "twof68_inpobb",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whtever_twof_inpobb",
                         }
                       ]
       }
