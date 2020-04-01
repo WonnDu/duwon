@@ -1898,8 +1898,32 @@ else if (received_message.payload === "ottwp") {
                       ]
       }
   }
-    // one floor(RC) in oattra for area
+      // one floor(RC) in oattra for area
   else if (received_message.payload === "onef_mb_ott") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "below 3",
+                          "payload": "below3_onef_rc_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "3 and above",
+                          "payload": "above3_onef_rc_ott",
+                        },
+                       
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whtever_onef_rc_ott",
+                        }
+                      ]
+      }
+  }
+    // below 3 master bed one floor(RC) in oattra for area
+  else if (received_message.payload === "below3_onef_rc_ott") {
     response = {
                   "text": "Do you want what area?",
                     "quick_replies": [
@@ -1926,6 +1950,37 @@ else if (received_message.payload === "ottwp") {
                       ]
       }
   }
+    // above 3 master bed one floor(RC) in oattra for area
+  else if (received_message.payload === "above3_onef_rc_ott") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "80*80",
+                          "payload": "mb3_in_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "100*100",
+                          "payload": "mb3_in_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "150*150",
+                          "payload": "mb3_in_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "mb3_whatever_in_ott",
+                        }
+                      ]
+      }
+  }
+
+
+
      // two floor(RC) in oattra for types of room
   else if (received_message.payload === "twof_ott") {
     response = {
@@ -2401,7 +2456,7 @@ else if (received_message.payload === "dektwp") {
   */    
 /************************************/
 
-// buy land in oattra
+// to buy land in oattra
 else if (received_message.payload === "otthi") {
     response = {
                   "text": "Do you want what area?",
