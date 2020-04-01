@@ -1977,6 +1977,12 @@ else if (received_message.payload === "ottwp") {
                       ]
       }
   }
+   // two floor(RC) in oattra for aea
+  else if (received_message.payload === "twof_bed_ott") {
+    response = {
+                  "text": "There are not any property avaliable to sel for only bed rooms"
+      }
+  }
 
 
 
