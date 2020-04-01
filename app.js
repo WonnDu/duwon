@@ -107,16 +107,6 @@ let userEntered_land_tosel = {};
 
 
 
-
-// to buy house in Ottara
-tobuy_hou_rc_onef_both = {
-  master_bed_rc:false,
-  bed_rc:false,
-}
-
-
-
-
 // Sets server port and logs message on success
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
 
@@ -1993,7 +1983,7 @@ else if (received_message.payload === "ottwp") {
                   "text": "There are not any property avaliable to sell for only bed rooms"
       }
   }
-  // other floor execpt one and two floor in ottara.
+  // other floor execpt one and two floor in oattra.
   else if (received_message.payload === "otherf_ott") {
     response = {
                   "text": "There are not other floor had in any property avaliable to sell in Ottara."
