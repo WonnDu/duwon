@@ -2398,8 +2398,134 @@ else if (received_message.payload === "dektwp") {
                   "text": "So sorry, there are no other lands not avaliable",
       }
   }    
+/************************************/
 
+// buy land in oattra
+else if (received_message.payload === "otthi") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "100*100",
+                          "payload": "land100_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "150*150",
+                          "payload": "land150_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "80*80",
+                          "payload": "land80_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "other",
+                          "payload": "land_other_ott",
+                        }
+                      ]
+      }
+  }
+  // 100*100 to buy land in Oattra
+    else if (payload === 'land100_ott') {
+    response = {
+                  "text": "So sorry for my customer. There are not vacant land avaliable in Oattra to sell yet. Thanks for contacting us.",
+                    
+      }
+  }
+    // 150*150 to buy land in Oattra
+    else if (payload === 'land150_ott') {
+    response = {
+                  "text": "So sorry for my customer. There are not vacant land avaliable in Oattra to sell yet. Thanks for contacting us.",
+           
+      }
+  }
+    // 80*80 to buy land in Oattra
+    else if (payload === 'land80_ott') {
+    response = {
+                  "text": "So sorry for my customer. There are not vacant land avaliable in Oattra to sell yet. Thanks for contacting us.",
+                   
+      }
+  }
+    // other area to buy land in pyinmana
+    else if (payload === 'land_other_ott') {
+    response = {
+                  "text": "So sorry for my customer. There are not vacant land avaliable in Oattra to sell yet. Thanks for contacting us.",
+      }
+  }    
 
+/*****************************************************/
+
+// buy land in Pobba
+  else if (received_message.payload === "pobthi") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "land40_pobb",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*60",
+                          "payload": "land60_pobb",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "land80_pobb",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "other",
+                          "payload": "other_land_pobb",
+                        }
+                      ]
+      }
+  }
+  // 40*60 to buy land in Pobba
+    else if (payload === 'land40_pobb') {
+    response = {
+                  "text": "Please choose the estimated amount that you are avaliable to buy land:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "below 300",
+                          "payload": "below3_pyin",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "below 600",
+                          "payload": "below6_pyin",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "below 1000",
+                          "payload": "below1000_pyin",
+                        }                      ]
+      }
+  }
+    // 60*60 to buy land in pobba
+    else if (payload === 'land60_pobb') {
+    response = {
+                  "text": "So sorry for my customer. There are not vacant land avaliable in Oattra to sell yet. Thanks for contacting us.",
+      }
+  }
+    // 60*80 to buy land in Pobba
+    else if (payload === 'land_a3_pyin') {
+    response = {
+                  "text": "So sorry for my customer. There are not vacant land avaliable in Oattra to sell yet. Thanks for contacting us.",
+      }
+  }
+    // other area to buy land in pyinmana
+    else if (payload === 'other_a4_pyin') {
+    response = {
+                  "text": "So sorry, there are no other lands not avaliable",
+      }
+  }    
 
 
 
