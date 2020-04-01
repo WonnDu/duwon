@@ -2488,7 +2488,7 @@ else if (received_message.payload === "otthi") {
       }
   }
   // 40*60 to buy land in Pobba
-    else if (payload === 'land40_pobb') {
+    else if (received_message.payload === 'land40_pobb') {
     response = {
                   "text": "Please choose the estimated amount that you are avaliable to buy land:",
                     "quick_replies": [
@@ -2510,19 +2510,19 @@ else if (received_message.payload === "otthi") {
       }
   }
     // 60*60 to buy land in pobba
-    else if (payload === 'land60_pobb') {
+    else if (received_message.payload === 'land60_pobb') {
     response = {
                   "text": "So sorry for my customer. There are not vacant land avaliable in Oattra to sell yet. Thanks for contacting us.",
       }
   }
     // 60*80 to buy land in Pobba
-    else if (payload === 'land_a3_pyin') {
+    else if (received_message.payload === 'land_a3_pyin') {
     response = {
                   "text": "So sorry for my customer. There are not vacant land avaliable in Oattra to sell yet. Thanks for contacting us.",
       }
   }
     // other area to buy land in pyinmana
-    else if (payload === 'other_a4_pyin') {
+    else if (received_message.payload === 'other_a4_pyin') {
     response = {
                   "text": "So sorry, there are no other lands not avaliable",
       }
