@@ -2288,6 +2288,116 @@ else if (received_message.payload === "dektwp") {
   }
 
 
+/***********************************************************************************************************************************/
+
+// buy land in pyinmana
+  else if (received_message.payload === "pyi5") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "land_a1_pyin",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*72",
+                          "payload": "land_a2_pyin",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "land_a3_pyin",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "other",
+                          "payload": "other_a4_pyin",
+                        }
+                      ]
+      }
+  }
+  // 40*60 to buy land in pyinmana
+    else if (payload === 'land_a1_pyin') {
+    response = {
+                  "text": "Please choose the estimated amount that you are avaliable to buy land:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "below 300",
+                          "payload": "below3_pyin",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "below 600",
+                          "payload": "below6_pyin",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "below 1000",
+                          "payload": "below1000_pyin",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "above 1000",
+                          "payload": "above1000_pyin",
+                        }
+                      ]
+      }
+  }
+    // 60*72 to buy land in pyinmana
+    else if (payload === 'land_a2_pyin') {
+    response = {
+                  "text": "Please choose the estimated amount that you are avaliable to buy land:",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "below 600",
+                          "payload": "b67_p6_pyin",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "below 1000",
+                          "payload": "b67_p1_pyin",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "above 1000",
+                          "payload": "b67_ab1_pyin",
+                        }
+                      ]
+      }
+  }
+    // 60*80 to buy land in pyinmana
+    else if (payload === 'land_a3_pyin') {
+    response = {
+                  "text": "Please choose the estimated amount that you are avaliable to buy land:",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "below 600",
+                          "payload": "b67_p6_pyin",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "below 1000",
+                          "payload": "b67_p1_pyin",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "above 1000",
+                          "payload": "b67_ab1_pyin",
+                        }
+                      ]
+      }
+  }
+    // other area to buy land in pyinmana
+    else if (payload === 'other_a4_pyin') {
+    response = {
+                  "text": "So sorry, there are no other lands not avaliable",
+      }
+  }    
 
 
 
@@ -2298,7 +2408,7 @@ else if (received_message.payload === "dektwp") {
 
 
 
-  /****************************************************************/
+  /************************************************************************************************************************************/
     else if (received_message.text == "RC1" || received_message.text == "rc1" || received_message.text == "Rc1" || received_message.text == "RC 1" || received_message.text == "rc 1" || received_message.text == "Rc 1") {
     response = {
        "text": "How many master bed rooms do you want?",
@@ -3171,64 +3281,14 @@ function handlePostback(sender_psid, received_postback) {
       }
   }
 
-  else if (payload === 'pyintwp') {
-    response = { "attachment": {
-                  "type": "template",
-                  "payload": {
-                    "template_type": "button",
-                    "text": "Please choose the area of house in which you want to buy",
-                    "buttons": [
-                        {
-                          "type": "postback",
-                          "title": "40-60 ft",
-                          "payload": "46ft",
-                        },
-                         {
-                          "type": "postback",
-                          "title": "60-80 ft",
-                          "payload": "68ft",
-                        },
-                        {
-                          "type": "postback",
-                          "title": "other",
-                          "payload": "othft",
-                        }
-                      ]
-                  }
-                }
-              }
-  } 
-  else if (payload === '46ft') {
-    response = { "attachment": {
-                  "type": "template",
-                  "payload": {
-                    "template_type": "button",
-                    "text": "Please choose the amount that you are avaliable to buy a house:",
-                    "buttons": [
-                        {
-                          "type": "postback",
-                          "title": "under 500",
-                          "payload": "un500",
-                        },
-                         {
-                          "type": "postback",
-                          "title": "from 500 to 1000",
-                          "payload": "f5t1",
-                        },
-                        {
-                          "type": "postback",
-                          "title": "above 1000",
-                          "payload": "ab10",
-                        }
-                      ]
-                  }
-                }
-              }
-  } 
+
+/*
   else if (payload === 'othft') {
     response = { "text": "Please write the area of  property that you want to buy!" }
   } 
-
+  */
+/*
+// above 1000
   else if (payload === 'ab10') {
     response = {
     "attachment":{
@@ -3263,7 +3323,7 @@ function handlePostback(sender_psid, received_postback) {
     }
   }
   }
-
+*/
 else if (payload === 'inter') {
   response ={
     "text" : "Please leave your contact number.", 
@@ -3304,7 +3364,7 @@ else if (payload === 'innnter') {
                   "type": "template",
                   "payload": {
                     "template_type": "button",
-                    "text": "Please choose the place in which you want to buy land:",
+                    "text": "Please choose the place in which you want to buy land. If you want to buy land in any township, please choose Any Township",
                     "buttons": [
                         {
                           "type": "postback",
@@ -3315,11 +3375,16 @@ else if (payload === 'innnter') {
                           "type": "postback",
                           "title": "Pyinmana Township",
                           "payload": "pyi5",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "Any Township",
+                          "payload": "anytwp_buy_land",
                         }
                               ]
                             }
                               }
-                }
+    }
   }
       else if (payload === "5fthri") {
       response = {
@@ -3354,33 +3419,7 @@ else if (payload === 'innnter') {
 
       }
     }
-  else if (payload === 'pyi5') {
-    response = { "attachment": {
-                  "type": "template",
-                  "payload": {
-                    "template_type": "button",
-                    "text": "Please choose the area of land that you want to buy:",
-                    "buttons": [
-                        {
-                          "type": "postback",
-                          "title": "40-60 ft",
-                          "payload": "46ft",
-                        },
-                         {
-                          "type": "postback",
-                          "title": "60-80 ft",
-                          "payload": "68ft",
-                        },
-                        {
-                          "type": "postback",
-                          "title": "other",
-                          "payload": "othft",
-                        }
-                      ]
-                  }
-                }
-              }
-  } 
+
     else if (payload === 'servch') {
     let response1  = { "text": "Please chose one of the service charges that you want to know." };
     let response2 = { "attachment":{
