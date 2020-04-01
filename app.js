@@ -107,6 +107,16 @@ let userEntered_land_tosel = {};
 
 
 
+
+// to buy house in Ottara
+tobuy_hou_rc_onef_both = {
+  master_bed_rc:false,
+  bed_rc:false,
+}
+
+
+
+
 // Sets server port and logs message on success
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
 
@@ -1842,7 +1852,7 @@ else if (received_message.payload === "ottwp") {
       }
   } 
   // for RC to buy house in oattra
-  else if (received_message.payload === "rc_ott") {
+  else if (received_message.payload === "rc_ott" || received_message.payload === "whatever_ott") {
     response = {
                   "text": "Please choose you want to buy the house in which",
                     "quick_replies": [
@@ -1980,16 +1990,22 @@ else if (received_message.payload === "ottwp") {
    // two floor(RC) in oattra for aea
   else if (received_message.payload === "twof_bed_ott") {
     response = {
-                  "text": "There are not any property avaliable to sel for only bed rooms"
+                  "text": "There are not any property avaliable to sell for only bed rooms"
       }
   }
-
+  // other floor execpt one and two floor in ottara.
+  else if (received_message.payload === "otherf_ott") {
+    response = {
+                  "text": "There are not other floor had in any property avaliable to sell in Ottara."
+      }
+  }
 
 
   // for RC to buy house (nancat) in oattra
   else if (received_message.payload === "nancat_ott") {
     response = {
-                  "text": "Please choose you want to buy the house in which",
+                    "text": "There are not any property avaliable to sell nancat in Oattra."
+/*                  "text": "Please choose you want to buy the house in which",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -2006,7 +2022,7 @@ else if (received_message.payload === "ottwp") {
                           "title": "whatever",
                           "payload": "whateverf_nan_ott",
                         }
-                      ]
+                      ]     */
 
       }
   }
