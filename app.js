@@ -2289,9 +2289,9 @@ else if (received_message.payload === "dektwp") {
 
 
 /***********************************************************************************************************************************/
-
+/*
 // buy land in pyinmana
-  else if (received_message.payload == "pyi5") {
+  else if (received_message.payload === "pyi5") {
     response = {
                   "text": "Do you want what area?",
                     "quick_replies": [
@@ -2397,7 +2397,8 @@ else if (received_message.payload === "dektwp") {
     response = {
                   "text": "So sorry, there are no other lands not avaliable",
       }
-  }    
+  }
+  */    
 /************************************/
 
 // buy land in oattra
