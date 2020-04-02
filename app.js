@@ -3078,6 +3078,274 @@ else if (received_message.payload === "zaytwp") {
       }
   }
 
+  /***********************************************************************/
+    // to buy house in Zabu
+else if (received_message.payload === "zabtwp") {
+      response = {
+                    "text":'Are you finding RC or Nancat?',
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "RC",
+                          "payload": "rc_zabu1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Nancat",
+                          "payload": "nancat_zabu1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whtrc_zabu1",
+                        }
+                      ]
+
+      }
+  } 
+  else if (received_message.payload === "rc_zabu1") {
+    response = {
+                  "text": "Please choose you want to buy the house in which",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "one floor",
+                          "payload": "onef_zabuthiri11",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "two floor",
+                          "payload": "twof_zabuthiri11",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whateverf_zabuthiri11",
+                        }
+                      ]
+
+      }
+  }
+  // one floor RC in zayathiri
+  else if (received_message.payload === "onef_zabuthiri11") {
+    response = {
+                  "text": "Do you want what types of room?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "MB",
+                          "payload": "onef_mb_zabu22",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "BD",
+                          "payload": "onef_bed_zabu22",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "both",
+                          "payload": "both_tybed_zabu22",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whatever_ty_zabu22",
+                        }
+                      ]
+      }
+  }
+  /************/
+   // one floor(RC) only master bed rooms special in Zabu for area
+  else if (received_message.payload === "onef_mb_zabu22") {
+    response = {
+                  "text": "Please choose the house in which the number of master bed room has",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "below 3",
+                          "payload": "bed3below_onef_rczabu",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "3 and above",
+                          "payload": "bed3above_onef_rczabu",
+                        },
+                       
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whtever_onef_onlybed_zabu",
+                        }
+                      ]
+      }
+  }
+    // below 3 master bed one floor(RC) in Zabu for area
+  else if (received_message.payload === "bed3below_onef_rczabu") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "onlymbed60_zabu7",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "onlymbed100_zabu7",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "other",
+                          "payload": "onlyother_zabu7",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "onlymbed_whatever_zabu7",
+                        }
+                      ]
+      }
+  }
+    // above 3 master bed one floor(RC) in Zabu for area
+  else if (received_message.payload === "bed3above_onef_rczabu") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "mbedroom88_in_zabuu7",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "mbedroom11_in_zabuu7",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "other",
+                          "payload": "otherarea_zabuu7",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "mbedroom_wharea_in_zabu7",
+                        }
+                      ]
+      }
+  }
+// above whatever master bed one floor(RC) in Zabu for area
+  else if (received_message.payload === "whtever_onef_onlybed_zabu") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "wht8_mbedroom_in_zabu",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "wht100_mbedroom_in_zabu",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "other",
+                          "payload": "otherbed_area_zabu",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whtwht_mbedroom_in_zabu",
+                        }
+                      ]
+      }
+  }
+  /***************************/
+
+    // one floor(RC) only bed rooms special in Zabu for area
+  else if (received_message.payload === "onef_bed_zabu22") {
+    response = {
+                  "text": "Please choose the house in which the number of bed room has",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "below 3",
+                          "payload": "bed3below_onef_rzabuthi1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "3 and above",
+                          "payload": "bed3above_onef_rzabuthi1",
+                        },
+                       
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whtever_onef_onlybed_rzabuthi1",
+                        }
+                      ]
+      }
+  }
+    // below 3 bed one floor(RC) in Zabu for area
+  else if (received_message.payload === "bed3below_onef_rzabuthi1") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "onlybed60_zabuthi11",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "onlybed100_zabuthi11",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "other",
+                          "payload": "onlybedother_zabuthi11",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "onlybed_whatever_zabuthi11",
+                        }
+                      ]
+      }
+  }
+    // above 3 bed one floor(RC) in Dek for area
+  else if (received_message.payload === "bed3above_onef_rzabuthi1") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "bedroom88_in_zabuthi2",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "bedroom11_in_zabuthi2",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "other",
+                          "payload": "bedother_zabuthi2",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "bedroom_wharea_in_zabuthi2",
+                        }
+                      ]
+      }
+  }
+
 
 /***********************************************************************************************************************************/
 /*
