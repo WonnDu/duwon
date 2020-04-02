@@ -2809,8 +2809,274 @@ else if (received_message.payload === "dektwp") {
                       ]
       }
   }
-  /************************/
-  
+  /**************************************************/
+
+  // to buy house in Zayathiri
+else if (received_message.payload === "zaytwp") {
+      response = {
+                    "text":'Are you finding RC or Nancat?',
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "RC",
+                          "payload": "rc_zaya1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Nancat",
+                          "payload": "nancat_zaya1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whtrc_zaya1",
+                        }
+                      ]
+
+      }
+  } 
+  else if (received_message.payload === "rc_zaya1") {
+    response = {
+                  "text": "Please choose you want to buy the house in which",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "one floor",
+                          "payload": "onef_zayathi",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "two floor",
+                          "payload": "twof_zayathi",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whateverf_zayathi",
+                        }
+                      ]
+
+      }
+  }
+  // one floor RC in zayathiri
+  else if (received_message.payload === "onef_zayathi") {
+    response = {
+                  "text": "Do you want what types of room?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "MB",
+                          "payload": "onef_mb_zayathi",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "BD",
+                          "payload": "onef_bed_zayathi",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "both",
+                          "payload": "both_tybed_zayathi",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whatever_ty_zayathi",
+                        }
+                      ]
+      }
+  }
+  /************/
+   // one floor(RC) only master bed rooms special in Zayathiri for area
+  else if (received_message.payload === "onef_mb_zayathi") {
+    response = {
+                  "text": "Please choose the house in which the number of master bed room has",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "below 3",
+                          "payload": "bed3below_onef_rczayathi",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "3 and above",
+                          "payload": "bed3above_onef_rczayathi",
+                        },
+                       
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whtever_onef_onlybed_zayathi",
+                        }
+                      ]
+      }
+  }
+    // below 3 master bed one floor(RC) in Zayathi for area
+  else if (received_message.payload === "bed3below_onef_rczayathi") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "onlymbed60_zayathi",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "onlymbed100_zayathi",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "other",
+                          "payload": "onlyother_zayathi",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "onlymbed_whatever_zayathi",
+                        }
+                      ]
+      }
+  }
+    // above 3 master bed one floor(RC) in Zayathiri for area
+  else if (received_message.payload === "bed3above_onef_rczayathi") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "mbedroom88_in_zayathi",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "mbedroom11_in_zayathi",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "other",
+                          "payload": "otherarea_zayathi",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "mbedroom_wharea_in_zaya",
+                        }
+                      ]
+      }
+  }
+// above whatever master bed one floor(RC) in Zayathi for area
+  else if (received_message.payload === "whtever_onef_onlybed_zayathi") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "wht8_mbedroom_in_zaya",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "wht100_mbedroom_in_zaya",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "other",
+                          "payload": "otherbed_area_zayathi",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whtwht_mbedroom_in_zayathiri",
+                        }
+                      ]
+      }
+  }
+  /***************************/
+
+    // one floor(RC) only bed rooms special in Zayathiri for area
+  else if (received_message.payload === "onef_bed_zayathi") {
+    response = {
+                  "text": "Please choose the house in which the number of bed room has",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "below 3",
+                          "payload": "bed3below_onef_rzayathi1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "3 and above",
+                          "payload": "bed3above_onef_rzayathi1",
+                        },
+                       
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whtever_onef_onlybed_rzayathi1",
+                        }
+                      ]
+      }
+  }
+    // below 3 bed one floor(RC) in Zayathiri for area
+  else if (received_message.payload === "bed3below_onef_rzayathi1") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "onlybed60_zayathi11",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "onlybed100_zayathi11",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "other",
+                          "payload": "onlybedother_zayathi11",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "onlybed_whatever_zatathi11",
+                        }
+                      ]
+      }
+  }
+    // above 3 bed one floor(RC) in Dek for area
+  else if (received_message.payload === "bed3above_onef_rzayathi1") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "bedroom88_in_zayathi2",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "bedroom11_in_zayathi2",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "other",
+                          "payload": "bedother_zayathi2",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "bedroom_wharea_in_zayathi2",
+                        }
+                      ]
+      }
+  }
 
 
 /***********************************************************************************************************************************/
