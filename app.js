@@ -2295,7 +2295,7 @@ else if (received_message.payload === "potwp") {
                       ]
       }
   }
-  // to buy house in pobba for area
+  // to buy house in pobba for area (below 3 master bed room)
   else if (received_message.payload === "onef_b3_mb_pobb") {
     response = {
                   "text": "Do you want what area?",
@@ -2323,7 +2323,7 @@ else if (received_message.payload === "potwp") {
                       ]
       }
   }
-   // 40*60 to buy house  in Pobba
+   // 40*60 to buy house  in Pobba MB
     else if (received_message.payload === 'a46_in_pobb') {
     response = {
                   "text": "Please choose the estimated amount that you are avaliable to buy land:",
@@ -2345,10 +2345,11 @@ else if (received_message.payload === "potwp") {
                         }                      ]
       }
   }
-  // 60*80 to buy house  in Pobba
+  // 60*80 to buy house  in Pobba 
+   // to buy house in pobba for area (below 3 master bed room)
     else if (received_message.payload === 'a68_in_pobb') {
     response = {
-                  "text": "Please choose the estimated amount that you are avaliable to buy land:",
+                  "text": "Please choose the estimated amount that you are avaliable to buy house:",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -2364,9 +2365,48 @@ else if (received_message.payload === "potwp") {
                           "content_type": "text",
                           "title": "above 1000",
                           "payload": "above1000pobb_eamount",
-                        }                      ]
+                        }                      
+                        ]
       }
   }
+  // 60*80 RC 1280L MB2 BD3
+    else if (received_message.payload === 'above1000pobb_eamount') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 1280 lakhs, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91316346_147213236824476_3978394636820414464_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_ohc=ASt6PtBhi_4AX8VLy-D&_nc_ht=scontent.fmdl2-2.fna&oh=fd354e2b8cf7dfe8047ae01af9b8a24d&oe=5EACA982",
+            "subtitle":"2 MB, 3 BD, 1 store",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/ajax/sharer/?s=2&appid=2305272732&id=131104738435326&p[0]=131104738435326&sharer_type=all_modes&av=105772414301892",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/105772414301892/posts/147213463491120/?d=n",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
 
   ////////////////////////
     else if (received_message.payload === 'below6_eamount') {
@@ -2441,10 +2481,71 @@ else if (received_message.payload === "potwp") {
     }
   }
 }
+// 40*60 RC (below 500) MB special in pobba
+    else if (received_message.payload === 'below3_eamount') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 450 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91675776_147131590165974_160064454640271360_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_ohc=mYztapSdCD8AX9xaZ4v&_nc_ht=scontent.fmdl2-1.fna&oh=e4cdadb154d0b2a81a3ae9d4c55076c8&oe=5EAC2E42",
+            "subtitle":"1 MB, 2 BD",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/ajax/sharer/?s=2&appid=2305272732&id=131104738435326&p[0]=131104738435326&sharer_type=all_modes&av=105772414301892",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          },
+           {
+            "title":"RC, 395 lakhs, 40*60 ft",
+            "image_url":"",
+            "subtitle":"1 MB, 2 BD",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91865315_147214446824355_8124736960364281856_n.jpg?_nc_cat=105&_nc_sid=110474&_nc_ohc=Tir6pOvB-kQAX_aoNJE&_nc_ht=scontent.fmdl2-2.fna&oh=ebfb3f0c985b127203e81d00248a1efe&oe=5EAADE56",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
 
 
 /////////////////////////////////////
     // to buy house in pobba for area
+    // to buy house in pobba for numbers of mb room (3 and above mb)
   else if (received_message.payload === "onef_above_pobb") {
     response = {
                   "text": "Do you want what area?",
@@ -2715,7 +2816,7 @@ else if (received_message.payload === "potwp") {
                         }                      ]
       }
   } */
-  // to buy house (two floor) in pobba for area
+  // to buy house (two floor 60*80) in pobba for area
    else if (received_message.payload === 'twof_60_in_pobb') {
     response = {
     "attachment":{
