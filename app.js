@@ -2404,7 +2404,7 @@ else if (received_message.payload === "potwp") {
           },
           {
             "title":"RC, 395 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91675776_147131590165974_160064454640271360_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_ohc=mYztapSdCD8AX9xaZ4v&_nc_ht=scontent.fmdl2-1.fna&oh=e4cdadb154d0b2a81a3ae9d4c55076c8&oe=5EAC2E42",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91865315_147214446824355_8124736960364281856_n.jpg?_nc_cat=105&_nc_sid=110474&_nc_ohc=Tir6pOvB-kQAX_aoNJE&_nc_ht=scontent.fmdl2-2.fna&oh=6954df42f6ffda76a3aa6e642c4379b9&oe=5EAED2D6",
             "subtitle":"1 MB, 2 BD",
             "default_action": {
               "type": "web_url",
@@ -2414,7 +2414,7 @@ else if (received_message.payload === "potwp") {
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/105772414301892/posts/147214593491007/?d=n",
+                "url":"https://www.facebook.com/105772414301892/photos/pcb.147214593491007/147214443491022/?type=3&__tn__=HH-R&eid=ARATPqkMAieZD273Dv6v20uQX3YDtd_WBSPRk2adWvYfjgfiRgp5SEQ81kv_TMf2l_belNCYmy_43f5B&__xts__%5B0%5D=68.ARD17hMbPUPk_9xnmgYscCPKzmfIBZyzL7CZvdRVY9UnrMw8b6VmsEIsQKnKiRCF0mdEBohwM6Uqugvv0WXGgkgABgimugud5ekJ6zDwq9Tol93MnM6NX2QULtzQ_917D65Ns-N89rxJHaYK0RMjK6J5I9CwKq_Pm_bxf-yJGh_CSaBZsvxYpmBbgokV69RFJQCCFsa78KfiwztgoY2JfHH9m1J7Io40RSYL5C9_oFWfDcKWfvtXWwIMWIU73lVdh-2o323kBnCibRDZG5jWee0rDGnG-MCPQt7bPcfnAuOQu884-_56-8ooPOCOaqbKdWO5ABAtWsyTPhlpFr3abgE",
                 "title":"More Information"
               },
               {
@@ -2430,8 +2430,6 @@ else if (received_message.payload === "potwp") {
     }
   }
 }
-
-
   // to buy pobba, RC, one floor, Master bed, below3, 60*80, above 1000
     else if (received_message.payload === 'above1000pobb_eamount') {
     response = {
@@ -2470,6 +2468,46 @@ else if (received_message.payload === "potwp") {
   }
 }
 
+
+/**************************************************************************/
+
+// to buy pobba, RC, two floor, Master bed, below3, 60*80, above 1000
+    else if (received_message.payload === '') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 1280 lakhs, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91316346_147213236824476_3978394636820414464_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_ohc=ASt6PtBhi_4AX8VLy-D&_nc_ht=scontent.fmdl2-2.fna&oh=fd354e2b8cf7dfe8047ae01af9b8a24d&oe=5EACA982",
+            "subtitle":"2 MB, 3 BD, 1 store",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/ajax/sharer/?s=2&appid=2305272732&id=131104738435326&p[0]=131104738435326&sharer_type=all_modes&av=105772414301892",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/105772414301892/posts/147213463491120/?d=n",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
 
 
 
