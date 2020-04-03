@@ -3336,7 +3336,7 @@ else if (received_message.payload === "dektwp") {
                       ]
       }
   }
-    // below 3 master bed one floor(RC) in Dek for area
+    // below 3 master bed, one floor(RC), below 3, in Dek for area
   else if (received_message.payload === "bed3below_onef_rcdek") {
     response = {
                   "text": "Do you want what area?",
@@ -3374,6 +3374,49 @@ else if (received_message.payload === "dektwp") {
                       ]
       }
   }
+
+
+// to buy Dekkhina, RC, one floor, Master bed, below 3, 80*80
+    else if (received_message.payload === 'onlymbed88in_dek') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 600 lakhs, 80*80 ft",
+            "image_url":"",
+            "subtitle":"2MB, 2BD, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+/***************/
+
     // above 3 master bed one floor(RC) in Dek for area
   else if (received_message.payload === "bed3above_onef_rcdek") {
     response = {
