@@ -2512,7 +2512,7 @@ else if (received_message.payload === "potwp") {
           },
            {
             "title":"RC, 770 lakhs, 60*80 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91316346_147213236824476_3978394636820414464_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_ohc=ASt6PtBhi_4AX8VLy-D&_nc_ht=scontent.fmdl2-2.fna&oh=fd354e2b8cf7dfe8047ae01af9b8a24d&oe=5EACA982",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91898132_147216956824104_3112675563777556480_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_ohc=vr9owKmvVswAX_8cHdt&_nc_ht=scontent.fmdl2-2.fna&oh=6e736df4d066ea559c06ce64f431c895&oe=5EAE7175",
             "subtitle":"2 MB, 1 BD",
             "default_action": {
               "type": "web_url",
