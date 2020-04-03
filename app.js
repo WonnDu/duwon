@@ -2325,7 +2325,7 @@ else if (received_message.payload === "potwp") {
   }
 
   ////////////////////////
-    else if (payload === 'a46_in_pobb') {
+    else if (received_message.payload === 'a46_in_pobb') {
     response = {
     "attachment":{
       "type":"template",
@@ -2355,7 +2355,7 @@ else if (received_message.payload === "potwp") {
               }              
             ]      
           }
-          
+
         ]
       }
     }
