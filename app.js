@@ -2369,6 +2369,23 @@ else if (received_message.payload === "potwp") {
                         ]
       }
   }
+    else if (received_message.payload === 'a88in_in_pobb') {
+    response = {
+                  "text": "Please choose the estimated amount that you are avaliable to buy house:",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "below 1000",
+                          "payload": "below80in80pobb_eamount",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "above 1000",
+                          "payload": "above80inab11pobb_eamount",
+                        }                      
+                        ]
+      }
+  }
 
 
   // to buy pobba, RC, one floor, master bed,  below 3mb , 40*60, below 500lakh
@@ -2468,6 +2485,28 @@ else if (received_message.payload === "potwp") {
               }              
             ]      
           },
+            {
+            "title":"RC, 430 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91770684_147154156830384_6078026130030329856_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_ohc=2f6TRttbpyEAX8-RFMY&_nc_ht=scontent.fmdl2-2.fna&oh=c09be7e8ad15787d5a83388d8b705f9e&oe=5EAC5F2C",
+            "subtitle":"1 MB, 2 BD",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
 
 
         ]
@@ -2563,6 +2602,46 @@ else if (received_message.payload === "potwp") {
               {
                 "type":"web_url",
                 "url":"https://www.facebook.com/105772414301892/posts/147213463491120/?d=n",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+
+  // to buy pobba, RC, one floor, Master bed, below3, 80*80, below 1000
+    else if (received_message.payload === 'below80in80pobb_eamount') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 950 lakhs, 80*80 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91769772_147216390157494_6095292285107306496_n.jpg?_nc_cat=105&_nc_sid=110474&_nc_ohc=XQEOGFput-MAX-G4v2n&_nc_ht=scontent.fmdl2-2.fna&oh=84749e6c49babdc150c29fa47b39430c&oe=5EAC1E28",
+            "subtitle":"1 MB, 3 BD",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
                 "title":"More Information"
               },
               {
