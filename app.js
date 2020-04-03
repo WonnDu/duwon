@@ -1898,7 +1898,7 @@ else if (received_message.payload === "ottwp") {
                       ]
       }
   }
-      // one floor(RC) in oattra for area
+      // one floor(RC) in oattra for area (master bed room)
   else if (received_message.payload === "onef_mb_ott") {
     response = {
                   "text": "Please choose the house in which the number of master has",
@@ -1958,27 +1958,87 @@ else if (received_message.payload === "ottwp") {
                          {
                           "content_type": "text",
                           "title": "80*80",
-                          "payload": "mb3_in_ott",
+                          "payload": "mb80ott_in_ott",
                         },
                         {
                           "content_type": "text",
                           "title": "100*100",
-                          "payload": "mb3_in_ott",
+                          "payload": "mb100ott_in_ott",
                         },
                         {
                           "content_type": "text",
                           "title": "150*150",
-                          "payload": "mb3_in_ott",
+                          "payload": "mb150ott_in_ott",
                         },
                         {
                           "content_type": "text",
                           "title": "whatever",
-                          "payload": "mb3_whatever_in_ott",
+                          "payload": "mbwhatott_whatever_in_ott",
                         }
                       ]
       }
   }
+  // above 3 master bed one floor(RC) 150*150 in oattra for area
+    else if (received_message.payload === 'mb150ott_in_ott') {
+    response = {
+                  "text": "Please choose the estimated amount that you are avaliable to buy house:",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "below 3500",
+                          "payload": "below35in150ott_eamount",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "below 5000",
+                          "payload": "below150inab5000ott_eamount",
+                        }                      
+                        ]
+      }
+  }
 /*****************/
+
+
+// to buy Ottara, RC, one floor, Master bed, 3 and above, 150*150, below 5000
+    else if (received_message.payload === 'below150inab5000ott_eamount') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 1280 lakhs, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91833243_147277623484704_3080627226484408320_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_ohc=W5PYefA9-YkAX9eg2-T&_nc_ht=scontent.fmdl2-2.fna&oh=a09a09a42fad4069c440b234cbb21b02&oe=5EAD6D39",
+            "subtitle":"3 MB",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+/****************************/
 
  // one floor(RC) only bed rooms special in oattra for area
   else if (received_message.payload === "onef_bed_ott") {
