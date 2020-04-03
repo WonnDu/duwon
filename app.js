@@ -2345,7 +2345,7 @@ else if (received_message.payload === "potwp") {
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/105772414301892/photos/pcb.147131953499271/147131733499293/?type=3&__tn__=HH-R&eid=ARCyFP8q3nd229Kn-j5L6L8gD68bQ42h8r7lRWTL7U3NfMpzCyfDM003TaUYUB9HXW7fXyvncbUO6duX&__xts__%5B0%5D=68.ARALtogGubTOa8dK9vBhRW9QUAQg9rZxcMc_1fNu7UMzUkZSg1bCI3IMgvDFhVPWsRqFDPCKn3k6PdhhMSx8StnR91kayjdbmH0mZAsh2x7OfeoRbyjv_yZlbJ2SW9bJcj2ViV8WgKky4roOiyGoOA9ZkCpyPEtjkaV8fk9g1An75UDKwaeo74vC8OymFKScLzq8r7BUQhc2M3r0kcfapPVzpp78ulNmeM9Y6r13SvRT2RsicmAiBXPCkrnm4nklKk-9ZFn3JQ00Yf14oGcrtwV8EloFlSEr50xcBOoyhPLGfo6ZNmOgGYG7P9n2GGI8fDjrVUMLmKhdni3cd2ABZTA",
+                "url":"https://www.facebook.com/105772414301892/posts/147131953499271/?d=n",
                 "title":"More Information"
               },
               {
