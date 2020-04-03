@@ -3437,7 +3437,12 @@ else if (received_message.payload === "dektwp") {
                           "title": "60*80",
                           "payload": "mbedroom11_in_dek",
                         },
-                           {
+                        {
+                          "content_type": "text",
+                          "title": "80*80",
+                          "payload": "onlymbed88housein_dek",
+                        },
+                        {
                           "content_type": "text",
                           "title": "100*100",
                           "payload": "onlymbed111in_dek",
@@ -3450,6 +3455,50 @@ else if (received_message.payload === "dektwp") {
                       ]
       }
   }
+
+
+// to buy Dekkhina, RC, one floor, Master bed, 3 and above, 80*80
+    else if (received_message.payload === 'onlymbed88housein_dek') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 1850 lakhs, 80*80 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92326542_147294886816311_3968306432951975936_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_ohc=41jDmczkfrcAX_iy7jQ&_nc_ht=scontent.fmdl2-2.fna&oh=291cdfa59dbdd0676f030af743e9963e&oe=5EABA553",
+            "subtitle":"3MB, 1BD, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+
+
+
 // above whatever master bed one floor(RC) in Dek for area
   else if (received_message.payload === "whtever_onef_onlybed_dek") {
     response = {
