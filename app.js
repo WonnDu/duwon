@@ -2236,13 +2236,13 @@ else if (received_message.payload === "ottwp") {
                     "quick_replies": [
                         {
                           "content_type": "text",
-                          "title": "below 3500",
-                          "payload": "below35in150ott_eamount",
+                          "title": "below 2500",
+                          "payload": "below25in100ott_amount",
                         },
                         {
                           "content_type": "text",
-                          "title": "below 5000",
-                          "payload": "below150inab5000ott_eamount",
+                          "title": "below 4000",
+                          "payload": "below100inab4400ott_amount",
                         }                      
                         ]
       }
@@ -2251,7 +2251,7 @@ else if (received_message.payload === "ottwp") {
 
 
 // to buy Ottara, RC, two floor, Master bed, below 3, 100*100, below 5000
-    else if (received_message.payload === 'below150inab5000ott_eamount') {
+    else if (received_message.payload === 'below25in100ott_amount') {
     response = {
     "attachment":{
       "type":"template",
@@ -2260,9 +2260,9 @@ else if (received_message.payload === "ottwp") {
         "elements": [ 
         
            {
-            "title":"RC, 3990 lakhs, 150*150 ft",
+            "title":"RC, 1500 lakhs, 100*100 ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91637408_147281323484334_8201076709810765824_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_ohc=cgGC3-SZELMAX8N3TMe&_nc_ht=scontent.fmdl2-1.fna&oh=47e015063744af4cf9c1094d26b674dc&oe=5EAB6EC1",
-            "subtitle":"3 MB, Negotiable",
+            "subtitle":"2 floor,2 MB, Negotiable",
             "default_action": {
               "type": "web_url",
               "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
