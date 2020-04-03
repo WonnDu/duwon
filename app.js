@@ -2369,7 +2369,70 @@ else if (received_message.payload === "potwp") {
                         ]
       }
   }
-  // 60*80 RC 1280L MB2 BD3
+
+
+  // to buy pobba, RC, one floor, master bed,  below 3mb , 40*60, below 500lakh
+    else if (received_message.payload === 'below3_eamount') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 450 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91675776_147131590165974_160064454640271360_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_ohc=mYztapSdCD8AX9xaZ4v&_nc_ht=scontent.fmdl2-1.fna&oh=e4cdadb154d0b2a81a3ae9d4c55076c8&oe=5EAC2E42",
+            "subtitle":"1 MB, 2 BD",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/ajax/sharer/?s=2&appid=2305272732&id=131104738435326&p[0]=131104738435326&sharer_type=all_modes&av=105772414301892",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          },
+          {
+            "title":"RC, 395 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91675776_147131590165974_160064454640271360_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_ohc=mYztapSdCD8AX9xaZ4v&_nc_ht=scontent.fmdl2-1.fna&oh=e4cdadb154d0b2a81a3ae9d4c55076c8&oe=5EAC2E42",
+            "subtitle":"1 MB, 2 BD",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91865315_147214446824355_8124736960364281856_n.jpg?_nc_cat=105&_nc_sid=110474&_nc_ohc=Tir6pOvB-kQAX_aoNJE&_nc_ht=scontent.fmdl2-2.fna&oh=ebfb3f0c985b127203e81d00248a1efe&oe=5EAADE56",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/105772414301892/posts/147214593491007/?d=n",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+  // to buy pobba, RC, one floor, Master bed, below3, 60*80, above 1000
     else if (received_message.payload === 'above1000pobb_eamount') {
     response = {
     "attachment":{
@@ -2408,138 +2471,9 @@ else if (received_message.payload === "potwp") {
 }
 
 
-  ////////////////////////
-    else if (received_message.payload === 'below6_eamount') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"RC, 450 lakhs",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91675776_147131590165974_160064454640271360_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_ohc=mYztapSdCD8AX8Sbq0i&_nc_ht=scontent.fmdl2-1.fna&oh=bc8f980d4f753398d41c62f9b04b6a46&oe=5EAC2E42",
-            "subtitle":"1 MB, 2 BD",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/ajax/sharer/?s=2&appid=2305272732&id=131104738435326&p[0]=131104738435326&sharer_type=all_modes&av=105772414301892",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaae"
-              }              
-            ]      
-          }
 
-        ]
-      }
-    }
-  }
-}
-    else if (received_message.payload === 'above1000pobb_eamount') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"RC, 450 lakhs",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91651360_147147640164369_136116533041561600_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_ohc=8e73XNQSGTYAX9FI1tT&_nc_ht=scontent.fmdl2-2.fna&oh=53928c3da6fa829fbe84c7258137658a&oe=5EAC2CB3",
-            "subtitle":"1 MB, 2 BD",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/ajax/sharer/?s=2&appid=2305272732&id=131104738435326&p[0]=131104738435326&sharer_type=all_modes&av=105772414301892",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaae"
-              }              
-            ]      
-          }
 
-        ]
-      }
-    }
-  }
-}
-// 40*60 RC (below 500) MB special in pobba
-    else if (received_message.payload === 'below3_eamount') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"RC, 450 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91675776_147131590165974_160064454640271360_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_ohc=mYztapSdCD8AX9xaZ4v&_nc_ht=scontent.fmdl2-1.fna&oh=e4cdadb154d0b2a81a3ae9d4c55076c8&oe=5EAC2E42",
-            "subtitle":"1 MB, 2 BD",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/ajax/sharer/?s=2&appid=2305272732&id=131104738435326&p[0]=131104738435326&sharer_type=all_modes&av=105772414301892",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaae"
-              }              
-            ]      
-          },
-           {
-            "title":"RC, 395 lakhs, 40*60 ft",
-            "image_url":"",
-            "subtitle":"1 MB, 2 BD",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91865315_147214446824355_8124736960364281856_n.jpg?_nc_cat=105&_nc_sid=110474&_nc_ohc=Tir6pOvB-kQAX_aoNJE&_nc_ht=scontent.fmdl2-2.fna&oh=ebfb3f0c985b127203e81d00248a1efe&oe=5EAADE56",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaae"
-              }              
-            ]      
-          }
 
-        ]
-      }
-    }
-  }
-}
 
 
 
@@ -2816,43 +2750,7 @@ else if (received_message.payload === "potwp") {
                         }                      ]
       }
   } */
-  // to buy house (two floor 60*80) in pobba for area
-   else if (received_message.payload === 'twof_60_in_pobb') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"RC, 1550 lakhs",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91770684_147154156830384_6078026130030329856_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_ohc=0CjXbhSeoSoAX8RvOqr&_nc_ht=scontent.fmdl2-2.fna&oh=2d35fd220e18ac739a97ef214f49ed90&oe=5EAC5F2C",
-            "subtitle":"2 MB",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/ajax/sharer/?s=2&appid=2305272732&id=131104738435326&p[0]=131104738435326&sharer_type=all_modes&av=105772414301892",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaae"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
+  
    // to buy house (two floor) in pobba for area
   else if (received_message.payload === "above3_twofmb_pobb") {
     response = {
