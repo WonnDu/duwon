@@ -2426,7 +2426,7 @@ else if (received_message.payload === "potwp") {
           },
              {
             "title":"RC, 475 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91865315_147214446824355_8124736960364281856_n.jpg?_nc_cat=105&_nc_sid=110474&_nc_ohc=Tir6pOvB-kQAX_aoNJE&_nc_ht=scontent.fmdl2-2.fna&oh=6954df42f6ffda76a3aa6e642c4379b9&oe=5EAED2D6",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91342483_147219730157160_151432519563083776_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_ohc=gF746s26wlYAX92PpSB&_nc_ht=scontent.fmdl2-1.fna&oh=fad4c3a5ed76597e79a396d4cf376818&oe=5EAE3CBC",
             "subtitle":"1 MB, 2 BD",
             "default_action": {
               "type": "web_url",
@@ -2448,7 +2448,7 @@ else if (received_message.payload === "potwp") {
           },
            {
             "title":"RC, 430 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91865315_147214446824355_8124736960364281856_n.jpg?_nc_cat=105&_nc_sid=110474&_nc_ohc=Tir6pOvB-kQAX_aoNJE&_nc_ht=scontent.fmdl2-2.fna&oh=6954df42f6ffda76a3aa6e642c4379b9&oe=5EAED2D6",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91539419_147218910157242_6622245799793262592_n.jpg?_nc_cat=105&_nc_sid=110474&_nc_ohc=-xZXNe4SM18AX_CEt4N&_nc_ht=scontent.fmdl2-2.fna&oh=e838288daec6e3d81507975e95edd0af&oe=5EADCBEC",
             "subtitle":"1 MB, 2 BD",
             "default_action": {
               "type": "web_url",
