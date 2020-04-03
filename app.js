@@ -2323,6 +2323,43 @@ else if (received_message.payload === "potwp") {
                       ]
       }
   }
+
+  ////////////////////////
+    else if (payload === 'movehou') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 450 lakhs",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91675776_147131590165974_160064454640271360_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_ohc=mYztapSdCD8AX8Sbq0i&_nc_ht=scontent.fmdl2-1.fna&oh=bc8f980d4f753398d41c62f9b04b6a46&oe=5EAC2E42",
+            "subtitle":"1 MB, 2 BD",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/ajax/sharer/?s=2&appid=2305272732&id=131104738435326&p[0]=131104738435326&sharer_type=all_modes&av=105772414301892",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/105772414301892/photos/pcb.147131953499271/147131733499293/?type=3&__tn__=HH-R&eid=ARCyFP8q3nd229Kn-j5L6L8gD68bQ42h8r7lRWTL7U3NfMpzCyfDM003TaUYUB9HXW7fXyvncbUO6duX&__xts__%5B0%5D=68.ARALtogGubTOa8dK9vBhRW9QUAQg9rZxcMc_1fNu7UMzUkZSg1bCI3IMgvDFhVPWsRqFDPCKn3k6PdhhMSx8StnR91kayjdbmH0mZAsh2x7OfeoRbyjv_yZlbJ2SW9bJcj2ViV8WgKky4roOiyGoOA9ZkCpyPEtjkaV8fk9g1An75UDKwaeo74vC8OymFKScLzq8r7BUQhc2M3r0kcfapPVzpp78ulNmeM9Y6r13SvRT2RsicmAiBXPCkrnm4nklKk-9ZFn3JQ00Yf14oGcrtwV8EloFlSEr50xcBOoyhPLGfo6ZNmOgGYG7P9n2GGI8fDjrVUMLmKhdni3cd2ABZTA",
+                "title":"More Information"
+              },{
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+        ]
+      }
+    }
+  }
+}
+/////////////////////////////////////
     // to buy house in pobba for area
   else if (received_message.payload === "onef_above_pobb") {
     response = {
