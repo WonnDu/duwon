@@ -1950,6 +1950,69 @@ else if (received_message.payload === "ottwp") {
                       ]
       }
   }
+
+  // below 3 master bed one floor(RC) 100*100 in oattra for area
+    else if (received_message.payload === '100_in_ott') {
+    response = {
+                  "text": "Please choose the estimated amount that you are avaliable to buy house:",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "below 2500",
+                          "payload": "below25in100ott_inamount",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "above 2500 ",
+                          "payload": "above250inab100ott_inamount",
+                        }                      
+                        ]
+      }
+  }
+
+  // to buy Ottara, RC, one floor, Master bed, below 3, 100*100, below 2500
+    else if (received_message.payload === 'below25in100ott_inamount') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 2000 lakhs, 100*100 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91384194_147284593484007_750540617238446080_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_ohc=tA2_J9-tGzMAX9KHy5a&_nc_ht=scontent.fmdl2-2.fna&oh=cdbdf29491d5b305d830d218345ae731&oe=5EAE5EDA",
+            "subtitle":"2 MB, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+
+
+
+  /**************/
     // above 3 master bed one floor(RC) in oattra for area
   else if (received_message.payload === "above3_onef_rc_ott") {
     response = {
