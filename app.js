@@ -2490,11 +2490,11 @@ else if (received_message.payload === "potwp") {
         
            {
             "title":"RC, 800 lakhs, 60*80 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91316346_147213236824476_3978394636820414464_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_ohc=ASt6PtBhi_4AX8VLy-D&_nc_ht=scontent.fmdl2-2.fna&oh=fd354e2b8cf7dfe8047ae01af9b8a24d&oe=5EACA982",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91101082_147218403490626_5572328932478287872_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_ohc=tA9NcmZy4nIAX-EXnB9&_nc_ht=scontent.fmdl2-2.fna&oh=a9562ddfe9f4d08c09ce4ec3f650482d&oe=5EAD8BC3",
             "subtitle":"1 MB, 2 BD",
             "default_action": {
               "type": "web_url",
-              "url": "https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91101082_147218403490626_5572328932478287872_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_ohc=tA9NcmZy4nIAX-EXnB9&_nc_ht=scontent.fmdl2-2.fna&oh=a9562ddfe9f4d08c09ce4ec3f650482d&oe=5EAD8BC3",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
               "webview_height_ratio": "tall",
             },
             "buttons":[
@@ -2531,7 +2531,8 @@ else if (received_message.payload === "potwp") {
                 "payload":"aaae"
               }              
             ]      
-          }
+          },
+         
 
         ]
       }
