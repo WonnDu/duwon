@@ -4355,8 +4355,84 @@ else if (received_message.payload === "otthi") {
   }    
 
 
+// to buy land in Dekkhia
+else if (received_message.payload === "dekthi") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "onlya60land_dek",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*60",
+                          "payload": "onlya660land_dek",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "onlya100land_dek",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "80*80",
+                          "payload": "onlya80landin_dek",
+                        },
+                           {
+                          "content_type": "text",
+                          "title": "100*100",
+                          "payload": "onlyaland100in_dek",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "onlylanda1a1_whatever_dek",
+                        }
+                      ]
+      }
+  }
 
+  
 
+// to buy land in Dekkhina,  40*60
+    else if (received_message.payload === 'onlya60land_dek') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 330 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92226071_147293826816417_8174851167054987264_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_ohc=fbXONITsfysAX8FaIub&_nc_ht=scontent.fmdl2-2.fna&oh=1dcfa48591e4cf30c82693332935dcf2&oe=5EAD2932",
+            "subtitle":"Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
 
 
 
