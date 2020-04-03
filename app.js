@@ -2312,6 +2312,11 @@ else if (received_message.payload === "potwp") {
                         },
                         {
                           "content_type": "text",
+                          "title": "80*80",
+                          "payload": "a88in_in_pobb",
+                        },
+                        {
+                          "content_type": "text",
                           "title": "whatever",
                           "payload": "whatever_ain_pobb",
                         }
@@ -2335,6 +2340,11 @@ else if (received_message.payload === "potwp") {
                         },
                         {
                           "content_type": "text",
+                          "title": "80*80",
+                          "payload": "aaa88in_in_pobb",
+                        },
+                        {
+                          "content_type": "text",
                           "title": "whatever",
                           "payload": "pobb_area_whatever",
                         }
@@ -2355,6 +2365,11 @@ else if (received_message.payload === "potwp") {
                           "content_type": "text",
                           "title": "60*80",
                           "payload": "whatever_a68_pobba",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "80*80",
+                          "payload": "a88in_in_inpobb",
                         },
                         {
                           "content_type": "text",
@@ -2408,6 +2423,11 @@ else if (received_message.payload === "potwp") {
                         },
                         {
                           "content_type": "text",
+                          "title": "80*80",
+                          "payload": "a88in_in_pobbin",
+                        },
+                        {
+                          "content_type": "text",
                           "title": "whatever",
                           "payload": "onlybed_whatever_pobb",
                         }
@@ -2431,6 +2451,11 @@ else if (received_message.payload === "potwp") {
                         },
                         {
                           "content_type": "text",
+                          "title": "80*80",
+                          "payload": "abin88in_in_pobb",
+                        },
+                        {
+                          "content_type": "text",
                           "title": "whatever",
                           "payload": "bedroom_wharea_in_pobb",
                         }
@@ -2451,6 +2476,11 @@ else if (received_message.payload === "potwp") {
                           "content_type": "text",
                           "title": "60*80",
                           "payload": "wht100_bedroom_in_pobb",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "80*80",
+                          "payload": "bba88in_in_pobb",
                         },
                         {
                           "content_type": "text",
@@ -2531,6 +2561,11 @@ else if (received_message.payload === "potwp") {
                         },
                         {
                           "content_type": "text",
+                          "title": "80*80",
+                          "payload": "ccin88in_in_pobb",
+                        },
+                        {
+                          "content_type": "text",
                           "title": "whatever",
                           "payload": "whatever_twof_pobb",
                         }
@@ -2551,6 +2586,11 @@ else if (received_message.payload === "potwp") {
                           "content_type": "text",
                           "title": "60*80",
                           "payload": "twof68_inpobb",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "80*80",
+                          "payload": "ddin88in_in_pobb",
                         },
                         {
                           "content_type": "text",
@@ -2679,8 +2719,23 @@ else if (received_message.payload === "dektwp") {
                         },
                         {
                           "content_type": "text",
+                          "title": "60*60",
+                          "payload": "onlymbed660_dek",
+                        },
+                        {
+                          "content_type": "text",
                           "title": "60*80",
                           "payload": "onlymbed100_dek",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "80*80",
+                          "payload": "onlymbed88in_dek",
+                        },
+                           {
+                          "content_type": "text",
+                          "title": "100*100",
+                          "payload": "onlymbed100in_dek",
                         },
                         {
                           "content_type": "text",
@@ -2700,10 +2755,20 @@ else if (received_message.payload === "dektwp") {
                           "title": "40*60",
                           "payload": "mbedroom88_in_dek",
                         },
+                           {
+                          "content_type": "text",
+                          "title": "60*60",
+                          "payload": "in66onlymbed_dek",
+                        },
                         {
                           "content_type": "text",
                           "title": "60*80",
                           "payload": "mbedroom11_in_dek",
+                        },
+                           {
+                          "content_type": "text",
+                          "title": "100*100",
+                          "payload": "onlymbed111in_dek",
                         },
                         {
                           "content_type": "text",
@@ -2725,8 +2790,18 @@ else if (received_message.payload === "dektwp") {
                         },
                         {
                           "content_type": "text",
+                          "title": "60*60",
+                          "payload": "onlymbed60_inindek",
+                        },
+                        {
+                          "content_type": "text",
                           "title": "60*80",
                           "payload": "wht100_mbedroom_in_dek",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "100*100",
+                          "payload": "onlymbed100inin_dek",
                         },
                         {
                           "content_type": "text",
@@ -2775,8 +2850,23 @@ else if (received_message.payload === "dektwp") {
                         },
                         {
                           "content_type": "text",
+                          "title": "60*60",
+                          "payload": "onlymbedin60in_dek",
+                        },
+                        {
+                          "content_type": "text",
                           "title": "60*80",
                           "payload": "onlybed100_dek1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "80*80",
+                          "payload": "onlymbed80_indekin",
+                        },
+                       {
+                          "content_type": "text",
+                          "title": "100*100",
+                          "payload": "onlymbed100inin_indek",
                         },
                         {
                           "content_type": "text",
@@ -2796,10 +2886,25 @@ else if (received_message.payload === "dektwp") {
                           "title": "40*60",
                           "payload": "bedroom88_in_dek1",
                         },
+                       {
+                          "content_type": "text",
+                          "title": "60*60",
+                          "payload": "onlymbed60_in60dek",
+                        },
                         {
                           "content_type": "text",
                           "title": "60*80",
                           "payload": "bedroom11_in_dek1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "80*80",
+                          "payload": "onlyinmbed80in_dek",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "100*100",
+                          "payload": "onlymbed100ina_dek",
                         },
                         {
                           "content_type": "text",
@@ -3028,13 +3133,8 @@ else if (received_message.payload === "zaytwp") {
                     "quick_replies": [
                          {
                           "content_type": "text",
-                          "title": "40*60",
+                          "title": "60*60",
                           "payload": "onlybed60_zayathi11",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*80",
-                          "payload": "onlybed100_zayathi11",
                         },
                         {
                           "content_type": "text",
@@ -3049,20 +3149,15 @@ else if (received_message.payload === "zaytwp") {
                       ]
       }
   }
-    // above 3 bed one floor(RC) in Dek for area
+    // above 3 bed one floor(RC) in Zaya for area
   else if (received_message.payload === "bed3above_onef_rzayathi1") {
     response = {
                   "text": "Do you want what area?",
                     "quick_replies": [
                          {
                           "content_type": "text",
-                          "title": "40*60",
+                          "title": "60*60",
                           "payload": "bedroom88_in_zayathi2",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*80",
-                          "payload": "bedroom11_in_zayathi2",
                         },
                         {
                           "content_type": "text",
