@@ -2441,42 +2441,7 @@ else if (received_message.payload === "potwp") {
     }
   }
 }
- else if (received_message.payload === 'below3_eamount') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"RC, 450 lakhs",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91770684_147154156830384_6078026130030329856_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_ohc=0CjXbhSeoSoAX8RvOqr&_nc_ht=scontent.fmdl2-2.fna&oh=2d35fd220e18ac739a97ef214f49ed90&oe=5EAC5F2C",
-            "subtitle":"1 MB, 2 BD",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/ajax/sharer/?s=2&appid=2305272732&id=131104738435326&p[0]=131104738435326&sharer_type=all_modes&av=105772414301892",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaae"
-              }              
-            ]      
-          }
 
-        ]
-      }
-    }
-  }
-}
 
 /////////////////////////////////////
     // to buy house in pobba for area
@@ -2728,6 +2693,65 @@ else if (received_message.payload === "potwp") {
                       ]
       }
   }
+ /*   // 60*80 to buy house  in Pobba
+    else if (received_message.payload === 'twof_60_in_pobb') {
+    response = {
+                  "text": "Please choose the estimated amount that you are avaliable to buy land:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "below 1000",
+                          "payload": "below500pobb_eamount",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "below 1000",
+                          "payload": "below100pobb_eamount",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "above 1000",
+                          "payload": "above1000pobb_eamount",
+                        }                      ]
+      }
+  } */
+  // to buy house (two floor) in pobba for area
+   else if (received_message.payload === 'twof_60_in_pobb') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 1550 lakhs",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91770684_147154156830384_6078026130030329856_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_ohc=0CjXbhSeoSoAX8RvOqr&_nc_ht=scontent.fmdl2-2.fna&oh=2d35fd220e18ac739a97ef214f49ed90&oe=5EAC5F2C",
+            "subtitle":"2 MB",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/ajax/sharer/?s=2&appid=2305272732&id=131104738435326&p[0]=131104738435326&sharer_type=all_modes&av=105772414301892",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
    // to buy house (two floor) in pobba for area
   else if (received_message.payload === "above3_twofmb_pobb") {
     response = {
