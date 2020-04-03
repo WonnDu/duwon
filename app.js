@@ -2009,9 +2009,9 @@ else if (received_message.payload === "ottwp") {
         "elements": [ 
         
            {
-            "title":"RC, 1280 lakhs, 60*80 ft",
+            "title":"RC, 3990 lakhs, 150*150 ft",
             "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91833243_147277623484704_3080627226484408320_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_ohc=W5PYefA9-YkAX9eg2-T&_nc_ht=scontent.fmdl2-2.fna&oh=a09a09a42fad4069c440b234cbb21b02&oe=5EAD6D39",
-            "subtitle":"3 MB",
+            "subtitle":"3 MB, Negotiable",
             "default_action": {
               "type": "web_url",
               "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
@@ -2180,8 +2180,32 @@ else if (received_message.payload === "ottwp") {
                       ]
       }
   }
-    // two floor(RC) in oattra for aea
+    // two floor(RC) in oattra for area (master bed room)
   else if (received_message.payload === "twof_mb_ott") {
+    response = {
+                  "text": "Please choose the house in which the number of master has",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "below 3",
+                          "payload": "below3_twoof_rc_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "3 and above",
+                          "payload": "above3_twoof_rc_ott",
+                        },
+                       
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whtever_twoof_rc_ott",
+                        }
+                      ]
+      }
+  }
+    // two floor(RC) in oattra for below 3 master bed room
+  else if (received_message.payload === "below3_twoof_rc_ott") {
     response = {
                   "text": "Do you want what area?",
                     "quick_replies": [
@@ -2203,6 +2227,73 @@ else if (received_message.payload === "ottwp") {
                       ]
       }
   }
+
+
+  // above 3 master bed two floor(RC) 100*100 in oattra for area
+    else if (received_message.payload === 'tf_100_in_ott') {
+    response = {
+                  "text": "Please choose the estimated amount that you are avaliable to buy house:",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "below 3500",
+                          "payload": "below35in150ott_eamount",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "below 5000",
+                          "payload": "below150inab5000ott_eamount",
+                        }                      
+                        ]
+      }
+  }
+/*****************/
+
+
+// to buy Ottara, RC, two floor, Master bed, below 3, 100*100, below 5000
+    else if (received_message.payload === 'below150inab5000ott_eamount') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 3990 lakhs, 150*150 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91637408_147281323484334_8201076709810765824_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_ohc=cgGC3-SZELMAX8N3TMe&_nc_ht=scontent.fmdl2-1.fna&oh=47e015063744af4cf9c1094d26b674dc&oe=5EAB6EC1",
+            "subtitle":"3 MB, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+/****************************/
+
+
+
+
    // two floor(RC) in oattra for aea
   else if (received_message.payload === "twof_bed_ott") {
     response = {
