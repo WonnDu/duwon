@@ -5284,6 +5284,117 @@ else if (received_message.payload === "dekthi") {
 
 
 /***********************************************************************/
+
+    // to rent a house in Dekkhina
+else if (received_message.payload === "tenanzabu") {
+      response = {
+                    "text":'Are you finding RC or Nancat?',
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "RC",
+                          "payload": "rc_dekki1_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Other type",
+                          "payload": "ottype_dekki1_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whtrc_dekki1_tenant",
+                        }
+                      ]
+
+      }
+  }
+    // to rent a house (RC), in Dekkhina, what floor
+  else if (received_message.payload === "rc_dekki1_tenant") {
+    response = {
+                  "text": "Please choose you want to buy the house in which",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "one floor",
+                          "payload": "onef_dekkii11_tenant1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "two floor",
+                          "payload": "twof_dekkii11_tenant1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": " other",
+                          "payload": "otherrrf_dekkii11_tenant1",
+                        }
+                      ]
+
+      }
+  }
+      //  to rent (house)RC, onefloor, ask number of master bed in Dekkhina
+  else if (received_message.payload === "onef_dekkii11_tenant1") {
+    response = {
+                  "text": "Please choose the house in which the number of master bed room has",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "below 3",
+                          "payload": "numofmbed3below_mbra9_dekki_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "3 and above",
+                          "payload": "numofmbed3above_mbraa9_dekki_tenant",
+                        }
+                      ]
+      }
+  }
+ //  to rent (house)RC, one floor, master bed, below 3, in Zabuthiri
+    else if (received_message.payload === 'numofmbed3below_mbra9_zabu_tenant' ) {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 3lakhs for 1month, 80*80ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91363682_147508756794924_5266172075797643264_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_eui2=AeHA6H63Lfk2n8MdoV6fvKAHQ1QLK-ETu2dDVAsr4RO7Z14RGYjL4TwfIEHEKw_aAoQ-pNJa1aobx9jRKA8XqEKL&_nc_ohc=7l9dplxRgIoAX8NLXI7&_nc_ht=scontent.fmdl2-2.fna&oh=e25ce0cd1af1007ac90094e640d1f32d&oe=5EADAF47",
+            "subtitle":"Mbr-(1), Br-(2)",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+
+
+
+
+/**************************************************************************/
     // to rent a house in Zabuthiri
 else if (received_message.payload === "tenanzabu") {
       response = {
