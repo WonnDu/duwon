@@ -5036,9 +5036,67 @@ else if (received_message.payload === "dekthi") {
                       ]
       }
   }
+     else if (received_message.payload === 'onlya660land_dek') {
+    response = {
+                  "text": "Please choose the estimated amount that you are avaliable to buy land:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "below 700",
+                          "payload": "below700land_dekkii99",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "above 700",
+                          "payload": "above700land_dekkii99",
+                        }                      ]
+      }
+  }
+
+// to buy land in Dekkhina,  below 700
+    else if (received_message.payload === 'below700land_dekkii99') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 140 lakhs, 60*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92024437_147513583461108_2759257849044402176_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_eui2=AeHsaWoVZrB9sdXELQGiSs7qKJVwS5P0JbUolXBLk_QltZsw_9qwTqbLVptop7MPD00Mhg0NyEUxJrQU7bzr_INm&_nc_ohc=0mmVGHV0_zsAX9bny9y&_nc_ht=scontent.fmdl2-1.fna&oh=6d6aedd2cb3e3174481663448ef86d58&oe=5EAFB9E5",
+            "subtitle":"Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+
+
 
   
-
+/************************************************************************/
   // area (to buy land in Zabuthiri )
   else if (received_message.payload === "zabuthi") {
     response = {
