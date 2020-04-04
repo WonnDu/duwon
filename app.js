@@ -4021,8 +4021,8 @@ else if (received_message.payload === "zabtwp") {
                         },
                         {
                           "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whateverf_zabuthiri11",
+                          "title": "other",
+                          "payload": "otherff1_zabuthiri11",
                         }
                       ]
 
@@ -4182,8 +4182,8 @@ else if (received_message.payload === "zabtwp") {
   }
   /***************************/
 
-  // to buy house in Zabbuthiri, one floor(RC), master bed, below 3, 60*60 area, no estimated price yet
-    else if (received_message.payload === 'mbedroom60hou6_in_zabuu7' ) {
+  // to buy house in Zabbuthiri, three floor(RC), master bed, 60*60 area, no estimated price yet
+    else if (received_message.payload === 'otherff1_zabuthiri11' ) {
     response = {
     "attachment":{
       "type":"template",
