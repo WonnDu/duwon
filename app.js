@@ -1855,11 +1855,6 @@ else if (received_message.payload === "ottwp") {
                           "content_type": "text",
                           "title": "other",
                           "payload": "otherf_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whateverf_ott",
                         }
                       ]
 
@@ -2061,11 +2056,6 @@ else if (received_message.payload === "ottwp") {
                           "content_type": "text",
                           "title": "150*150",
                           "payload": "mb150ott_in_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "mbwhatott_whatever_in_ott",
                         }
                       ]
       }
@@ -2288,38 +2278,11 @@ else if (received_message.payload === "ottwp") {
 
 
 /**************************/
-     // two floor(RC) in oattra for types of room
+
+    // two floor(RC) in oattra for area (number of master bed room)
   else if (received_message.payload === "twof_ott") {
     response = {
-                  "text": "Do you want what types of room?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "MB",
-                          "payload": "twof_mb_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "BD",
-                          "payload": "twof_bed_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "both",
-                          "payload": "twof_both_bed_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "twof_whatever_ott",
-                        }
-                      ]
-      }
-  }
-    // two floor(RC) in oattra for area (master bed room)
-  else if (received_message.payload === "twof_mb_ott") {
-    response = {
-                  "text": "Please choose the house in which the number of master has",
+                  "text": "Please choose the number of Mbr included:",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -2430,12 +2393,7 @@ else if (received_message.payload === "ottwp") {
 
 
 
-   // two floor(RC) in oattra for aea
-  else if (received_message.payload === "twof_bed_ott") {
-    response = {
-                  "text": "There are not any property avaliable to sell for only bed rooms"
-      }
-  }
+ 
   // other floor execpt one and two floor in oattra.
   else if (received_message.payload === "otherf_ott") {
     response = {
