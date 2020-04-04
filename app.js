@@ -5352,7 +5352,7 @@ else if (received_message.payload === "tenandek") {
       }
   }
  //  to rent (house)RC, one floor, master bed, below 3, in Zabuthiri
-    else if (received_message.payload === 'numofmbed3below_mbra9_zabu_tenant' ) {
+    else if (received_message.payload === 'numofmbed3below_mbra9_dekki_tenant' ) {
     response = {
     "attachment":{
       "type":"template",
