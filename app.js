@@ -3918,7 +3918,8 @@ else if (received_message.payload === "zabtwp") {
                       ]
 
       }
-  } 
+  }
+  // to buy a house in Zabuthiri, RC  
   else if (received_message.payload === "rc_zabu1") {
     response = {
                   "text": "Please choose you want to buy the house in which",
@@ -3942,7 +3943,7 @@ else if (received_message.payload === "zabtwp") {
 
       }
   }
-  // one floor RC in zayathiri
+// to buy a house in Zabuthiri, RC, one floor
   else if (received_message.payload === "onef_zabuthiri11") {
     response = {
                   "text": "Do you want what types of room?",
@@ -4187,8 +4188,312 @@ else if (received_message.payload === "zabtwp") {
       }
   }
 
+/**************************/
 
-/********************/
+
+
+
+
+
+// to buy a house in Zabuthiri, RC, two floor
+  else if (received_message.payload === "twof_zabuthiri11") {
+    response = {
+                  "text": "Do you want what types of room?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "MB",
+                          "payload": "tobuy_twof_mb_zabu22",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "BD",
+                          "payload": "tobuy_twof_bed_zabu22",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "both",
+                          "payload": "tobuy_both_tybed_zabu22",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "ttobuy_whatever_ty_zabu22",
+                        }
+                      ]
+      }
+  }
+  /************/
+  // to buy a house in Zabuthiri, RC, two floor, master bed
+  else if (received_message.payload === "tobuy_twof_mb_zabu22") {
+    response = {
+                  "text": "Please choose the house in which the number of master bed room has",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "below 3",
+                          "payload": "tobuy_beda1below_twof_rczabu",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "3 and above",
+                          "payload": "tobuy_beda1above_twof_rczabu",
+                        },
+                       
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whtever_twof_onlybed_zabu",
+                        }
+                      ]
+      }
+  }
+    // to buy a house in Zabuthiri, RC, two floor, master bed (below 3)
+  else if (received_message.payload === "tobuy_beda1below_twof_rczabu") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "tobuy_onlymbed60_zabu7",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*60",
+                          "payload": "tobuy_mbedroom60hou6_in_zabuu7",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "tobuy_onlymbed100_zabu7",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "other",
+                          "payload": "tobuy_onlyother_zabu7",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "tobuy_onlymbed_whatever_zabu7",
+                        }
+                      ]
+      }
+  }
+
+
+
+
+
+    // to buy a house in Zabuthiri, RC, two floor, master bed (3 and above)
+  else if (received_message.payload === "tobuy_beda1above_twof_rczabu") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "tobuy_mbedroom88_in_zabuu7",
+                        },
+                          {
+                          "content_type": "text",
+                          "title": "60*60",
+                          "payload": "tobuy_mbedroom60hou_in_zabuu7",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "tobuy_mbedroom11_in_zabuu7",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "other",
+                          "payload": "tobuy_otherarea_zabuu7",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "tobuy_mbedroom_wharea_in_zabu7",
+                        }
+                      ]
+      }
+  }
+// to buy a house in Zabuthiri, RC, two floor, master bed, whatever master bed number
+  else if (received_message.payload === "whtever_twof_onlybed_zabu") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "tobuy_wht8_mbedroom_in_zabu",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*60",
+                          "payload": "tobuy_whtroommb60hou_in_zabuu7",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "tobuy_wht100_mbedroom_in_zabu",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "other",
+                          "payload": "tobuy_otherbed_area_zabu",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "tobuy_whtwht_mbedroom_in_zabu",
+                        }
+                      ]
+      }
+  }
+  /***************************/
+
+
+
+// to buy a house Zabbuthiri, RC, two floor, from """"Master bed and bed""", below 3, 60*60
+    else if (received_message.payload === 'tobuy_mbedroom60hou6_in_zabuu7' || received_message.payload === 'tobuy_onlybedroom60hou_in_zabuu7') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 1650 lakhs, 80*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91785974_147303330148800_5941890858046455808_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeH0Q4SPTdm8iskW1VFUbmH89Tx1huUI0Mf1PHWG5QjQx0Nx8ZIXu3Uf1xOQk5qxAWW-U0ZxjkL1YqFpxKBHTDwB&_nc_ohc=A67BN3kQGFsAX9PQ-F8&_nc_ht=scontent.fmdl2-1.fna&oh=6ff452344276e921f177ae61acd56617&oe=5EAC9256",
+            "subtitle":"1MB, 2BD, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+
+/************************************************/
+// to buy a house in Zabuthiri, RC, two floor, only bed room 
+  else if (received_message.payload === "onef_bed_zabu22") {
+    response = {
+                  "text": "Please choose the house in which the number of bed room has",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "below 3",
+                          "payload": "bed3below_twof_rzabuthi1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "3 and above",
+                          "payload": "bed3above_twof_rzabuthi1",
+                        },
+                       
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whtever_twof_onlybed_rzabuthi1",
+                        }
+                      ]
+      }
+  }
+  // to buy a house in Zabuthiri, RC, two floor, only bed room, below 3
+  else if (received_message.payload === "bed3below_twof_rzabuthi1") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "tobuy_onlybed60_zabuthi11",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*60",
+                          "payload": "tobuy_onlybedroom60hou_in_zabuu7",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "tobuy_onlybed100_zabuthi11",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "other",
+                          "payload": "tobuy_onlybedother_zabuthi11",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "tobuy_onlybed_whatever_zabuthi11",
+                        }
+                      ]
+      }
+  }
+    // to buy a house in Zabuthiri, RC, two floor, only bed room, 3 and above
+  else if (received_message.payload === "bed3above_twof_rzabuthi1") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "only_tobuy_bedroom88_in_zabuthi2",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*60",
+                          "payload": "only_tobuy_onefbedroom60hou_in_zabuu7",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "only_tobuy_bedroom11_in_zabuthi2",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "other",
+                          "payload": "only_tobuy_bedother_zabuthi2",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "only_tobuy_bedroom_wharea_in_zabuthi2",
+                        }
+                      ]
+      }
+  }
+
+
+
+
+
+
+/*********************************************************************************/
 
 // to buy land in Zabuthiri,  (area - other & whatever)
     else if (received_message.payload === 'whateverf_zabuthiri11' ) {
