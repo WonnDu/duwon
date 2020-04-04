@@ -4493,45 +4493,6 @@ else if (received_message.payload === "zabtwp") {
 
 
 
-/*********************************************************************************/
-
-// to buy land in Zabuthiri,  (area - other & whatever)
-    else if (received_message.payload === 'whateverf_zabuthiri11' ) {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"land, 1800 lakhs, 190*220 ft",
-            "image_url":"",
-            "subtitle":"Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaae"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
 
 
 /***********************************************************************************************************************************/
@@ -4904,6 +4865,12 @@ else if (received_message.payload === "dekthi") {
   }
 }
 
+
+
+
+/************************************/
+
+
 // to buy land in Zabuthiri,  (area - other)
     else if (received_message.payload === 'onlyother7dlandin_zabuu7' || received_message.payload === 'whatever77landin_zabuu7') {
     response = {
@@ -4916,6 +4883,28 @@ else if (received_message.payload === "dekthi") {
            {
             "title":"land, 1800 lakhs, 190*220 ft",
             "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91805614_147299203482546_76056547892920320_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeH4h7ykkbmGGTKcmLaBw8XKWqiB-qGMHnFaqIH6oYwecWEGWD2zuJ5Tqcy3b8ALHXeWsPopT5BK6L6Yns0-n-aR&_nc_ohc=88D3t-PnjhcAX_n05c1&_nc_ht=scontent.fmdl2-2.fna&oh=54f8de63fc7c9f6d3cf1a98b1f671264&oe=5EAC414A",
+            "subtitle":"Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          },
+          {
+            "title":"land, 170 lakhs, 30*87 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92130780_147306520148481_5058098081585692672_n.jpg?_nc_cat=105&_nc_sid=110474&_nc_eui2=AeGajxtcVRFHVhzlZf2zTkI1pYf6y6EsQNulh_rLoSxA2848HF0uMHvJpTZA3EIlgrol4oQutlbhOYqS5Au7CLFt&_nc_ohc=AnRGql5dFDkAX8UhJi8&_nc_ht=scontent.fmdl2-2.fna&oh=f337774cae6165c4b5d8ec79c30244a1&oe=5EAF3A83",
             "subtitle":"Negotiable",
             "default_action": {
               "type": "web_url",
