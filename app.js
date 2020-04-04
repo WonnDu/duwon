@@ -1839,7 +1839,7 @@ else if (received_message.payload === "ottwp") {
   // for RC to buy house in oattra
   else if (received_message.payload === "rc_ott" ) {
     response = {
-                  "text": "Please choose you want to buy the house in which",
+                  "text": "Please choose the number of floor:",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -1864,7 +1864,7 @@ else if (received_message.payload === "ottwp") {
       // one floor(RC) in oattra for area ( number of master bed room)
   else if (received_message.payload === "onef_ott") {
     response = {
-                  "text": "Please choose the house in which the number of master has",
+                  "text": "Please choose the number of Mbr included:",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -1882,7 +1882,7 @@ else if (received_message.payload === "ottwp") {
     // below 3 master bed one floor(RC) in oattra for area
   else if (received_message.payload === "below3_onef_rc_ott") {
     response = {
-                  "text": "Do you want what area?",
+                  "text": "Do you want how much wide area?",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -2040,7 +2040,7 @@ else if (received_message.payload === "ottwp") {
     // above 3 master bed one floor(RC) in oattra for area
   else if (received_message.payload === "above3_onef_rc_ott") {
     response = {
-                  "text": "Do you want what area?",
+                  "text": "Do you want how much wide area?",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -2293,12 +2293,6 @@ else if (received_message.payload === "ottwp") {
                           "content_type": "text",
                           "title": "3 and above",
                           "payload": "above3_twoof_rc_ott",
-                        },
-                       
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whtever_twoof_rc_ott",
                         }
                       ]
       }
@@ -2306,7 +2300,7 @@ else if (received_message.payload === "ottwp") {
     // two floor(RC) in oattra for below 3 master bed room
   else if (received_message.payload === "below3_twoof_rc_ott") {
     response = {
-                  "text": "Do you want what area?",
+                  "text": "Do you want how much wide area?",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -2431,7 +2425,7 @@ else if (received_message.payload === "ottwp") {
 // to buy house in pobba for types of house
 else if (received_message.payload === "potwp") {
       response = {
-                    "text":'Are you finding RC or Nancat?',
+                    "text":'Are you finding RC or other type?',
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -2440,13 +2434,8 @@ else if (received_message.payload === "potwp") {
                         },
                         {
                           "content_type": "text",
-                          "title": "Nancat",
+                          "title": "Other Type",
                           "payload": "nancat_pobb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whatever_pobb",
                         }
                       ]
 
@@ -2455,7 +2444,7 @@ else if (received_message.payload === "potwp") {
   // to buy house in pobba for floor 
   else if (received_message.payload === "rc_pobb") {
     response = {
-                  "text": "Please choose you want to buy the house in which",
+                  "text": "Please choose the number of floor:",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -2469,18 +2458,14 @@ else if (received_message.payload === "potwp") {
                         },
                         {
                           "content_type": "text",
-                          "title": "third floor",
+                          "title": "other",
                           "payload": "thirdf_pobb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whateverf_pobb",
                         }
                       ]
 
       }
   }
+  /*
   // to buy house in pobba for types of room
   else if (received_message.payload === "onef_pobb") {
     response = {
@@ -2509,13 +2494,14 @@ else if (received_message.payload === "potwp") {
                       ]
       }
   }
+  */
 
   /******************/
 
-// to buy house in pobba for numbers of mb room
-  else if (received_message.payload === "onef_mb_pobb") {
+// to buy house in pobba for numbers of master bed room
+  else if (received_message.payload === "onef_pobb") {
     response = {
-                  "text": "Please choose numbers of master bed rooms",
+                  "text": "Please choose the number of Mbr included:",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -2526,11 +2512,6 @@ else if (received_message.payload === "potwp") {
                           "content_type": "text",
                           "title": "3 and above",
                           "payload": "onef_above_pobb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whatever_mb3_pobb",
                         }
                       ]
       }
@@ -2538,7 +2519,7 @@ else if (received_message.payload === "potwp") {
   // to buy house in pobba for area (below 3 master bed room)
   else if (received_message.payload === "onef_b3_mb_pobb") {
     response = {
-                  "text": "Do you want what area?",
+                  "text": "Do you want how much wide land area of house?",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -2554,11 +2535,6 @@ else if (received_message.payload === "potwp") {
                           "content_type": "text",
                           "title": "80*80",
                           "payload": "a88in_in_pobb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whatever_ain_pobb",
                         }
                       ]
       }
@@ -2899,17 +2875,8 @@ else if (received_message.payload === "potwp") {
 }
 
 
-/**************************************************************************/
+/************************************/
 
-
-
-
-
-
-
-
-
-/////////////////////////////////////
     // to buy house in pobba for area
     // to buy house in pobba for numbers of mb room (3 and above mb)
   else if (received_message.payload === "onef_above_pobb") {
@@ -2939,6 +2906,7 @@ else if (received_message.payload === "potwp") {
                       ]
       }
   }
+  /*
     // to buy house in pobba for area
   else if (received_message.payload === "whatever_mb3_pobb") {
     response = {
@@ -2967,9 +2935,9 @@ else if (received_message.payload === "potwp") {
                       ]
       }
   }
-
+*/
   /********************/
-
+/*
    // one floor(RC) only bed rooms special in Pobba for area
   else if (received_message.payload === "onef_bed_pobb") {
     response = {
@@ -2994,6 +2962,7 @@ else if (received_message.payload === "potwp") {
                       ]
       }
   }
+  
     // below 3 bed one floor(RC) in pobb for area
   else if (received_message.payload === "bed3below_onef_rcpobb") {
     response = {
@@ -3022,6 +2991,7 @@ else if (received_message.payload === "potwp") {
                       ]
       }
   }
+
     // above 3 bed one floor(RC) in Pobb for area
   else if (received_message.payload === "bed3above_onef_rcpobb") {
     response = {
@@ -3050,6 +3020,7 @@ else if (received_message.payload === "potwp") {
                       ]
       }
   }
+
 // above whatever bed one floor(RC) in pobb for area
   else if (received_message.payload === "whtever_onef_onlybed_pobb") {
     response = {
@@ -3078,41 +3049,15 @@ else if (received_message.payload === "potwp") {
                       ]
       }
   }
-
+*/
 
   /*******************/
-    // to buy house (two floor) in pobba for types of room
+    
+
+   // to buy house (two floor) numbers of master bed in pobba 
   else if (received_message.payload === "twof_pobb") {
     response = {
-                  "text": "Do you want what types of room?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "MB",
-                          "payload": "twof_mb_pobb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "BD",
-                          "payload": "twof_bed_pobb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "both",
-                          "payload": "two_bed_pobb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whatever_bed_pobb",
-                        }
-                      ]
-      }
-  }
-   // to buy house (two floor) numbers of master bed in pobba for area
-  else if (received_message.payload === "twof_mb_pobb") {
-    response = {
-                  "text": "Please choose the numbers of master bed rooms that you want",
+                  "text": "Please choose the numbers of master bed rooms included:",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -3123,11 +3068,6 @@ else if (received_message.payload === "potwp") {
                           "content_type": "text",
                           "title": "3 and above",
                           "payload": "above3_twofmb_pobb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whatever_twofmb_pobb",
                         }
                       ]
       }
@@ -3135,7 +3075,7 @@ else if (received_message.payload === "potwp") {
     // to buy house (two floor) in pobba for area
   else if (received_message.payload === "below3_twofmb_pobb") {
     response = {
-                  "text": "Do you want what area?",
+                  "text": "Do you want how much wide land area of house?",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -3151,11 +3091,6 @@ else if (received_message.payload === "potwp") {
                           "content_type": "text",
                           "title": "80*80",
                           "payload": "ccin88in_in_pobb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whatever_twof_pobb",
                         }
                       ]
       }
@@ -3186,7 +3121,7 @@ else if (received_message.payload === "potwp") {
    // to buy house (two floor) in pobba for area
   else if (received_message.payload === "above3_twofmb_pobb") {
     response = {
-                  "text": "Do you want what area?",
+                  "text": "Do you want how much wide land area of house?",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -3202,11 +3137,6 @@ else if (received_message.payload === "potwp") {
                           "content_type": "text",
                           "title": "80*80",
                           "payload": "ddin88in_in_pobb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whtever_twof_inpobb",
                         }
                       ]
       }
@@ -3217,7 +3147,7 @@ else if (received_message.payload === "potwp") {
 // to buy house in dekkhina
 else if (received_message.payload === "dektwp") {
       response = {
-                    "text":'Are you finding RC or Nancat?',
+                    "text":'Are you finding RC or other type?',
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -3235,7 +3165,7 @@ else if (received_message.payload === "dektwp") {
   } 
   else if (received_message.payload === "rc_dek") {
     response = {
-                  "text": "Please choose you want to buy the house in which",
+                  "text": "Please choose the number of floor",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -3249,13 +3179,8 @@ else if (received_message.payload === "dektwp") {
                         },
                         {
                           "content_type": "text",
-                          "title": "third floor",
+                          "title": "other",
                           "payload": "thirdf_dek",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whateverf_dek",
                         }
                       ]
 
@@ -3266,7 +3191,7 @@ else if (received_message.payload === "dektwp") {
    // one floor(RC), number of master bed rooms, in Dek for area
   else if (received_message.payload === "onef_dek") {
     response = {
-                  "text": "Please choose the house in which the number of master bed room has",
+                  "text": "Please choose the number of Mbr included",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -3277,12 +3202,6 @@ else if (received_message.payload === "dektwp") {
                           "content_type": "text",
                           "title": "3 and above",
                           "payload": "bed3above_onef_rcdek",
-                        },
-                       
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whtever_onef_onlybed_dek",
                         }
                       ]
       }
@@ -3316,11 +3235,6 @@ else if (received_message.payload === "dektwp") {
                           "content_type": "text",
                           "title": "100*100",
                           "payload": "onlymbed100in_dek",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "onlymbed_whatever_dek",
                         }
                       ]
       }
@@ -3418,10 +3332,10 @@ else if (received_message.payload === "dektwp") {
 
 /***************/
 
-    // above 3 master bed one floor(RC) in Dek for area
+    // above 3 master bed, one floor(RC), in Dek, for area
   else if (received_message.payload === "bed3above_onef_rcdek") {
     response = {
-                  "text": "Do you want what area?",
+                  "text": "Do you want how much wide land area of house?",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -3447,11 +3361,6 @@ else if (received_message.payload === "dektwp") {
                           "content_type": "text",
                           "title": "100*100",
                           "payload": "onlymbed111in_dek",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "mbedroom_wharea_in_dek",
                         }
                       ]
       }
@@ -3499,7 +3408,7 @@ else if (received_message.payload === "dektwp") {
 
 
 
-
+/*
 // above whatever master bed one floor(RC) in Dek for area
   else if (received_message.payload === "whtever_onef_onlybed_dek") {
     response = {
@@ -3533,6 +3442,7 @@ else if (received_message.payload === "dektwp") {
                       ]
       }
   }
+*/
 
   /**********************/
 /*
@@ -3642,7 +3552,7 @@ else if (received_message.payload === "dektwp") {
   // to buy house in Zayathiri
 else if (received_message.payload === "zaytwp") {
       response = {
-                    "text":'Are you finding RC or Nancat?',
+                    "text":'Are you finding RC or other type?',
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -3651,21 +3561,17 @@ else if (received_message.payload === "zaytwp") {
                         },
                         {
                           "content_type": "text",
-                          "title": "Nancat",
+                          "title": "Other Type",
                           "payload": "nancat_zaya1",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whtrc_zaya1",
                         }
                       ]
 
       }
-  } 
+  }
+  // to buy house, RC, in Zayathiri 
   else if (received_message.payload === "rc_zaya1") {
     response = {
-                  "text": "Please choose you want to buy the house in which",
+                  "text": "Please choose the number of floor:",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -3679,37 +3585,27 @@ else if (received_message.payload === "zaytwp") {
                         },
                         {
                           "content_type": "text",
-                          "title": "whatever",
+                          "title": "other",
                           "payload": "whateverf_zayathi",
                         }
                       ]
 
       }
   }
-  // one floor RC in zayathiri
+  // to buy house, RC, one floor, in zayathiri
   else if (received_message.payload === "onef_zayathi") {
     response = {
                   "text": "Do you want what types of room?",
                     "quick_replies": [
                          {
                           "content_type": "text",
-                          "title": "MB",
+                          "title": "Mbr",
                           "payload": "onef_mb_zayathi",
                         },
                         {
                           "content_type": "text",
-                          "title": "BD",
+                          "title": "Only Br",
                           "payload": "onef_bed_zayathi",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "both",
-                          "payload": "both_tybed_zayathi",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whatever_ty_zayathi",
                         }
                       ]
       }
@@ -3828,7 +3724,7 @@ else if (received_message.payload === "zaytwp") {
     // to buy one floor(RC) only bed rooms special in Zayathiri for area
   else if (received_message.payload === "onef_bed_zayathi") {
     response = {
-                  "text": "Please choose the house in which the number of bed room has",
+                  "text": "Please choose the number of bed room included:",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -3852,7 +3748,7 @@ else if (received_message.payload === "zaytwp") {
     // to buy below 3 bed one floor(RC) in Zayathiri for area
   else if (received_message.payload === "bed3below_onef_rzayathi1") {
     response = {
-                  "text": "Do you want what area?",
+                  "text": "Do you want how much wide land area of house?",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -3863,11 +3759,6 @@ else if (received_message.payload === "zaytwp") {
                           "content_type": "text",
                           "title": "other",
                           "payload": "onlybedother_zayathi11",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "onlybed_whatever_zatathi11",
                         }
                       ]
       }
@@ -5452,7 +5343,7 @@ else if (received_message.payload === "tenandek") {
     // to rent a house in Zabuthiri
 else if (received_message.payload === "tenanzabu") {
       response = {
-                    "text":'Are you finding RC or Nancat?',
+                    "text":'Are you finding RC or other type?',
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -5463,20 +5354,34 @@ else if (received_message.payload === "tenanzabu") {
                           "content_type": "text",
                           "title": "Other type",
                           "payload": "nancat_zabu1_tenant",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whtrc_zabu1_tenant",
                         }
                       ]
 
       }
-  } 
+  }
+      // to rent a house, Rc in Zabuthiri
+else if (received_message.payload === "rc_zabu1_tenant") {
+      response = {
+                    "text":'Are you finding RC or other type?',
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "RC",
+                          "payload": "rcaabb1212_zabu1_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Only Br",
+                          "payload": "onlybedab1212_zabu1_tenant",
+                        }
+                      ]
+
+      }
+  }  
   // to rent a house (RC), in Zabuthiri, what floor
-  else if (received_message.payload === "rc_zabu1_tenant") {
+  else if (received_message.payload === "rcaabb1212_zabu1_tenant") {
     response = {
-                  "text": "Please choose you want to buy the house in which",
+                  "text": "Please choose the number of floor:",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -5500,7 +5405,7 @@ else if (received_message.payload === "tenanzabu") {
     //  to rent (house)RC, onefloor, ask number of master bed in Zabuthiri
   else if (received_message.payload === "onef_zabuthiri11_tenant1") {
     response = {
-                  "text": "Please choose the house in which the number of master bed room has",
+                  "text": "Please choose the number of Mbr included:",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -5553,12 +5458,49 @@ else if (received_message.payload === "tenanzabu") {
     }
   }
 }
+ //  to rent (house)RC, other floor, in Zabuthiri
+    else if (received_message.payload === 'otherrrf_zabuthiri11_tenant1' ) {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 16lakhs for 1month, 60*90ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91321762_147300433482423_2567804158497259520_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeHSgu0PTwrsuHwiSmD6BENSFySAmii5yFwXJICaKLnIXPy6RZSFTYwNp5-pdAWusIM01k-gxBQOP9OswxKTCNi_&_nc_ohc=WD0vAqtnAHYAX-nFoKz&_nc_ht=scontent.fmdl2-2.fna&oh=a434dea0879e76b9279d632756d7935b&oe=5EAC83BF",
+            "subtitle":"Mbr-(5), Br-(1)",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
 
 
-      //  to rent (house) RC, two floor, master bed in Zabuthiri
+      //  to rent (house) RC, two floor, number of master bed, in Zabuthiri
   else if (received_message.payload === "twof_zabuthiri11_tenant1") {
     response = {
-                  "text": "Please choose the house in which the number of master bed room has",
+                  "text": "Please choose the number of Mbr included:",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -5574,7 +5516,7 @@ else if (received_message.payload === "tenanzabu") {
       }
   }
 
- //  to rent (house)RC, two floor, master bed, below 3, in Zabuthiri
+ //  to rent (house)RC, two floor, master bed (below 3), in Zabuthiri
     else if (received_message.payload === 'mbed3below_mbruu1_zabu_tenant' ) {
     response = {
     "attachment":{
@@ -5615,8 +5557,8 @@ else if (received_message.payload === "tenanzabu") {
 
 
 
-
-
+/********************************************/
+/*
   // For whatever floor
   //  whatever floor, to rent (house)RC, other & whatever floor in Zabuthiri
   else if (received_message.payload === "whateverf_zabuthiri11_tenant1") {
@@ -5647,10 +5589,10 @@ else if (received_message.payload === "tenanzabu") {
       }
   }
     /************/
-   // whatever floor, to rent (house)RC, bed room, in Zabuthiri
-  else if (received_message.payload === "othwhat_bd_zabu22_tenant") {
+   // rent (house)RC, bed room, in Zabuthiri
+  else if (received_message.payload === "onlybedab1212_zabu1_tenant") {
     response = {
-                  "text": "Please choose the house in which the number of bed room has",
+                  "text": "Please choose the number of bed room included:",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -5666,10 +5608,10 @@ else if (received_message.payload === "tenanzabu") {
       }
   }
 
-   //  whatever floor, to rent (house)RC, bed room, 3 and above, in Zabuthiri
+   //   to rent (house)RC, bed room (3 and above), in Zabuthiri
   else if (received_message.payload === "bed3above_braa2_rczabu_tenant") {
     response = {
-                  "text": "Do you want what area?",
+                  "text": "Do you want wide land area of house?",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -5699,7 +5641,9 @@ else if (received_message.payload === "tenanzabu") {
                       ]
       }
   }
-  /************//////////////////////////////////////////////////////////////////////////////////////////
+  
+  /************/
+  /*
    //  to rent (house)RC, master bed,  in Zabuthiri
   else if (received_message.payload === "othwhat_mb_zabu22_tenant") {
     response = {
@@ -5718,6 +5662,7 @@ else if (received_message.payload === "tenanzabu") {
                       ]
       }
   }
+  */
 
    // to rent (house)RC, master bed, 3 and above, area  in Zabuthiri
   else if (received_message.payload === "bed3above_othwaht_rczabu_tenant") {
@@ -5753,43 +5698,7 @@ else if (received_message.payload === "tenanzabu") {
       }
   }
 
- //  to rent (house)RC, other & whatever floor, master bed, 3 and above, in Zabuthiri
-    else if (received_message.payload === 'onlyother_zabu_tenantaa2' || received_message.payload === 'onlymbed_whatever_zabu_tenantbb1') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"RC, 16lakhs for 1month, 60*90ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91321762_147300433482423_2567804158497259520_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeHSgu0PTwrsuHwiSmD6BENSFySAmii5yFwXJICaKLnIXPy6RZSFTYwNp5-pdAWusIM01k-gxBQOP9OswxKTCNi_&_nc_ohc=WD0vAqtnAHYAX-nFoKz&_nc_ht=scontent.fmdl2-2.fna&oh=a434dea0879e76b9279d632756d7935b&oe=5EAC83BF",
-            "subtitle":"Mbr-(5), Br-(1)",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaae"
-              }              
-            ]      
-          }
 
-        ]
-      }
-    }
-  }
-}
 /*****************************************************************/
 
 
