@@ -5286,7 +5286,7 @@ else if (received_message.payload === "dekthi") {
 /***********************************************************************/
 
     // to rent a house in Dekkhina
-else if (received_message.payload === "tenanzabu") {
+else if (received_message.payload === "tenandek") {
       response = {
                     "text":'Are you finding RC or Nancat?',
                     "quick_replies": [
