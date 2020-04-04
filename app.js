@@ -4057,7 +4057,7 @@ else if (received_message.payload === "zabtwp") {
       }
   }
   /************/
-   // one floor(RC) only master bed rooms special in Zabu for area
+   // one floor,(RC), only master bed rooms special, in Zabu for area
   else if (received_message.payload === "onef_mb_zabu22") {
     response = {
                   "text": "Please choose the house in which the number of master bed room has",
@@ -4274,7 +4274,81 @@ else if (received_message.payload === "zabtwp") {
   }
 
 /**************************/
+// to buy house in Zabbuthiri, one floor(RC), master bed, 3 and above, other area  
+    else if (received_message.payload === 'bedother_zabuthi2') {
+    response = {
+                  "text": "Please choose the estimated amount that you are avaliable to buy house:",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "below 2000",
+                          "payload": "below20in1otherzabu_in1amountab1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "above 2000 ",
+                          "payload": "above20in1otherzabu_in2amountab2",
+                        }                      
+                        ]
+      }
+  }
+// to buy house in Zabbuthiri, one floor(RC), master bed, 3 and above, whatever area
+    else if (received_message.payload === 'bedroom_wharea_in_zabuthi2') {
+    response = {
+                  "text": "Please choose the estimated amount that you are avaliable to buy house:",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "below 2000",
+                          "payload": "below20inwhatezabu_in1amountab1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "above 2000 ",
+                          "payload": "above20inwhatezabu_inamountba2",
+                        }                      
+                        ]
+      }
+  }
 
+  // to buy house in Zabbuthiri, one floor(RC), master bed, 3 and above, other and whatever (area), above 2000, above 20000
+    else if (received_message.payload === 'above20in1otherzabu_in2amountab2' || received_message.payload === 'above20inwhatezabu_inamountba2') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+  
+       
+           {
+            "title":"RC, 3000 lakhs, 190*160 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91534250_147504523462014_9070898494528552960_n.jpg?_nc_cat=105&_nc_sid=110474&_nc_eui2=AeFz1z4NL6Sw75VTmvKH69miNOD23p6gm5U04PbenqCblcrXqEusjFmJVrFNqe8h29B3RosWk1TxsrbKpz9lEeZV&_nc_ohc=Z_lNRcJ5PjIAX_On4uO&_nc_ht=scontent.fmdl2-2.fna&oh=2d2c767a76fd162b77cfd4a93980e310&oe=5EAC2419",
+            "subtitle":"4 Mbr, 1 store, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
    
 
 
