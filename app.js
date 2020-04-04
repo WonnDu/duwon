@@ -5365,7 +5365,62 @@ else if (received_message.payload === "tenanzabu") {
                       ]
       }
   }
+      //  to rent (house) RC, two floor, master bed in Zabuthiri
+  else if (received_message.payload === "twof_zabuthiri11_tenant1") {
+    response = {
+                  "text": "Please choose the house in which the number of master bed room has",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "below 3",
+                          "payload": "mbed3below_mbruu1_zabu_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "3 and above",
+                          "payload": "mbed3above_mbruu2_zabu_tenant",
+                        }
+                      ]
+      }
+  }
 
+ //  to rent (house)RC, other & whatever floor, master bed, below 3, in Zabuthiri
+    else if (received_message.payload === 'mbed3below_mbruu1_zabu_tenant' ) {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 5lakhs for 1month, 60*60ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91584761_147506333461833_9097495861193080832_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_eui2=AeEJjBqny2oAyiCCBcx8Dm2aIiThjxqoid0iJOGPGqiJ3bf1hQ0ORSmxzkKzH1pVKfNQVDlokg1xNId8HDBx1i_T&_nc_ohc=-ztxgt9r5oEAX_R4leb&_nc_ht=scontent.fmdl2-2.fna&oh=9df9c96ebfbc1d19048f0e3dc563abac&oe=5EAFA87A",
+            "subtitle":"Mbr-(1), Br-(4)",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
 
 
 
@@ -5405,7 +5460,7 @@ else if (received_message.payload === "tenanzabu") {
    // whatever floor, to rent (house)RC, bed room, in Zabuthiri
   else if (received_message.payload === "othwhat_bd_zabu22_tenant") {
     response = {
-                  "text": "Please choose the house in which the number of master bed room has",
+                  "text": "Please choose the house in which the number of bed room has",
                     "quick_replies": [
                          {
                           "content_type": "text",
