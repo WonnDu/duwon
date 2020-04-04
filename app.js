@@ -5022,7 +5022,7 @@ else if (received_message.payload === "tenanzabu") {
                           "content_type": "text",
                           "title": " other",
                           "payload": "otherrrf_zabuthiri11_tenant1",
-                        }
+                        },
                          {
                           "content_type": "text",
                           "title": " other & whatever",
