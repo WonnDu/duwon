@@ -5297,11 +5297,6 @@ else if (received_message.payload === "tenandek") {
                           "content_type": "text",
                           "title": "Other type",
                           "payload": "ottype_dekki1_tenant",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whtrc_dekki1_tenant",
                         }
                       ]
 
@@ -5362,6 +5357,28 @@ else if (received_message.payload === "tenandek") {
             "title":"RC, 3lakhs for 1month, 80*80ft",
             "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91363682_147508756794924_5266172075797643264_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_eui2=AeHA6H63Lfk2n8MdoV6fvKAHQ1QLK-ETu2dDVAsr4RO7Z14RGYjL4TwfIEHEKw_aAoQ-pNJa1aobx9jRKA8XqEKL&_nc_ohc=7l9dplxRgIoAX8NLXI7&_nc_ht=scontent.fmdl2-2.fna&oh=e25ce0cd1af1007ac90094e640d1f32d&oe=5EADAF47",
             "subtitle":"Mbr-(1), Br-(2)",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+             {
+            "title":"RC, 3.5 lakhs for 1month, 80*80ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91286836_147509506794849_5933917341455745024_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_eui2=AeHx1g6XyLyKkLOzsaRLy-u0VuG7Kym9I15W4bsrKb0jXldSbCCY1x4hJdY7_BvNatjaD9sx4_qGmjSee7rMUXQ6&_nc_ohc=tCNCHnDWmQIAX9slhQk&_nc_ht=scontent.fmdl2-1.fna&oh=a4e6326977b534d56c1c02852b995a93&oe=5EAF1C8B",
+            "subtitle":"Mbr-(1), Br-(2), aircon-(1)",
             "default_action": {
               "type": "web_url",
               "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
