@@ -5296,7 +5296,7 @@ else if (received_message.payload === "tenanzabu") {
                         },
                         {
                           "content_type": "text",
-                          "title": "Nancat",
+                          "title": "Other type",
                           "payload": "nancat_zabu1_tenant",
                         },
                         {
@@ -5327,44 +5327,69 @@ else if (received_message.payload === "tenanzabu") {
                           "content_type": "text",
                           "title": " other",
                           "payload": "otherrrf_zabuthiri11_tenant1",
-                        },
-                         {
-                          "content_type": "text",
-                          "title": " other & whatever",
-                          "payload": "whateverf_zabuthiri11_tenant1",
                         }
                       ]
 
       }
   }
-    //  to rent (house)RC, onefloor in Zabuthiri
+    //  to rent (house)RC, onefloor, ask number of master bed in Zabuthiri
   else if (received_message.payload === "onef_zabuthiri11_tenant1") {
     response = {
-                  "text": "Do you want what types of room?",
+                  "text": "Please choose the house in which the number of master bed room has",
                     "quick_replies": [
                          {
                           "content_type": "text",
-                          "title": "MB",
-                          "payload": "onefone_mb_zabu22_tenant",
+                          "title": "below 3",
+                          "payload": "numofmbed3below_mbra9_zabu_tenant",
                         },
                         {
                           "content_type": "text",
-                          "title": "BD",
-                          "payload": "onefone_bd_zabu22_tenant",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "both",
-                          "payload": "onefone_bothbed_zabu22_tenant",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "onefone_what_zabu22_tenant",
+                          "title": "3 and above",
+                          "payload": "numofmbed3above_mbraa9_zabu_tenant",
                         }
                       ]
       }
   }
+
+ //  to rent (house)RC, one floor, master bed, below 3, in Zabuthiri
+    else if (received_message.payload === 'numofmbed3below_mbra9_zabu_tenant' ) {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 5lakhs for 1month, 60*60ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91832281_147507780128355_5550237579212750848_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeH3HbMiv_1-KqaqCb3PJTIHfCCo3A5pMt98IKjcDmky3zd5ZYJeShc5VopMmsgcInNHup3AxlcC2e5CxypnaXfn&_nc_ohc=7rwtJnnVSLwAX8nVze4&_nc_ht=scontent.fmdl2-1.fna&oh=72e2a34c0b57d4cdd54f0b4687d86107&oe=5EAC95C2",
+            "subtitle":"Mbr-(2), aircon(6)",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
       //  to rent (house) RC, two floor, master bed in Zabuthiri
   else if (received_message.payload === "twof_zabuthiri11_tenant1") {
     response = {
@@ -5384,7 +5409,7 @@ else if (received_message.payload === "tenanzabu") {
       }
   }
 
- //  to rent (house)RC, other & whatever floor, master bed, below 3, in Zabuthiri
+ //  to rent (house)RC, two floor, master bed, below 3, in Zabuthiri
     else if (received_message.payload === 'mbed3below_mbruu1_zabu_tenant' ) {
     response = {
     "attachment":{
