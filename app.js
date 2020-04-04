@@ -4643,7 +4643,7 @@ else if (received_message.payload === "dekthi") {
 
 /***********************************************************************/
     // to rent a house in Zabuthiri
-else if (received_message.payload === "tezal") {
+else if (received_message.payload === "tenanzabu") {
       response = {
                     "text":'Are you finding RC or Nancat?',
                     "quick_replies": [
