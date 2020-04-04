@@ -2317,11 +2317,6 @@ else if (received_message.payload === "ottwp") {
                           "content_type": "text",
                           "title": "100*100",
                           "payload": "tf_100_in_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whatever_in_ott",
                         }
                       ]
       }
