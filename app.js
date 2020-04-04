@@ -5029,7 +5029,7 @@ else if (received_message.payload === "dekthi") {
   }
 
 // to buy land in Zayathiri,  below 700
-    else if (received_message.payload === 'below700land_zabuthiri_tobuyd1') {
+    else if (received_message.payload === 'below700land_zayathi_tobuyd1') {
     response = {
     "attachment":{
       "type":"template",
