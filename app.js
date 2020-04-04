@@ -3289,13 +3289,8 @@ else if (received_message.payload === "dektwp") {
                         },
                         {
                           "content_type": "text",
-                          "title": "Nancat",
+                          "title": "Other type",
                           "payload": "nancat_dek",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whatever_dek",
                         }
                       ]
 
@@ -3329,36 +3324,10 @@ else if (received_message.payload === "dektwp") {
 
       }
   }
-  else if (received_message.payload === "onef_dek") {
-    response = {
-                  "text": "Do you want what types of room?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "MB",
-                          "payload": "onef_mb_dek",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "BD",
-                          "payload": "onef_bed_dek",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "both",
-                          "payload": "both_tybed_dek",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whatever_ty_dek",
-                        }
-                      ]
-      }
-  }
+
   /*************/
-   // one floor(RC) only master bed rooms special in Dek for area
-  else if (received_message.payload === "onef_mb_dek") {
+   // one floor(RC), number of master bed rooms, in Dek for area
+  else if (received_message.payload === "onef_dek") {
     response = {
                   "text": "Please choose the house in which the number of master bed room has",
                     "quick_replies": [
@@ -3421,7 +3390,7 @@ else if (received_message.payload === "dektwp") {
   }
 
 
-// to buy Dekkhina, RC, one floor, Master bed, below 3, 80*80
+// to buy Dekkhina, RC, one floor, Master bed (below 3), 80*80
     else if (received_message.payload === 'onlymbed88in_dek') {
     response = {
     "attachment":{
@@ -3451,6 +3420,28 @@ else if (received_message.payload === "dektwp") {
                 "payload":"aaae"
               }              
             ]      
+          },
+          {
+            "title":"RC,  1250 lakhs, 80*80ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91363682_147508756794924_5266172075797643264_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_eui2=AeHA6H63Lfk2n8MdoV6fvKAHQ1QLK-ETu2dDVAsr4RO7Z14RGYjL4TwfIEHEKw_aAoQ-pNJa1aobx9jRKA8XqEKL&_nc_ohc=7l9dplxRgIoAX8NLXI7&_nc_ht=scontent.fmdl2-2.fna&oh=e25ce0cd1af1007ac90094e640d1f32d&oe=5EADAF47",
+            "subtitle":"Mbr-(1), Br-(2), Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
           }
 
         ]
@@ -3458,6 +3449,12 @@ else if (received_message.payload === "dektwp") {
     }
   }
 }
+
+
+
+
+
+
 
 
 /***************/
@@ -3579,7 +3576,7 @@ else if (received_message.payload === "dektwp") {
   }
 
   /**********************/
-
+/*
    // one floor(RC) only bed rooms special in Dek for area
   else if (received_message.payload === "onef_bed_dek") {
     response = {
@@ -3679,7 +3676,8 @@ else if (received_message.payload === "dektwp") {
                         }
                       ]
       }
-  }
+  } */
+
   /**************************************************/
 
   // to buy house in Zayathiri
@@ -5351,7 +5349,7 @@ else if (received_message.payload === "tenandek") {
                       ]
       }
   }
- //  to rent (house)RC, one floor, master bed, below 3, in Zabuthiri
+ //  to rent (house)RC, one floor, master bed, below 3, in Dekkhina
     else if (received_message.payload === 'numofmbed3below_mbra9_dekki_tenant' ) {
     response = {
     "attachment":{
