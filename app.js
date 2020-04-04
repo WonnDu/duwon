@@ -5418,6 +5418,28 @@ else if (received_message.payload === "tenandek") {
                 "payload":"aaae"
               }              
             ]      
+          },
+        {
+            "title":"RC, 3 lakhs for 1month, 80*80ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91570352_147511090128024_4467115061306982400_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_eui2=AeE8PImDS4R0MgqGI1sFzyVzAsx2AeMe6uACzHYB4x7q4IE-8_emzDWyDeeSMGKBMQGRv1FsTI4N6QZGH_So2AZP&_nc_ohc=0FbsLYb1V40AX8pH3q_&_nc_ht=scontent.fmdl2-1.fna&oh=739c315ae114220d4e2e4ae8c7e836a1&oe=5EAE6852",
+            "subtitle":"Mbr-(1), Br-(2), aircon-(2)",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
           }
 
         ]
