@@ -4709,7 +4709,7 @@ else if (received_message.payload === "otthi") {
 
 /*****************************************************/
 
-// buy land in Pobba
+// to buy land in Pobba
   else if (received_message.payload === "pobthi") {
     response = {
                   "text": "Do you want what area?",
@@ -4974,7 +4974,97 @@ else if (received_message.payload === "dekthi") {
   }
 }
 
+/**********************/
 
+    // to buy land in Zayathiri twonship
+  else if (received_message.payload === "zayathi") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "tobuy_land_area_inzayad146",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*60",
+                          "payload": "tobuy_land_area_inzayad160",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "tobuy_land_area_inzayad168",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "other",
+                          "payload": "tobuy_land_area_inzayad1other",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "tobuy_land_area_inzayad1whtever",
+                        }
+                      ]
+      }
+  }
+
+  // to buy land in Zayathiri,  estimated amount
+    else if (received_message.payload === 'tobuy_land_area_inzayad1other'  received_message.payload === 'tobuy_land_area_inzayad1whtever') {
+    response = {
+                  "text": "Please choose the estimated amount that you are avaliable to buy land:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "below 700",
+                          "payload": "below700land_zayathi_tobuyd1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "above 700",
+                          "payload": "above700land_zayathi_tobuyd2",
+                        }                      ]
+      }
+  }
+
+// to buy land in Zayathiri,  below 700
+    else if (received_message.payload === 'below700land_zabuthiri_tobuyd1') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 250 lakhs, 4.32 arce",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91173485_147313630147770_7524269256431632384_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeHx7J_uE6K2gYtG3D2PPamXDrJ9p_115oQOsn2n_XXmhB0HVZ7f3lrYNBtzLgpB_vbEzwPaxQ6HungQm3Bqzy2q&_nc_ohc=DBqp7NaeREMAX_HivK2&_nc_ht=scontent.fmdl2-2.fna&oh=6b7e44248adb33bedc01617020c2509f&oe=5EAF7F6E",
+            "subtitle":" Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
 
 
 
