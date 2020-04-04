@@ -3823,7 +3823,7 @@ else if (received_message.payload === "zaytwp") {
   }
   /***************************/
 
-    // one floor(RC) only bed rooms special in Zayathiri for area
+    // to buy one floor(RC) only bed rooms special in Zayathiri for area
   else if (received_message.payload === "onef_bed_zayathi") {
     response = {
                   "text": "Please choose the house in which the number of bed room has",
@@ -3847,7 +3847,7 @@ else if (received_message.payload === "zaytwp") {
                       ]
       }
   }
-    // below 3 bed one floor(RC) in Zayathiri for area
+    // to buy below 3 bed one floor(RC) in Zayathiri for area
   else if (received_message.payload === "bed3below_onef_rzayathi1") {
     response = {
                   "text": "Do you want what area?",
@@ -3870,7 +3870,7 @@ else if (received_message.payload === "zaytwp") {
                       ]
       }
   }
-    // above 3 bed one floor(RC) in Zaya for area
+    //  to buy above 3 bed one floor(RC) in Zaya for area
   else if (received_message.payload === "bed3above_onef_rzayathi1") {
     response = {
                   "text": "Do you want what area?",
@@ -3893,6 +3893,46 @@ else if (received_message.payload === "zaytwp") {
                       ]
       }
   }
+
+
+
+   // to buy above 3 bed one floor(RC) in Zayarthiri, bed room (3 and above), 60* 60
+    else if (received_message.payload === 'bedroom88_in_zayathi2') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 750 lakhs, 60*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91566102_147309916814808_3933244420186439680_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeGe2oH7A1JiUggWbdMpedaTuf90LosKVHe5_3QuiwpUd9XJAc2iTWERN-t1qRDIuwYPoXpw4DsDoNYeccAyPfLU&_nc_ohc=OfgBeO8iZQAAX8-YKe0&_nc_ht=scontent.fmdl2-2.fna&oh=b14c800be66697d2d87ca5b9950d5294&oe=5EAF6923",
+            "subtitle":"3BD, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
 
   /***********************************************************************/
     // to buy house in Zabu
@@ -4190,43 +4230,7 @@ else if (received_message.payload === "zabtwp") {
 
 /**************************/
 
-    // above 3 bed one floor(RC) in Zabu, bed room (3 and above), 60* 60
-    else if (received_message.payload === 'onefbedroom60hou_in_zabuu7') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"RC, 750 lakhs, 60*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91566102_147309916814808_3933244420186439680_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeGe2oH7A1JiUggWbdMpedaTuf90LosKVHe5_3QuiwpUd9XJAc2iTWERN-t1qRDIuwYPoXpw4DsDoNYeccAyPfLU&_nc_ohc=OfgBeO8iZQAAX8-YKe0&_nc_ht=scontent.fmdl2-2.fna&oh=b14c800be66697d2d87ca5b9950d5294&oe=5EAF6923",
-            "subtitle":"3BD, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaae"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
+   
 
 
 
@@ -4999,7 +5003,7 @@ else if (received_message.payload === "tenanzabu") {
 
       }
   } 
-  // to rent a house (RC), in Zabuthiri
+  // to rent a house (RC), in Zabuthiri, what floor
   else if (received_message.payload === "rc_zabu1_tenant") {
     response = {
                   "text": "Please choose you want to buy the house in which",
@@ -5016,6 +5020,11 @@ else if (received_message.payload === "tenanzabu") {
                         },
                         {
                           "content_type": "text",
+                          "title": " other",
+                          "payload": "otherrrf_zabuthiri11_tenant1",
+                        }
+                         {
+                          "content_type": "text",
                           "title": " other & whatever",
                           "payload": "whateverf_zabuthiri11_tenant1",
                         }
@@ -5023,7 +5032,43 @@ else if (received_message.payload === "tenanzabu") {
 
       }
   }
-  // other & whatever floor, to rent (house)RC, in Zabuthiri
+    //  to rent (house)RC, onefloor in Zabuthiri
+  else if (received_message.payload === "onef_zabuthiri11_tenant1") {
+    response = {
+                  "text": "Do you want what types of room?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "MB",
+                          "payload": "onefone_mb_zabu22_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "BD",
+                          "payload": "onefone_bd_zabu22_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "both",
+                          "payload": "onefone_bothbed_zabu22_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "onefone_what_zabu22_tenant",
+                        }
+                      ]
+      }
+  }
+
+
+
+
+
+
+
+  // For whatever floor
+  //  whatever floor, to rent (house)RC, other & whatever floor in Zabuthiri
   else if (received_message.payload === "whateverf_zabuthiri11_tenant1") {
     response = {
                   "text": "Do you want what types of room?",
@@ -5051,8 +5096,61 @@ else if (received_message.payload === "tenanzabu") {
                       ]
       }
   }
-  /************/
-   // other & whatever floor, to rent (house)RC, master bed, in Zabuthiri
+    /************/
+   // whatever floor, to rent (house)RC, bed room, in Zabuthiri
+  else if (received_message.payload === "othwhat_bd_zabu22_tenant") {
+    response = {
+                  "text": "Please choose the house in which the number of master bed room has",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "below 3",
+                          "payload": "bed3below_braa1_rczabu_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "3 and above",
+                          "payload": "bed3above_braa2_rczabu_tenant",
+                        }
+                      ]
+      }
+  }
+
+   //  whatever floor, to rent (house)RC, bed room, 3 and above, in Zabuthiri
+  else if (received_message.payload === "bed3above_braa2_rczabu_tenant") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "onlybed60_zabubr1_tenanta1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*60",
+                          "payload": "bedroom60hou6_in_zabuubr1_tenanta2",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "onlybed100_zabubr1_tenantaa1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "other",
+                          "payload": "onlyother_zabubr1_tenantaa2",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "onlymbed_whatever_zabubr1_tenantbb1",
+                        }
+                      ]
+      }
+  }
+  /************//////////////////////////////////////////////////////////////////////////////////////////
+   //  to rent (house)RC, master bed,  in Zabuthiri
   else if (received_message.payload === "othwhat_mb_zabu22_tenant") {
     response = {
                   "text": "Please choose the house in which the number of master bed room has",
@@ -5071,7 +5169,7 @@ else if (received_message.payload === "tenanzabu") {
       }
   }
 
-   // other & whatever floor, to rent (house)RC, master bed, 3 and above, in Zabuthiri
+   // to rent (house)RC, master bed, 3 and above, area  in Zabuthiri
   else if (received_message.payload === "bed3above_othwaht_rczabu_tenant") {
     response = {
                   "text": "Do you want what area?",
@@ -5105,7 +5203,7 @@ else if (received_message.payload === "tenanzabu") {
       }
   }
 
- // other & whatever floor, to rent (house)RC, master bed, 3 and above, in Zabuthiri
+ //  to rent (house)RC, other & whatever floor, master bed, 3 and above, in Zabuthiri
     else if (received_message.payload === 'onlyother_zabu_tenantaa2' || received_message.payload === 'onlymbed_whatever_zabu_tenantbb1') {
     response = {
     "attachment":{
@@ -5142,6 +5240,124 @@ else if (received_message.payload === "tenanzabu") {
     }
   }
 }
+/*****************************************************************/
+
+
+ /***************************/
+
+    // to rent one floor(RC) only bed rooms special in Zayathiri for area
+  else if (received_message.payload === "tenanzay") {
+    response = {
+                  "text": "Please choose the house in which the number of bed room has",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "below 3",
+                          "payload": "bed3below_onef_rzayathi1_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "3 and above",
+                          "payload": "bed3above_onef_rzayathi1_tenant",
+                        },
+                       
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whtever_onef_onlybed_rzayathi1_tenant",
+                        }
+                      ]
+      }
+  }
+    // to rent below 3 bed one floor(RC) in Zayathiri for area
+  else if (received_message.payload === "bed3below_onef_rzayathi1_tenant") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "60*60",
+                          "payload": "onlybed60_zayathi11_tenanta1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "other",
+                          "payload": "onlybedother_zayathi11_tenanta1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "onlybed_whatever_zatathi11_tenanta1",
+                        }
+                      ]
+      }
+  }
+    //  to rent 3 and above  bed one floor(RC) in Zaya for area
+  else if (received_message.payload === "bed3above_onef_rzayathi1_tenant") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "60*60",
+                          "payload": "bedroom88_in_zayathi2_tenantba",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "other",
+                          "payload": "bedother_zayathi2_tenantba",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "bedroom_wharea_in_zayathi2_tenantba",
+                        }
+                      ]
+      }
+  }
+
+
+
+   // to rent above 3 bed one floor(RC) in Zayarthiri, bed room (3 and above), 60* 60
+    else if (received_message.payload === 'bedroom88_in_zayathi2_tenantba') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 150000 for 1 month",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91566102_147309916814808_3933244420186439680_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeGe2oH7A1JiUggWbdMpedaTuf90LosKVHe5_3QuiwpUd9XJAc2iTWERN-t1qRDIuwYPoXpw4DsDoNYeccAyPfLU&_nc_ohc=OfgBeO8iZQAAX8-YKe0&_nc_ht=scontent.fmdl2-2.fna&oh=b14c800be66697d2d87ca5b9950d5294&oe=5EAF6923",
+            "subtitle":"3BD, 60*60 ft",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+
 
   /************************************************************************************************************************************/
     else if (received_message.text == "RC1" || received_message.text == "rc1" || received_message.text == "Rc1" || received_message.text == "RC 1" || received_message.text == "rc 1" || received_message.text == "Rc 1") {
