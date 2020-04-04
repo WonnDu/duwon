@@ -4114,6 +4114,52 @@ else if (received_message.payload === "zabtwp") {
                       ]
       }
   }
+/************************/
+
+ // to buy house in Zabbuthiri, one floor(RC), master bed, below 3, other area, no estimated price yet
+    else if (received_message.payload === 'onlyother_zabu7' ) {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+  
+       
+           {
+            "title":"RC, 1700 lakhs, 60*70 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91632607_147505746795225_6480313000564621312_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeGqXTPGqu5QwnXLaF0Dq4tGPN_XLu-kPmw839cu76Q-bOB_gzIIrMcDB1xpBLth1hoRciiEf9psaD8W7Seune8r&_nc_ohc=Dn7Aw0w-ZEgAX8fBPu6&_nc_ht=scontent.fmdl2-2.fna&oh=b75edcedd0d8bb1d955276ddd1461408&oe=5EAFD417",
+            "subtitle":"1 Mbr, 2 Br, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+
+
+/************************/
+
     // above 3 master bed, one floor(RC), in Zabu for area
   else if (received_message.payload === "bed3above_onef_rczabu") {
     response = {
