@@ -4121,7 +4121,7 @@ else if (received_message.payload === "zabtwp") {
                       ]
       }
   }
-    // below 3 bed one floor(RC) in Zabu for area
+    // below 3 bed one floor(RC) in Zabu, bedr room(below 3) for area
   else if (received_message.payload === "bed3below_onef_rzabuthi1") {
     response = {
                   "text": "Do you want what area?",
@@ -4154,7 +4154,7 @@ else if (received_message.payload === "zabtwp") {
                       ]
       }
   }
-    // above 3 bed one floor(RC) in Zabu for area
+    // above 3 bed one floor(RC) in Zabu, bed room (3 and above) for area 
   else if (received_message.payload === "bed3above_onef_rzabuthi1") {
     response = {
                   "text": "Do you want what area?",
@@ -4190,10 +4190,49 @@ else if (received_message.payload === "zabtwp") {
 
 /**************************/
 
+    // above 3 bed one floor(RC) in Zabu, bed room (3 and above), 60* 60
+    else if (received_message.payload === 'onefbedroom60hou_in_zabuu7') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 750 lakhs, 60*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91566102_147309916814808_3933244420186439680_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeGe2oH7A1JiUggWbdMpedaTuf90LosKVHe5_3QuiwpUd9XJAc2iTWERN-t1qRDIuwYPoXpw4DsDoNYeccAyPfLU&_nc_ohc=OfgBeO8iZQAAX8-YKe0&_nc_ht=scontent.fmdl2-2.fna&oh=b14c800be66697d2d87ca5b9950d5294&oe=5EAF6923",
+            "subtitle":"3BD, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
 
 
 
 
+
+/*****************************************************/
 
 // to buy a house in Zabuthiri, RC, two floor
   else if (received_message.payload === "twof_zabuthiri11") {
