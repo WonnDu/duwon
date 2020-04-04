@@ -4188,6 +4188,47 @@ else if (received_message.payload === "zabtwp") {
   }
 
 
+/********************/
+
+// to buy land in Zabuthiri,  (area - other & whatever)
+    else if (received_message.payload === 'whateverf_zabuthiri11' ) {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 1800 lakhs, 190*220 ft",
+            "image_url":"",
+            "subtitle":"Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
 /***********************************************************************************************************************************/
 /*
 // buy land in pyinmana
@@ -4470,8 +4511,7 @@ else if (received_message.payload === "dekthi") {
 
   
 
-  // 60*60 or other (to buy land in Zabuthiri )
-     // above 3 bed one floor(RC) in Zabu for area
+  // area (to buy land in Zabuthiri )
   else if (received_message.payload === "zabuthi") {
     response = {
                   "text": "Do you want what area?",
@@ -4522,7 +4562,7 @@ else if (received_message.payload === "dekthi") {
   }
 
 // to buy land in Zabuthiri,  below 700
-    else if (received_message.payload === 'below700land_zabuthiri') {
+    else if (received_message.payload === 'below700land_zabuthiri' || received_message.payload === 'whatever77landin_zabuu7') {
     response = {
     "attachment":{
       "type":"template",
@@ -4560,7 +4600,7 @@ else if (received_message.payload === "dekthi") {
 }
 
 // to buy land in Zabuthiri,  (area - other)
-    else if (received_message.payload === 'onlyother7dlandin_zabuu7') {
+    else if (received_message.payload === 'onlyother7dlandin_zabuu7' || received_message.payload === 'whatever77landin_zabuu7') {
     response = {
     "attachment":{
       "type":"template",
@@ -4599,6 +4639,182 @@ else if (received_message.payload === "dekthi") {
 
 
 
+
+
+/***********************************************************************/
+    // to rent a house in Zabuthiri
+else if (received_message.payload === "tezal") {
+      response = {
+                    "text":'Are you finding RC or Nancat?',
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "RC",
+                          "payload": "rc_zabu1_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Nancat",
+                          "payload": "nancat_zabu1_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whtrc_zabu1_tenant",
+                        }
+                      ]
+
+      }
+  } 
+  // to rent a house (RC), in Zabuthiri
+  else if (received_message.payload === "rc_zabu1_tenant") {
+    response = {
+                  "text": "Please choose you want to buy the house in which",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "one floor",
+                          "payload": "onef_zabuthiri11_tenant1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "two floor",
+                          "payload": "twof_zabuthiri11_tenant1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": " other & whatever",
+                          "payload": "whateverf_zabuthiri11_tenant1",
+                        }
+                      ]
+
+      }
+  }
+  // other & whatever floor, to rent (house)RC, in Zabuthiri
+  else if (received_message.payload === "whateverf_zabuthiri11_tenant1") {
+    response = {
+                  "text": "Do you want what types of room?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "MB",
+                          "payload": "othwhat_mb_zabu22_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "BD",
+                          "payload": "othwhat_bd_zabu22_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "both",
+                          "payload": "othwhat_bothbed_zabu22_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "othwhat_what_zabu22_tenant",
+                        }
+                      ]
+      }
+  }
+  /************/
+   // other & whatever floor, to rent (house)RC, master bed, in Zabuthiri
+  else if (received_message.payload === "othwhat_mb_zabu22_tenant") {
+    response = {
+                  "text": "Please choose the house in which the number of master bed room has",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "below 3",
+                          "payload": "bed3below_othwhat_rczabu_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "3 and above",
+                          "payload": "bed3above_othwaht_rczabu_tenant",
+                        },
+                       
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "whtever_othwhat_zabu_tenant",
+                        }
+                      ]
+      }
+  }
+
+   // other & whatever floor, to rent (house)RC, master bed, 3 and above OR whatever, in Zabuthiri
+  else if (received_message.payload === "bed3below_onef_rczabu") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "onlymbed60_zabu_tenanta1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*60",
+                          "payload": "mbedroom60hou6_in_zabuu_tenanta2",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "onlymbed100_zabu_tenantaa1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "other",
+                          "payload": "onlyother_zabu_tenantaa2",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "whatever",
+                          "payload": "onlymbed_whatever_zabu_tenantbb1",
+                        }
+                      ]
+      }
+  }
+
+ // other & whatever floor, to rent (house)RC, master bed, 3 and above, in Zabuthiri
+    else if (received_message.payload === 'onlyother_zabu_tenantaa2' || received_message.payload === 'onlymbed_whatever_zabu_tenantbb1') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 16lakhs for 1month, 60*90ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91321762_147300433482423_2567804158497259520_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeHSgu0PTwrsuHwiSmD6BENSFySAmii5yFwXJICaKLnIXPy6RZSFTYwNp5-pdAWusIM01k-gxBQOP9OswxKTCNi_&_nc_ohc=WD0vAqtnAHYAX-nFoKz&_nc_ht=scontent.fmdl2-2.fna&oh=a434dea0879e76b9279d632756d7935b&oe=5EAC83BF",
+            "subtitle":"Mbr-(5), Br-(1)",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
 
   /************************************************************************************************************************************/
     else if (received_message.text == "RC1" || received_message.text == "rc1" || received_message.text == "Rc1" || received_message.text == "RC 1" || received_message.text == "rc 1" || received_message.text == "Rc 1") {
@@ -5394,6 +5610,9 @@ function handlePostback(sender_psid, received_postback) {
 
       }
   }
+
+
+
   // to buy house 
   else if (payload === 'tobu') {
     response = { "attachment": {
@@ -6026,35 +6245,7 @@ else if (payload === 'innnter') {
     }
   }
 
-    else if (payload === "attach_no1") {    
-    response = {
-      "text": "OK, send me again!"
-    }
-  }
-
- else if (payload === "only_master_bed_tenant") {
-    let response1 = {
-      "text":`How many master bed rooms do you have?`
-    };
-    let response2 = {
-      "text":`Please write number of rooms with "mb" word. Like 1mb, 2mb etc. Thank you very much!`
-    };
-   callSend(sender_psid, response1).then(()=>{
-  return callSend(sender_psid, response2);
-  });
-  } 
-
-else if (payload === "only_bed_tenant") {
-    let response1 = {
-      "text":`How many bed rooms do you have?`
-    };
-    let response2 = {
-      "text":`Please write number of rooms with "br" word. Like 1br, 2br etc. Thank you very much!`
-    };
-   callSend(sender_psid, response1).then(()=>{
-  return callSend(sender_psid, response2);
-  });
-  }   
+ 
 
 
   // Send the message to acknowledge the postback
