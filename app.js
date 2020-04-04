@@ -2022,6 +2022,28 @@ else if (received_message.payload === "ottwp") {
                 "payload":"aaae"
               }              
             ]      
+          },
+           {
+            "title":"RC, 1550 lakhs, 100*100 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91919114_147317480147385_4454999370881826816_n.jpg?_nc_cat=105&_nc_sid=110474&_nc_eui2=AeEGImDPuTHhTYsKjmn4ppol6Rp7BH2OzvzpGnsEfY7O_J0MxiuGK7v2BFTXqU8aSDEUK3r0EphYpF8SXHiI1L0S&_nc_ohc=EHw2O4hmNl4AX_vdOcY&_nc_ht=scontent.fmdl2-2.fna&oh=18a31bcf609b72aa74f6c50aad0ee9e1&oe=5EAD7A46",
+            "subtitle":"2MB, 1BD, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
           }
 
         ]
