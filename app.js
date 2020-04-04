@@ -5374,7 +5374,7 @@ else if (received_message.payload === "tenandek") {
                 "payload":"aaae"
               }              
             ]      
-          }
+          },
              {
             "title":"RC, 3.5 lakhs for 1month, 80*80ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91286836_147509506794849_5933917341455745024_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_eui2=AeHx1g6XyLyKkLOzsaRLy-u0VuG7Kym9I15W4bsrKb0jXldSbCCY1x4hJdY7_BvNatjaD9sx4_qGmjSee7rMUXQ6&_nc_ohc=tCNCHnDWmQIAX9slhQk&_nc_ht=scontent.fmdl2-1.fna&oh=a4e6326977b534d56c1c02852b995a93&oe=5EAF1C8B",
