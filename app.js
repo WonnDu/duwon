@@ -5011,7 +5011,7 @@ else if (received_message.payload === "dekthi") {
   }
 
   // to buy land in Zayathiri,  estimated amount
-    else if (received_message.payload === 'tobuy_land_area_inzayad1other'  received_message.payload === 'tobuy_land_area_inzayad1whtever') {
+    else if (received_message.payload === 'tobuy_land_area_inzayad1other'  || received_message.payload === 'tobuy_land_area_inzayad1whtever') {
     response = {
                   "text": "Please choose the estimated amount that you are avaliable to buy land:",
                     "quick_replies": [
