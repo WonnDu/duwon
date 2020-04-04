@@ -4733,19 +4733,13 @@ else if (received_message.payload === "tenanzabu") {
                           "content_type": "text",
                           "title": "3 and above",
                           "payload": "bed3above_othwaht_rczabu_tenant",
-                        },
-                       
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whtever_othwhat_zabu_tenant",
                         }
                       ]
       }
   }
 
-   // other & whatever floor, to rent (house)RC, master bed, 3 and above OR whatever, in Zabuthiri
-  else if (received_message.payload === "bed3below_onef_rczabu") {
+   // other & whatever floor, to rent (house)RC, master bed, 3 and above, in Zabuthiri
+  else if (received_message.payload === "bed3above_othwaht_rczabu_tenant") {
     response = {
                   "text": "Do you want what area?",
                     "quick_replies": [
