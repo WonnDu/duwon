@@ -1880,12 +1880,6 @@ else if (received_message.payload === "ottwp") {
                           "content_type": "text",
                           "title": "3 and above",
                           "payload": "above3_onef_rc_ott",
-                        },
-                       
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whtever_onef_rc_ott",
                         }
                       ]
       }
