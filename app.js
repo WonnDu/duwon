@@ -4133,7 +4133,7 @@ else if (received_message.payload === "zabtwp") {
                       ]
       }
   }
-    // above 3 bed one floor(RC) in Dek for area
+    // above 3 bed one floor(RC) in Zabu for area
   else if (received_message.payload === "bed3above_onef_rzabuthi1") {
     response = {
                   "text": "Do you want what area?",
@@ -4445,8 +4445,26 @@ else if (received_message.payload === "dekthi") {
 
   
 
-// to buy land in Dekkhina,  40*60
-    else if (received_message.payload === 'onlya60land_dek') {
+  // 60*60 or other (to buy land in Zabuthiri )
+    else if (received_message.payload === 'zabuthi') {
+    response = {
+                  "text": "Please choose the estimated amount that you are avaliable to buy land:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "below 700",
+                          "payload": "below700land_zabuthiri",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "above 700",
+                          "payload": "above700land_zabuthiri",
+                        }                      ]
+      }
+  }
+
+// to buy land in Zabuthiri,  below 700
+    else if (received_message.payload === 'below700land_zabuthiri') {
     response = {
     "attachment":{
       "type":"template",
@@ -4455,9 +4473,9 @@ else if (received_message.payload === "dekthi") {
         "elements": [ 
         
            {
-            "title":"land, 330 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92226071_147293826816417_8174851167054987264_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_ohc=fbXONITsfysAX8FaIub&_nc_ht=scontent.fmdl2-2.fna&oh=1dcfa48591e4cf30c82693332935dcf2&oe=5EAD2932",
-            "subtitle":"Negotiable",
+            "title":"land, 430 lakhs, 60*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91569303_147298520149281_8262866338419048448_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_eui2=AeFHT60o_RiNYreBiF3myrwk1WGvycQV-PTVYa_JxBX49H36rjRFa4US4BQ6m9LmMvDsitWViNczJzElfSf24tP2&_nc_ohc=-Hg5lmp5UHwAX_bv6Yb&_nc_ht=scontent.fmdl2-2.fna&oh=8d600e8db9f47f8907467e204cee31d7&oe=5EAB9412",
+            "subtitle":"on the main street, Negotiable",
             "default_action": {
               "type": "web_url",
               "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
