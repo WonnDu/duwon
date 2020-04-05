@@ -3636,7 +3636,7 @@ else if (received_message.payload === "zaytwp") {
   }
  
 
-  // to buy , one floor(RC), in Zayarthiri, master bed room , 60* 60
+  // to buy , one floor(RC), in Zayarthiri, master bed room , 40* 60
     else if (received_message.payload === 'onlymbed60_zayathi') {
     response = {
     "attachment":{
@@ -3673,6 +3673,47 @@ else if (received_message.payload === "zaytwp") {
     }
   }
 }
+
+ // to buy , one floor(RC), in Zayarthiri, master bed room , 60*80
+    else if (received_message.payload === 'onlymbed100_zayathi') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 695 lakhs, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91743058_147985173413949_5524857719812521984_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_eui2=AeGLGqRX5e59BXVCeCTQ4SkEu2-klAR4vAy7b6SUBHi8DL298NJeaU-lHazho9C-fTx5SW-D46NARrIYaVLzqTIM&_nc_ohc=qUTqS0FKrX8AX9n5GP3&_nc_ht=scontent.fmdl2-2.fna&oh=b176548c65794799b5ac5ca8541d04e9&oe=5EB0B328",
+            "subtitle":"Mbr-(3), Br-(1), land type-(grant), Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+
 /*
 // above whatever master bed one floor(RC) in Zayathi for area
   else if (received_message.payload === "") {
