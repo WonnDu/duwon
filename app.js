@@ -3936,6 +3936,436 @@ else if (received_message.payload === "zaytwp") {
     }
   }
 }
+/**************************************************************************************************************/
+/**************************************************************************************************************/
+ 
+
+ // to rent house in Zayathiri
+else if (received_message.payload === "tenanzay") {
+      response = {
+                    "text":'Are you finding RC or other type?',
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "RC",
+                          "payload": "rc_onef_rzayathi1_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Other Type",
+                          "payload": "othertype_abc77_rzayathi1_tenant",
+                        }
+                      ]
+
+      }
+  }
+  // to rent house, RC, floor, in Zayathiri 
+  else if (received_message.payload === "rc_onef_rzayathi1_tenant") {
+    response = {
+                  "text": "Please choose the number of floor:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "one floor",
+                          "payload": "onefloor_abcd1122_rzayathi1_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "two floor",
+                          "payload": "twofloor_abcd1122_rzayathi1_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Other floor",
+                          "payload": "otherfloor_abcd1122_rzayathi1_tenant",
+                        }
+                      ]
+
+      }
+  }
+  // to rent house, RC, one floor, types of room, in zayathiri
+  else if (received_message.payload === "onefloor_abcd1122_rzayathi1_tenant") {
+    response = {
+                  "text": "Do you want the house in which Mbr included or only Br included?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "Mbr",
+                          "payload": "bed3below_onef_rzayathi1_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Only Br",
+                          "payload": "bed3above_onef_rzayathi1_tenant",
+                        }
+                      ]
+      }
+  }
+  /************/
+ // to rent zayathiri, house, RC, one floor, master bed, area
+  else if (received_message.payload === "bed3above_onef_rzayathi1_tenant") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "onlymbed60_zayathi",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "60*60",
+                          "payload": "onlybed60_zayathi11_tenanta1",    // added
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "onlymbed100_zayathi",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "other",
+                          "payload": "onlyother_zayathi",
+                        }
+                      ]
+      }
+  }
+ 
+  // to rent zayathiri, Other Type
+    else if (received_message.payload === 'othertype_abc77_rzayathi1_tenant') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"Nancat, 1 lakh per a month, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91792097_147994890079644_2733113919257182208_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeEJ6OQtxyqfb9GVE1jRRE0IYNvigKbAkipg2-KApsCSKv0wJFCW3y8zXzDxQmVDuBPbb5X8jPDyLDSPnHzvJgQP&_nc_ohc=XThyUU6dRbcAX8MJD2I&_nc_ht=scontent.fmdl2-1.fna&oh=b3a0b4731debcda532f508df3173f283&oe=5EAE5B05",
+            "subtitle":"2BD, land type-(grant), face south",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+
+
+  // to rent , one floor(RC), in Zayarthiri, master bed room , 40* 60
+    else if (received_message.payload === 'onlymbed60_zayathi') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 1.5 lakhs per month, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91795685_147979493414517_3541170500845699072_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeGDVXPDiTSc8vXaN7qDn0awga7GRrFvfoqBrsZGsW9-itxQ0gf9L-DyJuhhjkeXD9yhvEkuxAr9VDV_BCS5OT7c&_nc_ohc=p20XzokA4MoAX8MM8H2&_nc_ht=scontent.fmdl2-1.fna&oh=807cc2770c0d3e2edb4161709ae319e5&oe=5EB09908",
+            "subtitle":"Mbr-(2), Br-(1), land type-(grant)",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+ // to rent , one floor(RC), in Zayarthiri, master bed room , 60*80
+    else if (received_message.payload === 'onlymbed100_zayathi') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 3 lakhs per month, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91743058_147985173413949_5524857719812521984_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_eui2=AeGLGqRX5e59BXVCeCTQ4SkEu2-klAR4vAy7b6SUBHi8DL298NJeaU-lHazho9C-fTx5SW-D46NARrIYaVLzqTIM&_nc_ohc=qUTqS0FKrX8AX9n5GP3&_nc_ht=scontent.fmdl2-2.fna&oh=b176548c65794799b5ac5ca8541d04e9&oe=5EB0B328",
+            "subtitle":"Mbr-(3), Br-(1), land type-(grant)",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+  /***************************/
+
+ 
+ // to rent one floor(RC), only bed rooms , in Zayathiri for area
+  else if (received_message.payload === "onef_bed_zayathi") {
+    response = {
+                  "text": "Do you want how much wide land area of house?",
+                    "quick_replies": [
+                          {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "bedaacc1_bedroom_i46n_zaya_tenant",  // not be
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "60*60",
+                          "payload": "bedroom88_in_zayathi2_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "wht100_mbedroom_in_zaya_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "other",
+                          "payload": "onlybedother_zayathi11_tenant",  
+                        }
+                      ]
+      }
+  }
+
+  // to rent , one floor(RC), in Zayarthiri, bed room, 40* 60
+    else if (received_message.payload === 'bedaacc1_bedroom_i46n_zaya_tenant') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 2 lakhs per month, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92411898_147990653413401_1525933800742191104_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_eui2=AeHBsVC7TLdFJm2fLgZ5UqX3q8KD7opYtsKrwoPuili2woW_93kuxylkFMVFz5DU5-BC0u6TafZAWv0AweUc0PfN&_nc_ohc=VleE8dz-FGMAX9p4286&_nc_ht=scontent.fmdl2-1.fna&oh=17f7467c5fbd8a2a945ab3e817eb758f&oe=5EAF513E",
+            "subtitle":"3BD, land type-(grant), face east",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+
+   // to rent , one floor(RC), in Zayarthiri, bed room, 60* 60
+    else if (received_message.payload === 'bedroom88_in_zayathi2') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 750 lakhs, 60*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91566102_147309916814808_3933244420186439680_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeGe2oH7A1JiUggWbdMpedaTuf90LosKVHe5_3QuiwpUd9XJAc2iTWERN-t1qRDIuwYPoXpw4DsDoNYeccAyPfLU&_nc_ohc=OfgBeO8iZQAAX8-YKe0&_nc_ht=scontent.fmdl2-2.fna&oh=b14c800be66697d2d87ca5b9950d5294&oe=5EAF6923",
+            "subtitle":"3BD, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          },
+           {
+            "title":"RC, 150000 for 1 month",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91566102_147309916814808_3933244420186439680_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeGe2oH7A1JiUggWbdMpedaTuf90LosKVHe5_3QuiwpUd9XJAc2iTWERN-t1qRDIuwYPoXpw4DsDoNYeccAyPfLU&_nc_ohc=OfgBeO8iZQAAX8-YKe0&_nc_ht=scontent.fmdl2-2.fna&oh=b14c800be66697d2d87ca5b9950d5294&oe=5EAF6923",
+            "subtitle":"3BD, 60*60 ft",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}   
+
+   // to rent , one floor(RC), in Zayarthiri, bed room, 60*80
+    else if (received_message.payload === 'wht100_mbedroom_in_zaya_tenant') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 2 lakhs per month, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92588042_147988300080303_5214463371088232448_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeGB2gX8DBfZCnr3mDKV62fwSNme3d8UdudI2Z7d3xR25yOIn8TsKwiAvR3U8M7ZCVzaqvFXgbc7YnyotdM4vVtF&_nc_ohc=K5GBbXAVOw0AX8EgTmU&_nc_ht=scontent.fmdl2-1.fna&oh=1dbd640db96801560c02478963b51321&oe=5EAFE58D",
+            "subtitle":"3BD, land type-(grant), face east, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+  // to rent , one floor(RC), in Zayarthiri, bed room, other area
+    else if (received_message.payload === 'onlyother_zayathi') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 2 lakhs per month, 80*70 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91497803_148004706745329_4934947964616441856_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeFIDrTTnrVgW7Y-gZH5yJXvBKz1BMcNxG0ErPUExw3EbWo0JPNgeHM3z9Pnj8baoVJYA7bUKfi_ECnrWvCAWpZA&_nc_ohc=mkJ5iRQDAFAAX8lHcZK&_nc_ht=scontent.fmdl2-1.fna&oh=d786b325fbd83e26763bfbf03e52d9c1&oe=5EADF6FA",
+            "subtitle":"3BD, land type-(slit), face east, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+
+
+
+/**********************************************************************************************************************/
+/**********************************************************************************************************************/
+
+
+
+
+
   /***********************************************************************/
     // to buy house in Zabu
 else if (received_message.payload === "zabtwp") {
@@ -5131,7 +5561,7 @@ else if (received_message.payload === "dekthi") {
   }
 
 // to buy land in Zayathiri, 40*60
-    else if (received_message.payload === 'tobuy_land_area_inzayad1other') {
+    else if (received_message.payload === 'tobuy_land_area_inzayad146') {
     response = {
     "attachment":{
       "type":"template",
@@ -5169,7 +5599,7 @@ else if (received_message.payload === "dekthi") {
 }
 
 // to buy land in Zayathiri, 60*60
-    else if (received_message.payload === 'tobuy_land_area_inzayad1other') {
+    else if (received_message.payload === 'tobuy_land_area_inzayad160') {
     response = {
     "attachment":{
       "type":"template",
@@ -5217,7 +5647,7 @@ else if (received_message.payload === "dekthi") {
         "elements": [ 
         
            {
-            "title":"land, 250 lakhs, 60*80 ft",
+            "title":"land, 200 lakhs, 60*80 ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92076615_147998313412635_430261903793586176_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeEVm_FWPjTJ2BufDDswKfkPFK-SCgwYCSYUr5IKDBgJJu5BnDZR4AHvnvwAnxyjlT9aGQZjA1mRTwhL9dwxDG9f&_nc_ohc=UQCbtGDcu14AX_cRlhb&_nc_ht=scontent.fmdl2-1.fna&oh=b8a6f31f69a2982e7fa3f50b97bfd7d8&oe=5EAED83E",
             "subtitle":"land type-(slit), face north, Negotiable",
             "default_action": {
@@ -5245,7 +5675,7 @@ else if (received_message.payload === "dekthi") {
   }
 }
 
-// to buy land in Zayathiri, Other are
+// to buy land in Zayathiri, Other area
     else if (received_message.payload === 'tobuy_land_area_inzayad1other') {
     response = {
     "attachment":{
@@ -5257,7 +5687,195 @@ else if (received_message.payload === "dekthi") {
            {
             "title":"land, 250 lakhs, 4.32 arce",
             "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91173485_147313630147770_7524269256431632384_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeHx7J_uE6K2gYtG3D2PPamXDrJ9p_115oQOsn2n_XXmhB0HVZ7f3lrYNBtzLgpB_vbEzwPaxQ6HungQm3Bqzy2q&_nc_ohc=DBqp7NaeREMAX_HivK2&_nc_ht=scontent.fmdl2-2.fna&oh=6b7e44248adb33bedc01617020c2509f&oe=5EAF7F6E",
-            "subtitle":"land type-(), face south, Negotiable",
+            "subtitle":"land type-(permit), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+/*************************************************************************************************************/
+/******************************************************************************************************************/
+
+
+/************************************/
+
+    // to rent land in Zayathiri twonship, area
+  else if (received_message.payload === "tezayl") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "torentz_land_area_inzayad146",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*60",       
+                          "payload": "torentz_land_area_inzayad160",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "torent_land_area_inzayad168",  
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Other area",
+                          "payload": "torent_land_area_inzayad1other",
+                        }
+                      ]
+      }
+  }
+
+// to rent land in Zayathiri, 40*60
+    else if (received_message.payload === 'torentz_land_area_inzayad146') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 1 lakh for 1 month, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91513938_147997343412732_2184803353274351616_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeHbEG6AVbBgKfxV7lLu7SEPDZHJLkRvnegNkckuRG-d6LVbeXwvrTB7r60wxpuqzmmPtlRTf3-CFc9YBIBz-8y-&_nc_ohc=bxsIVu2L0ywAX__8G89&_nc_ht=scontent.fmdl2-2.fna&oh=e401bc6e5d23e23c48dde30e65432005&oe=5EAFA9B4",
+            "subtitle":"land type-(grant), face east, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to rent land in Zayathiri, 60*60
+    else if (received_message.payload === 'torentz_land_area_inzayad160') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 1lakh for a month, 60*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91680436_148006486745151_4875582939536031744_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeGXoapM3L50BOyrZhvMyGHgpOOd7SlzHVGk453tKXMdUZhHMVY_SNV-jtIMIER77hIRIN7DD0yk7ybnIa7AZRj6&_nc_ohc=fWAFU4V_92QAX-Pyqhk&_nc_ht=scontent.fmdl2-2.fna&oh=04fbca9e0b7bd2c4086eb82062dfdf9b&oe=5EAE2F5A",
+            "subtitle":"land type-(permit), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+// to rent land in Zayathiri, 60*80
+    else if (received_message.payload === 'tobuy_land_area_inzayad168') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 1.5 lakh for a month, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92076615_147998313412635_430261903793586176_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeEVm_FWPjTJ2BufDDswKfkPFK-SCgwYCSYUr5IKDBgJJu5BnDZR4AHvnvwAnxyjlT9aGQZjA1mRTwhL9dwxDG9f&_nc_ohc=UQCbtGDcu14AX_cRlhb&_nc_ht=scontent.fmdl2-1.fna&oh=b8a6f31f69a2982e7fa3f50b97bfd7d8&oe=5EAED83E",
+            "subtitle":"land type-(slit), face north, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to rent land in Zayathiri, Other area
+    else if (received_message.payload === 'tobuy_land_area_inzayad1other') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 1 lakh for a month, 4.32 arce",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91173485_147313630147770_7524269256431632384_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeHx7J_uE6K2gYtG3D2PPamXDrJ9p_115oQOsn2n_XXmhB0HVZ7f3lrYNBtzLgpB_vbEzwPaxQ6HungQm3Bqzy2q&_nc_ohc=DBqp7NaeREMAX_HivK2&_nc_ht=scontent.fmdl2-2.fna&oh=6b7e44248adb33bedc01617020c2509f&oe=5EAF7F6E",
+            "subtitle":"land type-(permit), face south, Negotiable",
             "default_action": {
               "type": "web_url",
               "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
@@ -5285,7 +5903,12 @@ else if (received_message.payload === "dekthi") {
 
 
 
-/***********************************************************************/
+
+
+
+
+/****************************************************************************************************************/
+/***************************************************************************************************************/
 
     // to rent a house in Dekkhina
 else if (received_message.payload === "tenandek") {
@@ -5798,125 +6421,10 @@ else if (received_message.payload === "rc_zabu1_tenant") {
 /*****************************************************************/
 
 
- /***************************/
-
-    // to rent one floor(RC) only bed rooms special in Zayathiri for area
-  else if (received_message.payload === "tenanzay") {
-    response = {
-                  "text": "Please choose the house in which the number of bed room has",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "RC",
-                          "payload": "rc_onef_rzayathi1_tenant",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Other Type",
-                          "payload": "othertype_abc77_rzayathi1_tenant",
-                        }
-                      ]
-      }
-  }
-  // to rent Zayathiri, RC, floor
-    else if (received_message.payload === "rc_onef_rzayathi1_tenant") {
-    response = {
-                  "text": "Please choose the number of floor:",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "One floor",
-                          "payload": "onefloor_abcd1122_rzayathi1_tenant",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Two floor",
-                          "payload": "twofloor_abcd1122_rzayathi1_tenant",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Other floor",
-                          "payload": "otherfloor_abcd1122_rzayathi1_tenant",
-                        }
-                      ]
-      }
-  }
-  // to rent Zayathiri, RC, onefloor, types of room 
-     else if (received_message.payload === "onefloor_abcd1122_rzayathi1_tenant") {
-    response = {
-                  "text": "Do you want to rent the house in which Mbr included or only Br included?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "Mbr",
-                          "payload": "bed3below_onef_rzayathi1_tenant",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Only Br",
-                          "payload": "bed3above_onef_rzayathi1_tenant",
-                        }
-                      ]
-      }
-  }
-
-   // to rent Zayathiri, RC, onefloor, area
-  else if (received_message.payload === "bed3above_onef_rzayathi1_tenant") {
-    response = {
-                  "text": "Do you want what area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "60*60",
-                          "payload": "onlybed60_zayathi11_tenanta1",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "other",
-                          "payload": "onlybedother_zayathi11_tenanta1",
-                        }
-                      ]
-      }
-  }
 
 
-   // to rent Zayathiri, RC, onefloor, 60*60
-    else if (received_message.payload === 'onlybed60_zayathi11_tenanta1') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"RC, 150000 for 1 month",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91566102_147309916814808_3933244420186439680_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeGe2oH7A1JiUggWbdMpedaTuf90LosKVHe5_3QuiwpUd9XJAc2iTWERN-t1qRDIuwYPoXpw4DsDoNYeccAyPfLU&_nc_ohc=OfgBeO8iZQAAX8-YKe0&_nc_ht=scontent.fmdl2-2.fna&oh=b14c800be66697d2d87ca5b9950d5294&oe=5EAF6923",
-            "subtitle":"3BD, 60*60 ft",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaae"
-              }              
-            ]      
-          }
 
-        ]
-      }
-    }
-  }
-}
+
 
 
 
