@@ -5065,7 +5065,7 @@ else if (received_message.payload === "dekthi") {
 
 /**********************/
 
-    // to buy land in Zayathiri twonship
+    // to buy land in Zayathiri twonship, area
   else if (received_message.payload === "zayathi") {
     response = {
                   "text": "Do you want what area?",
@@ -5087,38 +5087,55 @@ else if (received_message.payload === "dekthi") {
                         },
                         {
                           "content_type": "text",
-                          "title": "other",
+                          "title": "Other area",
                           "payload": "tobuy_land_area_inzayad1other",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "tobuy_land_area_inzayad1whtever",
                         }
                       ]
       }
   }
 
-  // to buy land in Zayathiri,  estimated amount
-    else if (received_message.payload === 'tobuy_land_area_inzayad1other'  || received_message.payload === 'tobuy_land_area_inzayad1whtever') {
+// to buy land in Zayathiri, Other are
+    else if (received_message.payload === 'tobuy_land_area_inzayad1other') {
     response = {
-                  "text": "Please choose the estimated amount that you are avaliable to buy land:",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "below 700",
-                          "payload": "below700land_zayathi_tobuyd1",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "above 700",
-                          "payload": "above700land_zayathi_tobuyd2",
-                        }                      ]
-      }
-  }
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 150 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91513938_147997343412732_2184803353274351616_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeHbEG6AVbBgKfxV7lLu7SEPDZHJLkRvnegNkckuRG-d6LVbeXwvrTB7r60wxpuqzmmPtlRTf3-CFc9YBIBz-8y-&_nc_ohc=bxsIVu2L0ywAX__8G89&_nc_ht=scontent.fmdl2-2.fna&oh=e401bc6e5d23e23c48dde30e65432005&oe=5EAFA9B4",
+            "subtitle":"land type-(grant), face east, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
 
-// to buy land in Zayathiri,  below 700
-    else if (received_message.payload === 'below700land_zayathi_tobuyd1') {
+        ]
+      }
+    }
+  }
+}
+
+
+
+// to buy land in Zayathiri, Other are
+    else if (received_message.payload === 'tobuy_land_area_inzayad1other') {
     response = {
     "attachment":{
       "type":"template",
@@ -5129,7 +5146,7 @@ else if (received_message.payload === "dekthi") {
            {
             "title":"land, 250 lakhs, 4.32 arce",
             "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91173485_147313630147770_7524269256431632384_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeHx7J_uE6K2gYtG3D2PPamXDrJ9p_115oQOsn2n_XXmhB0HVZ7f3lrYNBtzLgpB_vbEzwPaxQ6HungQm3Bqzy2q&_nc_ohc=DBqp7NaeREMAX_HivK2&_nc_ht=scontent.fmdl2-2.fna&oh=6b7e44248adb33bedc01617020c2509f&oe=5EAF7F6E",
-            "subtitle":" Negotiable",
+            "subtitle":"land type-(), face south, Negotiable",
             "default_action": {
               "type": "web_url",
               "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
@@ -6763,11 +6780,6 @@ else if (payload === 'innnter') {
                           "type": "postback",
                           "title": "Pyinmana Township",
                           "payload": "pyi5",
-                        },
-                        {
-                          "type": "postback",
-                          "title": "Any Township",
-                          "payload": "anytwp_buy_land",
                         }
                               ]
                             }
