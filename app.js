@@ -5546,6 +5546,47 @@ else if (received_message.payload === "rc_zabu1_tenant") {
                     "quick_replies": [
                          {
                           "content_type": "text",
+                          "title": "RC",
+                          "payload": "rc_onef_rzayathi1_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Other Type",
+                          "payload": "othertype_abc77_rzayathi1_tenant",
+                        }
+                      ]
+      }
+  }
+  // to rent Zayathiri, RC, floor
+    else if (received_message.payload === "rc_onef_rzayathi1_tenant") {
+    response = {
+                  "text": "Please choose the number of floor:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "One floor",
+                          "payload": "onefloor_abcd1122_rzayathi1_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Two floor",
+                          "payload": "twofloor_abcd1122_rzayathi1_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Other floor",
+                          "payload": "otherfloor_abcd1122_rzayathi1_tenant",
+                        }
+                      ]
+      }
+  }
+  // to rent Zayathiri, RC, onefloor, types of room 
+     else if (received_message.payload === "onefloor_abcd1122_rzayathi1_tenant") {
+    response = {
+                  "text": "Do you want to rent the house in which Mbr included or only Br included?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
                           "title": "Mbr",
                           "payload": "bed3below_onef_rzayathi1_tenant",
                         },
@@ -5553,43 +5594,13 @@ else if (received_message.payload === "rc_zabu1_tenant") {
                           "content_type": "text",
                           "title": "Only Br",
                           "payload": "bed3above_onef_rzayathi1_tenant",
-                        },
-                       
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whtever_onef_onlybed_rzayathi1_tenant",
                         }
                       ]
       }
   }
 
-    // to rent one floor(RC) only bed rooms special in Zayathiri for area
-  else if (received_message.payload === "") {
-    response = {
-                  "text": "Please choose the house in which the number of bed room has",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "below 3",
-                          "payload": "bed3below_onef_rzayathi1_tenant",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "3 and above",
-                          "payload": "bed3above_onef_rzayathi1_tenant",
-                        },
-                       
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whtever_onef_onlybed_rzayathi1_tenant",
-                        }
-                      ]
-      }
-  }
-    // to rent below 3 bed one floor(RC) in Zayathiri for area
-  else if (received_message.payload === "bed3below_onef_rzayathi1_tenant") {
+   // to rent Zayathiri, RC, onefloor, area
+  else if (received_message.payload === "bed3above_onef_rzayathi1_tenant") {
     response = {
                   "text": "Do you want what area?",
                     "quick_replies": [
@@ -5602,43 +5613,14 @@ else if (received_message.payload === "rc_zabu1_tenant") {
                           "content_type": "text",
                           "title": "other",
                           "payload": "onlybedother_zayathi11_tenanta1",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "onlybed_whatever_zatathi11_tenanta1",
-                        }
-                      ]
-      }
-  }
-    //  to rent 3 and above  bed, one floor(RC) in Zaya for area
-  else if (received_message.payload === "bed3above_onef_rzayathi1_tenant") {
-    response = {
-                  "text": "Do you want what area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "60*60",
-                          "payload": "bedroom88_in_zayathi2_tenantba",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "other",
-                          "payload": "bedother_zayathi2_tenantba",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "bedroom_wharea_in_zayathi2_tenantba",
                         }
                       ]
       }
   }
 
 
-
-   // to rent above 3 bed one floor(RC) in Zayarthiri, bed room (3 and above), 60* 60
-    else if (received_message.payload === 'bedroom88_in_zayathi2_tenantba') {
+   // to rent Zayathiri, RC, onefloor, 60*60
+    else if (received_message.payload === 'onlybed60_zayathi11_tenanta1') {
     response = {
     "attachment":{
       "type":"template",
