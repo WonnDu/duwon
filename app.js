@@ -3763,7 +3763,7 @@ else if (received_message.payload === "zaytwp") {
                           {
                           "content_type": "text",
                           "title": "40*60",
-                          "payload": "bedaacc1_bedroom_i46n_zaya",
+                          "payload": "bedaacc1_bedroom_i46n_zaya",  // not be
                         },
                          {
                           "content_type": "text",
@@ -3778,7 +3778,7 @@ else if (received_message.payload === "zaytwp") {
                         {
                           "content_type": "text",
                           "title": "other",
-                          "payload": "onlybedother_zayathi11",  // not yet
+                          "payload": "onlybedother_zayathi11",  
                         }
                       ]
       }
@@ -3899,7 +3899,43 @@ else if (received_message.payload === "zaytwp") {
     }
   }
 }
+  // to buy , one floor(RC), in Zayarthiri, bed room, other area
+    else if (received_message.payload === 'onlybedother_zayathi11') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 800 lakhs, 60*70 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91497803_148004706745329_4934947964616441856_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeFIDrTTnrVgW7Y-gZH5yJXvBKz1BMcNxG0ErPUExw3EbWo0JPNgeHM3z9Pnj8baoVJYA7bUKfi_ECnrWvCAWpZA&_nc_ohc=mkJ5iRQDAFAAX8lHcZK&_nc_ht=scontent.fmdl2-1.fna&oh=d786b325fbd83e26763bfbf03e52d9c1&oe=5EADF6FA",
+            "subtitle":"3BD, land type-(slit), face east, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
 
+        ]
+      }
+    }
+  }
+}
   /***********************************************************************/
     // to buy house in Zabu
 else if (received_message.payload === "zabtwp") {
@@ -5083,7 +5119,7 @@ else if (received_message.payload === "dekthi") {
                         {
                           "content_type": "text",
                           "title": "60*80",
-                          "payload": "tobuy_land_area_inzayad168",
+                          "payload": "tobuy_land_area_inzayad168",  
                         },
                         {
                           "content_type": "text",
@@ -5169,8 +5205,6 @@ else if (received_message.payload === "dekthi") {
     }
   }
 }
-
-
 
 // to buy land in Zayathiri, Other are
     else if (received_message.payload === 'tobuy_land_area_inzayad1other') {
