@@ -5077,7 +5077,7 @@ else if (received_message.payload === "dekthi") {
                         },
                         {
                           "content_type": "text",
-                          "title": "60*60",
+                          "title": "60*60",       // not yet
                           "payload": "tobuy_land_area_inzayad160",
                         },
                         {
@@ -5094,7 +5094,7 @@ else if (received_message.payload === "dekthi") {
       }
   }
 
-// to buy land in Zayathiri, Other are
+// to buy land in Zayathiri, 40*60
     else if (received_message.payload === 'tobuy_land_area_inzayad1other') {
     response = {
     "attachment":{
@@ -5107,6 +5107,44 @@ else if (received_message.payload === "dekthi") {
             "title":"land, 150 lakhs, 40*60 ft",
             "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91513938_147997343412732_2184803353274351616_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeHbEG6AVbBgKfxV7lLu7SEPDZHJLkRvnegNkckuRG-d6LVbeXwvrTB7r60wxpuqzmmPtlRTf3-CFc9YBIBz-8y-&_nc_ohc=bxsIVu2L0ywAX__8G89&_nc_ht=scontent.fmdl2-2.fna&oh=e401bc6e5d23e23c48dde30e65432005&oe=5EAFA9B4",
             "subtitle":"land type-(grant), face east, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to buy land in Zayathiri, 60*80
+    else if (received_message.payload === 'tobuy_land_area_inzayad168') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 250 lakhs, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92076615_147998313412635_430261903793586176_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeEVm_FWPjTJ2BufDDswKfkPFK-SCgwYCSYUr5IKDBgJJu5BnDZR4AHvnvwAnxyjlT9aGQZjA1mRTwhL9dwxDG9f&_nc_ohc=UQCbtGDcu14AX_cRlhb&_nc_ht=scontent.fmdl2-1.fna&oh=b8a6f31f69a2982e7fa3f50b97bfd7d8&oe=5EAED83E",
+            "subtitle":"land type-(slit), face north, Negotiable",
             "default_action": {
               "type": "web_url",
               "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
