@@ -3744,6 +3744,44 @@ else if (received_message.payload === "zaytwp") {
       }
   }
 
+  // to buy , one floor(RC), in Zayarthiri, bed room, 40* 60
+    else if (received_message.payload === 'bedaacc1_bedroom_i46n_zaya') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 430 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92411898_147990653413401_1525933800742191104_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_eui2=AeHBsVC7TLdFJm2fLgZ5UqX3q8KD7opYtsKrwoPuili2woW_93kuxylkFMVFz5DU5-BC0u6TafZAWv0AweUc0PfN&_nc_ohc=VleE8dz-FGMAX9p4286&_nc_ht=scontent.fmdl2-1.fna&oh=17f7467c5fbd8a2a945ab3e817eb758f&oe=5EAF513E",
+            "subtitle":"3BD, land type-(grant), face east, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
 
 
    // to buy , one floor(RC), in Zayarthiri, bed room, 60* 60
