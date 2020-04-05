@@ -3712,50 +3712,28 @@ else if (received_message.payload === "zaytwp") {
   }
 }
 
+  /***************************/
 
-
-/*
-// above whatever master bed one floor(RC) in Zayathi for area
-  else if (received_message.payload === "") {
+ 
+ // to buy one floor(RC), only bed rooms , in Zayathiri for area
+  else if (received_message.payload === "onef_bed_zayathi") {
     response = {
-                  "text": "Do you want what area?",
+                  "text": "Do you want how much wide land area of house?",
                     "quick_replies": [
-                         {
+                          {
                           "content_type": "text",
                           "title": "40*60",
-                          "payload": "wht8_mbedroom_in_zaya",
+                          "payload": "bedaacc1_bedroom_i46n_zaya",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "60*60",
+                          "payload": "bedroom88_in_zayathi2",
                         },
                         {
                           "content_type": "text",
                           "title": "60*80",
                           "payload": "wht100_mbedroom_in_zaya",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "other",
-                          "payload": "otherbed_area_zayathi",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whtwht_mbedroom_in_zayathiri",
-                        }
-                      ]
-      }
-  }
-  */
-  /***************************/
-
- 
- // to buy one floor(RC), only bed rooms special, in Zayathiri for area
-  else if (received_message.payload === "onef_bed_zayathi") {
-    response = {
-                  "text": "Do you want how much wide land area of house?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "60*60",
-                          "payload": "bedroom88_in_zayathi2",
                         },
                         {
                           "content_type": "text",
@@ -3768,7 +3746,7 @@ else if (received_message.payload === "zaytwp") {
 
 
 
-   // to buy , one floor(RC), in Zayarthiri, bed room (3 and above), 60* 60
+   // to buy , one floor(RC), in Zayarthiri, bed room, 60* 60
     else if (received_message.payload === 'bedroom88_in_zayathi2') {
     response = {
     "attachment":{
@@ -3790,6 +3768,44 @@ else if (received_message.payload === "zaytwp") {
               {
                 "type":"web_url",
                 "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+   // to buy , one floor(RC), in Zayarthiri, bed room, 60*80
+    else if (received_message.payload === 'wht100_mbedroom_in_zaya') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 675 lakhs, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92588042_147988300080303_5214463371088232448_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeGB2gX8DBfZCnr3mDKV62fwSNme3d8UdudI2Z7d3xR25yOIn8TsKwiAvR3U8M7ZCVzaqvFXgbc7YnyotdM4vVtF&_nc_ohc=K5GBbXAVOw0AX8EgTmU&_nc_ht=scontent.fmdl2-1.fna&oh=1dbd640db96801560c02478963b51321&oe=5EAFE58D",
+            "subtitle":"3BD, land type-(grant), Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
                 "title":"More Information"
               },
               {
