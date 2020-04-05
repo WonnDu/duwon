@@ -3592,6 +3592,114 @@ else if (received_message.payload === "zaytwp") {
 
       }
   }
+
+
+  /**********************/
+
+
+  // to buy house, RC, two floor, in Zayathiri 
+  else if (received_message.payload === "twof_zayathi") {
+    response = {
+                  "text": "Please choose the estimated price you want to use",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "3 lakhs and below 3 lakhs",
+                          "payload": "twofloor_below3and3_rzayathi1_tobuyt",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "above 3 lakhs",
+                          "payload": "otherfloor_above3lakhs_rzayathi1_tobuyt",
+                        }
+                      ]
+
+      }
+  }
+
+  // to buy zayathiri, RC, two floor, 3 lakhs and below 3 lakhs
+    else if (received_message.payload === 'twofloor_below3and3_rzayathi1_tobuyt') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 1500 lakhs, 70*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91684696_148082903404176_4744287077787500544_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_eui2=AeGJrrl3pJoyH7bJsFh_A2zSY8El8xmJIX9jwSXzGYkhf7StKf4IQhKXk80QagK5ApXmLNQKOrd8a6bfq2o88g1g&_nc_ohc=h0vQlFNpx4MAX-hpFps&_nc_ht=scontent.fmdl2-1.fna&oh=600219d816e675e680fce055e0fc99b8&oe=5EB0DB11",
+            "subtitle":"Mbr-(2), Br-(3), land type-(slit),face east",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+// to buy zayathiri, RC, two floor, above 3 lakhs
+    else if (received_message.payload === 'otherfloor_above3lakhs_rzayathi1_tobuyt') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+            {
+            "title":"RC, 2000 lakhs, 60*90 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91399493_148081813404285_4132688193013153792_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeE42tNkW6IjD7xuSoc4pKcvu3wVLCYN8EW7fBUsJg3wRa9MvNC92sgpU97iz6gK3h3Pp72U_YCXpYvUeiB9ljU4&_nc_ohc=WeoFtmSfSEUAX8s5Yxz&_nc_ht=scontent.fmdl2-1.fna&oh=6a03ed097e52a57a7f64df976ecb4a4b&oe=5EAE99A3",
+            "subtitle":"Mbr-(4), Br-(1), land type-(grant), face east",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+
+        ]
+      }
+    }
+  }
+}
+
+
+
+         
+  /**********************/
+
+
+
   // to buy house, RC, one floor, in zayathiri
   else if (received_message.payload === "onef_zayathi") {
     response = {
@@ -3983,6 +4091,110 @@ else if (received_message.payload === "tenanzay") {
 
       }
   }
+
+
+/*****************/
+
+  // to rent house, RC, two floor, in Zayathiri 
+  else if (received_message.payload === "twofloor_abcd1122_rzayathi1_tenant") {
+    response = {
+                  "text": "Please choose the estimated price you want to use",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "3 lakhs and below 3 lakhs",
+                          "payload": "twofloor_below3and3_rzayathi1_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "above 3 lakhs",
+                          "payload": "otherfloor_above3lakhs_rzayathi1_tenant",
+                        }
+                      ]
+
+      }
+  }
+
+  // to rent zayathiri, RC, two floor, 3 lakhs and below 3 lakhs
+    else if (received_message.payload === 'twofloor_below3and3_rzayathi1_tenant') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 3 lakhs per a month, 70*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91684696_148082903404176_4744287077787500544_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_eui2=AeGJrrl3pJoyH7bJsFh_A2zSY8El8xmJIX9jwSXzGYkhf7StKf4IQhKXk80QagK5ApXmLNQKOrd8a6bfq2o88g1g&_nc_ohc=h0vQlFNpx4MAX-hpFps&_nc_ht=scontent.fmdl2-1.fna&oh=600219d816e675e680fce055e0fc99b8&oe=5EB0DB11",
+            "subtitle":"Mbr-(2), Br-(3), aircon-(3),face east",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+// to rent zayathiri, RC, two floor, above 3 lakhs
+    else if (received_message.payload === 'otherfloor_above3lakhs_rzayathi1_tenant') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+            {
+            "title":"RC, 5 lakhs per month, 60*90 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91399493_148081813404285_4132688193013153792_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeE42tNkW6IjD7xuSoc4pKcvu3wVLCYN8EW7fBUsJg3wRa9MvNC92sgpU97iz6gK3h3Pp72U_YCXpYvUeiB9ljU4&_nc_ohc=WeoFtmSfSEUAX8s5Yxz&_nc_ht=scontent.fmdl2-1.fna&oh=6a03ed097e52a57a7f64df976ecb4a4b&oe=5EAE99A3",
+            "subtitle":"Mbr-(4), Br-(1), face east",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+
+        ]
+      }
+    }
+  }
+}
+
+/****************/
+
+
+
   // to rent house, RC, one floor, types of room, in zayathiri
   else if (received_message.payload === "onefloor_abcd1122_rzayathi1_tenant") {
     response = {
