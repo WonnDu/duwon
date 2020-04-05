@@ -3595,7 +3595,7 @@ else if (received_message.payload === "zaytwp") {
   // to buy house, RC, one floor, in zayathiri
   else if (received_message.payload === "onef_zayathi") {
     response = {
-                  "text": "Do you want what types of room?",
+                  "text": "Do you want the house in which Mbr included or only Br included?",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -3611,26 +3611,8 @@ else if (received_message.payload === "zaytwp") {
       }
   }
   /************/
-   // one floor(RC) only master bed rooms special in Zayathiri for area
+ // to buy zayathiri, house, RC, one floor, master bed, area
   else if (received_message.payload === "onef_mb_zayathi") {
-    response = {
-                  "text": "Please choose the house in which the number of master bed room has",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "below 3",
-                          "payload": "bed3below_onef_rczayathi",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "3 and above",
-                          "payload": "bed3above_onef_rczayathi",
-                        }
-                      ]
-      }
-  }
-    // below 3 master bed one floor(RC) in Zayathi for area
-  else if (received_message.payload === "bed3below_onef_rczayathi") {
     response = {
                   "text": "Do you want what area?",
                     "quick_replies": [
@@ -3652,29 +3634,45 @@ else if (received_message.payload === "zaytwp") {
                       ]
       }
   }
-    // above 3 master bed, one floor(RC) in Zayathiri for area
-  else if (received_message.payload === "bed3above_onef_rczayathi") {
+ 
+
+  // to buy , one floor(RC), in Zayarthiri, master bed room , 60* 60
+    else if (received_message.payload === 'onlymbed60_zayathi') {
     response = {
-                  "text": "Do you want what area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "40*60",
-                          "payload": "mbedroom88_in_zayathi",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*80",
-                          "payload": "mbedroom11_in_zayathi",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "other",
-                          "payload": "otherarea_zayathi",
-                        }
-                      ]
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 450 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91795685_147979493414517_3541170500845699072_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeGDVXPDiTSc8vXaN7qDn0awga7GRrFvfoqBrsZGsW9-itxQ0gf9L-DyJuhhjkeXD9yhvEkuxAr9VDV_BCS5OT7c&_nc_ohc=p20XzokA4MoAX8MM8H2&_nc_ht=scontent.fmdl2-1.fna&oh=807cc2770c0d3e2edb4161709ae319e5&oe=5EB09908",
+            "subtitle":"Mbr-(2), Br-(1), land type-(grant), Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
       }
+    }
   }
+}
 /*
 // above whatever master bed one floor(RC) in Zayathi for area
   else if (received_message.payload === "") {
