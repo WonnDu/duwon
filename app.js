@@ -5697,7 +5697,7 @@ else if (received_message.payload === "dekthi") {
 
 
 // to buy land in Zabuthiri,  Other area
-    else if (received_message.payload === '' ) {
+    else if (received_message.payload === 'onlyother7dlandin_zabuu7' ) {
     response = {
     "attachment":{
       "type":"template",
