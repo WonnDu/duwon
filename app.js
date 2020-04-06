@@ -4740,6 +4740,15 @@ else if (received_message.payload === "zabtwp") {
 
   /***************************/
 
+// to buy zabu, house (RC), other floor
+    else if (received_message.payload === 'otherff1_zabuthiri11aa' ) {
+    response = {
+                "text": "There is no property avaliable. Sorry for you. Thanks for contacting us."
+  }
+}
+
+  /***************************/
+
   // to buy zabu, house (RC), one floor, master bed, 40*60
     else if (received_message.payload === 'onlymbed60_zabu7_tobuyz1' ) {
     response = {
@@ -4860,7 +4869,44 @@ else if (received_message.payload === "zabtwp") {
                 "text": "There is no property avaliable. Sorry for you. Thanks for contacting us."
   }
 }
+// to buy zabu, house (other type)
+    else if (received_message.payload === 'nancat_zabu1' ) {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+  
+       
+           {
+            "title":"RC, 110 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92055239_148410403371426_3609555549953196032_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeEcxWyddvgH7C0Z2B2n6syBX7GQJ4Ddfc1fsZAngN19zZZV7BUT4-dAQhBpIFP153IJzNvhPOpKrB4lWAPsT5j7&_nc_ohc=xGj5wNgncCEAX-XowML&_nc_ht=scontent.fmdl2-2.fna&oh=5bcf3aac02a9537be165941d2cd58004&oe=5EB13DBA",
+            "subtitle":"land type-(grant),face south",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
 
+        ]
+      }
+    }
+  }
+}
 
 /**************************************************/
 
@@ -5505,7 +5551,7 @@ else if (received_message.payload === "dekthi") {
 
   
 /************************************************************************/
-  // area (to buy land in Zabuthiri )
+  // to buy land in Zabuthiri, area
   else if (received_message.payload === "zabuthi") {
     response = {
                   "text": "Do you want what area?",
@@ -5522,41 +5568,58 @@ else if (received_message.payload === "dekthi") {
                         },
                         {
                           "content_type": "text",
-                          "title": "60*80",
+                          "title": "100*100",
                           "payload": "only68cclandin_zabuu7",
                         },
                         {
                           "content_type": "text",
-                          "title": "other",
+                          "title": "Other area",
                           "payload": "onlyother7dlandin_zabuu7",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whatever77landin_zabuu7",
                         }
                       ]
       }
   }
+
+// to buy land in Zabuthiri,  60*60
     else if (received_message.payload === 'only60blandin_zabuu7') {
     response = {
-                  "text": "Please choose the estimated amount that you are avaliable to buy land:",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "below 700",
-                          "payload": "below700land_zabuthiri",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "above 700",
-                          "payload": "above700land_zabuthiri",
-                        }                      ]
-      }
-  }
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 350 lakhs, 60*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92401981_148398946705905_1667673824658718720_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeGaL6IGTy20gFrY_-GIyeNJuwpVQ952uLu7ClVD3na4u21FAthxsnpldZlENVuE1St4BuxvhXlda1-KwZfSYc5U&_nc_ohc=kvy3nWUh4R8AX8_CBXm&_nc_ht=scontent.fmdl2-1.fna&oh=0fa5d2b84682b6977536695d3e6fe792&oe=5EAED27B",
+            "subtitle":"face south, land type-(grant), Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
 
-// to buy land in Zabuthiri,  below 700
-    else if (received_message.payload === 'below700land_zabuthiri' || received_message.payload === 'whatever77landin_zabuu7') {
+        ]
+      }
+    }
+  }
+}
+
+// to buy land in Zabuthiri,  40*60
+    else if (received_message.payload === 'only46alandin_zabuu7') {
     response = {
     "attachment":{
       "type":"template",
@@ -5565,18 +5628,55 @@ else if (received_message.payload === "dekthi") {
         "elements": [ 
         
            {
-            "title":"land, 430 lakhs, 60*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91569303_147298520149281_8262866338419048448_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_eui2=AeFHT60o_RiNYreBiF3myrwk1WGvycQV-PTVYa_JxBX49H36rjRFa4US4BQ6m9LmMvDsitWViNczJzElfSf24tP2&_nc_ohc=-Hg5lmp5UHwAX_bv6Yb&_nc_ht=scontent.fmdl2-2.fna&oh=8d600e8db9f47f8907467e204cee31d7&oe=5EAB9412",
-            "subtitle":"on the main street, Negotiable",
+            "title":"land, 430 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91613770_148401023372364_5350547653220368384_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeGOUGv8X4g8aZ7KMUkbj143aMv2-XqcnNxoy_b5epyc3Cnk6PadZmgqlkRrzQ4wGGBVuJTGEsvDBWUtO4ljXG3F&_nc_ohc=R-2gfYEIeG8AX-DceKM&_nc_ht=scontent.fmdl2-1.fna&oh=94b59f25df3b4848c60e90d9cf646833&oe=5EB20BEC",
+            "subtitle":"face west, land type-(permit),Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+// to buy land in Zabuthiri,  100*100
+    else if (received_message.payload === 'only68cclandin_zabuu7') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 200 lakhs, 100*100 ft, face west,",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91810678_148403216705478_1277350765916061696_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeGssc_xyPyaeyFDkreQEylkRUbrTdet0OJFRutN163Q4mTLjEwCflsG5eofWpDqUaRGl647jk3Ph9AG_80NfmOy&_nc_ohc=IgL8saxP5bUAX_4kTPj&_nc_ht=scontent.fmdl2-1.fna&oh=b3f0f3b95ccef22e52f67856290eeef2&oe=5EB1A0F1",
+            "subtitle":"land type-(village land),Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
                 "title":"More Information"
               },
               {
@@ -5596,11 +5696,8 @@ else if (received_message.payload === "dekthi") {
 
 
 
-/************************************/
-
-
-// to buy land in Zabuthiri,  (area - other)
-    else if (received_message.payload === 'onlyother7dlandin_zabuu7' || received_message.payload === 'whatever77landin_zabuu7') {
+// to buy land in Zabuthiri,  Other area
+    else if (received_message.payload === '' ) {
     response = {
     "attachment":{
       "type":"template",
@@ -5609,40 +5706,18 @@ else if (received_message.payload === "dekthi") {
         "elements": [ 
         
            {
-            "title":"land, 1800 lakhs, 190*220 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91805614_147299203482546_76056547892920320_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeH4h7ykkbmGGTKcmLaBw8XKWqiB-qGMHnFaqIH6oYwecWEGWD2zuJ5Tqcy3b8ALHXeWsPopT5BK6L6Yns0-n-aR&_nc_ohc=88D3t-PnjhcAX_n05c1&_nc_ht=scontent.fmdl2-2.fna&oh=54f8de63fc7c9f6d3cf1a98b1f671264&oe=5EAC414A",
-            "subtitle":"Negotiable",
+            "title":"land, 550 lakhs, 80*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92100656_148405230038610_4893887046474530816_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeFDDuLfnVZj-6Zb_dij7f9eN5WYIm8s5m83lZgibyzmbyyQrMoO7j7TGod3Si3a4sh3egQATLC7pmbmzTaNiReP&_nc_ohc=zE-iyX7f2hUAX9uZRd6&_nc_ht=scontent.fmdl2-2.fna&oh=5a864e5a88facb440ce6aeeae5788ad7&oe=5EB1BE62",
+            "subtitle":"land type-(grant), face east, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaae"
-              }              
-            ]      
-          },
-          {
-            "title":"land, 170 lakhs, 30*87 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92130780_147306520148481_5058098081585692672_n.jpg?_nc_cat=105&_nc_sid=110474&_nc_eui2=AeGajxtcVRFHVhzlZf2zTkI1pYf6y6EsQNulh_rLoSxA2848HF0uMHvJpTZA3EIlgrol4oQutlbhOYqS5Au7CLFt&_nc_ohc=AnRGql5dFDkAX8UhJi8&_nc_ht=scontent.fmdl2-2.fna&oh=f337774cae6165c4b5d8ec79c30244a1&oe=5EAF3A83",
-            "subtitle":"Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
                 "title":"More Information"
               },
               {
@@ -5659,7 +5734,8 @@ else if (received_message.payload === "dekthi") {
   }
 }
 
-/**********************/
+/********************************************/
+/********************************************/
 
     // to buy land in Zayathiri twonship, area
   else if (received_message.payload === "zayathi") {
@@ -5827,6 +5903,190 @@ else if (received_message.payload === "dekthi") {
               {
                 "type":"web_url",
                 "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+/************************************************/
+/*************************************************/
+  // to rent land in Zabuthiri, area
+  else if (received_message.payload === "tezal") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "only46alandin_zabuu7_rent1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*60",
+                          "payload": "only60blandin_zabuu7_rent1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "100*100",
+                          "payload": "only68cclandin_zabuu7_rent1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Other area",
+                          "payload": "onlyother7dlandin_zabuu7_rent1",
+                        }
+                      ]
+      }
+  }
+
+// to rent land in Zabuthiri,  60*60
+    else if (received_message.payload === 'only60blandin_zabuu7_rent1') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 1.5 lakhs per month, 60*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92401981_148398946705905_1667673824658718720_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeGaL6IGTy20gFrY_-GIyeNJuwpVQ952uLu7ClVD3na4u21FAthxsnpldZlENVuE1St4BuxvhXlda1-KwZfSYc5U&_nc_ohc=kvy3nWUh4R8AX8_CBXm&_nc_ht=scontent.fmdl2-1.fna&oh=0fa5d2b84682b6977536695d3e6fe792&oe=5EAED27B",
+            "subtitle":"face south, land type-(grant), Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to buy land in Zabuthiri,  40*60
+    else if (received_message.payload === 'only46alandin_zabuu7_rent1') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 1 lakh per month, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91613770_148401023372364_5350547653220368384_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeGOUGv8X4g8aZ7KMUkbj143aMv2-XqcnNxoy_b5epyc3Cnk6PadZmgqlkRrzQ4wGGBVuJTGEsvDBWUtO4ljXG3F&_nc_ohc=R-2gfYEIeG8AX-DceKM&_nc_ht=scontent.fmdl2-1.fna&oh=94b59f25df3b4848c60e90d9cf646833&oe=5EB20BEC",
+            "subtitle":"face west, land type-(permit),Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+// to buy land in Zabuthiri,  100*100
+    else if (received_message.payload === 'only68cclandin_zabuu7_rent1') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 2 lakhs per month, 100*100 ft, face west,",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91810678_148403216705478_1277350765916061696_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeGssc_xyPyaeyFDkreQEylkRUbrTdet0OJFRutN163Q4mTLjEwCflsG5eofWpDqUaRGl647jk3Ph9AG_80NfmOy&_nc_ohc=IgL8saxP5bUAX_4kTPj&_nc_ht=scontent.fmdl2-1.fna&oh=b3f0f3b95ccef22e52f67856290eeef2&oe=5EB1A0F1",
+            "subtitle":"land type-(village land),Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+
+
+// to buy land in Zabuthiri,  Other area
+    else if (received_message.payload === 'onlyother7dlandin_zabuu7_rent1' ) {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 1.5 lakhs per month, 80*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92100656_148405230038610_4893887046474530816_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeFDDuLfnVZj-6Zb_dij7f9eN5WYIm8s5m83lZgibyzmbyyQrMoO7j7TGod3Si3a4sh3egQATLC7pmbmzTaNiReP&_nc_ohc=zE-iyX7f2hUAX9uZRd6&_nc_ht=scontent.fmdl2-2.fna&oh=5a864e5a88facb440ce6aeeae5788ad7&oe=5EB1BE62",
+            "subtitle":"land type-(grant), face east, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
                 "title":"More Information"
               },
               {
@@ -6526,6 +6786,46 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
             "title":"RC,  3 lakhs per month, 60*70ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92286133_148342503378216_8058588730224541696_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeGW9jsT3UUCPItS1rODRK9EqjIIL6S_Ya6qMggvpL9hrntDuQxVhp5423O7pzZ-QLsKl_y2RryQO5-634sWMyjF&_nc_ohc=UjaEQmobu1cAX9df-bm&_nc_ht=scontent.fmdl2-1.fna&oh=00176f4a33e5dabdbd4164e50de1fd24&oe=5EB1A6D0",
             "subtitle":"3BD, face west",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+/**********************/
+
+// to buy zabu, house (other type)
+    else if (received_message.payload === 'nancat_zabu1_tenant' ) {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+  
+       
+           {
+            "title":"RC, 1 lakh per month, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92055239_148410403371426_3609555549953196032_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeEcxWyddvgH7C0Z2B2n6syBX7GQJ4Ddfc1fsZAngN19zZZV7BUT4-dAQhBpIFP153IJzNvhPOpKrB4lWAPsT5j7&_nc_ohc=xGj5wNgncCEAX-XowML&_nc_ht=scontent.fmdl2-2.fna&oh=5bcf3aac02a9537be165941d2cd58004&oe=5EB13DBA",
+            "subtitle":"land type-(grant),face south",
             "default_action": {
               "type": "web_url",
               "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
