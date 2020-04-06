@@ -3604,7 +3604,7 @@ else if (received_message.payload === "zaytwp") {
                     "quick_replies": [
                          {
                           "content_type": "text",
-                          "title": "3 lakhs and below 3 lakhs",
+                          "title": "3lakhs & below 3lakhs",
                           "payload": "twofloor_below3and3_rzayathi1_tobuyt",
                         },
                         {
@@ -4102,7 +4102,7 @@ else if (received_message.payload === "tenanzay") {
                     "quick_replies": [
                          {
                           "content_type": "text",
-                          "title": "3 lakhs and below 3 lakhs",
+                          "title": "3lakhs & below 3lakhs",
                           "payload": "twofloor_below3and3_rzayathi1_tenant",
                         },
                         {
@@ -4364,7 +4364,7 @@ else if (received_message.payload === "tenanzay") {
 
  
  // to rent one floor(RC), only bed rooms , in Zayathiri for area
-  else if (received_message.payload === "onef_bed_zayathi") {
+  else if (received_message.payload === "bed3below_onef_rzayathi1_tenant") {
     response = {
                   "text": "Do you want how much wide land area of house?",
                     "quick_replies": [
@@ -6038,7 +6038,7 @@ else if (received_message.payload === "dekthi") {
 
 
 // to rent land in Zayathiri, 60*80
-    else if (received_message.payload === 'tobuy_land_area_inzayad168') {
+    else if (received_message.payload === 'torent_land_area_inzayad168') {
     response = {
     "attachment":{
       "type":"template",
@@ -6076,7 +6076,7 @@ else if (received_message.payload === "dekthi") {
 }
 
 // to rent land in Zayathiri, Other area
-    else if (received_message.payload === 'tobuy_land_area_inzayad1other') {
+    else if (received_message.payload === 'torent_land_area_inzayad1other') {
     response = {
     "attachment":{
       "type":"template",
