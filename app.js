@@ -6094,6 +6094,12 @@ else if (received_message.payload === "tenandek") {
  //  to rent dekkhina, (house)RC, onefloor, only Br, 2 lakhs & below it
     else if (received_message.payload === 'torent_dekki_onefonlybr2below_tenant' ) {
     response = {
+
+        "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
                 {
             "title":"RC, 1.5 lakhs per month, 40*60 ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92230135_148477376698062_1564226552332288000_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeEZFBGf-MZFY-HQQT6oS8pmO89u87ddanY7z27zt11qdhxc_4UlJ2I4G8_DIhm9ZJ46w_KGePmKb2a2UtHGYbPN&_nc_ohc=9q5ZYbuYXb4AX8xMkbB&_nc_ht=scontent.fmdl2-1.fna&oh=a2879fe65108db605e44fc675cd3dacd&oe=5EB10535",
@@ -6114,8 +6120,11 @@ else if (received_message.payload === "tenandek") {
                 "title":"Yes, I'm interested",
                 "payload":"aaae"
               }              
+            ]
+            }
             ]      
           }
+        }
   }
 }
 
