@@ -3408,145 +3408,6 @@ else if (received_message.payload === "dektwp") {
 
 
 
-/*
-// above whatever master bed one floor(RC) in Dek for area
-  else if (received_message.payload === "whtever_onef_onlybed_dek") {
-    response = {
-                  "text": "Do you want what area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "40*60",
-                          "payload": "wht8_mbedroom_in_dek",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*60",
-                          "payload": "onlymbed60_inindek",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*80",
-                          "payload": "wht100_mbedroom_in_dek",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "100*100",
-                          "payload": "onlymbed100inin_dek",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whtwht_mbedroom_in_dek",
-                        }
-                      ]
-      }
-  }
-*/
-
-  /**********************/
-/*
-   // one floor(RC) only bed rooms special in Dek for area
-  else if (received_message.payload === "onef_bed_dek") {
-    response = {
-                  "text": "Please choose the house in which the number of bed room has",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "below 3",
-                          "payload": "bed3below_onef_rdek1",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "3 and above",
-                          "payload": "bed3above_onef_rdek1",
-                        },
-                       
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whtever_onef_onlybed_rdek1",
-                        }
-                      ]
-      }
-  }
-    // below 3 bed one floor(RC) in dek for area
-  else if (received_message.payload === "bed3below_onef_rdek1") {
-    response = {
-                  "text": "Do you want what area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "40*60",
-                          "payload": "onlybed60_dek1",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*60",
-                          "payload": "onlymbedin60in_dek",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*80",
-                          "payload": "onlybed100_dek1",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "80*80",
-                          "payload": "onlymbed80_indekin",
-                        },
-                       {
-                          "content_type": "text",
-                          "title": "100*100",
-                          "payload": "onlymbed100inin_indek",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "onlybed_whatever_dek1",
-                        }
-                      ]
-      }
-  }
-    // above 3 bed one floor(RC) in Dek for area
-  else if (received_message.payload === "bed3above_onef_rdek1") {
-    response = {
-                  "text": "Do you want what area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "40*60",
-                          "payload": "bedroom88_in_dek1",
-                        },
-                       {
-                          "content_type": "text",
-                          "title": "60*60",
-                          "payload": "onlymbed60_in60dek",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*80",
-                          "payload": "bedroom11_in_dek1",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "80*80",
-                          "payload": "onlyinmbed80in_dek",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "100*100",
-                          "payload": "onlymbed100ina_dek",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "bedroom_wharea_in_dek1",
-                        }
-                      ]
-      }
-  } */
-
   /**************************************************/
 
   // to buy house in Zayathiri
@@ -6236,7 +6097,7 @@ else if (received_message.payload === "tenandek") {
 
       }
   }
-    // to rent a house (RC), in Dekkhina, what floor
+    // to rent dekkhina, a house (RC), what floor
   else if (received_message.payload === "rc_dekki1_tenant") {
     response = {
                   "text": "Please choose you want to buy the house in which",
@@ -6260,26 +6121,26 @@ else if (received_message.payload === "tenandek") {
 
       }
   }
-      //  to rent (house)RC, onefloor, ask number of master bed in Dekkhina
+      //  to rent dekkhina, (house)RC, onefloor,
   else if (received_message.payload === "onef_dekkii11_tenant1") {
     response = {
-                  "text": "Please choose the house in which the number of master bed room has",
+                  "text": "Do you want the house in which Mbr is included or only Br included?",
                     "quick_replies": [
                          {
                           "content_type": "text",
-                          "title": "below 3",
-                          "payload": "numofmbed3below_mbra9_dekki_tenant",
+                          "title": "Mbr",
+                          "payload": "numofmbedmbraa5_mbra9_dekki_tenant",
                         },
                         {
                           "content_type": "text",
-                          "title": "3 and above",
-                          "payload": "numofmbed3above_mbraa9_dekki_tenant",
+                          "title": "only Br",
+                          "payload": "numofonlybraa5_mbraa9_dekki_tenant",
                         }
                       ]
       }
-  }
- //  to rent (house)RC, one floor, master bed, below 3, in Dekkhina
-    else if (received_message.payload === 'numofmbed3below_mbra9_dekki_tenant' ) {
+  }/*
+ //  to rent dekkhina, (house)RC, one floor, master bed
+    else if (received_message.payload === 'numofmbedmbraa5_mbra9_dekki_tenant' ) {
     response = {
     "attachment":{
       "type":"template",
@@ -6360,7 +6221,7 @@ else if (received_message.payload === "tenandek") {
   }
 }
 
-
+*/
 
 
 
