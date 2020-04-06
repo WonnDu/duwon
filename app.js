@@ -3600,25 +3600,30 @@ else if (received_message.payload === "zaytwp") {
   // to buy house, RC, two floor, in Zayathiri 
   else if (received_message.payload === "twof_zayathi") {
     response = {
-                  "text": "Please choose the estimated price you want to use",
+                  "text": "Please choose the land area of house you want to buy:",
                     "quick_replies": [
                          {
                           "content_type": "text",
-                          "title": "3lakhs & below 3lakhs",
-                          "payload": "twofloor_below3and3_rzayathi1_tobuyt",
+                          "title": "40*60",                 // not yet
+                          "payload": "twofloor_landarea46_tobuyt_zaya",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "60*80",               // not yet
+                          "payload": "twofloor_landarea68a2_tobuyt_zaya",
                         },
                         {
                           "content_type": "text",
-                          "title": "above 3 lakhs",
-                          "payload": "otherfloor_above3lakhs_rzayathi1_tobuyt",
+                          "title": "other area",
+                          "payload": "twofloor_landareaotherab11_tobuyt_zaya",
                         }
                       ]
 
       }
   }
 
-  // to buy zayathiri, RC, two floor, 3 lakhs and below 3 lakhs
-    else if (received_message.payload === 'twofloor_below3and3_rzayathi1_tobuyt') {
+  // to buy zayathiri, RC, two floor, other area
+    else if (received_message.payload === 'twofloor_landareaotherab11_tobuyt_zaya') {
     response = {
     "attachment":{
       "type":"template",
@@ -3654,8 +3659,8 @@ else if (received_message.payload === "zaytwp") {
     }
   }
 }
-// to buy zayathiri, RC, two floor, above 3 lakhs
-    else if (received_message.payload === 'otherfloor_above3lakhs_rzayathi1_tobuyt') {
+// to buy zayathiri, RC, two floor, other area
+    else if (received_message.payload === 'twofloor_landareaotherab11_tobuyt_zaya') {
     response = {
     "attachment":{
       "type":"template",
@@ -4091,7 +4096,12 @@ else if (received_message.payload === "tenanzay") {
 
       }
   }
-
+  // to rent zayathiri, RC, other floor
+    else if (received_message.payload === 'otherfloor_abcd1122_rzayathi1_tenant') {
+    response = {
+                "text": "There is no house avaliable. Sorry for you. Thanks for contacting us."
+  }
+}
 
 /*****************/
 
@@ -4102,7 +4112,7 @@ else if (received_message.payload === "tenanzay") {
                     "quick_replies": [
                          {
                           "content_type": "text",
-                          "title": "3lakhs & below 3lakhs",
+                          "title": "3 lakhs & from it",
                           "payload": "twofloor_below3and3_rzayathi1_tenant",
                         },
                         {
@@ -4115,7 +4125,7 @@ else if (received_message.payload === "tenanzay") {
       }
   }
 
-  // to rent zayathiri, RC, two floor, 3 lakhs and below 3 lakhs
+  // to rent zayathiri, RC, two floor, 3 lakhs & from it
     else if (received_message.payload === 'twofloor_below3and3_rzayathi1_tenant') {
     response = {
     "attachment":{
@@ -4215,29 +4225,24 @@ else if (received_message.payload === "tenanzay") {
   }
   /************/
  // to rent zayathiri, house, RC, one floor, master bed, area
-  else if (received_message.payload === "bed3above_onef_rzayathi1_tenant") {
+  else if (received_message.payload === "bed3below_onef_rzayathi1_tenant") {
     response = {
                   "text": "Do you want what area?",
                     "quick_replies": [
                          {
                           "content_type": "text",
                           "title": "40*60",
-                          "payload": "onlymbed60_zayathi",
-                        },
-                         {
-                          "content_type": "text",
-                          "title": "60*60",
-                          "payload": "onlybed60_zayathi11_tenanta1",    // added
-                        },
+                          "payload": "onlymbed60_zayathi_tenantaabbdd11",
+                        }
                         {
                           "content_type": "text",
                           "title": "60*80",
-                          "payload": "onlymbed100_zayathi",
+                          "payload": "onlymbed100_zayathi_tenantaabbdd11",
                         },
                         {
                           "content_type": "text",
                           "title": "other",
-                          "payload": "onlyother_zayathi",
+                          "payload": "onlyother_zayathi_aabbbdd11",
                         }
                       ]
       }
@@ -4285,7 +4290,7 @@ else if (received_message.payload === "tenanzay") {
 
 
   // to rent , one floor(RC), in Zayarthiri, master bed room , 40* 60
-    else if (received_message.payload === 'onlymbed60_zayathi') {
+    else if (received_message.payload === 'onlymbed60_zayathi_tenantaabbdd11') {
     response = {
     "attachment":{
       "type":"template",
@@ -4323,7 +4328,7 @@ else if (received_message.payload === "tenanzay") {
 }
 
  // to rent , one floor(RC), in Zayarthiri, master bed room , 60*80
-    else if (received_message.payload === 'onlymbed100_zayathi') {
+    else if (received_message.payload === 'onlymbed100_zayathi_tenantaabbdd11') {
     response = {
     "attachment":{
       "type":"template",
@@ -4359,12 +4364,18 @@ else if (received_message.payload === "tenanzay") {
     }
   }
 }
+ // to rent , one floor(RC), in Zayarthiri, master bed room , other area
+    else if (received_message.payload === 'onlyother_zayathi_aabbbdd11') {
+    response = {
+                "test": "There is no avaliable house has other area."
+  }
+}
 
   /***************************/
 
  
  // to rent one floor(RC), only bed rooms , in Zayathiri for area
-  else if (received_message.payload === "bed3below_onef_rzayathi1_tenant") {
+  else if (received_message.payload === "bed3above_onef_rzayathi1_tenant") {
     response = {
                   "text": "Do you want how much wide land area of house?",
                     "quick_replies": [
@@ -4372,11 +4383,6 @@ else if (received_message.payload === "tenanzay") {
                           "content_type": "text",
                           "title": "40*60",
                           "payload": "bedaacc1_bedroom_i46n_zaya_tenant",  // not be
-                        },
-                         {
-                          "content_type": "text",
-                          "title": "60*60",
-                          "payload": "bedroom88_in_zayathi2_tenant",
                         },
                         {
                           "content_type": "text",
@@ -4433,7 +4439,7 @@ else if (received_message.payload === "tenanzay") {
 
 
    // to rent , one floor(RC), in Zayarthiri, bed room, 60* 60
-    else if (received_message.payload === 'bedroom88_in_zayathi2') {
+    else if (received_message.payload === 'bedroom88_in_zayathi2_tenant') {
     response = {
     "attachment":{
       "type":"template",
@@ -4530,7 +4536,7 @@ else if (received_message.payload === "tenanzay") {
   }
 }
   // to rent , one floor(RC), in Zayarthiri, bed room, other area
-    else if (received_message.payload === 'onlyother_zayathi') {
+    else if (received_message.payload === 'onlybedother_zayathi11_tenant') {
     response = {
     "attachment":{
       "type":"template",
