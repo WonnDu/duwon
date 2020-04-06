@@ -6446,7 +6446,7 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
                           "content_type": "text",
                           "title": " 3 lakhs & below it",
                           "payload": "masterbed60_zabuthi11_tenant3l",
-                        }
+                        },
                         {
                           "content_type": "text",
                           "title": "above 3 lakhs",
