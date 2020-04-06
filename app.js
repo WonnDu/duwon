@@ -4233,7 +4233,7 @@ else if (received_message.payload === "tenanzay") {
                           "content_type": "text",
                           "title": "40*60",
                           "payload": "onlymbed60_zayathi_tenantaabbdd11",
-                        }
+                        },
                         {
                           "content_type": "text",
                           "title": "60*80",
