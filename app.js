@@ -4284,7 +4284,7 @@ else if (received_message.payload === "tenanzay") {
       }
   }
   /************/
- // to rent zayathiri, house, RC, one floor, master bed, area
+ // to rent zayathiri, house, RC, one floor, master bed
   else if (received_message.payload === "bed3below_onef_rzayathi1_tenant") {
     response = {
                   "text": "Do you want what area?",
@@ -4408,7 +4408,7 @@ else if (received_message.payload === "tenanzay") {
  // to rent , one floor(RC), in Zayarthiri, master bed room , above 3 lakhs
     else if (received_message.payload === 'onlymbed100_zayathi_tenantaabbdd11') {
     response = {
-                "test": "There is no avaliable house has other area."
+                "text": "There is no avaliable house. Sorry for you. Thanks for contacting us."
   }
 }
 
