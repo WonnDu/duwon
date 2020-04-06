@@ -3179,7 +3179,7 @@ else if (received_message.payload === "dektwp") {
                         },
                         {
                           "content_type": "text",
-                          "title": "other",
+                          "title": "Other floor",
                           "payload": "thirdf_dek",
                         }
                       ]
@@ -3188,25 +3188,43 @@ else if (received_message.payload === "dektwp") {
   }
 
   /*************/
-   // one floor(RC), number of master bed rooms, in Dek for area
+   // to buy house in dekkhina, one floor
   else if (received_message.payload === "onef_dek") {
     response = {
-                  "text": "Please choose the number of Mbr included",
+                  "text": "Do you want the house in Mbr is included or only Br is included?",
                     "quick_replies": [
                          {
                           "content_type": "text",
-                          "title": "below 3",
+                          "title": "Mbr",
                           "payload": "bed3below_onef_rcdek",
                         },
                         {
                           "content_type": "text",
-                          "title": "3 and above",
+                          "title": "Only Br",
                           "payload": "bed3above_onef_rcdek",
                         }
                       ]
       }
   }
-    // below 3 master bed, one floor(RC), below 3, in Dek for area
+    // to buy house in dekkhina, one floor, only Br 
+  else if (received_message.payload === "bed3below_onef_rcdek") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "tobuyhoutt1_onlybed46_dek",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*60",
+                          "payload": "tobuyhoutt1_onlybed66_dek",
+                        }
+                      ]
+      }
+  }
+/*
   else if (received_message.payload === "bed3below_onef_rcdek") {
     response = {
                   "text": "Do you want what area?",
@@ -3239,10 +3257,10 @@ else if (received_message.payload === "dektwp") {
                       ]
       }
   }
+*/
 
-
-// to buy Dekkhina, RC, one floor, Master bed (below 3), 80*80
-    else if (received_message.payload === 'onlymbed88in_dek') {
+// to buy house in dekkhina, Rc, one floor, only bed room, 40*60
+    else if (received_message.payload === 'tobuyhoutt1_onlybed46_dek') {
     response = {
     "attachment":{
       "type":"template",
@@ -3251,18 +3269,18 @@ else if (received_message.payload === "dektwp") {
         "elements": [ 
         
            {
-            "title":"RC, 600 lakhs, 80*80 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92017101_147292266816573_1023803908536926208_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_ohc=tiP1mwH3AUMAX-G0iKG&_nc_ht=scontent.fmdl2-1.fna&oh=cb2e46aebe5047f54a0d42d68c80dea0&oe=5EAB4E98",
-            "subtitle":"2MB, 2BD, Negotiable",
+            "title":"RC, 1600 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92230135_148477376698062_1564226552332288000_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeEZFBGf-MZFY-HQQT6oS8pmO89u87ddanY7z27zt11qdhxc_4UlJ2I4G8_DIhm9ZJ46w_KGePmKb2a2UtHGYbPN&_nc_ohc=9q5ZYbuYXb4AX8xMkbB&_nc_ht=scontent.fmdl2-1.fna&oh=a2879fe65108db605e44fc675cd3dacd&oe=5EB10535",
+            "subtitle":"Br-(3), land type-(grant), face south, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
                 "title":"More Information"
               },
               {
@@ -3271,42 +3289,35 @@ else if (received_message.payload === "dektwp") {
                 "payload":"aaae"
               }              
             ]      
-          },
-          {
-            "title":"RC,  1250 lakhs, 80*80ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91363682_147508756794924_5266172075797643264_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_eui2=AeHA6H63Lfk2n8MdoV6fvKAHQ1QLK-ETu2dDVAsr4RO7Z14RGYjL4TwfIEHEKw_aAoQ-pNJa1aobx9jRKA8XqEKL&_nc_ohc=7l9dplxRgIoAX8NLXI7&_nc_ht=scontent.fmdl2-2.fna&oh=e25ce0cd1af1007ac90094e640d1f32d&oe=5EADAF47",
-            "subtitle":"Mbr-(1), Br-(2), Negotiable",
+          }
+
+        ]
+      }
+    }
+  }
+}
+// to buy house in dekkhina, Rc, one floor, only bed room, 60*60
+    else if (received_message.payload === 'tobuyhoutt1_onlybed66_dek') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 600 lakhs, 60*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92219891_148475833364883_1131803197657055232_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_eui2=AeHtU2QeVO9b4qfJE0XPMWpYrsg39WLRBKWuyDf1YtEEpdXXP2V1l_zqlic97MBMkayJmkRKcNMngu7v_6k1xrFe&_nc_ohc=xAUop79JbV0AX_LMFPB&_nc_ht=scontent.fmdl2-2.fna&oh=f3a4e613b2ddd6906b8c8fc14e62f731&oe=5EB08E82",
+            "subtitle":"Br-(3), land type-(grant), face south, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaae"
-              }              
-            ]      
-          },
-          {
-            "title":"RC,  1600 lakhs, 80*80ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92141669_147510473461419_5320214665735700480_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeFG4hciGlHjq_U_qpR9K4Eo49wydLulOiLj3DJ0u6U6Illm7ygoAcOSWvbGBx4b6WdPaekjsrwTdEy2TVJiJJTc&_nc_ohc=kTLjg4T1jNMAX_Vl-AF&_nc_ht=scontent.fmdl2-1.fna&oh=ec92d5fba61d4bd87819b0c517f8669f&oe=5EAD7D03",
-            "subtitle":"Mbr-(2), Br-(1), Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
                 "title":"More Information"
               },
               {
@@ -3323,87 +3334,6 @@ else if (received_message.payload === "dektwp") {
   }
 }
 
-
-
-
-
-
-
-
-/***************/
-
-    // above 3 master bed, one floor(RC), in Dek, for area
-  else if (received_message.payload === "bed3above_onef_rcdek") {
-    response = {
-                  "text": "Do you want how much wide land area of house?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "40*60",
-                          "payload": "mbedroom88_in_dek",
-                        },
-                           {
-                          "content_type": "text",
-                          "title": "60*60",
-                          "payload": "in66onlymbed_dek",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*80",
-                          "payload": "mbedroom11_in_dek",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "80*80",
-                          "payload": "onlymbed88housein_dek",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "100*100",
-                          "payload": "onlymbed111in_dek",
-                        }
-                      ]
-      }
-  }
-
-
-// to buy Dekkhina, RC, one floor, Master bed, 3 and above, 80*80
-    else if (received_message.payload === 'onlymbed88housein_dek') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"RC, 1850 lakhs, 80*80 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92326542_147294886816311_3968306432951975936_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_ohc=41jDmczkfrcAX_iy7jQ&_nc_ht=scontent.fmdl2-2.fna&oh=291cdfa59dbdd0676f030af743e9963e&oe=5EABA553",
-            "subtitle":"3MB, 1BD, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaae"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
 
 
 
@@ -6097,7 +6027,7 @@ else if (received_message.payload === "tenandek") {
 
       }
   }
-    // to rent dekkhina, a house (RC), what floor
+    // to rent dekkhina, a house (RC), 
   else if (received_message.payload === "rc_dekki1_tenant") {
     response = {
                   "text": "Please choose you want to buy the house in which",
@@ -6138,9 +6068,60 @@ else if (received_message.payload === "tenandek") {
                         }
                       ]
       }
-  }/*
- //  to rent dekkhina, (house)RC, one floor, master bed
-    else if (received_message.payload === 'numofmbedmbraa5_mbra9_dekki_tenant' ) {
+  }
+}
+      //  to rent dekkhina, (house)RC, onefloor, only Br
+  else if (received_message.payload === "numofonlybraa5_mbraa9_dekki_tenant") {
+    response = {
+                  "text": "Please tell me estimated price you wanna spend:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "2 lakhs & below it",
+                          "payload": "torent_dekki_onefonlybr2below_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "above 2 lakhs",
+                          "payload": "torent_dekki_onefonlybr_above2_tenant",
+                        }
+                      ]
+      }
+  }
+
+
+  
+ //  to rent dekkhina, (house)RC, onefloor, only Br, 2 lakhs & below it
+    else if (received_message.payload === 'torent_dekki_onefonlybr2below_tenant' ) {
+    response = {
+                {
+            "title":"RC, 1.5 lakhs per month, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92230135_148477376698062_1564226552332288000_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeEZFBGf-MZFY-HQQT6oS8pmO89u87ddanY7z27zt11qdhxc_4UlJ2I4G8_DIhm9ZJ46w_KGePmKb2a2UtHGYbPN&_nc_ohc=9q5ZYbuYXb4AX8xMkbB&_nc_ht=scontent.fmdl2-1.fna&oh=a2879fe65108db605e44fc675cd3dacd&oe=5EB10535",
+            "subtitle":"Br-(3), face south",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+  }
+}
+
+
+//  to rent dekkhina, (house)RC, onefloor, only Br, above 2 lakhs
+    else if (received_message.payload === 'torent_dekki_onefonlybr_above2_tenant') {
     response = {
     "attachment":{
       "type":"template",
@@ -6149,62 +6130,18 @@ else if (received_message.payload === "tenandek") {
         "elements": [ 
         
            {
-            "title":"RC, 3lakhs for 1month, 80*80ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91363682_147508756794924_5266172075797643264_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_eui2=AeHA6H63Lfk2n8MdoV6fvKAHQ1QLK-ETu2dDVAsr4RO7Z14RGYjL4TwfIEHEKw_aAoQ-pNJa1aobx9jRKA8XqEKL&_nc_ohc=7l9dplxRgIoAX8NLXI7&_nc_ht=scontent.fmdl2-2.fna&oh=e25ce0cd1af1007ac90094e640d1f32d&oe=5EADAF47",
-            "subtitle":"Mbr-(1), Br-(2)",
+            "title":"RC, 2.5 lakhs per month, 60*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92219891_148475833364883_1131803197657055232_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_eui2=AeHtU2QeVO9b4qfJE0XPMWpYrsg39WLRBKWuyDf1YtEEpdXXP2V1l_zqlic97MBMkayJmkRKcNMngu7v_6k1xrFe&_nc_ohc=xAUop79JbV0AX_LMFPB&_nc_ht=scontent.fmdl2-2.fna&oh=f3a4e613b2ddd6906b8c8fc14e62f731&oe=5EB08E82",
+            "subtitle":"Br-(3), Aircon-(1), face south",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaae"
-              }              
-            ]      
-          },
-             {
-            "title":"RC, 3.5 lakhs for 1month, 80*80ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91286836_147509506794849_5933917341455745024_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_eui2=AeHx1g6XyLyKkLOzsaRLy-u0VuG7Kym9I15W4bsrKb0jXldSbCCY1x4hJdY7_BvNatjaD9sx4_qGmjSee7rMUXQ6&_nc_ohc=tCNCHnDWmQIAX9slhQk&_nc_ht=scontent.fmdl2-1.fna&oh=a4e6326977b534d56c1c02852b995a93&oe=5EAF1C8B",
-            "subtitle":"Mbr-(1), Br-(2), aircon-(1)",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaae"
-              }              
-            ]      
-          },
-        {
-            "title":"RC, 3 lakhs for 1month, 80*80ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91570352_147511090128024_4467115061306982400_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_eui2=AeE8PImDS4R0MgqGI1sFzyVzAsx2AeMe6uACzHYB4x7q4IE-8_emzDWyDeeSMGKBMQGRv1FsTI4N6QZGH_So2AZP&_nc_ohc=0FbsLYb1V40AX8pH3q_&_nc_ht=scontent.fmdl2-1.fna&oh=739c315ae114220d4e2e4ae8c7e836a1&oe=5EAE6852",
-            "subtitle":"Mbr-(1), Br-(2), aircon-(2)",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
                 "title":"More Information"
               },
               {
@@ -6221,7 +6158,6 @@ else if (received_message.payload === "tenandek") {
   }
 }
 
-*/
 
 
 
