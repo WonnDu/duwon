@@ -4150,7 +4150,7 @@ else if (received_message.payload === "tenanzay") {
                     "quick_replies": [
                          {
                           "content_type": "text",
-                          "title": "3 lakhs & from it",
+                          "title": "3 lakhs & below it",
                           "payload": "twofloor_below3and3_rzayathi1_tenant",
                         },
                         {
@@ -4163,7 +4163,7 @@ else if (received_message.payload === "tenanzay") {
       }
   }
 
-  // to rent zayathiri, RC, two floor, 3 lakhs & from it
+  // to rent zayathiri, RC, two floor, 3 lakhs & below it
     else if (received_message.payload === 'twofloor_below3and3_rzayathi1_tenant') {
     response = {
     "attachment":{
@@ -4291,18 +4291,13 @@ else if (received_message.payload === "tenanzay") {
                     "quick_replies": [
                          {
                           "content_type": "text",
-                          "title": "40*60",
+                          "title": "3 lakhs & below it",
                           "payload": "onlymbed60_zayathi_tenantaabbdd11",
                         },
                         {
                           "content_type": "text",
-                          "title": "60*80",
+                          "title": "above 3 lakhs",
                           "payload": "onlymbed100_zayathi_tenantaabbdd11",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "other",
-                          "payload": "onlyother_zayathi_aabbbdd11",
                         }
                       ]
       }
@@ -4349,7 +4344,7 @@ else if (received_message.payload === "tenanzay") {
 
 
 
-  // to rent , one floor(RC), in Zayarthiri, master bed room , 40* 60
+  // to rent , one floor(RC), in Zayarthiri, master bed room , 3 lakhs & below it
     else if (received_message.payload === 'onlymbed60_zayathi_tenantaabbdd11') {
     response = {
     "attachment":{
@@ -4379,24 +4374,8 @@ else if (received_message.payload === "tenanzay") {
                 "payload":"aaae"
               }              
             ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
- // to rent , one floor(RC), in Zayarthiri, master bed room , 60*80
-    else if (received_message.payload === 'onlymbed100_zayathi_tenantaabbdd11') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
+          },
+             {
             "title":"RC, 3 lakhs per month, 60*80 ft",
             "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91743058_147985173413949_5524857719812521984_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_eui2=AeGLGqRX5e59BXVCeCTQ4SkEu2-klAR4vAy7b6SUBHi8DL298NJeaU-lHazho9C-fTx5SW-D46NARrIYaVLzqTIM&_nc_ohc=qUTqS0FKrX8AX9n5GP3&_nc_ht=scontent.fmdl2-2.fna&oh=b176548c65794799b5ac5ca8541d04e9&oe=5EB0B328",
             "subtitle":"Mbr-(3), Br-(1), land type-(grant)",
@@ -4424,8 +4403,10 @@ else if (received_message.payload === "tenanzay") {
     }
   }
 }
- // to rent , one floor(RC), in Zayarthiri, master bed room , other area
-    else if (received_message.payload === 'onlyother_zayathi_aabbbdd11') {
+
+
+ // to rent , one floor(RC), in Zayarthiri, master bed room , above 3 lakhs
+    else if (received_message.payload === 'onlymbed100_zayathi_tenantaabbdd11') {
     response = {
                 "test": "There is no avaliable house has other area."
   }
@@ -4441,24 +4422,19 @@ else if (received_message.payload === "tenanzay") {
                     "quick_replies": [
                           {
                           "content_type": "text",
-                          "title": "40*60",
-                          "payload": "bedaacc1_bedroom_i46n_zaya_tenant",  // not be
+                          "title": "2 lakhs & below it",
+                          "payload": "bedaacc1_bedroom_i46n_zaya_tenant",  
                         },
                         {
                           "content_type": "text",
-                          "title": "60*80",
+                          "title": "above 2 lakhs",
                           "payload": "wht100_mbedroom_in_zaya_tenant",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "other",
-                          "payload": "onlybedother_zayathi11_tenant",  
                         }
                       ]
       }
   }
 
-  // to rent , one floor(RC), in Zayarthiri, bed room, 40* 60
+  // to rent , one floor(RC), in Zayarthiri, bed room, 2 lakhs & below it
     else if (received_message.payload === 'bedaacc1_bedroom_i46n_zaya_tenant') {
     response = {
     "attachment":{
@@ -4488,86 +4464,8 @@ else if (received_message.payload === "tenanzay") {
                 "payload":"aaae"
               }              
             ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-
-
-   // to rent , one floor(RC), in Zayarthiri, bed room, 60* 60
-    else if (received_message.payload === 'bedroom88_in_zayathi2_tenant') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"RC, 750 lakhs, 60*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91566102_147309916814808_3933244420186439680_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeGe2oH7A1JiUggWbdMpedaTuf90LosKVHe5_3QuiwpUd9XJAc2iTWERN-t1qRDIuwYPoXpw4DsDoNYeccAyPfLU&_nc_ohc=OfgBeO8iZQAAX8-YKe0&_nc_ht=scontent.fmdl2-2.fna&oh=b14c800be66697d2d87ca5b9950d5294&oe=5EAF6923",
-            "subtitle":"3BD, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaae"
-              }              
-            ]      
           },
-           {
-            "title":"RC, 150000 for 1 month",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91566102_147309916814808_3933244420186439680_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeGe2oH7A1JiUggWbdMpedaTuf90LosKVHe5_3QuiwpUd9XJAc2iTWERN-t1qRDIuwYPoXpw4DsDoNYeccAyPfLU&_nc_ohc=OfgBeO8iZQAAX8-YKe0&_nc_ht=scontent.fmdl2-2.fna&oh=b14c800be66697d2d87ca5b9950d5294&oe=5EAF6923",
-            "subtitle":"3BD, 60*60 ft",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
               {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaae"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}   
-
-   // to rent , one floor(RC), in Zayarthiri, bed room, 60*80
-    else if (received_message.payload === 'wht100_mbedroom_in_zaya_tenant') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
             "title":"RC, 2 lakhs per month, 60*80 ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92588042_147988300080303_5214463371088232448_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeGB2gX8DBfZCnr3mDKV62fwSNme3d8UdudI2Z7d3xR25yOIn8TsKwiAvR3U8M7ZCVzaqvFXgbc7YnyotdM4vVtF&_nc_ohc=K5GBbXAVOw0AX8EgTmU&_nc_ht=scontent.fmdl2-1.fna&oh=1dbd640db96801560c02478963b51321&oe=5EAFE58D",
             "subtitle":"3BD, land type-(grant), face east, Negotiable",
@@ -4588,23 +4486,8 @@ else if (received_message.payload === "tenanzay") {
                 "payload":"aaae"
               }              
             ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-  // to rent , one floor(RC), in Zayarthiri, bed room, other area
-    else if (received_message.payload === 'onlybedother_zayathi11_tenant') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
+          },
+             {
             "title":"RC, 2 lakhs per month, 80*70 ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91497803_148004706745329_4934947964616441856_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeFIDrTTnrVgW7Y-gZH5yJXvBKz1BMcNxG0ErPUExw3EbWo0JPNgeHM3z9Pnj8baoVJYA7bUKfi_ECnrWvCAWpZA&_nc_ohc=mkJ5iRQDAFAAX8lHcZK&_nc_ht=scontent.fmdl2-1.fna&oh=d786b325fbd83e26763bfbf03e52d9c1&oe=5EADF6FA",
             "subtitle":"3BD, land type-(slit), face east, Negotiable",
@@ -4633,9 +4516,43 @@ else if (received_message.payload === "tenanzay") {
   }
 }
 
+   // to rent , one floor(RC), in Zayarthiri, bed room, above 2 lakhs
+    else if (received_message.payload === 'wht100_mbedroom_in_zaya_tenant') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+           
+           {
+            "title":"RC, 250000 for 1 month",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91566102_147309916814808_3933244420186439680_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeGe2oH7A1JiUggWbdMpedaTuf90LosKVHe5_3QuiwpUd9XJAc2iTWERN-t1qRDIuwYPoXpw4DsDoNYeccAyPfLU&_nc_ohc=OfgBeO8iZQAAX8-YKe0&_nc_ht=scontent.fmdl2-2.fna&oh=b14c800be66697d2d87ca5b9950d5294&oe=5EAF6923",
+            "subtitle":"3BD, 60*60 ft",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
 
-
-
+        ]
+      }
+    }
+  }
+}   
 
 /**********************************************************************************************************************/
 /**********************************************************************************************************************/
@@ -6486,13 +6403,20 @@ else if (received_message.payload === "tenanzabu") {
                         },
                         {
                           "content_type": "text",
-                          "title": " other",
-                          "payload": "otherrrf_zabuthiri11_tenant1",
+                          "title": " Other floor",
+                          "payload": "otherrrf_zabuthiri11_tenant1",  // not yet
                         }
                       ]
 
       }
   }
+   // to rent zabu, a house (Rc), other floor, // for other floor
+else if (received_message.payload === "otherrrf_zabuthiri11_tenant1") {
+      response = {
+                    "text":'There is no property avaliable. Sorry for you. Thanks for contacting us.'
+
+      }
+  }  
         // to rent zabu, a house (Rc), one floor, 
 else if (received_message.payload === "onef_zabuthiri11_tenant1") {
       response = {
@@ -6520,22 +6444,12 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
                     "quick_replies": [
                          {
                           "content_type": "text",
-                          "title": "40*60",
-                          "payload": "masterbed60_zabuthi11_tenant",
-                        },
+                          "title": " 3 lakhs & below it",
+                          "payload": "masterbed60_zabuthi11_tenant3l",
+                        }
                         {
                           "content_type": "text",
-                          "title": "60*60",
-                          "payload": "masterbedroom60hou_in_zabuu7_tenant",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "100*100",
-                          "payload": "masterbedroom100tobuyhou_in_zabuu7_tenant",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "other area",
+                          "title": "above 3 lakhs",
                           "payload": "masterbedother_zabuthi11_tenant_22",
                         }
                       ]           
@@ -6545,8 +6459,8 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
 
   /***************************/
 
-  // to buy zabu, house (RC), one floor, master bed, 40*60
-    else if (received_message.payload === 'masterbed60_zabuthi11_tenant' ) {
+  // to rent zabu, house (RC), one floor, master bed, above 3 lakhs
+    else if (received_message.payload === 'masterbedother_zabuthi11_tenant_22' ) {
     response = {
     "attachment":{
       "type":"template",
@@ -6583,8 +6497,8 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
     }
   }
 }
-  // to rent zabu, house (RC), one floor, master bed, 60*60
-    else if (received_message.payload === 'masterbedroom60hou_in_zabuu7_tenant' ) {
+  // to rent zabu, house (RC), one floor, master bed, 3 lakhs & below it
+    else if (received_message.payload === 'masterbed60_zabuthi11_tenant3l' ) {
     response = {
     "attachment":{
       "type":"template",
@@ -6614,24 +6528,8 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
                 "payload":"aaae"
               }              
             ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-// to rent zabu, house (RC), one floor, master bed, 100*100
-    else if (received_message.payload === 'masterbedroom100tobuyhou_in_zabuu7_tenant' ) {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-  
-       
-           {
+          },
+             {
             "title":"RC, 3 lakhs per month, 100*100 ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91955219_148335103378956_2829729028192075776_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeHYsY5ju_-UtnsMR-xcQDlg3NSNpodS4azc1I2mh1LhrMPrqOlTDU65CqHDQ8JVmDdP4O4QOQpjDSKLNTI4Y5Ys&_nc_ohc=hdrpmmN65d0AX_Ct4eh&_nc_ht=scontent.fmdl2-1.fna&oh=842a715790fdc40b511bdacabb0c63c9&oe=5EAF33DA",
             "subtitle":"Mbr-(2),Br-(2)",
@@ -6659,12 +6557,7 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
     }
   }
 }
-// to rent zabu, house (RC), one floor, master bed, other area
-    else if (received_message.payload === 'masterbedother_zabuthi11_tenant_22' ) {
-    response = {
-                "text": "There is no property avaliable. Sorry for you. Thanks for contacting us."
-  }
-}
+
 
 
 
@@ -6681,25 +6574,20 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
                     "quick_replies": [
                          {
                           "content_type": "text",
-                          "title": "40*60",
-                          "payload": "onlybed60_zabuthi11_tenant",
+                          "title": "2 lakhs & below it",
+                          "payload": "onlybed2belowit_zabuthi11_tenant",
                         },
                         {
                           "content_type": "text",
-                          "title": "60*60",
-                          "payload": "onlybedroom60hou_in_zabuu7_tenant",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "other area",
-                          "payload": "onlybedother_zabuthi11_tenant",
+                          "title": "above 2 lakhs",
+                          "payload": "onlybedroomabove2l_in_zabuu7_tenant",
                         }
                       ]           
       }
   }
   
-   // to rent zabbuthiri, one floor(RC), bed room, 40* 60
-    else if (received_message.payload === 'onlybed60_zabuthi11_tenant') {
+   // to rent zabbuthiri, one floor(RC), bed room, 2 lakhs & below it
+    else if (received_message.payload === 'onlybed2belowit_zabuthi11_tenant') {
     response = {
     "attachment":{
       "type":"template",
@@ -6728,23 +6616,8 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
                 "payload":"aaae"
               }              
             ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-   // to rent zabbuthiri, one floor(RC), bed room, 60*60
-    else if (received_message.payload === 'onlybedroom60hou_in_zabuu7_tenant') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
+          },
+            {
             "title":"RC, 2 lakhs per month, 60*60 ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91923017_148322666713533_5407944088630591488_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeFY2FZaTFShXIcTo19BYxaHwWpR-0-xBjjBalH7T7EGODKvmZrQI1gTfbvakeY4jbOtWyZeQgiDbdPyDeipWD2h&_nc_ohc=Zc0JR1VZL-8AX81QyTU&_nc_ht=scontent.fmdl2-1.fna&oh=328e035a9f9256c1510c1f0fd96b1c60&oe=5EB1B88B",
             "subtitle":"3BD,  face east",
@@ -6773,8 +6646,9 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
   }
 }
  
-   // to rent zabbuthiri, one floor(RC), bed room, other area
-    else if (received_message.payload === 'onlybedother_zabuthi11_tenant') {
+ 
+   // to rent zabbuthiri, one floor(RC), bed room, above 2 lakhs
+    else if (received_message.payload === 'onlybedroomabove2l_in_zabuu7_tenant') {
     response = {
     "attachment":{
       "type":"template",
@@ -6812,7 +6686,7 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
 }
 /**********************/
 
-// to buy zabu, house (other type)
+// to rent zabu, house (other type)
     else if (received_message.payload === 'nancat_zabu1_tenant' ) {
     response = {
     "attachment":{
@@ -6859,23 +6733,13 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
                     "quick_replies": [
                          {
                           "content_type": "text",
-                          "title": "40*60",
-                          "payload": "tobuy_onlymbed60_zabu7_tenantac1", 
+                          "title": "3 lakhs & below it",
+                          "payload": "torentbelow3_rctwofloorin_zabuu7_tenantac1", 
                         },
                         {
                           "content_type": "text",
-                          "title": "60*60",               
-                          "payload": "tobuy_mbedroom60hou6_in_zabuu7_tenantac1",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "100*100",        
-                          "payload": "tobuy_onlymbed100_zabu7_tenantac1",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "other area",
-                          "payload": "tobuy_onlyother_zabu7_tenantac1", 
+                          "title": "above 3 lakhs",               
+                          "payload": "torentabove3_rctwofloorin_zabuu7_tenantac1",
                         }
                       ]
       }
@@ -6886,8 +6750,8 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
 
 
 
-// to rent a house Zabbuthiri, RC, two floor, 40*60
-    else if (received_message.payload === 'tobuy_onlymbed60_zabu7_tenantac1') {
+// to rent a house Zabbuthiri, RC, two floor, above 3 lakhs
+    else if (received_message.payload === 'torentabove3_rctwofloorin_zabuu7_tenantac1') {
     response = {
     "attachment":{
       "type":"template",
@@ -6895,46 +6759,7 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
         "template_type":"generic",
         "elements": [ 
         
-           {
-            "title":"RC,  3 lakhs per month, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91774025_148348000044333_6815842511517384704_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeHzqDLnklGlQ1xWNu07MBlaHw1QFU91-UofDVAVT3X5SnGbhIDx7oZdYcEPqVUAalWsZknjEkUmzV8CvCGJRIrZ&_nc_ohc=zrefNImYLKcAX9YSeXG&_nc_ht=scontent.fmdl2-1.fna&oh=61bf79c95ef86a902df4a0fb2094cc82&oe=5EB0E892",
-            "subtitle":"Mbr-(1), Br-(4), face south",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaae"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-
-// to rent a house Zabbuthiri, RC, two floor, 60*60
-    else if (received_message.payload === 'tobuy_mbedroom60hou6_in_zabuu7_tenantac1') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
+          {
             "title":"RC,  4 lakhs per month, 60*60 ft",
             "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92823131_148347106711089_610544418763571200_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeFxWgAema5g4i2xFW9AdQBsOcp_FQlFfAY5yn8VCUV8BiwqdlL46YDiBCxY8iBhHIlW_rKc_ZUMlBXBZC2V_exy&_nc_ohc=k-b3E7YKzeoAX_Ds2Ud&_nc_ht=scontent.fmdl2-2.fna&oh=935494d72848dfee0dbf8c36fb149734&oe=5EB0066C",
             "subtitle":"Mbr-(2), Br-(1), face north",
@@ -6957,27 +6782,46 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
             ]      
           }
 
+
         ]
       }
     }
   }
 }
-// to rent a house Zabbuthiri, RC, two floor, 100*100
-    else if (received_message.payload === 'tobuy_onlymbed100_zabu7_tenantac1') {
-    response = {
-                  "text": "There is no property avaliable. Sorry for you. Thanks for contacting us."
-  }
-}
-// to rent a house Zabbuthiri, RC, two floor, other area
-    else if (received_message.payload === 'tobuy_onlyother_zabu7_tenantac1') {
+
+
+// to rent a house Zabbuthiri, RC, two floor, 
+    else if (received_message.payload === 'torentbelow3_rctwofloorin_zabuu7_tenantac1') {
     response = {
     "attachment":{
       "type":"template",
       "payload":{
         "template_type":"generic",
         "elements": [ 
-        
-           {
+
+             {
+            "title":"RC,  3 lakhs per month, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91774025_148348000044333_6815842511517384704_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeHzqDLnklGlQ1xWNu07MBlaHw1QFU91-UofDVAVT3X5SnGbhIDx7oZdYcEPqVUAalWsZknjEkUmzV8CvCGJRIrZ&_nc_ohc=zrefNImYLKcAX9YSeXG&_nc_ht=scontent.fmdl2-1.fna&oh=61bf79c95ef86a902df4a0fb2094cc82&oe=5EB0E892",
+            "subtitle":"Mbr-(1), Br-(4), face south",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          },
+        {
             "title":"RC,  2.5 lakhs per month, 60*70 ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92465912_148351516710648_1751142708715454464_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeG4Y_29JTV2nR-S0e4T_3l2jyTiAxhjiyWPJOIDGGOLJeN4MvyOK5riu_STZt4-BtlbQ1z-Nj2JZLgPhK7gDSRH&_nc_ohc=NlIAL0Jz0p0AX9IjMKA&_nc_ht=scontent.fmdl2-1.fna&oh=a059ee4af2076260fe6fa851d60ead96&oe=5EB1FB14",
             "subtitle":"Mbr-(2), Br-(4), face south",
