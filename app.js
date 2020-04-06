@@ -6069,7 +6069,7 @@ else if (received_message.payload === "tenandek") {
                       ]
       }
   }
-}
+
       //  to rent dekkhina, (house)RC, onefloor, only Br
   else if (received_message.payload === "numofonlybraa5_mbraa9_dekki_tenant") {
     response = {
