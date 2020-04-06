@@ -3604,7 +3604,7 @@ else if (received_message.payload === "zaytwp") {
                     "quick_replies": [
                          {
                           "content_type": "text",
-                          "title": "40*60",                 // not yet
+                          "title": "40*60",                
                           "payload": "twofloor_landarea46_tobuyt_zaya",
                         },
                          {
@@ -3621,6 +3621,51 @@ else if (received_message.payload === "zaytwp") {
 
       }
   }
+    // to buy zayathiri, RC, two floor, 60*80
+    else if (received_message.payload === 'twofloor_landarea68a2_tobuyt_zaya') {
+    response = {
+                "text": "There is no property avaliable. Sorry for you. Thanks for contacting us."
+  }
+}
+
+
+    // to buy zayathiri, RC, two floor, 40*60
+    else if (received_message.payload === 'twofloor_landarea46_tobuyt_zaya') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 1550 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92350854_148331046712695_1514855722876141568_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeG5ZcuXasEyLdDk5VORz6R7_wo-WeJtVEP_Cj5Z4m1UQ_fjxjYC9t60tCuxT33zIGTj0s3iAKlYy1cCYkZEEZ1V&_nc_ohc=VC0_cyIzoxYAX9X3E3n&_nc_ht=scontent.fmdl2-2.fna&oh=4fe0ab1656140cb226395cf14854b060&oe=5EB180E7",
+            "subtitle":"Mbr-(2), Br-(2), land type-(grant),face east and north",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
 
   // to buy zayathiri, RC, two floor, other area
     else if (received_message.payload === 'twofloor_landareaotherab11_tobuyt_zaya') {
@@ -3652,23 +3697,8 @@ else if (received_message.payload === "zaytwp") {
                 "payload":"aaae"
               }              
             ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-// to buy zayathiri, RC, two floor, other area
-    else if (received_message.payload === 'twofloor_landareaotherab11_tobuyt_zaya') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-            {
+          },
+             {
             "title":"RC, 2000 lakhs, 60*90 ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91399493_148081813404285_4132688193013153792_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeE42tNkW6IjD7xuSoc4pKcvu3wVLCYN8EW7fBUsJg3wRa9MvNC92sgpU97iz6gK3h3Pp72U_YCXpYvUeiB9ljU4&_nc_ohc=WeoFtmSfSEUAX8s5Yxz&_nc_ht=scontent.fmdl2-1.fna&oh=6a03ed097e52a57a7f64df976ecb4a4b&oe=5EAE99A3",
             "subtitle":"Mbr-(4), Br-(1), land type-(grant), face east",
@@ -3691,12 +3721,12 @@ else if (received_message.payload === "zaytwp") {
             ]      
           }
 
-
         ]
       }
     }
   }
 }
+
 
 
 
@@ -3862,6 +3892,12 @@ else if (received_message.payload === "zaytwp") {
         ]
       }
     }
+  }
+}
+ // to buy , one floor(RC), in Zayarthiri, master bed room , other area
+    else if (received_message.payload === 'onlyother_zayathi') {
+    response = {
+                "text": "There is no property avaliable. Sorry for you. Thanks for contacting us."
   }
 }
 
@@ -4105,6 +4141,8 @@ else if (received_message.payload === "tenanzay") {
 
 /*****************/
 
+  
+
   // to rent house, RC, two floor, in Zayathiri 
   else if (received_message.payload === "twofloor_abcd1122_rzayathi1_tenant") {
     response = {
@@ -4175,6 +4213,28 @@ else if (received_message.payload === "tenanzay") {
             "title":"RC, 5 lakhs per month, 60*90 ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91399493_148081813404285_4132688193013153792_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeE42tNkW6IjD7xuSoc4pKcvu3wVLCYN8EW7fBUsJg3wRa9MvNC92sgpU97iz6gK3h3Pp72U_YCXpYvUeiB9ljU4&_nc_ohc=WeoFtmSfSEUAX8s5Yxz&_nc_ht=scontent.fmdl2-1.fna&oh=6a03ed097e52a57a7f64df976ecb4a4b&oe=5EAE99A3",
             "subtitle":"Mbr-(4), Br-(1), face east",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          },
+          {
+            "title":"RC, 6 lakhs per month, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92350854_148331046712695_1514855722876141568_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeG5ZcuXasEyLdDk5VORz6R7_wo-WeJtVEP_Cj5Z4m1UQ_fjxjYC9t60tCuxT33zIGTj0s3iAKlYy1cCYkZEEZ1V&_nc_ohc=VC0_cyIzoxYAX9X3E3n&_nc_ht=scontent.fmdl2-2.fna&oh=4fe0ab1656140cb226395cf14854b060&oe=5EB180E7",
+            "subtitle":"Mbr-(2), Br-(2),face east and north",
             "default_action": {
               "type": "web_url",
               "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
