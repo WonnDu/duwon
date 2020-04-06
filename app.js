@@ -5005,23 +5005,17 @@ else if (received_message.payload === "zabtwp") {
 
 /**************************/
 
-   
-
-
-
-
-
 /*****************************************************/
 
     // to buy a house in Zabuthiri, RC, two floor
-  else if (received_message.payload === "twof_zabuthiri11") {
+  else if (received_message.payload === "twof_zabuthiri11aa") {
     response = {
                   "text": "Do you want what area?",
                     "quick_replies": [
                          {
                           "content_type": "text",
                           "title": "40*60",
-                          "payload": "tobuy_onlymbed60_zabu7",  // not yet
+                          "payload": "tobuy_onlymbed60_zabu7", 
                         },
                         {
                           "content_type": "text",
@@ -5030,13 +5024,13 @@ else if (received_message.payload === "zabtwp") {
                         },
                         {
                           "content_type": "text",
-                          "title": "100*100",         // not yet
+                          "title": "100*100",        
                           "payload": "tobuy_onlymbed100_zabu7",
                         },
                         {
                           "content_type": "text",
                           "title": "other area",
-                          "payload": "tobuy_onlyother_zabu7", // not yet
+                          "payload": "tobuy_onlyother_zabu7", 
                         }
                       ]
       }
@@ -5047,6 +5041,43 @@ else if (received_message.payload === "zabtwp") {
 
 
 
+// to buy a house Zabbuthiri, RC, two floor, 40*60
+    else if (received_message.payload === 'tobuy_onlymbed60_zabu7') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC,  2500 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91774025_148348000044333_6815842511517384704_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeHzqDLnklGlQ1xWNu07MBlaHw1QFU91-UofDVAVT3X5SnGbhIDx7oZdYcEPqVUAalWsZknjEkUmzV8CvCGJRIrZ&_nc_ohc=zrefNImYLKcAX9YSeXG&_nc_ht=scontent.fmdl2-1.fna&oh=61bf79c95ef86a902df4a0fb2094cc82&oe=5EB0E892",
+            "subtitle":"Mbr-(1), Br-(4), land type-(grant), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
 // to buy a house Zabbuthiri, RC, two floor, 60*60
     else if (received_message.payload === 'tobuy_mbedroom60hou6_in_zabuu7') {
     response = {
@@ -5057,18 +5088,61 @@ else if (received_message.payload === "zabtwp") {
         "elements": [ 
         
            {
-            "title":"RC, 1650 lakhs, 80*80 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91785974_147303330148800_5941890858046455808_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeH0Q4SPTdm8iskW1VFUbmH89Tx1huUI0Mf1PHWG5QjQx0Nx8ZIXu3Uf1xOQk5qxAWW-U0ZxjkL1YqFpxKBHTDwB&_nc_ohc=A67BN3kQGFsAX9PQ-F8&_nc_ht=scontent.fmdl2-1.fna&oh=6ff452344276e921f177ae61acd56617&oe=5EAC9256",
-            "subtitle":"1MB, 2BD, Negotiable",
+            "title":"RC,  2000 lakhs, 60*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92823131_148347106711089_610544418763571200_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeFxWgAema5g4i2xFW9AdQBsOcp_FQlFfAY5yn8VCUV8BiwqdlL46YDiBCxY8iBhHIlW_rKc_ZUMlBXBZC2V_exy&_nc_ohc=k-b3E7YKzeoAX_Ds2Ud&_nc_ht=scontent.fmdl2-2.fna&oh=935494d72848dfee0dbf8c36fb149734&oe=5EB0066C",
+            "subtitle":"Mbr-(2), Br-(1), land type-(grant),face north, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+// to buy a house Zabbuthiri, RC, two floor, 100*100
+    else if (received_message.payload === 'tobuy_onlymbed100_zabu7') {
+    response = {
+                  "text": "There is no property avaliable. Sorry for you. Thanks for contacting us."
+  }
+}
+// to buy a house Zabbuthiri, RC, two floor, other area
+    else if (received_message.payload === 'tobuy_onlyother_zabu7') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC,  900 lakhs, 60*70 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92465912_148351516710648_1751142708715454464_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeG4Y_29JTV2nR-S0e4T_3l2jyTiAxhjiyWPJOIDGGOLJeN4MvyOK5riu_STZt4-BtlbQ1z-Nj2JZLgPhK7gDSRH&_nc_ohc=NlIAL0Jz0p0AX9IjMKA&_nc_ht=scontent.fmdl2-1.fna&oh=a059ee4af2076260fe6fa851d60ead96&oe=5EB1FB14",
+            "subtitle":"Mbr-(2), Br-(4), land type-(grant), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
                 "title":"More Information"
               },
               {
@@ -6476,7 +6550,161 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
     }
   }
 }
+/*****************************************************/
 
+    // to rent a house in Zabuthiri, RC, two floor
+  else if (received_message.payload === "twof_zabuthiri11_tenant1") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "tobuy_onlymbed60_zabu7_tenantac1", 
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*60",               
+                          "payload": "tobuy_mbedroom60hou6_in_zabuu7_tenantac1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "100*100",        
+                          "payload": "tobuy_onlymbed100_zabu7_tenantac1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "other area",
+                          "payload": "tobuy_onlyother_zabu7_tenantac1", 
+                        }
+                      ]
+      }
+  }
+
+
+  /***************************/
+
+
+
+// to rent a house Zabbuthiri, RC, two floor, 40*60
+    else if (received_message.payload === 'tobuy_onlymbed60_zabu7_tenantac1') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC,  3 lakhs per month, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91774025_148348000044333_6815842511517384704_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeHzqDLnklGlQ1xWNu07MBlaHw1QFU91-UofDVAVT3X5SnGbhIDx7oZdYcEPqVUAalWsZknjEkUmzV8CvCGJRIrZ&_nc_ohc=zrefNImYLKcAX9YSeXG&_nc_ht=scontent.fmdl2-1.fna&oh=61bf79c95ef86a902df4a0fb2094cc82&oe=5EB0E892",
+            "subtitle":"Mbr-(1), Br-(4), face south",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+// to rent a house Zabbuthiri, RC, two floor, 60*60
+    else if (received_message.payload === 'tobuy_mbedroom60hou6_in_zabuu7_tenantac1') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC,  4 lakhs per month, 60*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92823131_148347106711089_610544418763571200_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeFxWgAema5g4i2xFW9AdQBsOcp_FQlFfAY5yn8VCUV8BiwqdlL46YDiBCxY8iBhHIlW_rKc_ZUMlBXBZC2V_exy&_nc_ohc=k-b3E7YKzeoAX_Ds2Ud&_nc_ht=scontent.fmdl2-2.fna&oh=935494d72848dfee0dbf8c36fb149734&oe=5EB0066C",
+            "subtitle":"Mbr-(2), Br-(1), face north",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+// to rent a house Zabbuthiri, RC, two floor, 100*100
+    else if (received_message.payload === 'tobuy_onlymbed100_zabu7_tenantac1') {
+    response = {
+                  "text": "There is no property avaliable. Sorry for you. Thanks for contacting us."
+  }
+}
+// to rent a house Zabbuthiri, RC, two floor, other area
+    else if (received_message.payload === 'tobuy_onlyother_zabu7_tenantac1') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC,  2.5 lakhs per month, 60*70 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92465912_148351516710648_1751142708715454464_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeG4Y_29JTV2nR-S0e4T_3l2jyTiAxhjiyWPJOIDGGOLJeN4MvyOK5riu_STZt4-BtlbQ1z-Nj2JZLgPhK7gDSRH&_nc_ohc=NlIAL0Jz0p0AX9IjMKA&_nc_ht=scontent.fmdl2-1.fna&oh=a059ee4af2076260fe6fa851d60ead96&oe=5EB1FB14",
+            "subtitle":"Mbr-(2), Br-(4), face south",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
 /*****************************************************************/
 /*****************************************************************/
 
