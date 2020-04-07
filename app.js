@@ -2066,6 +2066,7 @@ else if (received_message.payload === "potwp") {
                         }
                       ]
   }
+}
 
 
   // to buy house in pobba, RC, one floor, Mbr
@@ -2090,6 +2091,7 @@ else if (received_message.payload === "potwp") {
                         }
                       ]
   }
+}
 
 // to buy house in pobba, RC, one floor, Mbr , 40*60
  else if (received_message.payload === 'tobuyhoupobb_rconefmbr24inaa') {
