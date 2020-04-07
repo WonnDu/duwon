@@ -6713,6 +6713,7 @@ else if (received_message.payload === "tenanpob") {
                         }
                       ]
   }
+}
 
 
   // to rent house in pobba, RC, one floor, Mbr
@@ -6732,6 +6733,7 @@ else if (received_message.payload === "tenanpob") {
                         }
                       ]
   }
+}
 
 // to rent house in pobba, RC, one floor, Mbr , 3 lakhs & below it
  else if (received_message.payload === 'torenthoupob3lakhs_below11a') {
@@ -6852,6 +6854,7 @@ else if (received_message.payload === "tenanpob") {
                         }
                       ]
   }
+}
 
 
 // to rent house in pobba, RC, one floor, only br, 2 lakhs & below it
@@ -6990,6 +6993,7 @@ else if (received_message.payload === "tenanpob") {
                         }
                       ]
   }
+}
 
 // to rent house in pobba, RC, two floor, 3 lakhs & below it
  else if (received_message.payload === 'torentpob_twof3lakhs_tenant') {
