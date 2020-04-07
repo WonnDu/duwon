@@ -2228,6 +2228,7 @@ else if (received_message.payload === "potwp") {
                         }
                       ]
   }
+}
 
 
 // to buy house in pobba, RC, one floor, only br, 40*60
