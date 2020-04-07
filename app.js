@@ -1836,7 +1836,7 @@ else if (received_message.payload === "ottwp") {
 
       }
   } 
-  // for RC to buy house in oattra
+  // to buy house in oattra, RC
   else if (received_message.payload === "rc_ott" ) {
     response = {
                   "text": "Please choose the number of floor:",
@@ -1861,26 +1861,8 @@ else if (received_message.payload === "ottwp") {
       }
   }
  
-      // one floor(RC) in oattra for area ( number of master bed room)
+// to buy house in oattra, RC, one floor
   else if (received_message.payload === "onef_ott") {
-    response = {
-                  "text": "Please choose the number of Mbr included:",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "below 3",
-                          "payload": "below3_onef_rc_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "3 and above",
-                          "payload": "above3_onef_rc_ott",
-                        }
-                      ]
-      }
-  }
-    // below 3 master bed one floor(RC) in oattra for area
-  else if (received_message.payload === "below3_onef_rc_ott") {
     response = {
                   "text": "Do you want how much wide area?",
                     "quick_replies": [
@@ -1898,38 +1880,53 @@ else if (received_message.payload === "ottwp") {
                           "content_type": "text",
                           "title": "150*150",
                           "payload": "150_in_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whatever_in_ott",
                         }
                       ]
       }
   }
 
-  // below 3 master bed one floor(RC) 100*100 in oattra for area
+
+// to buy house in oattra, RC, one floor, 80*80
+    else if (received_message.payload === '80_in_ott') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 2500 lakhs, 80*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92351629_148794463333020_2221158640822255616_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeFm1wi0SGzyni_3NnxhV8Kj1lNwb3N4O3bWU3Bvc3g7dqEGpoxFQfLp2LSy7mRPgwj9ppl6UkkYIqzQC9mAFgW7&_nc_ohc=l2RNd7uB4IgAX-owFfd&_nc_ht=scontent.fmdl2-1.fna&oh=75c5576355ba2da2eeccbc1905d08e25&oe=5EB07C45",
+            "subtitle":"Mbr-(2), land type-(grant), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to buy house in oattra, RC, one floor, 100*100
     else if (received_message.payload === '100_in_ott') {
     response = {
-                  "text": "Please choose the estimated amount that you are avaliable to buy house:",
-                    "quick_replies": [
-                        {
-                          "content_type": "text",
-                          "title": "below 2500",
-                          "payload": "below25in100ott_inamount",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "above 2500 ",
-                          "payload": "above250inab100ott_inamount",
-                        }                      
-                        ]
-      }
-  }
-
-  // to buy Ottara, RC, one floor, Master bed, below 3, 100*100, below 2500
-    else if (received_message.payload === 'below25in100ott_inamount') {
-    response = {
     "attachment":{
       "type":"template",
       "payload":{
@@ -1937,84 +1934,18 @@ else if (received_message.payload === "ottwp") {
         "elements": [ 
         
            {
-            "title":"RC, 2000 lakhs, 100*100 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91384194_147284593484007_750540617238446080_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_ohc=tA2_J9-tGzMAX9KHy5a&_nc_ht=scontent.fmdl2-2.fna&oh=cdbdf29491d5b305d830d218345ae731&oe=5EAE5EDA",
-            "subtitle":"2 MB, Negotiable",
+            "title":"RC, 3000 lakhs, 100*100 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91912200_148783696667430_2449683035914764288_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeGtmRWzKn14WcOyBlHpkLA8U4OdKoYtcohTg50qhi1yiCt7wEw-ep9s_RQgz5V370kLzW9e5txrxVGQj_84K-09&_nc_ohc=CcVp57UKpFIAX-DJiRB&_nc_ht=scontent.fmdl2-1.fna&oh=76724e70158faba1e3386ff9413e2251&oe=5EB1FE9D",
+            "subtitle":"Mbr-(4), Br-(1), land type-(grant), face north, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaae"
-              }              
-            ]      
-          },
-          {
-            "title":"RC, 1600 lakhs, 100*100 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91404749_147290403483426_6641858286914109440_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_ohc=jLS6kreCqwMAX8fcYHg&_nc_ht=scontent.fmdl2-1.fna&oh=095c55f41bad95133ad3041cf5839b8b&oe=5EAD9BE3",
-            "subtitle":"1MB, 3BD, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaae"
-              }              
-            ]      
-          },
-           {
-            "title":"RC, 1550 lakhs, 100*100 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91919114_147317480147385_4454999370881826816_n.jpg?_nc_cat=105&_nc_sid=110474&_nc_eui2=AeEGImDPuTHhTYsKjmn4ppol6Rp7BH2OzvzpGnsEfY7O_J0MxiuGK7v2BFTXqU8aSDEUK3r0EphYpF8SXHiI1L0S&_nc_ohc=EHw2O4hmNl4AX_vdOcY&_nc_ht=scontent.fmdl2-2.fna&oh=18a31bcf609b72aa74f6c50aad0ee9e1&oe=5EAD7A46",
-            "subtitle":"2MB, 1BD, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaae"
-              }              
-            ]      
-          },
-           {
-            "title":"RC, 1950 lakhs, 100*100 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91265432_147319416813858_2383293673426124800_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_eui2=AeFcYq2-auP4MG_KyriFjrxUX10DOO9aAr9fXQM471oCvyW-SJghM1_9bfQPzglrTM5NIuO3Upbq1mC7BvhHrA7g&_nc_ohc=gOXJwBKHcMQAX8-TGC6&_nc_ht=scontent.fmdl2-1.fna&oh=b59b05e3cfb79119879136b7a787fafe&oe=5EADF7D4",
-            "subtitle":"1MB, 2BD, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
                 "title":"More Information"
               },
               {
@@ -2031,58 +1962,8 @@ else if (received_message.payload === "ottwp") {
   }
 }
 
-
-
-
-
-
-  /**************/
-    // above 3 master bed one floor(RC) in oattra for area
-  else if (received_message.payload === "above3_onef_rc_ott") {
-    response = {
-                  "text": "Do you want how much wide area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "80*80",
-                          "payload": "mb80ott_in_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "100*100",
-                          "payload": "mb100ott_in_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "150*150",
-                          "payload": "mb150ott_in_ott",
-                        }
-                      ]
-      }
-  }
-  // above 3 master bed one floor(RC) 150*150 in oattra for area
-    else if (received_message.payload === 'mb150ott_in_ott') {
-    response = {
-                  "text": "Please choose the estimated amount that you are avaliable to buy house:",
-                    "quick_replies": [
-                        {
-                          "content_type": "text",
-                          "title": "below 3500",
-                          "payload": "below35in150ott_eamount",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "below 5000",
-                          "payload": "below150inab5000ott_eamount",
-                        }                      
-                        ]
-      }
-  }
-/*****************/
-
-
-// to buy Ottara, RC, one floor, Master bed, 3 and above, 150*150, below 5000
-    else if (received_message.payload === 'below150inab5000ott_eamount') {
+// to buy house in oattra, RC, one floor, 150*150
+    else if (received_message.payload === '150_in_ott') {
     response = {
     "attachment":{
       "type":"template",
@@ -2091,62 +1972,18 @@ else if (received_message.payload === "ottwp") {
         "elements": [ 
         
            {
-            "title":"RC, 3990 lakhs, 150*150 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91833243_147277623484704_3080627226484408320_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_ohc=W5PYefA9-YkAX9eg2-T&_nc_ht=scontent.fmdl2-2.fna&oh=a09a09a42fad4069c440b234cbb21b02&oe=5EAD6D39",
-            "subtitle":"Mbr (3), Negotiable",
+            "title":"RC, 4000 lakhs, 150*150 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92455881_148780726667727_1440690996407959552_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeGf9LydtrRy0Pv5ZMogA6x-iVE1BTJAoH6JUTUFMkCgfvVyire9NqORSOcCe7roMWslwom0L_MecnwPhfXdtz8B&_nc_ohc=c_ZjDikT9XUAX_auGhw&_nc_ht=scontent.fmdl2-1.fna&oh=f48d774f3ef4ed31d7c61775f042646d&oe=5EB1CDC2",
+            "subtitle":"Mbr-(3), land type-(grant), face west, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaae"
-              }              
-            ]      
-          },
-          {
-            "title":"RC, 3900 lakhs, 150*150 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92114624_147286746817125_7689532266472538112_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_ohc=NOsMs9pzWl4AX8iH-35&_nc_ht=scontent.fmdl2-2.fna&oh=c6de69d38a4e7a2640a9537f872d72ef&oe=5EAE5F45",
-            "subtitle":"Mbr (3), Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaae"
-              }              
-            ]      
-          },
-          {
-            "title":"RC, 3500 lakhs, 150*150 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91357395_147511736794626_7858189748081262592_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_eui2=AeGnZTST2DP5cIBJv_OXtnTpa9rDcWeaioNr2sNxZ5qKg93jo0cfXrAYsxHqOk394dt6VBW_o3TjHkBX8GiihwMp&_nc_ohc=cyy4XZ2iYO0AX_TNXh2&_nc_ht=scontent.fmdl2-2.fna&oh=1d91a559ea372cdfffd92cd8d68e5244&oe=5EAED720",
-            "subtitle":"Mbr (3), Aircon (6), Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
                 "title":"More Information"
               },
               {
@@ -2162,260 +1999,6 @@ else if (received_message.payload === "ottwp") {
     }
   }
 }
-
-
-/****************************/
-/*
- // one floor(RC) only bed rooms special in oattra for area
-  else if (received_message.payload === "onef_bed_ott") {
-    response = {
-                  "text": "Please choose the house in which the number of bed room has",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "below 3",
-                          "payload": "bed3below_onef_rc_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "3 and above",
-                          "payload": "bed3above_onef_rc_ott",
-                        },
-                       
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whtever_onef_rc_onlybed_ott",
-                        }
-                      ]
-      }
-  }
-    // below 3 bed one floor(RC) in oattra for area
-  else if (received_message.payload === "bed3below_onef_rc_ott") {
-    response = {
-                  "text": "Do you want what area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "80*80",
-                          "payload": "onlybed80_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "100*100",
-                          "payload": "onlybed100_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "150*150",
-                          "payload": "onlybed150_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "onlybed_whatever_ott",
-                        }
-                      ]
-      }
-  }
-    // above 3 bed one floor(RC) in oattra for area
-  else if (received_message.payload === "bed3above_onef_rc_ott") {
-    response = {
-                  "text": "Do you want what area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "80*80",
-                          "payload": "bedroom88_in_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "100*100",
-                          "payload": "bedroom11_in_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "150*150",
-                          "payload": "bedroom150_in_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "bedroom_wharea_in_ott",
-                        }
-                      ]
-      }
-  }
-// above whatever bed one floor(RC) in oattra for area
-  else if (received_message.payload === "whtever_onef_rc_onlybed_ott") {
-    response = {
-                  "text": "Do you want what area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "80*80",
-                          "payload": "wht8_bedroom_in_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "100*100",
-                          "payload": "wht100_bedroom_in_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "150*150",
-                          "payload": "wht150_bedroom_in_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whtwht_bedroom_in_ott",
-                        }
-                      ]
-      }
-  }
-*/
-
-
-/**************************/
-
-    // two floor(RC) in oattra for area (number of master bed room)
-  else if (received_message.payload === "twof_ott") {
-    response = {
-                  "text": "Please choose the number of Mbr included:",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "below 3",
-                          "payload": "below3_twoof_rc_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "3 and above",
-                          "payload": "above3_twoof_rc_ott",
-                        }
-                      ]
-      }
-  }
-    // two floor(RC) in oattra for below 3 master bed room
-  else if (received_message.payload === "below3_twoof_rc_ott") {
-    response = {
-                  "text": "Do you want how much wide area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "80*80",
-                          "payload": "tf_80_in_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "100*100",
-                          "payload": "tf_100_in_ott",
-                        }
-                      ]
-      }
-  }
-
-
-  // above 3 master bed two floor(RC) 100*100 in oattra for area
-    else if (received_message.payload === 'tf_100_in_ott') {
-    response = {
-                  "text": "Please choose the estimated amount that you are avaliable to buy house:",
-                    "quick_replies": [
-                        {
-                          "content_type": "text",
-                          "title": "below 2500",
-                          "payload": "below25in100ott_amount",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "below 4000",
-                          "payload": "below100inab4400ott_amount",
-                        }                      
-                        ]
-      }
-  }
-/*****************/
-
-
-// to buy Ottara, RC, two floor, Master bed, below 3, 100*100, below 5000
-    else if (received_message.payload === 'below25in100ott_amount') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"RC, 1500 lakhs, 100*100 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91637408_147281323484334_8201076709810765824_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_ohc=cgGC3-SZELMAX8N3TMe&_nc_ht=scontent.fmdl2-1.fna&oh=47e015063744af4cf9c1094d26b674dc&oe=5EAB6EC1",
-            "subtitle":"2 floor,2 MB, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaae"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-
-/****************************/
-
-
-
-
- 
-  // other floor execpt one and two floor in oattra.
-  else if (received_message.payload === "otherf_ott") {
-    response = {
-                  "text": "There are not other floor had in any property avaliable to sell in Ottara."
-      }
-  }
-
-
-  // for RC to buy house (nancat) in oattra
-  else if (received_message.payload === "nancat_ott") {
-    response = {
-                    "text": "There are not any other type property avaliable to sell in Oattra."
-/*                  "text": "Please choose you want to buy the house in which",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "one floor",
-                          "payload": "onef_nan_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "two floor",
-                          "payload": "fourthf_nan_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whateverf_nan_ott",
-                        }
-                      ]     */
-
-      }
-  }
 
 
 
@@ -2909,7 +2492,7 @@ else if (received_message.payload === "potwp") {
         "template_type":"generic",
         "elements": [ 
         
-                    {
+           {
             "title":"3RC, 3600 lakhs, 60*80 ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92138782_148707466675053_5918704202221092864_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeE_h3jBITkW7xkMqu3_I6ZSTbencPv31K1Nt6dw-_fUrRIBi2eMl4upeFefewulR61984TZbIxxpK-ya8_OLYqw&_nc_ohc=d7YY9JJ3fBsAX9uFLtw&_nc_ht=scontent.fmdl2-1.fna&oh=2328b837dd4e1233e2aa509045cc3207&oe=5EB3FC6E",
             "subtitle":"MBr-(4), Br-(2), land type-(grant), face north, Negotiable",
@@ -6892,6 +6475,179 @@ else if (received_message.payload === "tedekl") {
 
 /****************************************************************************************************************/
 /***************************************************************************************************************/
+
+/*
+  // to rent house in oattra, RC (there is no other type in oattra)
+  else if (received_message.payload === "tenanott" ) {
+    response = {
+                  "text": "Please choose the number of floor:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "one floor",
+                          "payload": "onef1_ott_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "two floor",
+                          "payload": "twof1_ott_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "other",
+                          "payload": "otherf1_ott_tenant",
+                        }
+                      ]
+
+      }
+  }
+ 
+// to rent house in oattra, RC, one floor
+  else if (received_message.payload === "onef1_ott_tenant") {
+    response = {
+                  "text": "Do you want how much wide area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "6 lakhs & below it",
+                          "payload": "onef6lakhsabove_in_ott_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "above 6 lakhs",
+                          "payload": "onefabove6lakhs_in_ott_tenant",
+                        }
+                      ]
+      }
+  }
+
+
+// to rent house in oattra, RC, one floor, 6 lakhs & below it
+    else if (received_message.payload === 'onef6lakhsabove_in_ott_tenant') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 4 lakhs per month, 80*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92351629_148794463333020_2221158640822255616_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeFm1wi0SGzyni_3NnxhV8Kj1lNwb3N4O3bWU3Bvc3g7dqEGpoxFQfLp2LSy7mRPgwj9ppl6UkkYIqzQC9mAFgW7&_nc_ohc=l2RNd7uB4IgAX-owFfd&_nc_ht=scontent.fmdl2-1.fna&oh=75c5576355ba2da2eeccbc1905d08e25&oe=5EB07C45",
+            "subtitle":"Mbr-(2), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to buy house in oattra, RC, one floor, 
+    else if (received_message.payload === 'onefabove6lakhs_in_ott_tenant') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 3000 lakhs, 100*100 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91912200_148783696667430_2449683035914764288_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeGtmRWzKn14WcOyBlHpkLA8U4OdKoYtcohTg50qhi1yiCt7wEw-ep9s_RQgz5V370kLzW9e5txrxVGQj_84K-09&_nc_ohc=CcVp57UKpFIAX-DJiRB&_nc_ht=scontent.fmdl2-1.fna&oh=76724e70158faba1e3386ff9413e2251&oe=5EB1FE9D",
+            "subtitle":"Mbr-(4), Br-(1), land type-(grant), face north, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to buy house in oattra, RC, one floor, 150*150
+    else if (received_message.payload === '150_in_ott') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 4000 lakhs, 150*150 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92455881_148780726667727_1440690996407959552_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeGf9LydtrRy0Pv5ZMogA6x-iVE1BTJAoH6JUTUFMkCgfvVyire9NqORSOcCe7roMWslwom0L_MecnwPhfXdtz8B&_nc_ohc=c_ZjDikT9XUAX_auGhw&_nc_ht=scontent.fmdl2-1.fna&oh=f48d774f3ef4ed31d7c61775f042646d&oe=5EB1CDC2",
+            "subtitle":"Mbr-(3), land type-(grant), face west, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+*/
+
+
+
+
+
+
+
+/*****************************************************************/
+/*****************************************************************/
+
+
 // to rent house in pobba, types of house
 else if (received_message.payload === "tenanpob") {
       response = {
