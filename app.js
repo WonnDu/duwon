@@ -3143,7 +3143,9 @@ else if (received_message.payload === "potwp") {
   }
 
 
-/******************************/
+/*********************************************/
+/*********************************************/
+
 // to buy house in dekkhina
 else if (received_message.payload === "dektwp") {
       response = {
@@ -3162,7 +3164,8 @@ else if (received_message.payload === "dektwp") {
                       ]
 
       }
-  } 
+  }
+  // to buy house in dekkhina, RC 
   else if (received_message.payload === "rc_dek") {
     response = {
                   "text": "Please choose the number of floor",
@@ -3527,11 +3530,319 @@ else if (received_message.payload === "dektwp") {
   }
 }
 
+/********************************************/
+
+ // to buy house in dekkhina, two floor, area
+  else if (received_message.payload === "twof_dek") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "twof_aonlymbed46cc_dek",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*60",
+                          "payload": "twof_aonlymbed66ab_dek",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "twof_aonlymbed68b_dek",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "80*80",
+                          "payload": "twof_aonlymbed88asin_dek",
+                        },
+                           {
+                          "content_type": "text",
+                          "title": "100*100",
+                          "payload": "twof_aonlymbed100aabccdin_dek",
+                        }
+                      ]
+      }
+  }
 
 
 
+// to buy house in dekkhina, Rc, two floor, 40*60
+    else if (received_message.payload === 'twof_aonlymbed46cc_dek') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 1700 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91876881_148667190012414_7394498520390041600_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeGuaoOd56cUfdGwui3Ch4l4sGU0IifrOl-wZTQiJ-s6Xx6MMoJkF3xvnBphVS2O_U5GlCuBHhd6H4S77b8PfSgq&_nc_ohc=6hUnCzBbpckAX9MCIC8&_nc_ht=scontent.fmdl2-1.fna&oh=ed5bd3759a0b22350acdc37a52866feb&oe=5EB18D68",
+            "subtitle":"Mbr-(2), Br-(2), land type-(grant), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
 
-  /**************************************************/
+        ]
+      }
+    }
+  }
+}
+
+
+// to buy house in dekkhina, Rc, two floor, 60*60
+    else if (received_message.payload === 'twof_aonlymbed66ab_dek') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 1900 lakhs, 60*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92583214_148663500012783_7353603237661900800_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeHLhaQy-lNjPoEct3xlK1U_GQY1Il0R_owZBjUiXRH-jIH7BrAfWbr-OQxrwCm-m6rKV9woFTMb-Nx0A-tXFq_t&_nc_ohc=sNpw-oCNFF4AX-hmd3q&_nc_ht=scontent.fmdl2-2.fna&oh=e726b585836f6d217c86d4ceeb13f5c2&oe=5EB109E4",
+            "subtitle":"Mbr-(2), Br-(3), land type-(grant), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to buy house in dekkhina, Rc, two floor, 60*80
+    else if (received_message.payload === 'twof_aonlymbed68b_dek') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 2000 lakhs, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92244656_148661983346268_5412490990118240256_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeH7i1rOMS8eeDRAo6chNPk97R3saB8e7SztHexoHx7tLI80FOYBR4_5sP3UzCEmtsrIlOqG-g2UNFogclACx-h9&_nc_ohc=xGmu-HV_qU8AX-rAPLo&_nc_ht=scontent.fmdl2-1.fna&oh=7bb92d21c48c88bd788564994049ddd6&oe=5EB0B3E1",
+            "subtitle":"Mbr-(3), Br-(1), land type-(grant), face west, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to buy house in dekkhina, Rc, two floor, 80*80
+    else if (received_message.payload === 'twof_aonlymbed88asin_dek') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 3500 lakhs, 80*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92460697_148661310013002_7562140512816201728_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeGXPnWOsVIgxd191EVtq4QzAAmWNiurfdoACZY2K6t92sSwRjyS9-R7_Sb-5Pej0m04acQDvIDQ4SXSMQ0YxOoB&_nc_ohc=TuJg6KwfDIIAX867j8B&_nc_ht=scontent.fmdl2-1.fna&oh=0328354a18069d7a3a12fae8761f31b4&oe=5EB14705",
+            "subtitle":"Mbr-(2), Br-(2), land type-(grant), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+// to buy house in dekkhina, Rc, two floor, 100*100
+    else if (received_message.payload === 'twof_aonlymbed100aabccdin_dek') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 5500 lakhs, 100*100 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92177551_148650480014085_8591158172348055552_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_eui2=AeEMxLJE8yJWn12cjnsZ24IAXxiYUvJTRvdfGJhS8lNG9wGyTfx-GESmgXjRIL0gaQ64hSEgq1Hvx0in9dOMwglQ&_nc_ohc=x_SJl0kcdecAX-C0w-b&_nc_ht=scontent.fmdl2-1.fna&oh=e6d5a9d5b8271703d4c3c7177ca94266&oe=5EB33173",
+            "subtitle":"Mbr-(5), land type-(grant), face east, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+/********************************/
+
+// to buy house in dekkhina, Rc, other floor,
+    else if (received_message.payload === 'thirdf_dek') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 6500 lakhs, 50*75 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92667938_148681606677639_6253805066847780864_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeHNyDhSx0ovFtr7eWjPt3Raef0VwMYXhKh5_RXAxheEqDq_SNyzVRhmHguVKNiCzwNpYkdEkenidgHtp7xL2PtM&_nc_ohc=V5MmGn_sMAgAX8_t0wI&_nc_ht=scontent.fmdl2-2.fna&oh=d746a503f668daddb4760473f684da45&oe=5EB3D5D6",
+            "subtitle":"Mbr-(3), land type-(grant), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+/*****************/
+
+
+// to buy house in dekkhina, other type (not RC)
+    else if (received_message.payload === 'nancat_dek') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"Nancat,  600 lakhs, 60*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/93101461_148684256677374_2200426120719892480_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_eui2=AeFye7mt4SB5HOSquEDbUdAioBRfEDs7j8KgFF8QOzuPwrNvkh5Pix0nh-XhaE6LM0qxdB2C4fDV7nJikI9tr3B7&_nc_ohc=ecor5tV1VtkAX-Tfk91&_nc_ht=scontent.fmdl2-1.fna&oh=0c28277c0ef5111f6a667a2725cdd824&oe=5EB0D393",
+            "subtitle":"Brr-(3), land type-(grant), face north, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+
+/*******************************************************************************************/
+  /*********************************************************************************/
 
   // to buy house in Zayathiri
 else if (received_message.payload === "zaytwp") {
@@ -5352,8 +5663,11 @@ else if (received_message.payload === "otthi") {
       }
   }    
 
+/************************************************************************************/
+/***********************************************************************************/
 
-// to buy land in Dekkhia
+
+// to buy land in Dekkhia, area
 else if (received_message.payload === "dekthi") {
     response = {
                   "text": "Do you want what area?",
@@ -5361,55 +5675,34 @@ else if (received_message.payload === "dekthi") {
                          {
                           "content_type": "text",
                           "title": "40*60",
-                          "payload": "onlya60land_dek",
+                          "payload": "tobude_onlya60land_dek",
                         },
                         {
                           "content_type": "text",
                           "title": "60*60",
-                          "payload": "onlya660land_dek",
+                          "payload": "tobude_onlya660land_dek",
                         },
                         {
                           "content_type": "text",
                           "title": "60*80",
-                          "payload": "onlya100land_dek",
+                          "payload": "tobude_onlya100land_dek",
                         },
                         {
                           "content_type": "text",
                           "title": "80*80",
-                          "payload": "onlya80landin_dek",
+                          "payload": "tobude_onlya80landin_dek",
                         },
                            {
                           "content_type": "text",
                           "title": "100*100",
-                          "payload": "onlyaland100in_dek",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "onlylanda1a1_whatever_dek",
+                          "payload": "tobude_onlyaland100in_dek",
                         }
                       ]
       }
   }
-     else if (received_message.payload === 'onlya660land_dek') {
-    response = {
-                  "text": "Please choose the estimated amount that you are avaliable to buy land:",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "below 700",
-                          "payload": "below700land_dekkii99",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "above 700",
-                          "payload": "above700land_dekkii99",
-                        }                      ]
-      }
-  }
 
-// to buy land in Dekkhina,  below 700
-    else if (received_message.payload === 'below700land_dekkii99') {
+// to buy land in Dekkhina,  40*60
+    else if (received_message.payload === 'tobude_onlya60land_dek') {
     response = {
     "attachment":{
       "type":"template",
@@ -5418,18 +5711,170 @@ else if (received_message.payload === "dekthi") {
         "elements": [ 
         
            {
-            "title":"land, 140 lakhs, 60*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92024437_147513583461108_2759257849044402176_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_eui2=AeHsaWoVZrB9sdXELQGiSs7qKJVwS5P0JbUolXBLk_QltZsw_9qwTqbLVptop7MPD00Mhg0NyEUxJrQU7bzr_INm&_nc_ohc=0mmVGHV0_zsAX9bny9y&_nc_ht=scontent.fmdl2-1.fna&oh=6d6aedd2cb3e3174481663448ef86d58&oe=5EAFB9E5",
-            "subtitle":"Negotiable",
+            "title":"land, 330 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91505407_148674673344999_6438141773247152128_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeF4uScfWcHQXpzQBF9BpStZRNT1qYilTdNE1PWpiKVN0y7ChqSJLHs4ngoSb5pKvAVVipqp0GjVHMSjyivg1G0q&_nc_ohc=lVEN8hAPU54AX_xdhVc&_nc_ht=scontent.fmdl2-1.fna&oh=cf06386fb8b2c111e1a17b30067dffc6&oe=5EB13151",
+            "subtitle":"land type-(permit), face east, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to buy land in Dekkhina,  60*60
+    else if (received_message.payload === 'tobude_onlya660land_dek') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 150 lakhs, 60*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92573474_148671303345336_7972612929591705600_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_eui2=AeGesnpPNxDTxDFmi1AdqMus7LSNKmgELoPstI0qaAQugwvn0YmpYg4hao4tla6JxiL2ZjneVWReAHhUWWypHu8C&_nc_ohc=OXtbPECcRqQAX9j0Vek&_nc_ht=scontent.fmdl2-1.fna&oh=4807aa5ab7739151d174ccf1e1ce901e&oe=5EB0D709",
+            "subtitle":"land type-(slit), face north, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to buy land in Dekkhina,  60*80
+    else if (received_message.payload === 'tobude_onlya100land_dek') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 200 lakhs, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92360334_148680736677726_5635709584476733440_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_eui2=AeHyQ1NLvMIClsn5S9QIthrSiiHWb8EfPkmKIdZvwR8-Sfo6ZfQDqr_NGT0QX3c8d_FzWTaqT6apxtC5-IO9-Vd6&_nc_ohc=5zDJC6ty8FUAX9oGqo0&_nc_ht=scontent.fmdl2-1.fna&oh=f5759657f5b871e2e7d77ef51f283966&oe=5EB1BD12",
+            "subtitle":"land type-(grant), face north, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to buy land in Dekkhina,  80*80
+    else if (received_message.payload === 'tobude_onlya80landin_dek') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 300 lakhs, 80*80 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92389436_148677910011342_4703647964088762368_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeFnxMTydi_PAoygFa_sT8N5uJO_gqWz6Ie4k7-CpbPoh8pkMLfxDCF6ftwhshOIPRxScJp-R0ziWNvAL4VPmjfp&_nc_ohc=JzfrZn2GFhEAX9P8dIL&_nc_ht=scontent.fmdl2-2.fna&oh=ff96c716d309c7663fcb68bc35e9c543&oe=5EB193A6",
+            "subtitle":"land type-(permit), face east & north, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to buy land in Dekkhina,  100*100
+    else if (received_message.payload === 'tobude_onlyaland100in_dek') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 350 lakhs,100*100 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92023227_148678763344590_6163162711233396736_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeG1Yh-bM7cBszY0E37bemDdBgP3e6fdm5QGA_d7p92blNuE8eGcUXHPcSs7BtZkfLvhlKHV_h0OQEL5jmxzFKk-&_nc_ohc=YRk6tztDMhYAX-bzLfq&_nc_ht=scontent.fmdl2-1.fna&oh=f51d00030a755fd4a893773cf5e739a6&oe=5EB2E475",
+            "subtitle":"land type-(permit), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92023227_148678763344590_6163162711233396736_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeG1Yh-bM7cBszY0E37bemDdBgP3e6fdm5QGA_d7p92blNuE8eGcUXHPcSs7BtZkfLvhlKHV_h0OQEL5jmxzFKk-&_nc_ohc=YRk6tztDMhYAX-bzLfq&_nc_ht=scontent.fmdl2-1.fna&oh=f51d00030a755fd4a893773cf5e739a6&oe=5EB2E475",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"",
                 "title":"More Information"
               },
               {
@@ -5450,8 +5895,8 @@ else if (received_message.payload === "dekthi") {
 
 
 
-  
-/************************************************************************/
+/**************************************************************************************/
+/**************************************************************************************/
   // to buy land in Zabuthiri, area
   else if (received_message.payload === "zabuthi") {
     response = {
@@ -5819,8 +6264,240 @@ else if (received_message.payload === "dekthi") {
     }
   }
 }
-/************************************************/
-/*************************************************/
+
+
+/*****************************************************************/
+/*****************************************************************/
+
+
+// to rent land in Dekkhia, area
+else if (received_message.payload === "tedekl") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "torede_onlya4646land_dek_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*60",
+                          "payload": "torede_onlya660land_dek_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "torede_onlya6868land_dek_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "80*80",
+                          "payload": "torede_onlya88landin_dek_tenant",
+                        },
+                           {
+                          "content_type": "text",
+                          "title": "100*100",
+                          "payload": "torede_onlyaland100in_dek_tenant",
+                        }
+                      ]
+      }
+  }
+
+// to rent land in Dekkhina,  40*60
+    else if (received_message.payload === 'torede_onlya4646land_dek_tenant') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 1 lakh per month, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91505407_148674673344999_6438141773247152128_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeF4uScfWcHQXpzQBF9BpStZRNT1qYilTdNE1PWpiKVN0y7ChqSJLHs4ngoSb5pKvAVVipqp0GjVHMSjyivg1G0q&_nc_ohc=lVEN8hAPU54AX_xdhVc&_nc_ht=scontent.fmdl2-1.fna&oh=cf06386fb8b2c111e1a17b30067dffc6&oe=5EB13151",
+            "subtitle":"land type-(permit), face east",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to rent land in Dekkhina,  60*60
+    else if (received_message.payload === 'torede_onlya660land_dek_tenant') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 1.5 lakhs per month, 60*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92573474_148671303345336_7972612929591705600_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_eui2=AeGesnpPNxDTxDFmi1AdqMus7LSNKmgELoPstI0qaAQugwvn0YmpYg4hao4tla6JxiL2ZjneVWReAHhUWWypHu8C&_nc_ohc=OXtbPECcRqQAX9j0Vek&_nc_ht=scontent.fmdl2-1.fna&oh=4807aa5ab7739151d174ccf1e1ce901e&oe=5EB0D709",
+            "subtitle":"land type-(slit), face north",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to rent land in Dekkhina,  60*80
+    else if (received_message.payload === 'torede_onlya6868land_dek_tenant') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 2 lakhs per month, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92360334_148680736677726_5635709584476733440_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_eui2=AeHyQ1NLvMIClsn5S9QIthrSiiHWb8EfPkmKIdZvwR8-Sfo6ZfQDqr_NGT0QX3c8d_FzWTaqT6apxtC5-IO9-Vd6&_nc_ohc=5zDJC6ty8FUAX9oGqo0&_nc_ht=scontent.fmdl2-1.fna&oh=f5759657f5b871e2e7d77ef51f283966&oe=5EB1BD12",
+            "subtitle":"land type-(grant), face north, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to buy land in Dekkhina,  80*80
+    else if (received_message.payload === 'torede_onlya88landin_dek_tenant') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 2.5 lakhs per month, 80*80 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92389436_148677910011342_4703647964088762368_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeFnxMTydi_PAoygFa_sT8N5uJO_gqWz6Ie4k7-CpbPoh8pkMLfxDCF6ftwhshOIPRxScJp-R0ziWNvAL4VPmjfp&_nc_ohc=JzfrZn2GFhEAX9P8dIL&_nc_ht=scontent.fmdl2-2.fna&oh=ff96c716d309c7663fcb68bc35e9c543&oe=5EB193A6",
+            "subtitle":"land type-(permit), face east & north, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to rent land in Dekkhina,  100*100
+    else if (received_message.payload === 'torede_onlyaland100in_dek_tenant') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 3 lakhs per month, 100*100 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92023227_148678763344590_6163162711233396736_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeG1Yh-bM7cBszY0E37bemDdBgP3e6fdm5QGA_d7p92blNuE8eGcUXHPcSs7BtZkfLvhlKHV_h0OQEL5jmxzFKk-&_nc_ohc=YRk6tztDMhYAX-bzLfq&_nc_ht=scontent.fmdl2-1.fna&oh=f51d00030a755fd4a893773cf5e739a6&oe=5EB2E475",
+            "subtitle":"land type-(permit), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92023227_148678763344590_6163162711233396736_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeG1Yh-bM7cBszY0E37bemDdBgP3e6fdm5QGA_d7p92blNuE8eGcUXHPcSs7BtZkfLvhlKHV_h0OQEL5jmxzFKk-&_nc_ohc=YRk6tztDMhYAX-bzLfq&_nc_ht=scontent.fmdl2-1.fna&oh=f51d00030a755fd4a893773cf5e739a6&oe=5EB2E475",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+
+/****************************************************************/
+/***************************************************************/
   // to rent land in Zabuthiri, area
   else if (received_message.payload === "tezal") {
     response = {
@@ -5888,7 +6565,7 @@ else if (received_message.payload === "dekthi") {
   }
 }
 
-// to buy land in Zabuthiri,  40*60
+// to rent land in Zabuthiri,  40*60
     else if (received_message.payload === 'only46alandin_zabuu7_rent1') {
     response = {
     "attachment":{
@@ -5925,7 +6602,7 @@ else if (received_message.payload === "dekthi") {
     }
   }
 }
-// to buy land in Zabuthiri,  100*100
+// to rent land in Zabuthiri,  100*100
     else if (received_message.payload === 'only68cclandin_zabuu7_rent1') {
     response = {
     "attachment":{
@@ -5966,7 +6643,7 @@ else if (received_message.payload === "dekthi") {
 
 
 
-// to buy land in Zabuthiri,  Other area
+// to rent land in Zabuthiri,  Other area
     else if (received_message.payload === 'onlyother7dlandin_zabuu7_rent1' ) {
     response = {
     "attachment":{
@@ -6237,7 +6914,7 @@ else if (received_message.payload === "tenandek") {
                         },
                         {
                           "content_type": "text",
-                          "title": " other",
+                          "title": " Other floor",
                           "payload": "otherrrf_dekkii11_tenant1",
                         }
                       ]
@@ -6442,7 +7119,7 @@ else if (received_message.payload === "tenandek") {
   }
 }
 
-// to buy house in dekkhina, one floor, master bed rooms, above 3 lakhs
+// to rent house in dekkhina, one floor, master bed rooms, above 3 lakhs
     else if (received_message.payload === 'torent_houindekk_mbabove3lpp') {
     response = {
     "attachment":{
@@ -6523,6 +7200,260 @@ else if (received_message.payload === "tenandek") {
     }
   }
 }
+
+/*****************************/
+/*****************************/
+
+// to rent house in dekkhina, two floor, area
+  else if (received_message.payload === "twof_dekkii11_tenant1") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "3 lakhs & below it",
+                          "payload": "twof_price3lakhsbelowmm_dek",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "above 3 lakhs",
+                          "payload": "twof_priceabove3lakhsmm_dek",
+                        }
+                      ]
+      }
+  }
+
+
+
+// to rent house in dekkhina, Rc, two floor, 3 lakhs & below it
+    else if (received_message.payload === 'twof_price3lakhsbelowmm_dek') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 1.5 lakhs per month, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91876881_148667190012414_7394498520390041600_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeGuaoOd56cUfdGwui3Ch4l4sGU0IifrOl-wZTQiJ-s6Xx6MMoJkF3xvnBphVS2O_U5GlCuBHhd6H4S77b8PfSgq&_nc_ohc=6hUnCzBbpckAX9MCIC8&_nc_ht=scontent.fmdl2-1.fna&oh=ed5bd3759a0b22350acdc37a52866feb&oe=5EB18D68",
+            "subtitle":"Mbr-(2), Br-(2), face south",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          },
+            {
+            "title":"RC, 2 lakhs per month, 60*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92583214_148663500012783_7353603237661900800_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeHLhaQy-lNjPoEct3xlK1U_GQY1Il0R_owZBjUiXRH-jIH7BrAfWbr-OQxrwCm-m6rKV9woFTMb-Nx0A-tXFq_t&_nc_ohc=sNpw-oCNFF4AX-hmd3q&_nc_ht=scontent.fmdl2-2.fna&oh=e726b585836f6d217c86d4ceeb13f5c2&oe=5EB109E4",
+            "subtitle":"Mbr-(2), Br-(3), face south",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+
+// to rent house in dekkhina, Rc, two floor, above 3 lakhs
+    else if (received_message.payload === 'twof_priceabove3lakhsmm_dek') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 3.5 lakhs per month, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92244656_148661983346268_5412490990118240256_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeH7i1rOMS8eeDRAo6chNPk97R3saB8e7SztHexoHx7tLI80FOYBR4_5sP3UzCEmtsrIlOqG-g2UNFogclACx-h9&_nc_ohc=xGmu-HV_qU8AX-rAPLo&_nc_ht=scontent.fmdl2-1.fna&oh=7bb92d21c48c88bd788564994049ddd6&oe=5EB0B3E1",
+            "subtitle":"Mbr-(3), Br-(1), face west",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          },
+             {
+            "title":"RC, 7 lakhs per month, 80*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92460697_148661310013002_7562140512816201728_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeGXPnWOsVIgxd191EVtq4QzAAmWNiurfdoACZY2K6t92sSwRjyS9-R7_Sb-5Pej0m04acQDvIDQ4SXSMQ0YxOoB&_nc_ohc=TuJg6KwfDIIAX867j8B&_nc_ht=scontent.fmdl2-1.fna&oh=0328354a18069d7a3a12fae8761f31b4&oe=5EB14705",
+            "subtitle":"Mbr-(2), Br-(2), face south",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          },
+                 {
+            "title":"RC, 9 lakhs per month, 100*100 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92177551_148650480014085_8591158172348055552_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_eui2=AeEMxLJE8yJWn12cjnsZ24IAXxiYUvJTRvdfGJhS8lNG9wGyTfx-GESmgXjRIL0gaQ64hSEgq1Hvx0in9dOMwglQ&_nc_ohc=x_SJl0kcdecAX-C0w-b&_nc_ht=scontent.fmdl2-1.fna&oh=e6d5a9d5b8271703d4c3c7177ca94266&oe=5EB33173",
+            "subtitle":"Mbr-(5), face east",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+/*****************************************/
+/*****************************************/
+
+// to rent house in dekkhina, Rc, other floor,
+    else if (received_message.payload === 'otherrrf_dekkii11_tenant1') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 8 lakhs per month, 50*75 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92667938_148681606677639_6253805066847780864_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeHNyDhSx0ovFtr7eWjPt3Raef0VwMYXhKh5_RXAxheEqDq_SNyzVRhmHguVKNiCzwNpYkdEkenidgHtp7xL2PtM&_nc_ohc=V5MmGn_sMAgAX8_t0wI&_nc_ht=scontent.fmdl2-2.fna&oh=d746a503f668daddb4760473f684da45&oe=5EB3D5D6",
+            "subtitle":"Mbr-(3), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+/*********************/
+/*********************/
+
+
+// to rent house in dekkhina, other type (not RC)
+    else if (received_message.payload === 'ottype_dekki1_tenant') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"Nancat,  2 lakhs per month, 60*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/93101461_148684256677374_2200426120719892480_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_eui2=AeFye7mt4SB5HOSquEDbUdAioBRfEDs7j8KgFF8QOzuPwrNvkh5Pix0nh-XhaE6LM0qxdB2C4fDV7nJikI9tr3B7&_nc_ohc=ecor5tV1VtkAX-Tfk91&_nc_ht=scontent.fmdl2-1.fna&oh=0c28277c0ef5111f6a667a2725cdd824&oe=5EB0D393",
+            "subtitle":"Brr-(3), face north",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+
 
 
 
@@ -6859,7 +7790,7 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
   
        
            {
-            "title":"RC, 1 lakh per month, 40*60 ft",
+            "title":"Nancat, 1 lakh per month, 40*60 ft",
             "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92055239_148410403371426_3609555549953196032_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeEcxWyddvgH7C0Z2B2n6syBX7GQJ4Ddfc1fsZAngN19zZZV7BUT4-dAQhBpIFP153IJzNvhPOpKrB4lWAPsT5j7&_nc_ohc=xGj5wNgncCEAX-XowML&_nc_ht=scontent.fmdl2-2.fna&oh=5bcf3aac02a9537be165941d2cd58004&oe=5EB13DBA",
             "subtitle":"land type-(grant),face south",
             "default_action": {
