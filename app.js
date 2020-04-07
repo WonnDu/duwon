@@ -1816,28 +1816,10 @@ function handleMessage(sender_psid, received_message) {
 
 /*********************************************************************************/
 
-    
-// to buy house in oattra
-else if (received_message.payload === "ottwp") {
-      response = {
-                    "text":'Are you finding RC or Nancat?',
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "RC",
-                          "payload": "rc_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Other Type",
-                          "payload": "nancat_ott",
-                        }
-                      ]
 
-      }
-  } 
+
   // to buy house in oattra, RC
-  else if (received_message.payload === "rc_ott" ) {
+  else if (received_message.payload === "ottwp" ) {
     response = {
                   "text": "Please choose the number of floor:",
                     "quick_replies": [
@@ -2000,11 +1982,154 @@ else if (received_message.payload === "ottwp") {
   }
 }
 
+/**********************************/
+
+
+// to buy house in oattra, RC, two floor
+  else if (received_message.payload === "twof_pobb") {
+    response = {
+                  "text": "Do you want how much wide area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "80*80",
+                          "payload": "twof80_in_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "100*100",
+                          "payload": "twof100_in_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "150*150",
+                          "payload": "twof150_in_ott",
+                        }
+                      ]
+      }
+  }
+
+
+// to buy house in oattra, RC, two floor, 80*80
+    else if (received_message.payload === 'twof80_in_ott') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"2RC, 2000 lakhs, 80*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92243595_148808969998236_2207483370462511104_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeHszxekDwF7YUypu6w1O-DkdSzCbXL8J9d1LMJtcvwn154x57tv3s4IbYD7nFu1S0dUVp_ws3dUsXZkjbhpG3nb&_nc_ohc=35Ffa_2E5iEAX8p4DMu&_nc_ht=scontent.fmdl2-1.fna&oh=0f0e59f714a518ed5914f0f8caa3142a&oe=5EB1EA06",
+            "subtitle":"Mbr-(1), Br-(2), land type-(grant), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to buy house in oattra, RC, two floor, 100*100
+    else if (received_message.payload === 'twof100_in_ott') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"2RC, 3000 lakhs, 100*100 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92577724_148801386665661_3656608166516359168_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeFt0-dDc-FGDdhKVueJlnJ7eVXqTKuoYJR5VepMq6hglO7w10RQQYRLvizT9e3NUsFd9Hq7Sv4Q9md3EZJSnycB&_nc_ohc=rhTJjCGelPwAX8IZTtf&_nc_ht=scontent.fmdl2-1.fna&oh=53d7c2e67a80d3219997f94554bdf57e&oe=5EB19DF0",
+            "subtitle":"Mbr-(2), Br-(3), land type-(grant), face east, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to buy house in oattra, RC, two floor, 150*150
+    else if (received_message.payload === 'twof150_in_ott') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"2RC, 5000 lakhs, 150*150 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91553411_148811056664694_2994737999507357696_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeEfP3OQyWSVC6Z-lY6HYqDWh_MT8b2h51aH8xPxvaHnVqPHPIBXsMgLEI-3fAuGNUnNKKIzHBw2Y-A6HGPqzGB3&_nc_ohc=gFqz7a__45AAX_2usbC&_nc_ht=scontent.fmdl2-1.fna&oh=5fe87bc5ad80fdbfdc83bf4ad011b8ca&oe=5EB3AC65",
+            "subtitle":"Mbr-(2), land type-(grant), face north, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
 
 
 
 
-/***************************************/
+/********************************************************************************/
+/********************************************************************************/
+
 // to buy house in pobba for types of house
 else if (received_message.payload === "potwp") {
       response = {
@@ -6480,7 +6605,7 @@ else if (received_message.payload === "tedekl") {
 /****************************************************************************************************************/
 /***************************************************************************************************************/
 
-/*
+
   // to rent house in oattra, RC (there is no other type in oattra)
   else if (received_message.payload === "tenanott" ) {
     response = {
@@ -6556,6 +6681,28 @@ else if (received_message.payload === "tedekl") {
                 "payload":"aaae"
               }              
             ]      
+          },
+               {
+            "title":"RC, 6 lakhs per month, 100*100 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91912200_148783696667430_2449683035914764288_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeGtmRWzKn14WcOyBlHpkLA8U4OdKoYtcohTg50qhi1yiCt7wEw-ep9s_RQgz5V370kLzW9e5txrxVGQj_84K-09&_nc_ohc=CcVp57UKpFIAX-DJiRB&_nc_ht=scontent.fmdl2-1.fna&oh=76724e70158faba1e3386ff9413e2251&oe=5EB1FE9D",
+            "subtitle":"Mbr-(4), Br-(1), face north",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
           }
 
         ]
@@ -6564,7 +6711,8 @@ else if (received_message.payload === "tedekl") {
   }
 }
 
-// to buy house in oattra, RC, one floor, 
+
+// to rent house in oattra, RC, one floor, above 6 lakhs
     else if (received_message.payload === 'onefabove6lakhs_in_ott_tenant') {
     response = {
     "attachment":{
@@ -6574,9 +6722,9 @@ else if (received_message.payload === "tedekl") {
         "elements": [ 
         
            {
-            "title":"RC, 3000 lakhs, 100*100 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91912200_148783696667430_2449683035914764288_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeGtmRWzKn14WcOyBlHpkLA8U4OdKoYtcohTg50qhi1yiCt7wEw-ep9s_RQgz5V370kLzW9e5txrxVGQj_84K-09&_nc_ohc=CcVp57UKpFIAX-DJiRB&_nc_ht=scontent.fmdl2-1.fna&oh=76724e70158faba1e3386ff9413e2251&oe=5EB1FE9D",
-            "subtitle":"Mbr-(4), Br-(1), land type-(grant), face north, Negotiable",
+            "title":"RC, 10 lakhs per month, 150*150 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92455881_148780726667727_1440690996407959552_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeGf9LydtrRy0Pv5ZMogA6x-iVE1BTJAoH6JUTUFMkCgfvVyire9NqORSOcCe7roMWslwom0L_MecnwPhfXdtz8B&_nc_ohc=c_ZjDikT9XUAX_auGhw&_nc_ht=scontent.fmdl2-1.fna&oh=f48d774f3ef4ed31d7c61775f042646d&oe=5EB1CDC2",
+            "subtitle":"Mbr-(3), face west, Negotiable",
             "default_action": {
               "type": "web_url",
               "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
@@ -6602,8 +6750,32 @@ else if (received_message.payload === "tedekl") {
   }
 }
 
-// to buy house in oattra, RC, one floor, 150*150
-    else if (received_message.payload === '150_in_ott') {
+
+/************************************/
+
+
+// to rent house in oattra, RC, two floor
+  else if (received_message.payload === "twof1_ott_tenant") {
+    response = {
+                  "text": "Do you want how much wide area of house?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "6 lakhs & below it",
+                          "payload": "torenthouott_below6lakhs",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "above 6 lakhs",
+                          "payload": "torenthouott_above6lakhs",
+                        }
+                      ]
+      }
+  }
+
+
+// to rent house in oattra, RC, two floor, 6 lakhs & below it
+    else if (received_message.payload === 'torenthouott_below6lakhs') {
     response = {
     "attachment":{
       "type":"template",
@@ -6612,9 +6784,9 @@ else if (received_message.payload === "tedekl") {
         "elements": [ 
         
            {
-            "title":"RC, 4000 lakhs, 150*150 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92455881_148780726667727_1440690996407959552_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeGf9LydtrRy0Pv5ZMogA6x-iVE1BTJAoH6JUTUFMkCgfvVyire9NqORSOcCe7roMWslwom0L_MecnwPhfXdtz8B&_nc_ohc=c_ZjDikT9XUAX_auGhw&_nc_ht=scontent.fmdl2-1.fna&oh=f48d774f3ef4ed31d7c61775f042646d&oe=5EB1CDC2",
-            "subtitle":"Mbr-(3), land type-(grant), face west, Negotiable",
+            "title":"2RC, 5 lakhs per month, 80*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92243595_148808969998236_2207483370462511104_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeHszxekDwF7YUypu6w1O-DkdSzCbXL8J9d1LMJtcvwn154x57tv3s4IbYD7nFu1S0dUVp_ws3dUsXZkjbhpG3nb&_nc_ohc=35Ffa_2E5iEAX8p4DMu&_nc_ht=scontent.fmdl2-1.fna&oh=0f0e59f714a518ed5914f0f8caa3142a&oe=5EB1EA06",
+            "subtitle":"Mbr-(1), Br-(2), face south",
             "default_action": {
               "type": "web_url",
               "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
@@ -6640,16 +6812,73 @@ else if (received_message.payload === "tedekl") {
   }
 }
 
-*/
+// to rent house in oattra, RC, two floor, above 6 lakhs
+    else if (received_message.payload === 'torenthouott_above6lakhs') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"2RC, 8 lakhs per month, 100*100 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92577724_148801386665661_3656608166516359168_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeFt0-dDc-FGDdhKVueJlnJ7eVXqTKuoYJR5VepMq6hglO7w10RQQYRLvizT9e3NUsFd9Hq7Sv4Q9md3EZJSnycB&_nc_ohc=rhTJjCGelPwAX8IZTtf&_nc_ht=scontent.fmdl2-1.fna&oh=53d7c2e67a80d3219997f94554bdf57e&oe=5EB19DF0",
+            "subtitle":"Mbr-(2), Br-(3), face east",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          },
+             {
+            "title":"2RC, 12 lakhs per month, 150*150 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91553411_148811056664694_2994737999507357696_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeEfP3OQyWSVC6Z-lY6HYqDWh_MT8b2h51aH8xPxvaHnVqPHPIBXsMgLEI-3fAuGNUnNKKIzHBw2Y-A6HGPqzGB3&_nc_ohc=gFqz7a__45AAX_2usbC&_nc_ht=scontent.fmdl2-1.fna&oh=5fe87bc5ad80fdbfdc83bf4ad011b8ca&oe=5EB3AC65",
+            "subtitle":"Mbr-(2), face north",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
 
 
 
 
 
 
-
-/*****************************************************************/
-/*****************************************************************/
+/********************************************************************************/
+/********************************************************************************/
 
 
 // to rent house in pobba, types of house
