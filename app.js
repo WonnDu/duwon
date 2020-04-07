@@ -1986,7 +1986,7 @@ function handleMessage(sender_psid, received_message) {
 
 
 // to buy house in oattra, RC, two floor
-  else if (received_message.payload === "twof_pobb") {
+  else if (received_message.payload === "twof_ott") {
     response = {
                   "text": "Do you want how much wide area?",
                     "quick_replies": [
@@ -2125,6 +2125,12 @@ function handleMessage(sender_psid, received_message) {
 }
 
 
+// to buy house in oattra, RC, other floor
+    else if (received_message.payload === 'otherf_ott') {
+    response = {
+            "text":"There is no property avaliable to sell. Sorry for you. Thanks for contacting us."
+  }
+}
 
 
 /********************************************************************************/
@@ -7046,7 +7052,12 @@ else if (received_message.payload === "tedekl") {
 }
 
 
-
+// to rent house in oattra, RC, other floor
+    else if (received_message.payload === 'otherf1_ott_tenant') {
+    response = {
+            "text": "There is no property avaliable. Sorry for you. Thanks for contacting us."
+  }
+}
 
 
 
