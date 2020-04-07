@@ -2441,7 +2441,7 @@ else if (received_message.payload === "potwp") {
 
       }
   }
-  // to buy house in pobba for floor 
+  // to buy house in pobba, floor 
   else if (received_message.payload === "rc_pobb") {
     response = {
                   "text": "Please choose the number of floor:",
@@ -2458,154 +2458,58 @@ else if (received_message.payload === "potwp") {
                         },
                         {
                           "content_type": "text",
-                          "title": "other",
+                          "title": "other floor",
                           "payload": "thirdf_pobb",
                         }
                       ]
 
       }
   }
-  /*
-  // to buy house in pobba for types of room
+
+  // to buy house in pobba, RC, one floor
   else if (received_message.payload === "onef_pobb") {
     response = {
-                  "text": "Do you want what types of room?",
+                  "text": "Do you want the house in which Mbr is included or only Br included?",
                     "quick_replies": [
                          {
                           "content_type": "text",
-                          "title": "MB",
-                          "payload": "onef_mb_pobb",
+                          "title": "Mbr",
+                          "payload": "tobuyhoupobb_rconefloor_mbr1122ab",
                         },
                         {
                           "content_type": "text",
-                          "title": "BD",
-                          "payload": "onef_bed_pobb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "both",
-                          "payload": "both_tybed_pobb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whatever_ty_pobb",
+                          "title": "Only Br",
+                          "payload": "tobuyhoupobb_rconefloor_onlybr55ab",
                         }
                       ]
-      }
   }
-  */
 
-  /******************/
 
-// to buy house in pobba for numbers of master bed room
-  else if (received_message.payload === "onef_pobb") {
-    response = {
-                  "text": "Please choose the number of Mbr included:",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "below 3",
-                          "payload": "onef_b3_mb_pobb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "3 and above",
-                          "payload": "onef_above_pobb",
-                        }
-                      ]
-      }
-  }
-  // to buy house in pobba for area (below 3 master bed room)
-  else if (received_message.payload === "onef_b3_mb_pobb") {
+  // to buy house in pobba, RC, one floor, Mbr
+  else if (received_message.payload === "tobuyhoupobb_rconefloor_mbr1122ab") {
     response = {
                   "text": "Do you want how much wide land area of house?",
                     "quick_replies": [
                          {
                           "content_type": "text",
                           "title": "40*60",
-                          "payload": "a46_in_pobb",
+                          "payload": "tobuyhoupobb_rconefmbr24inaa",
                         },
                         {
                           "content_type": "text",
                           "title": "60*80",
-                          "payload": "a68_in_pobb",
+                          "payload": "tobuyhoupobb_rconefmbr68aaan",
                         },
-                        {
+                         {
                           "content_type": "text",
                           "title": "80*80",
-                          "payload": "a88in_in_pobb",
+                          "payload": "tobuyhoupobb_rconefmbr88nnna",
                         }
                       ]
-      }
-  }
-   // 40*60 to buy house  in Pobba MB
-    else if (received_message.payload === 'a46_in_pobb') {
-    response = {
-                  "text": "Please choose the estimated amount that you are avaliable to buy land:",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "below 500",
-                          "payload": "below3_eamount",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "below 1000",
-                          "payload": "belowpobb6_eamount",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "above 1000",
-                          "payload": "abovepobb1000_eamount",
-                        }                      ]
-      }
-  }
-  // 60*80 to buy house  in Pobba 
-   // to buy house in pobba for area (below 3 master bed room)
-    else if (received_message.payload === 'a68_in_pobb') {
-    response = {
-                  "text": "Please choose the estimated amount that you are avaliable to buy house:",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "below 500",
-                          "payload": "below500pobb_eamount",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "below 1000",
-                          "payload": "below100pobb_eamount",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "above 1000",
-                          "payload": "above1000pobb_eamount",
-                        }                      
-                        ]
-      }
-  }
-    else if (received_message.payload === 'a88in_in_pobb') {
-    response = {
-                  "text": "Please choose the estimated amount that you are avaliable to buy house:",
-                    "quick_replies": [
-                        {
-                          "content_type": "text",
-                          "title": "below 1000",
-                          "payload": "below80in80pobb_eamount",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "above 1000",
-                          "payload": "above80inab11pobb_eamount",
-                        }                      
-                        ]
-      }
   }
 
-
-  // to buy pobba, RC, one floor, master bed,  below 3mb , 40*60, below 500lakh
- else if (received_message.payload === 'below3_eamount') {
+// to buy house in pobba, RC, one floor, Mbr , 40*60
+ else if (received_message.payload === 'tobuyhoupobb_rconefmbr24inaa') {
     response = {
     "attachment":{
       "type":"template",
@@ -2613,211 +2517,19 @@ else if (received_message.payload === "potwp") {
         "template_type":"generic",
         "elements": [ 
         
-           {
-            "title":"RC, 450 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91675776_147131590165974_160064454640271360_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_ohc=mYztapSdCD8AX9xaZ4v&_nc_ht=scontent.fmdl2-1.fna&oh=e4cdadb154d0b2a81a3ae9d4c55076c8&oe=5EAC2E42",
-            "subtitle":"1 MB, 2 BD",
+                    {
+            "title":"RC, 500 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92831429_148690140010119_457507630131183616_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeE9zcF8NnpLPKl62pX9HioMwM8Pb79goQXAzw9vv2ChBYUnC-ju8y6DZUIJF30zKiuGPVjBQrDDyMQP9wAMOxEJ&_nc_ohc=WduouaN1hjsAX8Uj_x2&_nc_ht=scontent.fmdl2-1.fna&oh=568c5bdef4e9ecc484fd7928f0c862e6&oe=5EB1E35A",
+            "subtitle":"MBr-(1), Br-(2), land type-(grant), face east, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/ajax/sharer/?s=2&appid=2305272732&id=131104738435326&p[0]=131104738435326&sharer_type=all_modes&av=105772414301892",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaae"
-              }              
-            ]      
-          },
-           {
-            "title":"RC, 395 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91865315_147214446824355_8124736960364281856_n.jpg?_nc_cat=105&_nc_sid=110474&_nc_ohc=Tir6pOvB-kQAX_aoNJE&_nc_ht=scontent.fmdl2-2.fna&oh=6954df42f6ffda76a3aa6e642c4379b9&oe=5EAED2D6",
-            "subtitle":"1 MB, 2 BD",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/105772414301892/photos/pcb.147214593491007/147214443491022/?type=3&__tn__=HH-R&eid=ARATPqkMAieZD273Dv6v20uQX3YDtd_WBSPRk2adWvYfjgfiRgp5SEQ81kv_TMf2l_belNCYmy_43f5B&__xts__%5B0%5D=68.ARD17hMbPUPk_9xnmgYscCPKzmfIBZyzL7CZvdRVY9UnrMw8b6VmsEIsQKnKiRCF0mdEBohwM6Uqugvv0WXGgkgABgimugud5ekJ6zDwq9Tol93MnM6NX2QULtzQ_917D65Ns-N89rxJHaYK0RMjK6J5I9CwKq_Pm_bxf-yJGh_CSaBZsvxYpmBbgokV69RFJQCCFsa78KfiwztgoY2JfHH9m1J7Io40RSYL5C9_oFWfDcKWfvtXWwIMWIU73lVdh-2o323kBnCibRDZG5jWee0rDGnG-MCPQt7bPcfnAuOQu884-_56-8ooPOCOaqbKdWO5ABAtWsyTPhlpFr3abgE",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/105772414301892/photos/pcb.147214593491007/147214443491022/?type=3&__tn__=HH-R&eid=ARATPqkMAieZD273Dv6v20uQX3YDtd_WBSPRk2adWvYfjgfiRgp5SEQ81kv_TMf2l_belNCYmy_43f5B&__xts__%5B0%5D=68.ARD17hMbPUPk_9xnmgYscCPKzmfIBZyzL7CZvdRVY9UnrMw8b6VmsEIsQKnKiRCF0mdEBohwM6Uqugvv0WXGgkgABgimugud5ekJ6zDwq9Tol93MnM6NX2QULtzQ_917D65Ns-N89rxJHaYK0RMjK6J5I9CwKq_Pm_bxf-yJGh_CSaBZsvxYpmBbgokV69RFJQCCFsa78KfiwztgoY2JfHH9m1J7Io40RSYL5C9_oFWfDcKWfvtXWwIMWIU73lVdh-2o323kBnCibRDZG5jWee0rDGnG-MCPQt7bPcfnAuOQu884-_56-8ooPOCOaqbKdWO5ABAtWsyTPhlpFr3abgE",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaae"
-              }              
-            ]      
-          },
-             {
-            "title":"RC, 475 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91342483_147219730157160_151432519563083776_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_ohc=gF746s26wlYAX92PpSB&_nc_ht=scontent.fmdl2-1.fna&oh=fad4c3a5ed76597e79a396d4cf376818&oe=5EAE3CBC",
-            "subtitle":"1 MB, 2 BD",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaae"
-              }              
-            ]      
-          },
-           {
-            "title":"RC, 430 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91539419_147218910157242_6622245799793262592_n.jpg?_nc_cat=105&_nc_sid=110474&_nc_ohc=-xZXNe4SM18AX_CEt4N&_nc_ht=scontent.fmdl2-2.fna&oh=e838288daec6e3d81507975e95edd0af&oe=5EADCBEC",
-            "subtitle":"1 MB, 2 BD",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/105772414301892/photos/pcb.147214593491007/147214443491022/?type=3&__tn__=HH-R&eid=ARATPqkMAieZD273Dv6v20uQX3YDtd_WBSPRk2adWvYfjgfiRgp5SEQ81kv_TMf2l_belNCYmy_43f5B&__xts__%5B0%5D=68.ARD17hMbPUPk_9xnmgYscCPKzmfIBZyzL7CZvdRVY9UnrMw8b6VmsEIsQKnKiRCF0mdEBohwM6Uqugvv0WXGgkgABgimugud5ekJ6zDwq9Tol93MnM6NX2QULtzQ_917D65Ns-N89rxJHaYK0RMjK6J5I9CwKq_Pm_bxf-yJGh_CSaBZsvxYpmBbgokV69RFJQCCFsa78KfiwztgoY2JfHH9m1J7Io40RSYL5C9_oFWfDcKWfvtXWwIMWIU73lVdh-2o323kBnCibRDZG5jWee0rDGnG-MCPQt7bPcfnAuOQu884-_56-8ooPOCOaqbKdWO5ABAtWsyTPhlpFr3abgE",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaae"
-              }              
-            ]      
-          },
-            {
-            "title":"RC, 430 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91770684_147154156830384_6078026130030329856_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_ohc=2f6TRttbpyEAX8-RFMY&_nc_ht=scontent.fmdl2-2.fna&oh=c09be7e8ad15787d5a83388d8b705f9e&oe=5EAC5F2C",
-            "subtitle":"1 MB, 2 BD",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaae"
-              }              
-            ]      
-          }
-
-
-        ]
-      }
-    }
-  }
-}
-
-
-
-
-// to buy pobba, RC, one floor, Master bed, below3, 60*80, below 1000
-    else if (received_message.payload === 'below100pobb_eamount') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"RC, 800 lakhs, 60*80 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91101082_147218403490626_5572328932478287872_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_ohc=tA9NcmZy4nIAX-EXnB9&_nc_ht=scontent.fmdl2-2.fna&oh=a9562ddfe9f4d08c09ce4ec3f650482d&oe=5EAD8BC3",
-            "subtitle":"1 MB, 2 BD",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaae"
-              }              
-            ]      
-          },
-           {
-            "title":"RC, 770 lakhs, 60*80 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91898132_147216956824104_3112675563777556480_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_ohc=vr9owKmvVswAX_8cHdt&_nc_ht=scontent.fmdl2-2.fna&oh=6e736df4d066ea559c06ce64f431c895&oe=5EAE7175",
-            "subtitle":"2 MB, 1 BD",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91101082_147218403490626_5572328932478287872_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_ohc=tA9NcmZy4nIAX-EXnB9&_nc_ht=scontent.fmdl2-2.fna&oh=a9562ddfe9f4d08c09ce4ec3f650482d&oe=5EAD8BC3",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaae"
-              }              
-            ]      
-          },
-         
-
-        ]
-      }
-    }
-  }
-}
-
-
-  // to buy pobba, RC, one floor, Master bed, below3, 60*80, above 1000
-    else if (received_message.payload === 'above1000pobb_eamount') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"RC, 1280 lakhs, 60*80 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91316346_147213236824476_3978394636820414464_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_ohc=ASt6PtBhi_4AX8VLy-D&_nc_ht=scontent.fmdl2-2.fna&oh=fd354e2b8cf7dfe8047ae01af9b8a24d&oe=5EACA982",
-            "subtitle":"2 MB, 3 BD, 1 store",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/ajax/sharer/?s=2&appid=2305272732&id=131104738435326&p[0]=131104738435326&sharer_type=all_modes&av=105772414301892",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/105772414301892/posts/147213463491120/?d=n",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
                 "title":"More Information"
               },
               {
@@ -2834,10 +2546,8 @@ else if (received_message.payload === "potwp") {
   }
 }
 
-
-
-  // to buy pobba, RC, one floor, Master bed, below3, 80*80, below 1000
-    else if (received_message.payload === 'below80in80pobb_eamount') {
+// to buy house in pobba, RC, one floor, Mbr , 60*80
+ else if (received_message.payload === 'tobuyhoupobb_rconefmbr68aaan') {
     response = {
     "attachment":{
       "type":"template",
@@ -2845,19 +2555,57 @@ else if (received_message.payload === "potwp") {
         "template_type":"generic",
         "elements": [ 
         
-           {
+                    {
+            "title":"RC, 1300 lakhs, Negotiable, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92141671_148691213343345_4810507837039968256_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeFwzQz5Fa1a1b6rTxcMDxOf0Bja6JtczzLQGNrom1zPMqSLxn3HfxY3v96qaK0vlAQ0LhMVFdJUEFb6oQw1SSUu&_nc_ohc=cAMzawpv1dsAX-fiBFJ&_nc_ht=scontent.fmdl2-1.fna&oh=94b2d2e832e6a2d3e1929d3e019a22f5&oe=5EB20EC5",
+            "subtitle":"MBr-(2), Br-(3), land type-(grant), face west and north",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to buy house in pobba, RC, one floor, Mbr , 80*80
+ else if (received_message.payload === 'tobuyhoupobb_rconefmbr88nnna') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+                    {
             "title":"RC, 950 lakhs, 80*80 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91769772_147216390157494_6095292285107306496_n.jpg?_nc_cat=105&_nc_sid=110474&_nc_ohc=XQEOGFput-MAX-G4v2n&_nc_ht=scontent.fmdl2-2.fna&oh=84749e6c49babdc150c29fa47b39430c&oe=5EAC1E28",
-            "subtitle":"1 MB, 3 BD",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92555021_148694693342997_4064605342099570688_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeHdSxG1IzD6iMZL01qEg0KzthAmkZBLAZK2ECaRkEsBklsHQStxScdsxZDKhJHFmGhjF-6yz9By88h_ESul1b2d&_nc_ohc=zrd5mQyTMQMAX_MAjMx&_nc_ht=scontent.fmdl2-2.fna&oh=a473039b886e5dc645e0483299e5c88a&oe=5EB34FB4",
+            "subtitle":"MBr-(2), Br-(3), land type-(grant), face north, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
                 "title":"More Information"
               },
               {
@@ -2875,276 +2623,327 @@ else if (received_message.payload === "potwp") {
 }
 
 
-/************************************/
 
-    // to buy house in pobba for area
-    // to buy house in pobba for numbers of mb room (3 and above mb)
-  else if (received_message.payload === "onef_above_pobb") {
+
+/*****************************************/
+  // to buy house in pobba, RC, one floor, only br
+  else if (received_message.payload === "tobuyhoupobb_rconefloor_onlybr55ab") {
     response = {
-                  "text": "Do you want what area?",
+                  "text": "Do you want how much wide land area of house?",
                     "quick_replies": [
                          {
                           "content_type": "text",
                           "title": "40*60",
-                          "payload": "pobb_area46",
+                          "payload": "tobupob_rconef46_onlybrabk",
                         },
                         {
                           "content_type": "text",
                           "title": "60*80",
-                          "payload": "pobb_area68",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "80*80",
-                          "payload": "aaa88in_in_pobb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "pobb_area_whatever",
+                          "payload": "tobupob_rconef68_onlybrccn",
                         }
                       ]
-      }
-  }
-  /*
-    // to buy house in pobba for area
-  else if (received_message.payload === "whatever_mb3_pobb") {
-    response = {
-                  "text": "Do you want what area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "40*60",
-                          "payload": "whatever_a46_pobba",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*80",
-                          "payload": "whatever_a68_pobba",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "80*80",
-                          "payload": "a88in_in_inpobb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whatever_aa0_pobba",
-                        }
-                      ]
-      }
-  }
-*/
-  /********************/
-/*
-   // one floor(RC) only bed rooms special in Pobba for area
-  else if (received_message.payload === "onef_bed_pobb") {
-    response = {
-                  "text": "Please choose the house in which the number of bed room has",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "below 3",
-                          "payload": "bed3below_onef_rcpobb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "3 and above",
-                          "payload": "bed3above_onef_rcpobb",
-                        },
-                       
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whtever_onef_onlybed_pobb",
-                        }
-                      ]
-      }
-  }
-  
-    // below 3 bed one floor(RC) in pobb for area
-  else if (received_message.payload === "bed3below_onef_rcpobb") {
-    response = {
-                  "text": "Do you want what area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "40*60",
-                          "payload": "onlybed60_pobb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*80",
-                          "payload": "onlybed100_pobb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "80*80",
-                          "payload": "a88in_in_pobbin",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "onlybed_whatever_pobb",
-                        }
-                      ]
-      }
   }
 
-    // above 3 bed one floor(RC) in Pobb for area
-  else if (received_message.payload === "bed3above_onef_rcpobb") {
+
+// to buy house in pobba, RC, one floor, only br, 40*60
+ else if (received_message.payload === 'tobupob_rconef46_onlybrabk') {
     response = {
-                  "text": "Do you want what area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "40*60",
-                          "payload": "bedroom88_in_pobb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*80",
-                          "payload": "bedroom11_in_pobb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "80*80",
-                          "payload": "abin88in_in_pobb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "bedroom_wharea_in_pobb",
-                        }
-                      ]
-      }
-  }
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+                    {
+            "title":"RC, 430 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91914495_148687560010377_1702487433695723520_n.jpg?_nc_cat=105&_nc_sid=110474&_nc_eui2=AeEOZdK9M-XbPElfW6-OzSBjbvX1hzyKvthu9fWHPIq-2IyUS6M1KZcr-ftHDgwK3b8LepAYlLLrEQLrbeKL1bxq&_nc_ohc=QNYEF48cQz0AX87rhGe&_nc_ht=scontent.fmdl2-2.fna&oh=e69a12e6ab242f0cb5ec60935ca32414&oe=5EB03155",
+            "subtitle":"Br-(3), land type-(grant), face east, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
 
-// above whatever bed one floor(RC) in pobb for area
-  else if (received_message.payload === "whtever_onef_onlybed_pobb") {
+        ]
+      }
+    }
+  }
+}
+
+// to buy house in pobba, RC, one floor, only br, 60*80
+ else if (received_message.payload === 'tobupob_rconef68_onlybrccn') {
     response = {
-                  "text": "Do you want what area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "40*60",
-                          "payload": "wht8_bedroom_in_pobb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*80",
-                          "payload": "wht100_bedroom_in_pobb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "80*80",
-                          "payload": "bba88in_in_pobb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "whatever",
-                          "payload": "whtwht_bedroom_in_pobb",
-                        }
-                      ]
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+          {
+            "title":"RC, 770 lakhs, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92218385_148692786676521_7587571937593786368_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeHw7G9pvs5W1UkZ7W2i9IEt4cZIyNWN-1fhxkjI1Y37V5ib-0Rln8vvNUgG0KIAlt7B1JzrM__9lFiO0dIDIpnZ&_nc_ohc=FygYy-47yrsAX8dEyVb&_nc_ht=scontent.fmdl2-1.fna&oh=e324701ad6206c5ea9c64763b885276e&oe=5EB37AF8",
+            "subtitle":"Br-(3), land type-(grant), face north, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
       }
+    }
   }
-*/
+}
 
-  /*******************/
-    
 
-   // to buy house (two floor) numbers of master bed in pobba 
+// to buy house in pobba, other type(not RC)
+ else if (received_message.payload === 'nancat_pobb') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+          {
+            "title":"Nancat, 250 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91973807_148705810008552_1650041489260019712_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeG-bX8xeh_hI01ZsMR3FVTdwGLcxG1vk2DAYtzEbW-TYENQ6KNa30os6QZjpGd2-xDzuVslOpzjpqog2138-pNz&_nc_ohc=Fw9YqIe_wJUAX9bG4h0&_nc_ht=scontent.fmdl2-1.fna&oh=c891d7fd7a3d3e972d593b6075c5abc0&oe=5EB07818",
+            "subtitle":"land type-(grant), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+  // to buy house in pobba, RC, two floor, area
   else if (received_message.payload === "twof_pobb") {
     response = {
-                  "text": "Please choose the numbers of master bed rooms included:",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "below 3",
-                          "payload": "below3_twofmb_pobb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "3 and above",
-                          "payload": "above3_twofmb_pobb",
-                        }
-                      ]
-      }
-  }
-    // to buy house (two floor) in pobba for area
-  else if (received_message.payload === "below3_twofmb_pobb") {
-    response = {
                   "text": "Do you want how much wide land area of house?",
                     "quick_replies": [
                          {
                           "content_type": "text",
                           "title": "40*60",
-                          "payload": "twof_40_in_pobb",
+                          "payload": "tobuyhoupobb_rctwof46pob",
                         },
                         {
                           "content_type": "text",
                           "title": "60*80",
-                          "payload": "twof_60_in_pobb",
+                          "payload": "tobuyhoupobb_rctwof68aart",
                         },
-                        {
-                          "content_type": "text",
-                          "title": "80*80",
-                          "payload": "ccin88in_in_pobb",
-                        }
-                      ]
-      }
-  }
- /*   // 60*80 to buy house  in Pobba
-    else if (received_message.payload === 'twof_60_in_pobb') {
-    response = {
-                  "text": "Please choose the estimated amount that you are avaliable to buy land:",
-                    "quick_replies": [
                          {
                           "content_type": "text",
-                          "title": "below 1000",
-                          "payload": "below500pobb_eamount",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "below 1000",
-                          "payload": "below100pobb_eamount",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "above 1000",
-                          "payload": "above1000pobb_eamount",
-                        }                      ]
-      }
-  } */
-  
-   // to buy house (two floor) in pobba for area
-  else if (received_message.payload === "above3_twofmb_pobb") {
-    response = {
-                  "text": "Do you want how much wide land area of house?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "40*60",
-                          "payload": "twof46_inpobb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*80",
-                          "payload": "twof68_inpobb",
-                        },
-                        {
-                          "content_type": "text",
                           "title": "80*80",
-                          "payload": "ddin88in_in_pobb",
+                          "payload": "tobuyhoupobb_rctwof88bbw",
                         }
                       ]
-      }
   }
 
+// to buy house in pobba, RC, two floor, 40*60
+ else if (received_message.payload === 'tobuyhoupobb_rctwof46pob') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+                    {
+            "title":"RC, 2500 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91606159_148757690003364_6476717670556237824_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeEwaNaIO6IktYPhZerxMcm7Qew2jPuaaEFB7DaM-5poQZvYiKqWGrH_lW38GzC0sEa2ozlem0muIfNfovwajN7B&_nc_ohc=xmULYHKmuWMAX8mWmY6&_nc_ht=scontent.fmdl2-1.fna&oh=896dcfb6903ac4aa391c915c34f871fc&oe=5EB37841",
+            "subtitle":"MBr-(2), Br-(2), land type-(grant), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
 
-/*********************************************/
-/*********************************************/
+        ]
+      }
+    }
+  }
+}
+
+// to buy house in pobba, RC, two floor, 60*80
+ else if (received_message.payload === 'tobuyhoupobb_rctwof68aart') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+                    {
+            "title":"RC, 900 lakhs, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92517086_148751140004019_3914064358962888704_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeFoOvq0bRFW0r7Srwl3N0U6qLmh0okITviouaHSiQhO-AqAdJfPRZtbQ8jrzolCH2ITGEZeyM794Swu5gSj8kTf&_nc_ohc=PxwqZF2pwtAAX-4aXYH&_nc_ht=scontent.fmdl2-1.fna&oh=1754795b4c5cdf6738bdbfe5f46ea909&oe=5EB0B753",
+            "subtitle":"MBr-(2), Br-(2), land type-(grant), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+// to buy house in pobba, RC, two floor, 80*80
+ else if (received_message.payload === 'tobuyhoupobb_rctwof88bbw') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+                    {
+            "title":"RC, 3500 lakhs, 80*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92463513_148754363337030_6063595422167859200_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_eui2=AeGEiOz1OhNnDp1HZmVLX-bLmqWuDQ1bDISapa4NDVsMhDw_xJfVd9Nb2PC9a3eG6ILKw0MuXJZGWA5_etoz-7jX&_nc_ohc=kMH-IN34uOYAX9JHqYO&_nc_ht=scontent.fmdl2-1.fna&oh=85e1416c08e94c83e9ef5265320950a4&oe=5EB30201",
+            "subtitle":"MBr-(3), Br-(2), land type-(grant), face east, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+// to buy house in pobba, RC, other floor
+ else if (received_message.payload === 'thirdf_pobb') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+                    {
+            "title":"3RC, 3600 lakhs, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92138782_148707466675053_5918704202221092864_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeE_h3jBITkW7xkMqu3_I6ZSTbencPv31K1Nt6dw-_fUrRIBi2eMl4upeFefewulR61984TZbIxxpK-ya8_OLYqw&_nc_ohc=d7YY9JJ3fBsAX9uFLtw&_nc_ht=scontent.fmdl2-1.fna&oh=2328b837dd4e1233e2aa509045cc3207&oe=5EB3FC6E",
+            "subtitle":"MBr-(4), Br-(2), land type-(grant), face north, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+
+
+
+/******************************************************************/
+/******************************************************************/
 
 // to buy house in dekkhina
 else if (received_message.payload === "dektwp") {
@@ -5602,66 +5401,138 @@ else if (received_message.payload === "otthi") {
                          {
                           "content_type": "text",
                           "title": "40*60",
-                          "payload": "land40_pobb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*60",
-                          "payload": "land60_pobb",
+                          "payload": "land40_pobbtobu2b",
                         },
                         {
                           "content_type": "text",
                           "title": "60*80",
-                          "payload": "land80_pobb",
+                          "payload": "land80_pobbtobu26",
                         },
                         {
                           "content_type": "text",
-                          "title": "other",
-                          "payload": "other_land_pobb",
+                          "title": "80*80",
+                          "payload": "land88_pobbtobu11",
                         }
                       ]
       }
   }
-  // 40*60 to buy land in Pobba
-    else if (received_message.payload === 'land40_pobb') {
+
+// to buy land in Pobba,  40*60
+    else if (received_message.payload === 'land40_pobbtobu2b') {
     response = {
-                  "text": "Please choose the estimated amount that you are avaliable to buy land:",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "below 300",
-                          "payload": "below3_pyin",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "below 600",
-                          "payload": "below6_pyin",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "below 1000",
-                          "payload": "below1000_pyin",
-                        }                      ]
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 150 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92167702_148702773342189_5409825490464669696_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeEti1pLlG7k25OTzKTQf04-pjbk1v9nX8GmNuTW_2dfwXsXNJoQeWmPOxUirjYllEYt5q9uZwa4S3u_0eTZck1A&_nc_ohc=kA-CJJG0XyUAX_ac-M1&_nc_ht=scontent.fmdl2-2.fna&oh=fc0291c46afed146bdc149f655125de9&oe=5EB17576",
+            "subtitle":"land type-(grant), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
       }
+    }
   }
-    // 60*60 to buy land in pobba
-    else if (received_message.payload === 'land60_pobb') {
+}
+
+// to buy land in Pobba,  60*80
+    else if (received_message.payload === 'land80_pobbtobu26') {
     response = {
-                  "text": "So sorry for my customer. There are not vacant land avaliable in Oattra to sell yet. Thanks for contacting us.",
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 200 lakhs, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91991273_148704343342032_3054495691972804608_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeH2wVSm5DsCLFesBvl46bpfPyPofjUfO_k_I-h-NR87-RcfEZJ_1P_ZadUUe5CAUmR5z69C4_9FqExGSFAOwEP3&_nc_ohc=_1KKYlteFSUAX_xCSrn&_nc_ht=scontent.fmdl2-2.fna&oh=5613774ed5b34ad38b6ae2dbd3e9b0ad&oe=5EB2F2F3",
+            "subtitle":"land type-(grant), face north, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
       }
+    }
   }
-    // 60*80 to buy land in Pobba
-    else if (received_message.payload === 'land_a3_pyin') {
+}
+
+// to buy land in Pobba,  80*80
+    else if (received_message.payload === 'land88_pobbtobu11') {
     response = {
-                  "text": "So sorry for my customer. There are not vacant land avaliable in Oattra to sell yet. Thanks for contacting us.",
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 250 lakhs, 80*80 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92230031_148704800008653_4090756521791586304_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeEO-jxiti1JQNFThle_S_jni90HSvupMk6L3QdK-6kyTlrw3uARvolzrmtRPvT-L59Z7xSh0ScJrnM0KZ6yt89i&_nc_ohc=9-YiMcFx6PYAX-ioqAm&_nc_ht=scontent.fmdl2-2.fna&oh=6c479c912e372cff68cb16dae0b8a119&oe=5EB2F669",
+            "subtitle":"land type-(grant), face east, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
       }
+    }
   }
-    // other area to buy land in pyinmana
-    else if (received_message.payload === 'other_a4_pyin') {
-    response = {
-                  "text": "So sorry, there are no other lands not avaliable",
-      }
-  }    
+}
+
+
+
 
 /************************************************************************************/
 /***********************************************************************************/
@@ -6268,6 +6139,150 @@ else if (received_message.payload === "dekthi") {
 
 /*****************************************************************/
 /*****************************************************************/
+
+
+
+// to rent land in Pobba
+  else if (received_message.payload === "tepobl") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "land40_pobbtobu2ba_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "land80_pobbtobu26a_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "80*80",
+                          "payload": "land88_pobbtobu11a_tenant",
+                        }
+                      ]
+      }
+  }
+
+// to rent land in Pobba,  40*60
+    else if (received_message.payload === 'land40_pobbtobu2ba_tenant') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 1 lakh, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92167702_148702773342189_5409825490464669696_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeEti1pLlG7k25OTzKTQf04-pjbk1v9nX8GmNuTW_2dfwXsXNJoQeWmPOxUirjYllEYt5q9uZwa4S3u_0eTZck1A&_nc_ohc=kA-CJJG0XyUAX_ac-M1&_nc_ht=scontent.fmdl2-2.fna&oh=fc0291c46afed146bdc149f655125de9&oe=5EB17576",
+            "subtitle":"land type-(grant), face south",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to rent land in Pobba,  60*80
+    else if (received_message.payload === 'land80_pobbtobu26a_tenant') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 1.5 lakhs, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91991273_148704343342032_3054495691972804608_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeH2wVSm5DsCLFesBvl46bpfPyPofjUfO_k_I-h-NR87-RcfEZJ_1P_ZadUUe5CAUmR5z69C4_9FqExGSFAOwEP3&_nc_ohc=_1KKYlteFSUAX_xCSrn&_nc_ht=scontent.fmdl2-2.fna&oh=5613774ed5b34ad38b6ae2dbd3e9b0ad&oe=5EB2F2F3",
+            "subtitle":"land type-(grant), face north",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to rent land in Pobba,  80*80
+    else if (received_message.payload === 'land88_pobbtobu11a_tenant') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 2.5 lakhs, 80*80 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92230031_148704800008653_4090756521791586304_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeEO-jxiti1JQNFThle_S_jni90HSvupMk6L3QdK-6kyTlrw3uARvolzrmtRPvT-L59Z7xSh0ScJrnM0KZ6yt89i&_nc_ohc=9-YiMcFx6PYAX-ioqAm&_nc_ht=scontent.fmdl2-2.fna&oh=6c479c912e372cff68cb16dae0b8a119&oe=5EB2F669",
+            "subtitle":"land type-(grant), face east",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+
+/******************************************************************/
 
 
 // to rent land in Dekkhia, area
@@ -6877,6 +6892,491 @@ else if (received_message.payload === "tedekl") {
 
 /****************************************************************************************************************/
 /***************************************************************************************************************/
+// to rent house in pobba, types of house
+else if (received_message.payload === "tenanpob") {
+      response = {
+                    "text":'Are you finding RC or other type?',
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "RC",
+                          "payload": "rc_pobb1_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Other Type",
+                          "payload": "nancat_pobb1_tenant",
+                        }
+                      ]
+
+      }
+  }
+  // to rent house in pobba, floor 
+  else if (received_message.payload === "rc_pobb1_tenant") {
+    response = {
+                  "text": "Please choose the number of floor:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "one floor",
+                          "payload": "onef_pobb1_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "two floor",
+                          "payload": "twof_pobb1_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "other floor",
+                          "payload": "thirdf_pobb1_tenant",
+                        }
+                      ]
+
+      }
+  }
+
+  // to rent house in pobba, RC, one floor
+  else if (received_message.payload === "onef_pobb1_tenant") {
+    response = {
+                  "text": "Do you want the house in which Mbr is included or only Br included?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "Mbr",
+                          "payload": "tobuyhoupobb_rconefloor_mbrtenant1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Only Br",
+                          "payload": "tobuyhoupobb_rconefloor_onlybrtenant1",
+                        }
+                      ]
+  }
+
+
+  // to rent house in pobba, RC, one floor, Mbr
+  else if (received_message.payload === "tobuyhoupobb_rconefloor_mbrtenant1") {
+    response = {
+                  "text": "Do you want how much wide land area of house?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "3 lakhs & below it",
+                          "payload": "torenthoupob3lakhs_below11a",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "above 3 lakhs",
+                          "payload": "torenthoupob3lakhs_above3laa1",
+                        }
+                      ]
+  }
+
+// to rent house in pobba, RC, one floor, Mbr , 3 lakhs & below it
+ else if (received_message.payload === 'torenthoupob3lakhs_below11a') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+                    {
+            "title":"RC, 2.5 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92831429_148690140010119_457507630131183616_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeE9zcF8NnpLPKl62pX9HioMwM8Pb79goQXAzw9vv2ChBYUnC-ju8y6DZUIJF30zKiuGPVjBQrDDyMQP9wAMOxEJ&_nc_ohc=WduouaN1hjsAX8Uj_x2&_nc_ht=scontent.fmdl2-1.fna&oh=568c5bdef4e9ecc484fd7928f0c862e6&oe=5EB1E35A",
+            "subtitle":"MBr-(1), Br-(2), face east",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to rent house in pobba, RC, one floor, Mbr , above 3 lakhs
+ else if (received_message.payload === 'torenthoupob3lakhs_above3laa1') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+            {
+            "title":"RC, 3.5 lakhs, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92141671_148691213343345_4810507837039968256_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeFwzQz5Fa1a1b6rTxcMDxOf0Bja6JtczzLQGNrom1zPMqSLxn3HfxY3v96qaK0vlAQ0LhMVFdJUEFb6oQw1SSUu&_nc_ohc=cAMzawpv1dsAX-fiBFJ&_nc_ht=scontent.fmdl2-1.fna&oh=94b2d2e832e6a2d3e1929d3e019a22f5&oe=5EB20EC5",
+            "subtitle":"MBr-(2), Br-(3), face west and north",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          },
+           {
+            "title":"RC, 950 lakhs, 80*80 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92555021_148694693342997_4064605342099570688_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeHdSxG1IzD6iMZL01qEg0KzthAmkZBLAZK2ECaRkEsBklsHQStxScdsxZDKhJHFmGhjF-6yz9By88h_ESul1b2d&_nc_ohc=zrd5mQyTMQMAX_MAjMx&_nc_ht=scontent.fmdl2-2.fna&oh=a473039b886e5dc645e0483299e5c88a&oe=5EB34FB4",
+            "subtitle":"MBr-(2), Br-(3), face north",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+
+/************************************/
+
+  // to rent house in pobba, RC, one floor, only br
+  else if (received_message.payload === "tobuyhoupobb_rconefloor_onlybrtenant1") {
+    response = {
+                  "text": "Do you want how much wide land area of house?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "2 lakhs & below it",
+                          "payload": "torenthou_pobbonefonlybr2lakh",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "above 2 lakhs",
+                          "payload": "torenthou_pobbonefonlybrabove2l",
+                        }
+                      ]
+  }
+
+
+// to rent house in pobba, RC, one floor, only br, 2 lakhs & below it
+ else if (received_message.payload === 'torenthou_pobbonefonlybr2lakh') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+                    {
+            "title":"RC, 1.5 lakhs per month, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91914495_148687560010377_1702487433695723520_n.jpg?_nc_cat=105&_nc_sid=110474&_nc_eui2=AeEOZdK9M-XbPElfW6-OzSBjbvX1hzyKvthu9fWHPIq-2IyUS6M1KZcr-ftHDgwK3b8LepAYlLLrEQLrbeKL1bxq&_nc_ohc=QNYEF48cQz0AX87rhGe&_nc_ht=scontent.fmdl2-2.fna&oh=e69a12e6ab242f0cb5ec60935ca32414&oe=5EB03155",
+            "subtitle":"Br-(3), face east",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to rent house in pobba, RC, one floor, only br, above 2 lakhs
+ else if (received_message.payload === 'torenthou_pobbonefonlybrabove2l') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+          {
+            "title":"RC, 2.5 lakhs per month, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92218385_148692786676521_7587571937593786368_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeHw7G9pvs5W1UkZ7W2i9IEt4cZIyNWN-1fhxkjI1Y37V5ib-0Rln8vvNUgG0KIAlt7B1JzrM__9lFiO0dIDIpnZ&_nc_ohc=FygYy-47yrsAX8dEyVb&_nc_ht=scontent.fmdl2-1.fna&oh=e324701ad6206c5ea9c64763b885276e&oe=5EB37AF8",
+            "subtitle":"Br-(3), face north",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+// to rent house in pobba, other type(not RC)
+ else if (received_message.payload === 'nancat_pobb1_tenant') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+          {
+            "title":"Nancat, 1.5 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91973807_148705810008552_1650041489260019712_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeG-bX8xeh_hI01ZsMR3FVTdwGLcxG1vk2DAYtzEbW-TYENQ6KNa30os6QZjpGd2-xDzuVslOpzjpqog2138-pNz&_nc_ohc=Fw9YqIe_wJUAX9bG4h0&_nc_ht=scontent.fmdl2-1.fna&oh=c891d7fd7a3d3e972d593b6075c5abc0&oe=5EB07818",
+            "subtitle":"land type-(grant), face south",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+/*******************************/
+
+
+
+  // to rent house in pobba, RC, two floor, area
+  else if (received_message.payload === "twof_pobb1_tenant") {
+    response = {
+                  "text": "Please choose the estimated price you wanna spend:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "3 lakhs & below it",
+                          "payload": "torentpob_twof3lakhs_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "above 3 lakhs",
+                          "payload": "torentpob_twofabove3lakhs_tenant",
+                        }
+                      ]
+  }
+
+// to rent house in pobba, RC, two floor, 3 lakhs & below it
+ else if (received_message.payload === 'torentpob_twof3lakhs_tenant') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+                    {
+            "title":"RC, 2.5 lakhs per month, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91606159_148757690003364_6476717670556237824_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeEwaNaIO6IktYPhZerxMcm7Qew2jPuaaEFB7DaM-5poQZvYiKqWGrH_lW38GzC0sEa2ozlem0muIfNfovwajN7B&_nc_ohc=xmULYHKmuWMAX8mWmY6&_nc_ht=scontent.fmdl2-1.fna&oh=896dcfb6903ac4aa391c915c34f871fc&oe=5EB37841",
+            "subtitle":"MBr-(2), Br-(2), face south",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to rent house in pobba, RC, two floor, above 3 lakhs
+ else if (received_message.payload === 'torentpob_twofabove3lakhs_tenant') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+            {
+            "title":"RC, 3.5 lakhs per month, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92517086_148751140004019_3914064358962888704_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeFoOvq0bRFW0r7Srwl3N0U6qLmh0okITviouaHSiQhO-AqAdJfPRZtbQ8jrzolCH2ITGEZeyM794Swu5gSj8kTf&_nc_ohc=PxwqZF2pwtAAX-4aXYH&_nc_ht=scontent.fmdl2-1.fna&oh=1754795b4c5cdf6738bdbfe5f46ea909&oe=5EB0B753",
+            "subtitle":"MBr-(2), Br-(2), land type-(grant), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          },
+           {
+            "title":"RC, 5.5 lakhs per month, 80*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92463513_148754363337030_6063595422167859200_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_eui2=AeGEiOz1OhNnDp1HZmVLX-bLmqWuDQ1bDISapa4NDVsMhDw_xJfVd9Nb2PC9a3eG6ILKw0MuXJZGWA5_etoz-7jX&_nc_ohc=kMH-IN34uOYAX9JHqYO&_nc_ht=scontent.fmdl2-1.fna&oh=85e1416c08e94c83e9ef5265320950a4&oe=5EB30201",
+            "subtitle":"MBr-(3), Br-(2),  face east, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+
+// to rent house in pobba, RC, other floor
+ else if (received_message.payload === 'thirdf_pobb1_tenant') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+                    {
+            "title":"3RC, 13 lakhs per month, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92138782_148707466675053_5918704202221092864_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeE_h3jBITkW7xkMqu3_I6ZSTbencPv31K1Nt6dw-_fUrRIBi2eMl4upeFefewulR61984TZbIxxpK-ya8_OLYqw&_nc_ohc=d7YY9JJ3fBsAX9uFLtw&_nc_ht=scontent.fmdl2-1.fna&oh=2328b837dd4e1233e2aa509045cc3207&oe=5EB3FC6E",
+            "subtitle":"MBr-(4), Br-(2), face north, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+
+
+
+
+/**************************************************************/
+/**************************************************************/
+
 
     // to rent a house in Dekkhina
 else if (received_message.payload === "tenandek") {
