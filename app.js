@@ -5050,8 +5050,13 @@ else if (received_message.payload === "zabtwp") {
 // to buy land in oattra
 else if (received_message.payload === "otthi") {
     response = {
-                  "text": "Do you want what area?",
+                  "text": "Do you want how much wide area?",
                     "quick_replies": [
+                          {
+                          "content_type": "text",
+                          "title": "80*80",
+                          "payload": "land80_ott",
+                        },
                          {
                           "content_type": "text",
                           "title": "100*100",
@@ -5062,33 +5067,11 @@ else if (received_message.payload === "otthi") {
                           "title": "150*150",
                           "payload": "land150_ott",
                         },
-                        {
-                          "content_type": "text",
-                          "title": "80*80",
-                          "payload": "land80_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "other",
-                          "payload": "land_other_ott",
-                        }
+                        
                       ]
       }
   }
-  // 100*100 to buy land in Oattra
-    else if (received_message.payload === 'land100_ott') {
-    response = {
-                  "text": "So sorry for my customer. There are not vacant land avaliable in Oattra to sell yet. Thanks for contacting us."
-                    
-      }
-  }
-    // 150*150 to buy land in Oattra
-    else if (received_message.payload === 'land150_ott') {
-    response = {
-                  "text": "So sorry for my customer. There are not vacant land avaliable in Oattra to sell yet. Thanks for contacting us.",
-           
-      }
-  }
+
     // 80*80 to buy land in Oattra
     else if (received_message.payload === 'land80_ott') {
     response = {
@@ -5096,14 +5079,204 @@ else if (received_message.payload === "otthi") {
                    
       }
   }
-    // other area to buy land in pyinmana
-    else if (received_message.payload === 'land_other_ott') {
+  
+// to buy land in Oattra, 100*100 
+    else if (received_message.payload === 'land100_ott') {
     response = {
-                  "text": "So sorry for my customer. There are not vacant land avaliable in Oattra to sell yet. Thanks for contacting us.",
-      }
-  }    
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 950 lakhs, 100*100 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92214064_148823976663402_9152721804815499264_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_eui2=AeE5sEj0zQN1gizaqKzK4jqfDRN3R7GAQNANE3dHsYBA0Dn3_dUa122xcWuru_HhUiwPHjAKpkq0y0c8JnBUYqO2&_nc_ohc=lSf1itb1gJgAX_y9iQG&_nc_ht=scontent.fmdl2-2.fna&oh=5358e63929940923de037ab8b2422941&oe=5EB24417",
+            "subtitle":"land type-(grant), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
 
-/*****************************************************/
+        ]
+      }
+    }
+  }
+}
+
+// to buy land in Oattra, 150*150
+    else if (received_message.payload === 'land150_ott') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 3000 lakhs, 150*150 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92236612_148822566663543_924747952507846656_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_eui2=AeHCzboYU7SdJuCwvLEkjxYqCX6qxvPEVK0JfqrG88RUrd8246mUsjl367MB4SnJkoGvu1o1SWZWx8yu1LY4_ow8&_nc_ohc=23dwXT1Le4kAX8PMZMY&_nc_ht=scontent.fmdl2-2.fna&oh=795d163e841c1d4e1f327d523c125170&oe=5EB1E800",
+            "subtitle":"land type-(grant), face north, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+
+/**************************************************************************/
+/************************************************************************/
+
+
+// to rent land in oattra
+else if (received_message.payload === "teottl") {
+    response = {
+                  "text": "Do you want how much wide area?",
+                    "quick_replies": [
+                          {
+                          "content_type": "text",
+                          "title": "80*80",
+                          "payload": "torentland80_ott",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "100*100",
+                          "payload": "torentland100_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "150*150",
+                          "payload": "torentland150_ott",
+                        },
+                        
+                      ]
+      }
+  }
+
+    // to rent land in Oattra 80*80
+    else if (received_message.payload === 'torentland80_ott') {
+    response = {
+                  "text": "So sorry for my customer. There are not vacant land avaliable in Oattra to rent yet. Thanks for contacting us.",
+                   
+      }
+  }
+  
+// to rent land in Oattra, 100*100 
+    else if (received_message.payload === 'torentland100_ott') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 3 lakhs per month, 100*100 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92214064_148823976663402_9152721804815499264_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_eui2=AeE5sEj0zQN1gizaqKzK4jqfDRN3R7GAQNANE3dHsYBA0Dn3_dUa122xcWuru_HhUiwPHjAKpkq0y0c8JnBUYqO2&_nc_ohc=lSf1itb1gJgAX_y9iQG&_nc_ht=scontent.fmdl2-2.fna&oh=5358e63929940923de037ab8b2422941&oe=5EB24417",
+            "subtitle":"land type-(grant), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to rent land in Oattra, 150*150
+    else if (received_message.payload === 'torentland150_ott') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 5 lakhs per month, 150*150 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92236612_148822566663543_924747952507846656_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_eui2=AeHCzboYU7SdJuCwvLEkjxYqCX6qxvPEVK0JfqrG88RUrd8246mUsjl367MB4SnJkoGvu1o1SWZWx8yu1LY4_ow8&_nc_ohc=23dwXT1Le4kAX8PMZMY&_nc_ht=scontent.fmdl2-2.fna&oh=795d163e841c1d4e1f327d523c125170&oe=5EB1E800",
+            "subtitle":"land type-(grant), face north, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+
+
+
+/*************************************************************************/
+
 
 // to buy land in Pobba
   else if (received_message.payload === "pobthi") {
@@ -9400,7 +9573,7 @@ else if (payload === 'innnter') {
 
   }
 }
-  
+// to buy land
   else if (payload === 'lann') {
     response = { "attachment": {
                   "type": "template",
@@ -9423,6 +9596,7 @@ else if (payload === 'innnter') {
                               }
     }
   }
+  // to buy land in oattra
       else if (payload === "5fthri") {
       response = {
                   "text": "Please choose the township in which you want to buy land:",
