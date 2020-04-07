@@ -2369,6 +2369,7 @@ else if (received_message.payload === "potwp") {
                         }
                       ]
   }
+}
 
 // to buy house in pobba, RC, two floor, 40*60
  else if (received_message.payload === 'tobuyhoupobb_rctwof46pob') {
