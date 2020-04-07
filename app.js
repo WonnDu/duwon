@@ -5630,13 +5630,13 @@ else if (received_message.payload === "dekthi") {
             "subtitle":"land type-(permit), face south, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92023227_148678763344590_6163162711233396736_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeG1Yh-bM7cBszY0E37bemDdBgP3e6fdm5QGA_d7p92blNuE8eGcUXHPcSs7BtZkfLvhlKHV_h0OQEL5jmxzFKk-&_nc_ohc=YRk6tztDMhYAX-bzLfq&_nc_ht=scontent.fmdl2-1.fna&oh=f51d00030a755fd4a893773cf5e739a6&oe=5EB2E475",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
                 "title":"More Information"
               },
               {
@@ -6362,6 +6362,7 @@ else if (received_message.payload === "tedekl") {
   }
 }
 
+
 // to rent land in Dekkhina,  100*100
     else if (received_message.payload === 'torede_onlyaland100in_dek_tenant') {
     response = {
@@ -6377,13 +6378,13 @@ else if (received_message.payload === "tedekl") {
             "subtitle":"land type-(permit), face south, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92023227_148678763344590_6163162711233396736_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeG1Yh-bM7cBszY0E37bemDdBgP3e6fdm5QGA_d7p92blNuE8eGcUXHPcSs7BtZkfLvhlKHV_h0OQEL5jmxzFKk-&_nc_ohc=YRk6tztDMhYAX-bzLfq&_nc_ht=scontent.fmdl2-1.fna&oh=f51d00030a755fd4a893773cf5e739a6&oe=5EB2E475",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
                 "title":"More Information"
               },
               {
