@@ -5419,35 +5419,6 @@ else if (received_message.payload === "zabtwp") {
 
 /***********************************************************************************************************************************/
 
-// to buy land in pyinmana
-  else if (received_message.payload === "pyi5") {
-    response = {
-                  "text": "Do you want what area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "40*60",
-                          "payload": "land_a1_pyintobu",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*72",
-                          "payload": "land_a2_pyintobu",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*80",
-                          "payload": "land_a3_pyintobu",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Other area",
-                          "payload": "other_a4_pyintobu",
-                        }
-                      ]
-      }
-  }
-
 
 
 // to buy land in pyinmana,  40*60
@@ -6581,34 +6552,6 @@ else if (received_message.payload === "dekthi") {
 /*****************************************************************/
 /*****************************************************************/
 
-// to rent land in Pyinmana
-  else if (received_message.payload === "tepyinlan") {
-    response = {
-                  "text": "Do you want what area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "40*60",
-                          "payload": "torentlandpyin46_areab11",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*72",
-                          "payload": "torentlandpyin672_areaaa1",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*80",
-                          "payload": "torentlandpyin68_areacc11",
-                        },
-                         {
-                          "content_type": "text",
-                          "title": "Other area",
-                          "payload": "torentlandpyinotherarea_areadd11",
-                        }
-                      ]
-      }
-  }
 
 // to rent land in pyinmana,  40*60
     else if (received_message.payload === 'torentlandpyin46_areab11') {
@@ -7515,27 +7458,6 @@ else if (received_message.payload === "tedekl") {
 /****************************************************************************************************************/
 /***************************************************************************************************************/
 
-
-
-  // to rent house in pyinmana,
-  else if (received_message.payload === "tenanpyin" ) {
-    response = {
-                  "text": "Please choose the below option:",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "RC",
-                          "payload": "torentrcpyin_teaa1",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Other type",
-                          "payload": "torentothertypepyin_tebb1",
-                        }
-                      ]
-
-      }
-  }
  
 // to rent house in pyinmana, RC
   else if (received_message.payload === "torentrcpyin_teaa1" ) {
@@ -10536,6 +10458,27 @@ function handlePostback(sender_psid, received_postback) {
                 }
               }
   }
+
+  // to rent house in pyinmana,
+  else if (received_message.payload === "tenanpyin" ) {
+    response = {
+                  "text": "Please choose the below option:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "RC",
+                          "payload": "torentrcpyin_teaa1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Other type",
+                          "payload": "torentothertypepyin_tebb1",
+                        }
+                      ]
+
+      }
+  }
+
    else if (payload === 'tenan5thi') {
          response = {
                   "text": "Please choose the township in which you want to tenant house:",
@@ -10592,6 +10535,36 @@ function handlePostback(sender_psid, received_postback) {
                 }
               }
   }
+
+// to rent land in Pyinmana
+  else if (received_message.payload === "tepyinlan") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "torentlandpyin46_areab11",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*72",
+                          "payload": "torentlandpyin672_areaaa1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "torentlandpyin68_areacc11",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "Other area",
+                          "payload": "torentlandpyinotherarea_areadd11",
+                        }
+                      ]
+      }
+  }
+
    else if (payload === 'te5lan') {
          response = {
                   "text": "Please choose the township in which you want to tenant land:",
@@ -10828,6 +10801,34 @@ else if (payload === 'innnter') {
                             }
                               }
     }
+  }
+  // to buy land in pyinmana
+  else if (received_message.payload === "pyi5") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "land_a1_pyintobu",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*72",
+                          "payload": "land_a2_pyintobu",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "land_a3_pyintobu",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Other area",
+                          "payload": "other_a4_pyintobu",
+                        }
+                      ]
+      }
   }
   // to buy land in oattra
       else if (payload === "5fthri") {
