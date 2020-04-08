@@ -1815,26 +1815,6 @@ function handleMessage(sender_psid, received_message) {
 
 
 /*********************************************************************************/
-
-  // to buy house in pyinmana,
-  else if (received_message.payload === "pyintwp" ) {
-    response = {
-                  "text": "Please choose the below option:",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "RC",
-                          "payload": "tobuyrcpyin_aa1",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Other type",
-                          "payload": "tobuyothertypepyin_bb1",
-                        }
-                      ]
-
-      }
-  }
  
 // to buy house in pyinmana, RC
   else if (received_message.payload === "tobuyrcpyin_aa1" ) {
@@ -8033,7 +8013,7 @@ else if (received_message.payload === "tedekl") {
 // to rent house in oattra, RC, one floor
   else if (received_message.payload === "onef1_ott_tenant") {
     response = {
-                  "text": "Do you want how much wide area?",
+                  "text": "Please choose the estimated amount you wanna spend:",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -8156,7 +8136,7 @@ else if (received_message.payload === "tedekl") {
 // to rent house in oattra, RC, two floor
   else if (received_message.payload === "twof1_ott_tenant") {
     response = {
-                  "text": "Do you want how much wide area of house?",
+                  "text": "Please tell me the estimated amount you wanna spend:",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -8352,7 +8332,7 @@ else if (received_message.payload === "tenanpob") {
   // to rent house in pobba, RC, one floor, Mbr
   else if (received_message.payload === "tobuyhoupobb_rconefloor_mbrtenant1") {
     response = {
-                  "text": "Do you want how much wide land area of house?",
+                  "text": "Please tell me the estimated amount you wanna spend:",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -8473,7 +8453,7 @@ else if (received_message.payload === "tenanpob") {
   // to rent house in pobba, RC, one floor, only br
   else if (received_message.payload === "tobuyhoupobb_rconefloor_onlybrtenant1") {
     response = {
-                  "text": "Do you want how much wide land area of house?",
+                  "text": "Please tell me the estimated amount you wanna spend:",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -10693,7 +10673,29 @@ function handlePostback(sender_psid, received_postback) {
                   }
                 }
               }
-  } else if (payload === 'fethri') {
+  }
+    // to buy house in pyinmana,
+  else if (received_message.payload === "pyintwp" ) {
+    response = {
+                  "text": "Please choose the below option:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "RC",
+                          "payload": "tobuyrcpyin_aa1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Other type",
+                          "payload": "tobuyothertypepyin_bb1",
+                        }
+                      ]
+
+      }
+  }
+
+
+   else if (payload === 'fethri') {
          response = {
                   "text": "Please choose the one name of townships in which you want to buy a house:",
                     "quick_replies": [
