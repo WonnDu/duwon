@@ -5585,17 +5585,16 @@ else if (received_message.payload === "zabtwp") {
 // to buy land in pyinmana,  Other area
     else if (received_message.payload === 'other_a4_pyintobu') {
     response = {
-
-    "attachment":{
+            "attachment":{
       "type":"template",
       "payload":{
         "template_type":"generic",
         "elements": [ 
         
-            {
+           {
             "title":"land, 200 lakhs, 80*70 ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92700247_149058239973309_1026465551309864960_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeExfi6lyAGKnuAnGwzsqHIyb0fpY8_QSLBvR-ljz9BIsOBkiot-Xz6n2p0Os7XVh5PIEoLRp9oLcrpco0jAv7p1&_nc_ohc=3LoyEwb524wAX_eRpVY&_nc_ht=scontent.fmdl2-1.fna&oh=ab71d22ef0f26f9af995a94bdfd05633&oe=5EB2A610",
-            "subtitle":"land type-(permit), face south",
+            "subtitle":"",
             "default_action": {
               "type": "web_url",
               "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
@@ -5611,7 +5610,7 @@ else if (received_message.payload === "zabtwp") {
                 "type":"postback",
                 "title":"Yes, I'm interested",
                 "payload":"aaae"
-           }              
+              }              
             ]      
           }
 
@@ -5620,7 +5619,6 @@ else if (received_message.payload === "zabtwp") {
     }
   }
 }
-
 
 
 /******************************************************/
