@@ -6745,7 +6745,13 @@ else if (received_message.payload === "dekthi") {
 // to rent land in pyinmana,  Other area
     else if (received_message.payload === 'torentlandpyinotherarea_areadd11') {
     response = {
-            {
+            "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
             "title":"land, 1.5 lakhs per month, 80*70 ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92700247_149058239973309_1026465551309864960_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeExfi6lyAGKnuAnGwzsqHIyb0fpY8_QSLBvR-ljz9BIsOBkiot-Xz6n2p0Os7XVh5PIEoLRp9oLcrpco0jAv7p1&_nc_ohc=3LoyEwb524wAX_eRpVY&_nc_ht=scontent.fmdl2-1.fna&oh=ab71d22ef0f26f9af995a94bdfd05633&oe=5EB2A610",
             "subtitle":"land type-(permit), face south",
@@ -6767,9 +6773,12 @@ else if (received_message.payload === "dekthi") {
               }              
             ]      
           }
+
+        ]
+      }
+    }
   }
 }
-
 
 
 /******************************************************************/
