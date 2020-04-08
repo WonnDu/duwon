@@ -1816,7 +1816,504 @@ function handleMessage(sender_psid, received_message) {
 
 /*********************************************************************************/
 
+  // to buy house in pyinmana,
+  else if (received_message.payload === "pyintwp" ) {
+    response = {
+                  "text": "Please choose the below option:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "RC",
+                          "payload": "tobuyrcpyin_aa1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Other type",
+                          "payload": "tobuyothertypepyin_bb1",
+                        }
+                      ]
 
+      }
+  }
+ 
+// to buy house in pyinmana, RC
+  else if (received_message.payload === "tobuyrcpyin_aa1" ) {
+    response = {
+                  "text": "Please choose the number of floor:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "one floor",
+                          "payload": "onef_pyinfloor11",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "two floor",
+                          "payload": "twoff_pyinfloora11",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Other floor",
+                          "payload": "otherf_pyinfloorbb11",
+                        }
+                      ]
+
+      }
+  }
+ 
+// to buy house in pyinmana, RC, one floor, 
+  else if (received_message.payload === "onef_pyinfloor11") {
+    response = {
+                  "text": "Do you want the house in which Mbr is included or only Br included?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "Mbr",
+                          "payload": "tobupyinrc_onefmbr_hh1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Only Br",
+                          "payload": "tobupyinrc_onfonlybr_hhaa1",
+                        }
+                      ]
+      }
+  }
+
+// to buy house in pyinmana, RC, one floor, Mbr
+  else if (received_message.payload === "tobupyinrc_onefmbr_hh1") {
+    response = {
+                  "text": "Do you want how much wide land area of house?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "tobuhourcpyin46_tobuaa7",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*72",
+                          "payload": "tobuhourcpyin172_tobunn7",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "tobuhourcpyin68_tobumma1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Other area",
+                          "payload": "tobuhourcpyinotherarea_tobummb",
+                        }
+                      ]
+      }
+  }
+
+
+
+// to buy house in pyinmana, RC, one floor, Mbr, 40*60
+  else if (received_message.payload === "tobuhourcpyin46_tobuaa7") {
+    response = {
+      "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 800 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91664968_149027856643014_3018289688898174976_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeGRHIaeZKMyPNKfOeoww905B5sI3sATrD4HmwjewBOsPpGS3GqeitBU4k6asf5ijfHtiXTjJyQUo9u9DVzydHqd&_nc_ohc=kMOWTJMbEHIAX_qTSw1&_nc_ht=scontent.fmdl2-2.fna&oh=81eaeca5b4bd3145141aaeb803aa522b&oe=5EB1858C",
+            "subtitle":"Mbr-(1), Br-(2), land type-(grant), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+    }
+  }
+
+// to buy house in pyinmana, RC, one floor, Mbr, 60*72
+  else if (received_message.payload === "tobuhourcpyin172_tobunn7") {
+    response = {
+      "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 550 lakhs, 60*72 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92353603_149043869974746_8473619924072267776_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeGgvj4JXTB-BaKlrv6fCWkPD8Wz4sbkNI8PxbPixuQ0j4z4WFsuBeE4rDoXcka8l3DzzgHyop1A6jQY9BeyxOWv&_nc_ohc=UwLfnfMu-QQAX-lKiLp&_nc_ht=scontent.fmdl2-1.fna&oh=7c3a2dc9036f0c70cc5e9cb0eb33e15c&oe=5EB1873A",
+            "subtitle":"Mbr-(1), Br-(2), land type-(grant), face east, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+    }
+  }
+
+// to buy house in pyinmana, RC, one floor, Mbr, 60*80
+  else if (received_message.payload === "tobuhourcpyin68_tobumma1") {
+    response = {
+      "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 850 lakhs, Width-(60*80)",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92345669_149033143309152_6933827548061106176_n.jpg?_nc_cat=105&_nc_sid=110474&_nc_eui2=AeEI4W8wxQk3tk9YgjJjQ_vGP1pHh5H1KD8_WkeHkfUoPxtx5_-T7IVd-7alAloGuyAZbuYPZOCOJab3je027jsy&_nc_ohc=sBvJQg8bkjYAX9G8Kpp&_nc_ht=scontent.fmdl2-2.fna&oh=382cf06a14c01e693485808b266b26d7&oe=5EB4B0D5",
+            "subtitle":"Mbr-(2), Br-(1), land type-(grant), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+    }
+  }
+
+// to buy house in pyinmana, RC, one floor, Mbr, Other area
+  else if (received_message.payload === "tobuhourcpyinotherarea_tobummb") {
+    response = {
+            "text":"There is no property avaliable to sell. Sorry for you. Thanks for contacting us."
+    }
+  }
+
+
+/**********************************/
+
+
+// to buy house in pyinmana, RC, two floor
+  else if (received_message.payload === "twoff_pyinfloora11") {
+    response = {
+                  "text": "Do you want how much wide land area of house?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "tobuytwof_rcpyin_a46ab",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*72",
+                          "payload": "tobuytwof_rcpyin_a672cca",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "tobuytwof_rcpyin_a68dda",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Other area",
+                          "payload": "tobuytwof_rcpyin_otherarea7c",
+                        }
+                      ]
+      }
+  }
+
+
+// to buy house in pyinmana, RC, two floor, 40*60
+  else if (received_message.payload === "tobuytwof_rcpyin_a46ab") {
+    response = {
+      "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"2RC, 2300 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91909041_149045459974587_3734464206922055680_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeFU2LcrrLbR-1h9foxAhqdQB74mqwENAW0HviarAQ0BbSVC1u_Z_umhu8d7qGBi4uix6EwDxD8Fe-cH_uN1RPuC&_nc_ohc=puXGjPNCVz4AX8fgEfL&_nc_ht=scontent.fmdl2-1.fna&oh=ea5563303495ed0876589d4e0ae7a747&oe=5EB36069",
+            "subtitle":"Mbr-(4), land type-(grant), face north, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+    }
+  }
+
+// to buy house in pyinmana, RC, two floor, 60*72
+  else if (received_message.payload === "tobuytwof_rcpyin_a672cca") {
+    response = {
+      "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"2RC, 1800 lakhs, 60*72 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91663260_149049396640860_3878909622148399104_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeGHkGRYDmdeavjzqEgTafF6vGtLT4QsOYC8a0tPhCw5gGfUGkXLqAvDbcmS2kynpkc427C_nqwWJyVMHf6lzNw7&_nc_ohc=aXbSPOJrDXwAX_7A_Ij&_nc_ht=scontent.fmdl2-2.fna&oh=d5558fa54bef9dc6a18a5cde99b328df&oe=5EB32EB3",
+            "subtitle":"Mbr-(2), Br-(1), land type-(grant), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+    }
+  }
+
+  // to buy house in pyinmana, RC, two floor, 60*80
+  else if (received_message.payload === "tobuytwof_rcpyin_a68dda") {
+    response = {
+      "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"2RC, 2500 lakhs, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91647057_149048646640935_1634770849003208704_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_eui2=AeF5T-k7A2rpdAenpQX7rnQypSsvlvO9AJ2lKy-W870AneezH0bEyn8dFfPyyEkjsM0EKd0vLicVlYL82SSzmRXI&_nc_ohc=vKqTcuhKlTkAX-qAIiB&_nc_ht=scontent.fmdl2-1.fna&oh=759375e2414be0c936669dd1904a9f24&oe=5EB2C4F0",
+            "subtitle":"Mbr-(4), Br-(2), land type-(grant), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+    }
+  }
+
+// to buy house in pyinmana, RC, two floor,  other area
+  else if (received_message.payload === "tobuytwof_rcpyin_otherarea7c") {
+    response = {
+              "text":"There is no property avaliable. Sorry for you. Thanks for contacting us."
+    }
+  }
+
+
+/********/
+  // to buy house in pyinmana, other type 
+  else if (received_message.payload === "tobuyothertypepyin_bb1") {
+    response = {
+      "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"Hta yan, 390 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91623696_149051576640642_6569864859687583744_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeEi8PLXTZ7dbcj0r4LuXMSKGzY8vi0XI_wbNjy-LRcj_J-l8rj7nrr5RKGDKhXzF0bfZMCYV62C31nmSRcYYpAG&_nc_ohc=9vhkrWERlZ4AX-boxAQ&_nc_ht=scontent.fmdl2-1.fna&oh=dc6ab30e9ee13b2d3e7e37f6fbbbef72&oe=5EB4F884",
+            "subtitle":"land type-(slit), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+    }
+  }
+
+
+
+
+/*******************************************************************/
+
+// to buy house in pyinmana, RC, one floor, only Br
+  else if (received_message.payload === "tobupyinrc_onfonlybr_hhaa1") {
+    response = {
+      "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 590 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/93006985_149029053309561_9111199899243773952_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeGN4AW6ko1xllvDTB1lMk_-xqdjdqz30iXGp2N2rPfSJcztXgS9CVS0gWOyOv6fpA6qL1F9oxqB8ExhpUyLK8Tj&_nc_ohc=98DZRtLQ7vgAX_QO6g-&_nc_ht=scontent.fmdl2-1.fna&oh=6f4d97ea113ef2ffc55e193a5b05eacb&oe=5EB13839",
+            "subtitle":"Br-(2), land type-(grant), face north, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+    }
+  }
+
+
+
+// to buy house in pyinmana, RC, other floor
+  else if (received_message.payload === "otherf_pyinfloorbb11") {
+    response = {
+      "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"3RC, 2900 lakhs, 80*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92246313_149054849973648_703440635775942656_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_eui2=AeGQUfxVnvZWijR4b8rEp1d3jNzI0_OEBaKM3MjT84QFopl4xHDm84RGqQl8E9qT_OpLskADmC5FYTxR1IVWWySf&_nc_ohc=PEniN76E7_gAX87FiHI&_nc_ht=scontent.fmdl2-1.fna&oh=51c68a01e618292c014e23cf4975744e&oe=5EB2E05D",
+            "subtitle":"Mbr-(3), Br-(2), land type-(grant), face east, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+    }
+  }
+
+
+
+
+/**************************************************************************/
 
   // to buy house in oattra, RC
   else if (received_message.payload === "ottwp" ) {
@@ -4941,8 +5438,8 @@ else if (received_message.payload === "zabtwp") {
 
 
 /***********************************************************************************************************************************/
-/*
-// buy land in pyinmana
+
+// to buy land in pyinmana
   else if (received_message.payload === "pyi5") {
     response = {
                   "text": "Do you want what area?",
@@ -4950,108 +5447,172 @@ else if (received_message.payload === "zabtwp") {
                          {
                           "content_type": "text",
                           "title": "40*60",
-                          "payload": "land_a1_pyin",
+                          "payload": "land_a1_pyintobu",
                         },
                         {
                           "content_type": "text",
                           "title": "60*72",
-                          "payload": "land_a2_pyin",
+                          "payload": "land_a2_pyintobu",
                         },
                         {
                           "content_type": "text",
                           "title": "60*80",
-                          "payload": "land_a3_pyin",
+                          "payload": "land_a3_pyintobu",
                         },
                         {
                           "content_type": "text",
-                          "title": "other",
-                          "payload": "other_a4_pyin",
+                          "title": "Other area",
+                          "payload": "other_a4_pyintobu",
                         }
                       ]
       }
   }
-  // 40*60 to buy land in pyinmana
-    else if (payload === 'land_a1_pyin') {
+
+
+
+// to buy land in pyinmana,  40*60
+    else if (received_message.payload === 'land_a1_pyintobu') {
     response = {
-                  "text": "Please choose the estimated amount that you are avaliable to buy land:",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "below 300",
-                          "payload": "below3_pyin",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "below 600",
-                          "payload": "below6_pyin",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "below 1000",
-                          "payload": "below1000_pyin",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "above 1000",
-                          "payload": "above1000_pyin",
-                        }
-                      ]
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 320 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92273270_149016386644161_8370090244208328704_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeE52sRpZJEwHgD_qk7BsxhF8lo3ZWHm5gbyWjdlYebmBiXFhZUhkb9HDs_ZhoJzM2YdY7aQoSgc_HMPEWWmA_3v&_nc_ohc=epNjQ8-eoucAX-cBQFS&_nc_ht=scontent.fmdl2-2.fna&oh=02e1971e81f2d0ca73e007597207d5ba&oe=5EB4B1CD",
+            "subtitle":"land type-(grant), face east",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
       }
+    }
   }
-    // 60*72 to buy land in pyinmana
-    else if (payload === 'land_a2_pyin') {
+}
+// to buy land in pyinmana,  60*72
+    else if (received_message.payload === 'land_a2_pyintobu') {
     response = {
-                  "text": "Please choose the estimated amount that you are avaliable to buy land:",
-                    "quick_replies": [
-                        {
-                          "content_type": "text",
-                          "title": "below 600",
-                          "payload": "b67_p6_pyin",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "below 1000",
-                          "payload": "b67_p1_pyin",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "above 1000",
-                          "payload": "b67_ab1_pyin",
-                        }
-                      ]
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 550 lakhs, 60*72 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91944330_149019299977203_418187470824275968_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_eui2=AeGRf4pbtPI2yrR1hioqwmrqUx4Q1W7AGlFTHhDVbsAaUXOwMiR5jVBk-CTXwNfLnUKhzY79QvgkcsFLvNay3Yej&_nc_ohc=ygPsk8r6Fj8AX_w1HYQ&_nc_ht=scontent.fmdl2-1.fna&oh=c53e99898e47b09c73ad6e09ae0e0a76&oe=5EB2BF4A",
+            "subtitle":"land type-(permit), face south",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
       }
+    }
   }
-    // 60*80 to buy land in pyinmana
-    else if (payload === 'land_a3_pyin') {
+}
+// to buy land in pyinmana,  60*80
+    else if (received_message.payload === 'land_a3_pyintobu') {
     response = {
-                  "text": "Please choose the estimated amount that you are avaliable to buy land:",
-                    "quick_replies": [
-                        {
-                          "content_type": "text",
-                          "title": "below 600",
-                          "payload": "b67_p6_pyin",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "below 1000",
-                          "payload": "b67_p1_pyin",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "above 1000",
-                          "payload": "b67_ab1_pyin",
-                        }
-                      ]
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 670 lakhs, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92591960_149017693310697_3011678316890423296_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeHLXhGDIb79vxF8QYyJV052I8KibjVY7yMjwqJuNVjvI_gG7dKIt-lLRrYTFAGvOUi0JfcOwSTaAjn1mthgroN3&_nc_ohc=A-hP-4EluUUAX_JCecN&_nc_ht=scontent.fmdl2-2.fna&oh=220f0279fed18da953714003aa959f3d&oe=5EB443CC",
+            "subtitle":"land type-(permit), face west",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
       }
+    }
   }
-    // other area to buy land in pyinmana
-    else if (payload === 'other_a4_pyin') {
+}
+
+// to buy land in pyinmana,  Other area
+    else if (received_message.payload === 'other_a4_pyintobu') {
     response = {
-                  "text": "So sorry, there are no other lands not avaliable",
-      }
+            {
+            "title":"land, 200 lakhs, 80*70 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92700247_149058239973309_1026465551309864960_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeExfi6lyAGKnuAnGwzsqHIyb0fpY8_QSLBvR-ljz9BIsOBkiot-Xz6n2p0Os7XVh5PIEoLRp9oLcrpco0jAv7p1&_nc_ohc=3LoyEwb524wAX_eRpVY&_nc_ht=scontent.fmdl2-1.fna&oh=ab71d22ef0f26f9af995a94bdfd05633&oe=5EB2A610",
+            "subtitle":"land type-(permit), face south",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
   }
-  */    
-/************************************/
+}
+
+
+
+/******************************************************/
 
 // to buy land in oattra
 else if (received_message.payload === "otthi") {
@@ -6031,7 +6592,178 @@ else if (received_message.payload === "dekthi") {
 /*****************************************************************/
 /*****************************************************************/
 
+// to rent land in Pyinmana
+  else if (received_message.payload === "tepyinlan") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "torentlandpyin46_areab11",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*72",
+                          "payload": "torentlandpyin672_areaaa1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "torentlandpyin68_areacc11",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "Other area",
+                          "payload": "torentlandpyinotherarea_areadd11",
+                        }
+                      ]
+      }
+  }
 
+// to rent land in pyinmana,  40*60
+    else if (received_message.payload === 'torentlandpyin46_areab11') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 1.5 lakhs per month, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92273270_149016386644161_8370090244208328704_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeE52sRpZJEwHgD_qk7BsxhF8lo3ZWHm5gbyWjdlYebmBiXFhZUhkb9HDs_ZhoJzM2YdY7aQoSgc_HMPEWWmA_3v&_nc_ohc=epNjQ8-eoucAX-cBQFS&_nc_ht=scontent.fmdl2-2.fna&oh=02e1971e81f2d0ca73e007597207d5ba&oe=5EB4B1CD",
+            "subtitle":"land type-(grant), face east",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+// to rent land in pyinmana,  60*72
+    else if (received_message.payload === 'torentlandpyin672_areaaa1') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 3 lakhs per month, 60*72 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91944330_149019299977203_418187470824275968_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_eui2=AeGRf4pbtPI2yrR1hioqwmrqUx4Q1W7AGlFTHhDVbsAaUXOwMiR5jVBk-CTXwNfLnUKhzY79QvgkcsFLvNay3Yej&_nc_ohc=ygPsk8r6Fj8AX_w1HYQ&_nc_ht=scontent.fmdl2-1.fna&oh=c53e99898e47b09c73ad6e09ae0e0a76&oe=5EB2BF4A",
+            "subtitle":"land type-(permit), face south",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+// to rent land in pyinmana,  60*80
+    else if (received_message.payload === 'torentlandpyin68_areacc11') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 2.5 lakhs per month, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92591960_149017693310697_3011678316890423296_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeHLXhGDIb79vxF8QYyJV052I8KibjVY7yMjwqJuNVjvI_gG7dKIt-lLRrYTFAGvOUi0JfcOwSTaAjn1mthgroN3&_nc_ohc=A-hP-4EluUUAX_JCecN&_nc_ht=scontent.fmdl2-2.fna&oh=220f0279fed18da953714003aa959f3d&oe=5EB443CC",
+            "subtitle":"land type-(permit), face west",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to rent land in pyinmana,  Other area
+    else if (received_message.payload === 'torentlandpyinotherarea_areadd11') {
+    response = {
+            {
+            "title":"land, 1.5 lakhs per month, 80*70 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92700247_149058239973309_1026465551309864960_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeExfi6lyAGKnuAnGwzsqHIyb0fpY8_QSLBvR-ljz9BIsOBkiot-Xz6n2p0Os7XVh5PIEoLRp9oLcrpco0jAv7p1&_nc_ohc=3LoyEwb524wAX_eRpVY&_nc_ht=scontent.fmdl2-1.fna&oh=ab71d22ef0f26f9af995a94bdfd05633&oe=5EB2A610",
+            "subtitle":"land type-(permit), face south",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+  }
+}
+
+
+
+/******************************************************************/
 
 // to rent land in Pobba
   else if (received_message.payload === "tepobl") {
@@ -6067,7 +6799,7 @@ else if (received_message.payload === "dekthi") {
         "elements": [ 
         
            {
-            "title":"land, 1 lakh, 40*60 ft",
+            "title":"land, 1 lakh per month, 40*60 ft",
             "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92167702_148702773342189_5409825490464669696_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeEti1pLlG7k25OTzKTQf04-pjbk1v9nX8GmNuTW_2dfwXsXNJoQeWmPOxUirjYllEYt5q9uZwa4S3u_0eTZck1A&_nc_ohc=kA-CJJG0XyUAX_ac-M1&_nc_ht=scontent.fmdl2-2.fna&oh=fc0291c46afed146bdc149f655125de9&oe=5EB17576",
             "subtitle":"land type-(grant), face south",
             "default_action": {
@@ -6105,7 +6837,7 @@ else if (received_message.payload === "dekthi") {
         "elements": [ 
         
            {
-            "title":"land, 1.5 lakhs, 60*80 ft",
+            "title":"land, 1.5 lakhs per month, 60*80 ft",
             "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91991273_148704343342032_3054495691972804608_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeH2wVSm5DsCLFesBvl46bpfPyPofjUfO_k_I-h-NR87-RcfEZJ_1P_ZadUUe5CAUmR5z69C4_9FqExGSFAOwEP3&_nc_ohc=_1KKYlteFSUAX_xCSrn&_nc_ht=scontent.fmdl2-2.fna&oh=5613774ed5b34ad38b6ae2dbd3e9b0ad&oe=5EB2F2F3",
             "subtitle":"land type-(grant), face north",
             "default_action": {
@@ -6143,7 +6875,7 @@ else if (received_message.payload === "dekthi") {
         "elements": [ 
         
            {
-            "title":"land, 2.5 lakhs, 80*80 ft",
+            "title":"land, 2.5 lakhs per month, 80*80 ft",
             "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92230031_148704800008653_4090756521791586304_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeEO-jxiti1JQNFThle_S_jni90HSvupMk6L3QdK-6kyTlrw3uARvolzrmtRPvT-L59Z7xSh0ScJrnM0KZ6yt89i&_nc_ohc=9-YiMcFx6PYAX-ioqAm&_nc_ht=scontent.fmdl2-2.fna&oh=6c479c912e372cff68cb16dae0b8a119&oe=5EB2F669",
             "subtitle":"land type-(grant), face east",
             "default_action": {
@@ -6784,6 +7516,475 @@ else if (received_message.payload === "tedekl") {
 
 /****************************************************************************************************************/
 /***************************************************************************************************************/
+
+
+
+  // to rent house in pyinmana,
+  else if (received_message.payload === "tenanpyin" ) {
+    response = {
+                  "text": "Please choose the below option:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "RC",
+                          "payload": "torentrcpyin_teaa1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Other type",
+                          "payload": "torentothertypepyin_tebb1",
+                        }
+                      ]
+
+      }
+  }
+ 
+// to rent house in pyinmana, RC
+  else if (received_message.payload === "torentrcpyin_teaa1" ) {
+    response = {
+                  "text": "Please choose the number of floor:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "one floor",
+                          "payload": "torentonef_pyinfloor11_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "two floor",
+                          "payload": "torenttwoff_pyinfloora11_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Other floor",
+                          "payload": "torentotherf_pyinfloorbb11_tenant",
+                        }
+                      ]
+
+      }
+  }
+ 
+// to rent house in pyinmana, RC, one floor, 
+  else if (received_message.payload === "torentonef_pyinfloor11_tenant") {
+    response = {
+                  "text": "Do you want the house in which Mbr is included or only Br included?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "Mbr",
+                          "payload": "torentpyinrc_onefmbr_hh1_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Only Br",
+                          "payload": "torentpyinrc_onfonlybr_hhaa1_tenant",
+                        }
+                      ]
+      }
+  }
+
+
+// to rent house in pyinmana, RC, one floor, Mbr
+  else if (received_message.payload === "torentpyinrc_onefmbr_hh1_tenant") {
+    response = {
+                  "text": "Please choose the estimated price you wanna spend:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "4 lakhs & below it",
+                          "payload": "torenthourc_onefpyin1_tenantbelow4l",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "above 4 lakhs",
+                          "payload": "torenthourc_onefpyina1_tenantabove4l",
+                        }
+                      ]
+      }
+  }
+
+
+/********************/
+
+// to rent house in pyinmana, RC, one floor, Mbr, 4 lakhs & below it
+  else if (received_message.payload === "torenthourc_onefpyin1_tenantbelow4l") {
+    response = {
+      "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 3.5 lakhs per month, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91664968_149027856643014_3018289688898174976_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeGRHIaeZKMyPNKfOeoww905B5sI3sATrD4HmwjewBOsPpGS3GqeitBU4k6asf5ijfHtiXTjJyQUo9u9DVzydHqd&_nc_ohc=kMOWTJMbEHIAX_qTSw1&_nc_ht=scontent.fmdl2-2.fna&oh=81eaeca5b4bd3145141aaeb803aa522b&oe=5EB1858C",
+            "subtitle":"Mbr-(1), Br-(2), face south",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          },
+          {
+            "title":"RC, 3.5 lakhs per month, 60*72 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92353603_149043869974746_8473619924072267776_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeGgvj4JXTB-BaKlrv6fCWkPD8Wz4sbkNI8PxbPixuQ0j4z4WFsuBeE4rDoXcka8l3DzzgHyop1A6jQY9BeyxOWv&_nc_ohc=UwLfnfMu-QQAX-lKiLp&_nc_ht=scontent.fmdl2-1.fna&oh=7c3a2dc9036f0c70cc5e9cb0eb33e15c&oe=5EB1873A",
+            "subtitle":"Mbr-(1), Br-(2), face east",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+    }
+  }
+
+
+
+// to rent house in pyinmana, RC, one floor, Mbr, above 4 lakhs
+  else if (received_message.payload === "torenthourc_onefpyina1_tenantabove4l") {
+    response = {
+      "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 5 lakhs per month, Width-(60*80)",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92345669_149033143309152_6933827548061106176_n.jpg?_nc_cat=105&_nc_sid=110474&_nc_eui2=AeEI4W8wxQk3tk9YgjJjQ_vGP1pHh5H1KD8_WkeHkfUoPxtx5_-T7IVd-7alAloGuyAZbuYPZOCOJab3je027jsy&_nc_ohc=sBvJQg8bkjYAX9G8Kpp&_nc_ht=scontent.fmdl2-2.fna&oh=382cf06a14c01e693485808b266b26d7&oe=5EB4B0D5",
+            "subtitle":"Mbr-(2), Br-(1), face south",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+    }
+  }
+
+
+/**********************************************/
+
+
+// to rent house in pyinmana, RC, two floor
+  else if (received_message.payload === "torenttwoff_pyinfloora11_tenant") {
+    response = {
+                  "text": "Please choose the estimated price you wanna spend:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "4 lakhs & below it",
+                          "payload": "torenthou_pyinrctwof_below4lmm",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "above 4 lakhs",
+                          "payload": "torenthou_pyinrctwofn_above4ln",
+                        }
+                      ]
+      }
+  }
+
+
+// to rent house in pyinmana, RC, two floor, 4 lakhs & below it
+  else if (received_message.payload === "torenthou_pyinrctwof_below4lmm") {
+    response = {
+      "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"2RC, 3.5 lakhs per month, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91909041_149045459974587_3734464206922055680_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeFU2LcrrLbR-1h9foxAhqdQB74mqwENAW0HviarAQ0BbSVC1u_Z_umhu8d7qGBi4uix6EwDxD8Fe-cH_uN1RPuC&_nc_ohc=puXGjPNCVz4AX8fgEfL&_nc_ht=scontent.fmdl2-1.fna&oh=ea5563303495ed0876589d4e0ae7a747&oe=5EB36069",
+            "subtitle":"Mbr-(4), face north",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+    }
+  }
+
+// to rent house in pyinmana, RC, two floor, above 4 lakhs
+  else if (received_message.payload === "torenthou_pyinrctwofn_above4ln") {
+    response = {
+      "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"2RC, 5 lakhs per month, 60*72 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91663260_149049396640860_3878909622148399104_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeGHkGRYDmdeavjzqEgTafF6vGtLT4QsOYC8a0tPhCw5gGfUGkXLqAvDbcmS2kynpkc427C_nqwWJyVMHf6lzNw7&_nc_ohc=aXbSPOJrDXwAX_7A_Ij&_nc_ht=scontent.fmdl2-2.fna&oh=d5558fa54bef9dc6a18a5cde99b328df&oe=5EB32EB3",
+            "subtitle":"Mbr-(2), Br-(1), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          },
+
+          {
+            "title":"2RC, 10 lakhs per month, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91647057_149048646640935_1634770849003208704_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_eui2=AeF5T-k7A2rpdAenpQX7rnQypSsvlvO9AJ2lKy-W870AneezH0bEyn8dFfPyyEkjsM0EKd0vLicVlYL82SSzmRXI&_nc_ohc=vKqTcuhKlTkAX-qAIiB&_nc_ht=scontent.fmdl2-1.fna&oh=759375e2414be0c936669dd1904a9f24&oe=5EB2C4F0",
+            "subtitle":"Mbr-(4), Br-(2), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+    }
+  }
+
+
+
+
+/*********************************************/
+
+
+// to rent house in pyinmana, RC, one floor, only br
+  else if (received_message.payload === "") {
+    response = {
+                  "text": "Please choose the estimated price you wanna spend:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "3 lakhs & below it",
+                          "payload": "torenthourc_onefpyin1_onlybr3lakhs",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "above 3 lakhs",
+                          "payload": "torenthourca_onefpyin1_onlbrabove3l",
+                        }
+                      ]
+      }
+  }
+
+
+// to rent house in pyinmana, RC, one floor, only Br, 3 lakhs & below it
+  else if (received_message.payload === "torenthourc_onefpyin1_onlybr3lakhs") {
+    response = {
+      "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"RC, 2.5 lakhs per month, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/93006985_149029053309561_9111199899243773952_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeGN4AW6ko1xllvDTB1lMk_-xqdjdqz30iXGp2N2rPfSJcztXgS9CVS0gWOyOv6fpA6qL1F9oxqB8ExhpUyLK8Tj&_nc_ohc=98DZRtLQ7vgAX_QO6g-&_nc_ht=scontent.fmdl2-1.fna&oh=6f4d97ea113ef2ffc55e193a5b05eacb&oe=5EB13839",
+            "subtitle":"Br-(2), face north",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+    }
+  }
+
+// to rent house in pyinmana, RC, one floor, only Br, above 3 lakhs
+  else if (received_message.payload === "torenthourca_onefpyin1_onlbrabove3l") {
+    response = {
+              "text":"There is no property avaliable. Sorry for you. Thanks for contacting us."
+    }
+  }
+
+/**************/
+
+
+  // to rent house in pyinmana, other type (RC)
+  else if (received_message.payload === "torentothertypepyin_tebb1") {
+    response = {
+      "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"Hta yan, 1.5 lakhs per month, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91623696_149051576640642_6569864859687583744_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeEi8PLXTZ7dbcj0r4LuXMSKGzY8vi0XI_wbNjy-LRcj_J-l8rj7nrr5RKGDKhXzF0bfZMCYV62C31nmSRcYYpAG&_nc_ohc=9vhkrWERlZ4AX-boxAQ&_nc_ht=scontent.fmdl2-1.fna&oh=dc6ab30e9ee13b2d3e7e37f6fbbbef72&oe=5EB4F884",
+            "subtitle":"face south",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+    }
+  }
+
+/**********************/
+
+
+// to rent house in pyinmana, RC, other floor
+  else if (received_message.payload === "torentotherf_pyinfloorbb11_tenant") {
+    response = {
+      "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"3RC, 9 lakhs per month, 80*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92246313_149054849973648_703440635775942656_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_eui2=AeGQUfxVnvZWijR4b8rEp1d3jNzI0_OEBaKM3MjT84QFopl4xHDm84RGqQl8E9qT_OpLskADmC5FYTxR1IVWWySf&_nc_ohc=PEniN76E7_gAX87FiHI&_nc_ht=scontent.fmdl2-1.fna&oh=51c68a01e618292c014e23cf4975744e&oe=5EB2E05D",
+            "subtitle":"Mbr-(3), Br-(2), face east",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaae"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+    }
+  }
+
+
+
+/********************************************************************/
 
 
   // to rent house in oattra, RC (there is no other type in oattra)
