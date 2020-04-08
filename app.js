@@ -10675,7 +10675,7 @@ function handlePostback(sender_psid, received_postback) {
               }
   }
     // to buy house in pyinmana,
-  else if (received_message.payload === "pyintwp" ) {
+  else if (payload === "pyintwp" ) {
     response = {
                   "text": "Please choose the below option:",
                     "quick_replies": [
