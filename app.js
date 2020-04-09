@@ -123,6 +123,26 @@ let userEntered_yes_torenthou = {};
 
 
 
+// to buy land told by user
+let tobuyland_told = {
+  land_yes1_byuser:false,
+  leave_contactno_land:false,
+}
+let userEntered_yes_tobuyland = {};
+
+
+// to rent land told by user
+
+let torentland_told = {
+  land_yesyes_byuser:false,
+  leave_phno_land1:false,
+}
+let userEntered_yes1_torentland = {};
+
+
+
+
+
 /**********************************************************************/
 
 
@@ -1917,8 +1937,93 @@ function handleMessage(sender_psid, received_message) {
 
 
 
-/********************************************************************************************/
-/*********************************************************************************************/
+/*************************************************************************/
+/*************************************************************************/
+
+
+
+
+// to buy land in every
+   else if (received_message.payload === "tobuyland1_tellbyuser_yes1a") { 
+    response = {
+              "text": "OK, Tell me."
+    }
+     received_message.payload = false;
+     tobuyland_told.land_yes1_byuser = true;
+  }
+
+  else if (received_message.text &&  tobuyland_told.land_yes1_byuser === true) {
+    userEntered_yes_tobuyland.land_yes1_byuser = received_message.text;
+    response = {
+       "text": "Please leave your contact number. We will contact you later."
+                  
+    }
+    tobuyland_told.land_yes1_byuser = false;
+    tobuyland_told.leave_contactno_land = true;
+  }
+    else if (received_message.text &&  tobuyland_told.leave_contactno_land === true) {
+    userEntered_yes_tobuyland.leave_contactno_land = received_message.text;
+    response = {
+       "text": "Thanks for contacting us. Have a nice day!"
+                  
+    }
+    tobuyland_told.leave_contactno_land = false;  
+  }
+
+// user say no 
+  else if (received_message.payload === "tobuyland2_tellbyuser_noo2bc") { 
+    response = {
+      "text": "Please leave your contact number. We will contact you later."
+    }
+  tobuyland_told.leave_contactno_land = true;
+  }
+
+/********************************************************************/
+
+
+
+// to rent land in every
+   else if (received_message.payload === "torentland1_tellbyuser_tellyes1") { 
+    response = {
+              "text": "OK, Tell me."
+    }
+     received_message.payload = false;
+     torentland_told.land_yesyes_byuser = true;
+  }
+
+  else if (received_message.text &&  torentland_told.land_yesyes_byuser === true) {
+    userEntered_yes1_torentland.land_yesyes_byuser = received_message.text;
+    response = {
+       "text": "Please leave your contact number. We will contact you later."
+                  
+    }
+    torentland_told.land_yesyes_byuser = false;
+    torentland_told.leave_phno_land1 = true;
+  }
+    else if (received_message.text &&  torentland_told.leave_phno_land1 === true) {
+    userEntered_yes1_torentland.leave_phno_land1 = received_message.text;
+    response = {
+       "text": "Thanks for contacting us. Have a nice day!"
+                  
+    }
+    torentland_told.leave_phno_land1 = false;  
+  }
+
+// user say no 
+  else if (received_message.payload === "torentland2_tellbyuser_tellnooo1ab") { 
+    response = {
+      "text": "Please leave your contact number. We will contact you later."
+    }
+  torentland_told.leave_phno_land1 = true;
+  }
+
+
+
+
+
+/*************************************************************************************************************/
+/*************************************************************************************************************/
+/*************************************************************************************************************/
  
 // to buy house in pyinmana, RC
   else if (received_message.payload === "tobuyrcpyin_aa1" ) {
@@ -10512,6 +10617,8 @@ function handlePostback(sender_psid, received_postback) {
       }
   }
 
+
+
 // to buy house in every
  else if (payload === "aaabbb11m_tobuya") {
          response = {
@@ -10544,6 +10651,42 @@ function handlePostback(sender_psid, received_postback) {
                           "content_type": "text",
                           "title": "No",
                           "payload": "torenthouse_toldbyuser_nooo11abcd",
+                        }
+                      ]
+  }
+}
+// to buy land in every
+ else if (payload === "tobuylandall_aabb1") {
+         response = {
+                  "text": "Do you wanna talk about the property or something else?",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Yes",
+                          "payload": "tobuyland1_tellbyuser_yes1a", 
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "No",
+                          "payload": "tobuyland2_tellbyuser_noo2bc",
+                        }
+                      ]
+  }
+}
+// to rent land in every
+ else if (payload === "torentlandall_aabb1") {
+         response = {
+                  "text": "Do you wanna talk about the property or something else?",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Yes",
+                          "payload": "torentland1_tellbyuser_tellyes1", 
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "No",
+                          "payload": "torentland2_tellbyuser_tellnooo1ab",
                         }
                       ]
   }
