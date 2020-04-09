@@ -1861,7 +1861,7 @@ function handleMessage(sender_psid, received_message) {
 // to buy house in every
    else if (received_message.payload === "tobuyhouse_tellbyuser_yes1a") { 
     response = {
-              "text": "OK, Tell me."
+              "text": "Ok, please tell me."
     }
      received_message.payload = false;
      tobuyhouse_told.yes_yes_user = true;
@@ -1902,7 +1902,7 @@ function handleMessage(sender_psid, received_message) {
 // to rent house in every
    else if (received_message.payload === "torenthouse_toldbyuser_yes11abc") { 
     response = {
-              "text": "OK, Tell me."
+              "text": "Ok, please tell me."
     }
      received_message.payload = false;
      torenthouse_told.yes1_by_user = true;
@@ -1946,7 +1946,7 @@ function handleMessage(sender_psid, received_message) {
 // to buy land in every
    else if (received_message.payload === "tobuyland1_tellbyuser_yes1a") { 
     response = {
-              "text": "OK, Tell me."
+              "text": "Ok, please tell me."
     }
      received_message.payload = false;
      tobuyland_told.land_yes1_byuser = true;
@@ -1985,7 +1985,7 @@ function handleMessage(sender_psid, received_message) {
 // to rent land in every
    else if (received_message.payload === "torentland1_tellbyuser_tellyes1") { 
     response = {
-              "text": "OK, Tell me."
+              "text": "Ok, please tell me."
     }
      received_message.payload = false;
      torentland_told.land_yesyes_byuser = true;
