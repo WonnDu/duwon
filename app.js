@@ -10613,7 +10613,7 @@ function handlePostback(sender_psid, received_postback) {
   }
 
 // to rent land in Pyinmana
-  else if (received_message.payload === "tepyinlan") {
+  else if (payload === "tepyinlan") {
     response = {
                   "text": "Do you want what area?",
                     "quick_replies": [
