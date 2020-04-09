@@ -1850,9 +1850,10 @@ function handleMessage(sender_psid, received_message) {
                         }
                       ]
   }
+}
    else if (received_message.payload === "tobuyhouse_tellbyuser_yes1a") { 
     response = {
-      "text": "OK, Tell me."
+              "text": "OK, Tell me."
     }
      received_message.payload = false;
      tobuyhouse_told.yes_yes_user = true;
