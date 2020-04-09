@@ -11345,7 +11345,7 @@ else if (payload === 'innnter') {
       }
   }
   // to sell land in pyinmana
- else if (received_message.payload === "toselpyinlan") {
+ else if (payload === "toselpyinlan") {
          response = {
       "text":'Please tell the area of land that you want to sell.'
     }
