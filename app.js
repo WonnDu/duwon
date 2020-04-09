@@ -1045,7 +1045,7 @@ function handleMessage(sender_psid, received_message) {
 
       }
     }
-
+/*
     else if (received_message.payload === "3rd_fft1") {    
     let response1 = {
       "text": "You told us that you will transfer from Dekkhina Thiri Township to Ottara Thiri Township"};
@@ -1056,7 +1056,7 @@ function handleMessage(sender_psid, received_message) {
     return callSend(sender_psid, response2);
     });
     }
-
+*/
     else if (received_message.payload === "3rd_fft2") {    
     let response1 = {
       "text": "You told us that you will transfer from Dekkhina Thiri Township to Pobba Thiri Township"};
