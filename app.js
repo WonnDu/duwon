@@ -1918,7 +1918,7 @@ function handleMessage(sender_psid, received_message) {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -1956,7 +1956,7 @@ function handleMessage(sender_psid, received_message) {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -1994,7 +1994,7 @@ function handleMessage(sender_psid, received_message) {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -2073,7 +2073,7 @@ function handleMessage(sender_psid, received_message) {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -2111,7 +2111,7 @@ function handleMessage(sender_psid, received_message) {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -2149,7 +2149,7 @@ function handleMessage(sender_psid, received_message) {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -2196,7 +2196,7 @@ function handleMessage(sender_psid, received_message) {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -2239,7 +2239,7 @@ function handleMessage(sender_psid, received_message) {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -2279,7 +2279,7 @@ function handleMessage(sender_psid, received_message) {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -2372,7 +2372,7 @@ function handleMessage(sender_psid, received_message) {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -2410,7 +2410,7 @@ function handleMessage(sender_psid, received_message) {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -2448,7 +2448,7 @@ function handleMessage(sender_psid, received_message) {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -2514,7 +2514,7 @@ function handleMessage(sender_psid, received_message) {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -2552,7 +2552,7 @@ function handleMessage(sender_psid, received_message) {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -2590,7 +2590,7 @@ function handleMessage(sender_psid, received_message) {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -2728,7 +2728,7 @@ else if (received_message.payload === "potwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -2766,7 +2766,7 @@ else if (received_message.payload === "potwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -2804,7 +2804,7 @@ else if (received_message.payload === "potwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -2866,7 +2866,7 @@ else if (received_message.payload === "potwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -2904,7 +2904,7 @@ else if (received_message.payload === "potwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -2943,7 +2943,7 @@ else if (received_message.payload === "potwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -2989,7 +2989,7 @@ else if (received_message.payload === "potwp") {
         "elements": [ 
         
                     {
-            "title":"RC, 2500 lakhs, 40*60 ft",
+            "title":"2RC, 2500 lakhs, 40*60 ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91606159_148757690003364_6476717670556237824_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeEwaNaIO6IktYPhZerxMcm7Qew2jPuaaEFB7DaM-5poQZvYiKqWGrH_lW38GzC0sEa2ozlem0muIfNfovwajN7B&_nc_ohc=xmULYHKmuWMAX8mWmY6&_nc_ht=scontent.fmdl2-1.fna&oh=896dcfb6903ac4aa391c915c34f871fc&oe=5EB37841",
             "subtitle":"MBr-(2), Br-(2), land type-(grant), face south, Negotiable",
             "default_action": {
@@ -3006,7 +3006,7 @@ else if (received_message.payload === "potwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -3027,7 +3027,7 @@ else if (received_message.payload === "potwp") {
         "elements": [ 
         
                     {
-            "title":"RC, 900 lakhs, 60*80 ft",
+            "title":"2RC, 900 lakhs, 60*80 ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92517086_148751140004019_3914064358962888704_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeFoOvq0bRFW0r7Srwl3N0U6qLmh0okITviouaHSiQhO-AqAdJfPRZtbQ8jrzolCH2ITGEZeyM794Swu5gSj8kTf&_nc_ohc=PxwqZF2pwtAAX-4aXYH&_nc_ht=scontent.fmdl2-1.fna&oh=1754795b4c5cdf6738bdbfe5f46ea909&oe=5EB0B753",
             "subtitle":"MBr-(2), Br-(2), land type-(grant), face south, Negotiable",
             "default_action": {
@@ -3044,7 +3044,7 @@ else if (received_message.payload === "potwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -3066,7 +3066,7 @@ else if (received_message.payload === "potwp") {
         "elements": [ 
         
                     {
-            "title":"RC, 3500 lakhs, 80*80 ft",
+            "title":"2RC, 3500 lakhs, 80*80 ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92463513_148754363337030_6063595422167859200_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_eui2=AeGEiOz1OhNnDp1HZmVLX-bLmqWuDQ1bDISapa4NDVsMhDw_xJfVd9Nb2PC9a3eG6ILKw0MuXJZGWA5_etoz-7jX&_nc_ohc=kMH-IN34uOYAX9JHqYO&_nc_ht=scontent.fmdl2-1.fna&oh=85e1416c08e94c83e9ef5265320950a4&oe=5EB30201",
             "subtitle":"MBr-(3), Br-(2), land type-(grant), face east, Negotiable",
             "default_action": {
@@ -3083,7 +3083,7 @@ else if (received_message.payload === "potwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -3122,7 +3122,7 @@ else if (received_message.payload === "potwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -3265,7 +3265,7 @@ else if (received_message.payload === "dektwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -3302,7 +3302,7 @@ else if (received_message.payload === "dektwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -3339,7 +3339,7 @@ else if (received_message.payload === "dektwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -3376,7 +3376,7 @@ else if (received_message.payload === "dektwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -3413,7 +3413,7 @@ else if (received_message.payload === "dektwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -3476,7 +3476,7 @@ else if (received_message.payload === "dektwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -3513,7 +3513,7 @@ else if (received_message.payload === "dektwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -3572,7 +3572,7 @@ else if (received_message.payload === "dektwp") {
         "elements": [ 
         
            {
-            "title":"RC, 1700 lakhs, 40*60 ft",
+            "title":"2RC, 1700 lakhs, 40*60 ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91876881_148667190012414_7394498520390041600_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeGuaoOd56cUfdGwui3Ch4l4sGU0IifrOl-wZTQiJ-s6Xx6MMoJkF3xvnBphVS2O_U5GlCuBHhd6H4S77b8PfSgq&_nc_ohc=6hUnCzBbpckAX9MCIC8&_nc_ht=scontent.fmdl2-1.fna&oh=ed5bd3759a0b22350acdc37a52866feb&oe=5EB18D68",
             "subtitle":"Mbr-(2), Br-(2), land type-(grant), face south, Negotiable",
             "default_action": {
@@ -3589,7 +3589,7 @@ else if (received_message.payload === "dektwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -3611,7 +3611,7 @@ else if (received_message.payload === "dektwp") {
         "elements": [ 
         
            {
-            "title":"RC, 1900 lakhs, 60*60 ft",
+            "title":"2RC, 1900 lakhs, 60*60 ft",
             "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92583214_148663500012783_7353603237661900800_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeHLhaQy-lNjPoEct3xlK1U_GQY1Il0R_owZBjUiXRH-jIH7BrAfWbr-OQxrwCm-m6rKV9woFTMb-Nx0A-tXFq_t&_nc_ohc=sNpw-oCNFF4AX-hmd3q&_nc_ht=scontent.fmdl2-2.fna&oh=e726b585836f6d217c86d4ceeb13f5c2&oe=5EB109E4",
             "subtitle":"Mbr-(2), Br-(3), land type-(grant), face south, Negotiable",
             "default_action": {
@@ -3628,7 +3628,7 @@ else if (received_message.payload === "dektwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -3649,7 +3649,7 @@ else if (received_message.payload === "dektwp") {
         "elements": [ 
         
            {
-            "title":"RC, 2000 lakhs, 60*80 ft",
+            "title":"2RC, 2000 lakhs, 60*80 ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92244656_148661983346268_5412490990118240256_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeH7i1rOMS8eeDRAo6chNPk97R3saB8e7SztHexoHx7tLI80FOYBR4_5sP3UzCEmtsrIlOqG-g2UNFogclACx-h9&_nc_ohc=xGmu-HV_qU8AX-rAPLo&_nc_ht=scontent.fmdl2-1.fna&oh=7bb92d21c48c88bd788564994049ddd6&oe=5EB0B3E1",
             "subtitle":"Mbr-(3), Br-(1), land type-(grant), face west, Negotiable",
             "default_action": {
@@ -3666,7 +3666,7 @@ else if (received_message.payload === "dektwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -3687,7 +3687,7 @@ else if (received_message.payload === "dektwp") {
         "elements": [ 
         
            {
-            "title":"RC, 3500 lakhs, 80*80 ft",
+            "title":"2RC, 3500 lakhs, 80*80 ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92460697_148661310013002_7562140512816201728_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeGXPnWOsVIgxd191EVtq4QzAAmWNiurfdoACZY2K6t92sSwRjyS9-R7_Sb-5Pej0m04acQDvIDQ4SXSMQ0YxOoB&_nc_ohc=TuJg6KwfDIIAX867j8B&_nc_ht=scontent.fmdl2-1.fna&oh=0328354a18069d7a3a12fae8761f31b4&oe=5EB14705",
             "subtitle":"Mbr-(2), Br-(2), land type-(grant), face south, Negotiable",
             "default_action": {
@@ -3704,7 +3704,7 @@ else if (received_message.payload === "dektwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -3724,7 +3724,7 @@ else if (received_message.payload === "dektwp") {
         "elements": [ 
         
            {
-            "title":"RC, 5500 lakhs, 100*100 ft",
+            "title":"2RC, 5500 lakhs, 100*100 ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92177551_148650480014085_8591158172348055552_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_eui2=AeEMxLJE8yJWn12cjnsZ24IAXxiYUvJTRvdfGJhS8lNG9wGyTfx-GESmgXjRIL0gaQ64hSEgq1Hvx0in9dOMwglQ&_nc_ohc=x_SJl0kcdecAX-C0w-b&_nc_ht=scontent.fmdl2-1.fna&oh=e6d5a9d5b8271703d4c3c7177ca94266&oe=5EB33173",
             "subtitle":"Mbr-(5), land type-(grant), face east, Negotiable",
             "default_action": {
@@ -3741,7 +3741,7 @@ else if (received_message.payload === "dektwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -3764,7 +3764,7 @@ else if (received_message.payload === "dektwp") {
         "elements": [ 
         
            {
-            "title":"RC, 6500 lakhs, 50*75 ft",
+            "title":"3RC, 6500 lakhs, 50*75 ft",
             "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92667938_148681606677639_6253805066847780864_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeHNyDhSx0ovFtr7eWjPt3Raef0VwMYXhKh5_RXAxheEqDq_SNyzVRhmHguVKNiCzwNpYkdEkenidgHtp7xL2PtM&_nc_ohc=V5MmGn_sMAgAX8_t0wI&_nc_ht=scontent.fmdl2-2.fna&oh=d746a503f668daddb4760473f684da45&oe=5EB3D5D6",
             "subtitle":"Mbr-(3), land type-(grant), face south, Negotiable",
             "default_action": {
@@ -3781,7 +3781,7 @@ else if (received_message.payload === "dektwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -3822,7 +3822,7 @@ else if (received_message.payload === "dektwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -3857,7 +3857,7 @@ else if (received_message.payload === "zaytwp") {
 
       }
   }
-  // to buy house, RC, in Zayathiri 
+  // to buy house in zayathi, RC, 
   else if (received_message.payload === "rc_zaya1") {
     response = {
                   "text": "Please choose the number of floor:",
@@ -3886,7 +3886,7 @@ else if (received_message.payload === "zaytwp") {
   /**********************/
 
 
-  // to buy house, RC, two floor, in Zayathiri 
+  // to buy house in zayathi, RC, two floor, 
   else if (received_message.payload === "twof_zayathi") {
     response = {
                   "text": "Please choose the land area of house you want to buy:",
@@ -3910,7 +3910,7 @@ else if (received_message.payload === "zaytwp") {
 
       }
   }
-    // to buy zayathiri, RC, two floor, 60*80
+    // to buy house in zayathiri, RC, two floor, 60*80
     else if (received_message.payload === 'twofloor_landarea68a2_tobuyt_zaya') {
     response = {
                 "text": "There is no property avaliable. Sorry for you. Thanks for contacting us."
@@ -3918,7 +3918,7 @@ else if (received_message.payload === "zaytwp") {
 }
 
 
-    // to buy zayathiri, RC, two floor, 40*60
+    // to buy house in zayathiri, RC, two floor, 40*60
     else if (received_message.payload === 'twofloor_landarea46_tobuyt_zaya') {
     response = {
     "attachment":{
@@ -3928,7 +3928,7 @@ else if (received_message.payload === "zaytwp") {
         "elements": [ 
         
            {
-            "title":"RC, 1550 lakhs, 40*60 ft",
+            "title":"2RC, 1550 lakhs, 40*60 ft",
             "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92350854_148331046712695_1514855722876141568_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeG5ZcuXasEyLdDk5VORz6R7_wo-WeJtVEP_Cj5Z4m1UQ_fjxjYC9t60tCuxT33zIGTj0s3iAKlYy1cCYkZEEZ1V&_nc_ohc=VC0_cyIzoxYAX9X3E3n&_nc_ht=scontent.fmdl2-2.fna&oh=4fe0ab1656140cb226395cf14854b060&oe=5EB180E7",
             "subtitle":"Mbr-(2), Br-(2), land type-(grant),face east and north",
             "default_action": {
@@ -3945,7 +3945,7 @@ else if (received_message.payload === "zaytwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -3956,7 +3956,7 @@ else if (received_message.payload === "zaytwp") {
   }
 }
 
-  // to buy zayathiri, RC, two floor, other area
+  // to buy house in zayathiri, RC, two floor, other area
     else if (received_message.payload === 'twofloor_landareaotherab11_tobuyt_zaya') {
     response = {
     "attachment":{
@@ -3966,7 +3966,7 @@ else if (received_message.payload === "zaytwp") {
         "elements": [ 
         
            {
-            "title":"RC, 1500 lakhs, 70*60 ft",
+            "title":"2RC, 1500 lakhs, 70*60 ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91684696_148082903404176_4744287077787500544_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_eui2=AeGJrrl3pJoyH7bJsFh_A2zSY8El8xmJIX9jwSXzGYkhf7StKf4IQhKXk80QagK5ApXmLNQKOrd8a6bfq2o88g1g&_nc_ohc=h0vQlFNpx4MAX-hpFps&_nc_ht=scontent.fmdl2-1.fna&oh=600219d816e675e680fce055e0fc99b8&oe=5EB0DB11",
             "subtitle":"Mbr-(2), Br-(3), land type-(slit),face east",
             "default_action": {
@@ -3983,7 +3983,7 @@ else if (received_message.payload === "zaytwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           },
@@ -4005,7 +4005,7 @@ else if (received_message.payload === "zaytwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -4024,7 +4024,7 @@ else if (received_message.payload === "zaytwp") {
 
 
 
-  // to buy house, RC, one floor, in zayathiri
+  // to buy house in zayathi, RC, one floor,
   else if (received_message.payload === "onef_zayathi") {
     response = {
                   "text": "Do you want the house in which Mbr included or only Br included?",
@@ -4043,7 +4043,7 @@ else if (received_message.payload === "zaytwp") {
       }
   }
   /************/
- // to buy zayathiri, house, RC, one floor, master bed, area
+ // to buy house in zayathiri, house, RC, one floor, master bed, area
   else if (received_message.payload === "onef_mb_zayathi") {
     response = {
                   "text": "Do you want what area?",
@@ -4067,7 +4067,7 @@ else if (received_message.payload === "zaytwp") {
       }
   }
  
-  // to buy zayathiri, Other Type
+  // to buy house in zayathiri, Other Type (not RC)
     else if (received_message.payload === 'nancat_zaya1') {
     response = {
     "attachment":{
@@ -4094,7 +4094,7 @@ else if (received_message.payload === "zaytwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -4108,7 +4108,7 @@ else if (received_message.payload === "zaytwp") {
 
 
 
-  // to buy , one floor(RC), in Zayarthiri, master bed room , 40* 60
+  // to buy house in zayathi, RC, one floor,  master bed room , 40* 60
     else if (received_message.payload === 'onlymbed60_zayathi') {
     response = {
     "attachment":{
@@ -4135,7 +4135,7 @@ else if (received_message.payload === "zaytwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -4146,7 +4146,7 @@ else if (received_message.payload === "zaytwp") {
   }
 }
 
- // to buy , one floor(RC), in Zayarthiri, master bed room , 60*80
+ // to buy house in zayathi, RC, one floor, master bed room , 60*80
     else if (received_message.payload === 'onlymbed100_zayathi') {
     response = {
     "attachment":{
@@ -4173,7 +4173,7 @@ else if (received_message.payload === "zaytwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -4183,7 +4183,7 @@ else if (received_message.payload === "zaytwp") {
     }
   }
 }
- // to buy , one floor(RC), in Zayarthiri, master bed room , other area
+ // to buy house in zayathi, RC, one floor, master bed room , other area
     else if (received_message.payload === 'onlyother_zayathi') {
     response = {
                 "text": "There is no property avaliable. Sorry for you. Thanks for contacting us."
@@ -4193,7 +4193,7 @@ else if (received_message.payload === "zaytwp") {
   /***************************/
 
  
- // to buy one floor(RC), only bed rooms , in Zayathiri for area
+ // to buy house in zayathi, RC, one floor, only bed rooms , for area
   else if (received_message.payload === "onef_bed_zayathi") {
     response = {
                   "text": "Do you want how much wide land area of house?",
@@ -4222,7 +4222,7 @@ else if (received_message.payload === "zaytwp") {
       }
   }
 
-  // to buy , one floor(RC), in Zayarthiri, bed room, 40* 60
+  // to buy house in zayathi, RC, one floor, bed room, 40* 60
     else if (received_message.payload === 'bedaacc1_bedroom_i46n_zaya') {
     response = {
     "attachment":{
@@ -4249,7 +4249,7 @@ else if (received_message.payload === "zaytwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -4262,7 +4262,7 @@ else if (received_message.payload === "zaytwp") {
 
 
 
-   // to buy , one floor(RC), in Zayarthiri, bed room, 60* 60
+   // to buy house in zayathi, RC, one floor, bed room, 60* 60
     else if (received_message.payload === 'bedroom88_in_zayathi2') {
     response = {
     "attachment":{
@@ -4289,7 +4289,7 @@ else if (received_message.payload === "zaytwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -4300,7 +4300,7 @@ else if (received_message.payload === "zaytwp") {
   }
 }
 
-   // to buy , one floor(RC), in Zayarthiri, bed room, 60*80
+   // to buy house in zayathi, Rc, one floor, bed room, 60*80
     else if (received_message.payload === 'wht100_mbedroom_in_zaya') {
     response = {
     "attachment":{
@@ -4327,7 +4327,7 @@ else if (received_message.payload === "zaytwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -4337,7 +4337,7 @@ else if (received_message.payload === "zaytwp") {
     }
   }
 }
-  // to buy , one floor(RC), in Zayarthiri, bed room, other area
+  // to buy house in zayathi, Rc, one floor, bed room, other area
     else if (received_message.payload === 'onlybedother_zayathi11') {
     response = {
     "attachment":{
@@ -4364,7 +4364,7 @@ else if (received_message.payload === "zaytwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -4397,7 +4397,7 @@ else if (received_message.payload === "tenanzay") {
 
       }
   }
-  // to rent house, RC, floor, in Zayathiri 
+  // to rent house in zayathi, RC, floor, 
   else if (received_message.payload === "rc_onef_rzayathi1_tenant") {
     response = {
                   "text": "Please choose the number of floor:",
@@ -4421,7 +4421,7 @@ else if (received_message.payload === "tenanzay") {
 
       }
   }
-  // to rent zayathiri, RC, other floor
+  // to rent house in zayathi, RC, other floor
     else if (received_message.payload === 'otherfloor_abcd1122_rzayathi1_tenant') {
     response = {
                 "text": "There is no house avaliable. Sorry for you. Thanks for contacting us."
@@ -4432,7 +4432,7 @@ else if (received_message.payload === "tenanzay") {
 
   
 
-  // to rent house, RC, two floor, in Zayathiri 
+  // to rent house in zayathi, RC, two floor, 
   else if (received_message.payload === "twofloor_abcd1122_rzayathi1_tenant") {
     response = {
                   "text": "Please choose the estimated price you want to use",
@@ -4452,7 +4452,7 @@ else if (received_message.payload === "tenanzay") {
       }
   }
 
-  // to rent zayathiri, RC, two floor, 3 lakhs & below it
+  // to rent house in zayathiri, RC, two floor, 3 lakhs & below it
     else if (received_message.payload === 'twofloor_below3and3_rzayathi1_tenant') {
     response = {
     "attachment":{
@@ -4462,7 +4462,7 @@ else if (received_message.payload === "tenanzay") {
         "elements": [ 
         
            {
-            "title":"RC, 3 lakhs per a month, 70*60 ft",
+            "title":"2RC, 3 lakhs per a month, 70*60 ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91684696_148082903404176_4744287077787500544_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_eui2=AeGJrrl3pJoyH7bJsFh_A2zSY8El8xmJIX9jwSXzGYkhf7StKf4IQhKXk80QagK5ApXmLNQKOrd8a6bfq2o88g1g&_nc_ohc=h0vQlFNpx4MAX-hpFps&_nc_ht=scontent.fmdl2-1.fna&oh=600219d816e675e680fce055e0fc99b8&oe=5EB0DB11",
             "subtitle":"Mbr-(2), Br-(3), aircon-(3),face east",
             "default_action": {
@@ -4479,7 +4479,7 @@ else if (received_message.payload === "tenanzay") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -4489,7 +4489,7 @@ else if (received_message.payload === "tenanzay") {
     }
   }
 }
-// to rent zayathiri, RC, two floor, above 3 lakhs
+// to rent house in zayathiri, RC, two floor, above 3 lakhs
     else if (received_message.payload === 'otherfloor_above3lakhs_rzayathi1_tenant') {
     response = {
     "attachment":{
@@ -4499,7 +4499,7 @@ else if (received_message.payload === "tenanzay") {
         "elements": [ 
         
             {
-            "title":"RC, 5 lakhs per month, 60*90 ft",
+            "title":"2RC, 5 lakhs per month, 60*90 ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91399493_148081813404285_4132688193013153792_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeE42tNkW6IjD7xuSoc4pKcvu3wVLCYN8EW7fBUsJg3wRa9MvNC92sgpU97iz6gK3h3Pp72U_YCXpYvUeiB9ljU4&_nc_ohc=WeoFtmSfSEUAX8s5Yxz&_nc_ht=scontent.fmdl2-1.fna&oh=6a03ed097e52a57a7f64df976ecb4a4b&oe=5EAE99A3",
             "subtitle":"Mbr-(4), Br-(1), face east",
             "default_action": {
@@ -4516,7 +4516,7 @@ else if (received_message.payload === "tenanzay") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           },
@@ -4538,7 +4538,7 @@ else if (received_message.payload === "tenanzay") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -4554,7 +4554,7 @@ else if (received_message.payload === "tenanzay") {
 
 
 
-  // to rent house, RC, one floor, types of room, in zayathiri
+  // to rent house in zayathi, RC, one floor, types of room,
   else if (received_message.payload === "onefloor_abcd1122_rzayathi1_tenant") {
     response = {
                   "text": "Do you want the house in which Mbr included or only Br included?",
@@ -4573,7 +4573,7 @@ else if (received_message.payload === "tenanzay") {
       }
   }
   /************/
- // to rent zayathiri, house, RC, one floor, master bed
+ // to rent house in zayathiri, RC, one floor, master bed
   else if (received_message.payload === "bed3below_onef_rzayathi1_tenant") {
     response = {
                   "text": "Do you want what area?",
@@ -4592,7 +4592,7 @@ else if (received_message.payload === "tenanzay") {
       }
   }
  
-  // to rent zayathiri, Other Type
+  // to rent house in zayathiri, Other Type (not RC)
     else if (received_message.payload === 'othertype_abc77_rzayathi1_tenant') {
     response = {
     "attachment":{
@@ -4619,7 +4619,7 @@ else if (received_message.payload === "tenanzay") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -4633,7 +4633,7 @@ else if (received_message.payload === "tenanzay") {
 
 
 
-  // to rent , one floor(RC), in Zayarthiri, master bed room , 3 lakhs & below it
+  // to rent house in zayathi, RC, one floor, master bed room , 3 lakhs & below it
     else if (received_message.payload === 'onlymbed60_zayathi_tenantaabbdd11') {
     response = {
     "attachment":{
@@ -4660,7 +4660,7 @@ else if (received_message.payload === "tenanzay") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           },
@@ -4682,7 +4682,7 @@ else if (received_message.payload === "tenanzay") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -4694,7 +4694,7 @@ else if (received_message.payload === "tenanzay") {
 }
 
 
- // to rent , one floor(RC), in Zayarthiri, master bed room , above 3 lakhs
+ // to rent house in zayathi, RC, one floor, master bed room , above 3 lakhs
     else if (received_message.payload === 'onlymbed100_zayathi_tenantaabbdd11') {
     response = {
                 "text": "There is no avaliable house. Sorry for you. Thanks for contacting us."
@@ -4704,7 +4704,7 @@ else if (received_message.payload === "tenanzay") {
   /***************************/
 
  
- // to rent one floor(RC), only bed rooms , in Zayathiri for area
+ // to rent house in zayathi, Rc, one floor, only bed rooms , for area
   else if (received_message.payload === "bed3above_onef_rzayathi1_tenant") {
     response = {
                   "text": "Do you want how much wide land area of house?",
@@ -4723,7 +4723,7 @@ else if (received_message.payload === "tenanzay") {
       }
   }
 
-  // to rent , one floor(RC), in Zayarthiri, bed room, 2 lakhs & below it
+  // to rent house in zayathi, RC, one floor, bed room, 2 lakhs & below it
     else if (received_message.payload === 'bedaacc1_bedroom_i46n_zaya_tenant') {
     response = {
     "attachment":{
@@ -4750,7 +4750,7 @@ else if (received_message.payload === "tenanzay") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           },
@@ -4772,7 +4772,7 @@ else if (received_message.payload === "tenanzay") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           },
@@ -4794,7 +4794,7 @@ else if (received_message.payload === "tenanzay") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -4805,7 +4805,7 @@ else if (received_message.payload === "tenanzay") {
   }
 }
 
-   // to rent , one floor(RC), in Zayarthiri, bed room, above 2 lakhs
+   // to rent house in zayathi, RC, one floor, bed room, above 2 lakhs
     else if (received_message.payload === 'wht100_mbedroom_in_zaya_tenant') {
     response = {
     "attachment":{
@@ -4832,7 +4832,7 @@ else if (received_message.payload === "tenanzay") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -4870,7 +4870,7 @@ else if (received_message.payload === "zabtwp") {
 
       }
   }
-  // to buy a house in Zabuthiri, RC  
+  // to buy house in Zabuthiri, RC  
   else if (received_message.payload === "rc_zabu111222") {
     response = {
                   "text": "Please choose you want to buy the house in which",
@@ -4894,7 +4894,7 @@ else if (received_message.payload === "zabtwp") {
 
       }
   }
-// to buy zabu, a house, RC, one floor
+// to buy house in zabu, RC, one floor
   else if (received_message.payload === "onef_zabuthiri11aa") {
     response = {
                   "text": "Do you want the house in which Mbr included or only Br included?",
@@ -4913,7 +4913,7 @@ else if (received_message.payload === "zabtwp") {
       }
   }
   /************/
-   // to buy zabu, house(RC), one floor,  master bed rooms
+   // to buy house in zabu, one floor,  master bed rooms
   else if (received_message.payload === "onef_mb_zabu22aa") {
     response = {
                   "text": "Please choosse the land area of house:",
@@ -4946,7 +4946,7 @@ else if (received_message.payload === "zabtwp") {
 
   /***************************/
 
-// to buy zabu, house (RC), other floor
+// to buy house in zabu, RC, other floor
     else if (received_message.payload === 'otherff1_zabuthiri11aa' ) {
     response = {
                 "text": "There is no property avaliable. Sorry for you. Thanks for contacting us."
@@ -4955,7 +4955,7 @@ else if (received_message.payload === "zabtwp") {
 
   /***************************/
 
-  // to buy zabu, house (RC), one floor, master bed, 40*60
+  // to buy house in zabu, RC, one floor, master bed, 40*60
     else if (received_message.payload === 'onlymbed60_zabu7_tobuyz1' ) {
     response = {
     "attachment":{
@@ -4983,7 +4983,7 @@ else if (received_message.payload === "zabtwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -4993,7 +4993,7 @@ else if (received_message.payload === "zabtwp") {
     }
   }
 }
-  // to buy zabu, house (RC), one floor, master bed, 60*60
+  // to buy house in zabu, RC, one floor, master bed, 60*60
     else if (received_message.payload === 'mbedroom60hou6_in_tobuyz1' ) {
     response = {
     "attachment":{
@@ -5021,7 +5021,7 @@ else if (received_message.payload === "zabtwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -5031,7 +5031,7 @@ else if (received_message.payload === "zabtwp") {
     }
   }
 }
-// to buy zabu, house (RC), one floor, master bed, 100*100
+// to buy house in zabu, RC, one floor, master bed, 100*100
     else if (received_message.payload === 'mbedroom100hou100_in_tobuyz1' ) {
     response = {
     "attachment":{
@@ -5059,7 +5059,7 @@ else if (received_message.payload === "zabtwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -5069,13 +5069,13 @@ else if (received_message.payload === "zabtwp") {
     }
   }
 }
-// to buy zabu, house (RC), one floor, master bed, other area
+// to buy house in zabu, RC, one floor, master bed, other area
     else if (received_message.payload === 'onlyother_zabu7_tobuyz1' ) {
     response = {
                 "text": "There is no property avaliable. Sorry for you. Thanks for contacting us."
   }
 }
-// to buy zabu, house (other type)
+// to buy house in zabu, other type (not RC)
     else if (received_message.payload === 'nancat_zabu1' ) {
     response = {
     "attachment":{
@@ -5103,7 +5103,7 @@ else if (received_message.payload === "zabtwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -5117,7 +5117,7 @@ else if (received_message.payload === "zabtwp") {
 /**************************************************/
 
 
-    // to buy Zabu, one floor(RC), only bed rooms , area
+    // to buy house in Zabu, RC, one floor, only bed rooms , area
   else if (received_message.payload === "onef_bed_zabu22aa") {
     response = {
                    "text": "Do you want what area?",
@@ -5141,7 +5141,7 @@ else if (received_message.payload === "zabtwp") {
       }
   }
   
-   // to buy zabbuthiri, one floor(RC), bed room, 40* 60
+   // to buy house in zabbuthiri, RC, one floor, bed room, 40* 60
     else if (received_message.payload === 'onlybed60_zabuthi11') {
     response = {
     "attachment":{
@@ -5168,7 +5168,7 @@ else if (received_message.payload === "zabtwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -5178,7 +5178,7 @@ else if (received_message.payload === "zabtwp") {
     }
   }
 }
-   // to buy zabbuthiri, one floor(RC), bed room, 60*60
+   // to buy house in zabbuthiri, Rc, one floor, bed room, 60*60
     else if (received_message.payload === 'onlybedroom60hou_in_zabuu7') {
     response = {
     "attachment":{
@@ -5205,7 +5205,7 @@ else if (received_message.payload === "zabtwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -5216,7 +5216,7 @@ else if (received_message.payload === "zabtwp") {
   }
 }
 
-   // to buy zabbuthiri, one floor(RC), bed room, other area
+   // to buy house in zabbuthiri, RC, one floor, bed room, other area
     else if (received_message.payload === 'onlybedother_zabuthi11') {
     response = {
     "attachment":{
@@ -5243,7 +5243,7 @@ else if (received_message.payload === "zabtwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -5259,7 +5259,7 @@ else if (received_message.payload === "zabtwp") {
 
 /*****************************************************/
 
-    // to buy a house in Zabuthiri, RC, two floor
+    // to buy  house in Zabuthiri, RC, two floor
   else if (received_message.payload === "twof_zabuthiri11aa") {
     response = {
                   "text": "Do you want what area?",
@@ -5303,7 +5303,7 @@ else if (received_message.payload === "zabtwp") {
         "elements": [ 
         
            {
-            "title":"RC,  2500 lakhs, 40*60 ft",
+            "title":"2RC,  2500 lakhs, 40*60 ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91774025_148348000044333_6815842511517384704_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeHzqDLnklGlQ1xWNu07MBlaHw1QFU91-UofDVAVT3X5SnGbhIDx7oZdYcEPqVUAalWsZknjEkUmzV8CvCGJRIrZ&_nc_ohc=zrefNImYLKcAX9YSeXG&_nc_ht=scontent.fmdl2-1.fna&oh=61bf79c95ef86a902df4a0fb2094cc82&oe=5EB0E892",
             "subtitle":"Mbr-(1), Br-(4), land type-(grant), face south, Negotiable",
             "default_action": {
@@ -5320,7 +5320,7 @@ else if (received_message.payload === "zabtwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -5340,7 +5340,7 @@ else if (received_message.payload === "zabtwp") {
         "elements": [ 
         
            {
-            "title":"RC,  2000 lakhs, 60*60 ft",
+            "title":"2RC,  2000 lakhs, 60*60 ft",
             "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92823131_148347106711089_610544418763571200_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeFxWgAema5g4i2xFW9AdQBsOcp_FQlFfAY5yn8VCUV8BiwqdlL46YDiBCxY8iBhHIlW_rKc_ZUMlBXBZC2V_exy&_nc_ohc=k-b3E7YKzeoAX_Ds2Ud&_nc_ht=scontent.fmdl2-2.fna&oh=935494d72848dfee0dbf8c36fb149734&oe=5EB0066C",
             "subtitle":"Mbr-(2), Br-(1), land type-(grant),face north, Negotiable",
             "default_action": {
@@ -5357,7 +5357,7 @@ else if (received_message.payload === "zabtwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -5383,7 +5383,7 @@ else if (received_message.payload === "zabtwp") {
         "elements": [ 
         
            {
-            "title":"RC,  900 lakhs, 60*70 ft",
+            "title":"2RC,  900 lakhs, 60*70 ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92465912_148351516710648_1751142708715454464_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeG4Y_29JTV2nR-S0e4T_3l2jyTiAxhjiyWPJOIDGGOLJeN4MvyOK5riu_STZt4-BtlbQ1z-Nj2JZLgPhK7gDSRH&_nc_ohc=NlIAL0Jz0p0AX9IjMKA&_nc_ht=scontent.fmdl2-1.fna&oh=a059ee4af2076260fe6fa851d60ead96&oe=5EB1FB14",
             "subtitle":"Mbr-(2), Br-(4), land type-(grant), face south, Negotiable",
             "default_action": {
@@ -5400,7 +5400,7 @@ else if (received_message.payload === "zabtwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"aaabbb11m_tobuya"
               }              
             ]      
           }
@@ -5448,7 +5448,7 @@ else if (received_message.payload === "zabtwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"tobuylandall_aabb1"
               }              
             ]      
           }
@@ -5485,7 +5485,7 @@ else if (received_message.payload === "zabtwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"tobuylandall_aabb1"
               }              
             ]      
           }
@@ -5522,7 +5522,7 @@ else if (received_message.payload === "zabtwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"tobuylandall_aabb1"
               }              
             ]      
           }
@@ -5560,7 +5560,7 @@ else if (received_message.payload === "zabtwp") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"tobuylandall_aabb1"
               }              
             ]      
           }
@@ -5634,7 +5634,7 @@ else if (received_message.payload === "otthi") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"tobuylandall_aabb1"
               }              
             ]      
           }
@@ -5672,7 +5672,7 @@ else if (received_message.payload === "otthi") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"tobuylandall_aabb1"
               }              
             ]      
           }
@@ -5749,7 +5749,7 @@ else if (received_message.payload === "teottl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torentlandall_aabb1"
               }              
             ]      
           }
@@ -5787,7 +5787,7 @@ else if (received_message.payload === "teottl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torentlandall_aabb1"
               }              
             ]      
           }
@@ -5856,7 +5856,7 @@ else if (received_message.payload === "teottl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"tobuylandall_aabb1"
               }              
             ]      
           }
@@ -5894,7 +5894,7 @@ else if (received_message.payload === "teottl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"tobuylandall_aabb1"
               }              
             ]      
           }
@@ -5932,7 +5932,7 @@ else if (received_message.payload === "teottl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"tobuylandall_aabb1"
               }              
             ]      
           }
@@ -6011,7 +6011,7 @@ else if (received_message.payload === "dekthi") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"tobuylandall_aabb1"
               }              
             ]      
           }
@@ -6049,7 +6049,7 @@ else if (received_message.payload === "dekthi") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"tobuylandall_aabb1"
               }              
             ]      
           }
@@ -6087,7 +6087,7 @@ else if (received_message.payload === "dekthi") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"tobuylandall_aabb1"
               }              
             ]      
           }
@@ -6125,7 +6125,7 @@ else if (received_message.payload === "dekthi") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"tobuylandall_aabb1"
               }              
             ]      
           }
@@ -6163,7 +6163,7 @@ else if (received_message.payload === "dekthi") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"tobuylandall_aabb1"
               }              
             ]      
           }
@@ -6236,7 +6236,7 @@ else if (received_message.payload === "dekthi") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"tobuylandall_aabb1"
               }              
             ]      
           }
@@ -6274,7 +6274,7 @@ else if (received_message.payload === "dekthi") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"tobuylandall_aabb1"
               }              
             ]      
           }
@@ -6311,7 +6311,7 @@ else if (received_message.payload === "dekthi") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"tobuylandall_aabb1"
               }              
             ]      
           }
@@ -6352,7 +6352,7 @@ else if (received_message.payload === "dekthi") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"tobuylandall_aabb1"
               }              
             ]      
           }
@@ -6422,7 +6422,7 @@ else if (received_message.payload === "dekthi") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"tobuylandall_aabb1"
               }              
             ]      
           }
@@ -6460,7 +6460,7 @@ else if (received_message.payload === "dekthi") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"tobuylandall_aabb1"
               }              
             ]      
           }
@@ -6499,7 +6499,7 @@ else if (received_message.payload === "dekthi") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"tobuylandall_aabb1"
               }              
             ]      
           }
@@ -6537,7 +6537,7 @@ else if (received_message.payload === "dekthi") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"tobuylandall_aabb1"
               }              
             ]      
           }
@@ -6580,7 +6580,7 @@ else if (received_message.payload === "dekthi") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torentlandall_aabb1"
               }              
             ]      
           }
@@ -6617,7 +6617,7 @@ else if (received_message.payload === "dekthi") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torentlandall_aabb1"
               }              
             ]      
           }
@@ -6654,7 +6654,7 @@ else if (received_message.payload === "dekthi") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torentlandall_aabb1"
               }              
             ]      
           }
@@ -6692,7 +6692,7 @@ else if (received_message.payload === "dekthi") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torentlandall_aabb1"
               }              
             ]      
           }
@@ -6757,7 +6757,7 @@ else if (received_message.payload === "dekthi") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torentlandall_aabb1"
               }              
             ]      
           }
@@ -6795,7 +6795,7 @@ else if (received_message.payload === "dekthi") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torentlandall_aabb1"
               }              
             ]      
           }
@@ -6833,7 +6833,7 @@ else if (received_message.payload === "dekthi") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torentlandall_aabb1"
               }              
             ]      
           }
@@ -6910,7 +6910,7 @@ else if (received_message.payload === "tedekl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torentlandall_aabb1"
               }              
             ]      
           }
@@ -6948,7 +6948,7 @@ else if (received_message.payload === "tedekl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torentlandall_aabb1"
               }              
             ]      
           }
@@ -6986,7 +6986,7 @@ else if (received_message.payload === "tedekl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torentlandall_aabb1"
               }              
             ]      
           }
@@ -6997,7 +6997,7 @@ else if (received_message.payload === "tedekl") {
   }
 }
 
-// to buy land in Dekkhina,  80*80
+// to rent land in Dekkhina,  80*80
     else if (received_message.payload === 'torede_onlya88landin_dek_tenant') {
     response = {
     "attachment":{
@@ -7024,7 +7024,7 @@ else if (received_message.payload === "tedekl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torentlandall_aabb1"
               }              
             ]      
           }
@@ -7063,7 +7063,7 @@ else if (received_message.payload === "tedekl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torentlandall_aabb1"
               }              
             ]      
           }
@@ -7134,7 +7134,7 @@ else if (received_message.payload === "tedekl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torentlandall_aabb1"
               }              
             ]      
           }
@@ -7172,7 +7172,7 @@ else if (received_message.payload === "tedekl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torentlandall_aabb1"
               }              
             ]      
           }
@@ -7209,7 +7209,7 @@ else if (received_message.payload === "tedekl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torentlandall_aabb1"
               }              
             ]      
           }
@@ -7250,7 +7250,7 @@ else if (received_message.payload === "tedekl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torentlandall_aabb1"
               }              
             ]      
           }
@@ -7323,7 +7323,7 @@ else if (received_message.payload === "tedekl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torentlandall_aabb1"
               }              
             ]      
           }
@@ -7361,7 +7361,7 @@ else if (received_message.payload === "tedekl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torentlandall_aabb1"
               }              
             ]      
           }
@@ -7400,7 +7400,7 @@ else if (received_message.payload === "tedekl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torentlandall_aabb1"
               }              
             ]      
           }
@@ -7438,7 +7438,7 @@ else if (received_message.payload === "tedekl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torentlandall_aabb1"
               }              
             ]      
           }
@@ -7553,7 +7553,7 @@ else if (received_message.payload === "tedekl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           },
@@ -7575,7 +7575,7 @@ else if (received_message.payload === "tedekl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -7615,7 +7615,7 @@ else if (received_message.payload === "tedekl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -7677,7 +7677,7 @@ else if (received_message.payload === "tedekl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -7715,7 +7715,7 @@ else if (received_message.payload === "tedekl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           },
@@ -7738,7 +7738,7 @@ else if (received_message.payload === "tedekl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -7802,7 +7802,7 @@ else if (received_message.payload === "tedekl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -7850,7 +7850,7 @@ else if (received_message.payload === "tedekl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -7891,7 +7891,7 @@ else if (received_message.payload === "tedekl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -7979,7 +7979,7 @@ else if (received_message.payload === "tedekl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           },
@@ -8001,7 +8001,7 @@ else if (received_message.payload === "tedekl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -8040,7 +8040,7 @@ else if (received_message.payload === "tedekl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -8102,7 +8102,7 @@ else if (received_message.payload === "tedekl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -8140,7 +8140,7 @@ else if (received_message.payload === "tedekl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           },
@@ -8162,7 +8162,7 @@ else if (received_message.payload === "tedekl") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -8297,7 +8297,7 @@ else if (received_message.payload === "tenanpob") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -8335,7 +8335,7 @@ else if (received_message.payload === "tenanpob") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           },
@@ -8357,7 +8357,7 @@ else if (received_message.payload === "tenanpob") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -8419,7 +8419,7 @@ else if (received_message.payload === "tenanpob") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -8457,7 +8457,7 @@ else if (received_message.payload === "tenanpob") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -8496,7 +8496,7 @@ else if (received_message.payload === "tenanpob") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -8540,7 +8540,7 @@ else if (received_message.payload === "tenanpob") {
         "elements": [ 
         
                     {
-            "title":"RC, 2.5 lakhs per month, 40*60 ft",
+            "title":"2RC, 2.5 lakhs per month, 40*60 ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91606159_148757690003364_6476717670556237824_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeEwaNaIO6IktYPhZerxMcm7Qew2jPuaaEFB7DaM-5poQZvYiKqWGrH_lW38GzC0sEa2ozlem0muIfNfovwajN7B&_nc_ohc=xmULYHKmuWMAX8mWmY6&_nc_ht=scontent.fmdl2-1.fna&oh=896dcfb6903ac4aa391c915c34f871fc&oe=5EB37841",
             "subtitle":"MBr-(2), Br-(2), face south",
             "default_action": {
@@ -8557,7 +8557,7 @@ else if (received_message.payload === "tenanpob") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -8578,7 +8578,7 @@ else if (received_message.payload === "tenanpob") {
         "elements": [ 
         
             {
-            "title":"RC, 3.5 lakhs per month, 60*80 ft",
+            "title":"2RC, 3.5 lakhs per month, 60*80 ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92517086_148751140004019_3914064358962888704_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeFoOvq0bRFW0r7Srwl3N0U6qLmh0okITviouaHSiQhO-AqAdJfPRZtbQ8jrzolCH2ITGEZeyM794Swu5gSj8kTf&_nc_ohc=PxwqZF2pwtAAX-4aXYH&_nc_ht=scontent.fmdl2-1.fna&oh=1754795b4c5cdf6738bdbfe5f46ea909&oe=5EB0B753",
             "subtitle":"MBr-(2), Br-(2), land type-(grant), face south, Negotiable",
             "default_action": {
@@ -8595,7 +8595,7 @@ else if (received_message.payload === "tenanpob") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           },
@@ -8617,7 +8617,7 @@ else if (received_message.payload === "tenanpob") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -8657,7 +8657,7 @@ else if (received_message.payload === "tenanpob") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -8696,7 +8696,7 @@ else if (received_message.payload === "tenandek") {
 
       }
   }
-    // to rent dekkhina, a house (RC), 
+    // to rent house in dekkhina, RC 
   else if (received_message.payload === "rc_dekki1_tenant") {
     response = {
                   "text": "Please choose you want to buy the house in which",
@@ -8720,7 +8720,7 @@ else if (received_message.payload === "tenandek") {
 
       }
   }
-      //  to rent dekkhina, (house)RC, onefloor,
+      //  to rent house in dekkhina, RC, onefloor,
   else if (received_message.payload === "onef_dekkii11_tenant1") {
     response = {
                   "text": "Do you want the house in which Mbr is included or only Br included?",
@@ -8739,7 +8739,7 @@ else if (received_message.payload === "tenandek") {
       }
   }
 
-      //  to rent dekkhina, (house)RC, onefloor, only Br
+      //  to rent house in dekkhina, RC, onefloor, only Br
   else if (received_message.payload === "numofonlybraa5_mbraa9_dekki_tenant") {
     response = {
                   "text": "Please tell me estimated price you wanna spend:",
@@ -8760,7 +8760,7 @@ else if (received_message.payload === "tenandek") {
 
 
   
- //  to rent dekkhina, (house)RC, onefloor, only Br, 2 lakhs & below it
+ //  to rent house in dekkhina, RC, onefloor, only Br, 2 lakhs & below it
     else if (received_message.payload === 'torent_dekki_onefonlybr2below_tenant' ) {
     response = {
 
@@ -8787,7 +8787,7 @@ else if (received_message.payload === "tenandek") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]
             }
@@ -8798,7 +8798,7 @@ else if (received_message.payload === "tenandek") {
 }
 
 
-//  to rent dekkhina, (house)RC, onefloor, only Br, above 2 lakhs
+//  to rent house in dekkhina, RC, onefloor, only Br, above 2 lakhs
     else if (received_message.payload === 'torent_dekki_onefonlybr_above2_tenant') {
     response = {
     "attachment":{
@@ -8825,7 +8825,7 @@ else if (received_message.payload === "tenandek") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -8885,7 +8885,7 @@ else if (received_message.payload === "tenandek") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           },
@@ -8907,7 +8907,7 @@ else if (received_message.payload === "tenandek") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -8945,7 +8945,7 @@ else if (received_message.payload === "tenandek") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           },
@@ -8967,7 +8967,7 @@ else if (received_message.payload === "tenandek") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           },
@@ -8989,7 +8989,7 @@ else if (received_message.payload === "tenandek") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -9034,7 +9034,7 @@ else if (received_message.payload === "tenandek") {
         "elements": [ 
         
            {
-            "title":"RC, 1.5 lakhs per month, 40*60 ft",
+            "title":"2RC, 1.5 lakhs per month, 40*60 ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91876881_148667190012414_7394498520390041600_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeGuaoOd56cUfdGwui3Ch4l4sGU0IifrOl-wZTQiJ-s6Xx6MMoJkF3xvnBphVS2O_U5GlCuBHhd6H4S77b8PfSgq&_nc_ohc=6hUnCzBbpckAX9MCIC8&_nc_ht=scontent.fmdl2-1.fna&oh=ed5bd3759a0b22350acdc37a52866feb&oe=5EB18D68",
             "subtitle":"Mbr-(2), Br-(2), face south",
             "default_action": {
@@ -9051,7 +9051,7 @@ else if (received_message.payload === "tenandek") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           },
@@ -9073,7 +9073,7 @@ else if (received_message.payload === "tenandek") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -9096,7 +9096,7 @@ else if (received_message.payload === "tenandek") {
         "elements": [ 
         
            {
-            "title":"RC, 3.5 lakhs per month, 60*80 ft",
+            "title":"2RC, 3.5 lakhs per month, 60*80 ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92244656_148661983346268_5412490990118240256_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeH7i1rOMS8eeDRAo6chNPk97R3saB8e7SztHexoHx7tLI80FOYBR4_5sP3UzCEmtsrIlOqG-g2UNFogclACx-h9&_nc_ohc=xGmu-HV_qU8AX-rAPLo&_nc_ht=scontent.fmdl2-1.fna&oh=7bb92d21c48c88bd788564994049ddd6&oe=5EB0B3E1",
             "subtitle":"Mbr-(3), Br-(1), face west",
             "default_action": {
@@ -9113,7 +9113,7 @@ else if (received_message.payload === "tenandek") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           },
@@ -9135,7 +9135,7 @@ else if (received_message.payload === "tenandek") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           },
@@ -9157,7 +9157,7 @@ else if (received_message.payload === "tenandek") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -9181,7 +9181,7 @@ else if (received_message.payload === "tenandek") {
         "elements": [ 
         
            {
-            "title":"RC, 8 lakhs per month, 50*75 ft",
+            "title":"3RC, 8 lakhs per month, 50*75 ft",
             "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92667938_148681606677639_6253805066847780864_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeHNyDhSx0ovFtr7eWjPt3Raef0VwMYXhKh5_RXAxheEqDq_SNyzVRhmHguVKNiCzwNpYkdEkenidgHtp7xL2PtM&_nc_ohc=V5MmGn_sMAgAX8_t0wI&_nc_ht=scontent.fmdl2-2.fna&oh=d746a503f668daddb4760473f684da45&oe=5EB3D5D6",
             "subtitle":"Mbr-(3), face south, Negotiable",
             "default_action": {
@@ -9198,7 +9198,7 @@ else if (received_message.payload === "tenandek") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -9240,7 +9240,7 @@ else if (received_message.payload === "tenandek") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -9278,7 +9278,7 @@ else if (received_message.payload === "tenanzabu") {
       }
   }
 
-  // to rent zabu, a house (RC), what floor
+  // to rent house in zabu, RC, what floor
   else if (received_message.payload === "rc_zabu1_tenant") {
     response = {
                   "text": "Please choose the number of floor:",
@@ -9302,14 +9302,14 @@ else if (received_message.payload === "tenanzabu") {
 
       }
   }
-   // to rent zabu, a house (Rc), other floor, // for other floor
+   // to rent house in zabu, Rc, other floor, // for other floor
 else if (received_message.payload === "otherrrf_zabuthiri11_tenant1") {
       response = {
                     "text":'There is no property avaliable. Sorry for you. Thanks for contacting us.'
 
       }
   }  
-        // to rent zabu, a house (Rc), one floor, 
+        // to rent house in zabu, Rc, one floor, 
 else if (received_message.payload === "onef_zabuthiri11_tenant1") {
       response = {
                     "text":'Do you want the house in which Mbr included or Br included?',
@@ -9329,7 +9329,7 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
       }
   }  
 
-  // to rent zabu, house(RC), one floor,  master bed rooms
+  // to rent house in zabu, RC, one floor,  master bed rooms
   else if (received_message.payload === "rcaabb1212_zabu1_tenant_mbr") {
     response = {
                    "text": "Do you want what area?",
@@ -9351,7 +9351,7 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
 
   /***************************/
 
-  // to rent zabu, house (RC), one floor, master bed, above 3 lakhs
+  // to rent house in zabuthiri, RC, one floor, master bed, above 3 lakhs
     else if (received_message.payload === 'masterbedother_zabuthi11_tenant_22' ) {
     response = {
     "attachment":{
@@ -9379,7 +9379,7 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -9389,7 +9389,7 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
     }
   }
 }
-  // to rent zabu, house (RC), one floor, master bed, 3 lakhs & below it
+  // to rent house in zabu, RC, one floor, master bed, 3 lakhs & below it
     else if (received_message.payload === 'masterbed60_zabuthi11_tenant3l' ) {
     response = {
     "attachment":{
@@ -9417,7 +9417,7 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           },
@@ -9439,7 +9439,7 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -9459,7 +9459,7 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
 /**************************************************************************/
 /**************************************************************************/
 
-// to rent Zabu, one floor(RC), only bed rooms , area
+// to rent house in zabu, RC, one floor, only bed rooms , area
   else if (received_message.payload === "onlybedab1212_zabu1_tenant") {
     response = {
                    "text": "Do you want what area?",
@@ -9478,7 +9478,7 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
       }
   }
   
-   // to rent zabbuthiri, one floor(RC), bed room, 2 lakhs & below it
+   // to rent house in zabbuthiri, RC, one floor, bed room, 2 lakhs & below it
     else if (received_message.payload === 'onlybed2belowit_zabuthi11_tenant') {
     response = {
     "attachment":{
@@ -9505,7 +9505,7 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           },
@@ -9527,7 +9527,7 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -9539,7 +9539,7 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
 }
  
  
-   // to rent zabbuthiri, one floor(RC), bed room, above 2 lakhs
+   // to rent house in zabbuthiri, RC, one floor, bed room, above 2 lakhs
     else if (received_message.payload === 'onlybedroomabove2l_in_zabuu7_tenant') {
     response = {
     "attachment":{
@@ -9566,7 +9566,7 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -9578,7 +9578,7 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
 }
 /**********************/
 
-// to rent zabu, house (other type)
+// to rent house in zabu, other type (not Rc)
     else if (received_message.payload === 'nancat_zabu1_tenant' ) {
     response = {
     "attachment":{
@@ -9606,7 +9606,7 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -9652,7 +9652,7 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
         "elements": [ 
         
           {
-            "title":"RC,  4 lakhs per month, 60*60 ft",
+            "title":"2RC,  4 lakhs per month, 60*60 ft",
             "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92823131_148347106711089_610544418763571200_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeFxWgAema5g4i2xFW9AdQBsOcp_FQlFfAY5yn8VCUV8BiwqdlL46YDiBCxY8iBhHIlW_rKc_ZUMlBXBZC2V_exy&_nc_ohc=k-b3E7YKzeoAX_Ds2Ud&_nc_ht=scontent.fmdl2-2.fna&oh=935494d72848dfee0dbf8c36fb149734&oe=5EB0066C",
             "subtitle":"Mbr-(2), Br-(1), face north",
             "default_action": {
@@ -9669,7 +9669,7 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
@@ -9692,7 +9692,7 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
         "elements": [ 
 
              {
-            "title":"RC,  3 lakhs per month, 40*60 ft",
+            "title":"2C,  3 lakhs per month, 40*60 ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91774025_148348000044333_6815842511517384704_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeHzqDLnklGlQ1xWNu07MBlaHw1QFU91-UofDVAVT3X5SnGbhIDx7oZdYcEPqVUAalWsZknjEkUmzV8CvCGJRIrZ&_nc_ohc=zrefNImYLKcAX9YSeXG&_nc_ht=scontent.fmdl2-1.fna&oh=61bf79c95ef86a902df4a0fb2094cc82&oe=5EB0E892",
             "subtitle":"Mbr-(1), Br-(4), face south",
             "default_action": {
@@ -9709,7 +9709,7 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           },
@@ -9731,7 +9731,7 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
               {
                 "type":"postback",
                 "title":"Yes, I'm interested",
-                "payload":"aaae"
+                "payload":"torent_tenantaabb1"
               }              
             ]      
           }
