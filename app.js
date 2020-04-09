@@ -1859,7 +1859,7 @@ function handleMessage(sender_psid, received_message) {
     }
     tobuyhouse_told.leave_phno11abc = false;  
   }
-
+/*
 // user say no 
   else if (received_message.payload === "tobuyhouse_tellbyuser_noo1b") { 
     response = {
@@ -1867,7 +1867,7 @@ function handleMessage(sender_psid, received_message) {
     }
   tobuyhouse_told.leave_phno11abc = true;
   }
-
+*/
 
 
 
