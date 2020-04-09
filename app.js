@@ -11258,6 +11258,16 @@ else if (payload === 'innnter') {
                       ]
       }
   }
+// to sell house
+ else if (payload === "toselhoupyin") {
+         response = {
+      "text":'Please tell the type of house that you want to sell like RC or Nancat'
+    }
+    toselhou_byuser.to_sel_hou = true;
+  }
+
+
+
     else if (payload === 'attach_no_forSellingHouse') {
         response = {
                   "text": "Please tell me the estimated price that you want to get"
