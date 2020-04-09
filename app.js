@@ -11086,7 +11086,7 @@ else if (payload === 'innnter') {
     }
   }
   // to buy land in pyinmana
-  else if (received_message.payload === "pyi5") {
+  else if (payload === "pyi5") {
     response = {
                   "text": "Do you want what area?",
                     "quick_replies": [
