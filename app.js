@@ -111,10 +111,15 @@ let tobuyhouse_told = {
   yes_yes_user:false,
   leave_phno11abc:false,
 }
-
 let userEntered_yes_abouthou = {};
 
 
+// to rent house told by user
+let torenthouse_told = {
+  yes1_by_user:false,
+  leave_contactno11abc:false,
+}
+let userEntered_yes_torenthou = {};
 
 
 
@@ -1869,6 +1874,45 @@ function handleMessage(sender_psid, received_message) {
   }
 
 
+
+/**************************************************************/
+
+
+
+// to rent house in every
+   else if (received_message.payload === "torenthouse_toldbyuser_yes11abc") { 
+    response = {
+              "text": "OK, Tell me."
+    }
+     received_message.payload = false;
+     torenthouse_told.yes1_by_user = true;
+  }
+
+  else if (received_message.text &&  torenthouse_told.yes1_by_user === true) {
+    userEntered_yes_torenthou.yes1_by_user = received_message.text;
+    response = {
+       "text": "Please leave your contact number. We will contact you later."
+                  
+    }
+    torenthouse_told.yes1_by_user = false;
+    torenthouse_told.leave_contactno11abc = true;
+  }
+    else if (received_message.text &&  torenthouse_told.leave_contactno11abc === true) {
+    userEntered_yes_torenthou.leave_contactno11abc = received_message.text;
+    response = {
+       "text": "Thanks for contacting us. Have a nice day!"
+                  
+    }
+    torenthouse_told.leave_contactno11abc = false;  
+  }
+
+// user say no 
+  else if (received_message.payload === "torenthouse_toldbyuser_nooo11abcd") { 
+    response = {
+      "text": "Please leave your contact number. We will contact you later."
+    }
+  torenthouse_told.leave_contactno11abc = true;
+  }
 
 
 
@@ -10486,6 +10530,26 @@ function handlePostback(sender_psid, received_postback) {
                       ]
   }
 }
+// to rent house in every
+ else if (payload === "torent_tenantaabb1") {
+         response = {
+                  "text": "Do you wanna talk about the property or something else?",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Yes",
+                          "payload": "torenthouse_toldbyuser_yes11abc", 
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "No",
+                          "payload": "torenthouse_toldbyuser_nooo11abcd",
+                        }
+                      ]
+  }
+}
+
+
 
   // for tenant
   else if (payload === 'tenan') {
