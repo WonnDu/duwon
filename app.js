@@ -11344,6 +11344,13 @@ else if (payload === 'innnter') {
 
       }
   }
+  // to sell land in pyinmana
+ else if (received_message.payload === "toselpyinlan") {
+         response = {
+      "text":'Please tell the area of land that you want to sell.'
+    }
+    tosel_land_byuser.land_type_tosell = true;
+  }
 
   
   //start
