@@ -1859,7 +1859,7 @@ function handleMessage(sender_psid, received_message) {
     }
     tobuyhouse_told.leave_phno11abc = false;  
   }
-/*
+
 // user say no 
   else if (received_message.payload === "tobuyhouse_tellbyuser_noo1b") { 
     response = {
@@ -1867,7 +1867,7 @@ function handleMessage(sender_psid, received_message) {
     }
   tobuyhouse_told.leave_phno11abc = true;
   }
-*/
+
 
 
 
@@ -10245,33 +10245,9 @@ function handlePostback(sender_psid, received_postback) {
    callSend(sender_psid, response1).then(()=>{
   return callSend(sender_psid, response2);
   });
- } 
+ 
 
-
- /******************************************************/
-
-// to buy house in every
- else if (payload === "aaabbb11m_tobuya") {
-         response = {
-                  "text": "Do you wanna talk about the property or something else?",
-                    "quick_replies": [
-                        {
-                          "content_type": "text",
-                          "title": "Yes",
-                          "payload": "tobuyhouse_tellbyuser_yes1a", 
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "No",
-                          "payload": "tobuyhouse_tellbyuser_noo1b",
-                        }
-                      ]
-  }
-}
-
- /*******************************************************/
-
- else if (payload === 'onee') {
+  } else if (payload === 'onee') {
      response = { "attachment": {
                   "type": "template",
                   "payload": {
@@ -10492,8 +10468,24 @@ function handlePostback(sender_psid, received_postback) {
       }
   }
 
-
-
+// to buy house in every
+ else if (payload === "aaabbb11m_tobuya") {
+         response = {
+                  "text": "Do you wanna talk about the property or something else?",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Yes",
+                          "payload": "tobuyhouse_tellbyuser_yes1a", 
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "No",
+                          "payload": "tobuyhouse_tellbyuser_noo1b",
+                        }
+                      ]
+  }
+}
 
   // for tenant
   else if (payload === 'tenan') {
@@ -10544,7 +10536,7 @@ function handlePostback(sender_psid, received_postback) {
   }
 
   // to rent house in pyinmana,
-  else if (received_message.payload === "tenanpyin" ) {
+  else if (payload === "tenanpyin" ) {
     response = {
                   "text": "Please choose the below option:",
                     "quick_replies": [
