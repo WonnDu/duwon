@@ -1045,7 +1045,7 @@ function handleMessage(sender_psid, received_message) {
 
       }
     }
-/*
+
     else if (received_message.payload === "3rd_fft1") {    
     let response1 = {
       "text": "You told us that you will transfer from Dekkhina Thiri Township to Ottara Thiri Township"};
@@ -1056,7 +1056,7 @@ function handleMessage(sender_psid, received_message) {
     return callSend(sender_psid, response2);
     });
     }
-*/
+
     else if (received_message.payload === "3rd_fft2") {    
     let response1 = {
       "text": "You told us that you will transfer from Dekkhina Thiri Township to Pobba Thiri Township"};
@@ -1834,23 +1834,6 @@ function handleMessage(sender_psid, received_message) {
 
 
 // to buy house in every
- else if (received_message.payload === "aaabbb11m_tobuya") {
-         response = {
-                  "text": "Do you wanna talk about the property or something else?",
-                    "quick_replies": [
-                        {
-                          "content_type": "text",
-                          "title": "Yes",
-                          "payload": "tobuyhouse_tellbyuser_yes1a", 
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "No",
-                          "payload": "tobuyhouse_tellbyuser_noo1b",
-                        }
-                      ]
-  }
-}
    else if (received_message.payload === "tobuyhouse_tellbyuser_yes1a") { 
     response = {
               "text": "OK, Tell me."
@@ -10262,9 +10245,33 @@ function handlePostback(sender_psid, received_postback) {
    callSend(sender_psid, response1).then(()=>{
   return callSend(sender_psid, response2);
   });
- 
+ } 
 
-  } else if (payload === 'onee') {
+
+ /******************************************************/
+
+// to buy house in every
+ else if (payload === "aaabbb11m_tobuya") {
+         response = {
+                  "text": "Do you wanna talk about the property or something else?",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Yes",
+                          "payload": "tobuyhouse_tellbyuser_yes1a", 
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "No",
+                          "payload": "tobuyhouse_tellbyuser_noo1b",
+                        }
+                      ]
+  }
+}
+
+ /*******************************************************/
+
+ else if (payload === 'onee') {
      response = { "attachment": {
                   "type": "template",
                   "payload": {
