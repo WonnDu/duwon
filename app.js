@@ -106,6 +106,20 @@ let userEntered_land_tosel = {};
 
 
 
+// to buy house told by user
+let tobuyhouse_told = {
+  yes_yes_user:false,
+  leave_phno11abc:false,
+}
+
+let userEntered_yes_abouthou = {};
+
+
+
+
+
+/**********************************************************************/
+
 
 // Sets server port and logs message on success
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
@@ -1814,7 +1828,69 @@ function handleMessage(sender_psid, received_message) {
 
 
 
-/*********************************************************************************/
+/****************************************************************************************************************************/
+/****************************************************************************************************************************/
+/****************************************************************************************************************************/
+
+
+// to buy house in every
+ else if (received_message.payload === "aaabbb11m_tobuya") {
+         response = {
+                  "text": "Do you wanna talk about the property or something else?",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Yes",
+                          "payload": "tobuyhouse_tellbyuser_yes1a", 
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "No",
+                          "payload": "tobuyhouse_tellbyuser_noo1b",
+                        }
+                      ]
+  }
+   else if (received_message.payload === "tobuyhouse_tellbyuser_yes1a") { 
+    response = {
+      "text": "OK, Tell me."
+    }
+     received_message.payload = false;
+     tobuyhouse_told.yes_yes_user = true;
+  }
+
+  else if (received_message.text &&  tobuyhouse_told.yes_yes_user === true) {
+    userEntered_yes_abouthou.yes_yes_user = received_message.text;
+    response = {
+       "text": "Please leave your contact number. We will contact you later."
+                  
+    }
+    tobuyhouse_told.yes_yes_user = false;
+    tobuyhouse_told.leave_phno11abc = true;
+  }
+    else if (received_message.text &&  tobuyhouse_told.leave_phno11abc === true) {
+    userEntered_yes_abouthou.leave_phno11abc = received_message.text;
+    response = {
+       "text": "Thanks for contacting us. Have a nice day!"
+                  
+    }
+    tobuyhouse_told.leave_phno11abc = false;  
+  }
+
+// user say no 
+  else if (received_message.payload === "tobuyhouse_tellbyuser_noo1b") { 
+    response = {
+      "text": "Please leave your contact number. We will contact you later."
+    }
+  tobuyhouse_told.leave_phno11abc = true;
+  }
+
+
+
+
+
+
+/********************************************************************************************/
+/*********************************************************************************************/
  
 // to buy house in pyinmana, RC
   else if (received_message.payload === "tobuyrcpyin_aa1" ) {
