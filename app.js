@@ -286,12 +286,11 @@ function handleMessage(sender_psid, received_message) {
     }
   }
   else if (received_message.text == "hi" || received_message.text == "hello" || received_message.text == "Hi") {
-     let user = await getUserProfile(sender_psid);   
     response = { "attachment":{
       "type":"template",
       "payload":{
         "template_type":"button",
-        "text":"Hi, You are warmly welcomed. Thank you . "+user.first_name+" "+user.last_name+".for contacting us. Have a nice day!",
+        "text":"Hi, You are warmly welcomed. Thank you for contacting us. Have a nice day!",
          "buttons":[
               {
                 "type":"postback",
@@ -312,7 +311,6 @@ function handleMessage(sender_psid, received_message) {
         }
       }
    }
-    greetUser(sender_psid);
   }
   else if (received_message.text == "Yes!!!") {
    
@@ -10345,14 +10343,13 @@ function handlePostback(sender_psid, received_postback) {
   } else if (payload === 'no') {
     response = { "text": "Oops, try sending another image." }
   } else if (payload === 'get_started') {
-    let user = await getUserProfile(sender_psid);   
     let response1 = { 
       "attachment":{
 
       "type":"template",
       "payload":{
         "template_type":"button",
-        "text":"Hi, You are warmly welcomed. Thank you . "+user.first_name+" "+user.last_name+".for contacting us. Have a nice day!",
+        "text":"Hi, You are warmly welcomed. Thank you for contacting us. Have a nice day!",
          "buttons":[
                     {
                     "type":"postback",
@@ -10397,11 +10394,9 @@ function handlePostback(sender_psid, received_postback) {
    callSend(sender_psid, response1).then(()=>{
   return callSend(sender_psid, response2);
   });
-   greetUser(sender_psid);
  
 
-  } 
-  else if (payload === 'onee') {
+  } else if (payload === 'onee') {
      response = { "attachment": {
                   "type": "template",
                   "payload": {
@@ -11793,57 +11788,3 @@ function removePersistentMenu(res){
     }
   callSendAPI(sender_psid, response);
 }
-
-
-function getUserProfile(sender_psid) {
-  return new Promise(resolve => {
-    request({
-      "uri": "https://graph.facebook.com/"+sender_psid+"?fields=first_name,last_name,profile_pic&access_token=EAAGmSf4ySjMBACxNfZAdxEzIPZCT6lyZAyXZCKHmM2DnRO87hH3s5rRaofImCtfTLp3198fMrntu0K5kZBa0WGbcYx4RC4CUNRRku1U3GFvsBO5ZCllHGA6FaWMeL5ZALdph3omIDBanwAW27JTM5zFYslhbqVerzPn7lglQ4vO5r26P4gvIzBb",
-      "method": "GET"
-      }, (err, res, body) => {
-        if (!err) { 
-          let data = JSON.parse(body);  
-          resolve(data);                 
-    } else {
-      console.error("Error:" + err);
-    }
-    });
-  });
-}
-
-/***********************
-FUNCTION TO GREET USER 
-************************/
-async function greetUser(sender_psid){  
-  let user = await getUserProfile(sender_psid);   
-  let response;
-  response = {
-      "attachment": {
-        "type": "template",
-        "payload": {
-          "template_type": "button",
-          "text": "Hello. "+user.first_name+" "+user.last_name+". It's so nice to meet you.What do you want to do next?",
-          "buttons": [
-                     {
-                    "type":"postback",
-                    "title":"Main Menu",
-                    "payload": "onee"
-                    },
-                    {
-                    "type":"postback",
-                    "title":"Contact us",
-                    "payload":"two2"
-                    },
-                    {
-                    "type":"postback",
-                    "title":"About us",
-                    "payload":"three3"
-                    }  
-            ]
-        }
-      }
-    }
-  callSendAPI(sender_psid, response);
-}
-
-
