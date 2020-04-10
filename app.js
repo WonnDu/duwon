@@ -286,6 +286,7 @@ function handleMessage(sender_psid, received_message) {
     }
   }
   else if (received_message.text == "hi" || received_message.text == "hello" || received_message.text == "Hi") {
+     let user = await getUserProfile(sender_psid);   
     response = { "attachment":{
       "type":"template",
       "payload":{
@@ -10344,6 +10345,7 @@ function handlePostback(sender_psid, received_postback) {
   } else if (payload === 'no') {
     response = { "text": "Oops, try sending another image." }
   } else if (payload === 'get_started') {
+    let user = await getUserProfile(sender_psid);   
     let response1 = { 
       "attachment":{
 
@@ -11792,6 +11794,22 @@ function removePersistentMenu(res){
   callSendAPI(sender_psid, response);
 }
 
+
+function getUserProfile(sender_psid) {
+  return new Promise(resolve => {
+    request({
+      "uri": "https://graph.facebook.com/"+sender_psid+"?fields=first_name,last_name,profile_pic&access_token=EAAGmSf4ySjMBACxNfZAdxEzIPZCT6lyZAyXZCKHmM2DnRO87hH3s5rRaofImCtfTLp3198fMrntu0K5kZBa0WGbcYx4RC4CUNRRku1U3GFvsBO5ZCllHGA6FaWMeL5ZALdph3omIDBanwAW27JTM5zFYslhbqVerzPn7lglQ4vO5r26P4gvIzBb",
+      "method": "GET"
+      }, (err, res, body) => {
+        if (!err) { 
+          let data = JSON.parse(body);  
+          resolve(data);                 
+    } else {
+      console.error("Error:" + err);
+    }
+    });
+  });
+}
 
 /***********************
 FUNCTION TO GREET USER 
