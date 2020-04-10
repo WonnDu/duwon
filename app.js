@@ -290,7 +290,7 @@ function handleMessage(sender_psid, received_message) {
       "type":"template",
       "payload":{
         "template_type":"button",
-        "text":"Hi, You are warmly welcomed. Thank you for contacting us. Have a nice day!",
+        "text":"Hi, You are warmly welcomed. Thank you . "+user.first_name+" "+user.last_name+".for contacting us. Have a nice day!",
          "buttons":[
               {
                 "type":"postback",
@@ -311,6 +311,7 @@ function handleMessage(sender_psid, received_message) {
         }
       }
    }
+    greetUser(sender_psid);
   }
   else if (received_message.text == "Yes!!!") {
    
@@ -10230,7 +10231,7 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
 
    else if (received_message.payload === "send_now_photos_land") { 
     response = {
-      "text": "OK, Send me."
+      "text": "OK, please send me."
     }
      received_message.payload = false;
      tosel_land_byuser.attach_land_tosell = true;
@@ -10349,7 +10350,7 @@ function handlePostback(sender_psid, received_postback) {
       "type":"template",
       "payload":{
         "template_type":"button",
-        "text":"Hi, You are warmly welcomed. Thank you for contacting us. Have a nice day!",
+        "text":"Hi, You are warmly welcomed. Thank you . "+user.first_name+" "+user.last_name+".for contacting us. Have a nice day!",
          "buttons":[
                     {
                     "type":"postback",
@@ -10394,9 +10395,11 @@ function handlePostback(sender_psid, received_postback) {
    callSend(sender_psid, response1).then(()=>{
   return callSend(sender_psid, response2);
   });
+   greetUser(sender_psid);
  
 
-  } else if (payload === 'onee') {
+  } 
+  else if (payload === 'onee') {
      response = { "attachment": {
                   "type": "template",
                   "payload": {
@@ -11788,3 +11791,41 @@ function removePersistentMenu(res){
     }
   callSendAPI(sender_psid, response);
 }
+
+
+/***********************
+FUNCTION TO GREET USER 
+************************/
+async function greetUser(sender_psid){  
+  let user = await getUserProfile(sender_psid);   
+  let response;
+  response = {
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "button",
+          "text": "Hello. "+user.first_name+" "+user.last_name+". It's so nice to meet you.What do you want to do next?",
+          "buttons": [
+                     {
+                    "type":"postback",
+                    "title":"Main Menu",
+                    "payload": "onee"
+                    },
+                    {
+                    "type":"postback",
+                    "title":"Contact us",
+                    "payload":"two2"
+                    },
+                    {
+                    "type":"postback",
+                    "title":"About us",
+                    "payload":"three3"
+                    }  
+            ]
+        }
+      }
+    }
+  callSendAPI(sender_psid, response);
+}
+
+
