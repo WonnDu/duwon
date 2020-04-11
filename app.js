@@ -281,9 +281,10 @@ function handleMessage(sender_psid, received_message) {
     }
   }
   else if (received_message.text == "ahelloo") {
-    response = {
+ /*   response = {
       "text":'Say'
-    }
+    }   */
+    greetUser(sender_psid);
   }
   else if (received_message.text == "hi" || received_message.text == "hello" || received_message.text == "Hi") {
     response = { "attachment":{
@@ -11783,6 +11784,58 @@ function removePersistentMenu(res){
               
             ],
           }]
+        }
+      }
+    }
+  callSendAPI(sender_psid, response);
+}
+
+
+function getUserProfile(sender_psid) {
+  return new Promise(resolve => {
+    request({
+      "uri": "https://graph.facebook.com/"+sender_psid+"?fields=first_name,last_name,profile_pic&access_token=EAAGmSf4ySjMBACxNfZAdxEzIPZCT6lyZAyXZCKHmM2DnRO87hH3s5rRaofImCtfTLp3198fMrntu0K5kZBa0WGbcYx4RC4CUNRRku1U3GFvsBO5ZCllHGA6FaWMeL5ZALdph3omIDBanwAW27JTM5zFYslhbqVerzPn7lglQ4vO5r26P4gvIzBb",
+      "method": "GET"
+      }, (err, res, body) => {
+        if (!err) { 
+          let data = JSON.parse(body);  
+          resolve(data);                 
+    } else {
+      console.error("Error:" + err);
+    }
+    });
+  });
+}
+
+/***********************
+FUNCTION TO GREET USER 
+************************/
+async function greetUser(sender_psid){  
+  let user = await getUserProfile(sender_psid);   
+  let response;
+  response = {
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "button",
+          "text": "Hello. "+user.first_name+" "+user.last_name+". It's so nice to meet you.What do you want to do next?",
+          "buttons": [
+              {
+                "type":"postback",
+                "title":"Main Menu",
+                "payload": "onee"
+              },
+              {
+                "type":"postback",
+                "title":"Contact us",
+                "payload":"two2"
+              },
+                {
+                "type":"postback",
+                "title":"About us",
+                "payload":"three3"
+              }                            
+            ]
         }
       }
     }
