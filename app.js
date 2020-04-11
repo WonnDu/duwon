@@ -217,7 +217,6 @@ app.get('/whitelists',function(req,res){
 });
 
 
-
 // Accepts GET requests at the /webhook endpoint
 app.get('/webhook', (req, res) => {
   
@@ -315,11 +314,6 @@ function handleMessage(sender_psid, received_message) {
    }    */
    greetUser(sender_psid);
   }
-    else if (received_message.text == "mine") {
-              webviewTest(sender_psid);
-  }
-
-
   else if (received_message.text == "Yes!!!") {
    
     received_message.text = false;
@@ -11854,7 +11848,7 @@ async function greetUser(sender_psid){
       "type":"template",
       "payload":{
         "template_type":"button",
-        "text":". ",
+        "text":" ",
          "buttons":[
                     {
                     "type":"postback",
@@ -11876,28 +11870,4 @@ async function greetUser(sender_psid){
 }
 
 
-/***********************************
-FUNCTION TO ADD WHITELIST DOMAIN
-************************************/
-
-const whitelistDomains = (res) => {
-  var messageData = {
-          "whitelisted_domains": [
-             "https://fbstarterbot.herokuapp.com" , 
-             "https://herokuapp.com"                           
-          ]               
-  };  
-  request({
-      url: 'https://graph.facebook.com/v2.6/me/messenger_profile?access_token='+ PAGE_ACCESS_TOKEN,
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      form: messageData
-  },
-  function (error, response, body) {
-      if (!error && response.statusCode == 200) {          
-          res.send(body);
-      } else {           
-          res.send(body);
-      }
-  });
-}   
+    
