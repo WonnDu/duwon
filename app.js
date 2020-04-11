@@ -287,7 +287,7 @@ function handleMessage(sender_psid, received_message) {
     greetUser(sender_psid);
   }
   else if (received_message.text == "hi" || received_message.text == "hello" || received_message.text == "Hi") {
-    response = { "attachment":{
+/*    response = { "attachment":{
       "type":"template",
       "payload":{
         "template_type":"button",
@@ -311,7 +311,8 @@ function handleMessage(sender_psid, received_message) {
             ]      
         }
       }
-   }
+   }    */
+   greetUser(sender_psid);
   }
   else if (received_message.text == "Yes!!!") {
    
@@ -10344,7 +10345,7 @@ function handlePostback(sender_psid, received_postback) {
   } else if (payload === 'no') {
     response = { "text": "Oops, try sending another image." }
   } else if (payload === 'get_started') {
-    let response1 = { 
+/*    let response1 = { 
       "attachment":{
 
       "type":"template",
@@ -10394,10 +10395,11 @@ function handlePostback(sender_psid, received_postback) {
    };
    callSend(sender_psid, response1).then(()=>{
   return callSend(sender_psid, response2);
-  });
- 
+  });       */
+  greetUser(sender_psid);
+ } 
 
-  } else if (payload === 'onee') {
+  else if (payload === 'onee') {
      response = { "attachment": {
                   "type": "template",
                   "payload": {
@@ -10423,7 +10425,9 @@ function handlePostback(sender_psid, received_postback) {
             }
         }
     }
-  }else if (payload === 'two2') {
+  }
+
+  else if (payload === 'two2') {
     response = { "attachment": {
                   "type": "template",
                   "payload": {
@@ -11812,32 +11816,58 @@ FUNCTION TO GREET USER
 ************************/
 async function greetUser(sender_psid){  
   let user = await getUserProfile(sender_psid);   
-  let response;
-  response = {
-      "attachment": {
-        "type": "template",
-        "payload": {
-          "template_type": "button",
-          "text": "Hello. "+user.first_name+" "+user.last_name+". It's so nice to meet you.What do you want to do next?",
-          "buttons": [
-              {
-                "type":"postback",
-                "title":"Main Menu",
-                "payload": "onee"
-              },
-              {
-                "type":"postback",
-                "title":"Contact us",
-                "payload":"two2"
-              },
-                {
-                "type":"postback",
-                "title":"About us",
-                "payload":"three3"
-              }                            
-            ]
+  let response1 = { 
+      "attachment":{
+
+      "type":"template",
+      "payload":{
+        "template_type":"button",
+        "text":"Hi, You . "+user.first_name+" "+user.last_name+". are warmly welcomed. Thank you for contacting us. Have a nice day!",
+         "buttons":[
+                    {
+                    "type":"postback",
+                    "title":"Main Menu",
+                    "payload": "onee"
+                    },
+                    {
+                    "type":"postback",
+                    "title":"Contact us",
+                    "payload":"two2"
+                    },
+                    {
+                    "type":"postback",
+                    "title":"About us",
+                    "payload":"three3"
+                    }                            
+                  ]  
+                }
         }
-      }
-    }
-  callSendAPI(sender_psid, response);
+   };
+   let response2 = { "attachment":{
+
+      "type":"template",
+      "payload":{
+        "template_type":"button",
+        "text":".",
+         "buttons":[
+                    {
+                    "type":"postback",
+                    "title":"Service charges",
+                    "payload": "servch"
+                    },
+                    {
+                    "type":"postback",
+                    "title":"Moving House Service",
+                    "payload":"movehou"
+                    }                           
+                  ]  
+                }
+        }
+   };
+   callSend(sender_psid, response1).then(()=>{
+  return callSend(sender_psid, response2);
+  });
 }
+
+
+    
