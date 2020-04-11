@@ -11798,7 +11798,7 @@ function removePersistentMenu(res){
 function getUserProfile(sender_psid) {
   return new Promise(resolve => {
     request({
-      "uri": "https://graph.facebook.com/"+sender_psid+"?fields=first_name,last_name,profile_pic&access_token=EAAGmSf4ySjMBACxNfZAdxEzIPZCT6lyZAyXZCKHmM2DnRO87hH3s5rRaofImCtfTLp3198fMrntu0K5kZBa0WGbcYx4RC4CUNRRku1U3GFvsBO5ZCllHGA6FaWMeL5ZALdph3omIDBanwAW27JTM5zFYslhbqVerzPn7lglQ4vO5r26P4gvIzBb",
+      "uri": "https://graph.facebook.com/"+sender_psid+"?fields=first_name,last_name,profile_pic&access_token=EAAIqrjrVjpUBAHhoC1uJZARCzRuouIHABnnOx5sOQBH0ZAyb5IAZCXEs09fcKMRj0TeVvHR79VZCeNPZCNa2a4jDbKbweF6hYPG5aMwNH50NqXvZAOWjS68PZBCfuXZARAe9C60HJDfmRU7fsis1ySiIBiJxj4A2ZCZA3fqSaD3XbZAnAPhHOJY8MZCf58ZBI6aLTJ5MZD",
       "method": "GET"
       }, (err, res, body) => {
         if (!err) { 
