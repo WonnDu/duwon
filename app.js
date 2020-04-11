@@ -11822,7 +11822,7 @@ async function greetUser(sender_psid){
       "type":"template",
       "payload":{
         "template_type":"button",
-        "text":"Hi, You . "+user.first_name+" "+user.last_name+". are warmly welcomed. Thank you for contacting us. Have a nice day!",
+        "text":"Hi, "+user.first_name+" "+user.last_name+" are warmly welcomed. Thank you for contacting us. Have a nice day!",
          "buttons":[
                     {
                     "type":"postback",
