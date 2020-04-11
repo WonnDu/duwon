@@ -11848,6 +11848,7 @@ async function greetUser(sender_psid){
       "type":"template",
       "payload":{
         "template_type":"button",
+        "text":" ",
          "buttons":[
                     {
                     "type":"postback",
