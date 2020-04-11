@@ -315,6 +315,11 @@ function handleMessage(sender_psid, received_message) {
    }    */
    greetUser(sender_psid);
   }
+    else if (received_message.text == "mine") {
+              webviewTest(sender_psid);
+  }
+
+
   else if (received_message.text == "Yes!!!") {
    
     received_message.text = false;
