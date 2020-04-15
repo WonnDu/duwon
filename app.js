@@ -10205,7 +10205,7 @@ else if (received_message.payload === "customer_useryes_toldbyuser111da") {
     }
   toselhou_byuser.thanksfor_contacting11 = true;
   } 
-else if (received_message.text && toselhou_byuser.thanksfor_contacting11 === ) {
+else if (received_message.text && toselhou_byuser.thanksfor_contacting11 === true ) {
     response = {
       "text":"Thanks for contacting us. Have a nice day!"
     }
