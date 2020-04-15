@@ -89,6 +89,8 @@ let toselhou_byuser = {
   ph_num:false,
   forSell_both_room:false,
   estimated_price_forSell:false,
+  something_else_toldbyuser:false,
+  thanksfor_contacting11:false,
 }
 let userEntered_Hou_tosel = {};
 
@@ -10101,7 +10103,7 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
                         {
                           "content_type": "text",
                           "title": "Later",
-                          "payload": "tosel_hou_tell_both",
+                          "payload": "tosel_hou_tell_later_byuser11",
                         }
                       ]
     }
@@ -10163,14 +10165,57 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
    else if (received_message.text && toselhou_byuser.ph_num == true) {
     userEntered_Hou_tosel.ph_num = received_message.text;
     response = {
-      "text":"Please leave me your phone number and I will contact you later. Thanks for contacting us."
+      "text":"Please leave me your phone number."
     }
     toselhou_byuser.ph_num = false;
+    toselhou_byuser.something_else_toldbyuser = true;
   } 
 
 
 
-   
+
+  else if (received_message.payload === "tosel_hou_tell_later_byuser11") {
+    response = {
+      "text":"Please tell me the address of own house to be sold"
+    }
+  toselhou_byuser.something_else_toldbyuser = true;
+  } 
+  else if (received_message.text && toselhou_byuser.something_else_toldbyuser  === true) {
+   userEntered_Hou_tosel.something_else_toldbyuser = received_message.text;
+         response = {
+       "text": "Could you send me inside and outside photos with regard to your house?",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Yes",
+                          "payload": "customer_useryes_toldbyuser111da",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "No",
+                          "payload": "customer_usernono_toldbyuser111da",
+                        }
+                      ]
+    }
+    toselhou_byuser.something_else_toldbyuser = false;
+  }
+else if (received_message.payload === "customer_useryes_toldbyuser111da") {
+    response = {
+      "text":"Please tell me."
+    }
+  toselhou_byuser.thanksfor_contacting11 = true;
+  } 
+else if (received_message.text && toselhou_byuser.thanksfor_contacting11 === ) {
+    response = {
+      "text":"Thanks for contacting us. Have a nice day!"
+    }
+  toselhou_byuser.thanksfor_contacting11 = false;
+  } 
+
+
+
+
+/******************************************/   
 
 // for land to be sold by customer
  else if (received_message.payload === "tselottlan" || received_message.payload === "tselpoblan" || received_message.payload === "tseldeklan" || received_message.payload === "tselzayalan" || received_message.payload === "tselzabulan") {
