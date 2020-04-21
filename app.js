@@ -10225,7 +10225,11 @@ else if (received_message.text && toselhou_byuser.thanksfor_contacting11 === tru
 
 
 
-/******************************************/   
+
+
+
+
+/************************************************************************/
 
 // for land to be sold by customer
  else if (received_message.payload === "tselottlan" || received_message.payload === "tselpoblan" || received_message.payload === "tseldeklan" || received_message.payload === "tselzayalan" || received_message.payload === "tselzabulan") {
@@ -11366,7 +11370,7 @@ else if (payload === 'innnter') {
       }
       toselhou_byuser.estimated_price_forSell = true;
   }
-   else if (received_message.payload === "attach_yes111") { 
+   else if (payload === "attach_yes111") { 
     response = {
       "text": "OK, Send me."
     }
