@@ -10299,7 +10299,7 @@ else if (received_message.text && toselhou_byuser.thanksfor_contacting11 === tru
   else if (received_message.attachments && tosel_land_byuser.attach_land_tosell == true) {
       userEntered_land_tosel.attach_land_tosell = received_message.attachments; 
     // Get the URL of the message attachment
-    let attachment_url_land = userEntered_land_tosel.attach_land_tosell[0,1].payload.url;
+    let attachment_url_land = userEntered_land_tosel.attach_land_tosell[0].payload.url;
     response = {
       "attachment": {
         "type": "template",
@@ -10386,34 +10386,7 @@ else if (received_message.payload === "tosel_land_yes_byuser11d") {
 
 
 
-/*  if (received_message.text == "ahii") {    
-    // Create the payload for a basic text message, which
-    // will be added to the body of our request to the Send API
-    response = {
-      "text": "Pick a color:",
-      "quick_replies":[
-      {
-        "content_type":"text",
-        "title":"Red",
-        "payload":"red-1",
-        "image_url":"http://example.com/img/red.png"
-      },
-      {
-        "content_type":"text",
-        "title":"Red",
-        "payload":"red-2",
-        "image_url":"http://example.com/img/red.png"
-      },
-      {
-        "content_type":"text",
-        "title":"Green",
-        "payload":"<POSTBACK_PAYLOAD>",
-        "image_url":"http://example.com/img/green.png"
-      }
-    ]
-    }
-  }
-  */
+
 
   
   // Send the response message
