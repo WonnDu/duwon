@@ -10306,7 +10306,7 @@ else if (received_message.text && toselhou_byuser.thanksfor_contacting11 === tru
         "payload": {
           "template_type": "generic",
           "elements": [{
-            "title": "I received your photos. Do you want to send more?",
+            "title": "I received your photo. Do you want to send more?",
             "subtitle": "Tap a button to answer.",
             "image_url": attachment_url,
             "buttons": [
