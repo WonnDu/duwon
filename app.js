@@ -10299,7 +10299,7 @@ else if (received_message.text && toselhou_byuser.thanksfor_contacting11 === tru
   else if (received_message.attachments && tosel_land_byuser.attach_land_tosell == true) {
       userEntered_land_tosel.attach_land_tosell = received_message.attachments; 
     // Get the URL of the message attachment
-    let attachment_url_land = userEntered_land_tosel.attach_land_tosell[0].payload.url;
+    let attachment_url = userEntered_land_tosel.attach_land_tosell[0].payload.url;
     response = {
       "attachment": {
         "type": "template",
@@ -10308,7 +10308,7 @@ else if (received_message.text && toselhou_byuser.thanksfor_contacting11 === tru
           "elements": [{
             "title": "I received your photos. Do you want to send more?",
             "subtitle": "Tap a button to answer.",
-            "image_url": attachment_url_land,
+            "image_url": attachment_url,
             "buttons": [
               {
                 "type": "postback",
