@@ -86,6 +86,7 @@ let toselhou_byuser = {
   area_hou_inOtt:false,
   photos_ott:false,
   attach_houhou:false,
+  more_attach1hou:false,
   ph_num:false,
   forSell_both_room:false,
   estimated_price_forSell:false,
@@ -10212,66 +10213,16 @@ else if (received_message.text && toselhou_byuser.thanksfor_contacting11 === tru
   } 
 
 
-/*
-   else if (received_message.payload === "send_land_ph") { 
+/*******************/
+// send more photos to sell house
+  else if (received_message.attachments && toselhou_byuser.more_attach1hou == true) {
     response = {
-      "text": "OK, Send me."
+      "text": "Please tell me the estimated price that you want to get."
     }
-     received_message.payload = false;
-     ldld_land_sent.attach_land_ldld = true;
-  }
-  else if (received_message.attachments && ldld_land_sent.attach_land_ldld == true) {
-      userEntered_ldld_land.attach_land_ldld = received_message.attachments; 
-    // Get the URL of the message attachment
-    let attachment_url_phph = userEntered_ldld_land.attach_land_ldld[0].payload.url;
-    response = {
-      "attachment": {
-        "type": "template",
-        "payload": {
-          "template_type": "generic",
-          "elements": [{
-            "title": "I received your photos. Do you want to send more?",
-            "subtitle": "Tap a button to answer.",
-            "image_url": attachment_url_phph,
-            "buttons": [
-              {
-                "type": "postback",
-                "title": "Yes",
-                "payload": "attach_yes_ldld_land",
-              },
-              {
-                "type": "postback",
-                "title": "No, it is enough",
-                "payload": "attach_no_ldld_land",
-              }
-            ],
-          }]
-        }
-      }
-    }
-    ldld_land_sent.attach_land_ldld = false;
+    toselhou_byuser.estimated_price_forSell = true;
   }
 
 
-
-  else if (received_message.text && ldld_land_sent.estimated_price_ldld == true) {
-    userEntered_ldld_land.estimated_price_land = received_message.text;
-    response = {
-      "text":"Please leave me your phone number and I will contact you later."
-    }
-    ldld_land_sent.estimated_price_ldld = false;
-    ldld_land_sent.ldld_ph_num = true;
-  } 
-  else if (received_message.text && ldld_land_sent.ldld_ph_num == true) {
-    userEntered_ldld_land.ldld_ph_num = received_message.text;
-    response = {
-      "text":"Thanks for contacting us. Have a nice day!"
-    }
-    ldld_land_sent.ldld_ph_num = false;
-  } 
-
-
-*/
 
 
 /******************************************/   
@@ -11411,19 +11362,27 @@ else if (payload === 'innnter') {
 
     else if (payload === 'attach_no_forSellingHouse') {
         response = {
-                  "text": "Please tell me the estimated price that you want to get"
+                  "text": "Please tell me the estimated price that you want to get."
       }
       toselhou_byuser.estimated_price_forSell = true;
   }
+   else if (received_message.payload === "attach_yes111") { 
+    response = {
+      "text": "OK, Send me."
+    }
+    toselhou_byuser.more_attach1hou = true;
+  }
+
+
     else if (payload === 'attach_no_sell_land') {
         response = {
-                  "text": "Please tell me the estimated price that you want to get"
+                  "text": "Please tell me the estimated price that you want to get."
       }
       tosel_land_byuser.estimated_price_land = true;
   }
    else if (payload === 'attach_no_ldld_land') {
         response = {
-                  "text": "Please tell me the estimated price that you want to get"
+                  "text": "Please tell me the estimated price that you want to get."
       }
       ldld_land_sent.estimated_price_ldld = true;
   }
