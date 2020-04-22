@@ -333,7 +333,7 @@ function handleMessage(sender_psid, received_message) {
   else if (received_message.text && landlord_sent.fully_address === true) {
     userEntered_landlord.fully_address = received_message.text;
           response = {
-                      "text":'Please tell the type of house that you want to rent out. I mean like RC or Nancat. Please tell me.'
+                      "text":'Please tell the type of house you want to rent out. I mean RC or Nancat etc. Please tell me.'
           }
           landlord_sent.fully_address = false;
           landlord_sent.typeOf_hou_ldld = true;
@@ -414,8 +414,8 @@ function handleMessage(sender_psid, received_message) {
     response = {
       "text": "How much area is your yard?"
     }
-    toselhou_byuser.area_landlord = false;
-    toselhou_byuser.photo_torenthou_asldld = true;
+    landlord_sent.area_landlord = false;
+    landlord_sent.photo_torenthou_asldld = true;
   } 
 
   else if (received_message.text && landlord_sent.photo_torenthou_asldld  === true) {
