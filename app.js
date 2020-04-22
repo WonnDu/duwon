@@ -333,7 +333,7 @@ function handleMessage(sender_psid, received_message) {
   else if (received_message.text && landlord_sent.fully_address === true) {
     userEntered_landlord.fully_address = received_message.text;
           response = {
-                      "text":'Please tell the type of house you want to rent out. I mean RC or Nancat etc. Please tell me.'
+                      "text":'Please tell the type of house you want to rent. I mean RC or Nancat etc. Please tell me.'
           }
           landlord_sent.fully_address = false;
           landlord_sent.typeOf_hou_ldld = true;
@@ -10826,6 +10826,15 @@ function handlePostback(sender_psid, received_postback) {
   return callSend(sender_psid, response2);
   });
   }
+
+// to rent land as landlord
+ else if (payload === "ldld_pyin_land") {
+         response = {
+      "text":'Please tell me fully address of your land to be rented out.'
+    }
+    ldld_land_sent.address_land = true;
+  }
+
   else if (payload === 'ldld5_land') {
          response = {
                   "text": "Please choose the one name of townships in which you want to rent a land.",
