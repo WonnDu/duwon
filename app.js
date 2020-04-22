@@ -507,7 +507,7 @@ function handleMessage(sender_psid, received_message) {
     response = {
       "text":"Do you want to hire how much per month?."
     }
-  toselhou_byuser.estimatedprice_houldld = true;
+  landlord_sent.estimatedprice_houldld = true;
   } 
 
 
