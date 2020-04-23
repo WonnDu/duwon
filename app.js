@@ -9098,6 +9098,7 @@ else if (received_message.payload === "customer_usernono_toldbyuser111da" ) {
     response = {
       "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
     }
+    saveData(sender_psid);
   } 
 
 
