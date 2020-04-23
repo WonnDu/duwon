@@ -376,7 +376,7 @@ function handleMessage(sender_psid, received_message) {
   // for master bed room in landlord
  else if (received_message.payload === "hou_ldld_tell_mb") {    
     response = {
-      "text": "How many master bed rooms in your house?"
+      "text": "How many master bed rooms are in your house?"
     }
     received_message.payload = false;
     landlord_sent.area_landlord = true;
@@ -385,7 +385,7 @@ function handleMessage(sender_psid, received_message) {
   // for bed room in landlord
    else if (received_message.payload === "hou_ldld_br") {    
     response = {
-      "text": "How many bed rooms in your house?"
+      "text": "How many bed rooms are in your house?"
     }
     received_message.payload = false;
     landlord_sent.area_landlord = true;
@@ -394,7 +394,7 @@ function handleMessage(sender_psid, received_message) {
 
   // for both master bed room and bed room in landlord
  else if (received_message.payload === "hou_ldld_both") {
-   response  = { "text": "How many master bed rooms in your house?" 
+   response  = { "text": "How many master bed rooms are in your house?" 
   }
   received_message.payload = false;
   landlord_sent.typeOf_both_ldld = true;
@@ -402,7 +402,7 @@ function handleMessage(sender_psid, received_message) {
  else if (received_message.text && landlord_sent.typeOf_both_ldld === true) {  
   userEntered_landlord.typeOf_both_ldld = received_message.text; 
     response = {
-      "text": "How many bed rooms in your house?"
+      "text": "How many bed rooms are in your house?"
     }
     landlord_sent.typeOf_both_ldld = false;
     landlord_sent.area_landlord = true;
@@ -444,7 +444,7 @@ function handleMessage(sender_psid, received_message) {
       "text": "OK, please send me."
     }
      received_message.payload = false;
-     toselhou_byuser.attach1_hou1torent2 = true;
+     landlord_sent.attach1_hou1torent2 = true;
   }
 
 
@@ -485,7 +485,7 @@ function handleMessage(sender_psid, received_message) {
     else if (received_message.text && landlord_sent.estimatedprice_houldld == true) {
     userEntered_landlord.estimatedprice_houldld = received_message.text;
     response = {
-      "text":"Do you want to rent how much months at least?"
+      "text":"How many months do you want to rent your house at least?"
     }
     landlord_sent.estimatedprice_houldld = false;
     landlord_sent.howmuch_permonth_hou1 = true;
@@ -505,7 +505,7 @@ function handleMessage(sender_psid, received_message) {
 
   else if (received_message.payload === "send2_later2photos2_hou_torent2_asldld") {
     response = {
-      "text":"Do you want to hire how much per month?."
+      "text":"Do you want to rent hosw much per month?."
     }
   landlord_sent.estimatedprice_houldld = true;
   } 
@@ -650,7 +650,7 @@ else if (received_message.text && toselhou_byuser.something1else_byuser11 === tr
   else if (received_message.text && ldld_land_sent.estimated_price_ldld == true) {
     userEntered_ldld_land.estimated_price_land = received_message.text;
     response = {
-      "text":"Do you want to rent how much months at least?"
+      "text":"How many months do you want to rent your land at least?"
     }
     ldld_land_sent.estimated_price_ldld = false;
     ldld_land_sent.howmuch_month1_land = true;
@@ -677,7 +677,7 @@ else if (received_message.text && toselhou_byuser.something1else_byuser11 === tr
   else if (received_message.text && ldld_land_sent.ldld_ph_num  === true) {
    userEntered_ldld_land.ldld_ph_num = received_message.text;
          response = {
-       "text": "Do you want to tell something to us?",
+       "text": "Do you want to tell me with regard to your proeprty or something else to us?",
                     "quick_replies": [
                         {
                           "content_type": "text",
@@ -10573,57 +10573,6 @@ function handlePostback(sender_psid, received_postback) {
   } else if (payload === 'no') {
     response = { "text": "Oops, try sending another image." }
   } else if (payload === 'get_started') {
-/*    let response1 = { 
-      "attachment":{
-
-      "type":"template",
-      "payload":{
-        "template_type":"button",
-        "text":"Hi, You are warmly welcomed. Thank you for contacting us. Have a nice day!",
-         "buttons":[
-                    {
-                    "type":"postback",
-                    "title":"Main Menu",
-                    "payload": "onee"
-                    },
-                    {
-                    "type":"postback",
-                    "title":"Contact us",
-                    "payload":"two2"
-                    },
-                    {
-                    "type":"postback",
-                    "title":"About us",
-                    "payload":"three3"
-                    }                            
-                  ]  
-                }
-        }
-   };
-   let response2 = { "attachment":{
-
-      "type":"template",
-      "payload":{
-        "template_type":"button",
-        "text":".",
-         "buttons":[
-                    {
-                    "type":"postback",
-                    "title":"Service charges",
-                    "payload": "servch"
-                    },
-                    {
-                    "type":"postback",
-                    "title":"Moving House Service",
-                    "payload":"movehou"
-                    }                           
-                  ]  
-                }
-        }
-   };
-   callSend(sender_psid, response1).then(()=>{
-  return callSend(sender_psid, response2);
-  });       */
   greetUser(sender_psid);
  } 
 
