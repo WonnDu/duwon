@@ -10609,8 +10609,8 @@ function handlePostback(sender_psid, received_postback) {
                   "payload": {
                     "template_type": "generic",
                     "elements": [{
-                      "title": "D",
-                      "subtitle": "Office Address: No-117, Shwe Li Road, Pobba Thiri Township, Nyapyitaw, Myanmar",
+                      "text": "Office Address: No-117, Shwe Li Road, Pobba Thiri Township, Nyapyitaw, Myanmar. Contact bumber: (+95)-9-09970870200 Email: duwon119address@gmail.com",
+                    //  "image_url":"",
                       "buttons": [
                         {
                           "type": "postback",
@@ -10621,13 +10621,26 @@ function handlePostback(sender_psid, received_postback) {
                           "type": "postback",
                           "title": "About us",
                           "payload": "abus",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "Talk to Admin",
+                          "payload": "talk_to_adminofduwon",
                         }
                       ],
                     }]
                   }
                 }
-              }
+              }              
   }
+
+  // talk to admin
+    else if (payload === 'talk_to_adminofduwon') {
+    response = { 
+                "text": "Thanks for messaging us. We try to be as responsive as possible. We'll get back to you soon. You can also leave messages and your contact number. Have a nice day!",
+                  
+  }
+
   // to rent in main menu
   else if (payload === 'tore') {
     response = { "attachment": {
@@ -11380,7 +11393,7 @@ else if (payload === 'innnter') {
   return callSend(sender_psid, response2);
   });
  } else if (payload === 'se1') {
-    response  = { "text": "3% service charge for the property that has value under 1000 lakhs!!   And 2% service charge for the property that has value 1000 lakhs and above 1000 lakhs!!" };
+    response  = { "text": "3% service charge for the property that has value below 1000 lakhs!!   And 2% service charge for the property that has value 1000 lakhs and above 1000 lakhs!!" };
  } else if (payload === 'ren3') {
     response  = { "text": "Take rent of a month from both sides whether the period is rented or not." };
  } else if (payload === 'tosel') {
@@ -12090,6 +12103,11 @@ async function greetUser(sender_psid){
                     "type":"postback",
                     "title":"Service charges",
                     "payload": "servch"
+                    },
+                    {
+                      "type": "postback",
+                      "title": "Talk to Admin",
+                      "payload": "talk_to_adminofduwon",
                     }                          
                   ]  
                 }
