@@ -443,7 +443,6 @@ function handleMessage(sender_psid, received_message) {
     response = {
       "text": "OK, please send me."
     }
-     received_message.payload = false;
      landlord_sent.attach1_hou1torent2 = true;
   }
 
@@ -11505,14 +11504,14 @@ else if (payload === 'innnter') {
     response = {
       "text": "OK, please send me."
     }
-     ldld_land_sent.attach1_hou1torent2 = true;
+     landlord_sent.attach1_hou1torent2 = true;
   }
 
    else if (payload === 'torenthou2nono_asldld') {
         response = {
                   "text": "Do you want to rent how much per month?"
       }
-      ldld_land_sent.estimatedprice_houldld = true;
+      landlord_sent.estimatedprice_houldld = true;
   }
 
 
