@@ -11505,7 +11505,7 @@ else if (payload === 'innnter') {
     response = {
       "text": "OK, please send me."
     }
-     toselhou_byuser.attach1_hou1torent2 = true;
+     ldld_land_sent.attach1_hou1torent2 = true;
   }
 
    else if (payload === 'torenthou2nono_asldld') {
