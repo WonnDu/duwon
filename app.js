@@ -412,7 +412,7 @@ function handleMessage(sender_psid, received_message) {
  else if (received_message.text && landlord_sent.area_landlord === true) { 
   userEntered_landlord.area_landlord = received_message.text;   
     response = {
-      "text": "How much area is your yard?"
+      "text": "Please tell me land area of your house"
     }
     landlord_sent.area_landlord = false;
     landlord_sent.photo_torenthou_asldld = true;
@@ -504,7 +504,7 @@ function handleMessage(sender_psid, received_message) {
 
   else if (received_message.payload === "send2_later2photos2_hou_torent2_asldld") {
     response = {
-      "text":"Do you want to rent hosw much per month?."
+      "text":"Do you want to rent how much per month?."
     }
   landlord_sent.estimatedprice_houldld = true;
   } 
@@ -535,7 +535,7 @@ else if (received_message.payload === "customer1a_useryes1_torenthou1a") {
     }
   landlord_sent.something1else_byuser11 = true;
   } 
-else if (received_message.text && toselhou_byuser.something1else_byuser11 === true ) {
+else if (received_message.text && landlord_sent.something1else_byuser11 === true ) {
     response = {
       "text":"Thanks for contacting us.I will contact you within 24 hours. Have a nice day!"
     }
@@ -10231,7 +10231,7 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
  else if (received_message.text && toselhou_byuser.area_hou_inOtt === true) { 
   userEntered_Hou_tosel.area_hou_inOtt = received_message.text;   
     response = {
-      "text": "How much area is your yard?"
+      "text": "Please tell me land area of your house."
     }
     toselhou_byuser.area_hou_inOtt = false;
     toselhou_byuser.typeofLand_ofhou1 = true;
@@ -10390,7 +10390,7 @@ else if (received_message.payload === "customer_usernono_toldbyuser111da" ) {
 // to sell land
  else if (received_message.payload === "tselottlan" || received_message.payload === "tselpoblan" || received_message.payload === "tseldeklan" || received_message.payload === "tselzayalan" || received_message.payload === "tselzabulan") {
          response = {
-      "text":'Please tell the area of land that you want to sell.'
+      "text":'Please tell me area of your land that you want to sell.'
     }
     received_message.payload = false;
     tosel_land_byuser.land_type_tosell = true;
@@ -10398,7 +10398,7 @@ else if (received_message.payload === "customer_usernono_toldbyuser111da" ) {
  else if (received_message.text && tosel_land_byuser.land_type_tosell === true) {
   userEntered_land_tosel.land_type_tosell = received_message.text;
          response = {
-      "text":'Please tell the type of land that you want to sell.'
+      "text":'Please tell me type of land that you want to sell.'
     }
     tosel_land_byuser.land_type_tosell = false;
     tosel_land_byuser.land_name_tosell = true;
@@ -10406,7 +10406,7 @@ else if (received_message.payload === "customer_usernono_toldbyuser111da" ) {
    else if (received_message.text &&  tosel_land_byuser.land_name_tosell === true) {
    userEntered_land_tosel.land_name_tosell = received_message.text;
          response = {
-       "text": "Min yak land ka min a myie pauk lar?",
+       "text": "Is it a myie pauk or not?",
                     "quick_replies": [
                         {
                           "content_type": "text",
