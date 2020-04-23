@@ -11510,7 +11510,7 @@ else if (payload === 'innnter') {
 
    else if (payload === 'torenthou2nono_asldld') {
         response = {
-                  "text": "Do you want how much per month."
+                  "text": "Do you want to rent how much per month?"
       }
       ldld_land_sent.estimatedprice_houldld = true;
   }
