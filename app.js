@@ -10640,7 +10640,7 @@ function handlePostback(sender_psid, received_postback) {
                 "text": "Thanks for messaging us. We try to be as responsive as possible. We'll get back to you soon. You can also leave messages and your contact number. Have a nice day!",
                   
   }
-
+}
   // to rent in main menu
   else if (payload === 'tore') {
     response = { "attachment": {
