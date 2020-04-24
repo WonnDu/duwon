@@ -91,7 +91,7 @@ let userEntered_ldld_land = {};
 
 // to sell their house
 let toselhou_byuser = {
-  twp_name_tobeSold: false,
+  twp_name_tobeSold:false,
   to_sel_hou:false,
   howMuchRoom_hou:false,
   area_hou_inOtt:false,
@@ -8880,7 +8880,7 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
 
 /***********************************************************************************/
 // to sell house
- else if (received_message.text && toselhou_byuser.twp_name_tobeSold == true) {
+ else if (received_message.text && toselhou_byuser.twp_name_tobeSold === true) {
   userEntered_Hou_tosel.twp_name_tobeSold = received_message.text;
          response = {
       "text":'Please tell the type of house that you want to sell like RC or Nancat'
