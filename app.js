@@ -10199,12 +10199,12 @@ else if (payload === 'hoou2') {
                           "content_type": "text",
                           "title": "Zabu Thiri",
                           "payload": "tselzabu",
-                        },
+                        } /*,
                         {
                           "type": "postback",
                           "title": "Pyinmana Township",
                           "payload": "toselhoupyin",
-                        }
+                        } */
                       ]
       }
       toselhou_byuser.twp_name_tobeSold = true;   
