@@ -9091,14 +9091,16 @@ else if (received_message.payload === "customer_useryes_toldbyuser111da") {
     }
   toselhou_byuser.thanksfor_contacting11 = true;
   } 
-/*
+
 else if (received_message.text && toselhou_byuser.thanksfor_contacting11 === true ) {
+    db.collection('customer_info').add(userEntered_Hou_tosel);
+
     response = {
       "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
     }
   toselhou_byuser.thanksfor_contacting11 = false;
   }
-  */
+/*  
 else if (received_message.text && toselhou_byuser.thanksfor_contacting11 === true ) {
     response = {
        "text": "Is it all the right data? Do you want to send your data again?",
@@ -9122,7 +9124,7 @@ else if (received_message.payload ===  "tosend_data_again_yes") {
        response = {"text" : "Ok!"}
   } 
 
-
+*/
 
 /*******************/
 
