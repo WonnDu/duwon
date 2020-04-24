@@ -108,7 +108,7 @@ let toselhou_byuser = {
 let userEntered_Hou_tosel = {};
 
 
-var to_sel_hou = true;
+let to_sel_hou = true;
 
 /*********************************************/
 
