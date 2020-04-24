@@ -899,8 +899,8 @@ else if (received_message.text && landlord_sent.something1else_byuser11 === true
     toselhou_byuser.twp_name_tobeSold = false; 
     toselhou_byuser.to_sel_hou = true;
   */
-  asking_twpname (sender_psid);
   toselhou_byuser.twp_name_tobeSold = false;
+  asking_twpname (sender_psid);
   }
 
  else if (received_message.text && toselhou_byuser.to_sel_hou === true) {
