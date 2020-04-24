@@ -29,7 +29,7 @@ const
   body_parser = require('body-parser'),
   firebase = require('firebase-admin');
 
-  cons app = express();
+  const app = express();
   app.use(body_parser.json());
   app.use(body_parser.urlencoded());
 
