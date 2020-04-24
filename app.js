@@ -10178,27 +10178,27 @@ else if (payload === 'hoou2') {
                         {
                           "content_type": "text",
                           "title": "Ottara",
-                          "payload": "tselott",
+                          "payload": "tosellin_ftwp", //tselott
                         },
                          {
                           "content_type": "text",
                           "title": "Pobba",
-                          "payload": "tselpob",
+                          "payload": "tosellin_ftwp",  //tselpob
                         },
                         {
                           "content_type": "text",
                           "title": "Dekkhina",
-                          "payload": "tseldek",
+                          "payload": "tosellin_ftwp",  //tseldek
                         },
                         {
                           "content_type": "text",
                           "title": "Zaya Thiri",
-                          "payload": "tselzaya",
+                          "payload": "tosellin_ftwp",  //tselzaya
                         },
                         {
                           "content_type": "text",
                           "title": "Zabu Thiri",
-                          "payload": "tselzabu",
+                          "payload": "tosellin_ftwp",  //tselzabu
                         } /*,
                         {
                           "type": "postback",
