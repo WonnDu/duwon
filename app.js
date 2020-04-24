@@ -10156,7 +10156,7 @@ else if (payload === 'hoou2') {
                           "payload": "toselhoupyin",
                         } */
                       ]
-      };
+      }
       toselhou_byuser.twp_name_tobeSold = true;   
   }
 
