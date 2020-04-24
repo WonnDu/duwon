@@ -90,7 +90,7 @@ let userEntered_ldld_land = {};
 
 
 // to sell their house
-var toselhou_byuser = {
+let toselhou_byuser = {
   to_sel_hou:false,
   howMuchRoom_hou:false,
   area_hou_inOtt:false,
@@ -104,7 +104,7 @@ var toselhou_byuser = {
   something_else_toldbyuser:false,
   thanksfor_contacting11:false,
 }
-var userEntered_Hou_tosel = {};
+let userEntered_Hou_tosel = {};
 
 // for customers who want to sell land
 let tosel_land_byuser = {
@@ -9118,7 +9118,7 @@ else if (received_message.text && toselhou_byuser.thanksfor_contacting11 === tru
     toselhou_byuser.thanksfor_contacting11 = false;
   } 
 else if (received_message.payload ===  "tosend_data_again_yes") {
-       saveData(sender_psid);
+       db.collection('customer_info').add(userEntered_Hou_tosel);
        response = {"text" : "Ok!"}
   } 
 
@@ -10644,6 +10644,7 @@ async function greetUser(sender_psid){
 
 
 /*function function save data to firebase*/
+/*
 function saveData(sender_psid) {
   const cu_info = {
     id : sender_psid,
@@ -10662,7 +10663,7 @@ function saveData(sender_psid) {
   }
   db.collection('customer_info').add(cu_info);
 }
-
+*/
 //db.collection('user_information').add(info);
 
 /*
