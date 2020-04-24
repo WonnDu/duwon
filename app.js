@@ -91,6 +91,7 @@ let userEntered_ldld_land = {};
 
 // to sell their house
 let toselhou_byuser = {
+  twp_name_tobeSold = false,
   to_sel_hou:false,
   howMuchRoom_hou:false,
   area_hou_inOtt:false,
@@ -108,7 +109,6 @@ let userEntered_Hou_tosel = {};
 
 // for customers who want to sell land
 let tosel_land_byuser = {
-  twp_name_tobeSold = false, 
   land_type_tosell:false,
   land_name_tosell:false,
   attach_land_tosell:false,
