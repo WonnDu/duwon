@@ -8884,7 +8884,6 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
          response = {
       "text":'Please tell the type of house that you want to sell like RC or Nancat'
     }
-    twp_name_tobeSold = true; 
     received_message.payload = false;
     toselhou_byuser.to_sel_hou = true;
   }
@@ -10166,6 +10165,7 @@ else if (payload === 'innnter') {
                   }
                 }
               }
+              toselhou_byuser.twp_name_tobeSold = true;
   }
   else if (payload === 'toselhou5') {
         response = {
