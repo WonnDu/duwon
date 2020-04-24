@@ -891,13 +891,16 @@ else if (received_message.text && landlord_sent.something1else_byuser11 === true
 
 /***********************************************************************************/
 // to sell house
- else if (received_message.text && toselhou_byuser.twp_name_tobeSold = true) {
+ else if (received_message.text && toselhou_byuser.twp_name_tobeSold == true) {
   userEntered_Hou_tosel.twp_name_tobeSold = received_message.text;
-         response = {
+ /*        response = {
       "text":'Please tell the type of house that you want to sell like RC or Nancat'
     }
     toselhou_byuser.twp_name_tobeSold = false; 
     toselhou_byuser.to_sel_hou = true;
+  */
+  asking_twpname (sender_psid);
+  toselhou_byuser.twp_name_tobeSold = false;
   }
 
  else if (received_message.text && toselhou_byuser.to_sel_hou === true) {
@@ -10630,4 +10633,18 @@ let toselhou_byuser = {
   thanksfor_contacting11:false,
 }
 let userEntered_Hou_tosel = {};    
+*/
+
+
+
+async function asking_twpname (sender_psid){
+    response = { "text":'Please tell the type of house that you want to sell like RC or Nancat'}
+     toselhou_byuser.to_sel_hou = true;
+}
+/*
+ response = {
+      "text":'Please tell the type of house that you want to sell like RC or Nancat'
+    }
+    toselhou_byuser.twp_name_tobeSold = false; 
+    toselhou_byuser.to_sel_hou = true;
 */
