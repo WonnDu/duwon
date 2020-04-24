@@ -891,7 +891,7 @@ else if (received_message.text && landlord_sent.something1else_byuser11 === true
 
 /***********************************************************************************/
 // to sell house
- else if (received_message.text && toselhou_byuser.twp_name_tobeSold == true) {
+ else if (received_message.text && toselhou_byuser.twp_name_tobeSold === true) {
   userEntered_Hou_tosel.twp_name_tobeSold = received_message.text;
          response = {
       "text":'Please tell the type of house that you want to sell like RC or Nancat'
@@ -899,7 +899,8 @@ else if (received_message.text && landlord_sent.something1else_byuser11 === true
     toselhou_byuser.twp_name_tobeSold = false; 
     toselhou_byuser.to_sel_hou = true;
   }
- else if (received_message.text && toselhou_byuser.to_sel_hou == true) {
+
+ else if (received_message.text && toselhou_byuser.to_sel_hou === true) {
   userEntered_Hou_tosel.to_sel_hou = received_message.text;
          response = {
       "text":'How many floors is the house?'
@@ -907,6 +908,7 @@ else if (received_message.text && landlord_sent.something1else_byuser11 === true
     toselhou_byuser.to_sel_hou = false;
     toselhou_byuser.howMuchRoom_hou = true;
   }
+
    else if (received_message.text &&  toselhou_byuser.howMuchRoom_hou === true) {
    userEntered_Hou_tosel.howMuchRoom_hou = received_message.text;
          response = {
