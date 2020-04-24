@@ -9088,17 +9088,35 @@ else if (received_message.payload === "customer_useryes_toldbyuser111da") {
     }
   toselhou_byuser.thanksfor_contacting11 = true;
   } 
+/*
 else if (received_message.text && toselhou_byuser.thanksfor_contacting11 === true ) {
     response = {
       "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
     }
   toselhou_byuser.thanksfor_contacting11 = false;
   }
-else if (received_message.payload === "customer_usernono_toldbyuser111da" ) {
+  */
+else if (received_message.text && toselhou_byuser.thanksfor_contacting11 === true ) {
     response = {
-      "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
+       "text": "Is it all the right data? Do you want to send your data again?",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Yes",
+                          "payload": "tosend_data_again_yes",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "No",
+                          "payload": "tosend_data_again_no",
+                        }
+                      ]
     }
-    saveData(sender_psid);
+    toselhou_byuser.thanksfor_contacting11 = false;
+  } 
+else if (received_message.payload ===  "tosend_data_again_yes") {
+       saveData(sender_psid);
+       response = {"text" : "Ok!"}
   } 
 
 
