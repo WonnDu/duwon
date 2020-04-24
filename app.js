@@ -913,7 +913,7 @@ else if (received_message.text && landlord_sent.something1else_byuser11 === true
          response = {
       "text":'How many floors is the house?'
     }
-    toselhou_byuser.to_sel_hou = false;
+    to_sel_hou = false;
     toselhou_byuser.howMuchRoom_hou = true;
   }
 
