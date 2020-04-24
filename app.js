@@ -10658,7 +10658,7 @@ function saveData(sender_psid) {
     sth_else_toldbyUser: userEntered_Hou_tosel.something_else_toldbyuser,
     thank_user: userEntered_Hou_tosel.thanksfor_contacting11,
   }
-  db.collection('customer_info').add(cu_info);
+  db.collection('customer_info').doc().set(cu_info);
 }
 
 /*
