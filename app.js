@@ -108,6 +108,7 @@ let userEntered_Hou_tosel = {};
 
 // for customers who want to sell land
 let tosel_land_byuser = {
+  twp_name_tobeSold = false, 
   land_type_tosell:false,
   land_name_tosell:false,
   attach_land_tosell:false,
@@ -8883,6 +8884,7 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
          response = {
       "text":'Please tell the type of house that you want to sell like RC or Nancat'
     }
+    twp_name_tobeSold = true; 
     received_message.payload = false;
     toselhou_byuser.to_sel_hou = true;
   }
@@ -9100,31 +9102,7 @@ else if (received_message.text && toselhou_byuser.thanksfor_contacting11 === tru
     }
   toselhou_byuser.thanksfor_contacting11 = false;
   }
-/*  
-else if (received_message.text && toselhou_byuser.thanksfor_contacting11 === true ) {
-    response = {
-       "text": "Is it all the right data? Do you want to send your data again?",
-                    "quick_replies": [
-                        {
-                          "content_type": "text",
-                          "title": "Yes",
-                          "payload": "tosend_data_again_yes",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "No",
-                          "payload": "tosend_data_again_no",
-                        }
-                      ]
-    }
-    toselhou_byuser.thanksfor_contacting11 = false;
-  } 
-else if (received_message.payload ===  "tosend_data_again_yes") {
-       db.collection('customer_info').add(userEntered_Hou_tosel);
-       response = {"text" : "Ok!"}
-  } 
 
-*/
 
 /*******************/
 
@@ -10220,6 +10198,7 @@ else if (payload === 'innnter') {
                         }
                       ]
       }
+      twp_name_tobeSold = true;   
   }
 
 
@@ -10228,6 +10207,7 @@ else if (payload === 'innnter') {
          response = {
       "text":'Please tell the type of house that you want to sell like RC or Nancat'
     }
+
     toselhou_byuser.to_sel_hou = true;
   }
 
