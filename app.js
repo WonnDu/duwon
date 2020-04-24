@@ -90,7 +90,7 @@ let userEntered_ldld_land = {};
 
 
 // to sell their house
-let toselhou_byuser = {
+var toselhou_byuser = {
   to_sel_hou:false,
   howMuchRoom_hou:false,
   area_hou_inOtt:false,
