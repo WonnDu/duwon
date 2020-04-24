@@ -8880,12 +8880,12 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
 
 /***********************************************************************************/
 // to sell house
- else if (received_message.payload === "tselott" || received_message.payload === "tselpob" || received_message.payload === "tseldek" || received_message.payload === "tselzaya" || received_message.payload === "tselzabu") {
+ else if (received_message.text && toselhou_byuser.twp_name_tobeSold == true) {
+  userEntered_Hou_tosel.twp_name_tobeSold = received_message.text;
          response = {
       "text":'Please tell the type of house that you want to sell like RC or Nancat'
     }
     toselhou_byuser.twp_name_tobeSold = false; 
-    received_message.payload = false;
     toselhou_byuser.to_sel_hou = true;
   }
  else if (received_message.text && toselhou_byuser.to_sel_hou === true) {
@@ -10145,7 +10145,9 @@ else if (payload === 'innnter') {
                   }
                 }
               }
-} else if (payload === 'hoou2') {
+} 
+/*
+else if (payload === 'hoou2') {
     response = { "attachment": {
                   "type": "template",
                   "payload": {
@@ -10168,7 +10170,8 @@ else if (payload === 'innnter') {
               }
               toselhou_byuser.twp_name_tobeSold = true;
   }
-  else if (payload === 'toselhou5') {
+  */
+  else if (payload === 'hoou2') {
         response = {
                   "text": "Please choose the township in which you want to sell house:",
                     "quick_replies": [
@@ -10196,6 +10199,11 @@ else if (payload === 'innnter') {
                           "content_type": "text",
                           "title": "Zabu Thiri",
                           "payload": "tselzabu",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "Pyinmana Township",
+                          "payload": "toselhoupyin",
                         }
                       ]
       }
@@ -10204,6 +10212,7 @@ else if (payload === 'innnter') {
 
 
 // to sell house
+/*
  else if (payload === "toselhoupyin") {
          response = {
       "text":'Please tell the type of house that you want to sell like RC or Nancat'
@@ -10211,6 +10220,7 @@ else if (payload === 'innnter') {
     toselhou_byuser.twp_name_tobeSold = false; 
     toselhou_byuser.to_sel_hou = true;
   }
+  */
 
   else if (payload === 'attach_no_forSellingHouse') {
         response = {
