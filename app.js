@@ -92,7 +92,7 @@ let userEntered_ldld_land = {};
 // to sell their house
 let toselhou_byuser = {
   twp_name_tobeSold:false,
-//  to_sel_hou:false,
+  to_sel_hou:false,
   howMuchRoom_hou:false,
   area_hou_inOtt:false,
   typeofLand_ofhou1:false,
@@ -108,7 +108,6 @@ let toselhou_byuser = {
 let userEntered_Hou_tosel = {};
 
 
-let to_sel_hou = true;
 
 /*********************************************/
 
@@ -898,22 +897,19 @@ else if (received_message.text && landlord_sent.something1else_byuser11 === true
 // to sell house
  else if (received_message.text && toselhou_byuser.twp_name_tobeSold == true) {
   userEntered_Hou_tosel.twp_name_tobeSold = received_message.text;
- /*        response = {
+          response = {
       "text":'Please tell the type of house that you want to sell like RC or Nancat'
     }
     toselhou_byuser.twp_name_tobeSold = false; 
     toselhou_byuser.to_sel_hou = true;
-  */
-  asking_twpname (sender_psid);
-  toselhou_byuser.twp_name_tobeSold = false;
   }
 
- else if (received_message.text && to_sel_hou == true) {
+ else if (received_message.text && toselhou_byuser.to_sel_hou == true) {
   userEntered_Hou_tosel.to_sel_hou = received_message.text;
          response = {
       "text":'How many floors is the house?'
     }
-    to_sel_hou = false;
+    toselhou_byuser.to_sel_hou = false;
     toselhou_byuser.howMuchRoom_hou = true;
   }
 
@@ -10638,19 +10634,4 @@ let toselhou_byuser = {
   thanksfor_contacting11:false,
 }
 let userEntered_Hou_tosel = {};    
-*/
-
-
-
-async function asking_twpname (sender_psid){
-    response = { "text":'Please tell the type of house that you want to sell like RC or Nancat'}
-    to_sel_hou = true;
-// toselhou_byuser.to_sel_hou = true;
-}
-/*
- response = {
-      "text":'Please tell the type of house that you want to sell like RC or Nancat'
-    }
-    toselhou_byuser.twp_name_tobeSold = false; 
-    toselhou_byuser.to_sel_hou = true;
 */
