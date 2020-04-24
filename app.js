@@ -899,8 +899,8 @@ else if (received_message.text && landlord_sent.something1else_byuser11 === true
     toselhou_byuser.twp_name_tobeSold = false; 
     toselhou_byuser.to_sel_hou = true;
   */
-  toselhou_byuser.twp_name_tobeSold = false;
   asking_twpname (sender_psid);
+  toselhou_byuser.twp_name_tobeSold = false; 
   }
 
  else if (received_message.text && toselhou_byuser.to_sel_hou === true) {
@@ -10125,41 +10125,41 @@ else if (payload === 'hoou2') {
   }
   */
   else if (payload === 'hoou2') {
-        response = {
-                  "text": "Please choose the township in which you want to sell house:",
-                    "quick_replies": [
-                        {
-                          "content_type": "text",
-                          "title": "Ottara",
-                          "payload": "tosellin_ftwp", //tselott
-                        },
-                         {
-                          "content_type": "text",
-                          "title": "Pobba",
-                          "payload": "tosellin_ftwp",  //tselpob
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Dekkhina",
-                          "payload": "tosellin_ftwp",  //tseldek
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Zaya Thiri",
-                          "payload": "tosellin_ftwp",  //tselzaya
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Zabu Thiri",
-                          "payload": "tosellin_ftwp",  //tselzabu
-                        } /*,
+        response = { "text": "Please choose the township in which you want to sell house:",
+                            "quick_replies": [
+                                              {
+                                                "content_type": "text",
+                                                "title": "Ottara",
+                                                "payload": "tosellin_ftwp" //tselott
+                                              },
+                                              {
+                                                "content_type": "text",
+                                                "title": "Pobba",
+                                                "payload": "tosellin_ftwp"  //tselpob
+                                              },
+                                              {
+                                                "content_type": "text",
+                                                "title": "Dekkhina",
+                                                "payload": "tosellin_ftwp"  //tseldek
+                                              },
+                                              {
+                                                "content_type": "text",
+                                                "title": "Zaya Thiri",
+                                                "payload": "tosellin_ftwp"  //tselzaya
+                                              },
+                                              {
+                                                "content_type": "text",
+                                                "title": "Zabu Thiri",
+                                                "payload": "tosellin_ftwp"  //tselzabu
+                                              } 
+                        /*,
                         {
                           "type": "postback",
                           "title": "Pyinmana Township",
                           "payload": "toselhoupyin",
                         } */
                       ]
-      }
+      };
       toselhou_byuser.twp_name_tobeSold = true;   
   }
 
