@@ -324,6 +324,9 @@ function handleMessage(sender_psid, received_message) {
 
 
 
+/****************************************************************/
+
+
 
   // to rent house as a landlord
   else if (received_message.payload === "ld_ottwp" || received_message.payload === "ld_potwp" || received_message.payload === "ld_dektwp" || received_message.payload === "ld_zaytwp" || received_message.payload === "ld_zaytwp") {    
@@ -553,13 +556,9 @@ else if (received_message.text && landlord_sent.something1else_byuser11 === true
 
 
 
-
-
-
-
-
 /******************************************************************************************/
-/******************************************************************************************/
+
+
 
 // to rent land as landlord
  else if (received_message.payload === "ld_ottwp_land" || received_message.payload === "ld_potwp_land" || received_message.payload === "ld_dektwp_land" || received_message.payload === "ld_zaytwp_land" || received_message.payload === "ld_zabtwp_land") {
@@ -718,18 +717,6 @@ else if (received_message.text && landlord_sent.something1else_byuser11 === true
 
 
 /*****************************************************************/
-/*
-  else if (received_message.text == "1mb" || received_message.text == "2mb" || received_message.text == "3mb" || received_message.text == "4mb" || received_message.text == "5mb") {
-    response = {
-      "text": `You sent the message: "${received_message.text}". Please me the area of your land to be rented!`
-    }
-  } 
-  else if (received_message.text == "1br" || received_message.text == "2br" || received_message.text == "3br" || received_message.text == "4br" || received_message.text == "5br") {
-    response = {
-      "text": `You sent the message: "${received_message.text}". Please me the area of your land to be rented!`
-    }
-  }
-*/
 
 
 
@@ -897,13 +884,418 @@ else if (received_message.text && landlord_sent.something1else_byuser11 === true
   torentland_told.leave_phno_land1 = true;
   }
 
+/************************************************************************************************************/
+/************************************************************************************************************/
+/************************************************************************************************************/
 
+
+/***********************************************************************************/
+// to sell house
+ else if (received_message.text && toselhou_byuser.twp_name_tobeSold === true) {
+  userEntered_Hou_tosel.twp_name_tobeSold = received_message.text;
+         response = {
+      "text":'Please tell the type of house that you want to sell like RC or Nancat'
+    }
+    toselhou_byuser.twp_name_tobeSold = false; 
+    toselhou_byuser.to_sel_hou = true;
+  }
+ else if (received_message.text && toselhou_byuser.to_sel_hou === true) {
+  userEntered_Hou_tosel.to_sel_hou = received_message.text;
+         response = {
+      "text":'How many floors is the house?'
+    }
+    toselhou_byuser.to_sel_hou = false;
+    toselhou_byuser.howMuchRoom_hou = true;
+  }
+   else if (received_message.text &&  toselhou_byuser.howMuchRoom_hou === true) {
+   userEntered_Hou_tosel.howMuchRoom_hou = received_message.text;
+         response = {
+       "text": "Do you have what types of room. Please tell me:",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Master Bed",
+                          "payload": "tosel_hou_tell_mb",
+                        },
+                       
+                        {
+                          "content_type": "text",
+                          "title": "Bed room",
+                          "payload": "tosel_hou_bedRoom",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Both",
+                          "payload": "tosel_hou_tell_both",
+                        }
+                      ]
+    }
+    toselhou_byuser.howMuchRoom_hou = false;
+  }
+
+
+// for master bed room
+ else if (received_message.payload === "tosel_hou_tell_mb") {    
+    response = {
+      "text": "How many master bed rooms in your house?"
+    }
+    received_message.payload = false;
+    toselhou_byuser.area_hou_inOtt = true;
+  }
+
+  // for bed room
+   else if (received_message.payload === "tosel_hou_bedRoom") {    
+    response = {
+      "text": "How many bed rooms in your house?"
+    }
+    received_message.payload = false;
+    toselhou_byuser.area_hou_inOtt = true;
+  }
+
+
+  // for both master bed room and bed room
+ else if (received_message.payload === "tosel_hou_tell_both") {
+   response  = { "text": "How many master bed rooms in your house?" 
+  }
+  received_message.payload = false;
+  toselhou_byuser.forSell_both_room = true;
+}
+ else if (received_message.text && toselhou_byuser.forSell_both_room === true) {  
+  userEntered_Hou_tosel.forSell_both_room = received_message.text; 
+    response = {
+      "text": "How many bed rooms in your house?"
+    }
+    toselhou_byuser.forSell_both_room = false;
+    toselhou_byuser.area_hou_inOtt = true;
+  } 
+
+
+ else if (received_message.text && toselhou_byuser.area_hou_inOtt === true) { 
+  userEntered_Hou_tosel.area_hou_inOtt = received_message.text;   
+    response = {
+      "text": "Please tell me land area of your house."
+    }
+    toselhou_byuser.area_hou_inOtt = false;
+    toselhou_byuser.typeofLand_ofhou1 = true;
+  } 
+   else if (received_message.text && toselhou_byuser.typeofLand_ofhou1 === true) { 
+  userEntered_Hou_tosel.typeofLand_ofhou1 = received_message.text;   
+    response = {
+      "text": "Please tell me type of land on which your house that will be sold is bulit."
+    }
+    toselhou_byuser.typeofLand_ofhou1 = false;
+    toselhou_byuser.photos_ott = true;
+  } 
+
+  else if (received_message.text && toselhou_byuser.photos_ott  === true) {
+   userEntered_Hou_tosel.photos_ott = received_message.text;
+         response = {
+       "text": "Could you send me inside and outside photos with regard to your house?",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "I will send now.",
+                          "payload": "send_now_photos_hou_inAndOut",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Later",
+                          "payload": "tosel_hou_tell_later_byuser11",
+                        }
+                      ]
+    }
+    toselhou_byuser.photos_ott = false;
+  }
+
+
+   else if (received_message.payload === "send_now_photos_hou_inAndOut") { 
+    response = {
+      "text": "OK, please send me."
+    }
+     received_message.payload = false;
+     toselhou_byuser.attach_houhou = true;
+  }
+  else if (received_message.attachments && toselhou_byuser.attach_houhou == true) {
+      userEntered_Hou_tosel.attach_houhou = received_message.attachments; 
+    // Get the URL of the message attachment
+    let attachment_url_photo = userEntered_Hou_tosel.attach_houhou[0].payload.url;
+    response = {
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "generic",
+          "elements": [{
+            "title": "I received your photos. Do you want to send more?",
+            "subtitle": "Tap a button to answer.",
+            "image_url": attachment_url_photo,
+            "buttons": [
+              {
+                "type": "postback",
+                "title": "Yes",
+                "payload": "attach_yes111",
+              },
+              {
+                "type": "postback",
+                "title": "No",
+                "payload": "attach_no_forSellingHouse",
+              }
+            ],
+          }]
+        }
+      }
+    }
+    toselhou_byuser.attach_houhou = false;
+  }
+
+
+
+
+    else if (received_message.text && toselhou_byuser.estimated_price_forSell == true) {
+    userEntered_Hou_tosel.estimated_price_forSell = received_message.text;
+    response = {
+      "text":"Please tell me fully address of own house to be sold"
+    }
+    toselhou_byuser.estimated_price_forSell = false;
+    toselhou_byuser.ph_num = true;
+  } 
+
+   else if (received_message.text && toselhou_byuser.ph_num == true) {
+    userEntered_Hou_tosel.ph_num = received_message.text;
+    response = {
+      "text":"Please leave me your phone number."
+    }
+    toselhou_byuser.ph_num = false;
+    toselhou_byuser.something_else_toldbyuser = true;
+  } 
+
+
+
+// later
+  else if (received_message.payload === "tosel_hou_tell_later_byuser11") {
+    response = {
+      "text":"Please tell me the estimated amount that you want to get."
+    }
+  toselhou_byuser.estimated_price_forSell = true;
+  } 
+
+
+  else if (received_message.text && toselhou_byuser.something_else_toldbyuser  === true) {
+   userEntered_Hou_tosel.something_else_toldbyuser = received_message.text;
+         response = {
+       "text": "Do you want to tell something to us?",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Yes",
+                          "payload": "customer_useryes_toldbyuser111da",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "No",
+                          "payload": "customer_usernono_toldbyuser111da",
+                        }
+                      ]
+    }
+    toselhou_byuser.something_else_toldbyuser = false;
+  }
+else if (received_message.payload === "customer_useryes_toldbyuser111da") {
+    response = {
+      "text":"Please tell me."
+    }
+  toselhou_byuser.thanksfor_contacting11 = true;
+  } 
+
+else if (received_message.text && toselhou_byuser.thanksfor_contacting11 === true ) {
+    db.collection('customer_info').add(userEntered_Hou_tosel);
+
+    response = {
+      "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
+    }
+  toselhou_byuser.thanksfor_contacting11 = false;
+  }
+
+
+/*******************/
+
+
+
+
+
+
+
+
+/************************************************************************/
+
+// to sell land
+ else if (received_message.payload === "tselottlan" || received_message.payload === "tselpoblan" || received_message.payload === "tseldeklan" || received_message.payload === "tselzayalan" || received_message.payload === "tselzabulan") {
+         response = {
+      "text":'Please tell me area of your land that you want to sell.'
+    }
+    received_message.payload = false;
+    tosel_land_byuser.land_type_tosell = true;
+  }
+ else if (received_message.text && tosel_land_byuser.land_type_tosell === true) {
+  userEntered_land_tosel.land_type_tosell = received_message.text;
+         response = {
+      "text":'Please tell me type of land that you want to sell.'
+    }
+    tosel_land_byuser.land_type_tosell = false;
+    tosel_land_byuser.land_name_tosell = true;
+  }
+   else if (received_message.text &&  tosel_land_byuser.land_name_tosell === true) {
+   userEntered_land_tosel.land_name_tosell = received_message.text;
+         response = {
+       "text": "Is it a myie pauk or not?",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": ".Yes.",
+                          "payload": "tosel_land_yes",
+                          "image_url":"http://example.com/img/green.png"
+                        },
+                        {
+                          "content_type": "text",
+                          "title": ".No.",
+                          "payload": "tosel_hou_no",
+                          "image_url":"http://example.com/img/red.png"
+                        }
+                      ]
+    }
+    tosel_land_byuser.land_name_tosell = false;
+  }
+
+ else if (received_message.payload === "tosel_land_yes" || received_message.payload === "tosel_hou_no") {
+         response = {
+       "text": "Could you send me photos with regard to your land?",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "I will send now.",
+                          "payload": "send_now_photos_land",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Later",
+                          "payload": "tosel_later_land",
+                        }
+                      ]
+    }
+//    toselhou_byuser.photos_ott = false;
+  }
+
+
+   else if (received_message.payload === "send_now_photos_land") { 
+    response = {
+      "text": "OK, please send me."
+    }
+     received_message.payload = false;
+     tosel_land_byuser.attach_land_tosell = true;
+  }
+  else if (received_message.attachments && tosel_land_byuser.attach_land_tosell == true) {
+      userEntered_land_tosel.attach_land_tosell = received_message.attachments; 
+    // Get the URL of the message attachment
+    let attachment_url = userEntered_land_tosel.attach_land_tosell[0].payload.url;
+    response = {
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "generic",
+          "elements": [{
+            "title": "I received your photo. Do you want to send more?",
+            "subtitle": "Tap a button to answer.",
+            "image_url": attachment_url,
+            "buttons": [
+              {
+                "type": "postback",
+                "title": "Yes",
+                "payload": "attach_yes_sell_land",
+              },
+              {
+                "type": "postback",
+                "title": "No, it is enough",
+                "payload": "attach_no_sell_land",
+              }
+            ],
+          }]
+        }
+      }
+    }
+    tosel_land_byuser.attach_land_tosell = false;
+  }
+
+    else if (received_message.text && tosel_land_byuser.estimated_price_land == true) {
+    userEntered_land_tosel.estimated_price_land = received_message.text;
+    response = {
+      "text":"Please tell me fully address of own land to be sold"
+    }
+    tosel_land_byuser.estimated_price_land = false;
+    tosel_land_byuser.address_land_tosell = true;
+  } 
+  else if (received_message.text && tosel_land_byuser.address_land_tosell == true) {
+    userEntered_land_tosel.address_land_tosell = received_message.text;
+    response = {
+      "text":"Please leave me your phone number"
+    }
+    tosel_land_byuser.address_land_tosell = false;
+    tosel_land_byuser.something2_else_user2 = true;
+  } 
+  
+
+
+ else if (received_message.payload === "tosel_later_land") {
+    response = {
+      "text":"Please tell me estimated amount that you want to get."
+    }
+    tosel_land_byuser.estimated_price_land = true;
+  } 
+
+   else if (received_message.text && tosel_land_byuser.something2_else_user2 == true) {
+    response = {
+       "text": "Do you want to tell something to tell us?",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Yes",
+                          "payload": "tosel_land_yes_byuser11d",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "No",
+                          "payload": "tosel_land_nooo11_byuser11d",
+                        }
+                      ]
+    }
+    tosel_land_byuser.something2_else_user2 = false;
+  }
+
+else if (received_message.payload === "tosel_land_yes_byuser11d") {
+    response = {
+      "text":"Ok, please tell me."
+    }
+    tosel_land_byuser.tellbyuser_sth1 = true;
+  } 
+   else if (received_message.text && tosel_land_byuser.tellbyuser_sth1 == true) {
+    userEntered_land_tosel.tellbyuser_sth1 = received_message.text;
+    response = {
+      "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
+    }
+    tosel_land_byuser.tellbyuser_sth1 = false;
+  } 
+   else if (received_message.payload == "tosel_land_nooo11_byuser11d") {
+    response = {
+      "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
+    }
+  } 
 
 
 
 /*************************************************************************************************************/
 /*************************************************************************************************************/
 /*************************************************************************************************************/
+
+
+
+
  
 // to buy house in pyinmana, RC
   else if (received_message.payload === "tobuyrcpyin_aa1" ) {
@@ -8833,451 +9225,7 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
 /*****************************************************************/
 /*****************************************************************/
 
-
-
-
-
-
-
-
-
-
   /************************************************************************************************************************************/
-    else if (received_message.text == "RC1" || received_message.text == "rc1" || received_message.text == "Rc1" || received_message.text == "RC 1" || received_message.text == "rc 1" || received_message.text == "Rc 1") {
-    response = {
-       "text": "How many master bed rooms do you want?",
-                    "quick_replies": [
-                        {
-                          "content_type": "text",
-                          "title": "1mb",
-                          "payload": "no_of_room_1mb",
-                        },
-                         {
-                          "content_type": "text",
-                          "title": "2mb",
-                          "payload": "no_of_room_2mb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "3mb",
-                          "payload": "no_of_room_3mb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "4mb",
-                          "payload": "no_of_room_4mb",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "5mb",
-                          "payload": "no_of_room_5mb",
-                        }
-                      ]
-    }
-  }
-
-
-
-/***********************************************************************************/
-// to sell house
- else if (received_message.text && toselhou_byuser.twp_name_tobeSold === true) {
-  userEntered_Hou_tosel.twp_name_tobeSold = received_message.text;
-         response = {
-      "text":'Please tell the type of house that you want to sell like RC or Nancat'
-    }
-    toselhou_byuser.twp_name_tobeSold = false; 
-    toselhou_byuser.to_sel_hou = true;
-  }
- else if (received_message.text && toselhou_byuser.to_sel_hou === true) {
-  userEntered_Hou_tosel.to_sel_hou = received_message.text;
-         response = {
-      "text":'How many floors is the house?'
-    }
-    toselhou_byuser.to_sel_hou = false;
-    toselhou_byuser.howMuchRoom_hou = true;
-  }
-   else if (received_message.text &&  toselhou_byuser.howMuchRoom_hou === true) {
-   userEntered_Hou_tosel.howMuchRoom_hou = received_message.text;
-         response = {
-       "text": "Do you have what types of room. Please tell me:",
-                    "quick_replies": [
-                        {
-                          "content_type": "text",
-                          "title": "Master Bed",
-                          "payload": "tosel_hou_tell_mb",
-                        },
-                       
-                        {
-                          "content_type": "text",
-                          "title": "Bed room",
-                          "payload": "tosel_hou_bedRoom",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Both",
-                          "payload": "tosel_hou_tell_both",
-                        }
-                      ]
-    }
-    toselhou_byuser.howMuchRoom_hou = false;
-  }
-
-
-// for master bed room
- else if (received_message.payload === "tosel_hou_tell_mb") {    
-    response = {
-      "text": "How many master bed rooms in your house?"
-    }
-    received_message.payload = false;
-    toselhou_byuser.area_hou_inOtt = true;
-  }
-
-  // for bed room
-   else if (received_message.payload === "tosel_hou_bedRoom") {    
-    response = {
-      "text": "How many bed rooms in your house?"
-    }
-    received_message.payload = false;
-    toselhou_byuser.area_hou_inOtt = true;
-  }
-
-
-  // for both master bed room and bed room
- else if (received_message.payload === "tosel_hou_tell_both") {
-   response  = { "text": "How many master bed rooms in your house?" 
-  }
-  received_message.payload = false;
-  toselhou_byuser.forSell_both_room = true;
-}
- else if (received_message.text && toselhou_byuser.forSell_both_room === true) {  
-  userEntered_Hou_tosel.forSell_both_room = received_message.text; 
-    response = {
-      "text": "How many bed rooms in your house?"
-    }
-    toselhou_byuser.forSell_both_room = false;
-    toselhou_byuser.area_hou_inOtt = true;
-  } 
-
-
- else if (received_message.text && toselhou_byuser.area_hou_inOtt === true) { 
-  userEntered_Hou_tosel.area_hou_inOtt = received_message.text;   
-    response = {
-      "text": "Please tell me land area of your house."
-    }
-    toselhou_byuser.area_hou_inOtt = false;
-    toselhou_byuser.typeofLand_ofhou1 = true;
-  } 
-   else if (received_message.text && toselhou_byuser.typeofLand_ofhou1 === true) { 
-  userEntered_Hou_tosel.typeofLand_ofhou1 = received_message.text;   
-    response = {
-      "text": "Please tell me type of land on which your house that will be sold is bulit."
-    }
-    toselhou_byuser.typeofLand_ofhou1 = false;
-    toselhou_byuser.photos_ott = true;
-  } 
-
-  else if (received_message.text && toselhou_byuser.photos_ott  === true) {
-   userEntered_Hou_tosel.photos_ott = received_message.text;
-         response = {
-       "text": "Could you send me inside and outside photos with regard to your house?",
-                    "quick_replies": [
-                        {
-                          "content_type": "text",
-                          "title": "I will send now.",
-                          "payload": "send_now_photos_hou_inAndOut",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Later",
-                          "payload": "tosel_hou_tell_later_byuser11",
-                        }
-                      ]
-    }
-    toselhou_byuser.photos_ott = false;
-  }
-
-
-   else if (received_message.payload === "send_now_photos_hou_inAndOut") { 
-    response = {
-      "text": "OK, please send me."
-    }
-     received_message.payload = false;
-     toselhou_byuser.attach_houhou = true;
-  }
-  else if (received_message.attachments && toselhou_byuser.attach_houhou == true) {
-      userEntered_Hou_tosel.attach_houhou = received_message.attachments; 
-    // Get the URL of the message attachment
-    let attachment_url_photo = userEntered_Hou_tosel.attach_houhou[0].payload.url;
-    response = {
-      "attachment": {
-        "type": "template",
-        "payload": {
-          "template_type": "generic",
-          "elements": [{
-            "title": "I received your photos. Do you want to send more?",
-            "subtitle": "Tap a button to answer.",
-            "image_url": attachment_url_photo,
-            "buttons": [
-              {
-                "type": "postback",
-                "title": "Yes",
-                "payload": "attach_yes111",
-              },
-              {
-                "type": "postback",
-                "title": "No",
-                "payload": "attach_no_forSellingHouse",
-              }
-            ],
-          }]
-        }
-      }
-    }
-    toselhou_byuser.attach_houhou = false;
-  }
-
-
-
-
-    else if (received_message.text && toselhou_byuser.estimated_price_forSell == true) {
-    userEntered_Hou_tosel.estimated_price_forSell = received_message.text;
-    response = {
-      "text":"Please tell me fully address of own house to be sold"
-    }
-    toselhou_byuser.estimated_price_forSell = false;
-    toselhou_byuser.ph_num = true;
-  } 
-
-   else if (received_message.text && toselhou_byuser.ph_num == true) {
-    userEntered_Hou_tosel.ph_num = received_message.text;
-    response = {
-      "text":"Please leave me your phone number."
-    }
-    toselhou_byuser.ph_num = false;
-    toselhou_byuser.something_else_toldbyuser = true;
-  } 
-
-
-
-// later
-  else if (received_message.payload === "tosel_hou_tell_later_byuser11") {
-    response = {
-      "text":"Please tell me the estimated amount that you want to get."
-    }
-  toselhou_byuser.estimated_price_forSell = true;
-  } 
-
-
-  else if (received_message.text && toselhou_byuser.something_else_toldbyuser  === true) {
-   userEntered_Hou_tosel.something_else_toldbyuser = received_message.text;
-         response = {
-       "text": "Do you want to tell something to us?",
-                    "quick_replies": [
-                        {
-                          "content_type": "text",
-                          "title": "Yes",
-                          "payload": "customer_useryes_toldbyuser111da",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "No",
-                          "payload": "customer_usernono_toldbyuser111da",
-                        }
-                      ]
-    }
-    toselhou_byuser.something_else_toldbyuser = false;
-  }
-else if (received_message.payload === "customer_useryes_toldbyuser111da") {
-    response = {
-      "text":"Please tell me."
-    }
-  toselhou_byuser.thanksfor_contacting11 = true;
-  } 
-
-else if (received_message.text && toselhou_byuser.thanksfor_contacting11 === true ) {
-    db.collection('customer_info').add(userEntered_Hou_tosel);
-
-    response = {
-      "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
-    }
-  toselhou_byuser.thanksfor_contacting11 = false;
-  }
-
-
-/*******************/
-
-
-
-
-
-
-
-
-/************************************************************************/
-
-// to sell land
- else if (received_message.payload === "tselottlan" || received_message.payload === "tselpoblan" || received_message.payload === "tseldeklan" || received_message.payload === "tselzayalan" || received_message.payload === "tselzabulan") {
-         response = {
-      "text":'Please tell me area of your land that you want to sell.'
-    }
-    received_message.payload = false;
-    tosel_land_byuser.land_type_tosell = true;
-  }
- else if (received_message.text && tosel_land_byuser.land_type_tosell === true) {
-  userEntered_land_tosel.land_type_tosell = received_message.text;
-         response = {
-      "text":'Please tell me type of land that you want to sell.'
-    }
-    tosel_land_byuser.land_type_tosell = false;
-    tosel_land_byuser.land_name_tosell = true;
-  }
-   else if (received_message.text &&  tosel_land_byuser.land_name_tosell === true) {
-   userEntered_land_tosel.land_name_tosell = received_message.text;
-         response = {
-       "text": "Is it a myie pauk or not?",
-                    "quick_replies": [
-                        {
-                          "content_type": "text",
-                          "title": ".Yes.",
-                          "payload": "tosel_land_yes",
-                          "image_url":"http://example.com/img/green.png"
-                        },
-                        {
-                          "content_type": "text",
-                          "title": ".No.",
-                          "payload": "tosel_hou_no",
-                          "image_url":"http://example.com/img/red.png"
-                        }
-                      ]
-    }
-    tosel_land_byuser.land_name_tosell = false;
-  }
-
- else if (received_message.payload === "tosel_land_yes" || received_message.payload === "tosel_hou_no") {
-         response = {
-       "text": "Could you send me photos with regard to your land?",
-                    "quick_replies": [
-                        {
-                          "content_type": "text",
-                          "title": "I will send now.",
-                          "payload": "send_now_photos_land",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Later",
-                          "payload": "tosel_later_land",
-                        }
-                      ]
-    }
-//    toselhou_byuser.photos_ott = false;
-  }
-
-
-   else if (received_message.payload === "send_now_photos_land") { 
-    response = {
-      "text": "OK, please send me."
-    }
-     received_message.payload = false;
-     tosel_land_byuser.attach_land_tosell = true;
-  }
-  else if (received_message.attachments && tosel_land_byuser.attach_land_tosell == true) {
-      userEntered_land_tosel.attach_land_tosell = received_message.attachments; 
-    // Get the URL of the message attachment
-    let attachment_url = userEntered_land_tosel.attach_land_tosell[0].payload.url;
-    response = {
-      "attachment": {
-        "type": "template",
-        "payload": {
-          "template_type": "generic",
-          "elements": [{
-            "title": "I received your photo. Do you want to send more?",
-            "subtitle": "Tap a button to answer.",
-            "image_url": attachment_url,
-            "buttons": [
-              {
-                "type": "postback",
-                "title": "Yes",
-                "payload": "attach_yes_sell_land",
-              },
-              {
-                "type": "postback",
-                "title": "No, it is enough",
-                "payload": "attach_no_sell_land",
-              }
-            ],
-          }]
-        }
-      }
-    }
-    tosel_land_byuser.attach_land_tosell = false;
-  }
-
-    else if (received_message.text && tosel_land_byuser.estimated_price_land == true) {
-    userEntered_land_tosel.estimated_price_land = received_message.text;
-    response = {
-      "text":"Please tell me fully address of own land to be sold"
-    }
-    tosel_land_byuser.estimated_price_land = false;
-    tosel_land_byuser.address_land_tosell = true;
-  } 
-  else if (received_message.text && tosel_land_byuser.address_land_tosell == true) {
-    userEntered_land_tosel.address_land_tosell = received_message.text;
-    response = {
-      "text":"Please leave me your phone number"
-    }
-    tosel_land_byuser.address_land_tosell = false;
-    tosel_land_byuser.something2_else_user2 = true;
-  } 
-  
-
-
- else if (received_message.payload === "tosel_later_land") {
-    response = {
-      "text":"Please tell me estimated amount that you want to get."
-    }
-    tosel_land_byuser.estimated_price_land = true;
-  } 
-
-   else if (received_message.text && tosel_land_byuser.something2_else_user2 == true) {
-    response = {
-       "text": "Do you want to tell something to tell us?",
-                    "quick_replies": [
-                        {
-                          "content_type": "text",
-                          "title": "Yes",
-                          "payload": "tosel_land_yes_byuser11d",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "No",
-                          "payload": "tosel_land_nooo11_byuser11d",
-                        }
-                      ]
-    }
-    tosel_land_byuser.something2_else_user2 = false;
-  }
-
-else if (received_message.payload === "tosel_land_yes_byuser11d") {
-    response = {
-      "text":"Ok, please tell me."
-    }
-    tosel_land_byuser.tellbyuser_sth1 = true;
-  } 
-   else if (received_message.text && tosel_land_byuser.tellbyuser_sth1 == true) {
-    userEntered_land_tosel.tellbyuser_sth1 = received_message.text;
-    response = {
-      "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
-    }
-    tosel_land_byuser.tellbyuser_sth1 = false;
-  } 
-   else if (received_message.payload == "tosel_land_nooo11_byuser11d") {
-    response = {
-      "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
-    }
-  } 
-
-
-
 
   
   // Send the response message
@@ -10206,9 +10154,13 @@ else if (payload === 'hoou2') {
                           "payload": "toselhoupyin",
                         } */
                       ]
-      }
+      };
       toselhou_byuser.twp_name_tobeSold = true;   
   }
+
+
+
+
 
 
 // to sell house
