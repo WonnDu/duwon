@@ -891,7 +891,7 @@ else if (received_message.text && landlord_sent.something1else_byuser11 === true
 
 /***********************************************************************************/
 // to sell house
- else if (received_message.text && toselhou_byuser.twp_name_tobeSold === true) {
+ else if (received_message.text && toselhou_byuser.twp_name_tobeSold == true) {
   userEntered_Hou_tosel.twp_name_tobeSold = received_message.text;
          response = {
       "text":'Please tell the type of house that you want to sell like RC or Nancat'
