@@ -104,7 +104,7 @@ let toselhou_byuser = {
   something_else_toldbyuser:false,
   thanksfor_contacting11:false,
 }
-let userEntered_Hou_tosel = {};
+var userEntered_Hou_tosel = {};
 
 // for customers who want to sell land
 let tosel_land_byuser = {
