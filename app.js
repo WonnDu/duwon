@@ -79,14 +79,18 @@ let userEntered_landlord = {};
 
 // to rent land as a landlord
 let ldld_land_sent = {
-  address_land:false,
-  typeOf_land:false,
-  area_land:false,
-  attach_land_ldld:false,
-  estimated_price_ldld:false,
-  howmuch_month1_land:false,
-  ldld_ph_num:false,
-  sth_else_byuser1aa:false,
+  twp_name_torent_land:false,
+  land_area_torent_byCu:false,
+  land_type_torent_byCu:false,
+//  a_myie_pauk_byCu:false,
+  images_ofLand_torentLand:false,
+  estimatedPrice_perMonth_torentLand:false,
+  numOf_month_torentLand:false,
+  fullyAddress_ofLand_torent:false,
+  phone_num_byCu_torentLand:false,
+  yes_for_sthElse_byCuLand:false,
+  no_for_sthElse_byCuLand:false,
+
 }
 let userEntered_ldld_land = {};
 
@@ -627,42 +631,33 @@ else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true
   }
 
 
-/**********************************************************************************************/
-/**********************************************************************************************/
-/**********************************************************************************************/
-
+/*************************************************************************************************/
+/*************************************************************************************************/
+/*************************************************************************************************/
 
 
 
 // to rent land as landlord
  else if (received_message.payload === "ld_ottwp_land" || received_message.payload === "ld_potwp_land" || received_message.payload === "ld_dektwp_land" || received_message.payload === "ld_zaytwp_land" || received_message.payload === "ld_zabtwp_land") {
+         userEntered_ldld_land.twp_name_torent_land = received_message.payload;
          response = {
-      "text":'Please tell me fully address of your land to be rented out.'
+      "text":'Please tell me the area of land that you want to rent out.'
     }
     received_message.payload = false;
-    ldld_land_sent.address_land = true;
+    ldld_land_sent.land_area_torent_byCu = true;  // for land area to rent land as landlord
   }
- else if (received_message.text && ldld_land_sent.address_land === true) {
-  userEntered_ldld_land.address_land = received_message.text;
+ else if (received_message.text && ldld_land_sent.land_area_torent_byCu === true) {
+  userEntered_ldld_land.land_area_torent_byCu = received_message.text; // for land area to rent land as landlord
          response = {
-      "text":'Please tell the type of land that you want to rent out.'
+      "text":'Please tell me the type of land that you want to rent out.'
     }
-    ldld_land_sent.address_land = false;
-    ldld_land_sent.typeOf_land = true;
-  }
-
-  else if (received_message.text &&  ldld_land_sent.typeOf_land === true) {
-   userEntered_ldld_land.typeOf_land = received_message.text;
-         response = {
-                      "text":'Please tell me the area of land that you want to rent out.'
-    }
-    ldld_land_sent.typeOf_land = false;
-    ldld_land_sent.area_land = true;
+    ldld_land_sent.land_area_torent_byCu = false; // for land area to rent land
+    ldld_land_sent.land_type_torent_byCu = true; // land type to rent land
   }
 
 
-  else if (received_message.text &&  ldld_land_sent.area_land === true) {
-    userEntered_ldld_land.area_land = received_message.text;
+  else if (received_message.text &&  ldld_land_sent.land_type_torent_byCu === true) { // land type to rent land
+    userEntered_ldld_land.land_type_torent_byCu = received_message.text; // land type to rent land
     response = {
        "text": "Could you send me some photos of your land?",
                     "quick_replies": [
@@ -678,7 +673,7 @@ else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true
                         }
                       ]
     }
-    ldld_land_sent.area_land = false;
+    ldld_land_sent.land_type_torent_byCu = false;  // land type to rent land
   }
 
 
@@ -687,12 +682,12 @@ else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true
       "text": "OK, please send me."
     }
      received_message.payload = false;
-     ldld_land_sent.attach_land_ldld = true;
+     ldld_land_sent.images_ofLand_torentLand = true; // to send images of land to rent land as landlord
   }
-  else if (received_message.attachments && ldld_land_sent.attach_land_ldld == true) {
-      userEntered_ldld_land.attach_land_ldld = received_message.attachments; 
+  else if (received_message.attachments && ldld_land_sent.images_ofLand_torentLand == true) { // to send images
+      userEntered_ldld_land.images_ofLand_torentLand = received_message.attachments; // to send images
     // Get the URL of the message attachment
-    let attachment_url_phph = userEntered_ldld_land.attach_land_ldld[0].payload.url;
+    let attachment_url_phph = userEntered_ldld_land.images_ofLand_torentLand[0].payload.url;
     response = {
       "attachment": {
         "type": "template",
@@ -718,79 +713,94 @@ else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true
         }
       }
     }
-    ldld_land_sent.attach_land_ldld = false;
+    ldld_land_sent.images_ofLand_torentLand = false;
   }
 
 
 
-  else if (received_message.text && ldld_land_sent.estimated_price_ldld == true) {
-    userEntered_ldld_land.estimated_price_land = received_message.text;
+  else if (received_message.text && ldld_land_sent.estimatedPrice_perMonth_torentLand == true) { // for estimated price per month to rent land as landlord
+    userEntered_ldld_land.estimatedPrice_perMonth_torentLand = received_message.text;
     response = {
       "text":"How many months do you want to rent your land at least?"
     }
-    ldld_land_sent.estimated_price_ldld = false;
-    ldld_land_sent.howmuch_month1_land = true;
+    ldld_land_sent.estimatedPrice_perMonth_torentLand = false; // for estimated price per month to rent
+    ldld_land_sent.numOf_month_torentLand = true; // number of month to rent land
   } 
 
-  else if (received_message.text && ldld_land_sent.howmuch_month1_land == true) {
-    userEntered_ldld_land.howmuch_month1_land = received_message.text;
+  else if (received_message.text && ldld_land_sent.numOf_month_torentLand == true) {  // number of month to rent land
+    userEntered_ldld_land.numOf_month_torentLand = received_message.text;   // number of month to rent land
     response = {
-      "text":"Please leave me your phone number and I will contact you later."
+      "text":"Please tell me fully address of your house to be rented."
     }
-    ldld_land_sent.howmuch_month1_land = false;
-    ldld_land_sent.ldld_ph_num = true;
-  } 
+    ldld_land_sent.numOf_month_torentLand = false;   // number of month to rent land
+    ldld_land_sent.fullyAddress_ofLand_torent = true; // fully address of land to rent 
+  }
+
+    else if (received_message.text && ldld_land_sent.fullyAddress_ofLand_torent == true) {  // fully address of land to rent 
+    userEntered_ldld_land.fullyAddress_ofLand_torent = received_message.text;   // fully address of land to rent 
+    response = {
+      "text":"Please leave me your phone number."
+    }
+    ldld_land_sent.fullyAddress_ofLand_torent = false;   // fully address of land to rent 
+    ldld_land_sent.phone_num_byCu_torentLand = true; // phone number of customer to rent land as landlord 
+  }  
+
+
 
 // later to send photos
  else if (received_message.payload === 'later_ldld') {
         response = {
-                  "text": "Do you want to rent how much per month?"
+                  "text": "Do you want to rent your land how much per month?"
       }
-      ldld_land_sent.estimated_price_ldld = true;
+      ldld_land_sent.estimatedPrice_perMonth_torentLand = true; // estimated price  per month to rent land
   }
    
 
-  else if (received_message.text && ldld_land_sent.ldld_ph_num  === true) {
-   userEntered_ldld_land.ldld_ph_num = received_message.text;
+  else if (received_message.text && ldld_land_sent.phone_num_byCu_torentLand  === true) {  // phone number of customer to rent land as landlord 
+   userEntered_ldld_land.phone_num_byCu_torentLand = received_message.text;  // phone number of customer to rent land as landlord 
          response = {
        "text": "Do you want to tell me with regard to your proeprty or something else to us?",
                     "quick_replies": [
                         {
                           "content_type": "text",
                           "title": "Yes",
-                          "payload": "cu_sayyes_torentland1",
+                          "payload": "cuSay_yes_tosay_sthElseLand",
                         },
                         {
                           "content_type": "text",
                           "title": "No",
-                          "payload": "cu2_saynono_torentland2",
+                          "payload": "cuSay_no_tosay_sthElseLand",
                         }
                       ]
     }
-    ldld_land_sent.ldld_ph_num = false;
+    ldld_land_sent.phone_num_byCu_torentLand = false;  // phone number of customer to rent land as landlord 
   }
 
-  else if (received_message.payload === "cu_sayyes_torentland1") {
+  else if (received_message.payload === "cuSay_yes_tosay_sthElseLand") { // user say yes to say sth else
     response = {
-      "text":"Ok, please tell me."
+      "text":"Ok, please tell me." 
     }
-    ldld_land_sent.sth_else_byuser1aa = true;
+    ldld_land_sent.yes_for_sthElse_byCuLand = true; // user say yes to say sth else
   }  
-  else if (received_message.text && ldld_land_sent.sth_else_byuser1aa == true) {
-    userEntered_ldld_land.sth_else_byuser1aa = received_message.text;
+  else if (received_message.text && ldld_land_sent.yes_for_sthElse_byCuLand == true) { // user say yes to say sth else
+    userEntered_ldld_land.yes_for_sthElse_byCuLand = received_message.text; // user say yes to say sth else
+    saveData_torent_land(sender_psid);
     response = {
       "text":"Thanks for contacting us. I will contact you within 24 houra. Have a nice day!"
     }
-    ldld_land_sent.sth_else_byuser1aa = false;
+    ldld_land_sent.yes_for_sthElse_byCuLand = false; // user say yes to say sth else
   }
-    else if (received_message.payload === "cu2_saynono_torentland2") {
+
+    else if (received_message.payload === "cuSay_no_tosay_sthElseLand") { // user say no to say sth else
+    userEntered_ldld_land.no_for_sthElse_byCuLand = received_message.payload; // user say no to say sth else
+    saveData_torent_land(sender_psid);
     response = {
       "text":"Thanks for contacting us. I will contact you within 24 houra. Have a nice day!"
     }
+    received_message.payload = false;
   }   
 
 
-/*****************************************************************/
 
 
 
@@ -9597,13 +9607,7 @@ function handlePostback(sender_psid, received_postback) {
   });
   }
 
-// to rent land as landlord
- else if (payload === "ldld_pyin_land") {
-         response = {
-      "text":'Please tell me fully address of your land to be rented out.'
-    }
-    ldld_land_sent.address_land = true;
-  }
+
 
   else if (payload === 'ldld5_land') {
          response = {
@@ -10376,6 +10380,13 @@ else if (payload === 'hoou2') {
 /*******************************************/
 /*******************************************/
 
+// to rent land as landlord
+ else if (payload === "ldld_pyin_land") {
+         response = {
+      "text":'Please tell me fully address of your land to be rented out.'
+    }
+    ldld_land_sent.address_land = true;
+  }
 
 // to rent land as a landlord // no more photos
   else if (payload === "attach_yes_ldld_land") { 
@@ -10803,29 +10814,43 @@ function saveData_torent_house(sender_psid) {
   db.collection('cu_info_torent_house').add(userEntered_landlord);
 }
 
+// to rent land
+function saveData_torent_land(sender_psid) {
+  const cu_info_torentLand = {
+    id : sender_psid,
+    twonship_name : userEntered_ldld_land.twp_name_torent_land,
+    land_area : userEntered_ldld_land.land_area_torent_byCu,
+    land_type : userEntered_ldld_land.land_type_torent_byCu
+//    a_myie_pauk : userEntered_ldld_land.,
+    images_of_land : userEntered_ldld_land.images_ofLand_torentLand,
+    estimated_perMonth_torent : userEntered_ldld_land.estimatedPrice_perMonth_torentLand,
+    numOf_torentLand : numOf_month_torentLand
+    fullyAddress_ofLandToRent : userEntered_ldld_land.fullyAddress_ofLand_torent,
+    phone_number_ofUser : userEntered_ldld_land.phone_num_byCu_torentLand,
+    totell_yes_forSomethingElse : userEntered_ldld_land.yes_for_sthElse_byCuLand,
+    totell_no_forSomethingElse : userEntered_ldld_land.no_for_sthElse_byCuLand,
+   
+  }
+  db.collection('cu_info_torent_land').add(userEntered_ldld_land);
+}
 
-// to rent house as landlord
+// to rent land as a landlord
 /*
-let landlord_sent = {
-  twp_name_torentHouse:false,
-  house_type_torent:false,
-  numOf_floor_torentHou:false,
-  numOf_mbr_torentHou:false,
-  numOf_br_torentHou:false,
-  both_numOf_mbr_torent:false,
-  both_numOf_br_torent:false,
-  landArea_ofHouse_torent:false,
-  images_ofHouse_torent:false,
-  estimated_price_perMonth_torentHou:false,
-  numOf_month_torentHouse:false,
-  fullyAddress_byCu_torent:false,
-  ph_numm_byCu_torentHou:false,
-  sth_yes_toldbyCu_torent:false,
-  sth_no_toldbyCu_torent:false,
+let ldld_land_sent = {
+  twp_name_torent_land:false,
+  land_area_torent_byCu:false,
+  land_type_torent_byCu:false,
+//  a_myie_pauk_byCu:false,
+  images_ofLand_torentLand:false,
+  estimatedPrice_perMonth_torentLand:false,
+  numOf_month_torentLand:false,
+  fullyAddress_ofLand_torent:false,
+  phone_num_byCu_torentLand:false,
+  yes_for_sthElse_byCuLand:false,
+  no_for_sthElse_byCuLand:false,
 
 }
-let userEntered_landlord = {};
+let userEntered_ldld_land = {};
 */
-
 
 
