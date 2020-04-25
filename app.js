@@ -10294,7 +10294,7 @@ else if (payload === 'hoou2') {
       "text":'Please tell the area of land that you want to sell.'
     }
     payload = false;
-    tosel_land_byuser.land_type_tosell = true;  // for type of land
+    tosel_land_byuser.land_area_tosell_byCu = true;  // for area of land
   }
   
 // to send again images
