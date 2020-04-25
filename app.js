@@ -10169,7 +10169,7 @@ else if (payload === 'hoou2') {
 // to sell house
 
  else if (payload === "toselhoupyin") {
-  userEntered_Hou_tosel.twp_name_tobeSold = received_message.payload;
+  userEntered_Hou_tosel.twp_name_tobeSold = payload;
          response = {
       "text":'Please tell the type of house that you want to sell like RC or Nancat'
     }
