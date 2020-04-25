@@ -178,8 +178,8 @@ let torenthouse_tenant = {
 let userEntered_info_torentHou_asTenant = {};
 
 
-// to rent land told by user // as tenant
 
+// to rent land told by user // as tenant
 let torentland_told = {
   land_yesyes_byuser:false,
   leave_phno_land1:false,
@@ -946,7 +946,7 @@ else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true
 
 
 
-// to rent land in every // i think this is tenant
+// to rent land in every // as tenant
    else if (received_message.payload === "torentland1_tellbyuser_tellyes1") { 
     response = {
               "text": "Ok, please tell me."
@@ -966,6 +966,7 @@ else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true
   }
     else if (received_message.text &&  torentland_told.leave_phno_land1 === true) {
     userEntered_yes1_torentland.leave_phno_land1 = received_message.text;
+    saveData_torent_land_asTenant(sender_psid);
     response = {
        "text": "Thanks for contacting us. Have a nice day!"
                   
@@ -10886,12 +10887,22 @@ function saveData_torent_house_asTenant(sender_psid) {
   db.collection('cu_torent_House_asTenant').add(userEntered_info_torentHou_asTenant);
 }
 
-// to rent house in every // as tenant
-/*
-let torenthouse_tenant = {
-  userSay_yes_sthElse_te:false,
-  userSay_no_sthElse_te:false,
-  phNumber_byUser_torentHou_te:false,
+// to rent land in every as tenant
+function saveData_torent_land_asTenant(sender_psid) {
+  const cu_info_torent_land_te = {
+    id : sender_psid,
+    aaaaaaaaaaa : userEntered_yes1_torentland.land_yesyes_byuser,
+    bbbbbbbbbbb : userEntered_yes1_torentland.leave_phno_land1,
+//    phoneNo_ofCu : userEntered_yes1_torentland.phNumber_byUser_torentHou_te,
+  }
+  db.collection('cu_torent_land_asTenant').add(userEntered_yes1_torentland);
 }
-let userEntered_info_torentHou_asTenant = {};
+
+// to rent land told by user // as tenant
+/*
+let torentland_told = {
+  land_yesyes_byuser:false,
+  leave_phno_land1:false,
+}
+let userEntered_yes1_torentland = {};
 */
