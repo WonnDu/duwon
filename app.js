@@ -10820,11 +10820,11 @@ function saveData_torent_land(sender_psid) {
     id : sender_psid,
     twonship_name : userEntered_ldld_land.twp_name_torent_land,
     land_area : userEntered_ldld_land.land_area_torent_byCu,
-    land_type : userEntered_ldld_land.land_type_torent_byCu
+    land_type : userEntered_ldld_land.land_type_torent_byCu,
 //    a_myie_pauk : userEntered_ldld_land.,
     images_of_land : userEntered_ldld_land.images_ofLand_torentLand,
     estimated_perMonth_torent : userEntered_ldld_land.estimatedPrice_perMonth_torentLand,
-    numOf_torentLand : numOf_month_torentLand
+    numOf_torentLand : numOf_month_torentLand,
     fullyAddress_ofLandToRent : userEntered_ldld_land.fullyAddress_ofLand_torent,
     phone_number_ofUser : userEntered_ldld_land.phone_num_byCu_torentLand,
     totell_yes_forSomethingElse : userEntered_ldld_land.yes_for_sthElse_byCuLand,
