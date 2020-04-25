@@ -156,21 +156,23 @@ let tobuyhouse_told = {
 let userEntered_yes_abouthou = {};
 
 
-// to rent house told by user
-let torenthouse_told = {
-  yes1_by_user:false,
-  leave_contactno11abc:false,
-}
-let userEntered_yes_torenthou = {};
-
-
-
 // to buy land told by user
 let tobuyland_told = {
   land_yes1_byuser:false,
   leave_contactno_land:false,
 }
 let userEntered_yes_tobuyland = {};
+
+
+/*************************************/
+
+
+// to rent house told by user
+let torenthouse_told = {
+  yes1_by_user:false,
+  leave_contactno11abc:false,
+}
+let userEntered_yes_torenthou = {};
 
 
 // to rent land told by user
@@ -829,6 +831,7 @@ else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true
   }
     else if (received_message.text &&  tobuyhouse_told.leave_phno11abc === true) {
     userEntered_yes_abouthou.leave_phno11abc = received_message.text;
+    saveData_tobuy_house(sender_psid);
     response = {
        "text": "Thanks for contacting us. Have a nice day!"
                   
@@ -10834,23 +10837,25 @@ function saveData_torent_land(sender_psid) {
   db.collection('cu_info_torent_land').add(userEntered_ldld_land);
 }
 
-// to rent land as a landlord
-/*
-let ldld_land_sent = {
-  twp_name_torent_land:false,
-  land_area_torent_byCu:false,
-  land_type_torent_byCu:false,
-//  a_myie_pauk_byCu:false,
-  images_ofLand_torentLand:false,
-  estimatedPrice_perMonth_torentLand:false,
-  numOf_month_torentLand:false,
-  fullyAddress_ofLand_torent:false,
-  phone_num_byCu_torentLand:false,
-  yes_for_sthElse_byCuLand:false,
-  no_for_sthElse_byCuLand:false,
+/************************************************************************************/
 
+// to rent land
+function saveData_tobuy_house(sender_psid) {
+  const cu_info_toBuy_hou = {
+    id : sender_psid,
+    yesyes : userEntered_yes_abouthou.yes_yes_user,
+    leave_phno : userEntered_yes_abouthou.leave_phno11abc,
+  }
+  db.collection('cu_info_toBuy_House').add(userEntered_yes_abouthou);
 }
-let userEntered_ldld_land = {};
-*/
 
+
+// to buy house told by user
+/*
+let tobuyhouse_told = {
+  yes_yes_user:false,
+  leave_phno11abc:false,
+}
+let userEntered_yes_abouthou = {};
+*/
 
