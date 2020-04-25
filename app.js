@@ -759,7 +759,7 @@ else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true
   else if (received_message.text && ldld_land_sent.phone_num_byCu_torentLand  === true) {  // phone number of customer to rent land as landlord 
    userEntered_ldld_land.phone_num_byCu_torentLand = received_message.text;  // phone number of customer to rent land as landlord 
          response = {
-       "text": "Do you want to tell me with regard to your proeprty or something else to us?",
+       "text": "Do you want to tell me with regard to your property or something else to us?",
                     "quick_replies": [
                         {
                           "content_type": "text",
@@ -1230,7 +1230,7 @@ else if (received_message.payload === "customer_useryes_toldbyuser111da") {
 
 else if (received_message.text && toselhou_byuser.sth_yes_toldbyCu === true ) { // for something else told by user
     userEntered_Hou_tosel.sth_yes_toldbyCu = received_message.text;  
-    saveData_tosell_house(sender_psid)
+    saveData_tosell_house(sender_psid);
 
     response = {
       "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
@@ -1241,7 +1241,7 @@ else if (received_message.text && toselhou_byuser.sth_yes_toldbyCu === true ) { 
 // for user say no for something else
   else if (received_message.payload === "customer_usernono_toldbyuser111da" ) { // for user says no
     userEntered_Hou_tosel.sth_no_toldbyCu = received_message.payload;  // user says no for something else
-    saveData_tosell_house(sender_psid)
+    saveData_tosell_house(sender_psid);
 
     response = {
       "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
@@ -10824,7 +10824,7 @@ function saveData_torent_land(sender_psid) {
 //    a_myie_pauk : userEntered_ldld_land.,
     images_of_land : userEntered_ldld_land.images_ofLand_torentLand,
     estimated_perMonth_torent : userEntered_ldld_land.estimatedPrice_perMonth_torentLand,
-    numOf_torentLand : numOf_month_torentLand,
+    numOf_torentLand : userEntered_ldld_land.numOf_month_torentLand,
     fullyAddress_ofLandToRent : userEntered_ldld_land.fullyAddress_ofLand_torent,
     phone_number_ofUser : userEntered_ldld_land.phone_num_byCu_torentLand,
     totell_yes_forSomethingElse : userEntered_ldld_land.yes_for_sthElse_byCuLand,
