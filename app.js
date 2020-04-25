@@ -91,7 +91,7 @@ let userEntered_ldld_land = {};
 
 // to sell their house
 let toselhou_byuser = {
-//  twp_name_tobeSold:false,
+  twp_name_tobeSold:false,
   to_sel_hou:false,
   howMuchRoom_hou:false,
   area_hou_inOtt:false,
@@ -897,13 +897,15 @@ else if (received_message.text && landlord_sent.something1else_byuser11 === true
 /***********************************************************************************/
 // to sell house
  else if (received_message.payload === "tselott" || received_message.payload === "tselpob" || received_message.payload === "tseldek" || received_message.payload === "tselzaya" || received_message.payload === "tselzabu") {
-    console.log('meta data',received_message);
+    userEntered_Hou_tosel.twp_name_tobeSold = received_message.payload;
+//    console.log('meta data',received_message);
 //  userEntered_Hou_tosel.twp_name_tobeSold = received_message.text;
 //  console.log('meta data',userEntered_Hou_tosel.twp_name_tobeSold);
           response = {
       "text":'Please tell the type of house that you want to sell like RC or Nancat'
     }
-//    toselhou_byuser.twp_name_tobeSold = false; 
+//    toselhou_byuser.twp_name_tobeSold = false;
+    received_message.payload = false; 
     toselhou_byuser.to_sel_hou = true;
   }
 
