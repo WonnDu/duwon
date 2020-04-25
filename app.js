@@ -10793,7 +10793,7 @@ function saveData_torent_house(sender_psid) {
     land_area_of_house : userEntered_landlord.landArea_ofHouse_torent,
     images_ofHouse_tsel : userEntered_landlord.images_ofHouse_torent,
     estimated_amount : userEntered_landlord.estimated_price_perMonth_torentHou,
-    numOf_month_torentHou :userEntered_landlord.numOf_month_torentHouse;
+    numOf_month_torentHou :userEntered_landlord.numOf_month_torentHouse,
     fully_address : userEntered_landlord.fullyAddress_byCu_torent,
     phone_number : userEntered_landlord.ph_numm_byCu_torentHou,
     yes_toTell_sth_else : userEntered_landlord.sth_yes_toldbyCu_torent,
