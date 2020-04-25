@@ -826,7 +826,7 @@ else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true
   else if (received_message.text &&  tobuyhouse_told.cuSay_yes_toSay_sthElse_se === true) {  // user say yes to say sth else
     userEntered_info_toBuyHouse.cuSay_yes_toSay_sthElse_se = received_message.text;  // user say yes to say sth else
     response = {
-       "text": "Please leave your contact number. We will contact you later."
+       "text": "Please leave your contact number."
                   
     }
     tobuyhouse_told.cuSay_yes_toSay_sthElse_se = false;  // user say yes to say sth else
@@ -844,7 +844,7 @@ else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true
 
 // user say no 
   else if (received_message.payload === "cu_say_no_toBuyHouse") {
-    userEntered_info_toBuyHouse.cuSay_no_toSay_sthElse_se = received_message.text;  
+    userEntered_info_toBuyHouse.cuSay_no_toSay_sthElse_se = received_message.payload;  
     response = {
       "text": "Please leave your contact number."
     }
@@ -932,7 +932,7 @@ else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true
 
 // user say no 
   else if (received_message.payload === "cu_say_no_tobuyLand") { 
-    userEntered_things_tobuyLand.cuSay_no_forSthElse_tobuland = received_message.text; // user says no for sth else 
+    userEntered_things_tobuyLand.cuSay_no_forSthElse_tobuland = received_message.payload; // user says no for sth else 
     response = {
       "text": "Please leave your phone number."
     }
