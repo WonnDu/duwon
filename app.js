@@ -179,13 +179,13 @@ let userEntered_info_torentHou_asTenant = {};
 
 
 
-// to rent land told by user // as tenant
-let torentland_told = {
-  land_yesyes_byuser:false,
-  leave_phno_land1:false,
+// to rent land in by user // as tenant
+let torentland_tenant = {
+  cu_say_yes_sthElse_tenant:false,
+  cu_say_no_sthElse_tenant:false,
+  phNumberByCu_torentHou_tenant:false,
 }
-let userEntered_yes1_torentland = {};
-
+let userEntered_info_torentland_te = {};
 
 
 
@@ -947,40 +947,42 @@ else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true
 
 
 // to rent land in every // as tenant
-   else if (received_message.payload === "torentland1_tellbyuser_tellyes1") { 
+   else if (received_message.payload === "cuSay_yes_tosay_SthElse_te") { 
     response = {
               "text": "Ok, please tell me."
     }
      received_message.payload = false;
-     torentland_told.land_yesyes_byuser = true;
+     torentland_tenant.cu_say_yes_sthElse_tenant = true;  // user say yes to say sth else
   }
 
-  else if (received_message.text &&  torentland_told.land_yesyes_byuser === true) {
-    userEntered_yes1_torentland.land_yesyes_byuser = received_message.text;
+  else if (received_message.text &&  torentland_tenant.cu_say_yes_sthElse_tenant === true) {  // user say yes to say sth else
+    userEntered_info_torentland_te.cu_say_yes_sthElse_tenant = received_message.text;  // user say yes to say sth else
     response = {
        "text": "Please leave your contact number. We will contact you later."
                   
     }
-    torentland_told.land_yesyes_byuser = false;
-    torentland_told.leave_phno_land1 = true;
+    torentland_tenant.cu_say_yes_sthElse_tenant = false;  // user say yes to say sth else
+    torentland_tenant.phNumberByCu_torentHou_tenant = true;  // phone number by user to buy house
   }
-    else if (received_message.text &&  torentland_told.leave_phno_land1 === true) {
-    userEntered_yes1_torentland.leave_phno_land1 = received_message.text;
+    else if (received_message.text &&  torentland_tenant.phNumberByCu_torentHou_tenant === true) {  // phone number by user to buy house
+    userEntered_info_torentland_te.phNumberByCu_torentHou_tenant = received_message.text; // phone number by user to buy house
     saveData_torent_land_asTenant(sender_psid);
     response = {
-       "text": "Thanks for contacting us. Have a nice day!"
+       "text": "Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
                   
     }
-    torentland_told.leave_phno_land1 = false;  
+    torentland_tenant.phNumberByCu_torentHou_tenant = false;  // phone number by user to buy house
   }
 
 // user say no 
-  else if (received_message.payload === "torentland2_tellbyuser_tellnooo1ab") { 
+  else if (received_message.payload === "cuSay_no_tosay_SthElse_te") { 
+    userEntered_info_torentland_te.cu_say_no_sthElse_tenant = received_message.payload;  
     response = {
-      "text": "Please leave your contact number. We will contact you later."
+      "text": "Please leave your contact number."
     }
-  torentland_told.leave_phno_land1 = true;
+  torentland_tenant.phNumberByCu_torentHou_tenant = true; // phone number by user to buy house
   }
+
 
 /************************************************************************************************************/
 /************************************************************************************************************/
@@ -9713,7 +9715,7 @@ function handlePostback(sender_psid, received_postback) {
                       ]
   }
 }
-// to rent land in every
+// to rent land in every // as tenant
  else if (payload === "torentlandall_aabb1") {
          response = {
                   "text": "Do you wanna talk about the property or something else?",
@@ -9721,12 +9723,12 @@ function handlePostback(sender_psid, received_postback) {
                         {
                           "content_type": "text",
                           "title": "Yes",
-                          "payload": "torentland1_tellbyuser_tellyes1", 
+                          "payload": "cuSay_yes_tosay_SthElse_te", 
                         },
                         {
                           "content_type": "text",
                           "title": "No",
-                          "payload": "torentland2_tellbyuser_tellnooo1ab",
+                          "payload": "cuSay_no_tosay_SthElse_te",
                         }
                       ]
   }
@@ -10108,11 +10110,11 @@ else if (payload === 'innnter') {
                   "type": "template",
                   "payload": {
                     "template_type": "button",
-                    "text": "Please choose the place in which you want to buy land. If you want to buy land in any township, please choose Any Township",
+                    "text": "Please choose the place in which you want to buy land:",
                     "buttons": [
                         {
                           "type": "postback",
-                          "title": "Within 5 Thri Township",
+                          "title": "In Five Thri Township",
                           "payload": "5fthri",
                         },
                          {
@@ -10891,12 +10893,22 @@ function saveData_torent_house_asTenant(sender_psid) {
 function saveData_torent_land_asTenant(sender_psid) {
   const cu_info_torent_land_te = {
     id : sender_psid,
-    aaaaaaaaaaa : userEntered_yes1_torentland.land_yesyes_byuser,
-    bbbbbbbbbbb : userEntered_yes1_torentland.leave_phno_land1,
-//    phoneNo_ofCu : userEntered_yes1_torentland.phNumber_byUser_torentHou_te,
+    cu_tell_yes_sthElse : userEntered_info_torentland_te.cu_say_yes_sthElse_tenant,
+    cu_tell_no_sthElse : userEntered_info_torentland_te.cu_say_yes_sthElse_tenant,
+    phoneNo_ofCu_asking : userEntered_info_torentland_te.phNumberByCu_torentHou_tenant,
   }
-  db.collection('cu_torent_land_asTenant').add(userEntered_yes1_torentland);
+  db.collection('cu_torent_land_asTenant').add(userEntered_info_torentland_te);
 }
+
+// to rent land in by user // as tenant
+/*
+let torentland_tenant = {
+  cu_say_yes_sthElse_tenant:false,
+  cu_say_no_sthElse_tenant:false,
+  phNumberByCu_torentHou_tenant:false,
+}
+let userEntered_info_torentland_te = {};
+*/
 
 // to rent land told by user // as tenant
 /*
