@@ -10289,24 +10289,27 @@ else if (payload === 'hoou2') {
 // to sell land
 // to sell land in pyinmana
  else if (payload === "toselpyinlan") {
+  userEntered_land_tosel.twp_name_tosell_land = payload; // for twp name to sell
          response = {
       "text":'Please tell the area of land that you want to sell.'
     }
-    tosel_land_byuser.land_type_tosell = true;
+    payload = false;
+    tosel_land_byuser.land_type_tosell = true;  // for type of land
   }
-
-
+  
+// to send again images
  else if (payload === "attach_yes_sell_land") { 
     response = {
       "text": "OK, please send me."
     }
-     tosel_land_byuser.attach_land_tosell = true;
+     tosel_land_byuser.images_ofLand_byCu = true; // for land images by user
   }
+
     else if (payload === 'attach_no_sell_land') {
         response = {
                   "text": "Please tell me the estimated amount that you want to get."
       }
-      tosel_land_byuser.estimated_price_land = true;
+      tosel_land_byuser.estimated_amount_byCus = true; // for estimated amount to get
   }
 
 /*****************************************/
