@@ -91,7 +91,7 @@ let userEntered_ldld_land = {};
 
 // to sell their house
 let toselhou_byuser = {
-  twp_name_tobeSold:false,
+//  twp_name_tobeSold:false,
   to_sel_hou:false,
   howMuchRoom_hou:false,
   area_hou_inOtt:false,
@@ -892,16 +892,42 @@ else if (received_message.text && landlord_sent.something1else_byuser11 === true
 /************************************************************************************************************/
 /************************************************************************************************************/
 
+                                              {
+                                                "content_type": "text",
+                                                "title": "Ottara",
+                                                "payload": "tselott" //tselott
+                                              },
+                                              {
+                                                "content_type": "text",
+                                                "title": "Pobba",
+                                                "payload": "tselpob"  //tselpob
+                                              },
+                                              {
+                                                "content_type": "text",
+                                                "title": "Dekkhina",
+                                                "payload": "tseldek"  //tseldek
+                                              },
+                                              {
+                                                "content_type": "text",
+                                                "title": "Zaya Thiri",
+                                                "payload": "tselzaya"  //tselzaya
+                                              },
+                                              {
+                                                "content_type": "text",
+                                                "title": "Zabu Thiri",
+                                                "payload": "tselzabu"  //tselzabu
+                                              }
 
 /***********************************************************************************/
 // to sell house
- else if (received_message.text && toselhou_byuser.twp_name_tobeSold == true) {
-  userEntered_Hou_tosel.twp_name_tobeSold = received_message.text;
-  console.log('meta data',userEntered_Hou_tosel.twp_name_tobeSold);
+ else if (received_message.payload === "tselott" || received_message.payload === "tselpob" || received_message.payload === "tseldek" || received_message.payload === "tselzaya" || received_message.payload === "tselzabu") {
+    console.log('meta data',received_message);
+//  userEntered_Hou_tosel.twp_name_tobeSold = received_message.text;
+//  console.log('meta data',userEntered_Hou_tosel.twp_name_tobeSold);
           response = {
       "text":'Please tell the type of house that you want to sell like RC or Nancat'
     }
-    toselhou_byuser.twp_name_tobeSold = false; 
+//    toselhou_byuser.twp_name_tobeSold = false; 
     toselhou_byuser.to_sel_hou = true;
   }
 
@@ -10132,27 +10158,27 @@ else if (payload === 'hoou2') {
                                               {
                                                 "content_type": "text",
                                                 "title": "Ottara",
-                                                "payload": "tosellin_ftwp" //tselott
+                                                "payload": "tselott" //tselott
                                               },
                                               {
                                                 "content_type": "text",
                                                 "title": "Pobba",
-                                                "payload": "tosellin_ftwp"  //tselpob
+                                                "payload": "tselpob"  //tselpob
                                               },
                                               {
                                                 "content_type": "text",
                                                 "title": "Dekkhina",
-                                                "payload": "tosellin_ftwp"  //tseldek
+                                                "payload": "tseldek"  //tseldek
                                               },
                                               {
                                                 "content_type": "text",
                                                 "title": "Zaya Thiri",
-                                                "payload": "tosellin_ftwp"  //tselzaya
+                                                "payload": "tselzaya"  //tselzaya
                                               },
                                               {
                                                 "content_type": "text",
                                                 "title": "Zabu Thiri",
-                                                "payload": "tosellin_ftwp"  //tselzabu
+                                                "payload": "tselzabu"  //tselzabu
                                               } 
                         /*,
                         {
@@ -10162,7 +10188,7 @@ else if (payload === 'hoou2') {
                         } */
                       ]
       }
-      toselhou_byuser.twp_name_tobeSold = true;   
+      //     toselhou_byuser.twp_name_tobeSold = true;   
   }
 
 
