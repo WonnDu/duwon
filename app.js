@@ -52,25 +52,30 @@ const
 // let userEnteredPhonenum = {};
 
 
+/**********************************************/
 
-
-// to rent house as alandlord 
+// to rent house as landlord 
 let landlord_sent = {
-  fully_address:false,
-  typeOf_hou_ldld:false,
-  quan_floor:false,
-  typeOf_room_ldld:false,
-  typeOf_both_ldld:false,
-  area_landlord:false,
-  photo_torenthou_asldld:false,
-  attach1_hou1torent2:false,
-  estimatedprice_houldld:false,
-  howmuch_permonth_hou1:false,
-  hou_contactnumofuser:false,
-  something1else_byuser11:false,
+  twp_name_torentHouse:false,
+  house_type_torent:false,
+  numOf_floor_torentHou:false,
+  numOf_mbr_torentHou:false,
+  numOf_br_torentHou:false,
+  both1_numOf_mbr_torent:false,
+  both2_numOf_br_torent:false,
+  landArea_ofHouse_torent:false,
+  images_ofHouse_torent:false,
+  estimated_price_perMonth_torentHou:false,
+  numOf_month_torentHouse:false,
+  fullyAddress_byCu_torent:false,
+  ph_numm_byCu_torentHou:false,
+  sth_yes_toldbyCu_torent:false,
+  sth_no_toldbyCu_torent:false,
+
 }
 let userEntered_landlord = {};
 
+/********************************************/
 
 // to rent land as a landlord
 let ldld_land_sent = {
@@ -114,31 +119,10 @@ let userEntered_Hou_tosel = {};
 
 
 
-// to sell their house
-/*
-let toselhou_byuser = {
-  twp_name_tobeSold:false,
-  to_sel_hou:false,
-  howMuchRoom_hou:false,
-  area_hou_inOtt:false,
-  typeofLand_ofhou1:false,
-  photos_ott:false,
-  attach_houhou:false,
-  more_attach1hou:false,
-  ph_num:false,
-  forSell_both_room:false,
-  estimated_price_forSell:false,
-  something_else_toldbyuser:false,
-  thanksfor_contacting11:false,
-}
-let userEntered_Hou_tosel = {};
-*/
-
-
 /*********************************************/
 
 
-// for customers who want to sell land
+//  to sell land
 let tosel_land_byuser = {
 
 
@@ -366,33 +350,32 @@ function handleMessage(sender_psid, received_message) {
 
 
 
-  // to rent house as a landlord
+  
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+
+
+
+  // to rent house as landlord
   else if (received_message.payload === "ld_ottwp" || received_message.payload === "ld_potwp" || received_message.payload === "ld_dektwp" || received_message.payload === "ld_zaytwp" || received_message.payload === "ld_zaytwp") {    
+    userEntered_landlord.twp_name_torentHouse =  received_message.payload; // for twonship name to be rented
     response = {
-      "text": "Please tell me fully address of your house to be rented out. "
+      "text": "Please tell the type of house you want to rent. I mean RC or Nancat etc."
     }
     received_message.payload = false;
-//  landlord_sent.attach1 = true;
-    landlord_sent.fully_address = true;
+    landlord_sent.house_type_torent = true; // for house type to be rented
   }
-  else if (received_message.text && landlord_sent.fully_address === true) {
-    userEntered_landlord.fully_address = received_message.text;
+  else if (received_message.text && landlord_sent.house_type_torent === true) { // for house type to be rented
+    userEntered_landlord.house_type_torent = received_message.text;   // for house type to be rented
           response = {
-                      "text":'Please tell the type of house you want to rent. I mean RC or Nancat etc. Please tell me.'
-          }
-          landlord_sent.fully_address = false;
-          landlord_sent.typeOf_hou_ldld = true;
+                      "text":'How many floors is the house?'
+    }
+    landlord_sent.house_type_torent = false;      // for house type to be rented
+    landlord_sent.numOf_floor_torentHou = true; // for number of floor of house to be rented
   }
-  else if (received_message.text && landlord_sent.typeOf_hou_ldld === true) {
-    userEntered_landlord.typeOf_hou_ldld = received_message.text;
-          response = {
-                      "text":'How many floors is the house?'   
-          }
-          landlord_sent.typeOf_hou_ldld = false;
-          landlord_sent.quan_floor = true;
-  }
-  else if (received_message.text && landlord_sent.quan_floor === true) {
-    userEntered_landlord.quan_floor = received_message.text;
+  else if (received_message.text && landlord_sent.numOf_floor_torentHou === true) {  // for number of floor of house to be rented
+    userEntered_landlord.numOf_floor_torentHou = received_message.text;   // for number of floor of house to be rented
           response = {
                     "text": "Do you have what types of room? please tell me.",
                     "quick_replies": [
@@ -414,7 +397,7 @@ function handleMessage(sender_psid, received_message) {
                         }
                       ]
           }
-          landlord_sent.quan_floor = false;
+          landlord_sent.numOf_floor_torentHou = false;  // for number of floor of house to be rented
   }
   
 
@@ -424,7 +407,7 @@ function handleMessage(sender_psid, received_message) {
       "text": "How many master bed rooms are in your house?"
     }
     received_message.payload = false;
-    landlord_sent.area_landlord = true;
+    landlord_sent.numOf_mbr_torentHou = true;  // number of master bed room to rent house as landlord
   }
 
   // for bed room in landlord
@@ -433,38 +416,66 @@ function handleMessage(sender_psid, received_message) {
       "text": "How many bed rooms are in your house?"
     }
     received_message.payload = false;
-    landlord_sent.area_landlord = true;
+    landlord_sent.numOf_br_torentHou = true;   // number of bed room to rent house as landlord
   }
 
 
-  // for both master bed room and bed room in landlord
+////////////////////////////////////////////////////
+
+// for only number of master bed room to rent as landlord
+ else if (received_message.text && landlord_sent.numOf_mbr_torentHou === true) {  // number of master bed room to rent house as landlord
+  userEntered_landlord.numOf_mbr_torentHou = received_message.text;   // for number of master bed room to rent house as landlord
+    response = {
+      "text": "Please tell me land area of your house."
+    }
+    landlord_sent.numOf_mbr_torentHou = false; // for number of master bed room to rent as landlord
+    landlord_sent.landArea_ofHouse_torent = true; // for land area of house to rent house as landlord
+  }
+
+  // for only number of master bed room and bed room
+ else if (received_message.text && landlord_sent.numOf_br_torentHou === true) {  // number of bed room
+  userEntered_landlord.numOf_br_torentHou = received_message.text;   // for number of bed room to rent house as landlord
+    response = {
+      "text": "Please tell me land area of your house."
+    }
+    landlord_sent.numOf_br_torentHou = false; // for number of bed room to rent house as landlord
+    landlord_sent.landArea_ofHouse_torent = true; // for land area of house to rent house as landlord
+  }  
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+  // for both master bed room and bed room to rent as landlord
  else if (received_message.payload === "hou_ldld_both") {
-   response  = { "text": "How many master bed rooms are in your house?" 
+   response  = { "text": "How many master bed rooms in your house?" 
   }
   received_message.payload = false;
-  landlord_sent.typeOf_both_ldld = true;
+  landlord_sent.both1_numOf_mbr_torent = true;  // for both, number of master bed room to rent house as landlord
 }
- else if (received_message.text && landlord_sent.typeOf_both_ldld === true) {  
-  userEntered_landlord.typeOf_both_ldld = received_message.text; 
+ else if (received_message.text && landlord_sent.both1_numOf_mbr_torent === true) {  
+  userEntered_landlord.both1_numOf_mbr_torent = received_message.text; 
     response = {
-      "text": "How many bed rooms are in your house?"
+      "text": "How many bed rooms in your house?"
     }
-    landlord_sent.typeOf_both_ldld = false;
-    landlord_sent.area_landlord = true;
-  }
-
-
- else if (received_message.text && landlord_sent.area_landlord === true) { 
-  userEntered_landlord.area_landlord = received_message.text;   
-    response = {
-      "text": "Please tell me land area of your house"
-    }
-    landlord_sent.area_landlord = false;
-    landlord_sent.photo_torenthou_asldld = true;
+    landlord_sent.both1_numOf_mbr_torent = false; // for  both, number of master bed room to rent house as landlord
+    landlord_sent.both2_numOf_br_torent = true; // for both, number of bed room to rent as landlord
   } 
 
-  else if (received_message.text && landlord_sent.photo_torenthou_asldld  === true) {
-   userEntered_landlord.photo_torenthou_asldld = received_message.text;
+
+ else if (received_message.text && landlord_sent.both2_numOf_br_torent === true) { 
+  userEntered_landlord.both2_numOf_br_torent = received_message.text;   // for both, number of bed room to rent house as landlord
+    response = {
+      "text": "Please tell me land area of your house."
+    }
+    landlord_sent.both2_numOf_br_torent = false;
+    landlord_sent.landArea_ofHouse_torent = true; // for land area of house  to rent house  as landlord
+  } 
+
+
+/*********************************************************************/
+
+
+  else if (received_message.text && landlord_sent.landArea_ofHouse_torent  === true) { // for land area of house  to rent house  as landlord
+   userEntered_landlord.landArea_ofHouse_torent = received_message.text; // for land area of house  to rent house  as landlord
          response = {
        "text": "Could you send me inside and outside photos with regard to your house?",
                     "quick_replies": [
@@ -480,7 +491,7 @@ function handleMessage(sender_psid, received_message) {
                         }
                       ]
     }
-    landlord_sent.photo_torenthou_asldld = false;
+    landlord_sent.landArea_ofHouse_torent = false;  // for land area of house  to rent house  as landlord
   }
 
 
@@ -488,14 +499,15 @@ function handleMessage(sender_psid, received_message) {
     response = {
       "text": "OK, please send me."
     }
-     landlord_sent.attach1_hou1torent2 = true;
+      received_message.payload = false;
+     landlord_sent.images_ofHouse_torent = true;
   }
 
 
-  else if (received_message.attachments && landlord_sent.attach1_hou1torent2 == true) {
-      userEntered_landlord.attach1_hou1torent2 = received_message.attachments; 
+  else if (received_message.attachments && landlord_sent.images_ofHouse_torent == true) {
+      userEntered_landlord.images_ofHouse_torent = received_message.attachments; 
     // Get the URL of the message attachment
-    let attachment_url_photo = userEntered_landlord.attach1_hou1torent2[0].payload.url;
+    let attachment_url_photo = userEntered_landlord.images_ofHouse_torent[0].payload.url;
     response = {
       "attachment": {
         "type": "template",
@@ -521,29 +533,37 @@ function handleMessage(sender_psid, received_message) {
         }
       }
     }
-    landlord_sent.attach1_hou1torent2 = false;
+    landlord_sent.images_ofHouse_torent = false;
   }
 
 
 
-    else if (received_message.text && landlord_sent.estimatedprice_houldld == true) {
-    userEntered_landlord.estimatedprice_houldld = received_message.text;
+  else if (received_message.text && landlord_sent.estimated_price_perMonth_torentHou == true) { // estimated price per month to rent house as landlord
+    userEntered_landlord.estimated_price_perMonth_torentHou = received_message.text; // estimated price per month to rent house as landlord
     response = {
       "text":"How many months do you want to rent your house at least?"
     }
-    landlord_sent.estimatedprice_houldld = false;
-    landlord_sent.howmuch_permonth_hou1 = true;
+    landlord_sent.estimated_price_perMonth_torentHou = false; // estimated price per month to rent house as landlord
+    landlord_sent.numOf_month_torentHouse = true; // number of moonth at least to rent house as landlord
   } 
 
-   else if (received_message.text && landlord_sent.howmuch_permonth_hou1 == true) {
-    userEntered_landlord.howmuch_permonth_hou1 = received_message.text;
+ 
+  else if (received_message.text && landlord_sent.numOf_month_torentHouse == true) {  // number of moonth at least to rent house as landlord
+    userEntered_landlord.numOf_month_torentHouse = received_message.text; // number of moonth at least to rent house as landlordd
     response = {
-      "text":"Please leave me your phone number and I will contact you later."
+      "text":"Please tell me fully address of your house to be rented."
     }
-    landlord_sent.howmuch_permonth_hou1 = false;
-    landlord_sent.hou_contactnumofuser = true;
-  } 
-
+    landlord_sent.numOf_month_torentHouse = false; // number of moonth at least to rent house as landlord
+    landlord_sent.fullyAddress_byCu_torent = true;  // fully address house to be rented as landlord
+  }  
+  else if (received_message.text && landlord_sent.fullyAddress_byCu_torent == true) {  // fully address house to be rented as landlord
+    userEntered_landlord.fullyAddress_byCu_torent = received_message.text; // fully address house to be rented as landlord
+    response = {
+      "text":"Please leave me your phone number."
+    }
+    landlord_sent.fullyAddress_byCu_torent = false; // fully address house to be rented as landlord
+    landlord_sent.ph_numm_byCu_torentHou = true; // phone number of customer to rent house as landlord
+  }
 
 
 
@@ -551,12 +571,12 @@ function handleMessage(sender_psid, received_message) {
     response = {
       "text":"Do you want to rent how much per month?."
     }
-  landlord_sent.estimatedprice_houldld = true;
+  landlord_sent.estimated_price_perMonth_torentHou = true; // estimated price per month to rent house as landlord
   } 
 
 
-  else if (received_message.text && landlord_sent.hou_contactnumofuser  === true) {
-   userEntered_landlord.hou_contactnumofuser = received_message.text;
+  else if (received_message.text && landlord_sent.ph_numm_byCu_torentHou  === true) { // phone number of customer to rent house as landlord
+   userEntered_landlord.ph_numm_byCu_torentHou = received_message.text; // phone number of customer to rent house as landlord
          response = {
        "text": "Do you want to tell something to us?",
                     "quick_replies": [
@@ -572,29 +592,45 @@ function handleMessage(sender_psid, received_message) {
                         }
                       ]
     }
-    landlord_sent.hou_contactnumofuser = false;
+    landlord_sent.ph_numm_byCu_torentHou = false;  // phone number of customer to rent house as landlord
   }
+
+
+// customer say yes to tell something else  
 else if (received_message.payload === "customer1a_useryes1_torenthou1a") {
     response = {
       "text":"Please tell me."
     }
-  landlord_sent.something1else_byuser11 = true;
-  } 
-else if (received_message.text && landlord_sent.something1else_byuser11 === true ) {
+  landlord_sent.sth_yes_toldbyCu_torent = true;  // customer say yes to tell something else 
+} 
+
+
+else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true ) { // for something else told by user to rent house as landlord
+    userEntered_landlord.sth_yes_toldbyCu_torent = received_message.text;  
+    saveData_torent_house(sender_psid)
+
     response = {
-      "text":"Thanks for contacting us.I will contact you within 24 hours. Have a nice day!"
+      "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
     }
-  landlord_sent.something1else_byuser11 = false;
+  landlord_sent.sth_yes_toldbyCu_torent = false;
   }
-  else if (received_message.payload === "customer2b_usernono1_torenthou2b" ) {
+
+// for user say no for something else to rent house as landlord
+  else if (received_message.payload === "customer2b_usernono1_torenthou2b" ) { // for user says no
+    userEntered_landlord.sth_no_toldbyCu_torent = received_message.payload;  // user says no for something else
+    saveData_torent_house(sender_psid)
+
     response = {
-      "text":"Thanks for contacting us.I will contact you within 24 hours. Have a nice day!"
+      "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
     }
-  }  
+    received_message.payload = false;
+  }
 
 
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
 
-/******************************************************************************************/
 
 
 
@@ -887,7 +923,7 @@ else if (received_message.text && landlord_sent.something1else_byuser11 === true
 
 
 
-// to rent land in every
+// to rent land in every // i think this is tenant
    else if (received_message.payload === "torentland1_tellbyuser_tellyes1") { 
     response = {
               "text": "Ok, please tell me."
@@ -1173,6 +1209,7 @@ else if (received_message.text && landlord_sent.something1else_byuser11 === true
     }
     toselhou_byuser.ph_numm_byCu_tosellHou = false; // for ph number by user
   }
+// customer says yes to tell something else
 else if (received_message.payload === "customer_useryes_toldbyuser111da") {
     response = {
       "text":"Please tell me."
@@ -1181,10 +1218,9 @@ else if (received_message.payload === "customer_useryes_toldbyuser111da") {
   } 
 
 
-// for user says yes to sell something else
 else if (received_message.text && toselhou_byuser.sth_yes_toldbyCu === true ) { // for something else told by user
     userEntered_Hou_tosel.sth_yes_toldbyCu = received_message.text;  
-    saveData(sender_psid);
+    saveData_tosell_house(sender_psid)
 
     response = {
       "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
@@ -1195,7 +1231,7 @@ else if (received_message.text && toselhou_byuser.sth_yes_toldbyCu === true ) { 
 // for user say no for something else
   else if (received_message.payload === "customer_usernono_toldbyuser111da" ) { // for user says no
     userEntered_Hou_tosel.sth_no_toldbyCu = received_message.payload;  // user says no for something else
-    saveData(sender_psid);
+    saveData_tosell_house(sender_psid)
 
     response = {
       "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
@@ -1245,14 +1281,14 @@ else if (received_message.text && toselhou_byuser.sth_yes_toldbyCu === true ) { 
                     "quick_replies": [
                         {
                           "content_type": "text",
-                          "title": ".Yes.",
-                          "payload": "ans_no_for_a_myie_pauck",
+                          "title": "Yes",
+                          "payload": "ans_yes_for_a_myie_pauck",
  //                         "image_url":"http://example.com/img/green.png"
                         },
                         {
                           "content_type": "text",
-                          "title": ".No.",
-                          "payload": "ans_yes_for_a_myie_pauck",
+                          "title": "No",
+                          "payload": "ans_no_for_a_myie_pauck",
  //                         "image_url":"http://example.com/img/red.png"
                         }
                       ]
@@ -1260,7 +1296,7 @@ else if (received_message.text && toselhou_byuser.sth_yes_toldbyCu === true ) { 
     tosel_land_byuser.land_type_tosell_byCu = false; // for type of land
   }
 
- else if (received_message.payload === "ans_no_for_a_myie_pauck" || received_message.payload === "ans_yes_for_a_myie_pauck") {
+ else if (received_message.payload === "ans_yes_for_a_myie_pauck" || received_message.payload === "ans_no_for_a_myie_pauck") {
       userEntered_land_tosel.a_myie_pauk_byCu = received_message.payload; // for a myie pauk
          response = {
        "text": "Could you send me photos with regard to your land?",
@@ -1376,7 +1412,7 @@ else if (received_message.payload === "cu_say_yes_for_sthElse") {
 
    else if (received_message.text && tosel_land_byuser.yes_for_sthElse_byCu == true) {  // for sth else told by user
     userEntered_land_tosel.yes_for_sthElse_byCu = received_message.text;  // for sth else told by user
-    saveData_tosell_land(sender_psid);
+    saveData_tosell_land(sender_psid); 
     response = {
       "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
     }
@@ -9496,13 +9532,6 @@ function handlePostback(sender_psid, received_postback) {
   });
   }
 
- // pyin (house) in landlord
-  else if (payload === "ldld1_1pyin1") {    
-    response = {
-      "text": "Please tell me fully address of your house to be rented out. "
-    }
-    landlord_sent.fully_address = true;
-  }
 
 
   // five thiri (house) in landlord
@@ -10313,24 +10342,40 @@ else if (payload === 'hoou2') {
   }
 
 /*****************************************/
+/*****************************************/
+
+
+// to rent house in pyinmana as a landlord
+  else if (payload === "ldld1_1pyin1") { 
+   userEntered_landlord.twp_name_torentHouse = payload;   
+    response = {
+      "text": "Please tell the type of house you want to rent. I mean RC or Nancat etc."
+    }
+    landlord_sent.house_type_torent = true; // for house type to rent house as landlord
+  }
+
 
 // to rent house as a landlord
    else if (payload === "torenthou2yesyes_asldld") { 
     response = {
       "text": "OK, please send me."
     }
-     landlord_sent.attach1_hou1torent2 = true;
+     landlord_sent.images_ofHouse_torent = true; // for images to be send by customer as landlord
   }
 
    else if (payload === 'torenthou2nono_asldld') {
         response = {
                   "text": "Do you want to rent how much per month?"
       }
-      landlord_sent.estimatedprice_houldld = true;
+      landlord_sent.estimated_price_perMonth_torentHou = true; // estimated price per month to rent house as landlord
   }
 
 
+
+
 /*******************************************/
+/*******************************************/
+
 
 // to rent land as a landlord // no more photos
   else if (payload === "attach_yes_ldld_land") { 
@@ -10687,26 +10732,26 @@ async function greetUser(sender_psid){
 
 /*function function save data to firebase*/
 // to sell house
-function saveData(sender_psid) {
+function saveData_tosell_house(sender_psid) {
   const cu_info = {
     id : sender_psid,
     twonship_name : userEntered_Hou_tosel.twp_name_tobeSold,
     type_of_house : userEntered_Hou_tosel.house_type_ht,
     number_of_floor : userEntered_Hou_tosel.numOf_floor_toselHou,
-
     number_of_mbr : userEntered_Hou_tosel.numOf_mbr_toselHou,
     number_of_br : userEntered_Hou_tosel.numOf_br_toselHou,
     both_num_of_mbr : userEntered_Hou_tosel.both1_numOf_mbr_tsel,
     both_num_of_br : userEntered_Hou_tosel.both2_numOf_br_tsel,
     land_area_of_house : userEntered_Hou_tosel.landArea_ofHouse_tosell,
     land_type_of_house : userEntered_Hou_tosel.typeOf_land_ofHou_tsel,
+    images_ofHouse : userEntered_Hou_tosel.images_ofHouse_tsel,
     estimated_amount : userEntered_Hou_tosel.estimated_amount_toget,
     fully_address : userEntered_Hou_tosel.fullyAddress_byCu_tosel,
     phone_number : userEntered_Hou_tosel.ph_numm_byCu_tosellHou,
     yes_toTell_sth_else : userEntered_Hou_tosel.sth_yes_toldbyCu,
     no_toTell_sth_else : userEntered_Hou_tosel.sth_no_toldbyCu,
   }
-  db.collection('customer_info').add(userEntered_Hou_tosel);
+  db.collection('cu_info_tosell_house').add(userEntered_Hou_tosel);
 }
 
 
@@ -10728,76 +10773,59 @@ function saveData_tosell_land(sender_psid) {
     totell_no_somethingElse : userEntered_land_tosel.no_for_sthElse_byCu,
    
   }
-  db.collection('cu_information').add(userEntered_land_tosel);
+  db.collection('cu_info_tosell_land').add(userEntered_land_tosel);
 }
 
 
+/**************************************************************************/
+
+// to rent house as landlord
+function saveData_torent_house(sender_psid) {
+  const cu_inform_torent_house = {
+    id : sender_psid,
+    twonship_name : userEntered_landlord.twp_name_torentHouse,
+    type_of_house : userEntered_landlord.house_type_torent,
+    number_of_floor : userEntered_landlord.numOf_floor_torentHou,
+    number_of_mbr : userEntered_landlord.numOf_mbr_torentHou,
+    number_of_br : userEntered_landlord.numOf_br_torentHou,
+    both_num_of_mbr : userEntered_landlord.both1_numOf_mbr_torent,
+    both_num_of_br : userEntered_landlord.both2_numOf_br_torent,
+    land_area_of_house : userEntered_landlord.landArea_ofHouse_torent,
+    images_ofHouse_tsel : userEntered_landlord.images_ofHouse_torent,
+    estimated_amount : userEntered_landlord.estimated_price_perMonth_torentHou,
+    numOf_month_torentHou :userEntered_landlord.numOf_month_torentHouse;
+    fully_address : userEntered_landlord.fullyAddress_byCu_torent,
+    phone_number : userEntered_landlord.ph_numm_byCu_torentHou,
+    yes_toTell_sth_else : userEntered_landlord.sth_yes_toldbyCu_torent,
+    no_toTell_sth_else : userEntered_landlord.sth_no_toldbyCu_torent,
+   
+  }
+  db.collection('cu_info_torent_house').add();
+}
+
+
+// to rent house as landlord
 /*
-// for customers who want to sell land
-let tosel_land_byuser = {
-
-
-  twp_name_tosell_land:false,
-  land_area_tosell_byCu:false,
-  land_type_tosell_byCu:false,
-  a_myie_pauk_byCu:false,
-  images_ofLand_byCu:false,
-  estimated_amount_byCus:false,
-  fullyAddress_ofLand_tosell:false,
-  phone_num_byCu_tosell_land:false,
-  yes_for_sthElse_byCu:false,
-  no_for_sthElse_byCu:false,
+let landlord_sent = {
+  twp_name_torentHouse:false,
+  house_type_torent:false,
+  numOf_floor_torentHou:false,
+  numOf_mbr_torentHou:false,
+  numOf_br_torentHou:false,
+  both_numOf_mbr_torent:false,
+  both_numOf_br_torent:false,
+  landArea_ofHouse_torent:false,
+  images_ofHouse_torent:false,
+  estimated_price_perMonth_torentHou:false,
+  numOf_month_torentHouse:false,
+  fullyAddress_byCu_torent:false,
+  ph_numm_byCu_torentHou:false,
+  sth_yes_toldbyCu_torent:false,
+  sth_no_toldbyCu_torent:false,
 
 }
-let userEntered_land_tosel = {};
+let userEntered_landlord = {};
 */
 
 
-// to sell their house
-/*
-let toselhou_byuser = {
-  twp_name_tobeSold:false,
-  house_type_ht:false,
-  numOf_floor_toselHou:false,
 
-  numOf_mbr_toselHou:false,
-  numOf_br_toselHou:false,
-  both1_numOf_mbr_tsel:false,
-  both2_numOf_br_tsel:false,
-
-  landArea_ofHouse_tosell:false,
-  typeOf_land_ofHou_tsel:false,
-  images_ofHouse_tsel:false,
-  estimated_amount_toget:false,
-  fullyAddress_byCu_tosel:false,
-  ph_numm_byCu_tosellHou:false,
-  sth_yes_toldbyCu:false,
-  sth_no_toldbyCu:false,
-
-}
-let userEntered_Hou_tosel = {};
-*/
-
-
-//db.collection('user_information').add(info);
-
-
-
-/*
-to sell their house
-let toselhou_byuser = {
-  to_sel_hou:false,
-  howMuchRoom_hou:false,
-  area_hou_inOtt:false,
-  typeofLand_ofhou1:false,
-  photos_ott:false,
-  attach_houhou:false,
-  more_attach1hou:false,
-  ph_num:false,
-  forSell_both_room:false,
-  estimated_price_forSell:false,
-  something_else_toldbyuser:false,
-  thanksfor_contacting11:false,
-}
-let userEntered_Hou_tosel = {};    
-*/
