@@ -157,7 +157,7 @@ let tobuyhouse_told = {
 let userEntered_info_toBuyHouse = {};
 
 
-// to buy land told by user
+// to buy land in every
 let tobuyland_told = {
   land_yes1_byuser:false,
   leave_contactno_land:false,
@@ -918,6 +918,7 @@ else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true
   }
     else if (received_message.text &&  tobuyland_told.leave_contactno_land === true) {
     userEntered_yes_tobuyland.leave_contactno_land = received_message.text;
+    saveData_tobuy_land(sender_psid);
     response = {
        "text": "Thanks for contacting us. Have a nice day!"
                   
@@ -10851,3 +10852,24 @@ function saveData_tobuy_house(sender_psid) {
   db.collection('cu_info_toBuy_House').add(userEntered_info_toBuyHouse);
 }
 
+
+// to buy land in every
+function saveData_tobuy_land(sender_psid) {
+  const cu_info_toBuy_landInE = {
+    id : sender_psid,
+    aaaaaa : userEntered_yes_tobuyland.land_yes1_byuser,
+    bbbbbb : userEntered_yes_tobuyland.land_yes1_byuser,
+  }
+  db.collection('cu_info_toBuy_Land').add(userEntered_yes_tobuyland);
+}
+
+
+
+// to buy land in every
+/*
+let tobuyland_told = {
+  land_yes1_byuser:false,
+  leave_contactno_land:false,
+}
+let userEntered_yes_tobuyland = {};
+*/
