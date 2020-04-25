@@ -10105,7 +10105,7 @@ else if (payload === 'innnter') {
                 }
               }
 } 
-/*
+
 else if (payload === 'hoou2') {
     response = { "attachment": {
                   "type": "template",
@@ -10127,10 +10127,9 @@ else if (payload === 'hoou2') {
                   }
                 }
               }
-              toselhou_byuser.twp_name_tobeSold = true;
   }
-  */
-  else if (payload === 'hoou2') {
+  
+  else if (payload === 'toselhou5') {
         response = { "text": "Please choose the township in which you want to sell house:",
                             "quick_replies": [
                                               {
@@ -10158,15 +10157,8 @@ else if (payload === 'hoou2') {
                                                 "title": "Zabu Thiri",
                                                 "payload": "tselzabu"  //tselzabu
                                               } 
-                        /*,
-                        {
-                          "type": "postback",
-                          "title": "Pyinmana Township",
-                          "payload": "toselhoupyin",
-                        } */
                       ]
       }
-      //     toselhou_byuser.twp_name_tobeSold = true;   
   }
 
 
@@ -10175,15 +10167,16 @@ else if (payload === 'hoou2') {
 
 
 // to sell house
-/*
+
  else if (payload === "toselhoupyin") {
+  userEntered_Hou_tosel.twp_name_tobeSold = received_message.payload;
          response = {
       "text":'Please tell the type of house that you want to sell like RC or Nancat'
     }
-    toselhou_byuser.twp_name_tobeSold = false; 
+    payload = false; 
     toselhou_byuser.to_sel_hou = true;
   }
-  */
+  
 
   else if (payload === 'attach_no_forSellingHouse') {
         response = {
