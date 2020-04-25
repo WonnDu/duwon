@@ -158,11 +158,12 @@ let userEntered_info_toBuyHouse = {};
 
 
 // to buy land in every
-let tobuyland_told = {
-  land_yes1_byuser:false,
-  leave_contactno_land:false,
+let tobuyLand_told = {
+  cuSay_yes_forSthElse_tobuland:false,
+  cuSay_no_forSthElse_tobuland:false,
+  phNumber_byUser_tobuyLand:false,
 }
-let userEntered_yes_tobuyland = {};
+let userEntered_things_tobuyLand = {};
 
 
 /*************************************/
@@ -897,42 +898,45 @@ else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true
 
 
 
-
 // to buy land in every
-   else if (received_message.payload === "tobuyland1_tellbyuser_yes1a") { 
+   else if (received_message.payload === "cu_say_yes_tobuyLand") { 
     response = {
               "text": "Ok, please tell me."
     }
      received_message.payload = false;
-     tobuyland_told.land_yes1_byuser = true;
+     tobuyLand_told.cuSay_yes_forSthElse_tobuland = true;  // user say yes to say sth else
   }
 
-  else if (received_message.text &&  tobuyland_told.land_yes1_byuser === true) {
-    userEntered_yes_tobuyland.land_yes1_byuser = received_message.text;
+  else if (received_message.text &&  tobuyLand_told.cuSay_yes_forSthElse_tobuland === true) {   // user say yes to say sth else
+    userEntered_things_tobuyLand.cuSay_yes_forSthElse_tobuland = received_message.text;   // user say yes to say sth else
     response = {
-       "text": "Please leave your contact number. We will contact you later."
+       "text": "Please leave your phone number."
                   
     }
-    tobuyland_told.land_yes1_byuser = false;
-    tobuyland_told.leave_contactno_land = true;
+    tobuyLand_told.cuSay_yes_forSthElse_tobuland = false;  // user say yes to say sth else
+    tobuyLand_told.phNumber_byUser_tobuyLand = true;  // phone number of customer to buy house
   }
-    else if (received_message.text &&  tobuyland_told.leave_contactno_land === true) {
-    userEntered_yes_tobuyland.leave_contactno_land = received_message.text;
+    else if (received_message.text &&  tobuyLand_told.phNumber_byUser_tobuyLand === true) {  // phone number of customer to buy house
+    userEntered_things_tobuyLand.phNumber_byUser_tobuyLand = received_message.text;  // phone number of customer to buy house
     saveData_tobuy_land(sender_psid);
     response = {
-       "text": "Thanks for contacting us. Have a nice day!"
+       "text": "Thanks for contacting us. We will contact you within 24 hours. Have a nice day!"
                   
     }
-    tobuyland_told.leave_contactno_land = false;  
+    tobuyLand_told.phNumber_byUser_tobuyLand = false;   // phone number of customer to buy house
   }
 
 // user say no 
-  else if (received_message.payload === "tobuyland2_tellbyuser_noo2bc") { 
+  else if (received_message.payload === "cu_say_no_tobuyLand") { 
+    userEntered_things_tobuyLand.cuSay_no_forSthElse_tobuland = received_message.text; // user says no for sth else 
     response = {
-      "text": "Please leave your contact number. We will contact you later."
+      "text": "Please leave your phone number."
     }
-  tobuyland_told.leave_contactno_land = true;
+  tobuyLand_told.phNumber_byUser_tobuyLand = true;  // phone number of customer to buy house
   }
+
+
+
 
 /********************************************************************/
 
@@ -9694,12 +9698,12 @@ function handlePostback(sender_psid, received_postback) {
                         {
                           "content_type": "text",
                           "title": "Yes",
-                          "payload": "tobuyland1_tellbyuser_yes1a", 
+                          "payload": "cu_say_yes_tobuyLand", 
                         },
                         {
                           "content_type": "text",
                           "title": "No",
-                          "payload": "tobuyland2_tellbyuser_noo2bc",
+                          "payload": "cu_say_no_tobuyLand",
                         }
                       ]
   }
@@ -10857,19 +10861,21 @@ function saveData_tobuy_house(sender_psid) {
 function saveData_tobuy_land(sender_psid) {
   const cu_info_toBuy_landInE = {
     id : sender_psid,
-    aaaaaa : userEntered_yes_tobuyland.land_yes1_byuser,
-    bbbbbb : userEntered_yes_tobuyland.land_yes1_byuser,
+    cuSay_yes_forSthElse_tobuyland : userEntered_things_tobuyLand.cuSay_yes_forSthElse_tobuland,
+    cuSay_no_forSthElse_tobuyland : userEntered_things_tobuyLand.cuSay_no_forSthElse_tobuland,
+    phNum_byCu_tobuyLand : userEntered_things_tobuyLand.phNumber_byUser_tobuyLand,
   }
-  db.collection('cu_info_toBuy_Land').add(userEntered_yes_tobuyland);
+  db.collection('cu_info_toBuy_Land').add(userEntered_things_tobuyLand);
 }
 
 
 
 // to buy land in every
 /*
-let tobuyland_told = {
-  land_yes1_byuser:false,
-  leave_contactno_land:false,
+let tobuyLand_told = {
+  cuSay_yes_forSthElse_tobuland:false,
+  cuSay_no_forSthElse_tobuland:false,
+  phNumber_byUser_tobuyLand:false,
 }
-let userEntered_yes_tobuyland = {};
+let userEntered_things_tobuyLand = {};
 */
