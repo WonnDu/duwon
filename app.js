@@ -10382,10 +10382,11 @@ else if (payload === 'hoou2') {
 
 // to rent land as landlord
  else if (payload === "ldld_pyin_land") {
+    userEntered_ldld_land.twp_name_torent_land = payload;
          response = {
-      "text":'Please tell me fully address of your land to be rented out.'
+      "text":'Please tell me the area of land that you want to rent out.'
     }
-    ldld_land_sent.address_land = true;
+    ldld_land_sent.land_area_torent_byCu = true;  // for land area to rent land as landlord
   }
 
 // to rent land as a landlord // no more photos
@@ -10393,15 +10394,14 @@ else if (payload === 'hoou2') {
     response = {
       "text": "OK, please send me."
     }
-     ldld_land_sent.attach_land_ldld = true;
+     ldld_land_sent.images_ofLand_torentLand = true; // for images to rent land as landlord
   }
   else if (payload === 'attach_no_ldld_land') {
         response = {
-                  "text": "Do you want how much per month."
+                  "text": "Do you want to rent your land how much per month?"
       }
-      ldld_land_sent.estimated_price_ldld = true;
+      ldld_land_sent.estimatedPrice_perMonth_torentLand = true; // for estimated price per month to rent land as landlord
   }
-  
 
 
 
