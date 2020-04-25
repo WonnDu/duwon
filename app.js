@@ -137,20 +137,28 @@ let userEntered_Hou_tosel = {};
 
 /*********************************************/
 
+
 // for customers who want to sell land
 let tosel_land_byuser = {
-  land_type_tosell:false,
-  land_name_tosell:false,
-  attach_land_tosell:false,
-  estimated_price_land:false,
-  address_land_tosell:false,
-  something2_else_user2:false,
-  tellbyuser_sth1:false,
+
+
+  twp_name_tosell_land:false,
+  land_area_tosell_byCu:false,
+  land_type_tosell_byCu:false,
+  a_myie_pauk_byCu:false,
+  images_ofLand_byCu:false,
+  estimated_amount_byCus:false,
+  fullyAddress_ofLand_tosell:false,
+  phone_num_byCu_tosell_land:false,
+  yes_for_sthElse_byCu:false,
+  no_for_sthElse_byCu:false,
 
 }
 let userEntered_land_tosel = {};
 
 
+
+/******************************************/
 
 // to buy house told by user
 let tobuyhouse_told = {
@@ -1205,47 +1213,55 @@ else if (received_message.text && toselhou_byuser.sth_yes_toldbyCu === true ) { 
 
 
 
-/************************************************************************/
+
+/*************************************************************************************************/
+/*************************************************************************************************/
+/*************************************************************************************************/
+
+
+
 
 // to sell land
  else if (received_message.payload === "tselottlan" || received_message.payload === "tselpoblan" || received_message.payload === "tseldeklan" || received_message.payload === "tselzayalan" || received_message.payload === "tselzabulan") {
+      userEntered_land_tosel.twp_name_tosell_land = received_message.payload;  // for twp name to sell 
          response = {
       "text":'Please tell me area of your land that you want to sell.'
     }
-    received_message.payload = false;
-    tosel_land_byuser.land_type_tosell = true;
+    received_message.payload = false; 
+    tosel_land_byuser.land_area_tosell_byCu = true; // for land area
   }
- else if (received_message.text && tosel_land_byuser.land_type_tosell === true) {
-  userEntered_land_tosel.land_type_tosell = received_message.text;
+ else if (received_message.text && tosel_land_byuser.land_area_tosell_byCu === true) { // for land area
+  userEntered_land_tosel.land_area_tosell_byCu = received_message.text;   // for land area
          response = {
       "text":'Please tell me type of land that you want to sell.'
     }
-    tosel_land_byuser.land_type_tosell = false;
-    tosel_land_byuser.land_name_tosell = true;
+    tosel_land_byuser.land_area_tosell_byCu = false;    // for land area
+    tosel_land_byuser.land_type_tosell_byCu = true;     // for type of land
   }
-   else if (received_message.text &&  tosel_land_byuser.land_name_tosell === true) {
-   userEntered_land_tosel.land_name_tosell = received_message.text;
+   else if (received_message.text &&  tosel_land_byuser.land_type_tosell_byCu === true) {
+   userEntered_land_tosel.land_type_tosell_byCu = received_message.text;  // for type of land
          response = {
        "text": "Is it a myie pauk or not?",
                     "quick_replies": [
                         {
                           "content_type": "text",
                           "title": ".Yes.",
-                          "payload": "tosel_land_yes",
-                          "image_url":"http://example.com/img/green.png"
+                          "payload": "ans_no_for_a_myie_pauck",
+ //                         "image_url":"http://example.com/img/green.png"
                         },
                         {
                           "content_type": "text",
                           "title": ".No.",
-                          "payload": "tosel_hou_no",
-                          "image_url":"http://example.com/img/red.png"
+                          "payload": "ans_yes_for_a_myie_pauck",
+ //                         "image_url":"http://example.com/img/red.png"
                         }
                       ]
     }
-    tosel_land_byuser.land_name_tosell = false;
+    tosel_land_byuser.land_type_tosell_byCu = false; // for type of land
   }
 
- else if (received_message.payload === "tosel_land_yes" || received_message.payload === "tosel_hou_no") {
+ else if (received_message.payload === "ans_no_for_a_myie_pauck" || received_message.payload === "ans_yes_for_a_myie_pauck") {
+      userEntered_land_tosel.a_myie_pauk_byCu = received_message.payload; // for a myie pauk
          response = {
        "text": "Could you send me photos with regard to your land?",
                     "quick_replies": [
@@ -1261,7 +1277,7 @@ else if (received_message.text && toselhou_byuser.sth_yes_toldbyCu === true ) { 
                         }
                       ]
     }
-//    toselhou_byuser.photos_ott = false;
+    received_message.payload = false; // for a myie pauck
   }
 
 
@@ -1270,12 +1286,12 @@ else if (received_message.text && toselhou_byuser.sth_yes_toldbyCu === true ) { 
       "text": "OK, please send me."
     }
      received_message.payload = false;
-     tosel_land_byuser.attach_land_tosell = true;
+     tosel_land_byuser.images_ofLand_byCu = true; // for land images by user
   }
-  else if (received_message.attachments && tosel_land_byuser.attach_land_tosell == true) {
-      userEntered_land_tosel.attach_land_tosell = received_message.attachments; 
+  else if (received_message.attachments && tosel_land_byuser.images_ofLand_byCu == true) { // for land images by user
+      userEntered_land_tosel.images_ofLand_byCu = received_message.attachments; // for land images by user
     // Get the URL of the message attachment
-    let attachment_url = userEntered_land_tosel.attach_land_tosell[0].payload.url;
+    let attachment_url = userEntered_land_tosel.images_ofLand_byCu[0].payload.url;
     response = {
       "attachment": {
         "type": "template",
@@ -1301,78 +1317,85 @@ else if (received_message.text && toselhou_byuser.sth_yes_toldbyCu === true ) { 
         }
       }
     }
-    tosel_land_byuser.attach_land_tosell = false;
+    tosel_land_byuser.images_ofLand_byCu = false; // for land images by user
   }
 
-    else if (received_message.text && tosel_land_byuser.estimated_price_land == true) {
-    userEntered_land_tosel.estimated_price_land = received_message.text;
+    else if (received_message.text && tosel_land_byuser.estimated_amount_byCus == true) { // for estimated amount to get
+    userEntered_land_tosel.estimated_amount_byCus = received_message.text;    // for estimated amount to get
     response = {
       "text":"Please tell me fully address of own land to be sold"
     }
-    tosel_land_byuser.estimated_price_land = false;
-    tosel_land_byuser.address_land_tosell = true;
+    tosel_land_byuser.estimated_amount_byCus = false; // for estimated amount to get
+    tosel_land_byuser.fullyAddress_ofLand_tosell = true;   // for fully address of land
   } 
-  else if (received_message.text && tosel_land_byuser.address_land_tosell == true) {
-    userEntered_land_tosel.address_land_tosell = received_message.text;
+  else if (received_message.text && tosel_land_byuser.fullyAddress_ofLand_tosell == true) {   // for fully address of land
+    userEntered_land_tosel.fullyAddress_ofLand_tosell = received_message.text;    // for fully address of land
     response = {
       "text":"Please leave me your phone number"
     }
-    tosel_land_byuser.address_land_tosell = false;
-    tosel_land_byuser.something2_else_user2 = true;
+    tosel_land_byuser.fullyAddress_ofLand_tosell = false;   // for fully address of land
+    tosel_land_byuser.phone_num_byCu_tosell_land = true;    // asking phone number of user
   } 
   
 
-
+// for later to send photo
  else if (received_message.payload === "tosel_later_land") {
     response = {
       "text":"Please tell me estimated amount that you want to get."
     }
-    tosel_land_byuser.estimated_price_land = true;
+    tosel_land_byuser.estimated_amount_byCus = true; // for estimated amount to get
   } 
 
-   else if (received_message.text && tosel_land_byuser.something2_else_user2 == true) {
+   else if (received_message.text && tosel_land_byuser.phone_num_byCu_tosell_land == true) {    // asking phone number of user
+    userEntered_land_tosel.phone_num_byCu_tosell_land = received_message.text;
     response = {
        "text": "Do you want to tell something to tell us?",
                     "quick_replies": [
                         {
                           "content_type": "text",
                           "title": "Yes",
-                          "payload": "tosel_land_yes_byuser11d",
+                          "payload": "cu_say_yes_for_sthElse",
                         },
                         {
                           "content_type": "text",
                           "title": "No",
-                          "payload": "tosel_land_nooo11_byuser11d",
+                          "payload": "cu_say_no_for_sthElse",
                         }
                       ]
     }
-    tosel_land_byuser.something2_else_user2 = false;
+    tosel_land_byuser.phone_num_byCu_tosell_land = false;   // asking phone number of user
   }
 
-else if (received_message.payload === "tosel_land_yes_byuser11d") {
+else if (received_message.payload === "cu_say_yes_for_sthElse") {
     response = {
       "text":"Ok, please tell me."
     }
-    tosel_land_byuser.tellbyuser_sth1 = true;
+    tosel_land_byuser.yes_for_sthElse_byCu = true;  // for sth else told by user
   } 
-   else if (received_message.text && tosel_land_byuser.tellbyuser_sth1 == true) {
-    userEntered_land_tosel.tellbyuser_sth1 = received_message.text;
+
+
+   else if (received_message.text && tosel_land_byuser.yes_for_sthElse_byCu == true) {  // for sth else told by user
+    userEntered_land_tosel.yes_for_sthElse_byCu = received_message.text;  // for sth else told by user
+    saveData_tosell_land(sender_psid);
     response = {
       "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
     }
-    tosel_land_byuser.tellbyuser_sth1 = false;
-  } 
-   else if (received_message.payload == "tosel_land_nooo11_byuser11d") {
-    response = {
-      "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
-    }
+    tosel_land_byuser.yes_for_sthElse_byCu = false; // for sth else told by user
   } 
 
+// user says no for sth else
+   else if (received_message.payload == "cu_say_no_for_sthElse") {
+      userEntered_land_tosel.no_for_sthElse_byCu = received_message.payload; // user say no for sth else
+      saveData_tosell_land(sender_psid);
+        response = {
+              "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
+            }
+      received_message.payload = false;
+  } 
 
-
-/*************************************************************************************************************/
-/*************************************************************************************************************/
-/*************************************************************************************************************/
+/*************************************************************************************************/
+/*************************************************************************************************/
+/*************************************************************************************************/
 
 
 
@@ -10264,6 +10287,15 @@ else if (payload === 'hoou2') {
 /******************************************/
 
 // to sell land
+// to sell land in pyinmana
+ else if (payload === "toselpyinlan") {
+         response = {
+      "text":'Please tell the area of land that you want to sell.'
+    }
+    tosel_land_byuser.land_type_tosell = true;
+  }
+
+
  else if (payload === "attach_yes_sell_land") { 
     response = {
       "text": "OK, please send me."
@@ -10370,18 +10402,6 @@ else if (payload === 'hoou2') {
 
       }
   }
-  // to sell land in pyinmana
- else if (payload === "toselpyinlan") {
-         response = {
-      "text":'Please tell the area of land that you want to sell.'
-    }
-    tosel_land_byuser.land_type_tosell = true;
-  }
-
-  
-
-
- 
 
 
   // Send the message to acknowledge the postback
@@ -10663,7 +10683,7 @@ async function greetUser(sender_psid){
 
 
 /*function function save data to firebase*/
-
+// to sell house
 function saveData(sender_psid) {
   const cu_info = {
     id : sender_psid,
@@ -10685,6 +10705,50 @@ function saveData(sender_psid) {
   }
   db.collection('customer_info').add(userEntered_Hou_tosel);
 }
+
+
+/*function function save data to firebase*/
+
+// for customers who want to sell land
+function saveData_tosell_land(sender_psid) {
+  const cu_inform = {
+    id : sender_psid,
+    twonship_name : userEntered_land_tosel.twp_name_tosell_land,
+    land_area : userEntered_land_tosel.land_area_tosell_byCu,
+    land_type : userEntered_land_tosel.land_type_tosell_byCu,
+    a_myie_pauk : userEntered_land_tosel.a_myie_pauk_byCu,
+    images_of_land : userEntered_land_tosel.images_ofLand_byCu,
+    estimated_amount_forLand : userEntered_land_tosel.estimated_amount_byCus,
+    fullyAddress_ofLand : userEntered_land_tosel.fullyAddress_ofLand_tosell,
+    phone_number_ofCu : userEntered_land_tosel.phone_num_byCu_tosell_land,
+    totell_yes_somethingElse : userEntered_land_tosel.yes_for_sthElse_byCu,
+    totell_no_somethingElse : userEntered_land_tosel.no_for_sthElse_byCu,
+   
+  }
+  db.collection('cu_information').add(userEntered_land_tosel);
+}
+
+
+/*
+// for customers who want to sell land
+let tosel_land_byuser = {
+
+
+  twp_name_tosell_land:false,
+  land_area_tosell_byCu:false,
+  land_type_tosell_byCu:false,
+  a_myie_pauk_byCu:false,
+  images_ofLand_byCu:false,
+  estimated_amount_byCus:false,
+  fullyAddress_ofLand_tosell:false,
+  phone_num_byCu_tosell_land:false,
+  yes_for_sthElse_byCu:false,
+  no_for_sthElse_byCu:false,
+
+}
+let userEntered_land_tosel = {};
+*/
+
 
 // to sell their house
 /*
