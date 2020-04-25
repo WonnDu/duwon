@@ -10683,7 +10683,7 @@ function saveData(sender_psid) {
     yes_toTell_sth_else : userEntered_Hou_tosel.sth_yes_toldbyCu,
     no_toTell_sth_else : userEntered_Hou_tosel.sth_no_toldbyCu,
   }
-  db.collection('customer_info').add(cu_info);
+  db.collection('customer_info').add(userEntered_Hou_tosel);
 }
 
 // to sell their house
