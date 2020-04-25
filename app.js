@@ -1169,7 +1169,7 @@ else if (received_message.payload === "customer_useryes_toldbyuser111da") {
     response = {
       "text":"Please tell me."
     }
-  toselhou_byuser.sth_toldbyCu_tosellHou = true; // for something else told by user
+  toselhou_byuser.sth_yes_toldbyCu = true; // for something else told by user
   } 
 
 
