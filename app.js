@@ -169,7 +169,7 @@ let userEntered_things_tobuyLand = {};
 /*************************************/
 
 
-// to rent house told by user
+// to rent house in every
 let torenthouse_told = {
   yes1_by_user:false,
   leave_contactno11abc:false,
@@ -856,7 +856,7 @@ else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true
 
 
 // to rent house in every
-   else if (received_message.payload === "torenthouse_toldbyuser_yes11abc") { 
+   else if (received_message.payload === "cu_say_yes_torentHouse") { 
     response = {
               "text": "Ok, please tell me."
     }
@@ -875,6 +875,7 @@ else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true
   }
     else if (received_message.text &&  torenthouse_told.leave_contactno11abc === true) {
     userEntered_yes_torenthou.leave_contactno11abc = received_message.text;
+    saveData_toRent_house(sender_psid);
     response = {
        "text": "Thanks for contacting us. Have a nice day!"
                   
@@ -883,7 +884,7 @@ else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true
   }
 
 // user say no 
-  else if (received_message.payload === "torenthouse_toldbyuser_nooo11abcd") { 
+  else if (received_message.payload === "cu_say_no_torentHouse") { 
     response = {
       "text": "Please leave your contact number. We will contact you later."
     }
@@ -9680,12 +9681,12 @@ function handlePostback(sender_psid, received_postback) {
                         {
                           "content_type": "text",
                           "title": "Yes",
-                          "payload": "torenthouse_toldbyuser_yes11abc", 
+                          "payload": "cu_say_yes_torentHouse", 
                         },
                         {
                           "content_type": "text",
                           "title": "No",
-                          "payload": "torenthouse_toldbyuser_nooo11abcd",
+                          "payload": "cu_say_no_torentHouse",
                         }
                       ]
   }
@@ -10869,13 +10870,24 @@ function saveData_tobuy_land(sender_psid) {
 }
 
 
+/****************************************************************************************/
 
-// to buy land in every
-/*
-let tobuyLand_told = {
-  cuSay_yes_forSthElse_tobuland:false,
-  cuSay_no_forSthElse_tobuland:false,
-  phNumber_byUser_tobuyLand:false,
+// to rent house in every
+function saveData_toRent_house(sender_psid) {
+  const cu_info_torent_hou = {
+    id : sender_psid,
+    aaaaaaa : userEntered_yes_torenthou.yes1_by_user,
+    bbbbbbb : userEntered_yes_torenthou.leave_contactno11abc,
+  }
+  db.collection('cu_info_toRent_House').add(userEntered_yes_torenthou);
 }
-let userEntered_things_tobuyLand = {};
+
+
+// to rent house in every
+/*
+let torenthouse_told = {
+  yes1_by_user:false,
+  leave_contactno11abc:false,
+}
+let userEntered_yes_torenthou = {};
 */
