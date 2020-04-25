@@ -92,6 +92,32 @@ let userEntered_ldld_land = {};
 // to sell their house
 let toselhou_byuser = {
   twp_name_tobeSold:false,
+  house_type_ht:false,
+  numOf_floor_toselHou:false,
+
+  numOf_mbr_toselHou:false,
+  numOf_br_toselHou:false,
+  both1_numOf_mbr_tsel:false,
+  both2_numOf_br_tsel:false,
+
+  landArea_ofHouse_tosell:false,
+  typeOf_land_ofHou_tsel:false,
+  images_ofHouse_tsel:false,
+  estimated_amount_toget:false,
+  fullyAddress_byCu_tosel:false,
+  ph_numm_byCu_tosellHou:false,
+  sth_yes_toldbyCu:false,
+  sth_no_toldbyCu:false,
+
+}
+let userEntered_Hou_tosel = {};
+
+
+
+// to sell their house
+/*
+let toselhou_byuser = {
+  twp_name_tobeSold:false,
   to_sel_hou:false,
   howMuchRoom_hou:false,
   area_hou_inOtt:false,
@@ -106,7 +132,7 @@ let toselhou_byuser = {
   thanksfor_contacting11:false,
 }
 let userEntered_Hou_tosel = {};
-
+*/
 
 
 /*********************************************/
@@ -895,6 +921,8 @@ else if (received_message.text && landlord_sent.something1else_byuser11 === true
 
 
 /***********************************************************************************/
+
+
 // to sell house
  else if (received_message.payload === "tselott" || received_message.payload === "tselpob" || received_message.payload === "tseldek" || received_message.payload === "tselzaya" || received_message.payload === "tselzabu") {
     userEntered_Hou_tosel.twp_name_tobeSold = received_message.payload;
@@ -906,20 +934,20 @@ else if (received_message.text && landlord_sent.something1else_byuser11 === true
     }
 //    toselhou_byuser.twp_name_tobeSold = false;
     received_message.payload = false; 
-    toselhou_byuser.to_sel_hou = true;
+    toselhou_byuser.house_type_ht = true; // for house type
   }
 
- else if (received_message.text && toselhou_byuser.to_sel_hou == true) {
-  userEntered_Hou_tosel.to_sel_hou = received_message.text;
+ else if (received_message.text && toselhou_byuser.house_type_ht == true) {
+  userEntered_Hou_tosel.house_type_ht = received_message.text;
          response = {
       "text":'How many floors is the house?'
     }
-    toselhou_byuser.to_sel_hou = false;
-    toselhou_byuser.howMuchRoom_hou = true;
+    toselhou_byuser.house_type_ht = false; // for house type
+    toselhou_byuser.numOf_floor_toselHou = true;
   }
 
-   else if (received_message.text &&  toselhou_byuser.howMuchRoom_hou === true) {
-   userEntered_Hou_tosel.howMuchRoom_hou = received_message.text;
+   else if (received_message.text &&  toselhou_byuser.numOf_floor_toselHou === true) {
+   userEntered_Hou_tosel.numOf_floor_toselHou = received_message.text;
          response = {
        "text": "Do you have what types of room. Please tell me:",
                     "quick_replies": [
@@ -941,7 +969,7 @@ else if (received_message.text && landlord_sent.something1else_byuser11 === true
                         }
                       ]
     }
-    toselhou_byuser.howMuchRoom_hou = false;
+    toselhou_byuser.numOf_floor_toselHou = false;
   }
 
 
@@ -951,7 +979,7 @@ else if (received_message.text && landlord_sent.something1else_byuser11 === true
       "text": "How many master bed rooms in your house?"
     }
     received_message.payload = false;
-    toselhou_byuser.area_hou_inOtt = true;
+    toselhou_byuser.numOf_mbr_toselHou = true;  // for number of master bed room
   }
 
   // for bed room
@@ -960,46 +988,74 @@ else if (received_message.text && landlord_sent.something1else_byuser11 === true
       "text": "How many bed rooms in your house?"
     }
     received_message.payload = false;
-    toselhou_byuser.area_hou_inOtt = true;
+    toselhou_byuser.numOf_br_toselHou = true;   // for number of bed room
   }
 
+////////////////////////////////////////////////////
 
+// for only number of master bed room
+ else if (received_message.text && toselhou_byuser.numOf_mbr_toselHou === true) {  // number of master bed room
+  userEntered_Hou_tosel.numOf_mbr_toselHou = received_message.text;   // for number of master bed room
+    response = {
+      "text": "Please tell me land area of your house."
+    }
+    toselhou_byuser.numOf_mbr_toselHou = false; // for number of master bed room
+    toselhou_byuser.landArea_ofHouse_tosell = true; // for land area of house to sell
+  }
+
+  // for only number of master bed room and bed room
+ else if (received_message.text && toselhou_byuser.numOf_br_toselHou === true) {  // number of bed room
+  userEntered_Hou_tosel.numOf_br_toselHou = received_message.text;   // for number of bed room
+    response = {
+      "text": "Please tell me land area of your house."
+    }
+    toselhou_byuser.numOf_br_toselHou = false; // for number of bed room
+    toselhou_byuser.landArea_ofHouse_tosell = true; // for land area of house to sell
+  }  
+
+
+///////////////////////////////////////////////////////////////////////////////////////
   // for both master bed room and bed room
  else if (received_message.payload === "tosel_hou_tell_both") {
    response  = { "text": "How many master bed rooms in your house?" 
   }
   received_message.payload = false;
-  toselhou_byuser.forSell_both_room = true;
+  toselhou_byuser.both1_numOf_mbr_tsel = true;  // for both, number of master bed room
 }
- else if (received_message.text && toselhou_byuser.forSell_both_room === true) {  
-  userEntered_Hou_tosel.forSell_both_room = received_message.text; 
+ else if (received_message.text && toselhou_byuser.both1_numOf_mbr_tsel === true) {  
+  userEntered_Hou_tosel.both1_numOf_mbr_tsel = received_message.text; 
     response = {
       "text": "How many bed rooms in your house?"
     }
-    toselhou_byuser.forSell_both_room = false;
-    toselhou_byuser.area_hou_inOtt = true;
+    toselhou_byuser.both1_numOf_mbr_tsel = false; // for  both, number of master bed room
+    toselhou_byuser.both2_numOf_br_tsel = true; // for both, number of bed room
   } 
 
 
- else if (received_message.text && toselhou_byuser.area_hou_inOtt === true) { 
-  userEntered_Hou_tosel.area_hou_inOtt = received_message.text;   
+ else if (received_message.text && toselhou_byuser.both2_numOf_br_tsel === true) { 
+  userEntered_Hou_tosel.both2_numOf_br_tsel = received_message.text;   // for both, number of bed room
     response = {
       "text": "Please tell me land area of your house."
     }
-    toselhou_byuser.area_hou_inOtt = false;
-    toselhou_byuser.typeofLand_ofhou1 = true;
+    toselhou_byuser.both2_numOf_br_tsel = false;
+  toselhou_byuser.landArea_ofHouse_tosell = true; // for land area of house 
   } 
-   else if (received_message.text && toselhou_byuser.typeofLand_ofhou1 === true) { 
-  userEntered_Hou_tosel.typeofLand_ofhou1 = received_message.text;   
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+   else if (received_message.text && toselhou_byuser.landArea_ofHouse_tosell === true) { // for land area of house to sell
+  userEntered_Hou_tosel.landArea_ofHouse_tosell = received_message.text;   // for land area of house to sell
     response = {
       "text": "Please tell me type of land on which your house that will be sold is bulit."
     }
-    toselhou_byuser.typeofLand_ofhou1 = false;
-    toselhou_byuser.photos_ott = true;
+    toselhou_byuser.landArea_ofHouse_tosell = false; // for land area of house to sell
+    toselhou_byuser.typeOf_land_ofHou_tsel = true; // for type of land of house to sell
   } 
 
-  else if (received_message.text && toselhou_byuser.photos_ott  === true) {
-   userEntered_Hou_tosel.photos_ott = received_message.text;
+  else if (received_message.text && toselhou_byuser.typeOf_land_ofHou_tsel  === true) { // for type of land of house of house to sell
+   userEntered_Hou_tosel.typeOf_land_ofHou_tsel = received_message.text;    // for type of land of house to sell
          response = {
        "text": "Could you send me inside and outside photos with regard to your house?",
                     "quick_replies": [
@@ -1015,7 +1071,7 @@ else if (received_message.text && landlord_sent.something1else_byuser11 === true
                         }
                       ]
     }
-    toselhou_byuser.photos_ott = false;
+    toselhou_byuser.typeOf_land_ofHou_tsel = false;   // for type of land of house to sell
   }
 
 
@@ -1024,12 +1080,12 @@ else if (received_message.text && landlord_sent.something1else_byuser11 === true
       "text": "OK, please send me."
     }
      received_message.payload = false;
-     toselhou_byuser.attach_houhou = true;
+     toselhou_byuser.images_ofHouse_tsel = true; // for images to be send by user
   }
-  else if (received_message.attachments && toselhou_byuser.attach_houhou == true) {
-      userEntered_Hou_tosel.attach_houhou = received_message.attachments; 
+  else if (received_message.attachments && toselhou_byuser.images_ofHouse_tsel == true) {
+      userEntered_Hou_tosel.images_ofHouse_tsel = received_message.attachments; 
     // Get the URL of the message attachment
-    let attachment_url_photo = userEntered_Hou_tosel.attach_houhou[0].payload.url;
+    let attachment_url_photo = userEntered_Hou_tosel.images_ofHouse_tsel[0].payload.url;
     response = {
       "attachment": {
         "type": "template",
@@ -1055,28 +1111,28 @@ else if (received_message.text && landlord_sent.something1else_byuser11 === true
         }
       }
     }
-    toselhou_byuser.attach_houhou = false;
+    toselhou_byuser.images_ofHouse_tsel = false;  // for images to be send by user
   }
 
 
 
 
-    else if (received_message.text && toselhou_byuser.estimated_price_forSell == true) {
-    userEntered_Hou_tosel.estimated_price_forSell = received_message.text;
+    else if (received_message.text && toselhou_byuser.estimated_amount_toget == true) { // estimated amount to get
+    userEntered_Hou_tosel.estimated_amount_toget = received_message.text; // estimated amount to get
     response = {
       "text":"Please tell me fully address of own house to be sold"
     }
-    toselhou_byuser.estimated_price_forSell = false;
-    toselhou_byuser.ph_num = true;
+    toselhou_byuser.estimated_amount_toget = false; // for estimated amount to get
+    toselhou_byuser.fullyAddress_byCu_tosel = true; // for fully address by user
   } 
 
-   else if (received_message.text && toselhou_byuser.ph_num == true) {
-    userEntered_Hou_tosel.ph_num = received_message.text;
+   else if (received_message.text && toselhou_byuser.fullyAddress_byCu_tosel == true) { // for fully address by user
+    userEntered_Hou_tosel.fullyAddress_byCu_tosel = received_message.text;
     response = {
       "text":"Please leave me your phone number."
     }
-    toselhou_byuser.ph_num = false;
-    toselhou_byuser.something_else_toldbyuser = true;
+    toselhou_byuser.fullyAddress_byCu_tosel = false;  // for fully address by user
+    toselhou_byuser.ph_numm_byCu_tosellHou = true; // for ph number by user
   } 
 
 
@@ -1086,12 +1142,12 @@ else if (received_message.text && landlord_sent.something1else_byuser11 === true
     response = {
       "text":"Please tell me the estimated amount that you want to get."
     }
-  toselhou_byuser.estimated_price_forSell = true;
+  toselhou_byuser.estimated_amount_toget = true;
   } 
 
 
-  else if (received_message.text && toselhou_byuser.something_else_toldbyuser  === true) {
-   userEntered_Hou_tosel.something_else_toldbyuser = received_message.text;
+  else if (received_message.text && toselhou_byuser.ph_numm_byCu_tosellHou  === true) { // for ph number by user
+   userEntered_Hou_tosel.ph_numm_byCu_tosellHou = received_message.text;    // for ph number by user
          response = {
        "text": "Do you want to tell something to us?",
                     "quick_replies": [
@@ -1107,22 +1163,36 @@ else if (received_message.text && landlord_sent.something1else_byuser11 === true
                         }
                       ]
     }
-    toselhou_byuser.something_else_toldbyuser = false;
+    toselhou_byuser.ph_numm_byCu_tosellHou = false; // for ph number by user
   }
 else if (received_message.payload === "customer_useryes_toldbyuser111da") {
     response = {
       "text":"Please tell me."
     }
-  toselhou_byuser.thanksfor_contacting11 = true;
+  toselhou_byuser.sth_toldbyCu_tosellHou = true; // for something else told by user
   } 
 
-else if (received_message.text && toselhou_byuser.thanksfor_contacting11 === true ) {
+
+// for user says yes to sell something else
+else if (received_message.text && toselhou_byuser.sth_yes_toldbyCu === true ) { // for something else told by user
+    userEntered_Hou_tosel.sth_yes_toldbyCu = received_message.text;  
     db.collection('customer_info').add(userEntered_Hou_tosel);
 
     response = {
       "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
     }
-  toselhou_byuser.thanksfor_contacting11 = false;
+  toselhou_byuser.sth_yes_toldbyCu = false;
+  }
+
+// for user say no for something else
+  else if (received_message.payload === "customer_usernono_toldbyuser111da" ) { // for user says no
+    userEntered_Hou_tosel.sth_no_toldbyCu = payload;  // user says no for something else
+    db.collection('customer_info').add(userEntered_Hou_tosel);
+
+    response = {
+      "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
+    }
+    received_message.payload = false;
   }
 
 
@@ -10163,18 +10233,17 @@ else if (payload === 'hoou2') {
 
 
 
-
+/**********************************/
 
 
 // to sell house
-
  else if (payload === "toselhoupyin") {
   userEntered_Hou_tosel.twp_name_tobeSold = payload;
          response = {
       "text":'Please tell the type of house that you want to sell like RC or Nancat'
     }
     payload = false; 
-    toselhou_byuser.to_sel_hou = true;
+    toselhou_byuser.house_type_ht = true; // for house type
   }
   
 
@@ -10182,14 +10251,15 @@ else if (payload === 'hoou2') {
         response = {
                   "text": "Please tell me the estimated amount that you want to get."
       }
-      toselhou_byuser.estimated_price_forSell = true;
+      toselhou_byuser.estimated_amount_toget = true; // for estimated amount to get
   }
    else if (payload === "attach_yes111") { 
     response = {
       "text": "OK, please send me."
     }
-    toselhou_byuser.attach_houhou = true;
+    toselhou_byuser.images_ofHouse_tsel = true; // for images to be send by user
   }
+  
 
 /******************************************/
 
