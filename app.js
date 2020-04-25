@@ -1186,7 +1186,7 @@ else if (received_message.text && toselhou_byuser.sth_yes_toldbyCu === true ) { 
 
 // for user say no for something else
   else if (received_message.payload === "customer_usernono_toldbyuser111da" ) { // for user says no
-    userEntered_Hou_tosel.sth_no_toldbyCu = payload;  // user says no for something else
+    userEntered_Hou_tosel.sth_no_toldbyCu = received_message.payload;  // user says no for something else
     db.collection('customer_info').add(userEntered_Hou_tosel);
 
     response = {
@@ -10259,7 +10259,7 @@ else if (payload === 'hoou2') {
     }
     toselhou_byuser.images_ofHouse_tsel = true; // for images to be send by user
   }
-  
+
 
 /******************************************/
 
