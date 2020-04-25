@@ -892,31 +892,7 @@ else if (received_message.text && landlord_sent.something1else_byuser11 === true
 /************************************************************************************************************/
 /************************************************************************************************************/
 
-                                              {
-                                                "content_type": "text",
-                                                "title": "Ottara",
-                                                "payload": "tselott" //tselott
-                                              },
-                                              {
-                                                "content_type": "text",
-                                                "title": "Pobba",
-                                                "payload": "tselpob"  //tselpob
-                                              },
-                                              {
-                                                "content_type": "text",
-                                                "title": "Dekkhina",
-                                                "payload": "tseldek"  //tseldek
-                                              },
-                                              {
-                                                "content_type": "text",
-                                                "title": "Zaya Thiri",
-                                                "payload": "tselzaya"  //tselzaya
-                                              },
-                                              {
-                                                "content_type": "text",
-                                                "title": "Zabu Thiri",
-                                                "payload": "tselzabu"  //tselzabu
-                                              }
+
 
 /***********************************************************************************/
 // to sell house
