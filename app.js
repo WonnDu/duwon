@@ -169,15 +169,16 @@ let userEntered_things_tobuyLand = {};
 /*************************************/
 
 
-// to rent house in every
-let torenthouse_told = {
-  yes1_by_user:false,
-  leave_contactno11abc:false,
+// to rent house in every // as tenant
+let torenthouse_tenant = {
+  userSay_yes_sthElse_te:false,
+  userSay_no_sthElse_te:false,
+  phNumber_byUser_torentHou_te:false,
 }
-let userEntered_yes_torenthou = {};
+let userEntered_info_torentHou_asTenant = {};
 
 
-// to rent land told by user
+// to rent land told by user // as tenant
 
 let torentland_told = {
   land_yesyes_byuser:false,
@@ -615,7 +616,7 @@ else if (received_message.payload === "customer1a_useryes1_torenthou1a") {
 
 else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true ) { // for something else told by user to rent house as landlord
     userEntered_landlord.sth_yes_toldbyCu_torent = received_message.text;  
-    saveData_torent_house(sender_psid)
+    saveData_torent_house_asLdLd(sender_psid)
 
     response = {
       "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
@@ -626,7 +627,7 @@ else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true
 // for user say no for something else to rent house as landlord
   else if (received_message.payload === "customer2b_usernono1_torenthou2b" ) { // for user says no
     userEntered_landlord.sth_no_toldbyCu_torent = received_message.payload;  // user says no for something else
-    saveData_torent_house(sender_psid)
+    saveData_torent_house_asLdLd(sender_psid)
 
     response = {
       "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
@@ -788,7 +789,7 @@ else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true
   }  
   else if (received_message.text && ldld_land_sent.yes_for_sthElse_byCuLand == true) { // user say yes to say sth else
     userEntered_ldld_land.yes_for_sthElse_byCuLand = received_message.text; // user say yes to say sth else
-    saveData_torent_land(sender_psid);
+    saveData_torent_land_asLdLd(sender_psid);
     response = {
       "text":"Thanks for contacting us. I will contact you within 24 houra. Have a nice day!"
     }
@@ -797,7 +798,7 @@ else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true
 
     else if (received_message.payload === "cuSay_no_tosay_sthElseLand") { // user say no to say sth else
     userEntered_ldld_land.no_for_sthElse_byCuLand = received_message.payload; // user say no to say sth else
-    saveData_torent_land(sender_psid);
+    saveData_torent_land_asLdLd(sender_psid);
     response = {
       "text":"Thanks for contacting us. I will contact you within 24 houra. Have a nice day!"
     }
@@ -855,40 +856,42 @@ else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true
 
 
 
-// to rent house in every
+
+// to rent house in every // as tenant
    else if (received_message.payload === "cu_say_yes_torentHouse") { 
     response = {
               "text": "Ok, please tell me."
     }
      received_message.payload = false;
-     torenthouse_told.yes1_by_user = true;
+     torenthouse_tenant.userSay_yes_sthElse_te = true;  // user say yes to say sth else
   }
 
-  else if (received_message.text &&  torenthouse_told.yes1_by_user === true) {
-    userEntered_yes_torenthou.yes1_by_user = received_message.text;
+  else if (received_message.text &&  torenthouse_tenant.userSay_yes_sthElse_te === true) {  // user say yes to say sth else
+    userEntered_info_torentHou_asTenant.userSay_yes_sthElse_te = received_message.text;  // user say yes to say sth else
     response = {
-       "text": "Please leave your contact number. We will contact you later."
+       "text": "Please leave your phone number."
                   
     }
-    torenthouse_told.yes1_by_user = false;
-    torenthouse_told.leave_contactno11abc = true;
+    torenthouse_tenant.userSay_yes_sthElse_te = false;  // user say yes to say sth else
+    torenthouse_tenant.phNumber_byUser_torentHou_te = true;  // phone number by user to buy house
   }
-    else if (received_message.text &&  torenthouse_told.leave_contactno11abc === true) {
-    userEntered_yes_torenthou.leave_contactno11abc = received_message.text;
-    saveData_toRent_house(sender_psid);
+    else if (received_message.text &&  torenthouse_tenant.phNumber_byUser_torentHou_te === true) {
+    userEntered_info_torentHou_asTenant.phNumber_byUser_torentHou_te = received_message.text; // phone number by user to buy house
+    saveData_torent_house_asTenant(sender_psid);
     response = {
-       "text": "Thanks for contacting us. Have a nice day!"
+       "text": "Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
                   
     }
-    torenthouse_told.leave_contactno11abc = false;  
+    torenthouse_tenant.phNumber_byUser_torentHou_te = false;  // phone number by user to buy house
   }
 
 // user say no 
-  else if (received_message.payload === "cu_say_no_torentHouse") { 
+  else if (received_message.payload === "cu_say_no_torentHouse") {
+  userEntered_info_torentHou_asTenant.userSay_no_sthElse_te = received_message.payload;
     response = {
-      "text": "Please leave your contact number. We will contact you later."
+      "text": "Please leave your phone number."
     }
-  torenthouse_told.leave_contactno11abc = true;
+  torenthouse_tenant.phNumber_byUser_torentHou_te = true; // phone number by user to buy house
   }
 
 
@@ -9673,7 +9676,7 @@ function handlePostback(sender_psid, received_postback) {
                       ]
   }
 }
-// to rent house in every
+// to rent house in every // as tenant
  else if (payload === "torent_tenantaabb1") {
          response = {
                   "text": "Do you wanna talk about the property or something else?",
@@ -10801,7 +10804,7 @@ function saveData_tosell_land(sender_psid) {
 /**************************************************************************/
 
 // to rent house as landlord
-function saveData_torent_house(sender_psid) {
+function saveData_torent_house_asLdLd(sender_psid) {
   const cu_inform_torent_hou = {
     id : sender_psid,
     twonship_name : userEntered_landlord.twp_name_torentHouse,
@@ -10821,11 +10824,11 @@ function saveData_torent_house(sender_psid) {
     no_toTell_sth_else : userEntered_landlord.sth_no_toldbyCu_torent,
    
   }
-  db.collection('cu_info_torent_house').add(userEntered_landlord);
+  db.collection('cu_torent_house_asLandlord').add(userEntered_landlord);
 }
 
-// to rent land
-function saveData_torent_land(sender_psid) {
+// to rent land as landlord
+function saveData_torent_land_asLdLd(sender_psid) {
   const cu_info_torentLand = {
     id : sender_psid,
     twonship_name : userEntered_ldld_land.twp_name_torent_land,
@@ -10841,7 +10844,7 @@ function saveData_torent_land(sender_psid) {
     totell_no_forSomethingElse : userEntered_ldld_land.no_for_sthElse_byCuLand,
    
   }
-  db.collection('cu_info_torent_land').add(userEntered_ldld_land);
+  db.collection('cu_torent_land_asLandlord').add(userEntered_ldld_land);
 }
 
 /************************************************************************************/
@@ -10872,22 +10875,23 @@ function saveData_tobuy_land(sender_psid) {
 
 /****************************************************************************************/
 
-// to rent house in every
-function saveData_toRent_house(sender_psid) {
-  const cu_info_torent_hou = {
+// to rent house in every as tenant
+function saveData_torent_house_asTenant(sender_psid) {
+  const cu_info_torent_hou_te = {
     id : sender_psid,
-    aaaaaaa : userEntered_yes_torenthou.yes1_by_user,
-    bbbbbbb : userEntered_yes_torenthou.leave_contactno11abc,
+    cu_yes_for_sthElse_te : userEntered_info_torentHou_asTenant.userSay_yes_sthElse_te,
+    cu_no_for_sthElse_te : userEntered_info_torentHou_asTenant.userSay_no_sthElse_te,
+    phoneNo_ofCu : userEntered_info_torentHou_asTenant.phNumber_byUser_torentHou_te,
   }
-  db.collection('cu_info_toRent_House').add(userEntered_yes_torenthou);
+  db.collection('cu_torent_House_asTenant').add(userEntered_info_torentHou_asTenant);
 }
 
-
-// to rent house in every
+// to rent house in every // as tenant
 /*
-let torenthouse_told = {
-  yes1_by_user:false,
-  leave_contactno11abc:false,
+let torenthouse_tenant = {
+  userSay_yes_sthElse_te:false,
+  userSay_no_sthElse_te:false,
+  phNumber_byUser_torentHou_te:false,
 }
-let userEntered_yes_torenthou = {};
+let userEntered_info_torentHou_asTenant = {};
 */
