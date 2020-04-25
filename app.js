@@ -148,12 +148,13 @@ let userEntered_land_tosel = {};
 
 /******************************************/
 
-// to buy house told by user
+// to buy house in every
 let tobuyhouse_told = {
-  yes_yes_user:false,
-  leave_phno11abc:false,
+  cuSay_yes_toSay_sthElse_se:false,
+  cuSay_no_toSay_sthElse_se:false,
+  phNumber_byCu_tobuyHouse:false,
 }
-let userEntered_yes_abouthou = {};
+let userEntered_info_toBuyHouse = {};
 
 
 // to buy land told by user
@@ -812,41 +813,41 @@ else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true
 
 
 // to buy house in every
-   else if (received_message.payload === "tobuyhouse_tellbyuser_yes1a") { 
+   else if (received_message.payload === "cu_say_yes_toBuyHouse") { 
     response = {
               "text": "Ok, please tell me."
     }
      received_message.payload = false;
-     tobuyhouse_told.yes_yes_user = true;
+     tobuyhouse_told.cuSay_yes_toSay_sthElse_se = true; // user say yes to say sth else
   }
 
-  else if (received_message.text &&  tobuyhouse_told.yes_yes_user === true) {
-    userEntered_yes_abouthou.yes_yes_user = received_message.text;
+  else if (received_message.text &&  tobuyhouse_told.cuSay_yes_toSay_sthElse_se === true) {  // user say yes to say sth else
+    userEntered_info_toBuyHouse.cuSay_yes_toSay_sthElse_se = received_message.text;  // user say yes to say sth else
     response = {
        "text": "Please leave your contact number. We will contact you later."
                   
     }
-    tobuyhouse_told.yes_yes_user = false;
-    tobuyhouse_told.leave_phno11abc = true;
+    tobuyhouse_told.cuSay_yes_toSay_sthElse_se = false;  // user say yes to say sth else
+    tobuyhouse_told.phNumber_byCu_tobuyHouse = true; // phone number by user to buy house
   }
-    else if (received_message.text &&  tobuyhouse_told.leave_phno11abc === true) {
-    userEntered_yes_abouthou.leave_phno11abc = received_message.text;
+    else if (received_message.text &&  tobuyhouse_told.phNumber_byCu_tobuyHouse === true) { // phone number by user to buy house
+    userEntered_info_toBuyHouse.phNumber_byCu_tobuyHouse = received_message.text; // phone number by user to buy house
     saveData_tobuy_house(sender_psid);
     response = {
-       "text": "Thanks for contacting us. Have a nice day!"
+       "text": "Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
                   
     }
-    tobuyhouse_told.leave_phno11abc = false;  
+    tobuyhouse_told.phNumber_byCu_tobuyHouse = false; // phone number by user to buy house
   }
 
 // user say no 
-  else if (received_message.payload === "tobuyhouse_tellbyuser_noo1b") { 
+  else if (received_message.payload === "cu_say_no_toBuyHouse") {
+    userEntered_info_toBuyHouse.cuSay_no_toSay_sthElse_se = received_message.text;  
     response = {
-      "text": "Please leave your contact number. We will contact you later."
+      "text": "Please leave your contact number."
     }
-  tobuyhouse_told.leave_phno11abc = true;
+  tobuyhouse_told.phNumber_byCu_tobuyHouse = true; // phone number of customer to buy house
   }
-
 
 
 /**************************************************************/
@@ -9656,12 +9657,12 @@ function handlePostback(sender_psid, received_postback) {
                         {
                           "content_type": "text",
                           "title": "Yes",
-                          "payload": "tobuyhouse_tellbyuser_yes1a", 
+                          "payload": "cu_say_yes_toBuyHouse", 
                         },
                         {
                           "content_type": "text",
                           "title": "No",
-                          "payload": "tobuyhouse_tellbyuser_noo1b",
+                          "payload": "cu_say_no_toBuyHouse",
                         }
                       ]
   }
@@ -10839,23 +10840,14 @@ function saveData_torent_land(sender_psid) {
 
 /************************************************************************************/
 
-// to rent land
+// to buy house in every
 function saveData_tobuy_house(sender_psid) {
   const cu_info_toBuy_hou = {
     id : sender_psid,
-    yesyes : userEntered_yes_abouthou.yes_yes_user,
-    leave_phno : userEntered_yes_abouthou.leave_phno11abc,
+    userSay_yes_forSthElse_tbh : userEntered_info_toBuyHouse.cuSay_yes_toSay_sthElse_se,
+    userSay_no_forSthElse_tbh : userEntered_info_toBuyHouse.cuSay_no_toSay_sthElse_se,
+    phNum_byUser_tbh : userEntered_info_toBuyHouse.phNumber_byCu_tobuyHouse,
   }
-  db.collection('cu_info_toBuy_House').add(userEntered_yes_abouthou);
+  db.collection('cu_info_toBuy_House').add(userEntered_info_toBuyHouse);
 }
-
-
-// to buy house told by user
-/*
-let tobuyhouse_told = {
-  yes_yes_user:false,
-  leave_phno11abc:false,
-}
-let userEntered_yes_abouthou = {};
-*/
 
