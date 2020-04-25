@@ -1176,7 +1176,7 @@ else if (received_message.payload === "customer_useryes_toldbyuser111da") {
 // for user says yes to sell something else
 else if (received_message.text && toselhou_byuser.sth_yes_toldbyCu === true ) { // for something else told by user
     userEntered_Hou_tosel.sth_yes_toldbyCu = received_message.text;  
-    db.collection('customer_info').add(userEntered_Hou_tosel);
+    saveData(sender_psid);
 
     response = {
       "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
@@ -1187,7 +1187,7 @@ else if (received_message.text && toselhou_byuser.sth_yes_toldbyCu === true ) { 
 // for user say no for something else
   else if (received_message.payload === "customer_usernono_toldbyuser111da" ) { // for user says no
     userEntered_Hou_tosel.sth_no_toldbyCu = received_message.payload;  // user says no for something else
-    db.collection('customer_info').add(userEntered_Hou_tosel);
+    saveData(sender_psid);
 
     response = {
       "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
@@ -10663,27 +10663,58 @@ async function greetUser(sender_psid){
 
 
 /*function function save data to firebase*/
-/*
+
 function saveData(sender_psid) {
   const cu_info = {
     id : sender_psid,
-    house_type : userEntered_Hou_tosel.to_sel_hou,
-    room_of_house : userEntered_Hou_tosel.howMuchRoom_hou,
-    area_of_house : userEntered_Hou_tosel.area_hou_inOtt,
-    landType_ofHouse : userEntered_Hou_tosel.typeofLand_ofhou1,
-    photo_of_house : userEntered_Hou_tosel.photos_ott,
-    attach_yes_no : userEntered_Hou_tosel.attach_houhou,
-    more_attach_tosend : userEntered_Hou_tosel.more_attach1hou,
-    asking_phNum_ofUser : userEntered_Hou_tosel.ph_num,
-    Both_room : userEntered_Hou_tosel.forSell_both_room,
-    estimated_price: userEntered_Hou_tosel.estimated_price_forSell,
-    sth_else_toldbyUser: userEntered_Hou_tosel.something_else_toldbyuser,
-    thank_user: userEntered_Hou_tosel.thanksfor_contacting11,
+    twonship_name : userEntered_Hou_tosel.twp_name_tobeSold,
+    type_of_house : userEntered_Hou_tosel.house_type_ht,
+    number_of_floor : userEntered_Hou_tosel.numOf_floor_toselHou,
+
+    number_of_mbr : userEntered_Hou_tosel.numOf_mbr_toselHou,
+    number_of_br : userEntered_Hou_tosel.numOf_br_toselHou,
+    both_num_of_mbr : userEntered_Hou_tosel.both1_numOf_mbr_tsel,
+    both_num_of_br : userEntered_Hou_tosel.both2_numOf_br_tsel,
+    land_area_of_house : userEntered_Hou_tosel.landArea_ofHouse_tosell,
+    land_type_of_house : userEntered_Hou_tosel.typeOf_land_ofHou_tsel,
+    estimated_amount : userEntered_Hou_tosel.estimated_amount_toget,
+    fully_address : userEntered_Hou_tosel.fullyAddress_byCu_tosel,
+    phone_number : userEntered_Hou_tosel.ph_numm_byCu_tosellHou,
+    yes_toTell_sth_else : userEntered_Hou_tosel.sth_yes_toldbyCu,
+    no_toTell_sth_else : userEntered_Hou_tosel.sth_no_toldbyCu,
   }
   db.collection('customer_info').add(cu_info);
 }
+
+// to sell their house
+/*
+let toselhou_byuser = {
+  twp_name_tobeSold:false,
+  house_type_ht:false,
+  numOf_floor_toselHou:false,
+
+  numOf_mbr_toselHou:false,
+  numOf_br_toselHou:false,
+  both1_numOf_mbr_tsel:false,
+  both2_numOf_br_tsel:false,
+
+  landArea_ofHouse_tosell:false,
+  typeOf_land_ofHou_tsel:false,
+  images_ofHouse_tsel:false,
+  estimated_amount_toget:false,
+  fullyAddress_byCu_tosel:false,
+  ph_numm_byCu_tosellHou:false,
+  sth_yes_toldbyCu:false,
+  sth_no_toldbyCu:false,
+
+}
+let userEntered_Hou_tosel = {};
 */
+
+
 //db.collection('user_information').add(info);
+
+
 
 /*
 to sell their house
