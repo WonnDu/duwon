@@ -10781,7 +10781,7 @@ function saveData_tosell_land(sender_psid) {
 
 // to rent house as landlord
 function saveData_torent_house(sender_psid) {
-  const cu_inform_torent_house = {
+  const cu_inform_torent_hou = {
     id : sender_psid,
     twonship_name : userEntered_landlord.twp_name_torentHouse,
     type_of_house : userEntered_landlord.house_type_torent,
@@ -10800,7 +10800,7 @@ function saveData_torent_house(sender_psid) {
     no_toTell_sth_else : userEntered_landlord.sth_no_toldbyCu_torent,
    
   }
-  db.collection('cu_info_torent_house').add();
+  db.collection('cu_info_torent_house').add(userEntered_landlord);
 }
 
 
