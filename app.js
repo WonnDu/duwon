@@ -5060,8 +5060,6 @@ else if (received_message.payload === "zabtwp") {
 
 
 
-/************************************************/
-
 
 
 /***********************************************************************************************************************************/
@@ -5329,124 +5327,6 @@ else if (received_message.payload === "otthi") {
     }
   }
 }
-
-
-
-/**************************************************************************/
-/************************************************************************/
-
-
-// to rent land in oattra
-else if (received_message.payload === "teottl") {
-    response = {
-                  "text": "Do you want how much wide area?",
-                    "quick_replies": [
-                          {
-                          "content_type": "text",
-                          "title": "80*80",
-                          "payload": "torentland80_ott",
-                        },
-                         {
-                          "content_type": "text",
-                          "title": "100*100",
-                          "payload": "torentland100_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "150*150",
-                          "payload": "torentland150_ott",
-                        },
-                        
-                      ]
-      }
-  }
-
-    // to rent land in Oattra 80*80
-    else if (received_message.payload === 'torentland80_ott') {
-    response = {
-                  "text": "So sorry for my customer. There are not vacant land avaliable in Oattra to rent yet. Thanks for contacting us.",
-                   
-      }
-  }
-  
-// to rent land in Oattra, 100*100 
-    else if (received_message.payload === 'torentland100_ott') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"land, 3 lakhs per month, 100*100 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92214064_148823976663402_9152721804815499264_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_eui2=AeE5sEj0zQN1gizaqKzK4jqfDRN3R7GAQNANE3dHsYBA0Dn3_dUa122xcWuru_HhUiwPHjAKpkq0y0c8JnBUYqO2&_nc_ohc=lSf1itb1gJgAX_y9iQG&_nc_ht=scontent.fmdl2-2.fna&oh=5358e63929940923de037ab8b2422941&oe=5EB24417",
-            "subtitle":"land type-(grant), face south, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torentlandall_aabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-// to rent land in Oattra, 150*150
-    else if (received_message.payload === 'torentland150_ott') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"land, 5 lakhs per month, 150*150 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92236612_148822566663543_924747952507846656_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_eui2=AeHCzboYU7SdJuCwvLEkjxYqCX6qxvPEVK0JfqrG88RUrd8246mUsjl367MB4SnJkoGvu1o1SWZWx8yu1LY4_ow8&_nc_ohc=23dwXT1Le4kAX8PMZMY&_nc_ht=scontent.fmdl2-2.fna&oh=795d163e841c1d4e1f327d523c125170&oe=5EB1E800",
-            "subtitle":"land type-(grant), face north, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torentlandall_aabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-
-
 
 
 /*************************************************************************/
@@ -6196,10 +6076,712 @@ else if (received_message.payload === "dekthi") {
 }
 
 
-/*****************************************************************/
-/*****************************************************************/
 
 
+
+/*****************************************************************************************/
+/*****************************************************************************************/
+/*****************************************************************************************/
+
+
+
+// to rent land as tenant
+// to rent land in oattra
+else if (received_message.payload === "teottl") {
+    response = {
+                  "text": "Do you want how much wide area?",
+                    "quick_replies": [
+                          {
+                          "content_type": "text",
+                          "title": "80*80",
+                          "payload": "torentland80_ott",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "100*100",
+                          "payload": "torentland100_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "150*150",
+                          "payload": "torentland150_ott",
+                        },
+                        
+                      ]
+      }
+  }
+// to rent land in Pobba
+  else if (received_message.payload === "tepobl") {
+    response = {
+                  "text": "Lands' areas to be rented in Zayathiri Township:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "land40_pobbtobu2ba_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "land80_pobbtobu26a_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "80*80",
+                          "payload": "land88_pobbtobu11a_tenant",
+                        }
+                      ]
+      }
+  }
+// to rent land in Dekkhia, area
+else if (received_message.payload === "tedekl") {
+    response = {
+                  "text": "Lands' areas to be rented in Zayathiri Township:",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "torede_onlya6868land_dek_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "80*80",
+                          "payload": "torede_onlya88landin_dek_tenant",
+                        },
+                           {
+                          "content_type": "text",
+                          "title": "100*100",
+                          "payload": "torede_onlyaland100in_dek_tenant",
+                        }
+                      ]
+      }
+  }
+      // to rent land in Zayathiri twonship, area
+  else if (received_message.payload === "tezayl") {
+    response = {
+                  "text": "Lands' areas to be rented in Zayathiri Township:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "torentz_land_area_inzayad146",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "torent_land_area_inzayad168",  
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Other area",
+                          "payload": "torent_land_area_inzayad1other",
+                        }
+                      ]
+      }
+  }
+    // to rent land in Zabuthiri, area
+  else if (received_message.payload === "tezal") {
+    response = {
+                  "text": "Lands' areas to be rented in Zabuthiri Township:",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "60*60",
+                          "payload": "only60blandin_zabuu7_rent1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "100*100",
+                          "payload": "only68cclandin_zabuu7_rent1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Other area",
+                          "payload": "onlyother7dlandin_zabuu7_rent1",
+                        }
+                      ]
+      }
+  }
+// to rent land in Pyinmana
+  else if (received_message.payload === "tepyinlan") {
+    response = {
+                  "text": "Lands' areas to be rented in Pyinmana Township:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "torentlandpyin46_areab11",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*72",
+                          "payload": "torentlandpyin672_areaaa1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "torentlandpyin68_areacc11",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "Other area",
+                          "payload": "torentlandpyinotherarea_areadd11",
+                        }
+                      ]
+      }
+  }
+
+
+
+
+/***************************************************************/
+
+    // to rent land in Oattra 80*80
+    else if (received_message.payload === 'torentland80_ott') {
+    response = {
+                  "text": "So sorry for my customer. There are not vacant land avaliable in Oattra to rent yet. Thanks for contacting us.",
+                   
+      }
+  }
+  
+// to rent land in Oattra, 100*100 
+    else if (received_message.payload === 'torentland100_ott') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 3 lakhs per month, 100*100 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92214064_148823976663402_9152721804815499264_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_eui2=AeE5sEj0zQN1gizaqKzK4jqfDRN3R7GAQNANE3dHsYBA0Dn3_dUa122xcWuru_HhUiwPHjAKpkq0y0c8JnBUYqO2&_nc_ohc=lSf1itb1gJgAX_y9iQG&_nc_ht=scontent.fmdl2-2.fna&oh=5358e63929940923de037ab8b2422941&oe=5EB24417",
+            "subtitle":"land type-(grant), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"torentlandall_aabb1"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to rent land in Oattra, 150*150
+    else if (received_message.payload === 'torentland150_ott') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 5 lakhs per month, 150*150 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92236612_148822566663543_924747952507846656_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_eui2=AeHCzboYU7SdJuCwvLEkjxYqCX6qxvPEVK0JfqrG88RUrd8246mUsjl367MB4SnJkoGvu1o1SWZWx8yu1LY4_ow8&_nc_ohc=23dwXT1Le4kAX8PMZMY&_nc_ht=scontent.fmdl2-2.fna&oh=795d163e841c1d4e1f327d523c125170&oe=5EB1E800",
+            "subtitle":"land type-(grant), face north, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"torentlandall_aabb1"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+/******************************************************************/
+
+// to rent land in Pobba,  40*60
+    else if (received_message.payload === 'land40_pobbtobu2ba_tenant') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 1 lakh per month, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92167702_148702773342189_5409825490464669696_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeEti1pLlG7k25OTzKTQf04-pjbk1v9nX8GmNuTW_2dfwXsXNJoQeWmPOxUirjYllEYt5q9uZwa4S3u_0eTZck1A&_nc_ohc=kA-CJJG0XyUAX_ac-M1&_nc_ht=scontent.fmdl2-2.fna&oh=fc0291c46afed146bdc149f655125de9&oe=5EB17576",
+            "subtitle":"land type-(grant), face south",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"torentlandall_aabb1"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to rent land in Pobba,  60*80
+    else if (received_message.payload === 'land80_pobbtobu26a_tenant') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 1.5 lakhs per month, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91991273_148704343342032_3054495691972804608_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeH2wVSm5DsCLFesBvl46bpfPyPofjUfO_k_I-h-NR87-RcfEZJ_1P_ZadUUe5CAUmR5z69C4_9FqExGSFAOwEP3&_nc_ohc=_1KKYlteFSUAX_xCSrn&_nc_ht=scontent.fmdl2-2.fna&oh=5613774ed5b34ad38b6ae2dbd3e9b0ad&oe=5EB2F2F3",
+            "subtitle":"land type-(grant), face north",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"torentlandall_aabb1"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to rent land in Pobba,  80*80
+    else if (received_message.payload === 'land88_pobbtobu11a_tenant') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 2.5 lakhs per month, 80*80 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92230031_148704800008653_4090756521791586304_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeEO-jxiti1JQNFThle_S_jni90HSvupMk6L3QdK-6kyTlrw3uARvolzrmtRPvT-L59Z7xSh0ScJrnM0KZ6yt89i&_nc_ohc=9-YiMcFx6PYAX-ioqAm&_nc_ht=scontent.fmdl2-2.fna&oh=6c479c912e372cff68cb16dae0b8a119&oe=5EB2F669",
+            "subtitle":"land type-(grant), face east",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"torentlandall_aabb1"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+/********************************************/
+
+// to rent land in Dekkhina,  60*80
+    else if (received_message.payload === 'torede_onlya6868land_dek_tenant') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 2 lakhs per month, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92360334_148680736677726_5635709584476733440_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_eui2=AeHyQ1NLvMIClsn5S9QIthrSiiHWb8EfPkmKIdZvwR8-Sfo6ZfQDqr_NGT0QX3c8d_FzWTaqT6apxtC5-IO9-Vd6&_nc_ohc=5zDJC6ty8FUAX9oGqo0&_nc_ht=scontent.fmdl2-1.fna&oh=f5759657f5b871e2e7d77ef51f283966&oe=5EB1BD12",
+            "subtitle":"land type-(grant), face north, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"torentlandall_aabb1"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to rent land in Dekkhina,  80*80
+    else if (received_message.payload === 'torede_onlya88landin_dek_tenant') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 2.5 lakhs per month, 80*80 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92389436_148677910011342_4703647964088762368_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeFnxMTydi_PAoygFa_sT8N5uJO_gqWz6Ie4k7-CpbPoh8pkMLfxDCF6ftwhshOIPRxScJp-R0ziWNvAL4VPmjfp&_nc_ohc=JzfrZn2GFhEAX9P8dIL&_nc_ht=scontent.fmdl2-2.fna&oh=ff96c716d309c7663fcb68bc35e9c543&oe=5EB193A6",
+            "subtitle":"land type-(permit), face east & north, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"torentlandall_aabb1"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+// to rent land in Dekkhina,  100*100
+    else if (received_message.payload === 'torede_onlyaland100in_dek_tenant') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 3 lakhs per month, 100*100 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92023227_148678763344590_6163162711233396736_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeG1Yh-bM7cBszY0E37bemDdBgP3e6fdm5QGA_d7p92blNuE8eGcUXHPcSs7BtZkfLvhlKHV_h0OQEL5jmxzFKk-&_nc_ohc=YRk6tztDMhYAX-bzLfq&_nc_ht=scontent.fmdl2-1.fna&oh=f51d00030a755fd4a893773cf5e739a6&oe=5EB2E475",
+            "subtitle":"land type-(permit), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"torentlandall_aabb1"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+/************************************/
+
+
+
+// to rent land in Zayathiri, 40*60
+    else if (received_message.payload === 'torentz_land_area_inzayad146') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 1 lakh for 1 month, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91513938_147997343412732_2184803353274351616_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeHbEG6AVbBgKfxV7lLu7SEPDZHJLkRvnegNkckuRG-d6LVbeXwvrTB7r60wxpuqzmmPtlRTf3-CFc9YBIBz-8y-&_nc_ohc=bxsIVu2L0ywAX__8G89&_nc_ht=scontent.fmdl2-2.fna&oh=e401bc6e5d23e23c48dde30e65432005&oe=5EAFA9B4",
+            "subtitle":"land type-(grant), face east, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"torentlandall_aabb1"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+
+// to rent land in Zayathiri, 60*80
+    else if (received_message.payload === 'torent_land_area_inzayad168') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 1.5 lakh for a month, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92076615_147998313412635_430261903793586176_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeEVm_FWPjTJ2BufDDswKfkPFK-SCgwYCSYUr5IKDBgJJu5BnDZR4AHvnvwAnxyjlT9aGQZjA1mRTwhL9dwxDG9f&_nc_ohc=UQCbtGDcu14AX_cRlhb&_nc_ht=scontent.fmdl2-1.fna&oh=b8a6f31f69a2982e7fa3f50b97bfd7d8&oe=5EAED83E",
+            "subtitle":"land type-(slit), face north, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"torentlandall_aabb1"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to rent land in Zayathiri, Other area
+    else if (received_message.payload === 'torent_land_area_inzayad1other') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 1 lakh for a month, 4.32 arce",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91173485_147313630147770_7524269256431632384_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeHx7J_uE6K2gYtG3D2PPamXDrJ9p_115oQOsn2n_XXmhB0HVZ7f3lrYNBtzLgpB_vbEzwPaxQ6HungQm3Bqzy2q&_nc_ohc=DBqp7NaeREMAX_HivK2&_nc_ht=scontent.fmdl2-2.fna&oh=6b7e44248adb33bedc01617020c2509f&oe=5EAF7F6E",
+            "subtitle":"land type-(permit), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"torentlandall_aabb1"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+// to rent land in Zabuthiri,  60*60
+    else if (received_message.payload === 'only60blandin_zabuu7_rent1') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 1.5 lakhs per month, 60*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92401981_148398946705905_1667673824658718720_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeGaL6IGTy20gFrY_-GIyeNJuwpVQ952uLu7ClVD3na4u21FAthxsnpldZlENVuE1St4BuxvhXlda1-KwZfSYc5U&_nc_ohc=kvy3nWUh4R8AX8_CBXm&_nc_ht=scontent.fmdl2-1.fna&oh=0fa5d2b84682b6977536695d3e6fe792&oe=5EAED27B",
+            "subtitle":"face south, land type-(grant), Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"torentlandall_aabb1"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to rent land in Zabuthiri,  100*100
+    else if (received_message.payload === 'only68cclandin_zabuu7_rent1') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 2 lakhs per month, 100*100 ft, face west,",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91810678_148403216705478_1277350765916061696_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeGssc_xyPyaeyFDkreQEylkRUbrTdet0OJFRutN163Q4mTLjEwCflsG5eofWpDqUaRGl647jk3Ph9AG_80NfmOy&_nc_ohc=IgL8saxP5bUAX_4kTPj&_nc_ht=scontent.fmdl2-1.fna&oh=b3f0f3b95ccef22e52f67856290eeef2&oe=5EB1A0F1",
+            "subtitle":"land type-(village land),Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"torentlandall_aabb1"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to rent land in Zabuthiri,  Other area
+    else if (received_message.payload === 'onlyother7dlandin_zabuu7_rent1' ) {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 1.5 lakhs per month, 80*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92100656_148405230038610_4893887046474530816_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeFDDuLfnVZj-6Zb_dij7f9eN5WYIm8s5m83lZgibyzmbyyQrMoO7j7TGod3Si3a4sh3egQATLC7pmbmzTaNiReP&_nc_ohc=zE-iyX7f2hUAX9uZRd6&_nc_ht=scontent.fmdl2-2.fna&oh=5a864e5a88facb440ce6aeeae5788ad7&oe=5EB1BE62",
+            "subtitle":"land type-(grant), face east, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"torentlandall_aabb1"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
 // to rent land in pyinmana,  40*60
     else if (received_message.payload === 'torentlandpyin46_areab11') {
     response = {
@@ -6351,757 +6933,10 @@ else if (received_message.payload === "dekthi") {
 }
 
 
-/******************************************************************/
-
-// to rent land in Pobba
-  else if (received_message.payload === "tepobl") {
-    response = {
-                  "text": "Do you want what area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "40*60",
-                          "payload": "land40_pobbtobu2ba_tenant",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*80",
-                          "payload": "land80_pobbtobu26a_tenant",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "80*80",
-                          "payload": "land88_pobbtobu11a_tenant",
-                        }
-                      ]
-      }
-  }
-
-// to rent land in Pobba,  40*60
-    else if (received_message.payload === 'land40_pobbtobu2ba_tenant') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"land, 1 lakh per month, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92167702_148702773342189_5409825490464669696_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeEti1pLlG7k25OTzKTQf04-pjbk1v9nX8GmNuTW_2dfwXsXNJoQeWmPOxUirjYllEYt5q9uZwa4S3u_0eTZck1A&_nc_ohc=kA-CJJG0XyUAX_ac-M1&_nc_ht=scontent.fmdl2-2.fna&oh=fc0291c46afed146bdc149f655125de9&oe=5EB17576",
-            "subtitle":"land type-(grant), face south",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torentlandall_aabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-// to rent land in Pobba,  60*80
-    else if (received_message.payload === 'land80_pobbtobu26a_tenant') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"land, 1.5 lakhs per month, 60*80 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91991273_148704343342032_3054495691972804608_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeH2wVSm5DsCLFesBvl46bpfPyPofjUfO_k_I-h-NR87-RcfEZJ_1P_ZadUUe5CAUmR5z69C4_9FqExGSFAOwEP3&_nc_ohc=_1KKYlteFSUAX_xCSrn&_nc_ht=scontent.fmdl2-2.fna&oh=5613774ed5b34ad38b6ae2dbd3e9b0ad&oe=5EB2F2F3",
-            "subtitle":"land type-(grant), face north",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torentlandall_aabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-// to rent land in Pobba,  80*80
-    else if (received_message.payload === 'land88_pobbtobu11a_tenant') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"land, 2.5 lakhs per month, 80*80 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92230031_148704800008653_4090756521791586304_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeEO-jxiti1JQNFThle_S_jni90HSvupMk6L3QdK-6kyTlrw3uARvolzrmtRPvT-L59Z7xSh0ScJrnM0KZ6yt89i&_nc_ohc=9-YiMcFx6PYAX-ioqAm&_nc_ht=scontent.fmdl2-2.fna&oh=6c479c912e372cff68cb16dae0b8a119&oe=5EB2F669",
-            "subtitle":"land type-(grant), face east",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torentlandall_aabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
 
 
-
-/******************************************************************/
-
-
-// to rent land in Dekkhia, area
-else if (received_message.payload === "tedekl") {
-    response = {
-                  "text": "Do you want what area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "40*60",
-                          "payload": "torede_onlya4646land_dek_tenant",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*60",
-                          "payload": "torede_onlya660land_dek_tenant",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*80",
-                          "payload": "torede_onlya6868land_dek_tenant",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "80*80",
-                          "payload": "torede_onlya88landin_dek_tenant",
-                        },
-                           {
-                          "content_type": "text",
-                          "title": "100*100",
-                          "payload": "torede_onlyaland100in_dek_tenant",
-                        }
-                      ]
-      }
-  }
-
-// to rent land in Dekkhina,  40*60
-    else if (received_message.payload === 'torede_onlya4646land_dek_tenant') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"land, 1 lakh per month, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91505407_148674673344999_6438141773247152128_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeF4uScfWcHQXpzQBF9BpStZRNT1qYilTdNE1PWpiKVN0y7ChqSJLHs4ngoSb5pKvAVVipqp0GjVHMSjyivg1G0q&_nc_ohc=lVEN8hAPU54AX_xdhVc&_nc_ht=scontent.fmdl2-1.fna&oh=cf06386fb8b2c111e1a17b30067dffc6&oe=5EB13151",
-            "subtitle":"land type-(permit), face east",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torentlandall_aabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-// to rent land in Dekkhina,  60*60
-    else if (received_message.payload === 'torede_onlya660land_dek_tenant') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"land, 1.5 lakhs per month, 60*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92573474_148671303345336_7972612929591705600_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_eui2=AeGesnpPNxDTxDFmi1AdqMus7LSNKmgELoPstI0qaAQugwvn0YmpYg4hao4tla6JxiL2ZjneVWReAHhUWWypHu8C&_nc_ohc=OXtbPECcRqQAX9j0Vek&_nc_ht=scontent.fmdl2-1.fna&oh=4807aa5ab7739151d174ccf1e1ce901e&oe=5EB0D709",
-            "subtitle":"land type-(slit), face north",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torentlandall_aabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-// to rent land in Dekkhina,  60*80
-    else if (received_message.payload === 'torede_onlya6868land_dek_tenant') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"land, 2 lakhs per month, 60*80 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92360334_148680736677726_5635709584476733440_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_eui2=AeHyQ1NLvMIClsn5S9QIthrSiiHWb8EfPkmKIdZvwR8-Sfo6ZfQDqr_NGT0QX3c8d_FzWTaqT6apxtC5-IO9-Vd6&_nc_ohc=5zDJC6ty8FUAX9oGqo0&_nc_ht=scontent.fmdl2-1.fna&oh=f5759657f5b871e2e7d77ef51f283966&oe=5EB1BD12",
-            "subtitle":"land type-(grant), face north, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torentlandall_aabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-// to rent land in Dekkhina,  80*80
-    else if (received_message.payload === 'torede_onlya88landin_dek_tenant') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"land, 2.5 lakhs per month, 80*80 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92389436_148677910011342_4703647964088762368_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeFnxMTydi_PAoygFa_sT8N5uJO_gqWz6Ie4k7-CpbPoh8pkMLfxDCF6ftwhshOIPRxScJp-R0ziWNvAL4VPmjfp&_nc_ohc=JzfrZn2GFhEAX9P8dIL&_nc_ht=scontent.fmdl2-2.fna&oh=ff96c716d309c7663fcb68bc35e9c543&oe=5EB193A6",
-            "subtitle":"land type-(permit), face east & north, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torentlandall_aabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-
-// to rent land in Dekkhina,  100*100
-    else if (received_message.payload === 'torede_onlyaland100in_dek_tenant') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"land, 3 lakhs per month, 100*100 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92023227_148678763344590_6163162711233396736_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeG1Yh-bM7cBszY0E37bemDdBgP3e6fdm5QGA_d7p92blNuE8eGcUXHPcSs7BtZkfLvhlKHV_h0OQEL5jmxzFKk-&_nc_ohc=YRk6tztDMhYAX-bzLfq&_nc_ht=scontent.fmdl2-1.fna&oh=f51d00030a755fd4a893773cf5e739a6&oe=5EB2E475",
-            "subtitle":"land type-(permit), face south, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torentlandall_aabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-
-
-/****************************************************************/
-/***************************************************************/
-  // to rent land in Zabuthiri, area
-  else if (received_message.payload === "tezal") {
-    response = {
-                  "text": "Do you want what area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "40*60",
-                          "payload": "only46alandin_zabuu7_rent1",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*60",
-                          "payload": "only60blandin_zabuu7_rent1",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "100*100",
-                          "payload": "only68cclandin_zabuu7_rent1",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Other area",
-                          "payload": "onlyother7dlandin_zabuu7_rent1",
-                        }
-                      ]
-      }
-  }
-
-// to rent land in Zabuthiri,  60*60
-    else if (received_message.payload === 'only60blandin_zabuu7_rent1') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"land, 1.5 lakhs per month, 60*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92401981_148398946705905_1667673824658718720_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeGaL6IGTy20gFrY_-GIyeNJuwpVQ952uLu7ClVD3na4u21FAthxsnpldZlENVuE1St4BuxvhXlda1-KwZfSYc5U&_nc_ohc=kvy3nWUh4R8AX8_CBXm&_nc_ht=scontent.fmdl2-1.fna&oh=0fa5d2b84682b6977536695d3e6fe792&oe=5EAED27B",
-            "subtitle":"face south, land type-(grant), Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torentlandall_aabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-// to rent land in Zabuthiri,  40*60
-    else if (received_message.payload === 'only46alandin_zabuu7_rent1') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"land, 1 lakh per month, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91613770_148401023372364_5350547653220368384_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeGOUGv8X4g8aZ7KMUkbj143aMv2-XqcnNxoy_b5epyc3Cnk6PadZmgqlkRrzQ4wGGBVuJTGEsvDBWUtO4ljXG3F&_nc_ohc=R-2gfYEIeG8AX-DceKM&_nc_ht=scontent.fmdl2-1.fna&oh=94b59f25df3b4848c60e90d9cf646833&oe=5EB20BEC",
-            "subtitle":"face west, land type-(permit),Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torentlandall_aabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-// to rent land in Zabuthiri,  100*100
-    else if (received_message.payload === 'only68cclandin_zabuu7_rent1') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"land, 2 lakhs per month, 100*100 ft, face west,",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91810678_148403216705478_1277350765916061696_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeGssc_xyPyaeyFDkreQEylkRUbrTdet0OJFRutN163Q4mTLjEwCflsG5eofWpDqUaRGl647jk3Ph9AG_80NfmOy&_nc_ohc=IgL8saxP5bUAX_4kTPj&_nc_ht=scontent.fmdl2-1.fna&oh=b3f0f3b95ccef22e52f67856290eeef2&oe=5EB1A0F1",
-            "subtitle":"land type-(village land),Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torentlandall_aabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-
-
-
-// to rent land in Zabuthiri,  Other area
-    else if (received_message.payload === 'onlyother7dlandin_zabuu7_rent1' ) {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"land, 1.5 lakhs per month, 80*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92100656_148405230038610_4893887046474530816_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeFDDuLfnVZj-6Zb_dij7f9eN5WYIm8s5m83lZgibyzmbyyQrMoO7j7TGod3Si3a4sh3egQATLC7pmbmzTaNiReP&_nc_ohc=zE-iyX7f2hUAX9uZRd6&_nc_ht=scontent.fmdl2-2.fna&oh=5a864e5a88facb440ce6aeeae5788ad7&oe=5EB1BE62",
-            "subtitle":"land type-(grant), face east, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torentlandall_aabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-/*************************************************************************************************************/
-/******************************************************************************************************************/
-
-
-/************************************/
-
-    // to rent land in Zayathiri twonship, area
-  else if (received_message.payload === "tezayl") {
-    response = {
-                  "text": "Do you want what area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "40*60",
-                          "payload": "torentz_land_area_inzayad146",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*60",       
-                          "payload": "torentz_land_area_inzayad160",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*80",
-                          "payload": "torent_land_area_inzayad168",  
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Other area",
-                          "payload": "torent_land_area_inzayad1other",
-                        }
-                      ]
-      }
-  }
-
-// to rent land in Zayathiri, 40*60
-    else if (received_message.payload === 'torentz_land_area_inzayad146') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"land, 1 lakh for 1 month, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91513938_147997343412732_2184803353274351616_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeHbEG6AVbBgKfxV7lLu7SEPDZHJLkRvnegNkckuRG-d6LVbeXwvrTB7r60wxpuqzmmPtlRTf3-CFc9YBIBz-8y-&_nc_ohc=bxsIVu2L0ywAX__8G89&_nc_ht=scontent.fmdl2-2.fna&oh=e401bc6e5d23e23c48dde30e65432005&oe=5EAFA9B4",
-            "subtitle":"land type-(grant), face east, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torentlandall_aabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-// to rent land in Zayathiri, 60*60
-    else if (received_message.payload === 'torentz_land_area_inzayad160') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"land, 1lakh for a month, 60*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91680436_148006486745151_4875582939536031744_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeGXoapM3L50BOyrZhvMyGHgpOOd7SlzHVGk453tKXMdUZhHMVY_SNV-jtIMIER77hIRIN7DD0yk7ybnIa7AZRj6&_nc_ohc=fWAFU4V_92QAX-Pyqhk&_nc_ht=scontent.fmdl2-2.fna&oh=04fbca9e0b7bd2c4086eb82062dfdf9b&oe=5EAE2F5A",
-            "subtitle":"land type-(permit), face south, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torentlandall_aabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-
-// to rent land in Zayathiri, 60*80
-    else if (received_message.payload === 'torent_land_area_inzayad168') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"land, 1.5 lakh for a month, 60*80 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92076615_147998313412635_430261903793586176_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeEVm_FWPjTJ2BufDDswKfkPFK-SCgwYCSYUr5IKDBgJJu5BnDZR4AHvnvwAnxyjlT9aGQZjA1mRTwhL9dwxDG9f&_nc_ohc=UQCbtGDcu14AX_cRlhb&_nc_ht=scontent.fmdl2-1.fna&oh=b8a6f31f69a2982e7fa3f50b97bfd7d8&oe=5EAED83E",
-            "subtitle":"land type-(slit), face north, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torentlandall_aabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-// to rent land in Zayathiri, Other area
-    else if (received_message.payload === 'torent_land_area_inzayad1other') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"land, 1 lakh for a month, 4.32 arce",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91173485_147313630147770_7524269256431632384_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeHx7J_uE6K2gYtG3D2PPamXDrJ9p_115oQOsn2n_XXmhB0HVZ7f3lrYNBtzLgpB_vbEzwPaxQ6HungQm3Bqzy2q&_nc_ohc=DBqp7NaeREMAX_HivK2&_nc_ht=scontent.fmdl2-2.fna&oh=6b7e44248adb33bedc01617020c2509f&oe=5EAF7F6E",
-            "subtitle":"land type-(permit), face south, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torentlandall_aabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-
-
-
-
-
-
+/****************************************************************************************************************/
+/***************************************************************************************************************/
 /****************************************************************************************************************/
 /***************************************************************************************************************/
 
@@ -9021,94 +8856,46 @@ function handlePostback(sender_psid, received_postback) {
 
 
 
+// to rent land as tenant
   else if (payload === 'tenanlan') {
-    response = { "attachment": {
-                  "type": "template",
-                  "payload": {
-                    "template_type": "button",
-                      "text": "Please choose the place in which you want to tenant land:",
-                      "buttons": [
-                        {
-                          "type": "postback",
-                          "title": "In Five Thri Township",
-                          "payload": "te5lan",
-                        },
-                         {
-                          "type": "postback",
-                          "title": "Pyinmana Township",
-                          "payload": "tepyinlan",
-                        }
-                      ]
-                    
-                  }
-                }
-              }
-  }
-
-// to rent land in Pyinmana
-  else if (payload === "tepyinlan") {
-    response = {
-                  "text": "Do you want what area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "40*60",
-                          "payload": "torentlandpyin46_areab11",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*72",
-                          "payload": "torentlandpyin672_areaaa1",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*80",
-                          "payload": "torentlandpyin68_areacc11",
-                        },
-                         {
-                          "content_type": "text",
-                          "title": "Other area",
-                          "payload": "torentlandpyinotherarea_areadd11",
-                        }
-                      ]
-      }
-  }
-
-   else if (payload === 'te5lan') {
-         response = {
-                  "text": "Please choose the township in which you want to tenant land:",
+    response = { 
+                "text": "Please choose the township in which you want to tenant land:",
                     "quick_replies": [
                         {
                           "content_type": "text",
                           "title": "Ottara",
-                          "payload": "teottl",
+                          "payload": "teottl"
                         },
                          {
                           "content_type": "text",
                           "title": "Pobba",
-                          "payload": "tepobl",
+                          "payload": "tepobl"
                         },
                         {
                           "content_type": "text",
                           "title": "Dekkhina",
-                          "payload": "tedekl",
+                          "payload": "tedekl"
                         },
                         {
                           "content_type": "text",
                           "title": "Zaya Thiri",
-                          "payload": "tezayl",
+                          "payload": "tezayl"
                         },
                         {
                           "content_type": "text",
                           "title": "Zabu Thiri",
-                          "payload": "tezal",
+                          "payload": "tezal"
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Pyinmana",
+                          "payload": "tepyinlan"
                         }
                       ]
-
-      }
+              }
   }
 
-
+/***************************************************************************/
 
   // to buy house 
   else if (payload === 'tobu') {
