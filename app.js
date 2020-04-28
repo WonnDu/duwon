@@ -1480,7 +1480,7 @@ else if (received_message.payload === "cu_say_yes_for_sthElse") {
                         },
                         {
                           "content_type": "text",
-                          "title": "Other floor",
+                          "title": "other floor",
                           "payload": "otherf_pyinfloorbb11",
                         }
                       ]
@@ -1959,7 +1959,7 @@ else if (received_message.payload === "cu_say_yes_for_sthElse") {
                         },
                         {
                           "content_type": "text",
-                          "title": "other",
+                          "title": "other floor",
                           "payload": "otherf_ott",
                         }
                       ]
@@ -3521,7 +3521,7 @@ else if (received_message.payload === "zaytwp") {
                         },
                         {
                           "content_type": "text",
-                          "title": "other",
+                          "title": "other floor",
                           "payload": "whateverf_zayathi",
                         }
                       ]
@@ -4223,7 +4223,7 @@ else if (received_message.payload === "tenanzay") {
  // to rent house in zayathiri, RC, one floor, master bed
   else if (received_message.payload === "bed3below_onef_rzayathi1_tenant") {
     response = {
-                  "text": "Do you want what area?",
+                  "text": "Please choose the estimated price you want to use:",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -4534,7 +4534,7 @@ else if (received_message.payload === "zabtwp") {
                         },
                         {
                           "content_type": "text",
-                          "title": "other",
+                          "title": "other floor",
                           "payload": "otherff1_zabuthiri11aa",
                         }
                       ]
@@ -7106,6 +7106,25 @@ else if (received_message.payload === "tedekl") {
 /***************************************************************************************************************/
 
  
+// to rent house in pyinmana,
+  else if (received_message.payload === "tenanpyin" ) {
+    response = {
+                  "text": "Please choose the below option:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "RC",
+                          "payload": "torentrcpyin_teaa1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Other type",
+                          "payload": "torentothertypepyin_tebb1",
+                        }
+                      ]
+
+      }
+  }
 // to rent house in pyinmana, RC
   else if (received_message.payload === "torentrcpyin_teaa1" ) {
     response = {
@@ -7130,50 +7149,46 @@ else if (received_message.payload === "tedekl") {
 
       }
   }
- 
-// to rent house in pyinmana, RC, one floor, 
+// to rent house in pyinmana, RC, one floor,
   else if (received_message.payload === "torentonef_pyinfloor11_tenant") {
-    response = {
-                  "text": "Do you want the house in which Mbr is included or only Br included?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "Mbr",
-                          "payload": "torentpyinrc_onefmbr_hh1_tenant",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Only Br",
-                          "payload": "torentpyinrc_onfonlybr_hhaa1_tenant",
-                        }
-                      ]
-      }
-  }
-
-
-// to rent house in pyinmana, RC, one floor, Mbr
-  else if (received_message.payload === "torentpyinrc_onefmbr_hh1_tenant") {
     response = {
                   "text": "Please choose the estimated price you wanna spend:",
                     "quick_replies": [
                          {
                           "content_type": "text",
-                          "title": "4 lakhs & below it",
+                          "title": "3lakhs & below it",
                           "payload": "torenthourc_onefpyin1_tenantbelow4l",
                         },
                         {
                           "content_type": "text",
-                          "title": "above 4 lakhs",
+                          "title": "above 3 lakhs",
                           "payload": "torenthourc_onefpyina1_tenantabove4l",
                         }
                       ]
       }
   }
-
+// to rent house in pyinmana, RC, two floor
+  else if (received_message.payload === "torenttwoff_pyinfloora11_tenant") {
+    response = {
+                  "text": "Please choose the estimated price you wanna spend:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "3lakhs & below it",
+                          "payload": "torenthou_pyinrctwof_below4lmm",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "above 3lakhs",
+                          "payload": "torenthou_pyinrctwofn_above4ln",
+                        }
+                      ]
+      }
+  }
 
 /********************/
 
-// to rent house in pyinmana, RC, one floor, Mbr, 4 lakhs & below it
+// to rent house in pyinmana, RC, one floor, 3 lakhs & below it
   else if (received_message.payload === "torenthourc_onefpyin1_tenantbelow4l") {
     response = {
       "attachment":{
@@ -7183,7 +7198,7 @@ else if (received_message.payload === "tedekl") {
         "elements": [ 
         
            {
-            "title":"RC, 3.5 lakhs per month, 40*60 ft",
+            "title":"RC, 3 lakhs per month, 40*60 ft",
             "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91664968_149027856643014_3018289688898174976_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeGRHIaeZKMyPNKfOeoww905B5sI3sATrD4HmwjewBOsPpGS3GqeitBU4k6asf5ijfHtiXTjJyQUo9u9DVzydHqd&_nc_ohc=kMOWTJMbEHIAX_qTSw1&_nc_ht=scontent.fmdl2-2.fna&oh=81eaeca5b4bd3145141aaeb803aa522b&oe=5EB1858C",
             "subtitle":"Mbr-(1), Br-(2), face south",
             "default_action": {
@@ -7203,30 +7218,7 @@ else if (received_message.payload === "tedekl") {
                 "payload":"torent_tenantaabb1"
               }              
             ]      
-          },
-          {
-            "title":"RC, 3.5 lakhs per month, 60*72 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92353603_149043869974746_8473619924072267776_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeGgvj4JXTB-BaKlrv6fCWkPD8Wz4sbkNI8PxbPixuQ0j4z4WFsuBeE4rDoXcka8l3DzzgHyop1A6jQY9BeyxOWv&_nc_ohc=UwLfnfMu-QQAX-lKiLp&_nc_ht=scontent.fmdl2-1.fna&oh=7c3a2dc9036f0c70cc5e9cb0eb33e15c&oe=5EB1873A",
-            "subtitle":"Mbr-(1), Br-(2), face east",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torent_tenantaabb1"
-              }              
-            ]      
           }
-
         ]
       }
     }
@@ -7235,7 +7227,7 @@ else if (received_message.payload === "tedekl") {
 
 
 
-// to rent house in pyinmana, RC, one floor, Mbr, above 4 lakhs
+// to rent house in pyinmana, RC, one floor, above 3 lakhs
   else if (received_message.payload === "torenthourc_onefpyina1_tenantabove4l") {
     response = {
       "attachment":{
@@ -7273,31 +7265,7 @@ else if (received_message.payload === "tedekl") {
     }
   }
 
-
-/**********************************************/
-
-
-// to rent house in pyinmana, RC, two floor
-  else if (received_message.payload === "torenttwoff_pyinfloora11_tenant") {
-    response = {
-                  "text": "Please choose the estimated price you wanna spend:",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "4 lakhs & below it",
-                          "payload": "torenthou_pyinrctwof_below4lmm",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "above 4 lakhs",
-                          "payload": "torenthou_pyinrctwofn_above4ln",
-                        }
-                      ]
-      }
-  }
-
-
-// to rent house in pyinmana, RC, two floor, 4 lakhs & below it
+// to rent house in pyinmana, RC, two floor, 3 lakhs & below it
   else if (received_message.payload === "torenthou_pyinrctwof_below4lmm") {
     response = {
       "attachment":{
@@ -7307,7 +7275,7 @@ else if (received_message.payload === "tedekl") {
         "elements": [ 
         
            {
-            "title":"2RC, 3.5 lakhs per month, 40*60 ft",
+            "title":"2RC, 3 lakhs per month, 40*60 ft",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91909041_149045459974587_3734464206922055680_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeFU2LcrrLbR-1h9foxAhqdQB74mqwENAW0HviarAQ0BbSVC1u_Z_umhu8d7qGBi4uix6EwDxD8Fe-cH_uN1RPuC&_nc_ohc=puXGjPNCVz4AX8fgEfL&_nc_ht=scontent.fmdl2-1.fna&oh=ea5563303495ed0876589d4e0ae7a747&oe=5EB36069",
             "subtitle":"Mbr-(4), face north",
             "default_action": {
@@ -7365,29 +7333,6 @@ else if (received_message.payload === "tedekl") {
                 "payload":"torent_tenantaabb1"
               }              
             ]      
-          },
-
-          {
-            "title":"2RC, 10 lakhs per month, 60*80 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91647057_149048646640935_1634770849003208704_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_eui2=AeF5T-k7A2rpdAenpQX7rnQypSsvlvO9AJ2lKy-W870AneezH0bEyn8dFfPyyEkjsM0EKd0vLicVlYL82SSzmRXI&_nc_ohc=vKqTcuhKlTkAX-qAIiB&_nc_ht=scontent.fmdl2-1.fna&oh=759375e2414be0c936669dd1904a9f24&oe=5EB2C4F0",
-            "subtitle":"Mbr-(4), Br-(2), face south, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torent_tenantaabb1"
-              }              
-            ]      
           }
 
         ]
@@ -7395,80 +7340,6 @@ else if (received_message.payload === "tedekl") {
     }
     }
   }
-
-
-
-
-/*********************************************/
-
-
-// to rent house in pyinmana, RC, one floor, only br
-  else if (received_message.payload === "") {
-    response = {
-                  "text": "Please choose the estimated price you wanna spend:",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "3 lakhs & below it",
-                          "payload": "torenthourc_onefpyin1_onlybr3lakhs",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "above 3 lakhs",
-                          "payload": "torenthourca_onefpyin1_onlbrabove3l",
-                        }
-                      ]
-      }
-  }
-
-
-// to rent house in pyinmana, RC, one floor, only Br, 3 lakhs & below it
-  else if (received_message.payload === "torenthourc_onefpyin1_onlybr3lakhs") {
-    response = {
-      "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"RC, 2.5 lakhs per month, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/93006985_149029053309561_9111199899243773952_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeGN4AW6ko1xllvDTB1lMk_-xqdjdqz30iXGp2N2rPfSJcztXgS9CVS0gWOyOv6fpA6qL1F9oxqB8ExhpUyLK8Tj&_nc_ohc=98DZRtLQ7vgAX_QO6g-&_nc_ht=scontent.fmdl2-1.fna&oh=6f4d97ea113ef2ffc55e193a5b05eacb&oe=5EB13839",
-            "subtitle":"Br-(2), face north",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torent_tenantaabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-    }
-  }
-
-// to rent house in pyinmana, RC, one floor, only Br, above 3 lakhs
-  else if (received_message.payload === "torenthourca_onefpyin1_onlbrabove3l") {
-    response = {
-              "text":"There is no property avaliable. Sorry for you. Thanks for contacting us."
-    }
-  }
-
-/**************/
-
 
   // to rent house in pyinmana, other type (RC)
   else if (received_message.payload === "torentothertypepyin_tebb1") {
@@ -7507,8 +7378,6 @@ else if (received_message.payload === "tedekl") {
     }
     }
   }
-
-/**********************/
 
 
 // to rent house in pyinmana, RC, other floor
@@ -7551,11 +7420,31 @@ else if (received_message.payload === "tedekl") {
 
 
 
-/********************************************************************/
+/*************************************************************************************************/
+/**************************************************************************************************/
 
 
-  // to rent house in oattra, RC (there is no other type in oattra)
+ // to rent house in oattra, house type
   else if (received_message.payload === "tenanott" ) {
+    response = {
+                  "text": "Please choose one of below options:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "RC",
+                          "payload": "rc_torent_inOttt",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Other type",
+                          "payload": "otherType_torent_inOttt",
+                        }
+                      ]
+
+      }
+  }
+ // to rent house in oattra, RC 
+  else if (received_message.payload === "rc_torent_inOttt" ) {
     response = {
                   "text": "Please choose the number of floor:",
                     "quick_replies": [
@@ -7571,14 +7460,13 @@ else if (received_message.payload === "tedekl") {
                         },
                         {
                           "content_type": "text",
-                          "title": "other",
+                          "title": "other floor",
                           "payload": "otherf1_ott_tenant",
                         }
                       ]
 
       }
   }
- 
 // to rent house in oattra, RC, one floor
   else if (received_message.payload === "onef1_ott_tenant") {
     response = {
@@ -7593,6 +7481,24 @@ else if (received_message.payload === "tedekl") {
                           "content_type": "text",
                           "title": "above 6 lakhs",
                           "payload": "onefabove6lakhs_in_ott_tenant",
+                        }
+                      ]
+      }
+  }
+// to rent house in oattra, RC, two floor
+  else if (received_message.payload === "twof1_ott_tenant") {
+    response = {
+                  "text": "Please tell me the estimated amount you wanna spend:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "6lakhs & below it",
+                          "payload": "torenthouott_below6lakhs",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "above 6lakhs",
+                          "payload": "torenthouott_above6lakhs",
                         }
                       ]
       }
@@ -7629,30 +7535,7 @@ else if (received_message.payload === "tedekl") {
                 "payload":"torent_tenantaabb1"
               }              
             ]      
-          },
-               {
-            "title":"RC, 6 lakhs per month, 100*100 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91912200_148783696667430_2449683035914764288_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeGtmRWzKn14WcOyBlHpkLA8U4OdKoYtcohTg50qhi1yiCt7wEw-ep9s_RQgz5V370kLzW9e5txrxVGQj_84K-09&_nc_ohc=CcVp57UKpFIAX-DJiRB&_nc_ht=scontent.fmdl2-1.fna&oh=76724e70158faba1e3386ff9413e2251&oe=5EB1FE9D",
-            "subtitle":"Mbr-(4), Br-(1), face north",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torent_tenantaabb1"
-              }              
-            ]      
           }
-
         ]
       }
     }
@@ -7697,30 +7580,6 @@ else if (received_message.payload === "tedekl") {
     }
   }
 }
-
-
-/************************************/
-
-
-// to rent house in oattra, RC, two floor
-  else if (received_message.payload === "twof1_ott_tenant") {
-    response = {
-                  "text": "Please tell me the estimated amount you wanna spend:",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "6 lakhs & below it",
-                          "payload": "torenthouott_below6lakhs",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "above 6 lakhs",
-                          "payload": "torenthouott_above6lakhs",
-                        }
-                      ]
-      }
-  }
-
 
 // to rent house in oattra, RC, two floor, 6 lakhs & below it
     else if (received_message.payload === 'torenthouott_below6lakhs') {
@@ -7790,28 +7649,6 @@ else if (received_message.payload === "tedekl") {
                 "payload":"torent_tenantaabb1"
               }              
             ]      
-          },
-             {
-            "title":"2RC, 12 lakhs per month, 150*150 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91553411_148811056664694_2994737999507357696_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeEfP3OQyWSVC6Z-lY6HYqDWh_MT8b2h51aH8xPxvaHnVqPHPIBXsMgLEI-3fAuGNUnNKKIzHBw2Y-A6HGPqzGB3&_nc_ohc=gFqz7a__45AAX_2usbC&_nc_ht=scontent.fmdl2-1.fna&oh=5fe87bc5ad80fdbfdc83bf4ad011b8ca&oe=5EB3AC65",
-            "subtitle":"Mbr-(2), face north",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torent_tenantaabb1"
-              }              
-            ]      
           }
 
         ]
@@ -7828,10 +7665,19 @@ else if (received_message.payload === "tedekl") {
   }
 }
 
+// to rent house in oattra, RC, other type
+    else if (received_message.payload === 'otherType_torent_inOttt') {
+    response = {
+            "text": "There is no property avaliable. Sorry for you. Thanks for contacting us."
+  }
+}
+
 
 
 /********************************************************************************/
 /********************************************************************************/
+
+
 
 
 // to rent house in pobba, types of house
@@ -7877,29 +7723,8 @@ else if (received_message.payload === "tenanpob") {
 
       }
   }
-
-  // to rent house in pobba, RC, one floor
+ // to rent house in pobba, RC, one floor, price
   else if (received_message.payload === "onef_pobb1_tenant") {
-    response = {
-                  "text": "Do you want the house in which Mbr is included or only Br included?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "Mbr",
-                          "payload": "tobuyhoupobb_rconefloor_mbrtenant1",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Only Br",
-                          "payload": "tobuyhoupobb_rconefloor_onlybrtenant1",
-                        }
-                      ]
-  }
-}
-
-
-  // to rent house in pobba, RC, one floor, Mbr
-  else if (received_message.payload === "tobuyhoupobb_rconefloor_mbrtenant1") {
     response = {
                   "text": "Please tell me the estimated amount you wanna spend:",
                     "quick_replies": [
@@ -7916,8 +7741,26 @@ else if (received_message.payload === "tenanpob") {
                       ]
   }
 }
+  // to rent house in pobba, RC, two floor, area
+  else if (received_message.payload === "twof_pobb1_tenant") {
+    response = {
+                  "text": "Please choose the estimated price you wanna spend:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "3 lakhs & below it",
+                          "payload": "torentpob_twof3lakhs_tenant",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "above 3 lakhs",
+                          "payload": "torentpob_twofabove3lakhs_tenant",
+                        }
+                      ]
+  }
+}
 
-// to rent house in pobba, RC, one floor, Mbr , 3 lakhs & below it
+// to rent house in pobba, RC, one floor, 
  else if (received_message.payload === 'torenthoupob3lakhs_below11a') {
     response = {
     "attachment":{
@@ -7955,7 +7798,7 @@ else if (received_message.payload === "tenanpob") {
   }
 }
 
-// to rent house in pobba, RC, one floor, Mbr , above 3 lakhs
+// to rent house in pobba, RC, one floor, 
  else if (received_message.payload === 'torenthoupob3lakhs_above3laa1') {
     response = {
     "attachment":{
@@ -7985,28 +7828,6 @@ else if (received_message.payload === "tenanpob") {
                 "payload":"torent_tenantaabb1"
               }              
             ]      
-          },
-           {
-            "title":"RC, 950 lakhs, 80*80 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92555021_148694693342997_4064605342099570688_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeHdSxG1IzD6iMZL01qEg0KzthAmkZBLAZK2ECaRkEsBklsHQStxScdsxZDKhJHFmGhjF-6yz9By88h_ESul1b2d&_nc_ohc=zrd5mQyTMQMAX_MAjMx&_nc_ht=scontent.fmdl2-2.fna&oh=a473039b886e5dc645e0483299e5c88a&oe=5EB34FB4",
-            "subtitle":"MBr-(2), Br-(3), face north",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torent_tenantaabb1"
-              }              
-            ]      
           }
 
         ]
@@ -8015,108 +7836,7 @@ else if (received_message.payload === "tenanpob") {
   }
 }
 
-
-
-/************************************/
-
-  // to rent house in pobba, RC, one floor, only br
-  else if (received_message.payload === "tobuyhoupobb_rconefloor_onlybrtenant1") {
-    response = {
-                  "text": "Please tell me the estimated amount you wanna spend:",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "2 lakhs & below it",
-                          "payload": "torenthou_pobbonefonlybr2lakh",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "above 2 lakhs",
-                          "payload": "torenthou_pobbonefonlybrabove2l",
-                        }
-                      ]
-  }
-}
-
-
-// to rent house in pobba, RC, one floor, only br, 2 lakhs & below it
- else if (received_message.payload === 'torenthou_pobbonefonlybr2lakh') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-                    {
-            "title":"RC, 1.5 lakhs per month, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91914495_148687560010377_1702487433695723520_n.jpg?_nc_cat=105&_nc_sid=110474&_nc_eui2=AeEOZdK9M-XbPElfW6-OzSBjbvX1hzyKvthu9fWHPIq-2IyUS6M1KZcr-ftHDgwK3b8LepAYlLLrEQLrbeKL1bxq&_nc_ohc=QNYEF48cQz0AX87rhGe&_nc_ht=scontent.fmdl2-2.fna&oh=e69a12e6ab242f0cb5ec60935ca32414&oe=5EB03155",
-            "subtitle":"Br-(3), face east",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torent_tenantaabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-// to rent house in pobba, RC, one floor, only br, above 2 lakhs
- else if (received_message.payload === 'torenthou_pobbonefonlybrabove2l') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-          {
-            "title":"RC, 2.5 lakhs per month, 60*80 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92218385_148692786676521_7587571937593786368_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeHw7G9pvs5W1UkZ7W2i9IEt4cZIyNWN-1fhxkjI1Y37V5ib-0Rln8vvNUgG0KIAlt7B1JzrM__9lFiO0dIDIpnZ&_nc_ohc=FygYy-47yrsAX8dEyVb&_nc_ht=scontent.fmdl2-1.fna&oh=e324701ad6206c5ea9c64763b885276e&oe=5EB37AF8",
-            "subtitle":"Br-(3), face north",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torent_tenantaabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-
-// to rent house in pobba, other type(not RC)
+// to rent house in pobba, other type
  else if (received_message.payload === 'nancat_pobb1_tenant') {
     response = {
     "attachment":{
@@ -8151,29 +7871,6 @@ else if (received_message.payload === "tenanpob") {
         ]
       }
     }
-  }
-}
-
-/*******************************/
-
-
-
-  // to rent house in pobba, RC, two floor, area
-  else if (received_message.payload === "twof_pobb1_tenant") {
-    response = {
-                  "text": "Please choose the estimated price you wanna spend:",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "3 lakhs & below it",
-                          "payload": "torentpob_twof3lakhs_tenant",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "above 3 lakhs",
-                          "payload": "torentpob_twofabove3lakhs_tenant",
-                        }
-                      ]
   }
 }
 
@@ -8245,28 +7942,6 @@ else if (received_message.payload === "tenanpob") {
                 "payload":"torent_tenantaabb1"
               }              
             ]      
-          },
-           {
-            "title":"RC, 5.5 lakhs per month, 80*80 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92463513_148754363337030_6063595422167859200_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_eui2=AeGEiOz1OhNnDp1HZmVLX-bLmqWuDQ1bDISapa4NDVsMhDw_xJfVd9Nb2PC9a3eG6ILKw0MuXJZGWA5_etoz-7jX&_nc_ohc=kMH-IN34uOYAX9JHqYO&_nc_ht=scontent.fmdl2-1.fna&oh=85e1416c08e94c83e9ef5265320950a4&oe=5EB30201",
-            "subtitle":"MBr-(3), Br-(2),  face east, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torent_tenantaabb1"
-              }              
-            ]      
           }
 
         ]
@@ -8316,15 +7991,10 @@ else if (received_message.payload === "tenanpob") {
 }
 
 
-
-
-
-
 /**************************************************************/
 /**************************************************************/
 
-
-    // to rent a house in Dekkhina
+ // to rent a house in Dekkhina
 else if (received_message.payload === "tenandek") {
       response = {
                     "text":'Are you finding RC or Nancat?',
@@ -8343,7 +8013,7 @@ else if (received_message.payload === "tenandek") {
 
       }
   }
-    // to rent house in dekkhina, RC 
+  // to rent house in dekkhina, RC 
   else if (received_message.payload === "rc_dekki1_tenant") {
     response = {
                   "text": "Please choose you want to buy the house in which",
@@ -8367,127 +8037,8 @@ else if (received_message.payload === "tenandek") {
 
       }
   }
-      //  to rent house in dekkhina, RC, onefloor,
+ // to rent house in dekkhina, one floor, price
   else if (received_message.payload === "onef_dekkii11_tenant1") {
-    response = {
-                  "text": "Do you want the house in which Mbr is included or only Br included?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "Mbr",
-                          "payload": "numofmbedmbraa5_mbra9_dekki_tenant",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "only Br",
-                          "payload": "numofonlybraa5_mbraa9_dekki_tenant",
-                        }
-                      ]
-      }
-  }
-
-      //  to rent house in dekkhina, RC, onefloor, only Br
-  else if (received_message.payload === "numofonlybraa5_mbraa9_dekki_tenant") {
-    response = {
-                  "text": "Please tell me estimated price you wanna spend:",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "2 lakhs & below it",
-                          "payload": "torent_dekki_onefonlybr2below_tenant",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "above 2 lakhs",
-                          "payload": "torent_dekki_onefonlybr_above2_tenant",
-                        }
-                      ]
-      }
-  }
-
-
-  
- //  to rent house in dekkhina, RC, onefloor, only Br, 2 lakhs & below it
-    else if (received_message.payload === 'torent_dekki_onefonlybr2below_tenant' ) {
-    response = {
-
-        "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-                {
-            "title":"RC, 1.5 lakhs per month, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92230135_148477376698062_1564226552332288000_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeEZFBGf-MZFY-HQQT6oS8pmO89u87ddanY7z27zt11qdhxc_4UlJ2I4G8_DIhm9ZJ46w_KGePmKb2a2UtHGYbPN&_nc_ohc=9q5ZYbuYXb4AX8xMkbB&_nc_ht=scontent.fmdl2-1.fna&oh=a2879fe65108db605e44fc675cd3dacd&oe=5EB10535",
-            "subtitle":"Br-(3), face south",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torent_tenantaabb1"
-              }              
-            ]
-            }
-            ]      
-          }
-        }
-  }
-}
-
-
-//  to rent house in dekkhina, RC, onefloor, only Br, above 2 lakhs
-    else if (received_message.payload === 'torent_dekki_onefonlybr_above2_tenant') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"RC, 2.5 lakhs per month, 60*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92219891_148475833364883_1131803197657055232_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_eui2=AeHtU2QeVO9b4qfJE0XPMWpYrsg39WLRBKWuyDf1YtEEpdXXP2V1l_zqlic97MBMkayJmkRKcNMngu7v_6k1xrFe&_nc_ohc=xAUop79JbV0AX_LMFPB&_nc_ht=scontent.fmdl2-2.fna&oh=f3a4e613b2ddd6906b8c8fc14e62f731&oe=5EB08E82",
-            "subtitle":"Br-(3), Aircon-(1), face south",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torent_tenantaabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-/*********************************/
-/**********************************/
-
- // to rent house in dekkhina, one floor, master bed rooms
-  else if (received_message.payload === "numofmbedmbraa5_mbra9_dekki_tenant") {
     response = {
                   "text": "Please tell me estimated price you wanna spend",
                     "quick_replies": [
@@ -8504,8 +8055,27 @@ else if (received_message.payload === "tenandek") {
                       ]
       }
   }
+// to rent house in dekkhina, two floor, price
+  else if (received_message.payload === "twof_dekkii11_tenant1") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "3 lakhs & below it",
+                          "payload": "twof_price3lakhsbelowmm_dek",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "above 3 lakhs",
+                          "payload": "twof_priceabove3lakhsmm_dek",
+                        }
+                      ]
+      }
+  }
 
-// to rent house in dekkhina, one floor, master bed rooms, 3 lakhs & below it
+
+// to rent house in dekkhina, one floor,  3 lakhs & below it
     else if (received_message.payload === 'torent_houindekk_mbbelow3lpp') {
     response = {
     "attachment":{
@@ -8535,28 +8105,6 @@ else if (received_message.payload === "tenandek") {
                 "payload":"torent_tenantaabb1"
               }              
             ]      
-          },
-             {
-            "title":"RC, 2.5 lakhs per month, 60*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91445925_148485046697295_1739358787334045696_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeGA59g1Eq2rzFxqTHPm8h5ssGJkZNEjmq6wYmRk0SOartKYjOWHG6IiKBAr6SKrIr9e6QmAOK-QGdIs5p0Y0mEU&_nc_ohc=8JFelcuNy_kAX_wuwkM&_nc_ht=scontent.fmdl2-2.fna&oh=8525134924d66c3695315772ac54e52e&oe=5EAF76D7",
-            "subtitle":"Mbr-(2), Br-(2), Aircon-(2), face south",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torent_tenantaabb1"
-              }              
-            ]      
           }
 
         ]
@@ -8565,7 +8113,7 @@ else if (received_message.payload === "tenandek") {
   }
 }
 
-// to rent house in dekkhina, one floor, master bed rooms, above 3 lakhs
+// to rent house in dekkhina, one floor, above 3 lakhs
     else if (received_message.payload === 'torent_houindekk_mbabove3lpp') {
     response = {
     "attachment":{
@@ -8595,81 +8143,12 @@ else if (received_message.payload === "tenandek") {
                 "payload":"torent_tenantaabb1"
               }              
             ]      
-          },
-          {
-            "title":"RC, 4 lakhs per month, 80*80 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92321972_148491743363292_6429195652722327552_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeEqwI-uwIDFTBM3zt_CBLdLHGcnH8zhv6kcZycfzOG_qb2aCW33oMMXn-w2o_Arj_x0qh5QU5kHScL-MjgjWthi&_nc_ohc=KkkiuPGv2scAX-wB8ka&_nc_ht=scontent.fmdl2-2.fna&oh=e7d77cd379c1e46aa02ff6918ad1b4fc&oe=5EB099BD",
-            "subtitle":"Mbr-(1), Br-(2), face east",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torent_tenantaabb1"
-              }              
-            ]      
-          },
-               {
-            "title":"RC, 4 lakhs per month, 100*100 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92068119_148493423363124_2697475156808302592_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeE1QLiVH-Rb7yh21bwHI2eZZaKfYQqu9nZlop9hCq72dqIUX5kqBgEVI2S_QYt6TK1y0Y_0j4SALkTdMf50GrsH&_nc_ohc=nUmpMgOtFaMAX-BGYWW&_nc_ht=scontent.fmdl2-2.fna&oh=5e37b0599e61ff15ed2deed77f651314&oe=5EB1504A",
-            "subtitle":"Mbr-(2), Br-(2), land type-(grant), face east",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torent_tenantaabb1"
-              }              
-            ]      
           }
-
         ]
       }
     }
   }
 }
-
-/*****************************/
-/*****************************/
-
-// to rent house in dekkhina, two floor, area
-  else if (received_message.payload === "twof_dekkii11_tenant1") {
-    response = {
-                  "text": "Do you want what area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "3 lakhs & below it",
-                          "payload": "twof_price3lakhsbelowmm_dek",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "above 3 lakhs",
-                          "payload": "twof_priceabove3lakhsmm_dek",
-                        }
-                      ]
-      }
-  }
-
-
 
 // to rent house in dekkhina, Rc, two floor, 3 lakhs & below it
     else if (received_message.payload === 'twof_price3lakhsbelowmm_dek') {
@@ -8701,28 +8180,6 @@ else if (received_message.payload === "tenandek") {
                 "payload":"torent_tenantaabb1"
               }              
             ]      
-          },
-            {
-            "title":"RC, 2 lakhs per month, 60*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92583214_148663500012783_7353603237661900800_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeHLhaQy-lNjPoEct3xlK1U_GQY1Il0R_owZBjUiXRH-jIH7BrAfWbr-OQxrwCm-m6rKV9woFTMb-Nx0A-tXFq_t&_nc_ohc=sNpw-oCNFF4AX-hmd3q&_nc_ht=scontent.fmdl2-2.fna&oh=e726b585836f6d217c86d4ceeb13f5c2&oe=5EB109E4",
-            "subtitle":"Mbr-(2), Br-(3), face south",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torent_tenantaabb1"
-              }              
-            ]      
           }
 
         ]
@@ -8730,8 +8187,6 @@ else if (received_message.payload === "tenandek") {
     }
   }
 }
-
-
 
 // to rent house in dekkhina, Rc, two floor, above 3 lakhs
     else if (received_message.payload === 'twof_priceabove3lakhsmm_dek') {
@@ -8764,59 +8219,12 @@ else if (received_message.payload === "tenandek") {
               }              
             ]      
           },
-             {
-            "title":"RC, 7 lakhs per month, 80*80 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92460697_148661310013002_7562140512816201728_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeGXPnWOsVIgxd191EVtq4QzAAmWNiurfdoACZY2K6t92sSwRjyS9-R7_Sb-5Pej0m04acQDvIDQ4SXSMQ0YxOoB&_nc_ohc=TuJg6KwfDIIAX867j8B&_nc_ht=scontent.fmdl2-1.fna&oh=0328354a18069d7a3a12fae8761f31b4&oe=5EB14705",
-            "subtitle":"Mbr-(2), Br-(2), face south",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torent_tenantaabb1"
-              }              
-            ]      
-          },
-                 {
-            "title":"RC, 9 lakhs per month, 100*100 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92177551_148650480014085_8591158172348055552_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_eui2=AeEMxLJE8yJWn12cjnsZ24IAXxiYUvJTRvdfGJhS8lNG9wGyTfx-GESmgXjRIL0gaQ64hSEgq1Hvx0in9dOMwglQ&_nc_ohc=x_SJl0kcdecAX-C0w-b&_nc_ht=scontent.fmdl2-1.fna&oh=e6d5a9d5b8271703d4c3c7177ca94266&oe=5EB33173",
-            "subtitle":"Mbr-(5), face east",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torent_tenantaabb1"
-              }              
-            ]      
-          }
-
+             
         ]
       }
     }
   }
 }
-
-/*****************************************/
-/*****************************************/
 
 // to rent house in dekkhina, Rc, other floor,
     else if (received_message.payload === 'otherrrf_dekkii11_tenant1') {
@@ -8855,10 +8263,6 @@ else if (received_message.payload === "tenandek") {
     }
   }
 }
-
-/*********************/
-/*********************/
-
 
 // to rent house in dekkhina, other type (not RC)
     else if (received_message.payload === 'ottype_dekki1_tenant') {
@@ -8900,12 +8304,10 @@ else if (received_message.payload === "tenandek") {
 
 
 
-
-
-
 /*******************************************************************************************/
 /******************************************************************************************/
-    // to rent a house in Zabuthiri
+/*******************************************************************************************/
+   // to rent a house in Zabuthiri
 else if (received_message.payload === "tenanzabu") {
       response = {
                     "text":'Are you finding RC or other type?',
@@ -8949,37 +8351,10 @@ else if (received_message.payload === "tenanzabu") {
 
       }
   }
-   // to rent house in zabu, Rc, other floor, // for other floor
-else if (received_message.payload === "otherrrf_zabuthiri11_tenant1") {
-      response = {
-                    "text":'There is no property avaliable. Sorry for you. Thanks for contacting us.'
-
-      }
-  }  
-        // to rent house in zabu, Rc, one floor, 
-else if (received_message.payload === "onef_zabuthiri11_tenant1") {
-      response = {
-                    "text":'Do you want the house in which Mbr included or Br included?',
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "Mbr",
-                          "payload": "rcaabb1212_zabu1_tenant_mbr",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Only Br",
-                          "payload": "onlybedab1212_zabu1_tenant",
-                        }
-                      ]
-
-      }
-  }  
-
-  // to rent house in zabu, RC, one floor,  master bed rooms
-  else if (received_message.payload === "rcaabb1212_zabu1_tenant_mbr") {
+  // to rent house in zabu, RC, one floor, 
+  else if (received_message.payload === "onef_zabuthiri11_tenant1") {
     response = {
-                   "text": "Do you want what area?",
+                   "text": "Please choose the estimated price you want to use:",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -8994,11 +8369,36 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
                       ]           
       }
   }
-  
+    // to rent a house in Zabuthiri, RC, two floor
+  else if (received_message.payload === "twof_zabuthiri11_tenant1") {
+    response = {
+                  "text": "Please choose the estimated price you want to use:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "3 lakhs & below it",
+                          "payload": "torentbelow3_rctwofloorin_zabuu7_tenantac1", 
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "above 3 lakhs",               
+                          "payload": "torentabove3_rctwofloorin_zabuu7_tenantac1",
+                        }
+                      ]
+      }
+  }  
+   // to rent house in zabu, Rc, other floor, // for other floor
+else if (received_message.payload === "otherrrf_zabuthiri11_tenant1") {
+      response = {
+                    "text":'There is no property avaliable. Sorry for you. Thanks for contacting us.'
+
+      }
+}
+
 
   /***************************/
 
-  // to rent house in zabuthiri, RC, one floor, master bed, above 3 lakhs
+  // to rent house in zabuthiri, RC, one floor, above 3 lakhs
     else if (received_message.payload === 'masterbedother_zabuthi11_tenant_22' ) {
     response = {
     "attachment":{
@@ -9036,7 +8436,7 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
     }
   }
 }
-  // to rent house in zabu, RC, one floor, master bed, 3 lakhs & below it
+  // to rent house in zabu, RC, one floor, 3 lakhs & below it
     else if (received_message.payload === 'masterbed60_zabuthi11_tenant3l' ) {
     response = {
     "attachment":{
@@ -9067,163 +8467,12 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
                 "payload":"torent_tenantaabb1"
               }              
             ]      
-          },
-             {
-            "title":"RC, 3 lakhs per month, 100*100 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91955219_148335103378956_2829729028192075776_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeHYsY5ju_-UtnsMR-xcQDlg3NSNpodS4azc1I2mh1LhrMPrqOlTDU65CqHDQ8JVmDdP4O4QOQpjDSKLNTI4Y5Ys&_nc_ohc=hdrpmmN65d0AX_Ct4eh&_nc_ht=scontent.fmdl2-1.fna&oh=842a715790fdc40b511bdacabb0c63c9&oe=5EAF33DA",
-            "subtitle":"Mbr-(2),Br-(2)",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torent_tenantaabb1"
-              }              
-            ]      
           }
-
         ]
       }
     }
   }
 }
-
-
-
-
-/********************************************/
-
-  
-/**************************************************************************/
-/**************************************************************************/
-
-// to rent house in zabu, RC, one floor, only bed rooms , area
-  else if (received_message.payload === "onlybedab1212_zabu1_tenant") {
-    response = {
-                   "text": "Do you want what area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "2 lakhs & below it",
-                          "payload": "onlybed2belowit_zabuthi11_tenant",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "above 2 lakhs",
-                          "payload": "onlybedroomabove2l_in_zabuu7_tenant",
-                        }
-                      ]           
-      }
-  }
-  
-   // to rent house in zabbuthiri, RC, one floor, bed room, 2 lakhs & below it
-    else if (received_message.payload === 'onlybed2belowit_zabuthi11_tenant') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"RC, 1.5 lakhs per month, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92576217_148333400045793_3715312904799518720_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeF1BrOLUKqeHmWQNb6jsq7oTvSeC72-wgdO9J4Lvb7CByIaS1cCmd5BQyrO5HBGXht-Xu7mDsWjUKEzUrSH3Vuc&_nc_ohc=Lwme8DQci5IAX8BCgcb&_nc_ht=scontent.fmdl2-2.fna&oh=c8f413c67152bc8a68af77cff5347623&oe=5EB17EB0",
-            "subtitle":"3BD, face north",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torent_tenantaabb1"
-              }              
-            ]      
-          },
-            {
-            "title":"RC, 2 lakhs per month, 60*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91923017_148322666713533_5407944088630591488_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeFY2FZaTFShXIcTo19BYxaHwWpR-0-xBjjBalH7T7EGODKvmZrQI1gTfbvakeY4jbOtWyZeQgiDbdPyDeipWD2h&_nc_ohc=Zc0JR1VZL-8AX81QyTU&_nc_ht=scontent.fmdl2-1.fna&oh=328e035a9f9256c1510c1f0fd96b1c60&oe=5EB1B88B",
-            "subtitle":"3BD,  face east",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torent_tenantaabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
- 
- 
-   // to rent house in zabbuthiri, RC, one floor, bed room, above 2 lakhs
-    else if (received_message.payload === 'onlybedroomabove2l_in_zabuu7_tenant') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"RC,  3 lakhs per month, 60*70ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92286133_148342503378216_8058588730224541696_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeGW9jsT3UUCPItS1rODRK9EqjIIL6S_Ya6qMggvpL9hrntDuQxVhp5423O7pzZ-QLsKl_y2RryQO5-634sWMyjF&_nc_ohc=UjaEQmobu1cAX9df-bm&_nc_ht=scontent.fmdl2-1.fna&oh=00176f4a33e5dabdbd4164e50de1fd24&oe=5EB1A6D0",
-            "subtitle":"3BD, face west",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torent_tenantaabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-/**********************/
 
 // to rent house in zabu, other type (not Rc)
     else if (received_message.payload === 'nancat_zabu1_tenant' ) {
@@ -9263,31 +8512,6 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
     }
   }
 }
-/*****************************************************/
-
-    // to rent a house in Zabuthiri, RC, two floor
-  else if (received_message.payload === "twof_zabuthiri11_tenant1") {
-    response = {
-                  "text": "Do you want what area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "3 lakhs & below it",
-                          "payload": "torentbelow3_rctwofloorin_zabuu7_tenantac1", 
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "above 3 lakhs",               
-                          "payload": "torentabove3_rctwofloorin_zabuu7_tenantac1",
-                        }
-                      ]
-      }
-  }
-
-
-  /***************************/
-
-
 
 // to rent a house Zabbuthiri, RC, two floor, above 3 lakhs
     else if (received_message.payload === 'torentabove3_rctwofloorin_zabuu7_tenantac1') {
@@ -9329,7 +8553,7 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
 }
 
 
-// to rent a house Zabbuthiri, RC, two floor, 
+// to rent a house Zabbuthiri, RC, two floor, 3 lakhs & below it
     else if (received_message.payload === 'torentbelow3_rctwofloorin_zabuu7_tenantac1') {
     response = {
     "attachment":{
@@ -9359,47 +8583,41 @@ else if (received_message.payload === "onef_zabuthiri11_tenant1") {
                 "payload":"torent_tenantaabb1"
               }              
             ]      
-          },
-        {
-            "title":"RC,  2.5 lakhs per month, 60*70 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92465912_148351516710648_1751142708715454464_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeG4Y_29JTV2nR-S0e4T_3l2jyTiAxhjiyWPJOIDGGOLJeN4MvyOK5riu_STZt4-BtlbQ1z-Nj2JZLgPhK7gDSRH&_nc_ohc=NlIAL0Jz0p0AX9IjMKA&_nc_ht=scontent.fmdl2-1.fna&oh=a059ee4af2076260fe6fa851d60ead96&oe=5EB1FB14",
-            "subtitle":"Mbr-(2), Br-(4), face south",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torent_tenantaabb1"
-              }              
-            ]      
           }
-
         ]
       }
     }
   }
 }
-/*****************************************************************/
-/*****************************************************************/
+/**********************************************************************************************************************************/
+/**********************************************************************************************************************************/
+/* else if (received_message.text && toselhou_byuser.landArea_ofHouse_tosell === true) { 
+  userEntered_Hou_tosel.landArea_ofHouse_tosell = received_message.text;   
+    response = {
+      "text": "Please tell me type of land on which your house that will be sold is bulit."
+    }
+    toselhou_byuser.landArea_ofHouse_tosell = false; 
+    toselhou_byuser.typeOf_land_ofHou_tsel = true; 
+*/
 
-  /************************************************************************************************************************************/
 
-  
+
+
+  /*******************************************************************************************************************************/
+  /*******************************************************************************************************************************/
   // Send the response message
   callSendAPI(sender_psid, response);    
 }
 
-
-
+/************************************************************************************************************************************/
+/************************************************************************************************************************************/
+/************************************************************************************************************************************/
+/************************************************************************************************************************************/
+/************************************************************************************************************************************/
+/************************************************************************************************************************************/
+/************************************************************************************************************************************/
+/************************************************************************************************************************************/
+/************************************************************************************************************************************/
 
 
 function handlePostback(sender_psid, received_postback) {
@@ -9483,7 +8701,7 @@ function handlePostback(sender_psid, received_postback) {
                   
   }
 }
-  // to rent in main menu
+// to rent in main menu
   else if (payload === 'tore') {
     response = { "attachment": {
                   "type": "template",
@@ -9760,53 +8978,10 @@ function handlePostback(sender_psid, received_postback) {
                 }
               }
   }
+  // to rent house as tenant
   else if (payload === 'tenanhou') {
-    response = { "attachment": {
-                  "type": "template",
-                  "payload": {
-                    "template_type": "button",
-                      "text": "Please choose the place in which you want to tenant house",
-                      "buttons": [
-                        {
-                          "type": "postback",
-                          "title": "In Five Thri Township",
-                          "payload": "tenan5thi",
-                        },
-                         {
-                          "type": "postback",
-                          "title": "Pyinmana Township",
-                          "payload": "tenanpyin",
-                        }
-                      ]
-                    
-                  }
-                }
-              }
-  }
-
-  // to rent house in pyinmana,
-  else if (payload === "tenanpyin" ) {
-    response = {
-                  "text": "Please choose the below option:",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "RC",
-                          "payload": "torentrcpyin_teaa1",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Other type",
-                          "payload": "torentothertypepyin_tebb1",
-                        }
-                      ]
-
-      }
-  }
-
-   else if (payload === 'tenan5thi') {
-         response = {
-                  "text": "Please choose the township in which you want to tenant house:",
+    response = { 
+                 "text": "Please choose the township in which you want to tenant house:",
                     "quick_replies": [
                         {
                           "content_type": "text",
@@ -9832,11 +9007,21 @@ function handlePostback(sender_psid, received_postback) {
                           "content_type": "text",
                           "title": "Zabu Thiri",
                           "payload": "tenanzabu",
+                        }, 
+                        {
+                          "type": "postback",
+                          "title": "Pyinmana",
+                          "payload": "tenanpyin",
                         }
                       ]
-
-      }
+              }
   }
+
+/****************************************************************************************/
+/****************************************************************************************/
+
+
+
   else if (payload === 'tenanlan') {
     response = { "attachment": {
                   "type": "template",
@@ -10028,48 +9213,7 @@ function handlePostback(sender_psid, received_postback) {
   }
 
 
-/*
-  else if (payload === 'othft') {
-    response = { "text": "Please write the area of  property that you want to buy!" }
-  } 
-  */
-/*
-// above 1000
-  else if (payload === 'ab10') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements":[
-           {
-            "title":"Double building",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/84321696_125821322297001_40006344756953088_n.jpg?_nc_cat=102&_nc_ohc=99juuJPWRvMAX-STauO&_nc_ht=scontent.fmdl2-2.fna&oh=e51406977910d13c914bd98264253832&oe=5EBBA528",
-            "subtitle":"350 lkh, 4 mb",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.duwonduwon.com",
-              "webview_height_ratio": "tall",
-             },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.duwonduwon.com",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"inter"
-              }              
-                   ]      
-          }
-                ]
-      }
-    }
-  }
-  }
-*/
+
 else if (payload === 'inter') {
   response ={
     "text" : "Please leave your contact number.", 
