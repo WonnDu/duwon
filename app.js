@@ -4550,7 +4550,7 @@ else if (received_message.payload === "dekthi") {
                           "content_type": "text",
                           "title": "40*60",
                           "payload": "tobuy_land_area_inzayad146",
-                        }
+                        },
                         {
                           "content_type": "text",
                           "title": "60*80",
