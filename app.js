@@ -367,7 +367,7 @@ function handleMessage(sender_psid, received_message) {
 
 
   // to rent house as landlord
-  else if (received_message.payload === "ld_ottwp" || received_message.payload === "ld_potwp" || received_message.payload === "ld_dektwp" || received_message.payload === "ld_zaytwp" || received_message.payload === "ld_zaytwp") {    
+  else if (received_message.payload === "ld_ottwp" || received_message.payload === "ld_potwp" || received_message.payload === "ld_dektwp" || received_message.payload === "ld_zaytwp" || received_message.payload === "ld_zaytwp" || received_message.payload === "ldld1_1pyin1") {    
     userEntered_landlord.twp_name_torentHouse =  received_message.payload; // for twonship name to be rented
     response = {
       "text": "Please tell the type of house you want to rent. I mean RC or Nancat etc."
@@ -643,7 +643,7 @@ else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true
 
 
 // to rent land as landlord
- else if (received_message.payload === "ld_ottwp_land" || received_message.payload === "ld_potwp_land" || received_message.payload === "ld_dektwp_land" || received_message.payload === "ld_zaytwp_land" || received_message.payload === "ld_zabtwp_land") {
+ else if (received_message.payload === "ld_ottwp_land" || received_message.payload === "ld_potwp_land" || received_message.payload === "ld_dektwp_land" || received_message.payload === "ld_zaytwp_land" || received_message.payload === "ld_zabtwp_land" || received_message.payload === "ldld_pyin_land") {
          userEntered_ldld_land.twp_name_torent_land = received_message.payload;
          response = {
       "text":'Please tell me the area of land that you want to rent out.'
@@ -994,7 +994,7 @@ else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true
 
 
 // to sell house
- else if (received_message.payload === "tselott" || received_message.payload === "tselpob" || received_message.payload === "tseldek" || received_message.payload === "tselzaya" || received_message.payload === "tselzabu") {
+ else if (received_message.payload === "tselott" || received_message.payload === "tselpob" || received_message.payload === "tseldek" || received_message.payload === "tselzaya" || received_message.payload === "tselzabu" || received_message.payload === "toselhoupyin") {
     userEntered_Hou_tosel.twp_name_tobeSold = received_message.payload;
 //    console.log('meta data',received_message);
 //  userEntered_Hou_tosel.twp_name_tobeSold = received_message.text;
@@ -1284,7 +1284,7 @@ else if (received_message.text && toselhou_byuser.sth_yes_toldbyCu === true ) { 
 
 
 // to sell land
- else if (received_message.payload === "tselottlan" || received_message.payload === "tselpoblan" || received_message.payload === "tseldeklan" || received_message.payload === "tselzayalan" || received_message.payload === "tselzabulan") {
+ else if (received_message.payload === "tselottlan" || received_message.payload === "tselpoblan" || received_message.payload === "tseldeklan" || received_message.payload === "tselzayalan" || received_message.payload === "tselzabulan" || received_message.payload === "toselpyinlan") {
       userEntered_land_tosel.twp_name_tosell_land = received_message.payload;  // for twp name to sell 
          response = {
       "text":'Please tell me area of your land that you want to sell.'
@@ -7514,36 +7514,7 @@ function handlePostback(sender_psid, received_postback) {
     let response1 = { "text": "You have chose to rent out house as a Landlord." };
     let response2 = { "attachment":{
 
-      "type":"template",
-      "payload":{
-        "template_type":"button",
-        "text":"In what township is your house located? Please choose:",
-         "buttons":[
-                    {
-                    "type":"postback",
-                    "title":" In Five Thiri Twp",
-                    "payload": "ldld5"
-                    },
-                    {
-                    "type":"postback",
-                    "title":"Pyinmana Twp",
-                    "payload":"ldld1_1pyin1"
-                    }                            
-                  ]  
-                }
-        }
-   };
-   callSend(sender_psid, response1).then(()=>{
-  return callSend(sender_psid, response2);
-  });
-  }
-
-
-
-  // five thiri (house) in landlord
-  else if (payload === 'ldld5') {
-         response = {
-                  "text": "Please choose the one name of townships in which you want to rent a house:",
+               "text": "Please choose the one name of townships in which you want to rent a house:",
                     "quick_replies": [
                         {
                           "content_type": "text",
@@ -7569,34 +7540,14 @@ function handlePostback(sender_psid, received_postback) {
                           "content_type": "text",
                           "title": "Zabu Thiri",
                           "payload": "ld_zabtwp",
-                        }
+                        },
+                        {
+                          "content_type":"text",
+                          "title":"Pyinmana Twp",
+                          "payload":"ldld1_1pyin1"
+                        }    
                       ]
-
-      }
-  }
-  // for land option
-    else if (payload === 'land_option') {
-    let response1 = { "text": "You have chose to rent out land as a Landlord." };
-    let response2 = { "attachment":{
-
-      "type":"template",
-      "payload":{
-        "template_type":"button",
-        "text":"In what township is your land located? Please choose:",
-         "buttons":[
-                    {
-                    "type":"postback",
-                    "title":" In Five Thiri Twp",
-                    "payload": "ldld5_land"
-                    },
-                    {
-                    "type":"postback",
-                    "title":"Pyinmana Twp",
-                    "payload":"ldld_pyin_land"
-                    }                            
-                  ]  
-                }
-        }
+                  }
    };
    callSend(sender_psid, response1).then(()=>{
   return callSend(sender_psid, response2);
@@ -7605,9 +7556,11 @@ function handlePostback(sender_psid, received_postback) {
 
 
 
-  else if (payload === 'ldld5_land') {
-         response = {
-                  "text": "Please choose the one name of townships in which you want to rent a land.",
+  // for land option
+    else if (payload === 'land_option') {
+    let response1 = { "text": "You have chose to rent out land as a Landlord." };
+    let response2 = { 
+            "text": "Please choose the one name of townships in which you want to rent a land.",
                     "quick_replies": [
                         {
                           "content_type": "text",
@@ -7633,10 +7586,19 @@ function handlePostback(sender_psid, received_postback) {
                           "content_type": "text",
                           "title": "Zabu Thiri",
                           "payload": "ld_zabtwp_land",
-                        }
+                        },
+                        {
+                          "content_type":"text",
+                          "title":"Pyinmana Twp",
+                          "payload":"ldld_pyin_land"
+                        }  
+
                       ]
 
-      }
+   };
+   callSend(sender_psid, response1).then(()=>{
+  return callSend(sender_psid, response2);
+  });
   }
 
 
@@ -8023,30 +7985,7 @@ else if (payload === 'innnter') {
               }
 } 
 
-else if (payload === 'hoou2') {
-    response = { "attachment": {
-                  "type": "template",
-                  "payload": {
-                    "template_type": "button",
-                      "text": "Please choose the place in which your property is located:",
-                      "buttons": [
-                        {
-                          "type": "postback",
-                          "title": "In Five Thri Township",
-                          "payload": "toselhou5",
-                        },
-                         {
-                          "type": "postback",
-                          "title": "Pyinmana Township",
-                          "payload": "toselhoupyin",
-                        }
-                      ]
-                  }
-                }
-              }
-  }
-  
-  else if (payload === 'toselhou5') {
+  else if (payload === 'hoou2') {
         response = { "text": "Please choose the township in which you want to sell house:",
                             "quick_replies": [
                                               {
@@ -8073,7 +8012,13 @@ else if (payload === 'hoou2') {
                                                 "content_type": "text",
                                                 "title": "Zabu Thiri",
                                                 "payload": "tselzabu"  //tselzabu
-                                              } 
+                                              },
+                                              {
+                                                "content_type": "text",
+                                                "title": "Pyinmana Township",
+                                                "payload": "toselhoupyin",
+                                              }
+
                       ]
       }
   }
@@ -8081,17 +8026,6 @@ else if (payload === 'hoou2') {
 
 
 /**********************************/
-
-
-// to sell house
- else if (payload === "toselhoupyin") {
-  userEntered_Hou_tosel.twp_name_tobeSold = payload;
-         response = {
-      "text":'Please tell the type of house that you want to sell like RC or Nancat'
-    }
-    payload = false; 
-    toselhou_byuser.house_type_ht = true; // for house type
-  }
   
 
   else if (payload === 'attach_no_forSellingHouse') {
@@ -8110,16 +8044,6 @@ else if (payload === 'hoou2') {
 
 /******************************************/
 
-// to sell land
-// to sell land in pyinmana
- else if (payload === "toselpyinlan") {
-  userEntered_land_tosel.twp_name_tosell_land = payload; // for twp name to sell
-         response = {
-      "text":'Please tell the area of land that you want to sell.'
-    }
-    payload = false;
-    tosel_land_byuser.land_area_tosell_byCu = true;  // for area of land
-  }
   
 // to send again images
  else if (payload === "attach_yes_sell_land") { 
@@ -8139,15 +8063,6 @@ else if (payload === 'hoou2') {
 /*****************************************/
 /*****************************************/
 
-
-// to rent house in pyinmana as a landlord
-  else if (payload === "ldld1_1pyin1") { 
-   userEntered_landlord.twp_name_torentHouse = payload;   
-    response = {
-      "text": "Please tell the type of house you want to rent. I mean RC or Nancat etc."
-    }
-    landlord_sent.house_type_torent = true; // for house type to rent house as landlord
-  }
 
 
 // to rent house as a landlord
@@ -8171,14 +8086,7 @@ else if (payload === 'hoou2') {
 /*******************************************/
 /*******************************************/
 
-// to rent land as landlord
- else if (payload === "ldld_pyin_land") {
-    userEntered_ldld_land.twp_name_torent_land = payload;
-         response = {
-      "text":'Please tell me the area of land that you want to rent out.'
-    }
-    ldld_land_sent.land_area_torent_byCu = true;  // for land area to rent land as landlord
-  }
+
 
 // to rent land as a landlord // no more photos
   else if (payload === "attach_yes_ldld_land") { 
@@ -8197,29 +8105,7 @@ else if (payload === 'hoou2') {
 
 
 /*********************************************************/
-   else if (payload === 'laan2') {
-    response = { "attachment": {
-                  "type": "template",
-                  "payload": {
-                    "template_type": "button",
-                      "text": "Please choose the place in which your property is located:",
-                      "buttons": [
-                        {
-                          "type": "postback",
-                          "title": "In Five Thri Township",
-                          "payload": "tosel5lan",
-                        },
-                         {
-                          "type": "postback",
-                          "title": "Pyinmana Township",
-                          "payload": "toselpyinlan",
-                        }
-                      ]
-                  }
-                }
-              }
-  }
-  else if (payload === 'tosel5lan') {
+  else if (payload === 'laan2') {
          response = {
                   "text": "Please choose the township in which you want to sell land:",
                     "quick_replies": [
@@ -8247,6 +8133,11 @@ else if (payload === 'hoou2') {
                           "content_type": "text",
                           "title": "Zabu Thiri",
                           "payload": "tselzabulan",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Pyinmana Township",
+                          "payload": "toselpyinlan",
                         }
                       ]
 
