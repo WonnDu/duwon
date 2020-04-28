@@ -7512,8 +7512,7 @@ function handlePostback(sender_psid, received_postback) {
   // house in landlord
   else if (payload === 'hou_option') {
     let response1 = { "text": "You have chose to rent out house as a Landlord." };
-    let response2 = { "attachment":{
-
+    let response2 = { 
                "text": "Please choose the one name of townships in which you want to rent a house:",
                     "quick_replies": [
                         {
@@ -7543,11 +7542,11 @@ function handlePostback(sender_psid, received_postback) {
                         },
                         {
                           "content_type":"text",
-                          "title":"Pyinmana Twp",
+                          "title":"Pyinmana",
                           "payload":"ldld1_1pyin1"
                         }    
                       ]
-                  }
+                  
    };
    callSend(sender_psid, response1).then(()=>{
   return callSend(sender_psid, response2);
@@ -7589,7 +7588,7 @@ function handlePostback(sender_psid, received_postback) {
                         },
                         {
                           "content_type":"text",
-                          "title":"Pyinmana Twp",
+                          "title":"Pyinmana",
                           "payload":"ldld_pyin_land"
                         }  
 
@@ -8015,7 +8014,7 @@ else if (payload === 'innnter') {
                                               },
                                               {
                                                 "content_type": "text",
-                                                "title": "Pyinmana Township",
+                                                "title": "Pyinmana",
                                                 "payload": "toselhoupyin",
                                               }
 
@@ -8136,7 +8135,7 @@ else if (payload === 'innnter') {
                         },
                         {
                           "content_type": "text",
-                          "title": "Pyinmana Township",
+                          "title": "Pyinmana",
                           "payload": "toselpyinlan",
                         }
                       ]
