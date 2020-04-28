@@ -4133,176 +4133,13 @@ else if (received_message.payload === "tenanzay") {
   }
 }   
 
+
+
 /**********************************************************************************************************************/
 /**********************************************************************************************************************/
+/********************************************************************************************************************/
+/********************************************************************************************************************/
 
-
-
-
-
-  /***********************************************************************/
-    
-
-
-
-
-
-/***********************************************************************************************************************************/
-
-
-
-// to buy land in pyinmana,  40*60
-    else if (received_message.payload === 'land_a1_pyintobu') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"land, 320 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92273270_149016386644161_8370090244208328704_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeE52sRpZJEwHgD_qk7BsxhF8lo3ZWHm5gbyWjdlYebmBiXFhZUhkb9HDs_ZhoJzM2YdY7aQoSgc_HMPEWWmA_3v&_nc_ohc=epNjQ8-eoucAX-cBQFS&_nc_ht=scontent.fmdl2-2.fna&oh=02e1971e81f2d0ca73e007597207d5ba&oe=5EB4B1CD",
-            "subtitle":"land type-(grant), face east",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"tobuylandall_aabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-// to buy land in pyinmana,  60*72
-    else if (received_message.payload === 'land_a2_pyintobu') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"land, 550 lakhs, 60*72 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91944330_149019299977203_418187470824275968_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_eui2=AeGRf4pbtPI2yrR1hioqwmrqUx4Q1W7AGlFTHhDVbsAaUXOwMiR5jVBk-CTXwNfLnUKhzY79QvgkcsFLvNay3Yej&_nc_ohc=ygPsk8r6Fj8AX_w1HYQ&_nc_ht=scontent.fmdl2-1.fna&oh=c53e99898e47b09c73ad6e09ae0e0a76&oe=5EB2BF4A",
-            "subtitle":"land type-(permit), face south",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"tobuylandall_aabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-// to buy land in pyinmana,  60*80
-    else if (received_message.payload === 'land_a3_pyintobu') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"land, 670 lakhs, 60*80 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92591960_149017693310697_3011678316890423296_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeHLXhGDIb79vxF8QYyJV052I8KibjVY7yMjwqJuNVjvI_gG7dKIt-lLRrYTFAGvOUi0JfcOwSTaAjn1mthgroN3&_nc_ohc=A-hP-4EluUUAX_JCecN&_nc_ht=scontent.fmdl2-2.fna&oh=220f0279fed18da953714003aa959f3d&oe=5EB443CC",
-            "subtitle":"land type-(permit), face west",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"tobuylandall_aabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-// to buy land in pyinmana,  Other area
-    else if (received_message.payload === 'other_a4_pyintobu') {
-    response = {
-            "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"land, 200 lakhs, 80*70 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92700247_149058239973309_1026465551309864960_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeExfi6lyAGKnuAnGwzsqHIyb0fpY8_QSLBvR-ljz9BIsOBkiot-Xz6n2p0Os7XVh5PIEoLRp9oLcrpco0jAv7p1&_nc_ohc=3LoyEwb524wAX_eRpVY&_nc_ht=scontent.fmdl2-1.fna&oh=ab71d22ef0f26f9af995a94bdfd05633&oe=5EB2A610",
-            "subtitle":"",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"tobuylandall_aabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-
-/******************************************************/
 
 // to buy land in oattra
 else if (received_message.payload === "otthi") {
@@ -4329,8 +4166,8 @@ else if (received_message.payload === "otthi") {
       }
   }
 
-    // 80*80 to buy land in Oattra
-    else if (received_message.payload === 'land80_ott') {
+  // 80*80 to buy land in Oattra
+else if (received_message.payload === 'land80_ott') {
     response = {
                   "text": "So sorry for my customer. There are not vacant land avaliable in Oattra to sell yet. Thanks for contacting us.",
                    
@@ -4338,7 +4175,7 @@ else if (received_message.payload === "otthi") {
   }
   
 // to buy land in Oattra, 100*100 
-    else if (received_message.payload === 'land100_ott') {
+else if (received_message.payload === 'land100_ott') {
     response = {
     "attachment":{
       "type":"template",
@@ -4376,7 +4213,7 @@ else if (received_message.payload === "otthi") {
 }
 
 // to buy land in Oattra, 150*150
-    else if (received_message.payload === 'land150_ott') {
+  else if (received_message.payload === 'land150_ott') {
     response = {
     "attachment":{
       "type":"template",
@@ -4556,10 +4393,8 @@ else if (received_message.payload === "otthi") {
 }
 
 
-
-
-/************************************************************************************/
-/***********************************************************************************/
+/*****************************************/
+/****************************************/
 
 
 // to buy land in Dekkhia, area
@@ -4567,16 +4402,6 @@ else if (received_message.payload === "dekthi") {
     response = {
                   "text": "Do you want what area?",
                     "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "40*60",
-                          "payload": "tobude_onlya60land_dek",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*60",
-                          "payload": "tobude_onlya660land_dek",
-                        },
                         {
                           "content_type": "text",
                           "title": "60*80",
@@ -4596,81 +4421,7 @@ else if (received_message.payload === "dekthi") {
       }
   }
 
-// to buy land in Dekkhina,  40*60
-    else if (received_message.payload === 'tobude_onlya60land_dek') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"land, 330 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91505407_148674673344999_6438141773247152128_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeF4uScfWcHQXpzQBF9BpStZRNT1qYilTdNE1PWpiKVN0y7ChqSJLHs4ngoSb5pKvAVVipqp0GjVHMSjyivg1G0q&_nc_ohc=lVEN8hAPU54AX_xdhVc&_nc_ht=scontent.fmdl2-1.fna&oh=cf06386fb8b2c111e1a17b30067dffc6&oe=5EB13151",
-            "subtitle":"land type-(permit), face east, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"tobuylandall_aabb1"
-              }              
-            ]      
-          }
 
-        ]
-      }
-    }
-  }
-}
-
-// to buy land in Dekkhina,  60*60
-    else if (received_message.payload === 'tobude_onlya660land_dek') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"land, 150 lakhs, 60*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92573474_148671303345336_7972612929591705600_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_eui2=AeGesnpPNxDTxDFmi1AdqMus7LSNKmgELoPstI0qaAQugwvn0YmpYg4hao4tla6JxiL2ZjneVWReAHhUWWypHu8C&_nc_ohc=OXtbPECcRqQAX9j0Vek&_nc_ht=scontent.fmdl2-1.fna&oh=4807aa5ab7739151d174ccf1e1ce901e&oe=5EB0D709",
-            "subtitle":"land type-(slit), face north, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"tobuylandall_aabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
 
 // to buy land in Dekkhina,  60*80
     else if (received_message.payload === 'tobude_onlya100land_dek') {
@@ -4787,194 +4538,6 @@ else if (received_message.payload === "dekthi") {
 }
 
 
-
-
-
-/**************************************************************************************/
-/**************************************************************************************/
-  // to buy land in Zabuthiri, area
-  else if (received_message.payload === "zabuthi") {
-    response = {
-                  "text": "Do you want what area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "40*60",
-                          "payload": "only46alandin_zabuu7",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*60",
-                          "payload": "only60blandin_zabuu7",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "100*100",
-                          "payload": "only68cclandin_zabuu7",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Other area",
-                          "payload": "onlyother7dlandin_zabuu7",
-                        }
-                      ]
-      }
-  }
-
-// to buy land in Zabuthiri,  60*60
-    else if (received_message.payload === 'only60blandin_zabuu7') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"land, 350 lakhs, 60*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92401981_148398946705905_1667673824658718720_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeGaL6IGTy20gFrY_-GIyeNJuwpVQ952uLu7ClVD3na4u21FAthxsnpldZlENVuE1St4BuxvhXlda1-KwZfSYc5U&_nc_ohc=kvy3nWUh4R8AX8_CBXm&_nc_ht=scontent.fmdl2-1.fna&oh=0fa5d2b84682b6977536695d3e6fe792&oe=5EAED27B",
-            "subtitle":"face south, land type-(grant), Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"tobuylandall_aabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-// to buy land in Zabuthiri,  40*60
-    else if (received_message.payload === 'only46alandin_zabuu7') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"land, 430 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91613770_148401023372364_5350547653220368384_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeGOUGv8X4g8aZ7KMUkbj143aMv2-XqcnNxoy_b5epyc3Cnk6PadZmgqlkRrzQ4wGGBVuJTGEsvDBWUtO4ljXG3F&_nc_ohc=R-2gfYEIeG8AX-DceKM&_nc_ht=scontent.fmdl2-1.fna&oh=94b59f25df3b4848c60e90d9cf646833&oe=5EB20BEC",
-            "subtitle":"face west, land type-(permit),Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"tobuylandall_aabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-// to buy land in Zabuthiri,  100*100
-    else if (received_message.payload === 'only68cclandin_zabuu7') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"land, 200 lakhs, 100*100 ft, face west,",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91810678_148403216705478_1277350765916061696_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeGssc_xyPyaeyFDkreQEylkRUbrTdet0OJFRutN163Q4mTLjEwCflsG5eofWpDqUaRGl647jk3Ph9AG_80NfmOy&_nc_ohc=IgL8saxP5bUAX_4kTPj&_nc_ht=scontent.fmdl2-1.fna&oh=b3f0f3b95ccef22e52f67856290eeef2&oe=5EB1A0F1",
-            "subtitle":"land type-(village land),Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"tobuylandall_aabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-
-
-
-// to buy land in Zabuthiri,  Other area
-    else if (received_message.payload === 'onlyother7dlandin_zabuu7' ) {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"land, 550 lakhs, 80*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92100656_148405230038610_4893887046474530816_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeFDDuLfnVZj-6Zb_dij7f9eN5WYIm8s5m83lZgibyzmbyyQrMoO7j7TGod3Si3a4sh3egQATLC7pmbmzTaNiReP&_nc_ohc=zE-iyX7f2hUAX9uZRd6&_nc_ht=scontent.fmdl2-2.fna&oh=5a864e5a88facb440ce6aeeae5788ad7&oe=5EB1BE62",
-            "subtitle":"land type-(grant), face east, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"tobuylandall_aabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
 /********************************************/
 /********************************************/
 
@@ -4987,12 +4550,7 @@ else if (received_message.payload === "dekthi") {
                           "content_type": "text",
                           "title": "40*60",
                           "payload": "tobuy_land_area_inzayad146",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*60",       
-                          "payload": "tobuy_land_area_inzayad160",
-                        },
+                        }
                         {
                           "content_type": "text",
                           "title": "60*80",
@@ -5044,45 +4602,6 @@ else if (received_message.payload === "dekthi") {
     }
   }
 }
-
-// to buy land in Zayathiri, 60*60
-    else if (received_message.payload === 'tobuy_land_area_inzayad160') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"land, 700 lakhs, 60*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91680436_148006486745151_4875582939536031744_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeGXoapM3L50BOyrZhvMyGHgpOOd7SlzHVGk453tKXMdUZhHMVY_SNV-jtIMIER77hIRIN7DD0yk7ybnIa7AZRj6&_nc_ohc=fWAFU4V_92QAX-Pyqhk&_nc_ht=scontent.fmdl2-2.fna&oh=04fbca9e0b7bd2c4086eb82062dfdf9b&oe=5EAE2F5A",
-            "subtitle":"land type-(permit), face south, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"tobuylandall_aabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
 
 // to buy land in Zayathiri, 60*80
     else if (received_message.payload === 'tobuy_land_area_inzayad168') {
@@ -5160,13 +4679,336 @@ else if (received_message.payload === "dekthi") {
   }
 }
 
+/******************************************************/
+/*****************************************************/
+
+  // to buy land in Zabuthiri, area
+  else if (received_message.payload === "zabuthi") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "60*60",
+                          "payload": "only60blandin_zabuu7",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "100*100",
+                          "payload": "only68cclandin_zabuu7",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Other area",
+                          "payload": "onlyother7dlandin_zabuu7",
+                        }
+                      ]
+      }
+  }
+
+// to buy land in Zabuthiri,  60*60
+  else if (received_message.payload === 'only60blandin_zabuu7') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 350 lakhs, 60*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92401981_148398946705905_1667673824658718720_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeGaL6IGTy20gFrY_-GIyeNJuwpVQ952uLu7ClVD3na4u21FAthxsnpldZlENVuE1St4BuxvhXlda1-KwZfSYc5U&_nc_ohc=kvy3nWUh4R8AX8_CBXm&_nc_ht=scontent.fmdl2-1.fna&oh=0fa5d2b84682b6977536695d3e6fe792&oe=5EAED27B",
+            "subtitle":"face south, land type-(grant), Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"tobuylandall_aabb1"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to buy land in Zabuthiri,  100*100
+else if (received_message.payload === 'only68cclandin_zabuu7') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 200 lakhs, 100*100 ft, face west,",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91810678_148403216705478_1277350765916061696_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeGssc_xyPyaeyFDkreQEylkRUbrTdet0OJFRutN163Q4mTLjEwCflsG5eofWpDqUaRGl647jk3Ph9AG_80NfmOy&_nc_ohc=IgL8saxP5bUAX_4kTPj&_nc_ht=scontent.fmdl2-1.fna&oh=b3f0f3b95ccef22e52f67856290eeef2&oe=5EB1A0F1",
+            "subtitle":"land type-(village land),Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"tobuylandall_aabb1"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to buy land in Zabuthiri,  Other area
+  else if (received_message.payload === 'onlyother7dlandin_zabuu7' ) {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 550 lakhs, 80*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92100656_148405230038610_4893887046474530816_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeFDDuLfnVZj-6Zb_dij7f9eN5WYIm8s5m83lZgibyzmbyyQrMoO7j7TGod3Si3a4sh3egQATLC7pmbmzTaNiReP&_nc_ohc=zE-iyX7f2hUAX9uZRd6&_nc_ht=scontent.fmdl2-2.fna&oh=5a864e5a88facb440ce6aeeae5788ad7&oe=5EB1BE62",
+            "subtitle":"land type-(grant), face east, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"tobuylandall_aabb1"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+/*********************************************/
+
+// to buy land in pyinmana
+  else if (received_message.payload === "pyi5") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "land_a1_pyintobu",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*72",
+                          "payload": "land_a2_pyintobu",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "land_a3_pyintobu",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Other area",
+                          "payload": "other_a4_pyintobu",
+                        }
+                      ]
+      }
+  }
+
+
+// to buy land in pyinmana,  40*60
+    else if (received_message.payload === 'land_a1_pyintobu') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 320 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92273270_149016386644161_8370090244208328704_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeE52sRpZJEwHgD_qk7BsxhF8lo3ZWHm5gbyWjdlYebmBiXFhZUhkb9HDs_ZhoJzM2YdY7aQoSgc_HMPEWWmA_3v&_nc_ohc=epNjQ8-eoucAX-cBQFS&_nc_ht=scontent.fmdl2-2.fna&oh=02e1971e81f2d0ca73e007597207d5ba&oe=5EB4B1CD",
+            "subtitle":"land type-(grant), face east",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"tobuylandall_aabb1"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+// to buy land in pyinmana,  60*72
+    else if (received_message.payload === 'land_a2_pyintobu') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 550 lakhs, 60*72 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91944330_149019299977203_418187470824275968_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_eui2=AeGRf4pbtPI2yrR1hioqwmrqUx4Q1W7AGlFTHhDVbsAaUXOwMiR5jVBk-CTXwNfLnUKhzY79QvgkcsFLvNay3Yej&_nc_ohc=ygPsk8r6Fj8AX_w1HYQ&_nc_ht=scontent.fmdl2-1.fna&oh=c53e99898e47b09c73ad6e09ae0e0a76&oe=5EB2BF4A",
+            "subtitle":"land type-(permit), face south",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"tobuylandall_aabb1"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+// to buy land in pyinmana,  60*80
+    else if (received_message.payload === 'land_a3_pyintobu') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 670 lakhs, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92591960_149017693310697_3011678316890423296_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeHLXhGDIb79vxF8QYyJV052I8KibjVY7yMjwqJuNVjvI_gG7dKIt-lLRrYTFAGvOUi0JfcOwSTaAjn1mthgroN3&_nc_ohc=A-hP-4EluUUAX_JCecN&_nc_ht=scontent.fmdl2-2.fna&oh=220f0279fed18da953714003aa959f3d&oe=5EB443CC",
+            "subtitle":"land type-(permit), face west",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"tobuylandall_aabb1"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+// to buy land in pyinmana,  Other area
+    else if (received_message.payload === 'other_a4_pyintobu') {
+    response = {
+            "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"land, 200 lakhs, 80*70 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92700247_149058239973309_1026465551309864960_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeExfi6lyAGKnuAnGwzsqHIyb0fpY8_QSLBvR-ljz9BIsOBkiot-Xz6n2p0Os7XVh5PIEoLRp9oLcrpco0jAv7p1&_nc_ohc=3LoyEwb524wAX_eRpVY&_nc_ht=scontent.fmdl2-1.fna&oh=ab71d22ef0f26f9af995a94bdfd05633&oe=5EB2A610",
+            "subtitle":"",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"tobuylandall_aabb1"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
 
 
 
 
-/*****************************************************************************************/
-/*****************************************************************************************/
-/*****************************************************************************************/
+
+/*********************************************************************************************************/
+/*********************************************************************************************************/
+/*********************************************************************************************************/
 
 
 
@@ -8082,61 +7924,11 @@ else if (payload === 'innnter') {
 
   }
 }
-// to buy land
-  else if (payload === 'lann') {
-    response = { "attachment": {
-                  "type": "template",
-                  "payload": {
-                    "template_type": "button",
-                    "text": "Please choose the place in which you want to buy land:",
-                    "buttons": [
-                        {
-                          "type": "postback",
-                          "title": "In Five Thri Township",
-                          "payload": "5fthri",
-                        },
-                        {
-                          "type": "postback",
-                          "title": "Pyinmana Township",
-                          "payload": "pyi5",
-                        }
-                      ]
-                  }
-              }
-    }
-  }
-  // to buy land in pyinmana
-  else if (payload === "pyi5") {
-    response = {
-                  "text": "Do you want what area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "40*60",
-                          "payload": "land_a1_pyintobu",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*72",
-                          "payload": "land_a2_pyintobu",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*80",
-                          "payload": "land_a3_pyintobu",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Other area",
-                          "payload": "other_a4_pyintobu",
-                        }
-                      ]
-      }
-  }
+
   // to buy land in oattra
-      else if (payload === "5fthri") {
+      else if (payload === "lann") {
       response = {
-                  "text": "Please choose the township in which you want to buy land:",
+                  "text": "Do you want to buy land in what township?",
                     "quick_replies": [
                         {
                           "content_type": "text",
@@ -8162,6 +7954,11 @@ else if (payload === 'innnter') {
                           "content_type": "text",
                           "title": "Zabu Thiri",
                           "payload": "zabuthi",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Pyinmana Township",
+                          "payload": "pyi5",
                         }
                       ]
 
