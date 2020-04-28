@@ -8257,7 +8257,7 @@ else if (payload === 'hoou2') {
 
 
 // moving house service
-    else if (.payload === 'move_hou_service') {
+    else if (payload === 'move_hou_service') {
     response = {
     "attachment":{
       "type":"template",
