@@ -9009,7 +9009,7 @@ function handlePostback(sender_psid, received_postback) {
                           "payload": "tenanzabu"
                         }, 
                         {
-                          "type": "text",
+                          "content_type": "text",
                           "title": "Pyinmana",
                           "payload": "tenanpyin"
                         }
