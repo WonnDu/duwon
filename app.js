@@ -1455,495 +1455,36 @@ else if (received_message.payload === "cu_say_yes_for_sthElse") {
       received_message.payload = false;
   } 
 
+
+
 /*************************************************************************************************/
 /*************************************************************************************************/
 /*************************************************************************************************/
 
 
 
-
- 
-// to buy house in pyinmana, RC
-  else if (received_message.payload === "tobuyrcpyin_aa1" ) {
+ // to buy house in oattra, for types of house
+  else if (received_message.payload === "ottwp" ) {
     response = {
                   "text": "Please choose the number of floor:",
                     "quick_replies": [
-                         {
+                          {
                           "content_type": "text",
-                          "title": "one floor",
-                          "payload": "onef_pyinfloor11",
+                          "title": "RC",
+                          "payload": "rc_ott",
                         },
                         {
                           "content_type": "text",
-                          "title": "two floor",
-                          "payload": "twoff_pyinfloora11",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "other floor",
-                          "payload": "otherf_pyinfloorbb11",
+                          "title": "Other Type",
+                          "payload": "otherType_ott",
                         }
                       ]
 
       }
   }
- 
-// to buy house in pyinmana, RC, one floor, 
-  else if (received_message.payload === "onef_pyinfloor11") {
-    response = {
-                  "text": "Do you want the house in which Mbr is included or only Br included?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "Mbr",
-                          "payload": "tobupyinrc_onefmbr_hh1",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Only Br",
-                          "payload": "tobupyinrc_onfonlybr_hhaa1",
-                        }
-                      ]
-      }
-  }
-
-// to buy house in pyinmana, RC, one floor, Mbr
-  else if (received_message.payload === "tobupyinrc_onefmbr_hh1") {
-    response = {
-                  "text": "Do you want how much wide land area of house?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "40*60",
-                          "payload": "tobuhourcpyin46_tobuaa7",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*72",
-                          "payload": "tobuhourcpyin172_tobunn7",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*80",
-                          "payload": "tobuhourcpyin68_tobumma1",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Other area",
-                          "payload": "tobuhourcpyinotherarea_tobummb",
-                        }
-                      ]
-      }
-  }
-
-
-
-// to buy house in pyinmana, RC, one floor, Mbr, 40*60
-  else if (received_message.payload === "tobuhourcpyin46_tobuaa7") {
-    response = {
-      "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"RC, 800 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91664968_149027856643014_3018289688898174976_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeGRHIaeZKMyPNKfOeoww905B5sI3sATrD4HmwjewBOsPpGS3GqeitBU4k6asf5ijfHtiXTjJyQUo9u9DVzydHqd&_nc_ohc=kMOWTJMbEHIAX_qTSw1&_nc_ht=scontent.fmdl2-2.fna&oh=81eaeca5b4bd3145141aaeb803aa522b&oe=5EB1858C",
-            "subtitle":"Mbr-(1), Br-(2), land type-(grant), face south, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-    }
-  }
-
-// to buy house in pyinmana, RC, one floor, Mbr, 60*72
-  else if (received_message.payload === "tobuhourcpyin172_tobunn7") {
-    response = {
-      "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"RC, 550 lakhs, 60*72 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92353603_149043869974746_8473619924072267776_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeGgvj4JXTB-BaKlrv6fCWkPD8Wz4sbkNI8PxbPixuQ0j4z4WFsuBeE4rDoXcka8l3DzzgHyop1A6jQY9BeyxOWv&_nc_ohc=UwLfnfMu-QQAX-lKiLp&_nc_ht=scontent.fmdl2-1.fna&oh=7c3a2dc9036f0c70cc5e9cb0eb33e15c&oe=5EB1873A",
-            "subtitle":"Mbr-(1), Br-(2), land type-(grant), face east, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-    }
-  }
-
-// to buy house in pyinmana, RC, one floor, Mbr, 60*80
-  else if (received_message.payload === "tobuhourcpyin68_tobumma1") {
-    response = {
-      "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"RC, 850 lakhs, Width-(60*80)",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92345669_149033143309152_6933827548061106176_n.jpg?_nc_cat=105&_nc_sid=110474&_nc_eui2=AeEI4W8wxQk3tk9YgjJjQ_vGP1pHh5H1KD8_WkeHkfUoPxtx5_-T7IVd-7alAloGuyAZbuYPZOCOJab3je027jsy&_nc_ohc=sBvJQg8bkjYAX9G8Kpp&_nc_ht=scontent.fmdl2-2.fna&oh=382cf06a14c01e693485808b266b26d7&oe=5EB4B0D5",
-            "subtitle":"Mbr-(2), Br-(1), land type-(grant), face south, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-    }
-  }
-
-// to buy house in pyinmana, RC, one floor, Mbr, Other area
-  else if (received_message.payload === "tobuhourcpyinotherarea_tobummb") {
-    response = {
-            "text":"There is no property avaliable to sell. Sorry for you. Thanks for contacting us."
-    }
-  }
-
-
-/**********************************/
-
-
-// to buy house in pyinmana, RC, two floor
-  else if (received_message.payload === "twoff_pyinfloora11") {
-    response = {
-                  "text": "Do you want how much wide land area of house?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "40*60",
-                          "payload": "tobuytwof_rcpyin_a46ab",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*72",
-                          "payload": "tobuytwof_rcpyin_a672cca",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*80",
-                          "payload": "tobuytwof_rcpyin_a68dda",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Other area",
-                          "payload": "tobuytwof_rcpyin_otherarea7c",
-                        }
-                      ]
-      }
-  }
-
-
-// to buy house in pyinmana, RC, two floor, 40*60
-  else if (received_message.payload === "tobuytwof_rcpyin_a46ab") {
-    response = {
-      "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"2RC, 2300 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91909041_149045459974587_3734464206922055680_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeFU2LcrrLbR-1h9foxAhqdQB74mqwENAW0HviarAQ0BbSVC1u_Z_umhu8d7qGBi4uix6EwDxD8Fe-cH_uN1RPuC&_nc_ohc=puXGjPNCVz4AX8fgEfL&_nc_ht=scontent.fmdl2-1.fna&oh=ea5563303495ed0876589d4e0ae7a747&oe=5EB36069",
-            "subtitle":"Mbr-(4), land type-(grant), face north, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-    }
-  }
-
-// to buy house in pyinmana, RC, two floor, 60*72
-  else if (received_message.payload === "tobuytwof_rcpyin_a672cca") {
-    response = {
-      "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"2RC, 1800 lakhs, 60*72 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91663260_149049396640860_3878909622148399104_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeGHkGRYDmdeavjzqEgTafF6vGtLT4QsOYC8a0tPhCw5gGfUGkXLqAvDbcmS2kynpkc427C_nqwWJyVMHf6lzNw7&_nc_ohc=aXbSPOJrDXwAX_7A_Ij&_nc_ht=scontent.fmdl2-2.fna&oh=d5558fa54bef9dc6a18a5cde99b328df&oe=5EB32EB3",
-            "subtitle":"Mbr-(2), Br-(1), land type-(grant), face south, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-    }
-  }
-
-  // to buy house in pyinmana, RC, two floor, 60*80
-  else if (received_message.payload === "tobuytwof_rcpyin_a68dda") {
-    response = {
-      "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"2RC, 2500 lakhs, 60*80 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91647057_149048646640935_1634770849003208704_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_eui2=AeF5T-k7A2rpdAenpQX7rnQypSsvlvO9AJ2lKy-W870AneezH0bEyn8dFfPyyEkjsM0EKd0vLicVlYL82SSzmRXI&_nc_ohc=vKqTcuhKlTkAX-qAIiB&_nc_ht=scontent.fmdl2-1.fna&oh=759375e2414be0c936669dd1904a9f24&oe=5EB2C4F0",
-            "subtitle":"Mbr-(4), Br-(2), land type-(grant), face south, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-    }
-  }
-
-// to buy house in pyinmana, RC, two floor,  other area
-  else if (received_message.payload === "tobuytwof_rcpyin_otherarea7c") {
-    response = {
-              "text":"There is no property avaliable. Sorry for you. Thanks for contacting us."
-    }
-  }
-
-
-/********/
-  // to buy house in pyinmana, other type 
-  else if (received_message.payload === "tobuyothertypepyin_bb1") {
-    response = {
-      "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"Hta yan, 390 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91623696_149051576640642_6569864859687583744_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeEi8PLXTZ7dbcj0r4LuXMSKGzY8vi0XI_wbNjy-LRcj_J-l8rj7nrr5RKGDKhXzF0bfZMCYV62C31nmSRcYYpAG&_nc_ohc=9vhkrWERlZ4AX-boxAQ&_nc_ht=scontent.fmdl2-1.fna&oh=dc6ab30e9ee13b2d3e7e37f6fbbbef72&oe=5EB4F884",
-            "subtitle":"land type-(slit), face south, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-    }
-  }
-
-
-
-
-/*******************************************************************/
-
-// to buy house in pyinmana, RC, one floor, only Br
-  else if (received_message.payload === "tobupyinrc_onfonlybr_hhaa1") {
-    response = {
-      "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"RC, 590 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/93006985_149029053309561_9111199899243773952_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeGN4AW6ko1xllvDTB1lMk_-xqdjdqz30iXGp2N2rPfSJcztXgS9CVS0gWOyOv6fpA6qL1F9oxqB8ExhpUyLK8Tj&_nc_ohc=98DZRtLQ7vgAX_QO6g-&_nc_ht=scontent.fmdl2-1.fna&oh=6f4d97ea113ef2ffc55e193a5b05eacb&oe=5EB13839",
-            "subtitle":"Br-(2), land type-(grant), face north, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-    }
-  }
-
-
-
-// to buy house in pyinmana, RC, other floor
-  else if (received_message.payload === "otherf_pyinfloorbb11") {
-    response = {
-      "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"3RC, 2900 lakhs, 80*80 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92246313_149054849973648_703440635775942656_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_eui2=AeGQUfxVnvZWijR4b8rEp1d3jNzI0_OEBaKM3MjT84QFopl4xHDm84RGqQl8E9qT_OpLskADmC5FYTxR1IVWWySf&_nc_ohc=PEniN76E7_gAX87FiHI&_nc_ht=scontent.fmdl2-1.fna&oh=51c68a01e618292c014e23cf4975744e&oe=5EB2E05D",
-            "subtitle":"Mbr-(3), Br-(2), land type-(grant), face east, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-    }
-  }
-
-
-
-
-/**************************************************************************/
 
   // to buy house in oattra, RC
-  else if (received_message.payload === "ottwp" ) {
+  else if (received_message.payload === "rc_ott" ) {
     response = {
                   "text": "Please choose the number of floor:",
                     "quick_replies": [
@@ -1990,7 +1531,31 @@ else if (received_message.payload === "cu_say_yes_for_sthElse") {
                       ]
       }
   }
+// to buy house in oattra, RC, two floor
+  else if (received_message.payload === "twof_ott") {
+    response = {
+                  "text": "Do you want how much wide area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "80*80",
+                          "payload": "twof80_in_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "100*100",
+                          "payload": "twof100_in_ott",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "150*150",
+                          "payload": "twof150_in_ott",
+                        }
+                      ]
+      }
+  }
 
+/*************************************************/
 
 // to buy house in oattra, RC, one floor, 80*80
     else if (received_message.payload === '80_in_ott') {
@@ -2107,32 +1672,6 @@ else if (received_message.payload === "cu_say_yes_for_sthElse") {
 }
 
 /**********************************/
-
-
-// to buy house in oattra, RC, two floor
-  else if (received_message.payload === "twof_ott") {
-    response = {
-                  "text": "Do you want how much wide area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "80*80",
-                          "payload": "twof80_in_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "100*100",
-                          "payload": "twof100_in_ott",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "150*150",
-                          "payload": "twof150_in_ott",
-                        }
-                      ]
-      }
-  }
-
 
 // to buy house in oattra, RC, two floor, 80*80
     else if (received_message.payload === 'twof80_in_ott') {
@@ -2273,12 +1812,12 @@ else if (received_message.payload === "potwp") {
                         {
                           "content_type": "text",
                           "title": "Other Type",
-                          "payload": "nancat_pobb",
+                          "payload": "otherType_pobb",
                         }
                       ]
 
       }
-  }
+}
   // to buy house in pobba, floor 
   else if (received_message.payload === "rc_pobb") {
     response = {
@@ -2304,28 +1843,9 @@ else if (received_message.payload === "potwp") {
       }
   }
 
-  // to buy house in pobba, RC, one floor
+
+  // to buy house in pobba, RC, one floor,
   else if (received_message.payload === "onef_pobb") {
-    response = {
-                  "text": "Do you want the house in which Mbr is included or only Br included?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "Mbr",
-                          "payload": "tobuyhoupobb_rconefloor_mbr1122ab",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Only Br",
-                          "payload": "tobuyhoupobb_rconefloor_onlybr55ab",
-                        }
-                      ]
-  }
-}
-
-
-  // to buy house in pobba, RC, one floor, Mbr
-  else if (received_message.payload === "tobuyhoupobb_rconefloor_mbr1122ab") {
     response = {
                   "text": "Do you want how much wide land area of house?",
                     "quick_replies": [
@@ -2347,8 +1867,31 @@ else if (received_message.payload === "potwp") {
                       ]
   }
 }
+  // to buy house in pobba, RC, two floor, area
+  else if (received_message.payload === "twof_pobb") {
+    response = {
+                  "text": "Do you want how much wide land area of house?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "tobuyhoupobb_rctwof46pob",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "tobuyhoupobb_rctwof68aart",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "80*80",
+                          "payload": "tobuyhoupobb_rctwof88bbw",
+                        }
+                      ]
+  }
+}
 
-// to buy house in pobba, RC, one floor, Mbr , 40*60
+// to buy house in pobba, RC, one floor, 40*60
  else if (received_message.payload === 'tobuyhoupobb_rconefmbr24inaa') {
     response = {
     "attachment":{
@@ -2465,104 +2008,6 @@ else if (received_message.payload === "potwp") {
 
 
 
-/*****************************************/
-  // to buy house in pobba, RC, one floor, only br
-  else if (received_message.payload === "tobuyhoupobb_rconefloor_onlybr55ab") {
-    response = {
-                  "text": "Do you want how much wide land area of house?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "40*60",
-                          "payload": "tobupob_rconef46_onlybrabk",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*80",
-                          "payload": "tobupob_rconef68_onlybrccn",
-                        }
-                      ]
-  }
-}
-
-
-// to buy house in pobba, RC, one floor, only br, 40*60
- else if (received_message.payload === 'tobupob_rconef46_onlybrabk') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-                    {
-            "title":"RC, 430 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91914495_148687560010377_1702487433695723520_n.jpg?_nc_cat=105&_nc_sid=110474&_nc_eui2=AeEOZdK9M-XbPElfW6-OzSBjbvX1hzyKvthu9fWHPIq-2IyUS6M1KZcr-ftHDgwK3b8LepAYlLLrEQLrbeKL1bxq&_nc_ohc=QNYEF48cQz0AX87rhGe&_nc_ht=scontent.fmdl2-2.fna&oh=e69a12e6ab242f0cb5ec60935ca32414&oe=5EB03155",
-            "subtitle":"Br-(3), land type-(grant), face east, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-// to buy house in pobba, RC, one floor, only br, 60*80
- else if (received_message.payload === 'tobupob_rconef68_onlybrccn') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-          {
-            "title":"RC, 770 lakhs, 60*80 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92218385_148692786676521_7587571937593786368_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeHw7G9pvs5W1UkZ7W2i9IEt4cZIyNWN-1fhxkjI1Y37V5ib-0Rln8vvNUgG0KIAlt7B1JzrM__9lFiO0dIDIpnZ&_nc_ohc=FygYy-47yrsAX8dEyVb&_nc_ht=scontent.fmdl2-1.fna&oh=e324701ad6206c5ea9c64763b885276e&oe=5EB37AF8",
-            "subtitle":"Br-(3), land type-(grant), face north, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-
 // to buy house in pobba, other type(not RC)
  else if (received_message.payload === 'nancat_pobb') {
     response = {
@@ -2601,30 +2046,7 @@ else if (received_message.payload === "potwp") {
   }
 }
 
-
-  // to buy house in pobba, RC, two floor, area
-  else if (received_message.payload === "twof_pobb") {
-    response = {
-                  "text": "Do you want how much wide land area of house?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "40*60",
-                          "payload": "tobuyhoupobb_rctwof46pob",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*80",
-                          "payload": "tobuyhoupobb_rctwof68aart",
-                        },
-                         {
-                          "content_type": "text",
-                          "title": "80*80",
-                          "payload": "tobuyhoupobb_rctwof88bbw",
-                        }
-                      ]
-  }
-}
+/****************************************/
 
 // to buy house in pobba, RC, two floor, 40*60
  else if (received_message.payload === 'tobuyhoupobb_rctwof46pob') {
@@ -2740,7 +2162,7 @@ else if (received_message.payload === "potwp") {
     }
   }
 }
-
+/*********************************/
 
 // to buy house in pobba, RC, other floor
  else if (received_message.payload === 'thirdf_pobb') {
@@ -2781,9 +2203,6 @@ else if (received_message.payload === "potwp") {
 }
 
 
-
-
-
 /******************************************************************/
 /******************************************************************/
 
@@ -2800,7 +2219,7 @@ else if (received_message.payload === "dektwp") {
                         {
                           "content_type": "text",
                           "title": "Other type",
-                          "payload": "nancat_dek",
+                          "payload": "otherType_dek",
                         }
                       ]
 
@@ -2831,41 +2250,11 @@ else if (received_message.payload === "dektwp") {
       }
   }
 
-  /*************/
-   // to buy house in dekkhina, one floor
+ // to buy house in dekkhina, one floor, 
   else if (received_message.payload === "onef_dek") {
-    response = {
-                  "text": "Do you want the house in Mbr is included or only Br is included?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "Mbr",
-                          "payload": "bed3below_onef_rcdek",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Only Br",
-                          "payload": "bed3above_onef_rcdek",
-                        }
-                      ]
-      }
-  }
-
- // to buy house in dekkhina, one floor, master bed rooms
-  else if (received_message.payload === "bed3below_onef_rcdek") {
     response = {
                   "text": "Do you want what area?",
                     "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "40*60",
-                          "payload": "onlymbed60_dek",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*60",
-                          "payload": "onlymbed660_dek",
-                        },
                         {
                           "content_type": "text",
                           "title": "60*80",
@@ -2884,81 +2273,31 @@ else if (received_message.payload === "dektwp") {
                       ]
       }
   }
-
-// to buy house in dekkhina, one floor, master bed rooms, 40*60
-    else if (received_message.payload === 'onlymbed60_dek') {
+ // to buy house in dekkhina, two floor, area
+  else if (received_message.payload === "twof_dek") {
     response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"RC, 500 lakhs, Negotiable, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92245880_148481666697633_6433120423902183424_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeEeGUe0TGLS1XEjX6nwNzcBNxTXZCW2Je43FNdkJbYl7tIqf-uNXDeKUlUi0pWUBOGIKtHd8JIBSLRkblglHHAP&_nc_ohc=mqbcuQ0ks-EAX9AWEzT&_nc_ht=scontent.fmdl2-2.fna&oh=d868b9ba495555422838bca22bf6303b&oe=5EB304F9",
-            "subtitle":"Mbr-(1), Br-(2), land type-(grant), face north",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "twof_aonlymbed68b_dek",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "80*80",
+                          "payload": "twof_aonlymbed88asin_dek",
+                        },
+                           {
+                          "content_type": "text",
+                          "title": "100*100",
+                          "payload": "twof_aonlymbed100aabccdin_dek",
+                        }
+                      ]
       }
-    }
   }
-}
-// to buy house in dekkhina, one floor, master bed rooms, 60*60
-    else if (received_message.payload === 'onlymbed660_dek') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"RC, 800 lakhs, Negotiable, 60*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91445925_148485046697295_1739358787334045696_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeGA59g1Eq2rzFxqTHPm8h5ssGJkZNEjmq6wYmRk0SOartKYjOWHG6IiKBAr6SKrIr9e6QmAOK-QGdIs5p0Y0mEU&_nc_ohc=8JFelcuNy_kAX_wuwkM&_nc_ht=scontent.fmdl2-2.fna&oh=8525134924d66c3695315772ac54e52e&oe=5EAF76D7",
-            "subtitle":"Mbr-(2), Br-(2), land type-(grant), face south",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
 
-        ]
-      }
-    }
-  }
-}
+/****************************/
 // to buy house in dekkhina, one floor, master bed rooms, 60*80
     else if (received_message.payload === 'onlymbed100_dek') {
     response = {
@@ -3071,220 +2410,7 @@ else if (received_message.payload === "dektwp") {
   }
 }
 
-
-
-/***************************************************/
-  /**************************************************/
-    // to buy house in dekkhina, one floor, only Br 
-  else if (received_message.payload === "bed3above_onef_rcdek") {
-    response = {
-                  "text": "Do you want what area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "40*60",
-                          "payload": "tobuyhoutt1_onlybed46_dek",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*60",
-                          "payload": "tobuyhoutt1_onlybed66_dek",
-                        }
-                      ]
-      }
-  }
-
-
-
-// to buy house in dekkhina, Rc, one floor, only bed room, 40*60
-    else if (received_message.payload === 'tobuyhoutt1_onlybed46_dek') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"RC, 1600 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92230135_148477376698062_1564226552332288000_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeEZFBGf-MZFY-HQQT6oS8pmO89u87ddanY7z27zt11qdhxc_4UlJ2I4G8_DIhm9ZJ46w_KGePmKb2a2UtHGYbPN&_nc_ohc=9q5ZYbuYXb4AX8xMkbB&_nc_ht=scontent.fmdl2-1.fna&oh=a2879fe65108db605e44fc675cd3dacd&oe=5EB10535",
-            "subtitle":"Br-(3), land type-(grant), face south, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-// to buy house in dekkhina, Rc, one floor, only bed room, 60*60
-    else if (received_message.payload === 'tobuyhoutt1_onlybed66_dek') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"RC, 600 lakhs, 60*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92219891_148475833364883_1131803197657055232_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_eui2=AeHtU2QeVO9b4qfJE0XPMWpYrsg39WLRBKWuyDf1YtEEpdXXP2V1l_zqlic97MBMkayJmkRKcNMngu7v_6k1xrFe&_nc_ohc=xAUop79JbV0AX_LMFPB&_nc_ht=scontent.fmdl2-2.fna&oh=f3a4e613b2ddd6906b8c8fc14e62f731&oe=5EB08E82",
-            "subtitle":"Br-(3), land type-(grant), face south, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
 /********************************************/
-
- // to buy house in dekkhina, two floor, area
-  else if (received_message.payload === "twof_dek") {
-    response = {
-                  "text": "Do you want what area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "40*60",
-                          "payload": "twof_aonlymbed46cc_dek",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*60",
-                          "payload": "twof_aonlymbed66ab_dek",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*80",
-                          "payload": "twof_aonlymbed68b_dek",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "80*80",
-                          "payload": "twof_aonlymbed88asin_dek",
-                        },
-                           {
-                          "content_type": "text",
-                          "title": "100*100",
-                          "payload": "twof_aonlymbed100aabccdin_dek",
-                        }
-                      ]
-      }
-  }
-
-
-
-// to buy house in dekkhina, Rc, two floor, 40*60
-    else if (received_message.payload === 'twof_aonlymbed46cc_dek') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"2RC, 1700 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91876881_148667190012414_7394498520390041600_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeGuaoOd56cUfdGwui3Ch4l4sGU0IifrOl-wZTQiJ-s6Xx6MMoJkF3xvnBphVS2O_U5GlCuBHhd6H4S77b8PfSgq&_nc_ohc=6hUnCzBbpckAX9MCIC8&_nc_ht=scontent.fmdl2-1.fna&oh=ed5bd3759a0b22350acdc37a52866feb&oe=5EB18D68",
-            "subtitle":"Mbr-(2), Br-(2), land type-(grant), face south, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-
-// to buy house in dekkhina, Rc, two floor, 60*60
-    else if (received_message.payload === 'twof_aonlymbed66ab_dek') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"2RC, 1900 lakhs, 60*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92583214_148663500012783_7353603237661900800_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeHLhaQy-lNjPoEct3xlK1U_GQY1Il0R_owZBjUiXRH-jIH7BrAfWbr-OQxrwCm-m6rKV9woFTMb-Nx0A-tXFq_t&_nc_ohc=sNpw-oCNFF4AX-hmd3q&_nc_ht=scontent.fmdl2-2.fna&oh=e726b585836f6d217c86d4ceeb13f5c2&oe=5EB109E4",
-            "subtitle":"Mbr-(2), Br-(3), land type-(grant), face south, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
 
 // to buy house in dekkhina, Rc, two floor, 60*80
     else if (received_message.payload === 'twof_aonlymbed68b_dek') {
@@ -3399,7 +2525,7 @@ else if (received_message.payload === "dektwp") {
   }
 }
 
-/********************************/
+/***************************/
 
 // to buy house in dekkhina, Rc, other floor,
     else if (received_message.payload === 'thirdf_dek') {
@@ -3438,12 +2564,10 @@ else if (received_message.payload === "dektwp") {
     }
   }
 }
-
-/*****************/
-
+/************************/
 
 // to buy house in dekkhina, other type (not RC)
-    else if (received_message.payload === 'nancat_dek') {
+    else if (received_message.payload === 'otherType_dek') {
     response = {
     "attachment":{
       "type":"template",
@@ -3479,8 +2603,6 @@ else if (received_message.payload === "dektwp") {
     }
   }
 }
-
-
 
 /*******************************************************************************************/
   /*********************************************************************************/
@@ -3528,11 +2650,33 @@ else if (received_message.payload === "zaytwp") {
 
       }
   }
+/******************************/
 
+ // to buy house in zayathiri, house, RC, one floor, area
+  else if (received_message.payload === "onef_zayathi") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "onlymbed60_zayathi",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "onlymbed100_zayathi",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "other area",
+                          "payload": "onlyother_zayathi",
+                        }
+                      ]
+      }
+  }
 
-  /**********************/
-
-
+/*********************************/
   // to buy house in zayathi, RC, two floor, 
   else if (received_message.payload === "twof_zayathi") {
     response = {
@@ -3557,205 +2701,10 @@ else if (received_message.payload === "zaytwp") {
 
       }
   }
-    // to buy house in zayathiri, RC, two floor, 60*80
-    else if (received_message.payload === 'twofloor_landarea68a2_tobuyt_zaya') {
-    response = {
-                "text": "There is no property avaliable. Sorry for you. Thanks for contacting us."
-  }
-}
+/****************************/
 
 
-    // to buy house in zayathiri, RC, two floor, 40*60
-    else if (received_message.payload === 'twofloor_landarea46_tobuyt_zaya') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"2RC, 1550 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92350854_148331046712695_1514855722876141568_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeG5ZcuXasEyLdDk5VORz6R7_wo-WeJtVEP_Cj5Z4m1UQ_fjxjYC9t60tCuxT33zIGTj0s3iAKlYy1cCYkZEEZ1V&_nc_ohc=VC0_cyIzoxYAX9X3E3n&_nc_ht=scontent.fmdl2-2.fna&oh=4fe0ab1656140cb226395cf14854b060&oe=5EB180E7",
-            "subtitle":"Mbr-(2), Br-(2), land type-(grant),face east and north",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-  // to buy house in zayathiri, RC, two floor, other area
-    else if (received_message.payload === 'twofloor_landareaotherab11_tobuyt_zaya') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"2RC, 1500 lakhs, 70*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91684696_148082903404176_4744287077787500544_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_eui2=AeGJrrl3pJoyH7bJsFh_A2zSY8El8xmJIX9jwSXzGYkhf7StKf4IQhKXk80QagK5ApXmLNQKOrd8a6bfq2o88g1g&_nc_ohc=h0vQlFNpx4MAX-hpFps&_nc_ht=scontent.fmdl2-1.fna&oh=600219d816e675e680fce055e0fc99b8&oe=5EB0DB11",
-            "subtitle":"Mbr-(2), Br-(3), land type-(slit),face east",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          },
-             {
-            "title":"RC, 2000 lakhs, 60*90 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91399493_148081813404285_4132688193013153792_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeE42tNkW6IjD7xuSoc4pKcvu3wVLCYN8EW7fBUsJg3wRa9MvNC92sgpU97iz6gK3h3Pp72U_YCXpYvUeiB9ljU4&_nc_ohc=WeoFtmSfSEUAX8s5Yxz&_nc_ht=scontent.fmdl2-1.fna&oh=6a03ed097e52a57a7f64df976ecb4a4b&oe=5EAE99A3",
-            "subtitle":"Mbr-(4), Br-(1), land type-(grant), face east",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-
-
-
-         
-  /**********************/
-
-
-
-  // to buy house in zayathi, RC, one floor,
-  else if (received_message.payload === "onef_zayathi") {
-    response = {
-                  "text": "Do you want the house in which Mbr included or only Br included?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "Mbr",
-                          "payload": "onef_mb_zayathi",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Only Br",
-                          "payload": "onef_bed_zayathi",
-                        }
-                      ]
-      }
-  }
-  /************/
- // to buy house in zayathiri, house, RC, one floor, master bed, area
-  else if (received_message.payload === "onef_mb_zayathi") {
-    response = {
-                  "text": "Do you want what area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "40*60",
-                          "payload": "onlymbed60_zayathi",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*80",
-                          "payload": "onlymbed100_zayathi",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "other",
-                          "payload": "onlyother_zayathi",
-                        }
-                      ]
-      }
-  }
- 
-  // to buy house in zayathiri, Other Type (not RC)
-    else if (received_message.payload === 'nancat_zaya1') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"Nancat, 270 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91792097_147994890079644_2733113919257182208_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeEJ6OQtxyqfb9GVE1jRRE0IYNvigKbAkipg2-KApsCSKv0wJFCW3y8zXzDxQmVDuBPbb5X8jPDyLDSPnHzvJgQP&_nc_ohc=XThyUU6dRbcAX8MJD2I&_nc_ht=scontent.fmdl2-1.fna&oh=b3a0b4731debcda532f508df3173f283&oe=5EAE5B05",
-            "subtitle":"2BD, land type-(grant), face south, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-
-
-
-  // to buy house in zayathi, RC, one floor,  master bed room , 40* 60
+  // to buy house in zayathi, RC, one floor, 40* 60
     else if (received_message.payload === 'onlymbed60_zayathi') {
     response = {
     "attachment":{
@@ -3793,7 +2742,7 @@ else if (received_message.payload === "zaytwp") {
   }
 }
 
- // to buy house in zayathi, RC, one floor, master bed room , 60*80
+ // to buy house in zayathi, RC, one floor,, 60*80
     else if (received_message.payload === 'onlymbed100_zayathi') {
     response = {
     "attachment":{
@@ -3830,47 +2779,327 @@ else if (received_message.payload === "zaytwp") {
     }
   }
 }
- // to buy house in zayathi, RC, one floor, master bed room , other area
+ // to buy house in zayathi, RC, one floor, other area
     else if (received_message.payload === 'onlyother_zayathi') {
     response = {
                 "text": "There is no property avaliable. Sorry for you. Thanks for contacting us."
   }
 }
 
-  /***************************/
 
- 
- // to buy house in zayathi, RC, one floor, only bed rooms , for area
-  else if (received_message.payload === "onef_bed_zayathi") {
+
+
+/****************************/
+    // to buy house in zayathiri, RC, two floor, 40*60
+  else if (received_message.payload === 'twofloor_landarea46_tobuyt_zaya') {
     response = {
-                  "text": "Do you want how much wide land area of house?",
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"2RC, 1550 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92350854_148331046712695_1514855722876141568_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeG5ZcuXasEyLdDk5VORz6R7_wo-WeJtVEP_Cj5Z4m1UQ_fjxjYC9t60tCuxT33zIGTj0s3iAKlYy1cCYkZEEZ1V&_nc_ohc=VC0_cyIzoxYAX9X3E3n&_nc_ht=scontent.fmdl2-2.fna&oh=4fe0ab1656140cb226395cf14854b060&oe=5EB180E7",
+            "subtitle":"Mbr-(2), Br-(2), land type-(grant),face east and north",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaabbb11m_tobuya"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+  // to buy house in zayathiri, RC, two floor, 60*80
+  else if (received_message.payload === 'twofloor_landarea68a2_tobuyt_zaya') {
+    response = {
+                "text": "There is no property avaliable. Sorry for you. Thanks for contacting us."
+  }
+}
+
+  // to buy house in zayathiri, RC, two floor, other area
+  else if (received_message.payload === 'twofloor_landareaotherab11_tobuyt_zaya') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"2RC, 1500 lakhs, 70*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91684696_148082903404176_4744287077787500544_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_eui2=AeGJrrl3pJoyH7bJsFh_A2zSY8El8xmJIX9jwSXzGYkhf7StKf4IQhKXk80QagK5ApXmLNQKOrd8a6bfq2o88g1g&_nc_ohc=h0vQlFNpx4MAX-hpFps&_nc_ht=scontent.fmdl2-1.fna&oh=600219d816e675e680fce055e0fc99b8&oe=5EB0DB11",
+            "subtitle":"Mbr-(2), Br-(3), land type-(slit),face east",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaabbb11m_tobuya"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+ // to buy house in zayathi, RC, other floor
+    else if (received_message.payload === 'whateverf_zayathi') {
+    response = {
+                "text": "There is no property avaliable. Sorry for you. Thanks for contacting us."
+  }
+}
+
+/**************************/
+ 
+  // to buy house in zayathiri, Other Type (not RC)
+  else if (received_message.payload === 'nancat_zaya1') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"Nancat, 270 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91792097_147994890079644_2733113919257182208_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeEJ6OQtxyqfb9GVE1jRRE0IYNvigKbAkipg2-KApsCSKv0wJFCW3y8zXzDxQmVDuBPbb5X8jPDyLDSPnHzvJgQP&_nc_ohc=XThyUU6dRbcAX8MJD2I&_nc_ht=scontent.fmdl2-1.fna&oh=b3a0b4731debcda532f508df3173f283&oe=5EAE5B05",
+            "subtitle":"2BD, land type-(grant), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaabbb11m_tobuya"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+
+/***************************************************/
+/***************************************************/
+
+// to buy house in Zabu
+else if (received_message.payload === "zabtwp") {
+      response = {
+                    "text":'Are you finding RC or other type?',
                     "quick_replies": [
-                          {
-                          "content_type": "text",
-                          "title": "40*60",
-                          "payload": "bedaacc1_bedroom_i46n_zaya",  // not be
-                        },
                          {
                           "content_type": "text",
+                          "title": "RC",
+                          "payload": "rc_zabu111222",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Other Type",
+                          "payload": "otherType_zabu1",
+                        }
+                      ]
+
+      }
+  }
+  // to buy house in Zabuthiri, RC  
+  else if (received_message.payload === "rc_zabu111222") {
+    response = {
+                  "text": "Please choose you want to buy the house in which",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "one floor",
+                          "payload": "onef_zabuthiri11aa",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "two floor",
+                          "payload": "twof_zabuthiri11aa",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "other floor",
+                          "payload": "otherff1_zabuthiri11aa",
+                        }
+                      ]
+
+      }
+  }
+
+   // to buy house in zabu, RC, one floor, 
+  else if (received_message.payload === "onef_zabuthiri11aa") {
+    response = {
+                  "text": "Please choosse the land area of house:",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
                           "title": "60*60",
-                          "payload": "bedroom88_in_zayathi2",
+                          "payload": "mbedroom60hou6_in_tobuyz1",
+                        },
+                          {
+                          "content_type": "text",
+                          "title": "100*100",
+                          "payload": "mbedroom100hou100_in_tobuyz1",
                         },
                         {
                           "content_type": "text",
-                          "title": "60*80",
-                          "payload": "wht100_mbedroom_in_zaya",
+                          "title": "other area",
+                          "payload": "onlyother_zabu7_tobuyz1",
+                        }
+                      ]
+      }
+  }
+    // to buy  house in Zabuthiri, RC, two floor
+  else if (received_message.payload === "twof_zabuthiri11aa") {
+    response = {
+                  "text": "Do you want what area?",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "60*60",               
+                          "payload": "tobuy_mbedroom60hou6_in_zabuu7",
                         },
                         {
                           "content_type": "text",
-                          "title": "other",
-                          "payload": "onlybedother_zayathi11",  
+                          "title": "100*100",        
+                          "payload": "tobuy_onlymbed100_zabu7",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "other area",
+                          "payload": "tobuy_onlyother_zabu7", 
                         }
                       ]
       }
   }
 
-  // to buy house in zayathi, RC, one floor, bed room, 40* 60
-    else if (received_message.payload === 'bedaacc1_bedroom_i46n_zaya') {
+  /***************************/
+
+  // to buy house in zabu, RC, one floor, 60*60
+    else if (received_message.payload === 'mbedroom60hou6_in_tobuyz1' ) {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+  
+       
+           {
+            "title":"RC, 700 lakhs, 60*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92456400_148341980044935_5315513626461732864_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeHNN47ovsGuR5e8dsrxSj9d9B_aE_fP7zD0H9oT98_vMBGBCjuvS_C2XJDiCZGxnCnclC8uUrekgKK8VV5rboY8&_nc_ohc=oNufEKNmhzEAX9443tx&_nc_ht=scontent.fmdl2-1.fna&oh=eed956df5875f01944ca64ec1d4dd20a&oe=5EAFB3BC",
+            "subtitle":"Mbr-(2), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaabbb11m_tobuya"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+// to buy house in zabu, RC, one floor, 100*100
+    else if (received_message.payload === 'mbedroom100hou100_in_tobuyz1' ) {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+  
+       
+           {
+            "title":"RC, 1000 lakhs, 100*100 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91955219_148335103378956_2829729028192075776_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeHYsY5ju_-UtnsMR-xcQDlg3NSNpodS4azc1I2mh1LhrMPrqOlTDU65CqHDQ8JVmDdP4O4QOQpjDSKLNTI4Y5Ys&_nc_ohc=hdrpmmN65d0AX_Ct4eh&_nc_ht=scontent.fmdl2-1.fna&oh=842a715790fdc40b511bdacabb0c63c9&oe=5EAF33DA",
+            "subtitle":"Mbr-(2),Br-(2),face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaabbb11m_tobuya"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+// to buy house in zabu, RC, one floor, other area
+    else if (received_message.payload === 'onlyother_zabu7_tobuyz1' ) {
+    response = {
+                "text": "There is no property avaliable. Sorry for you. Thanks for contacting us."
+  }
+}
+  /***************************/
+
+// to buy a house Zabbuthiri, RC, two floor, 60*60
+    else if (received_message.payload === 'tobuy_mbedroom60hou6_in_zabuu7') {
     response = {
     "attachment":{
       "type":"template",
@@ -3879,9 +3108,100 @@ else if (received_message.payload === "zaytwp") {
         "elements": [ 
         
            {
-            "title":"RC, 430 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92411898_147990653413401_1525933800742191104_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_eui2=AeHBsVC7TLdFJm2fLgZ5UqX3q8KD7opYtsKrwoPuili2woW_93kuxylkFMVFz5DU5-BC0u6TafZAWv0AweUc0PfN&_nc_ohc=VleE8dz-FGMAX9p4286&_nc_ht=scontent.fmdl2-1.fna&oh=17f7467c5fbd8a2a945ab3e817eb758f&oe=5EAF513E",
-            "subtitle":"3BD, land type-(grant), face east, Negotiable",
+            "title":"2RC,  2000 lakhs, 60*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92823131_148347106711089_610544418763571200_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeFxWgAema5g4i2xFW9AdQBsOcp_FQlFfAY5yn8VCUV8BiwqdlL46YDiBCxY8iBhHIlW_rKc_ZUMlBXBZC2V_exy&_nc_ohc=k-b3E7YKzeoAX_Ds2Ud&_nc_ht=scontent.fmdl2-2.fna&oh=935494d72848dfee0dbf8c36fb149734&oe=5EB0066C",
+            "subtitle":"Mbr-(2), Br-(1), land type-(grant),face north, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaabbb11m_tobuya"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+// to buy a house Zabbuthiri, RC, two floor, 100*100
+    else if (received_message.payload === 'tobuy_onlymbed100_zabu7') {
+    response = {
+                  "text": "There is no property avaliable. Sorry for you. Thanks for contacting us."
+  }
+}
+// to buy a house Zabbuthiri, RC, two floor, other area
+    else if (received_message.payload === 'tobuy_onlyother_zabu7') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"2RC,  900 lakhs, 60*70 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92465912_148351516710648_1751142708715454464_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeG4Y_29JTV2nR-S0e4T_3l2jyTiAxhjiyWPJOIDGGOLJeN4MvyOK5riu_STZt4-BtlbQ1z-Nj2JZLgPhK7gDSRH&_nc_ohc=NlIAL0Jz0p0AX9IjMKA&_nc_ht=scontent.fmdl2-1.fna&oh=a059ee4af2076260fe6fa851d60ead96&oe=5EB1FB14",
+            "subtitle":"Mbr-(2), Br-(4), land type-(grant), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaabbb11m_tobuya"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+  }
+}
+/***************************/
+
+// to buy house in zabu, RC, other floor
+    else if (received_message.payload === 'otherff1_zabuthiri11aa' ) {
+    response = {
+                "text": "There is no property avaliable. Sorry for you. Thanks for contacting us."
+  }
+}
+/***************************/
+
+// to buy house in zabu, other type (not RC)
+    else if (received_message.payload === 'otherType_zabu1' ) {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+  
+       
+           {
+            "title":"RC, 110 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92055239_148410403371426_3609555549953196032_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeEcxWyddvgH7C0Z2B2n6syBX7GQJ4Ddfc1fsZAngN19zZZV7BUT4-dAQhBpIFP153IJzNvhPOpKrB4lWAPsT5j7&_nc_ohc=xGj5wNgncCEAX-XowML&_nc_ht=scontent.fmdl2-2.fna&oh=5bcf3aac02a9537be165941d2cd58004&oe=5EB13DBA",
+            "subtitle":"land type-(grant),face south",
             "default_action": {
               "type": "web_url",
               "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
@@ -3907,30 +3227,134 @@ else if (received_message.payload === "zaytwp") {
   }
 }
 
+/**************************************/
 
-
-   // to buy house in zayathi, RC, one floor, bed room, 60* 60
-    else if (received_message.payload === 'bedroom88_in_zayathi2') {
+// to buy house in pyinmana,
+  else if (payload === "pyintwp" ) {
     response = {
-    "attachment":{
+                  "text": "Please choose the below option:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "RC",
+                          "payload": "tobuyrcpyin_aa1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Other type",
+                          "payload": "tobuyothertypepyin_bb1",
+                        }
+                      ]
+
+      }
+  }
+ 
+// to buy house in pyinmana, RC
+  else if (received_message.payload === "tobuyrcpyin_aa1" ) {
+    response = {
+                  "text": "Please choose the number of floor:",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "one floor",
+                          "payload": "onef_pyinfloor11",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "two floor",
+                          "payload": "twoff_pyinfloora11",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "other floor",
+                          "payload": "otherf_pyinfloorbb11",
+                        }
+                      ]
+
+      }
+  }
+/***********************/
+// to buy house in pyinmana, RC, one floor, 
+  else if (received_message.payload === "onef_pyinfloor11") {
+    response = {
+                  "text": "Do you want how much wide land area of house?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "tobuhourcpyin46_tobuaa7",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*72",
+                          "payload": "tobuhourcpyin172_tobunn7",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "tobuhourcpyin68_tobumma1",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Other area",
+                          "payload": "tobuhourcpyinotherarea_tobummb",
+                        }
+                      ]
+      }
+  }
+/************************/
+// to buy house in pyinmana, RC, two floor
+  else if (received_message.payload === "twoff_pyinfloora11") {
+    response = {
+                  "text": "Do you want how much wide land area of house?",
+                    "quick_replies": [
+                         {
+                          "content_type": "text",
+                          "title": "40*60",
+                          "payload": "tobuytwof_rcpyin_a46ab",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*72",
+                          "payload": "tobuytwof_rcpyin_a672cca",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "60*80",
+                          "payload": "tobuytwof_rcpyin_a68dda",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Other area",
+                          "payload": "tobuytwof_rcpyin_otherarea7c",
+                        }
+                      ]
+      }
+  }
+
+
+// to buy house in pyinmana, RC, one floor, 40*60
+  else if (received_message.payload === "tobuhourcpyin46_tobuaa7") {
+    response = {
+      "attachment":{
       "type":"template",
       "payload":{
         "template_type":"generic",
         "elements": [ 
         
            {
-            "title":"RC, 750 lakhs, 60*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91566102_147309916814808_3933244420186439680_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeGe2oH7A1JiUggWbdMpedaTuf90LosKVHe5_3QuiwpUd9XJAc2iTWERN-t1qRDIuwYPoXpw4DsDoNYeccAyPfLU&_nc_ohc=OfgBeO8iZQAAX8-YKe0&_nc_ht=scontent.fmdl2-2.fna&oh=b14c800be66697d2d87ca5b9950d5294&oe=5EAF6923",
-            "subtitle":"3BD, Negotiable",
+            "title":"RC, 800 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91664968_149027856643014_3018289688898174976_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeGRHIaeZKMyPNKfOeoww905B5sI3sATrD4HmwjewBOsPpGS3GqeitBU4k6asf5ijfHtiXTjJyQUo9u9DVzydHqd&_nc_ohc=kMOWTJMbEHIAX_qTSw1&_nc_ht=scontent.fmdl2-2.fna&oh=81eaeca5b4bd3145141aaeb803aa522b&oe=5EB1858C",
+            "subtitle":"Mbr-(1), Br-(2), land type-(grant), face south, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1585891753790568&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
                 "title":"More Information"
               },
               {
@@ -3944,31 +3368,31 @@ else if (received_message.payload === "zaytwp") {
         ]
       }
     }
+    }
   }
-}
 
-   // to buy house in zayathi, Rc, one floor, bed room, 60*80
-    else if (received_message.payload === 'wht100_mbedroom_in_zaya') {
+// to buy house in pyinmana, RC, one floor, 60*72
+  else if (received_message.payload === "tobuhourcpyin172_tobunn7") {
     response = {
-    "attachment":{
+      "attachment":{
       "type":"template",
       "payload":{
         "template_type":"generic",
         "elements": [ 
         
            {
-            "title":"RC, 675 lakhs, 60*80 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92588042_147988300080303_5214463371088232448_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeGB2gX8DBfZCnr3mDKV62fwSNme3d8UdudI2Z7d3xR25yOIn8TsKwiAvR3U8M7ZCVzaqvFXgbc7YnyotdM4vVtF&_nc_ohc=K5GBbXAVOw0AX8EgTmU&_nc_ht=scontent.fmdl2-1.fna&oh=1dbd640db96801560c02478963b51321&oe=5EAFE58D",
-            "subtitle":"3BD, land type-(grant), face east, Negotiable",
+            "title":"RC, 550 lakhs, 60*72 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92353603_149043869974746_8473619924072267776_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeGgvj4JXTB-BaKlrv6fCWkPD8Wz4sbkNI8PxbPixuQ0j4z4WFsuBeE4rDoXcka8l3DzzgHyop1A6jQY9BeyxOWv&_nc_ohc=UwLfnfMu-QQAX-lKiLp&_nc_ht=scontent.fmdl2-1.fna&oh=7c3a2dc9036f0c70cc5e9cb0eb33e15c&oe=5EB1873A",
+            "subtitle":"Mbr-(1), Br-(2), land type-(grant), face east, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
                 "title":"More Information"
               },
               {
@@ -3982,30 +3406,31 @@ else if (received_message.payload === "zaytwp") {
         ]
       }
     }
+    }
   }
-}
-  // to buy house in zayathi, Rc, one floor, bed room, other area
-    else if (received_message.payload === 'onlybedother_zayathi11') {
+
+// to buy house in pyinmana, RC, one floor, 60*80
+  else if (received_message.payload === "tobuhourcpyin68_tobumma1") {
     response = {
-    "attachment":{
+      "attachment":{
       "type":"template",
       "payload":{
         "template_type":"generic",
         "elements": [ 
         
            {
-            "title":"RC, 800 lakhs, 60*70 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91497803_148004706745329_4934947964616441856_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeFIDrTTnrVgW7Y-gZH5yJXvBKz1BMcNxG0ErPUExw3EbWo0JPNgeHM3z9Pnj8baoVJYA7bUKfi_ECnrWvCAWpZA&_nc_ohc=mkJ5iRQDAFAAX8lHcZK&_nc_ht=scontent.fmdl2-1.fna&oh=d786b325fbd83e26763bfbf03e52d9c1&oe=5EADF6FA",
-            "subtitle":"3BD, land type-(slit), face east, Negotiable",
+            "title":"RC, 850 lakhs, Width-(60*80)",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92345669_149033143309152_6933827548061106176_n.jpg?_nc_cat=105&_nc_sid=110474&_nc_eui2=AeEI4W8wxQk3tk9YgjJjQ_vGP1pHh5H1KD8_WkeHkfUoPxtx5_-T7IVd-7alAloGuyAZbuYPZOCOJab3je027jsy&_nc_ohc=sBvJQg8bkjYAX9G8Kpp&_nc_ht=scontent.fmdl2-2.fna&oh=382cf06a14c01e693485808b266b26d7&oe=5EB4B0D5",
+            "subtitle":"Mbr-(2), Br-(1), land type-(grant), face south, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
                 "title":"More Information"
               },
               {
@@ -4019,10 +3444,231 @@ else if (received_message.payload === "zaytwp") {
         ]
       }
     }
+    }
   }
-}
-/**************************************************************************************************************/
-/**************************************************************************************************************/
+
+// to buy house in pyinmana, RC, one floor, Other area
+  else if (received_message.payload === "tobuhourcpyinotherarea_tobummb") {
+    response = {
+            "text":"There is no property avaliable to sell. Sorry for you. Thanks for contacting us."
+    }
+  }
+
+
+/**********************************/
+
+
+// to buy house in pyinmana, RC, two floor, 40*60
+  else if (received_message.payload === "tobuytwof_rcpyin_a46ab") {
+    response = {
+      "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"2RC, 2300 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91909041_149045459974587_3734464206922055680_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeFU2LcrrLbR-1h9foxAhqdQB74mqwENAW0HviarAQ0BbSVC1u_Z_umhu8d7qGBi4uix6EwDxD8Fe-cH_uN1RPuC&_nc_ohc=puXGjPNCVz4AX8fgEfL&_nc_ht=scontent.fmdl2-1.fna&oh=ea5563303495ed0876589d4e0ae7a747&oe=5EB36069",
+            "subtitle":"Mbr-(4), land type-(grant), face north, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaabbb11m_tobuya"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+    }
+  }
+
+// to buy house in pyinmana, RC, two floor, 60*72
+  else if (received_message.payload === "tobuytwof_rcpyin_a672cca") {
+    response = {
+      "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"2RC, 1800 lakhs, 60*72 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91663260_149049396640860_3878909622148399104_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeGHkGRYDmdeavjzqEgTafF6vGtLT4QsOYC8a0tPhCw5gGfUGkXLqAvDbcmS2kynpkc427C_nqwWJyVMHf6lzNw7&_nc_ohc=aXbSPOJrDXwAX_7A_Ij&_nc_ht=scontent.fmdl2-2.fna&oh=d5558fa54bef9dc6a18a5cde99b328df&oe=5EB32EB3",
+            "subtitle":"Mbr-(2), Br-(1), land type-(grant), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaabbb11m_tobuya"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+    }
+  }
+
+  // to buy house in pyinmana, RC, two floor, 60*80
+  else if (received_message.payload === "tobuytwof_rcpyin_a68dda") {
+    response = {
+      "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"2RC, 2500 lakhs, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91647057_149048646640935_1634770849003208704_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_eui2=AeF5T-k7A2rpdAenpQX7rnQypSsvlvO9AJ2lKy-W870AneezH0bEyn8dFfPyyEkjsM0EKd0vLicVlYL82SSzmRXI&_nc_ohc=vKqTcuhKlTkAX-qAIiB&_nc_ht=scontent.fmdl2-1.fna&oh=759375e2414be0c936669dd1904a9f24&oe=5EB2C4F0",
+            "subtitle":"Mbr-(4), Br-(2), land type-(grant), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaabbb11m_tobuya"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+    }
+  }
+// to buy house in pyinmana, RC, two floor,  other area
+  else if (received_message.payload === "tobuytwof_rcpyin_otherarea7c") {
+    response = {
+              "text":"There is no property avaliable. Sorry for you. Thanks for contacting us."
+    }
+  }
+
+/***********************************/
+
+  // to buy house in pyinmana, other type 
+  else if (received_message.payload === "tobuyothertypepyin_bb1") {
+    response = {
+      "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"Hta yan, 390 lakhs, 40*60 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91623696_149051576640642_6569864859687583744_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeEi8PLXTZ7dbcj0r4LuXMSKGzY8vi0XI_wbNjy-LRcj_J-l8rj7nrr5RKGDKhXzF0bfZMCYV62C31nmSRcYYpAG&_nc_ohc=9vhkrWERlZ4AX-boxAQ&_nc_ht=scontent.fmdl2-1.fna&oh=dc6ab30e9ee13b2d3e7e37f6fbbbef72&oe=5EB4F884",
+            "subtitle":"land type-(slit), face south, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaabbb11m_tobuya"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+    }
+  }
+
+
+/*******************************************************************/
+
+
+// to buy house in pyinmana, RC, other floor
+  else if (received_message.payload === "otherf_pyinfloorbb11") {
+    response = {
+      "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+           {
+            "title":"3RC, 2900 lakhs, 80*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92246313_149054849973648_703440635775942656_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_eui2=AeGQUfxVnvZWijR4b8rEp1d3jNzI0_OEBaKM3MjT84QFopl4xHDm84RGqQl8E9qT_OpLskADmC5FYTxR1IVWWySf&_nc_ohc=PEniN76E7_gAX87FiHI&_nc_ht=scontent.fmdl2-1.fna&oh=51c68a01e618292c014e23cf4975744e&oe=5EB2E05D",
+            "subtitle":"Mbr-(3), Br-(2), land type-(grant), face east, Negotiable",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"aaabbb11m_tobuya"
+              }              
+            ]      
+          }
+
+        ]
+      }
+    }
+    }
+  }
+
+
+
+
+
+ 
+/****************************************************************************************************************************/
+/****************************************************************************************************************************/
+/****************************************************************************************************************************/
+/****************************************************************************************************************************/
  
 
  // to rent house in Zayathiri
@@ -4498,565 +4144,7 @@ else if (received_message.payload === "tenanzay") {
 
 
   /***********************************************************************/
-    // to buy house in Zabu
-else if (received_message.payload === "zabtwp") {
-      response = {
-                    "text":'Are you finding RC or other type?',
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "RC",
-                          "payload": "rc_zabu111222",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Other Type",
-                          "payload": "nancat_zabu1",
-                        }
-                      ]
-
-      }
-  }
-  // to buy house in Zabuthiri, RC  
-  else if (received_message.payload === "rc_zabu111222") {
-    response = {
-                  "text": "Please choose you want to buy the house in which",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "one floor",
-                          "payload": "onef_zabuthiri11aa",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "two floor",
-                          "payload": "twof_zabuthiri11aa",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "other floor",
-                          "payload": "otherff1_zabuthiri11aa",
-                        }
-                      ]
-
-      }
-  }
-// to buy house in zabu, RC, one floor
-  else if (received_message.payload === "onef_zabuthiri11aa") {
-    response = {
-                  "text": "Do you want the house in which Mbr included or only Br included?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "Mbr",
-                          "payload": "onef_mb_zabu22aa",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Only Br",
-                          "payload": "onef_bed_zabu22aa",
-                        }
-                      ]
-      }
-  }
-  /************/
-   // to buy house in zabu, one floor,  master bed rooms
-  else if (received_message.payload === "onef_mb_zabu22aa") {
-    response = {
-                  "text": "Please choosse the land area of house:",
-                    "quick_replies": [
-                            {
-                          "content_type": "text",
-                          "title": "40*60",
-                          "payload": "onlymbed60_zabu7_tobuyz1",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*60",
-                          "payload": "mbedroom60hou6_in_tobuyz1",
-                        },
-                          {
-                          "content_type": "text",
-                          "title": "100*100",
-                          "payload": "mbedroom100hou100_in_tobuyz1",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "other",
-                          "payload": "onlyother_zabu7_tobuyz1",
-                        }
-                      ]
-      }
-  }
-
-
-
-  /***************************/
-
-// to buy house in zabu, RC, other floor
-    else if (received_message.payload === 'otherff1_zabuthiri11aa' ) {
-    response = {
-                "text": "There is no property avaliable. Sorry for you. Thanks for contacting us."
-  }
-}
-
-  /***************************/
-
-  // to buy house in zabu, RC, one floor, master bed, 40*60
-    else if (received_message.payload === 'onlymbed60_zabu7_tobuyz1' ) {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-  
-       
-           {
-            "title":"RC, 1700 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/l/t1.0-9/92212800_148345030044630_2321483867061485568_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeEHgbOBvCaxgFusYDxKkOYHMB_654nCR_QwH_rnicJH9E8V6SJFaSZkjtld4kKflRJEff8RSLUIxQ7DS3zpZxVu&_nc_ohc=3NmgwHWZbCkAX9SSlwS&_nc_ht=scontent.fmdl2-2.fna&oh=07b83b65a8103169f0b5034d976c3f71&oe=5EAF5471",
-            "subtitle":"Mbr-(1), Br-(2), face east, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-  // to buy house in zabu, RC, one floor, master bed, 60*60
-    else if (received_message.payload === 'mbedroom60hou6_in_tobuyz1' ) {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-  
-       
-           {
-            "title":"RC, 700 lakhs, 60*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92456400_148341980044935_5315513626461732864_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeHNN47ovsGuR5e8dsrxSj9d9B_aE_fP7zD0H9oT98_vMBGBCjuvS_C2XJDiCZGxnCnclC8uUrekgKK8VV5rboY8&_nc_ohc=oNufEKNmhzEAX9443tx&_nc_ht=scontent.fmdl2-1.fna&oh=eed956df5875f01944ca64ec1d4dd20a&oe=5EAFB3BC",
-            "subtitle":"Mbr-(2), face south, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-// to buy house in zabu, RC, one floor, master bed, 100*100
-    else if (received_message.payload === 'mbedroom100hou100_in_tobuyz1' ) {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-  
-       
-           {
-            "title":"RC, 1000 lakhs, 100*100 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91955219_148335103378956_2829729028192075776_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeHYsY5ju_-UtnsMR-xcQDlg3NSNpodS4azc1I2mh1LhrMPrqOlTDU65CqHDQ8JVmDdP4O4QOQpjDSKLNTI4Y5Ys&_nc_ohc=hdrpmmN65d0AX_Ct4eh&_nc_ht=scontent.fmdl2-1.fna&oh=842a715790fdc40b511bdacabb0c63c9&oe=5EAF33DA",
-            "subtitle":"Mbr-(2),Br-(2),face south, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-// to buy house in zabu, RC, one floor, master bed, other area
-    else if (received_message.payload === 'onlyother_zabu7_tobuyz1' ) {
-    response = {
-                "text": "There is no property avaliable. Sorry for you. Thanks for contacting us."
-  }
-}
-// to buy house in zabu, other type (not RC)
-    else if (received_message.payload === 'nancat_zabu1' ) {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-  
-       
-           {
-            "title":"RC, 110 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92055239_148410403371426_3609555549953196032_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeEcxWyddvgH7C0Z2B2n6syBX7GQJ4Ddfc1fsZAngN19zZZV7BUT4-dAQhBpIFP153IJzNvhPOpKrB4lWAPsT5j7&_nc_ohc=xGj5wNgncCEAX-XowML&_nc_ht=scontent.fmdl2-2.fna&oh=5bcf3aac02a9537be165941d2cd58004&oe=5EB13DBA",
-            "subtitle":"land type-(grant),face south",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-/**************************************************/
-
-
-    // to buy house in Zabu, RC, one floor, only bed rooms , area
-  else if (received_message.payload === "onef_bed_zabu22aa") {
-    response = {
-                   "text": "Do you want what area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "40*60",
-                          "payload": "onlybed60_zabuthi11",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*60",
-                          "payload": "onlybedroom60hou_in_zabuu7",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "other area",
-                          "payload": "onlybedother_zabuthi11",
-                        }
-                      ]           
-      }
-  }
-  
-   // to buy house in zabbuthiri, RC, one floor, bed room, 40* 60
-    else if (received_message.payload === 'onlybed60_zabuthi11') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"RC, 395 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92576217_148333400045793_3715312904799518720_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeF1BrOLUKqeHmWQNb6jsq7oTvSeC72-wgdO9J4Lvb7CByIaS1cCmd5BQyrO5HBGXht-Xu7mDsWjUKEzUrSH3Vuc&_nc_ohc=Lwme8DQci5IAX8BCgcb&_nc_ht=scontent.fmdl2-2.fna&oh=c8f413c67152bc8a68af77cff5347623&oe=5EB17EB0",
-            "subtitle":"3BD, land type-(grant), face north, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-   // to buy house in zabbuthiri, Rc, one floor, bed room, 60*60
-    else if (received_message.payload === 'onlybedroom60hou_in_zabuu7') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"RC, 830 lakhs, 60*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91923017_148322666713533_5407944088630591488_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeFY2FZaTFShXIcTo19BYxaHwWpR-0-xBjjBalH7T7EGODKvmZrQI1gTfbvakeY4jbOtWyZeQgiDbdPyDeipWD2h&_nc_ohc=Zc0JR1VZL-8AX81QyTU&_nc_ht=scontent.fmdl2-1.fna&oh=328e035a9f9256c1510c1f0fd96b1c60&oe=5EB1B88B",
-            "subtitle":"3BD, land type-(grant), face east, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-   // to buy house in zabbuthiri, RC, one floor, bed room, other area
-    else if (received_message.payload === 'onlybedother_zabuthi11') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"RC,  700 lakhs, 60*70ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92286133_148342503378216_8058588730224541696_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeGW9jsT3UUCPItS1rODRK9EqjIIL6S_Ya6qMggvpL9hrntDuQxVhp5423O7pzZ-QLsKl_y2RryQO5-634sWMyjF&_nc_ohc=UjaEQmobu1cAX9df-bm&_nc_ht=scontent.fmdl2-1.fna&oh=00176f4a33e5dabdbd4164e50de1fd24&oe=5EB1A6D0",
-            "subtitle":"3BD, land type-(grant), face west, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-
-
-/**************************/
-
-/*****************************************************/
-
-    // to buy  house in Zabuthiri, RC, two floor
-  else if (received_message.payload === "twof_zabuthiri11aa") {
-    response = {
-                  "text": "Do you want what area?",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "40*60",
-                          "payload": "tobuy_onlymbed60_zabu7", 
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "60*60",               
-                          "payload": "tobuy_mbedroom60hou6_in_zabuu7",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "100*100",        
-                          "payload": "tobuy_onlymbed100_zabu7",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "other area",
-                          "payload": "tobuy_onlyother_zabu7", 
-                        }
-                      ]
-      }
-  }
-
-
-  /***************************/
-
-
-
-// to buy a house Zabbuthiri, RC, two floor, 40*60
-    else if (received_message.payload === 'tobuy_onlymbed60_zabu7') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"2RC,  2500 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91774025_148348000044333_6815842511517384704_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeHzqDLnklGlQ1xWNu07MBlaHw1QFU91-UofDVAVT3X5SnGbhIDx7oZdYcEPqVUAalWsZknjEkUmzV8CvCGJRIrZ&_nc_ohc=zrefNImYLKcAX9YSeXG&_nc_ht=scontent.fmdl2-1.fna&oh=61bf79c95ef86a902df4a0fb2094cc82&oe=5EB0E892",
-            "subtitle":"Mbr-(1), Br-(4), land type-(grant), face south, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-// to buy a house Zabbuthiri, RC, two floor, 60*60
-    else if (received_message.payload === 'tobuy_mbedroom60hou6_in_zabuu7') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"2RC,  2000 lakhs, 60*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92823131_148347106711089_610544418763571200_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeFxWgAema5g4i2xFW9AdQBsOcp_FQlFfAY5yn8VCUV8BiwqdlL46YDiBCxY8iBhHIlW_rKc_ZUMlBXBZC2V_exy&_nc_ohc=k-b3E7YKzeoAX_Ds2Ud&_nc_ht=scontent.fmdl2-2.fna&oh=935494d72848dfee0dbf8c36fb149734&oe=5EB0066C",
-            "subtitle":"Mbr-(2), Br-(1), land type-(grant),face north, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
-// to buy a house Zabbuthiri, RC, two floor, 100*100
-    else if (received_message.payload === 'tobuy_onlymbed100_zabu7') {
-    response = {
-                  "text": "There is no property avaliable. Sorry for you. Thanks for contacting us."
-  }
-}
-// to buy a house Zabbuthiri, RC, two floor, other area
-    else if (received_message.payload === 'tobuy_onlyother_zabu7') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"2RC,  900 lakhs, 60*70 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92465912_148351516710648_1751142708715454464_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeG4Y_29JTV2nR-S0e4T_3l2jyTiAxhjiyWPJOIDGGOLJeN4MvyOK5riu_STZt4-BtlbQ1z-Nj2JZLgPhK7gDSRH&_nc_ohc=NlIAL0Jz0p0AX9IjMKA&_nc_ht=scontent.fmdl2-1.fna&oh=a059ee4af2076260fe6fa851d60ead96&oe=5EB1FB14",
-            "subtitle":"Mbr-(2), Br-(4), land type-(grant), face south, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586068249490801&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
-  }
-}
+    
 
 
 
@@ -8920,53 +8008,11 @@ function handlePostback(sender_psid, received_postback) {
                   }
                 }
               }
-  }else if (payload === 'hou') {
-    response = { "attachment": {
-                  "type": "template",
-                  "payload": {
-                    "template_type": "button",
-                      "text": "Please choose the place in which you want to buy house",
-                      "buttons": [
-                        {
-                          "type": "postback",
-                          "title": "In Five Thri Township",
-                          "payload": "fethri",
-                        },
-                         {
-                          "type": "postback",
-                          "title": "Pyinmana Township",
-                          "payload": "pyintwp",
-                        }
-                      ]
-                    
-                  }
-                }
-              }
-  }
-    // to buy house in pyinmana,
-  else if (payload === "pyintwp" ) {
-    response = {
-                  "text": "Please choose the below option:",
-                    "quick_replies": [
-                         {
-                          "content_type": "text",
-                          "title": "RC",
-                          "payload": "tobuyrcpyin_aa1",
-                        },
-                        {
-                          "content_type": "text",
-                          "title": "Other type",
-                          "payload": "tobuyothertypepyin_bb1",
-                        }
-                      ]
-
-      }
   }
 
-
-   else if (payload === 'fethri') {
+   else if (payload === 'hou') {
          response = {
-                  "text": "Please choose the one name of townships in which you want to buy a house:",
+                  "text": "Do you want to buy a house in what township?",
                     "quick_replies": [
                         {
                           "content_type": "text",
@@ -8992,6 +8038,11 @@ function handlePostback(sender_psid, received_postback) {
                           "content_type": "text",
                           "title": "Zabu Thiri",
                           "payload": "zabtwp",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Pyinmana",
+                          "payload": "pyintwp",
                         }
                       ]
 
@@ -9047,14 +8098,14 @@ else if (payload === 'innnter') {
                           "title": "In Five Thri Township",
                           "payload": "5fthri",
                         },
-                         {
+                        {
                           "type": "postback",
                           "title": "Pyinmana Township",
                           "payload": "pyi5",
                         }
-                              ]
-                            }
-                              }
+                      ]
+                  }
+              }
     }
   }
   // to buy land in pyinmana
