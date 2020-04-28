@@ -8986,37 +8986,36 @@ function handlePostback(sender_psid, received_postback) {
                         {
                           "content_type": "text",
                           "title": "Ottara",
-                          "payload": "tenanott",
+                          "payload": "tenanott"
                         },
                          {
                           "content_type": "text",
                           "title": "Pobba",
-                          "payload": "tenanpob",
+                          "payload": "tenanpob"
                         },
                         {
                           "content_type": "text",
                           "title": "Dekkhina",
-                          "payload": "tenandek",
+                          "payload": "tenandek"
                         },
                         {
                           "content_type": "text",
                           "title": "Zaya Thiri",
-                          "payload": "tenanzay",
+                          "payload": "tenanzay"
                         },
                         {
                           "content_type": "text",
                           "title": "Zabu Thiri",
-                          "payload": "tenanzabu",
+                          "payload": "tenanzabu"
                         }, 
                         {
-                          "type": "postback",
+                          "type": "text",
                           "title": "Pyinmana",
                           "payload": "tenanpyin"
                         }
                       ]
               }
   }
-
 /****************************************************************************************/
 /****************************************************************************************/
 
