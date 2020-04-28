@@ -9011,7 +9011,7 @@ function handlePostback(sender_psid, received_postback) {
                         {
                           "type": "postback",
                           "title": "Pyinmana",
-                          "payload": "tenanpyin",
+                          "payload": "tenanpyin"
                         }
                       ]
               }
