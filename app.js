@@ -3230,7 +3230,7 @@ else if (received_message.payload === "zabtwp") {
 /**************************************/
 
 // to buy house in pyinmana,
-  else if (payload === "pyintwp" ) {
+  else if (received_message.payload === "pyintwp" ) {
     response = {
                   "text": "Please choose the below option:",
                     "quick_replies": [
@@ -3617,10 +3617,7 @@ else if (received_message.payload === "zabtwp") {
     }
     }
   }
-
-
-/*******************************************************************/
-
+/********************************/
 
 // to buy house in pyinmana, RC, other floor
   else if (received_message.payload === "otherf_pyinfloorbb11") {
