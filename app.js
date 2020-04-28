@@ -7957,7 +7957,7 @@ else if (payload === 'innnter') {
                         },
                         {
                           "content_type": "text",
-                          "title": "Pyinmana Township",
+                          "title": "Pyinmana",
                           "payload": "pyi5",
                         }
                       ]
@@ -8252,7 +8252,70 @@ else if (payload === 'hoou2') {
 
       }
   }
+/**********************************************************************************************************************/
 
+
+
+// moving house service
+    else if (.payload === 'move_hou_service') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements": [ 
+        
+          {
+            "title":"Thone Bane",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/87687473_131104698435330_2366752654857601024_n.jpg?_nc_cat=106&_nc_sid=0be424&_nc_ohc=QGhybKhq_M8AX-3UBKC&_nc_ht=scontent.fmdl2-1.fna&oh=6d483b8025968c5c6f6ff9ed71a9dfd5&oe=5ECE575D",
+            "subtitle":".",
+            "default_action": {
+              "type": "web_url",
+              "url": "",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1587913838063988&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"move_hou_thone_bane"
+              }              
+            ]      
+          },
+             {
+            "title":"Light Truck",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/87529724_131104741768659_4560297288781529088_n.jpg?_nc_cat=103&_nc_sid=0be424&_nc_ohc=LLl2pFxuUMQAX9gxSpX&_nc_ht=scontent.fmdl2-1.fna&oh=94929c06c19eb4c27867db5fbec5656a&oe=5ECC9385",
+            "subtitle":".",
+            "default_action": {
+              "type": "web_url",
+              "url": "",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1587913838063988&notif_t=page_message&ref=notif",
+                "title":"More Information"
+              },
+              {
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"move_hou_light_truck"
+              }              
+            ]      
+          }
+
+
+        ]
+      }
+    }
+  }
+}
 
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
@@ -8512,6 +8575,11 @@ async function greetUser(sender_psid){
         "template_type":"button",
         "text":". ",
          "buttons":[
+                    {
+                    "type":"postback",
+                    "title":"Moving House Service",
+                    "payload": "move_hou_service"
+                    },
                     {
                     "type":"postback",
                     "title":"Service charges",
