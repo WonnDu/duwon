@@ -1516,17 +1516,17 @@ else if (received_message.payload === "cu_say_yes_for_sthElse") {
                          {
                           "content_type": "text",
                           "title": "80*80",
-                          "payload": "80_in_ott",
+                          "payload": "80_in_ott", // complete
                         },
                         {
                           "content_type": "text",
                           "title": "100*100",
-                          "payload": "100_in_ott",
+                          "payload": "100_in_ott", // complete
                         },
                         {
                           "content_type": "text",
                           "title": "150*150",
-                          "payload": "150_in_ott",
+                          "payload": "150_in_ott", // complete text
                         }
                       ]
       }
@@ -1539,17 +1539,17 @@ else if (received_message.payload === "cu_say_yes_for_sthElse") {
                          {
                           "content_type": "text",
                           "title": "80*80",
-                          "payload": "twof80_in_ott",
+                          "payload": "twof80_in_ott", // complete
                         },
                         {
                           "content_type": "text",
                           "title": "100*100",
-                          "payload": "twof100_in_ott",
+                          "payload": "twof100_in_ott", // complete
                         },
                         {
                           "content_type": "text",
                           "title": "150*150",
-                          "payload": "twof150_in_ott",
+                          "payload": "twof150_in_ott", // complete
                         }
                       ]
       }
@@ -1557,7 +1557,7 @@ else if (received_message.payload === "cu_say_yes_for_sthElse") {
 
 /*************************************************/
 
-// to buy house in oattra, RC, one floor, 80*80
+// to buy house in oattra, RC, one floor, 80*80 // complete
     else if (received_message.payload === '80_in_ott') {
     response = {
     "attachment":{
@@ -1568,17 +1568,17 @@ else if (received_message.payload === "cu_say_yes_for_sthElse") {
         
            {
             "title":"RC, 2500 lakhs, 80*80 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92351629_148794463333020_2221158640822255616_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeFm1wi0SGzyni_3NnxhV8Kj1lNwb3N4O3bWU3Bvc3g7dqEGpoxFQfLp2LSy7mRPgwj9ppl6UkkYIqzQC9mAFgW7&_nc_ohc=l2RNd7uB4IgAX-owFfd&_nc_ht=scontent.fmdl2-1.fna&oh=75c5576355ba2da2eeccbc1905d08e25&oe=5EB07C45",
-            "subtitle":"Mbr-(2), land type-(grant), face south, Negotiable",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92351629_148794463333020_2221158640822255616_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeFm1wi0SGzyni_3NnxhV8Kj1lNwb3N4O3bWU3Bvc3g7dqEGpoxFQfLp2LSy7mRPgwj9ppl6UkkYIqzQC9mAFgW7&_nc_ohc=DvaeZzryCYUAX_S_qgT&_nc_ht=scontent.fmdl2-1.fna&oh=f69f9220fff2b8f1db623b5defefa594&oe=5EDFF245",
+            "subtitle":"",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/148795749999558/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/148795749999558/?d=n",
                 "title":"More Information"
               },
               {
@@ -1596,7 +1596,7 @@ else if (received_message.payload === "cu_say_yes_for_sthElse") {
 }
 
 
-// to buy house in oattra, RC, one floor, 100*100
+// to buy house in oattra, RC, one floor, 100*100 // complete
     else if (received_message.payload === '100_in_ott') {
     response = {
     "attachment":{
@@ -1607,17 +1607,17 @@ else if (received_message.payload === "cu_say_yes_for_sthElse") {
         
            {
             "title":"RC, 3000 lakhs, 100*100 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91912200_148783696667430_2449683035914764288_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeGtmRWzKn14WcOyBlHpkLA8U4OdKoYtcohTg50qhi1yiCt7wEw-ep9s_RQgz5V370kLzW9e5txrxVGQj_84K-09&_nc_ohc=CcVp57UKpFIAX-DJiRB&_nc_ht=scontent.fmdl2-1.fna&oh=76724e70158faba1e3386ff9413e2251&oe=5EB1FE9D",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91912200_148783696667430_2449683035914764288_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeGtmRWzKn14WcOyBlHpkLA8U4OdKoYtcohTg50qhi1yiCt7wEw-ep9s_RQgz5V370kLzW9e5txrxVGQj_84K-09&_nc_ohc=ULbgxq5Vt6oAX_GXuqF&_nc_ht=scontent.fmdl2-1.fna&oh=0f158775833551b86621692016f0327d&oe=5EE1749D",
             "subtitle":"Mbr-(4), Br-(1), land type-(grant), face north, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/148790940000039/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/148790940000039/?d=n",
                 "title":"More Information"
               },
               {
@@ -1634,47 +1634,18 @@ else if (received_message.payload === "cu_say_yes_for_sthElse") {
   }
 }
 
-// to buy house in oattra, RC, one floor, 150*150
+// to buy house in oattra, RC, one floor, 150*150 // complete text
     else if (received_message.payload === '150_in_ott') {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"RC, 4000 lakhs, 150*150 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92455881_148780726667727_1440690996407959552_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeGf9LydtrRy0Pv5ZMogA6x-iVE1BTJAoH6JUTUFMkCgfvVyire9NqORSOcCe7roMWslwom0L_MecnwPhfXdtz8B&_nc_ohc=c_ZjDikT9XUAX_auGhw&_nc_ht=scontent.fmdl2-1.fna&oh=f48d774f3ef4ed31d7c61775f042646d&oe=5EB1CDC2",
-            "subtitle":"Mbr-(3), land type-(grant), face west, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
-      }
+          response = {
+      "text": "There is no property avaliable. Sorry for you. Have a nice day!"
     }
-  }
 }
+
+
 
 /**********************************/
 
-// to buy house in oattra, RC, two floor, 80*80
+// to buy house in oattra, RC, two floor, 80*80 // complete
     else if (received_message.payload === 'twof80_in_ott') {
     response = {
     "attachment":{
@@ -1685,17 +1656,17 @@ else if (received_message.payload === "cu_say_yes_for_sthElse") {
         
            {
             "title":"2RC, 2000 lakhs, 80*80 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92243595_148808969998236_2207483370462511104_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeHszxekDwF7YUypu6w1O-DkdSzCbXL8J9d1LMJtcvwn154x57tv3s4IbYD7nFu1S0dUVp_ws3dUsXZkjbhpG3nb&_nc_ohc=35Ffa_2E5iEAX8p4DMu&_nc_ht=scontent.fmdl2-1.fna&oh=0f0e59f714a518ed5914f0f8caa3142a&oe=5EB1EA06",
-            "subtitle":"Mbr-(1), Br-(2), land type-(grant), face south, Negotiable",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92243595_148808969998236_2207483370462511104_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeHszxekDwF7YUypu6w1O-DkdSzCbXL8J9d1LMJtcvwn154x57tv3s4IbYD7nFu1S0dUVp_ws3dUsXZkjbhpG3nb&_nc_ohc=so172qaRYL4AX-GKSG6&_nc_ht=scontent.fmdl2-1.fna&oh=337f9e1278e76a8fef5c691aafc3931b&oe=5EE16006",
+            "subtitle":"Mbr-(3), Br-(3), land type-(grant), face south, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/148810216664778/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/148810216664778/?d=n",
                 "title":"More Information"
               },
               {
@@ -1712,7 +1683,7 @@ else if (received_message.payload === "cu_say_yes_for_sthElse") {
   }
 }
 
-// to buy house in oattra, RC, two floor, 100*100
+// to buy house in oattra, RC, two floor, 100*100 // complete
     else if (received_message.payload === 'twof100_in_ott') {
     response = {
     "attachment":{
@@ -1722,18 +1693,18 @@ else if (received_message.payload === "cu_say_yes_for_sthElse") {
         "elements": [ 
         
            {
-            "title":"2RC, 3000 lakhs, 100*100 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92577724_148801386665661_3656608166516359168_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeFt0-dDc-FGDdhKVueJlnJ7eVXqTKuoYJR5VepMq6hglO7w10RQQYRLvizT9e3NUsFd9Hq7Sv4Q9md3EZJSnycB&_nc_ohc=rhTJjCGelPwAX8IZTtf&_nc_ht=scontent.fmdl2-1.fna&oh=53d7c2e67a80d3219997f94554bdf57e&oe=5EB19DF0",
+            "title":"2RC, 3500 lakhs, 100*100 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92577724_148801386665661_3656608166516359168_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeFt0-dDc-FGDdhKVueJlnJ7eVXqTKuoYJR5VepMq6hglO7w10RQQYRLvizT9e3NUsFd9Hq7Sv4Q9md3EZJSnycB&_nc_ohc=azaDkkF1THsAX9Z49x-&_nc_ht=scontent.fmdl2-1.fna&oh=de8e5d29948a6fe0464d7d38033dd8e1&oe=5EE113F0",
             "subtitle":"Mbr-(2), Br-(3), land type-(grant), face east, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/148802449998888/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/148802449998888/?d=n",
                 "title":"More Information"
               },
               {
@@ -1750,7 +1721,7 @@ else if (received_message.payload === "cu_say_yes_for_sthElse") {
   }
 }
 
-// to buy house in oattra, RC, two floor, 150*150
+// to buy house in oattra, RC, two floor, 150*150 // complete
     else if (received_message.payload === 'twof150_in_ott') {
     response = {
     "attachment":{
@@ -1761,17 +1732,17 @@ else if (received_message.payload === "cu_say_yes_for_sthElse") {
         
            {
             "title":"2RC, 5000 lakhs, 150*150 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91553411_148811056664694_2994737999507357696_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeEfP3OQyWSVC6Z-lY6HYqDWh_MT8b2h51aH8xPxvaHnVqPHPIBXsMgLEI-3fAuGNUnNKKIzHBw2Y-A6HGPqzGB3&_nc_ohc=gFqz7a__45AAX_2usbC&_nc_ht=scontent.fmdl2-1.fna&oh=5fe87bc5ad80fdbfdc83bf4ad011b8ca&oe=5EB3AC65",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91553411_148811056664694_2994737999507357696_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeEfP3OQyWSVC6Z-lY6HYqDWh_MT8b2h51aH8xPxvaHnVqPHPIBXsMgLEI-3fAuGNUnNKKIzHBw2Y-A6HGPqzGB3&_nc_ohc=oMf8b87ysjoAX8FtYGu&_nc_ht=scontent.fmdl2-1.fna&oh=70c56b3e2a89edfa544371ab617dc297&oe=5EE32265",
             "subtitle":"Mbr-(2), land type-(grant), face north, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/148812259997907/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/148812259997907/?d=n",
                 "title":"More Information"
               },
               {
@@ -1813,7 +1784,7 @@ else if (received_message.payload === "potwp") {
                         {
                           "content_type": "text",
                           "title": "Other Type",
-                          "payload": "otherType_pobb",
+                          "payload": "otherType_pobb", // complete text
                         }
                       ]
 
@@ -1827,17 +1798,17 @@ else if (received_message.payload === "potwp") {
                          {
                           "content_type": "text",
                           "title": "one floor",
-                          "payload": "onef_pobb",
+                          "payload": "onef_pobb", // complete all
                         },
                         {
                           "content_type": "text",
                           "title": "two floor",
-                          "payload": "twof_pobb",
+                          "payload": "twof_pobb", //complete text
                         },
                         {
                           "content_type": "text",
                           "title": "other floor",
-                          "payload": "thirdf_pobb",
+                          "payload": "thirdf_pobb", // complete
                         }
                       ]
 
@@ -1853,17 +1824,17 @@ else if (received_message.payload === "potwp") {
                          {
                           "content_type": "text",
                           "title": "40*60",
-                          "payload": "tobuyhoupobb_rconefmbr24inaa",
+                          "payload": "tobuyhoupobb_rconefmbr24inaa", // complete text
                         },
                         {
                           "content_type": "text",
                           "title": "60*80",
-                          "payload": "tobuyhoupobb_rconefmbr68aaan",
+                          "payload": "tobuyhoupobb_rconefmbr68aaan", // complete text
                         },
                          {
                           "content_type": "text",
                           "title": "80*80",
-                          "payload": "tobuyhoupobb_rconefmbr88nnna",
+                          "payload": "tobuyhoupobb_rconefmbr88nnna", // complete
                         }
                       ]
   }
@@ -1876,99 +1847,37 @@ else if (received_message.payload === "potwp") {
                          {
                           "content_type": "text",
                           "title": "40*60",
-                          "payload": "tobuyhoupobb_rctwof46pob",
+                          "payload": "tobuyhoupobb_rctwof46pob", // complete
                         },
                         {
                           "content_type": "text",
                           "title": "60*80",
-                          "payload": "tobuyhoupobb_rctwof68aart",
+                          "payload": "tobuyhoupobb_rctwof68aart",  // complete text
                         },
                          {
                           "content_type": "text",
                           "title": "80*80",
-                          "payload": "tobuyhoupobb_rctwof88bbw",
+                          "payload": "tobuyhoupobb_rctwof88bbw", // complete
                         }
                       ]
   }
 }
 
-// to buy house in pobba, RC, one floor, 40*60
+// to buy house in pobba, RC, one floor, 40*60 // complete text
  else if (received_message.payload === 'tobuyhoupobb_rconefmbr24inaa') {
     response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-                    {
-            "title":"RC, 500 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92831429_148690140010119_457507630131183616_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeE9zcF8NnpLPKl62pX9HioMwM8Pb79goQXAzw9vv2ChBYUnC-ju8y6DZUIJF30zKiuGPVjBQrDDyMQP9wAMOxEJ&_nc_ohc=WduouaN1hjsAX8Uj_x2&_nc_ht=scontent.fmdl2-1.fna&oh=568c5bdef4e9ecc484fd7928f0c862e6&oe=5EB1E35A",
-            "subtitle":"MBr-(1), Br-(2), land type-(grant), face east, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
+          "text" : "There is no property avaliable. Sorry for you. Have a nice day!"
   }
 }
 
-// to buy house in pobba, RC, one floor, Mbr , 60*80
+// to buy house in pobba, RC, one floor,  60*80 // complete text
  else if (received_message.payload === 'tobuyhoupobb_rconefmbr68aaan') {
     response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-                    {
-            "title":"RC, 1300 lakhs, Negotiable, 60*80 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92141671_148691213343345_4810507837039968256_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeFwzQz5Fa1a1b6rTxcMDxOf0Bja6JtczzLQGNrom1zPMqSLxn3HfxY3v96qaK0vlAQ0LhMVFdJUEFb6oQw1SSUu&_nc_ohc=cAMzawpv1dsAX-fiBFJ&_nc_ht=scontent.fmdl2-1.fna&oh=94b2d2e832e6a2d3e1929d3e019a22f5&oe=5EB20EC5",
-            "subtitle":"MBr-(2), Br-(3), land type-(grant), face west and north",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
+            "text" : "There is no property avaliable. Sorry for you. Have a nice day!"
   }
 }
 
-// to buy house in pobba, RC, one floor, Mbr , 80*80
+// to buy house in pobba, RC, one floor,  80*80 // complete
  else if (received_message.payload === 'tobuyhoupobb_rconefmbr88nnna') {
     response = {
     "attachment":{
@@ -1979,17 +1888,17 @@ else if (received_message.payload === "potwp") {
         
                     {
             "title":"RC, 950 lakhs, 80*80 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92555021_148694693342997_4064605342099570688_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeHdSxG1IzD6iMZL01qEg0KzthAmkZBLAZK2ECaRkEsBklsHQStxScdsxZDKhJHFmGhjF-6yz9By88h_ESul1b2d&_nc_ohc=zrd5mQyTMQMAX_MAjMx&_nc_ht=scontent.fmdl2-2.fna&oh=a473039b886e5dc645e0483299e5c88a&oe=5EB34FB4",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92555021_148694693342997_4064605342099570688_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeHdSxG1IzD6iMZL01qEg0KzthAmkZBLAZK2ECaRkEsBklsHQStxScdsxZDKhJHFmGhjF-6yz9By88h_ESul1b2d&_nc_ohc=kZWapLUa1OMAX8q8OOo&_nc_ht=scontent.fmdl2-2.fna&oh=d0928d3d2908871fff222be5571f3a01&oe=5EE2C5B4",
             "subtitle":"MBr-(2), Br-(3), land type-(grant), face north, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/148695696676230/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/148695696676230/?d=n",
                 "title":"More Information"
               },
               {
@@ -2049,7 +1958,7 @@ else if (received_message.payload === "potwp") {
 
 /****************************************/
 
-// to buy house in pobba, RC, two floor, 40*60
+// to buy house in pobba, RC, two floor, 40*60 // complete
  else if (received_message.payload === 'tobuyhoupobb_rctwof46pob') {
     response = {
     "attachment":{
@@ -2060,17 +1969,17 @@ else if (received_message.payload === "potwp") {
         
                     {
             "title":"2RC, 2500 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91606159_148757690003364_6476717670556237824_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeEwaNaIO6IktYPhZerxMcm7Qew2jPuaaEFB7DaM-5poQZvYiKqWGrH_lW38GzC0sEa2ozlem0muIfNfovwajN7B&_nc_ohc=xmULYHKmuWMAX8mWmY6&_nc_ht=scontent.fmdl2-1.fna&oh=896dcfb6903ac4aa391c915c34f871fc&oe=5EB37841",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91606159_148757690003364_6476717670556237824_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeEwaNaIO6IktYPhZerxMcm7Qew2jPuaaEFB7DaM-5poQZvYiKqWGrH_lW38GzC0sEa2ozlem0muIfNfovwajN7B&_nc_ohc=hslf-WjVJoAAX-OP-p8&_nc_ht=scontent.fmdl2-1.fna&oh=f7d79bf5781b28d881c24f9d75635104&oe=5EE2EE41",
             "subtitle":"MBr-(2), Br-(2), land type-(grant), face south, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/148761353336331/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/148761353336331/?d=n",
                 "title":"More Information"
               },
               {
@@ -2087,46 +1996,21 @@ else if (received_message.payload === "potwp") {
   }
 }
 
-// to buy house in pobba, RC, two floor, 60*80
+// to buy house in pobba, RC, two floor, 60*80 // complete text
  else if (received_message.payload === 'tobuyhoupobb_rctwof68aart') {
     response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-                    {
-            "title":"2RC, 900 lakhs, 60*80 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92517086_148751140004019_3914064358962888704_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeFoOvq0bRFW0r7Srwl3N0U6qLmh0okITviouaHSiQhO-AqAdJfPRZtbQ8jrzolCH2ITGEZeyM794Swu5gSj8kTf&_nc_ohc=PxwqZF2pwtAAX-4aXYH&_nc_ht=scontent.fmdl2-1.fna&oh=1754795b4c5cdf6738bdbfe5f46ea909&oe=5EB0B753",
-            "subtitle":"MBr-(2), Br-(2), land type-(grant), face south, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"aaabbb11m_tobuya"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
+          "text" : "There is no property avaliable. Sorry for you. Have a nice day!"
   }
 }
 
+// to buy house in pobba, other type // complete text
+ else if (received_message.payload === 'otherType_pobb') {
+    response = {
+          "text" : "There is no property avaliable. Sorry for you. Have a nice day!"
+  }
+}
 
-// to buy house in pobba, RC, two floor, 80*80
+// to buy house in pobba, RC, two floor, 80*80 // complete
  else if (received_message.payload === 'tobuyhoupobb_rctwof88bbw') {
     response = {
     "attachment":{
@@ -2137,17 +2021,17 @@ else if (received_message.payload === "potwp") {
         
                     {
             "title":"2RC, 3500 lakhs, 80*80 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92463513_148754363337030_6063595422167859200_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_eui2=AeGEiOz1OhNnDp1HZmVLX-bLmqWuDQ1bDISapa4NDVsMhDw_xJfVd9Nb2PC9a3eG6ILKw0MuXJZGWA5_etoz-7jX&_nc_ohc=kMH-IN34uOYAX9JHqYO&_nc_ht=scontent.fmdl2-1.fna&oh=85e1416c08e94c83e9ef5265320950a4&oe=5EB30201",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92463513_148754363337030_6063595422167859200_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_eui2=AeGEiOz1OhNnDp1HZmVLX-bLmqWuDQ1bDISapa4NDVsMhDw_xJfVd9Nb2PC9a3eG6ILKw0MuXJZGWA5_etoz-7jX&_nc_ohc=DvR8mZPr024AX-Xy5ZN&_nc_ht=scontent.fmdl2-1.fna&oh=f59b35f082eb15cfe9c55c0bd6c5f791&oe=5EE27801",
             "subtitle":"MBr-(3), Br-(2), land type-(grant), face east, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/148755383336928/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/148755383336928/?d=n",
                 "title":"More Information"
               },
               {
@@ -2165,7 +2049,7 @@ else if (received_message.payload === "potwp") {
 }
 /*********************************/
 
-// to buy house in pobba, RC, other floor
+// to buy house in pobba, RC, other floor // complete
  else if (received_message.payload === 'thirdf_pobb') {
     response = {
     "attachment":{
@@ -2176,17 +2060,17 @@ else if (received_message.payload === "potwp") {
         
            {
             "title":"3RC, 3600 lakhs, 60*80 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92138782_148707466675053_5918704202221092864_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeE_h3jBITkW7xkMqu3_I6ZSTbencPv31K1Nt6dw-_fUrRIBi2eMl4upeFefewulR61984TZbIxxpK-ya8_OLYqw&_nc_ohc=d7YY9JJ3fBsAX9uFLtw&_nc_ht=scontent.fmdl2-1.fna&oh=2328b837dd4e1233e2aa509045cc3207&oe=5EB3FC6E",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92138782_148707466675053_5918704202221092864_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeE_h3jBITkW7xkMqu3_I6ZSTbencPv31K1Nt6dw-_fUrRIBi2eMl4upeFefewulR61984TZbIxxpK-ya8_OLYqw&_nc_ohc=TEylSP0f8FoAX-lix3b&_nc_ht=scontent.fmdl2-1.fna&oh=2b4637f1a87dd8301fd51e2eeea0e88b&oe=5EE3726E",
             "subtitle":"MBr-(4), Br-(2), land type-(grant), face north, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/148708120008321/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/148708120008321/?d=n",
                 "title":"More Information"
               },
               {
@@ -3283,17 +3167,17 @@ else if (received_message.payload === "zabtwp") {
                          {
                           "content_type": "text",
                           "title": "40*60",
-                          "payload": "tobuhourcpyin46_tobuaa7",
+                          "payload": "tobuhourcpyin46_tobuaa7", // complete
                         },
                         {
                           "content_type": "text",
                           "title": "60*72",
-                          "payload": "tobuhourcpyin172_tobunn7",
+                          "payload": "tobuhourcpyin172_tobunn7", // complete
                         },
                         {
                           "content_type": "text",
                           "title": "60*80",
-                          "payload": "tobuhourcpyin68_tobumma1",
+                          "payload": "tobuhourcpyin68_tobumma1", // complete
                         },
                         {
                           "content_type": "text",
@@ -3334,7 +3218,7 @@ else if (received_message.payload === "zabtwp") {
   }
 
 
-// to buy house in pyinmana, RC, one floor, 40*60
+// to buy house in pyinmana, RC, one floor, 40*60 // complete
   else if (received_message.payload === "tobuhourcpyin46_tobuaa7") {
     response = {
       "attachment":{
@@ -3345,17 +3229,17 @@ else if (received_message.payload === "zabtwp") {
         
            {
             "title":"RC, 800 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91664968_149027856643014_3018289688898174976_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeGRHIaeZKMyPNKfOeoww905B5sI3sATrD4HmwjewBOsPpGS3GqeitBU4k6asf5ijfHtiXTjJyQUo9u9DVzydHqd&_nc_ohc=kMOWTJMbEHIAX_qTSw1&_nc_ht=scontent.fmdl2-2.fna&oh=81eaeca5b4bd3145141aaeb803aa522b&oe=5EB1858C",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92514443_149027839976349_7811256810781802496_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeGtwC8RgNaOUNZPFO3REPuj31gLL-xUvrzfWAsv7FS-vEWluPM-NjSGYRQrhXGeU3JTON-qX0R_nX8m0tQCyVJW&_nc_ohc=DLHv077sdm8AX_3jdmi&_nc_ht=scontent.fmdl2-2.fna&oh=cbf82f9e5267546a6bc25d0fdc3ae19a&oe=5EDFC6C1",
             "subtitle":"Mbr-(1), Br-(2), land type-(grant), face south, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/149028459976287/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/149028459976287/?d=n",
                 "title":"More Information"
               },
               {
@@ -3372,7 +3256,7 @@ else if (received_message.payload === "zabtwp") {
     }
   }
 
-// to buy house in pyinmana, RC, one floor, 60*72
+// to buy house in pyinmana, RC, one floor, 60*72 // complete
   else if (received_message.payload === "tobuhourcpyin172_tobunn7") {
     response = {
       "attachment":{
@@ -3383,17 +3267,17 @@ else if (received_message.payload === "zabtwp") {
         
            {
             "title":"RC, 550 lakhs, 60*72 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92353603_149043869974746_8473619924072267776_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeGgvj4JXTB-BaKlrv6fCWkPD8Wz4sbkNI8PxbPixuQ0j4z4WFsuBeE4rDoXcka8l3DzzgHyop1A6jQY9BeyxOWv&_nc_ohc=UwLfnfMu-QQAX-lKiLp&_nc_ht=scontent.fmdl2-1.fna&oh=7c3a2dc9036f0c70cc5e9cb0eb33e15c&oe=5EB1873A",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92353603_149043869974746_8473619924072267776_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeGgvj4JXTB-BaKlrv6fCWkPD8Wz4sbkNI8PxbPixuQ0j4z4WFsuBeE4rDoXcka8l3DzzgHyop1A6jQY9BeyxOWv&_nc_ohc=8IkUGIiYAvoAX_fJFsa&_nc_ht=scontent.fmdl2-1.fna&oh=298d573636dd736f667b4b2a7c89f7cd&oe=5EE0FD3A",
             "subtitle":"Mbr-(1), Br-(2), land type-(grant), face east, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/149043983308068?sfns=mo",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/149043983308068?sfns=mo",
                 "title":"More Information"
               },
               {
@@ -3410,7 +3294,7 @@ else if (received_message.payload === "zabtwp") {
     }
   }
 
-// to buy house in pyinmana, RC, one floor, 60*80
+// to buy house in pyinmana, RC, one floor, 60*80 // complete
   else if (received_message.payload === "tobuhourcpyin68_tobumma1") {
     response = {
       "attachment":{
@@ -3420,18 +3304,18 @@ else if (received_message.payload === "zabtwp") {
         "elements": [ 
         
            {
-            "title":"RC, 850 lakhs, Width-(60*80)",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92345669_149033143309152_6933827548061106176_n.jpg?_nc_cat=105&_nc_sid=110474&_nc_eui2=AeEI4W8wxQk3tk9YgjJjQ_vGP1pHh5H1KD8_WkeHkfUoPxtx5_-T7IVd-7alAloGuyAZbuYPZOCOJab3je027jsy&_nc_ohc=sBvJQg8bkjYAX9G8Kpp&_nc_ht=scontent.fmdl2-2.fna&oh=382cf06a14c01e693485808b266b26d7&oe=5EB4B0D5",
+            "title":"1RC, 850 lakhs, Width-(60*80)",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92345669_149033143309152_6933827548061106176_n.jpg?_nc_cat=105&_nc_sid=110474&_nc_eui2=AeEI4W8wxQk3tk9YgjJjQ_vGP1pHh5H1KD8_WkeHkfUoPxtx5_-T7IVd-7alAloGuyAZbuYPZOCOJab3je027jsy&_nc_ohc=Vd8IKmDaFRUAX_1X-V8&_nc_ht=scontent.fmdl2-2.fna&oh=89b1e11f2046f8e2e1d40adacad9db27&oe=5EE03255",
             "subtitle":"Mbr-(2), Br-(1), land type-(grant), face south, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/149035373308929/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/149035373308929/?d=n",
                 "title":"More Information"
               },
               {
@@ -3459,7 +3343,7 @@ else if (received_message.payload === "zabtwp") {
 /**********************************/
 
 
-// to buy house in pyinmana, RC, two floor, 40*60
+// to buy house in pyinmana, RC, two floor, 40*60 // complete
   else if (received_message.payload === "tobuytwof_rcpyin_a46ab") {
     response = {
       "attachment":{
@@ -3470,17 +3354,17 @@ else if (received_message.payload === "zabtwp") {
         
            {
             "title":"2RC, 2300 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91909041_149045459974587_3734464206922055680_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeFU2LcrrLbR-1h9foxAhqdQB74mqwENAW0HviarAQ0BbSVC1u_Z_umhu8d7qGBi4uix6EwDxD8Fe-cH_uN1RPuC&_nc_ohc=puXGjPNCVz4AX8fgEfL&_nc_ht=scontent.fmdl2-1.fna&oh=ea5563303495ed0876589d4e0ae7a747&oe=5EB36069",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91909041_149045459974587_3734464206922055680_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeFU2LcrrLbR-1h9foxAhqdQB74mqwENAW0HviarAQ0BbSVC1u_Z_umhu8d7qGBi4uix6EwDxD8Fe-cH_uN1RPuC&_nc_ohc=6usbHowxbBEAX9a6Lz2&_nc_ht=scontent.fmdl2-1.fna&oh=115579a0007409cf3364717917b1920b&oe=5EE2D669",
             "subtitle":"Mbr-(4), land type-(grant), face north, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/149046339974499?sfns=mo",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/149046339974499?sfns=mo",
                 "title":"More Information"
               },
               {
@@ -3508,17 +3392,17 @@ else if (received_message.payload === "zabtwp") {
         
            {
             "title":"2RC, 1800 lakhs, 60*72 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91663260_149049396640860_3878909622148399104_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeGHkGRYDmdeavjzqEgTafF6vGtLT4QsOYC8a0tPhCw5gGfUGkXLqAvDbcmS2kynpkc427C_nqwWJyVMHf6lzNw7&_nc_ohc=aXbSPOJrDXwAX_7A_Ij&_nc_ht=scontent.fmdl2-2.fna&oh=d5558fa54bef9dc6a18a5cde99b328df&oe=5EB32EB3",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91663260_149049396640860_3878909622148399104_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeGHkGRYDmdeavjzqEgTafF6vGtLT4QsOYC8a0tPhCw5gGfUGkXLqAvDbcmS2kynpkc427C_nqwWJyVMHf6lzNw7&_nc_ohc=UksZn3kUd4UAX8VSjTk&_nc_ht=scontent.fmdl2-2.fna&oh=efa9c980227d38061aeac1892adf662e&oe=5EE2A4B3",
             "subtitle":"Mbr-(2), Br-(1), land type-(grant), face south, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/149050303307436/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/149050303307436/?d=n",
                 "title":"More Information"
               },
               {
@@ -3546,17 +3430,17 @@ else if (received_message.payload === "zabtwp") {
         
            {
             "title":"2RC, 2500 lakhs, 60*80 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91647057_149048646640935_1634770849003208704_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_eui2=AeF5T-k7A2rpdAenpQX7rnQypSsvlvO9AJ2lKy-W870AneezH0bEyn8dFfPyyEkjsM0EKd0vLicVlYL82SSzmRXI&_nc_ohc=vKqTcuhKlTkAX-qAIiB&_nc_ht=scontent.fmdl2-1.fna&oh=759375e2414be0c936669dd1904a9f24&oe=5EB2C4F0",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91647057_149048646640935_1634770849003208704_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_eui2=AeF5T-k7A2rpdAenpQX7rnQypSsvlvO9AJ2lKy-W870AneezH0bEyn8dFfPyyEkjsM0EKd0vLicVlYL82SSzmRXI&_nc_ohc=fDjjU9KTTXsAX-H3pTg&_nc_ht=scontent.fmdl2-1.fna&oh=c2ab3c4acc55de5f1cf267a7e093b526&oe=5EE23AF0",
             "subtitle":"Mbr-(4), Br-(2), land type-(grant), face south, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/149048763307590/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/149048763307590/?d=n",
                 "title":"More Information"
               },
               {
@@ -4175,7 +4059,7 @@ else if (received_message.payload === 'land80_ott') {
       }
   }
   
-// to buy land in Oattra, 100*100 
+// to buy land in Oattra, 100*100 // complete
 else if (received_message.payload === 'land100_ott') {
     response = {
     "attachment":{
@@ -4186,17 +4070,17 @@ else if (received_message.payload === 'land100_ott') {
         
            {
             "title":"land, 950 lakhs, 100*100 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92214064_148823976663402_9152721804815499264_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_eui2=AeE5sEj0zQN1gizaqKzK4jqfDRN3R7GAQNANE3dHsYBA0Dn3_dUa122xcWuru_HhUiwPHjAKpkq0y0c8JnBUYqO2&_nc_ohc=lSf1itb1gJgAX_y9iQG&_nc_ht=scontent.fmdl2-2.fna&oh=5358e63929940923de037ab8b2422941&oe=5EB24417",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92118218_148823953330071_3039576972746293248_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeEASOyH_awPxMqqf3WBfuAMDljIlmhozUwOWMiWaGjNTBEVjf3bi0NPZ24yrVJsXBH-SvbX-EpPgeTTJ_D3QmCm&_nc_ohc=ba68Z7hCDR4AX8Jn1py&_nc_ht=scontent.fmdl2-2.fna&oh=cec24f1bba2529d58b04c903a58dadb4&oe=5EE2AD36",
             "subtitle":"land type-(grant), face south, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/148824429996690/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/148824429996690/?d=n",
                 "title":"More Information"
               },
               {
@@ -4213,7 +4097,7 @@ else if (received_message.payload === 'land100_ott') {
   }
 }
 
-// to buy land in Oattra, 150*150
+// to buy land in Oattra, 150*150 // complete
   else if (received_message.payload === 'land150_ott') {
     response = {
     "attachment":{
@@ -4224,17 +4108,17 @@ else if (received_message.payload === 'land100_ott') {
         
            {
             "title":"land, 3000 lakhs, 150*150 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92236612_148822566663543_924747952507846656_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_eui2=AeHCzboYU7SdJuCwvLEkjxYqCX6qxvPEVK0JfqrG88RUrd8246mUsjl367MB4SnJkoGvu1o1SWZWx8yu1LY4_ow8&_nc_ohc=23dwXT1Le4kAX8PMZMY&_nc_ht=scontent.fmdl2-2.fna&oh=795d163e841c1d4e1f327d523c125170&oe=5EB1E800",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92948083_148822556663544_8094008114333876224_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeFW6Kprkk_AXSmExCWF7vGq6Crz--ac0-PoKvP75pzT40WH2K6wNDlEa-cAD7FhCQpEaIAuj-puVSaPCTJ6vPn4&_nc_ohc=mnAkfUFJeAYAX9TZRdV&_nc_ht=scontent.fmdl2-1.fna&oh=0f8b03ca68e91f6e963d66f127ab2284&oe=5EE032C6",
             "subtitle":"land type-(grant), face north, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/148823586663441/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/148823586663441/?d=n",
                 "title":"More Information"
               },
               {
@@ -4263,61 +4147,30 @@ else if (received_message.payload === 'land100_ott') {
                          {
                           "content_type": "text",
                           "title": "40*60",
-                          "payload": "land40_pobbtobu2b",
+                          "payload": "land40_pobbtobu2b", // complete text
                         },
                         {
                           "content_type": "text",
                           "title": "60*80",
-                          "payload": "land80_pobbtobu26",
+                          "payload": "land80_pobbtobu26", // complete
                         },
                         {
                           "content_type": "text",
                           "title": "80*80",
-                          "payload": "land88_pobbtobu11",
+                          "payload": "land88_pobbtobu11", // complete
                         }
                       ]
       }
   }
 
-// to buy land in Pobba,  40*60
+// to buy land in Pobba,  40*60 // complete text
     else if (received_message.payload === 'land40_pobbtobu2b') {
     response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"land, 150 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92167702_148702773342189_5409825490464669696_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeEti1pLlG7k25OTzKTQf04-pjbk1v9nX8GmNuTW_2dfwXsXNJoQeWmPOxUirjYllEYt5q9uZwa4S3u_0eTZck1A&_nc_ohc=kA-CJJG0XyUAX_ac-M1&_nc_ht=scontent.fmdl2-2.fna&oh=fc0291c46afed146bdc149f655125de9&oe=5EB17576",
-            "subtitle":"land type-(grant), face south, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"tobuylandall_aabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
+          "text" : "There is no property avaliable. So sorry for you. Have a nice day!"
   }
 }
 
-// to buy land in Pobba,  60*80
+// to buy land in Pobba,  60*80 // complete
     else if (received_message.payload === 'land80_pobbtobu26') {
     response = {
     "attachment":{
@@ -4328,17 +4181,17 @@ else if (received_message.payload === 'land100_ott') {
         
            {
             "title":"land, 200 lakhs, 60*80 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91991273_148704343342032_3054495691972804608_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeH2wVSm5DsCLFesBvl46bpfPyPofjUfO_k_I-h-NR87-RcfEZJ_1P_ZadUUe5CAUmR5z69C4_9FqExGSFAOwEP3&_nc_ohc=_1KKYlteFSUAX_xCSrn&_nc_ht=scontent.fmdl2-2.fna&oh=5613774ed5b34ad38b6ae2dbd3e9b0ad&oe=5EB2F2F3",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91991273_148704343342032_3054495691972804608_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeH2wVSm5DsCLFesBvl46bpfPyPofjUfO_k_I-h-NR87-RcfEZJ_1P_ZadUUe5CAUmR5z69C4_9FqExGSFAOwEP3&_nc_ohc=E9jp3iu21zoAX-MIj1E&_nc_ht=scontent.fmdl2-2.fna&oh=5c6d8fec2040657af4c523e4973e4d06&oe=5EE268F3",
             "subtitle":"land type-(grant), face north, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/148704380008695/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/148704380008695/?d=n",
                 "title":"More Information"
               },
               {
@@ -4355,7 +4208,7 @@ else if (received_message.payload === 'land100_ott') {
   }
 }
 
-// to buy land in Pobba,  80*80
+// to buy land in Pobba,  80*80 // complete
     else if (received_message.payload === 'land88_pobbtobu11') {
     response = {
     "attachment":{
@@ -4366,17 +4219,17 @@ else if (received_message.payload === 'land100_ott') {
         
            {
             "title":"land, 250 lakhs, 80*80 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92230031_148704800008653_4090756521791586304_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeEO-jxiti1JQNFThle_S_jni90HSvupMk6L3QdK-6kyTlrw3uARvolzrmtRPvT-L59Z7xSh0ScJrnM0KZ6yt89i&_nc_ohc=9-YiMcFx6PYAX-ioqAm&_nc_ht=scontent.fmdl2-2.fna&oh=6c479c912e372cff68cb16dae0b8a119&oe=5EB2F669",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92230031_148704800008653_4090756521791586304_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeEO-jxiti1JQNFThle_S_jni90HSvupMk6L3QdK-6kyTlrw3uARvolzrmtRPvT-L59Z7xSh0ScJrnM0KZ6yt89i&_nc_ohc=Sbqd6U7yzukAX_VI6G0&_nc_ht=scontent.fmdl2-2.fna&oh=b0a9f00fdfd9de1b12370773beb2423c&oe=5EE26C69",
             "subtitle":"land type-(grant), face east, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/148705206675279/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/148705206675279/?d=n",
                 "title":"More Information"
               },
               {
@@ -4831,17 +4684,17 @@ else if (received_message.payload === 'only68cclandin_zabuu7') {
                          {
                           "content_type": "text",
                           "title": "40*60",
-                          "payload": "land_a1_pyintobu",
+                          "payload": "land_a1_pyintobu", // complete
                         },
                         {
                           "content_type": "text",
                           "title": "60*72",
-                          "payload": "land_a2_pyintobu",
+                          "payload": "land_a2_pyintobu", // complete
                         },
                         {
                           "content_type": "text",
                           "title": "60*80",
-                          "payload": "land_a3_pyintobu",
+                          "payload": "land_a3_pyintobu", // complete
                         },
                         {
                           "content_type": "text",
@@ -4853,7 +4706,7 @@ else if (received_message.payload === 'only68cclandin_zabuu7') {
   }
 
 
-// to buy land in pyinmana,  40*60
+// to buy land in pyinmana,  40*60 // complete
     else if (received_message.payload === 'land_a1_pyintobu') {
     response = {
     "attachment":{
@@ -4864,17 +4717,17 @@ else if (received_message.payload === 'only68cclandin_zabuu7') {
         
            {
             "title":"land, 320 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92273270_149016386644161_8370090244208328704_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeE52sRpZJEwHgD_qk7BsxhF8lo3ZWHm5gbyWjdlYebmBiXFhZUhkb9HDs_ZhoJzM2YdY7aQoSgc_HMPEWWmA_3v&_nc_ohc=epNjQ8-eoucAX-cBQFS&_nc_ht=scontent.fmdl2-2.fna&oh=02e1971e81f2d0ca73e007597207d5ba&oe=5EB4B1CD",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92355353_149016376644162_8935573987816112128_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeFZldR4F_a8ZBf0sOYfCRgi8_Dga96tKk_z8OBr3q0qT6eWixeHmONTRbkYmpKOfUAc_WVrRsf73UpzPlWDJG1P&_nc_ohc=rW1FFc--3cgAX8v55YJ&_nc_ht=scontent.fmdl2-2.fna&oh=3122788edbccba2a855edd1fe8f18fd4&oe=5EE2B105",
             "subtitle":"land type-(grant), face east",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/149016949977438/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/149016949977438/?d=n",
                 "title":"More Information"
               },
               {
@@ -4890,7 +4743,7 @@ else if (received_message.payload === 'only68cclandin_zabuu7') {
     }
   }
 }
-// to buy land in pyinmana,  60*72
+// to buy land in pyinmana,  60*72 //complete
     else if (received_message.payload === 'land_a2_pyintobu') {
     response = {
     "attachment":{
@@ -4901,17 +4754,17 @@ else if (received_message.payload === 'only68cclandin_zabuu7') {
         
            {
             "title":"land, 550 lakhs, 60*72 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91944330_149019299977203_418187470824275968_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_eui2=AeGRf4pbtPI2yrR1hioqwmrqUx4Q1W7AGlFTHhDVbsAaUXOwMiR5jVBk-CTXwNfLnUKhzY79QvgkcsFLvNay3Yej&_nc_ohc=ygPsk8r6Fj8AX_w1HYQ&_nc_ht=scontent.fmdl2-1.fna&oh=c53e99898e47b09c73ad6e09ae0e0a76&oe=5EB2BF4A",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91944330_149019299977203_418187470824275968_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_eui2=AeGRf4pbtPI2yrR1hioqwmrqUx4Q1W7AGlFTHhDVbsAaUXOwMiR5jVBk-CTXwNfLnUKhzY79QvgkcsFLvNay3Yej&_nc_ohc=vJLMQKIRkKkAX98dmI1&_nc_ht=scontent.fmdl2-1.fna&oh=c8b66ef5edee8f04d9199762204a52c1&oe=5EE2354A",
             "subtitle":"land type-(permit), face south",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/149020983310368/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/149020983310368/?d=n",
                 "title":"More Information"
               },
               {
@@ -4927,7 +4780,7 @@ else if (received_message.payload === 'only68cclandin_zabuu7') {
     }
   }
 }
-// to buy land in pyinmana,  60*80
+// to buy land in pyinmana,  60*80 // complete
     else if (received_message.payload === 'land_a3_pyintobu') {
     response = {
     "attachment":{
@@ -4938,17 +4791,17 @@ else if (received_message.payload === 'only68cclandin_zabuu7') {
         
            {
             "title":"land, 670 lakhs, 60*80 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92591960_149017693310697_3011678316890423296_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeHLXhGDIb79vxF8QYyJV052I8KibjVY7yMjwqJuNVjvI_gG7dKIt-lLRrYTFAGvOUi0JfcOwSTaAjn1mthgroN3&_nc_ohc=A-hP-4EluUUAX_JCecN&_nc_ht=scontent.fmdl2-2.fna&oh=220f0279fed18da953714003aa959f3d&oe=5EB443CC",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92591960_149017693310697_3011678316890423296_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeHLXhGDIb79vxF8QYyJV052I8KibjVY7yMjwqJuNVjvI_gG7dKIt-lLRrYTFAGvOUi0JfcOwSTaAjn1mthgroN3&_nc_ohc=WpdQMWNvvdsAX8HGIhu&_nc_ht=scontent.fmdl2-2.fna&oh=07800bf2eca77e1a7503a6de24a6e262&oe=5EDFC54C",
             "subtitle":"land type-(permit), face west",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/149018329977300/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/149018329977300/?d=n",
                 "title":"More Information"
               },
               {
@@ -5027,12 +4880,12 @@ else if (received_message.payload === "teottl") {
                          {
                           "content_type": "text",
                           "title": "100*100",
-                          "payload": "torentland100_ott",
+                          "payload": "torentland100_ott", // complete
                         },
                         {
                           "content_type": "text",
                           "title": "150*150",
-                          "payload": "torentland150_ott",
+                          "payload": "torentland150_ott", // complete
                         },
                         
                       ]
@@ -5046,17 +4899,17 @@ else if (received_message.payload === "teottl") {
                          {
                           "content_type": "text",
                           "title": "40*60",
-                          "payload": "land40_pobbtobu2ba_tenant",
+                          "payload": "land40_pobbtobu2ba_tenant", // complete text
                         },
                         {
                           "content_type": "text",
                           "title": "60*80",
-                          "payload": "land80_pobbtobu26a_tenant",
+                          "payload": "land80_pobbtobu26a_tenant", // complete
                         },
                         {
                           "content_type": "text",
                           "title": "80*80",
-                          "payload": "land88_pobbtobu11a_tenant",
+                          "payload": "land88_pobbtobu11a_tenant", // complete
                         }
                       ]
       }
@@ -5138,18 +4991,18 @@ else if (received_message.payload === "tedekl") {
                          {
                           "content_type": "text",
                           "title": "40*60",
-                          "payload": "torentlandpyin46_areab11",
+                          "payload": "torentlandpyin46_areab11", // complete
                         },
                         {
                           "content_type": "text",
                           "title": "60*72",
-                          "payload": "torentlandpyin672_areaaa1",
+                          "payload": "torentlandpyin672_areaaa1", // complete
                         },
                         {
                           "content_type": "text",
                           "title": "60*80",
-                          "payload": "torentlandpyin68_areacc11",
-                        },
+                          "payload": "torentlandpyin68_areacc11",  // complete
+                        }, 
                          {
                           "content_type": "text",
                           "title": "Other area",
@@ -5172,7 +5025,7 @@ else if (received_message.payload === "tedekl") {
       }
   }
   
-// to rent land in Oattra, 100*100 
+// to rent land in Oattra, 100*100 // complete
     else if (received_message.payload === 'torentland100_ott') {
     response = {
     "attachment":{
@@ -5183,17 +5036,17 @@ else if (received_message.payload === "tedekl") {
         
            {
             "title":"land, 3 lakhs per month, 100*100 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92214064_148823976663402_9152721804815499264_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_eui2=AeE5sEj0zQN1gizaqKzK4jqfDRN3R7GAQNANE3dHsYBA0Dn3_dUa122xcWuru_HhUiwPHjAKpkq0y0c8JnBUYqO2&_nc_ohc=lSf1itb1gJgAX_y9iQG&_nc_ht=scontent.fmdl2-2.fna&oh=5358e63929940923de037ab8b2422941&oe=5EB24417",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92118218_148823953330071_3039576972746293248_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeEASOyH_awPxMqqf3WBfuAMDljIlmhozUwOWMiWaGjNTBEVjf3bi0NPZ24yrVJsXBH-SvbX-EpPgeTTJ_D3QmCm&_nc_ohc=ba68Z7hCDR4AX8Jn1py&_nc_ht=scontent.fmdl2-2.fna&oh=cec24f1bba2529d58b04c903a58dadb4&oe=5EE2AD36",
             "subtitle":"land type-(grant), face south, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/148824429996690/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/148824429996690/?d=n",
                 "title":"More Information"
               },
               {
@@ -5210,7 +5063,7 @@ else if (received_message.payload === "tedekl") {
   }
 }
 
-// to rent land in Oattra, 150*150
+// to rent land in Oattra, 150*150 // complete
     else if (received_message.payload === 'torentland150_ott') {
     response = {
     "attachment":{
@@ -5221,17 +5074,17 @@ else if (received_message.payload === "tedekl") {
         
            {
             "title":"land, 5 lakhs per month, 150*150 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92236612_148822566663543_924747952507846656_n.jpg?_nc_cat=104&_nc_sid=110474&_nc_eui2=AeHCzboYU7SdJuCwvLEkjxYqCX6qxvPEVK0JfqrG88RUrd8246mUsjl367MB4SnJkoGvu1o1SWZWx8yu1LY4_ow8&_nc_ohc=23dwXT1Le4kAX8PMZMY&_nc_ht=scontent.fmdl2-2.fna&oh=795d163e841c1d4e1f327d523c125170&oe=5EB1E800",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92948083_148822556663544_8094008114333876224_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeFW6Kprkk_AXSmExCWF7vGq6Crz--ac0-PoKvP75pzT40WH2K6wNDlEa-cAD7FhCQpEaIAuj-puVSaPCTJ6vPn4&_nc_ohc=mnAkfUFJeAYAX9TZRdV&_nc_ht=scontent.fmdl2-1.fna&oh=0f8b03ca68e91f6e963d66f127ab2284&oe=5EE032C6",
             "subtitle":"land type-(grant), face north, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/148823586663441/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/148823586663441/?d=n",
                 "title":"More Information"
               },
               {
@@ -5250,45 +5103,14 @@ else if (received_message.payload === "tedekl") {
 
 /******************************************************************/
 
-// to rent land in Pobba,  40*60
+// to rent land in Pobba,  40*60 // complete text
     else if (received_message.payload === 'land40_pobbtobu2ba_tenant') {
     response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-           {
-            "title":"land, 1 lakh per month, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92167702_148702773342189_5409825490464669696_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_eui2=AeEti1pLlG7k25OTzKTQf04-pjbk1v9nX8GmNuTW_2dfwXsXNJoQeWmPOxUirjYllEYt5q9uZwa4S3u_0eTZck1A&_nc_ohc=kA-CJJG0XyUAX_ac-M1&_nc_ht=scontent.fmdl2-2.fna&oh=fc0291c46afed146bdc149f655125de9&oe=5EB17576",
-            "subtitle":"land type-(grant), face south",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torentlandall_aabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
+        "text" : "There is no property avaliable. Sorry for you. Have a nice day!"
   }
 }
 
-// to rent land in Pobba,  60*80
+// to rent land in Pobba,  60*80 // complete
     else if (received_message.payload === 'land80_pobbtobu26a_tenant') {
     response = {
     "attachment":{
@@ -5299,17 +5121,17 @@ else if (received_message.payload === "tedekl") {
         
            {
             "title":"land, 1.5 lakhs per month, 60*80 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91991273_148704343342032_3054495691972804608_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeH2wVSm5DsCLFesBvl46bpfPyPofjUfO_k_I-h-NR87-RcfEZJ_1P_ZadUUe5CAUmR5z69C4_9FqExGSFAOwEP3&_nc_ohc=_1KKYlteFSUAX_xCSrn&_nc_ht=scontent.fmdl2-2.fna&oh=5613774ed5b34ad38b6ae2dbd3e9b0ad&oe=5EB2F2F3",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91991273_148704343342032_3054495691972804608_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeH2wVSm5DsCLFesBvl46bpfPyPofjUfO_k_I-h-NR87-RcfEZJ_1P_ZadUUe5CAUmR5z69C4_9FqExGSFAOwEP3&_nc_ohc=E9jp3iu21zoAX-MIj1E&_nc_ht=scontent.fmdl2-2.fna&oh=5c6d8fec2040657af4c523e4973e4d06&oe=5EE268F3",
             "subtitle":"land type-(grant), face north",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/148704380008695/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/148704380008695/?d=n",
                 "title":"More Information"
               },
               {
@@ -5326,7 +5148,7 @@ else if (received_message.payload === "tedekl") {
   }
 }
 
-// to rent land in Pobba,  80*80
+// to rent land in Pobba,  80*80 // complete
     else if (received_message.payload === 'land88_pobbtobu11a_tenant') {
     response = {
     "attachment":{
@@ -5337,17 +5159,17 @@ else if (received_message.payload === "tedekl") {
         
            {
             "title":"land, 2.5 lakhs per month, 80*80 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92230031_148704800008653_4090756521791586304_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeEO-jxiti1JQNFThle_S_jni90HSvupMk6L3QdK-6kyTlrw3uARvolzrmtRPvT-L59Z7xSh0ScJrnM0KZ6yt89i&_nc_ohc=9-YiMcFx6PYAX-ioqAm&_nc_ht=scontent.fmdl2-2.fna&oh=6c479c912e372cff68cb16dae0b8a119&oe=5EB2F669",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92230031_148704800008653_4090756521791586304_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeEO-jxiti1JQNFThle_S_jni90HSvupMk6L3QdK-6kyTlrw3uARvolzrmtRPvT-L59Z7xSh0ScJrnM0KZ6yt89i&_nc_ohc=Sbqd6U7yzukAX_VI6G0&_nc_ht=scontent.fmdl2-2.fna&oh=b0a9f00fdfd9de1b12370773beb2423c&oe=5EE26C69",
             "subtitle":"land type-(grant), face east",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/148705206675279/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/148705206675279/?d=n",
                 "title":"More Information"
               },
               {
@@ -5710,7 +5532,7 @@ else if (received_message.payload === "tedekl") {
     }
   }
 }
-// to rent land in pyinmana,  40*60
+// to rent land in pyinmana,  40*60 // complete
     else if (received_message.payload === 'torentlandpyin46_areab11') {
     response = {
     "attachment":{
@@ -5721,17 +5543,17 @@ else if (received_message.payload === "tedekl") {
         
            {
             "title":"land, 1.5 lakhs per month, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92273270_149016386644161_8370090244208328704_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeE52sRpZJEwHgD_qk7BsxhF8lo3ZWHm5gbyWjdlYebmBiXFhZUhkb9HDs_ZhoJzM2YdY7aQoSgc_HMPEWWmA_3v&_nc_ohc=epNjQ8-eoucAX-cBQFS&_nc_ht=scontent.fmdl2-2.fna&oh=02e1971e81f2d0ca73e007597207d5ba&oe=5EB4B1CD",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92355353_149016376644162_8935573987816112128_n.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeFZldR4F_a8ZBf0sOYfCRgi8_Dga96tKk_z8OBr3q0qT6eWixeHmONTRbkYmpKOfUAc_WVrRsf73UpzPlWDJG1P&_nc_ohc=rW1FFc--3cgAX8v55YJ&_nc_ht=scontent.fmdl2-2.fna&oh=3122788edbccba2a855edd1fe8f18fd4&oe=5EE2B105",
             "subtitle":"land type-(grant), face east",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/149016949977438/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/149016949977438/?d=n",
                 "title":"More Information"
               },
               {
@@ -5747,7 +5569,7 @@ else if (received_message.payload === "tedekl") {
     }
   }
 }
-// to rent land in pyinmana,  60*72
+// to rent land in pyinmana,  60*72 // complete
     else if (received_message.payload === 'torentlandpyin672_areaaa1') {
     response = {
     "attachment":{
@@ -5758,17 +5580,17 @@ else if (received_message.payload === "tedekl") {
         
            {
             "title":"land, 3 lakhs per month, 60*72 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91944330_149019299977203_418187470824275968_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_eui2=AeGRf4pbtPI2yrR1hioqwmrqUx4Q1W7AGlFTHhDVbsAaUXOwMiR5jVBk-CTXwNfLnUKhzY79QvgkcsFLvNay3Yej&_nc_ohc=ygPsk8r6Fj8AX_w1HYQ&_nc_ht=scontent.fmdl2-1.fna&oh=c53e99898e47b09c73ad6e09ae0e0a76&oe=5EB2BF4A",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91944330_149019299977203_418187470824275968_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_eui2=AeGRf4pbtPI2yrR1hioqwmrqUx4Q1W7AGlFTHhDVbsAaUXOwMiR5jVBk-CTXwNfLnUKhzY79QvgkcsFLvNay3Yej&_nc_ohc=vJLMQKIRkKkAX98dmI1&_nc_ht=scontent.fmdl2-1.fna&oh=c8b66ef5edee8f04d9199762204a52c1&oe=5EE2354A",
             "subtitle":"land type-(permit), face south",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/149020983310368/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/149020983310368/?d=n",
                 "title":"More Information"
               },
               {
@@ -5784,7 +5606,7 @@ else if (received_message.payload === "tedekl") {
     }
   }
 }
-// to rent land in pyinmana,  60*80
+// to rent land in pyinmana,  60*80 // complete
     else if (received_message.payload === 'torentlandpyin68_areacc11') {
     response = {
     "attachment":{
@@ -5795,17 +5617,17 @@ else if (received_message.payload === "tedekl") {
         
            {
             "title":"land, 2.5 lakhs per month, 60*80 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92591960_149017693310697_3011678316890423296_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeHLXhGDIb79vxF8QYyJV052I8KibjVY7yMjwqJuNVjvI_gG7dKIt-lLRrYTFAGvOUi0JfcOwSTaAjn1mthgroN3&_nc_ohc=A-hP-4EluUUAX_JCecN&_nc_ht=scontent.fmdl2-2.fna&oh=220f0279fed18da953714003aa959f3d&oe=5EB443CC",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92591960_149017693310697_3011678316890423296_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeHLXhGDIb79vxF8QYyJV052I8KibjVY7yMjwqJuNVjvI_gG7dKIt-lLRrYTFAGvOUi0JfcOwSTaAjn1mthgroN3&_nc_ohc=WpdQMWNvvdsAX8HGIhu&_nc_ht=scontent.fmdl2-2.fna&oh=07800bf2eca77e1a7503a6de24a6e262&oe=5EDFC54C",
             "subtitle":"land type-(permit), face west",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/149018329977300/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/149018329977300/?d=n",
                 "title":"More Information"
               },
               {
@@ -5925,7 +5747,7 @@ else if (received_message.payload === "tedekl") {
                         {
                           "content_type": "text",
                           "title": "above 3 lakhs",
-                          "payload": "torenthourc_onefpyina1_tenantabove4l",
+                          "payload": "torenthourc_onefpyina1_tenantabove4l", // complete
                         }
                       ]
       }
@@ -5943,7 +5765,7 @@ else if (received_message.payload === "tedekl") {
                         {
                           "content_type": "text",
                           "title": "above 3lakhs",
-                          "payload": "torenthou_pyinrctwofn_above4ln",
+                          "payload": "torenthou_pyinrctwofn_above4ln", // complete
                         }
                       ]
       }
@@ -5990,7 +5812,7 @@ else if (received_message.payload === "tedekl") {
 
 
 
-// to rent house in pyinmana, RC, one floor, above 3 lakhs
+// to rent house in pyinmana, RC, one floor, above 3 lakhs // complete
   else if (received_message.payload === "torenthourc_onefpyina1_tenantabove4l") {
     response = {
       "attachment":{
@@ -6000,18 +5822,18 @@ else if (received_message.payload === "tedekl") {
         "elements": [ 
         
            {
-            "title":"RC, 5 lakhs per month, Width-(60*80)",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92345669_149033143309152_6933827548061106176_n.jpg?_nc_cat=105&_nc_sid=110474&_nc_eui2=AeEI4W8wxQk3tk9YgjJjQ_vGP1pHh5H1KD8_WkeHkfUoPxtx5_-T7IVd-7alAloGuyAZbuYPZOCOJab3je027jsy&_nc_ohc=sBvJQg8bkjYAX9G8Kpp&_nc_ht=scontent.fmdl2-2.fna&oh=382cf06a14c01e693485808b266b26d7&oe=5EB4B0D5",
-            "subtitle":"Mbr-(2), Br-(1), face south",
+            "title":"RC, 350000 lakhs per month, Width-(60*72)",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92353603_149043869974746_8473619924072267776_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeGgvj4JXTB-BaKlrv6fCWkPD8Wz4sbkNI8PxbPixuQ0j4z4WFsuBeE4rDoXcka8l3DzzgHyop1A6jQY9BeyxOWv&_nc_ohc=8IkUGIiYAvoAX_fJFsa&_nc_ht=scontent.fmdl2-1.fna&oh=298d573636dd736f667b4b2a7c89f7cd&oe=5EE0FD3A",
+            "subtitle":"Mbr-(1), Br-(2), face east",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/149043983308068?sfns=mo",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/149043983308068?sfns=mo",
                 "title":"More Information"
               },
               {
@@ -6066,7 +5888,7 @@ else if (received_message.payload === "tedekl") {
     }
   }
 
-// to rent house in pyinmana, RC, two floor, above 4 lakhs
+// to rent house in pyinmana, RC, two floor, above 3 lakhs // complete
   else if (received_message.payload === "torenthou_pyinrctwofn_above4ln") {
     response = {
       "attachment":{
@@ -6077,17 +5899,17 @@ else if (received_message.payload === "tedekl") {
         
            {
             "title":"2RC, 5 lakhs per month, 60*72 ft",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91663260_149049396640860_3878909622148399104_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeGHkGRYDmdeavjzqEgTafF6vGtLT4QsOYC8a0tPhCw5gGfUGkXLqAvDbcmS2kynpkc427C_nqwWJyVMHf6lzNw7&_nc_ohc=aXbSPOJrDXwAX_7A_Ij&_nc_ht=scontent.fmdl2-2.fna&oh=d5558fa54bef9dc6a18a5cde99b328df&oe=5EB32EB3",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91663260_149049396640860_3878909622148399104_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_eui2=AeGHkGRYDmdeavjzqEgTafF6vGtLT4QsOYC8a0tPhCw5gGfUGkXLqAvDbcmS2kynpkc427C_nqwWJyVMHf6lzNw7&_nc_ohc=UksZn3kUd4UAX8VSjTk&_nc_ht=scontent.fmdl2-2.fna&oh=efa9c980227d38061aeac1892adf662e&oe=5EE2A4B3",
             "subtitle":"Mbr-(2), Br-(1), face south, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/149050303307436/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/149050303307436/?d=n",
                 "title":"More Information"
               },
               {
@@ -6114,18 +5936,18 @@ else if (received_message.payload === "tedekl") {
         "elements": [ 
         
            {
-            "title":"Hta yan, 1.5 lakhs per month, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91623696_149051576640642_6569864859687583744_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeEi8PLXTZ7dbcj0r4LuXMSKGzY8vi0XI_wbNjy-LRcj_J-l8rj7nrr5RKGDKhXzF0bfZMCYV62C31nmSRcYYpAG&_nc_ohc=9vhkrWERlZ4AX-boxAQ&_nc_ht=scontent.fmdl2-1.fna&oh=dc6ab30e9ee13b2d3e7e37f6fbbbef72&oe=5EB4F884",
-            "subtitle":"face south",
+            "title":"Nancat, 2 lakhs per month, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92496573_149052573307209_598445470120935424_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_eui2=AeEv0aBCrhgl6MnOg0rq39sY3sK3gbVcIgHewreBtVwiAYQsfhi4vde5O0uoZ5B_v0U7nD5wWQKYfrsH3TmEqs0-&_nc_ohc=L7oj6Oeo_8YAX_kxCPf&_nc_ht=scontent.fmdl2-1.fna&oh=90f6d5f9c727036eb12ed4977cf39897&oe=5EE25091",
+            "subtitle":"face north",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/149053369973796/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/149053369973796/?d=n",
                 "title":"More Information"
               },
               {
@@ -6238,12 +6060,12 @@ else if (received_message.payload === "tedekl") {
                          {
                           "content_type": "text",
                           "title": "6 lakhs & below it",
-                          "payload": "onef6lakhsabove_in_ott_tenant",
+                          "payload": "onef6lakhsabove_in_ott_tenant", // complete
                         },
                         {
                           "content_type": "text",
                           "title": "above 6 lakhs",
-                          "payload": "onefabove6lakhs_in_ott_tenant",
+                          "payload": "onefabove6lakhs_in_ott_tenant", // complete
                         }
                       ]
       }
@@ -6261,14 +6083,14 @@ else if (received_message.payload === "tedekl") {
                         {
                           "content_type": "text",
                           "title": "above 6lakhs",
-                          "payload": "torenthouott_above6lakhs",
+                          "payload": "torenthouott_above6lakhs", // complete
                         }
                       ]
       }
   }
 
 
-// to rent house in oattra, RC, one floor, 6 lakhs & below it
+// to rent house in oattra, RC, one floor, 6 lakhs & below it // complete
     else if (received_message.payload === 'onef6lakhsabove_in_ott_tenant') {
     response = {
     "attachment":{
@@ -6279,17 +6101,17 @@ else if (received_message.payload === "tedekl") {
         
            {
             "title":"RC, 4 lakhs per month, 80*80 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92351629_148794463333020_2221158640822255616_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeFm1wi0SGzyni_3NnxhV8Kj1lNwb3N4O3bWU3Bvc3g7dqEGpoxFQfLp2LSy7mRPgwj9ppl6UkkYIqzQC9mAFgW7&_nc_ohc=l2RNd7uB4IgAX-owFfd&_nc_ht=scontent.fmdl2-1.fna&oh=75c5576355ba2da2eeccbc1905d08e25&oe=5EB07C45",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92351629_148794463333020_2221158640822255616_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeFm1wi0SGzyni_3NnxhV8Kj1lNwb3N4O3bWU3Bvc3g7dqEGpoxFQfLp2LSy7mRPgwj9ppl6UkkYIqzQC9mAFgW7&_nc_ohc=DvaeZzryCYUAX_S_qgT&_nc_ht=scontent.fmdl2-1.fna&oh=f69f9220fff2b8f1db623b5defefa594&oe=5EDFF245",
             "subtitle":"Mbr-(2), face south, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/148795749999558/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/148795749999558/?d=n",
                 "title":"More Information"
               },
               {
@@ -6306,7 +6128,7 @@ else if (received_message.payload === "tedekl") {
 }
 
 
-// to rent house in oattra, RC, one floor, above 6 lakhs
+// to rent house in oattra, RC, one floor, above 6 lakhs // complete
     else if (received_message.payload === 'onefabove6lakhs_in_ott_tenant') {
     response = {
     "attachment":{
@@ -6316,18 +6138,18 @@ else if (received_message.payload === "tedekl") {
         "elements": [ 
         
            {
-            "title":"RC, 10 lakhs per month, 150*150 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92455881_148780726667727_1440690996407959552_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeGf9LydtrRy0Pv5ZMogA6x-iVE1BTJAoH6JUTUFMkCgfvVyire9NqORSOcCe7roMWslwom0L_MecnwPhfXdtz8B&_nc_ohc=c_ZjDikT9XUAX_auGhw&_nc_ht=scontent.fmdl2-1.fna&oh=f48d774f3ef4ed31d7c61775f042646d&oe=5EB1CDC2",
-            "subtitle":"Mbr-(3), face west, Negotiable",
+            "title":"1RC, 6.5 lakhs per month, 100*100 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91912200_148783696667430_2449683035914764288_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeGtmRWzKn14WcOyBlHpkLA8U4OdKoYtcohTg50qhi1yiCt7wEw-ep9s_RQgz5V370kLzW9e5txrxVGQj_84K-09&_nc_ohc=ULbgxq5Vt6oAX_GXuqF&_nc_ht=scontent.fmdl2-1.fna&oh=0f158775833551b86621692016f0327d&oe=5EE1749D",
+            "subtitle":"Mbr-(4), Br-(1), face north, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/148790940000039/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/148790940000039/?d=n",
                 "title":"More Information"
               },
               {
@@ -6382,7 +6204,7 @@ else if (received_message.payload === "tedekl") {
   }
 }
 
-// to rent house in oattra, RC, two floor, above 6 lakhs
+// to rent house in oattra, RC, two floor, above 6 lakhs // complete
     else if (received_message.payload === 'torenthouott_above6lakhs') {
     response = {
     "attachment":{
@@ -6392,18 +6214,18 @@ else if (received_message.payload === "tedekl") {
         "elements": [ 
         
            {
-            "title":"2RC, 8 lakhs per month, 100*100 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92577724_148801386665661_3656608166516359168_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeFt0-dDc-FGDdhKVueJlnJ7eVXqTKuoYJR5VepMq6hglO7w10RQQYRLvizT9e3NUsFd9Hq7Sv4Q9md3EZJSnycB&_nc_ohc=rhTJjCGelPwAX8IZTtf&_nc_ht=scontent.fmdl2-1.fna&oh=53d7c2e67a80d3219997f94554bdf57e&oe=5EB19DF0",
-            "subtitle":"Mbr-(2), Br-(3), face east",
+            "title":"2RC, 12 lakhs per month, 150*150 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91553411_148811056664694_2994737999507357696_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeEfP3OQyWSVC6Z-lY6HYqDWh_MT8b2h51aH8xPxvaHnVqPHPIBXsMgLEI-3fAuGNUnNKKIzHBw2Y-A6HGPqzGB3&_nc_ohc=oMf8b87ysjoAX8FtYGu&_nc_ht=scontent.fmdl2-1.fna&oh=70c56b3e2a89edfa544371ab617dc297&oe=5EE32265",
+            "subtitle":"Mbr-(6), face north",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/148812259997907/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/148812259997907/?d=n",
                 "title":"More Information"
               },
               {
@@ -6456,7 +6278,7 @@ else if (received_message.payload === "tenanpob") {
                         {
                           "content_type": "text",
                           "title": "Other Type",
-                          "payload": "nancat_pobb1_tenant",
+                          "payload": "nancat_pobb1_tenant", // complete text
                         }
                       ]
 
@@ -6470,17 +6292,17 @@ else if (received_message.payload === "tenanpob") {
                          {
                           "content_type": "text",
                           "title": "one floor",
-                          "payload": "onef_pobb1_tenant",
+                          "payload": "onef_pobb1_tenant", // complete text
                         },
                         {
                           "content_type": "text",
                           "title": "two floor",
-                          "payload": "twof_pobb1_tenant",
+                          "payload": "twof_pobb1_tenant", // complete all
                         },
                         {
                           "content_type": "text",
                           "title": "other floor",
-                          "payload": "thirdf_pobb1_tenant",
+                          "payload": "thirdf_pobb1_tenant", // complete
                         }
                       ]
 
@@ -6494,17 +6316,17 @@ else if (received_message.payload === "tenanpob") {
                          {
                           "content_type": "text",
                           "title": "3 lakhs & below it",
-                          "payload": "torenthoupob3lakhs_below11a",
+                          "payload": "torenthoupob3lakhs_below11a", // complete text
                         },
                         {
                           "content_type": "text",
                           "title": "above 3 lakhs",
-                          "payload": "torenthoupob3lakhs_above3laa1",
+                          "payload": "torenthoupob3lakhs_above3laa1", // complete
                         }
                       ]
   }
 }
-  // to rent house in pobba, RC, two floor, area
+  // to rent house in pobba, RC, two floor, 
   else if (received_message.payload === "twof_pobb1_tenant") {
     response = {
                   "text": "Please choose the estimated price you wanna spend:",
@@ -6512,56 +6334,25 @@ else if (received_message.payload === "tenanpob") {
                          {
                           "content_type": "text",
                           "title": "3 lakhs & below it",
-                          "payload": "torentpob_twof3lakhs_tenant",
+                          "payload": "torentpob_twof3lakhs_tenant", // complete
                         },
                         {
                           "content_type": "text",
                           "title": "above 3 lakhs",
-                          "payload": "torentpob_twofabove3lakhs_tenant",
+                          "payload": "torentpob_twofabove3lakhs_tenant", // complete text
                         }
                       ]
   }
 }
 
-// to rent house in pobba, RC, one floor, 
+// to rent house in pobba, RC, one floor, // complete text
  else if (received_message.payload === 'torenthoupob3lakhs_below11a') {
     response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-                    {
-            "title":"RC, 2.5 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92831429_148690140010119_457507630131183616_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeE9zcF8NnpLPKl62pX9HioMwM8Pb79goQXAzw9vv2ChBYUnC-ju8y6DZUIJF30zKiuGPVjBQrDDyMQP9wAMOxEJ&_nc_ohc=WduouaN1hjsAX8Uj_x2&_nc_ht=scontent.fmdl2-1.fna&oh=568c5bdef4e9ecc484fd7928f0c862e6&oe=5EB1E35A",
-            "subtitle":"MBr-(1), Br-(2), face east",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torent_tenantaabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
+          "text" : "There is no property avaliable. Sorry for you. Have a nice day!"
   }
 }
 
-// to rent house in pobba, RC, one floor, 
+// to rent house in pobba, RC, one floor, complete 
  else if (received_message.payload === 'torenthoupob3lakhs_above3laa1') {
     response = {
     "attachment":{
@@ -6571,18 +6362,18 @@ else if (received_message.payload === "tenanpob") {
         "elements": [ 
         
             {
-            "title":"RC, 3.5 lakhs, 60*80 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92141671_148691213343345_4810507837039968256_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeFwzQz5Fa1a1b6rTxcMDxOf0Bja6JtczzLQGNrom1zPMqSLxn3HfxY3v96qaK0vlAQ0LhMVFdJUEFb6oQw1SSUu&_nc_ohc=cAMzawpv1dsAX-fiBFJ&_nc_ht=scontent.fmdl2-1.fna&oh=94b2d2e832e6a2d3e1929d3e019a22f5&oe=5EB20EC5",
-            "subtitle":"MBr-(2), Br-(3), face west and north",
+            "title":"1RC, 4 lakhs, 80*80 ft",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92555021_148694693342997_4064605342099570688_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeHdSxG1IzD6iMZL01qEg0KzthAmkZBLAZK2ECaRkEsBklsHQStxScdsxZDKhJHFmGhjF-6yz9By88h_ESul1b2d&_nc_ohc=kZWapLUa1OMAX8q8OOo&_nc_ht=scontent.fmdl2-2.fna&oh=d0928d3d2908871fff222be5571f3a01&oe=5EE2C5B4",
+            "subtitle":"MBr-(2), Br-(3), face north",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/148695696676230/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/148695696676230/?d=n",
                 "title":"More Information"
               },
               {
@@ -6599,45 +6390,14 @@ else if (received_message.payload === "tenanpob") {
   }
 }
 
-// to rent house in pobba, other type
+// to rent house in pobba, other type // complete text
  else if (received_message.payload === 'nancat_pobb1_tenant') {
     response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-          {
-            "title":"Nancat, 1.5 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91973807_148705810008552_1650041489260019712_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeG-bX8xeh_hI01ZsMR3FVTdwGLcxG1vk2DAYtzEbW-TYENQ6KNa30os6QZjpGd2-xDzuVslOpzjpqog2138-pNz&_nc_ohc=Fw9YqIe_wJUAX9bG4h0&_nc_ht=scontent.fmdl2-1.fna&oh=c891d7fd7a3d3e972d593b6075c5abc0&oe=5EB07818",
-            "subtitle":"land type-(grant), face south",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torent_tenantaabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
+        "text" : "There is no property avaliable. So sorry for you. Have a nice day!"
   }
 }
 
-// to rent house in pobba, RC, two floor, 3 lakhs & below it
+// to rent house in pobba, RC, two floor, 3 lakhs & below it // complete
  else if (received_message.payload === 'torentpob_twof3lakhs_tenant') {
     response = {
     "attachment":{
@@ -6648,17 +6408,17 @@ else if (received_message.payload === "tenanpob") {
         
                     {
             "title":"2RC, 2.5 lakhs per month, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91606159_148757690003364_6476717670556237824_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeEwaNaIO6IktYPhZerxMcm7Qew2jPuaaEFB7DaM-5poQZvYiKqWGrH_lW38GzC0sEa2ozlem0muIfNfovwajN7B&_nc_ohc=xmULYHKmuWMAX8mWmY6&_nc_ht=scontent.fmdl2-1.fna&oh=896dcfb6903ac4aa391c915c34f871fc&oe=5EB37841",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91606159_148757690003364_6476717670556237824_n.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeEwaNaIO6IktYPhZerxMcm7Qew2jPuaaEFB7DaM-5poQZvYiKqWGrH_lW38GzC0sEa2ozlem0muIfNfovwajN7B&_nc_ohc=hslf-WjVJoAAX-OP-p8&_nc_ht=scontent.fmdl2-1.fna&oh=f7d79bf5781b28d881c24f9d75635104&oe=5EE2EE41",
             "subtitle":"MBr-(2), Br-(2), face south",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/148761353336331/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/148761353336331/?d=n",
                 "title":"More Information"
               },
               {
@@ -6675,47 +6435,16 @@ else if (received_message.payload === "tenanpob") {
   }
 }
 
-// to rent house in pobba, RC, two floor, above 3 lakhs
+// to rent house in pobba, RC, two floor, above 3 lakhs // complete text
  else if (received_message.payload === 'torentpob_twofabove3lakhs_tenant') {
     response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements": [ 
-        
-            {
-            "title":"2RC, 3.5 lakhs per month, 60*80 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92517086_148751140004019_3914064358962888704_n.jpg?_nc_cat=103&_nc_sid=110474&_nc_eui2=AeFoOvq0bRFW0r7Srwl3N0U6qLmh0okITviouaHSiQhO-AqAdJfPRZtbQ8jrzolCH2ITGEZeyM794Swu5gSj8kTf&_nc_ohc=PxwqZF2pwtAAX-4aXYH&_nc_ht=scontent.fmdl2-1.fna&oh=1754795b4c5cdf6738bdbfe5f46ea909&oe=5EB0B753",
-            "subtitle":"MBr-(2), Br-(2), land type-(grant), face south, Negotiable",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"torent_tenantaabb1"
-              }              
-            ]      
-          }
-
-        ]
-      }
-    }
+      "text": "There is no property avaliable. Sorry for you. Have a nice day!"
   }
 }
 
 
 
-// to rent house in pobba, RC, other floor
+// to rent house in pobba, RC, other floor // complete
  else if (received_message.payload === 'thirdf_pobb1_tenant') {
     response = {
     "attachment":{
@@ -6725,18 +6454,18 @@ else if (received_message.payload === "tenanpob") {
         "elements": [ 
         
                     {
-            "title":"3RC, 13 lakhs per month, 60*80 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92138782_148707466675053_5918704202221092864_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeE_h3jBITkW7xkMqu3_I6ZSTbencPv31K1Nt6dw-_fUrRIBi2eMl4upeFefewulR61984TZbIxxpK-ya8_OLYqw&_nc_ohc=d7YY9JJ3fBsAX9uFLtw&_nc_ht=scontent.fmdl2-1.fna&oh=2328b837dd4e1233e2aa509045cc3207&oe=5EB3FC6E",
+            "title":"3RC, 12 lakhs per month, 60*80 ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92138782_148707466675053_5918704202221092864_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeE_h3jBITkW7xkMqu3_I6ZSTbencPv31K1Nt6dw-_fUrRIBi2eMl4upeFefewulR61984TZbIxxpK-ya8_OLYqw&_nc_ohc=TEylSP0f8FoAX-lix3b&_nc_ht=scontent.fmdl2-1.fna&oh=2b4637f1a87dd8301fd51e2eeea0e88b&oe=5EE3726E",
             "subtitle":"MBr-(4), Br-(2), face north, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/148708120008321/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/148708120008321/?d=n",
                 "title":"More Information"
               },
               {
@@ -7887,7 +7616,7 @@ else if (payload === 'innnter') {
   }
 }
 
-  // to buy land in oattra
+  // to buy land 
       else if (payload === "lann") {
       response = {
                   "text": "Do you want to buy land in what township?",
