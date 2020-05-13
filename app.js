@@ -8147,7 +8147,7 @@ else if (payload === 'innnter') {
 
 
 // moving house service
-  else if (payload === 'move_hou_service') {
+  else if (payload === 'move_hou_service') { // mhs
     response = {
     "attachment":{
       "type":"template",
