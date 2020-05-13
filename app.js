@@ -1595,6 +1595,7 @@ else if (received_message.payload === "cu_say_yes_for_sthElse") {
   }
 }
 
+
 // to buy house in oattra, RC, one floor, 100*100
     else if (received_message.payload === '100_in_ott') {
     response = {
@@ -4975,17 +4976,17 @@ else if (received_message.payload === 'only68cclandin_zabuu7') {
         
            {
             "title":"land, 200 lakhs, 80*70 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92700247_149058239973309_1026465551309864960_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeExfi6lyAGKnuAnGwzsqHIyb0fpY8_QSLBvR-ljz9BIsOBkiot-Xz6n2p0Os7XVh5PIEoLRp9oLcrpco0jAv7p1&_nc_ohc=3LoyEwb524wAX_eRpVY&_nc_ht=scontent.fmdl2-1.fna&oh=ab71d22ef0f26f9af995a94bdfd05633&oe=5EB2A610",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/91634645_149058153306651_5105018245652414464_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeETCV-yHeBIhgg8uUL_ZxvAzDD0tWO6NdzMMPS1Y7o13HGNGOL8h_FwRpnThh5YEsMJDE9GPoRo4uHG1TIp1EbD&_nc_ohc=hfclQmkzTQoAX-nqrsn&_nc_ht=scontent.fmdl2-2.fna&oh=09c4717abfdcf23ebb9bbc09a23944c9&oe=5EE11A9C",
             "subtitle":"",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/149058289973304/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/149058289973304/?d=n",
                 "title":"More Information"
               },
               {
