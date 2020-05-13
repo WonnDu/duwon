@@ -4952,7 +4952,7 @@ else if (received_message.payload === "tedekl") {
 // to rent land in Zabuthiri,  Other area // complete text
     else if (received_message.payload === 'onlyother7dlandin_zabuu7_rent1' ) {
     response = {
-          "text" "There is no property avaliable. Sorry for you. Thanks for contacting us. Have a nice day!"
+          "text" : "There is no property avaliable. Sorry for you. Thanks for contacting us. Have a nice day!"
   }
 }
 // to rent land in pyinmana,  40*60 // complete
