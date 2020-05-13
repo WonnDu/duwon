@@ -5993,7 +5993,7 @@ else if (received_message.payload === "tenandek") {
 // to rent house in dekkhina, one floor,  3 lakhs & below it // complete text
     else if (received_message.payload === 'torent_houindekk_mbbelow3lpp') {
     response = {
-        "text" "There is no property avaliable. Sorry for you. Have a nice day!"
+        "text" : "There is no property avaliable. Sorry for you. Have a nice day!"
   }
 }
 
