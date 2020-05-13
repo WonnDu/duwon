@@ -3591,18 +3591,18 @@ else if (received_message.payload === "zabtwp") {
         "elements": [ 
         
            {
-            "title":"Hta yan, 390 lakhs, 40*60 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/91623696_149051576640642_6569864859687583744_n.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeEi8PLXTZ7dbcj0r4LuXMSKGzY8vi0XI_wbNjy-LRcj_J-l8rj7nrr5RKGDKhXzF0bfZMCYV62C31nmSRcYYpAG&_nc_ohc=9vhkrWERlZ4AX-boxAQ&_nc_ht=scontent.fmdl2-1.fna&oh=dc6ab30e9ee13b2d3e7e37f6fbbbef72&oe=5EB4F884",
-            "subtitle":"land type-(slit), face south, Negotiable",
+            "title":"Nancat, 340 lakhs, 60*80ft",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92496573_149052573307209_598445470120935424_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_eui2=AeEv0aBCrhgl6MnOg0rq39sY3sK3gbVcIgHewreBtVwiAYQsfhi4vde5O0uoZ5B_v0U7nD5wWQKYfrsH3TmEqs0-&_nc_ohc=L7oj6Oeo_8YAX_kxCPf&_nc_ht=scontent.fmdl2-1.fna&oh=90f6d5f9c727036eb12ed4977cf39897&oe=5EE25091",
+            "subtitle":"land type-(grant), face north, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/149053369973796/?d=n",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/149053369973796/?d=n",
                 "title":"More Information"
               },
               {
@@ -3635,13 +3635,13 @@ else if (received_message.payload === "zabtwp") {
             "subtitle":"Mbr-(3), Br-(2), land type-(grant), face east, Negotiable",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1589220717557715&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/149055396640260?sfns=mo",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1589220717557715&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/149055396640260?sfns=mo",
                 "title":"More Information"
               },
               {
@@ -6154,17 +6154,17 @@ else if (received_message.payload === "tedekl") {
         
            {
             "title":"3RC, 9 lakhs per month, 80*80 ft",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/92246313_149054849973648_703440635775942656_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_eui2=AeGQUfxVnvZWijR4b8rEp1d3jNzI0_OEBaKM3MjT84QFopl4xHDm84RGqQl8E9qT_OpLskADmC5FYTxR1IVWWySf&_nc_ohc=PEniN76E7_gAX87FiHI&_nc_ht=scontent.fmdl2-1.fna&oh=51c68a01e618292c014e23cf4975744e&oe=5EB2E05D",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/92002695_149054846640315_174881099674025984_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeFipDbtj82omdAFRjVUePhR8t4gVQzRikby3iBVDNGKRhhpoUiY7hZ-yagQdENBxp15GUm3LCX6mBY7NJ7gKwME&_nc_ohc=r_v6HHtyP-QAX_Jlw62&_nc_ht=scontent.fmdl2-2.fna&oh=1da23dd82f0a42333b48b95507d8490f&oe=5EE053D7",
             "subtitle":"Mbr-(3), Br-(2), face east",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+              "url": "https://www.facebook.com/105772414301892/posts/149055396640260?sfns=mo",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1586247006729232&notif_t=page_message&ref=notif",
+                "url":"https://www.facebook.com/105772414301892/posts/149055396640260?sfns=mo",
                 "title":"More Information"
               },
               {
