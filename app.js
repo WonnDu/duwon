@@ -6917,7 +6917,7 @@ else if (payload === 'innnter') {
 
 // ways to contact us
 else if (payload === 'contactUsToduwon') {
-    response  = { "Duwon Real Estate Services Page  Duwon Real Estate Agent Email duwon119address@gmail.com Office Address No (1374), MyintZu Street, Paung Laung (3), Pyinmana township, Naypyitaw Phone 09 970 870 203" };
+    response  = {"text":  "Duwon Real Estate Services Page  Duwon Real Estate Agent Email duwon119address@gmail.com Office Address No (1374), MyintZu Street, Paung Laung (3), Pyinmana township, Naypyitaw Phone 09 970 870 203" };
  } 
 
  // to sell house
