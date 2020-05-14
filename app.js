@@ -416,7 +416,7 @@ function handleMessage(sender_psid, received_message) {
  else if (received_message.text && landlord_sent.numOf_mbr_torentHou === true) {  // number of master bed room to rent house as landlord
   userEntered_landlord.numOf_mbr_torentHou = received_message.text;   // for number of master bed room to rent house as landlord
     response = {
-      "text": "Please tell me land area of your house."
+      "text": "Please  tell me yard area."
     }
     landlord_sent.numOf_mbr_torentHou = false; // for number of master bed room to rent as landlord
     landlord_sent.landArea_ofHouse_torent = true; // for land area of house to rent house as landlord
@@ -426,7 +426,7 @@ function handleMessage(sender_psid, received_message) {
  else if (received_message.text && landlord_sent.numOf_br_torentHou === true) {  // number of bed room
   userEntered_landlord.numOf_br_torentHou = received_message.text;   // for number of bed room to rent house as landlord
     response = {
-      "text": "Please tell me land area of your house."
+      "text": "Please  tell me yard area."
     }
     landlord_sent.numOf_br_torentHou = false; // for number of bed room to rent house as landlord
     landlord_sent.landArea_ofHouse_torent = true; // for land area of house to rent house as landlord
@@ -454,7 +454,7 @@ function handleMessage(sender_psid, received_message) {
  else if (received_message.text && landlord_sent.both2_numOf_br_torent === true) { 
   userEntered_landlord.both2_numOf_br_torent = received_message.text;   // for both, number of bed room to rent house as landlord
     response = {
-      "text": "Please tell me land area of your house."
+      "text": "Please  tell me yard area"
     }
     landlord_sent.both2_numOf_br_torent = false;
     landlord_sent.landArea_ofHouse_torent = true; // for land area of house  to rent house  as landlord
@@ -639,7 +639,7 @@ else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true
  else if (received_message.payload === "ld_ottwp_land" || received_message.payload === "ld_potwp_land" || received_message.payload === "ld_dektwp_land" || received_message.payload === "ld_zaytwp_land" || received_message.payload === "ld_zabtwp_land" || received_message.payload === "ldld_pyin_land") {
          userEntered_ldld_land.twp_name_torent_land = received_message.payload;
          response = {
-      "text":'Please tell me the area of land that you want to rent out.'
+      "text":'Please tell me the area of land that you want to rent.'
     }
     received_message.payload = false;
     ldld_land_sent.land_area_torent_byCu = true;  // for land area to rent land as landlord
@@ -647,7 +647,7 @@ else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true
  else if (received_message.text && ldld_land_sent.land_area_torent_byCu === true) {
   userEntered_ldld_land.land_area_torent_byCu = received_message.text; // for land area to rent land as landlord
          response = {
-      "text":'Please tell me the type of land that you want to rent out.'
+      "text":'Please tell me the type of land that you want to rent.'
     }
     ldld_land_sent.land_area_torent_byCu = false; // for land area to rent land
     ldld_land_sent.land_type_torent_byCu = true; // land type to rent land
@@ -1064,7 +1064,7 @@ else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true
  else if (received_message.text && toselhou_byuser.numOf_mbr_toselHou === true) {  // number of master bed room
   userEntered_Hou_tosel.numOf_mbr_toselHou = received_message.text;   // for number of master bed room
     response = {
-      "text": "Please tell me land area of your house."
+      "text": "Please  tell me yard area"
     }
     toselhou_byuser.numOf_mbr_toselHou = false; // for number of master bed room
     toselhou_byuser.landArea_ofHouse_tosell = true; // for land area of house to sell
@@ -1074,7 +1074,7 @@ else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true
  else if (received_message.text && toselhou_byuser.numOf_br_toselHou === true) {  // number of bed room
   userEntered_Hou_tosel.numOf_br_toselHou = received_message.text;   // for number of bed room
     response = {
-      "text": "Please tell me land area of your house."
+      "text": "Please  tell me yard area"
     }
     toselhou_byuser.numOf_br_toselHou = false; // for number of bed room
     toselhou_byuser.landArea_ofHouse_tosell = true; // for land area of house to sell
@@ -1102,7 +1102,7 @@ else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true
  else if (received_message.text && toselhou_byuser.both2_numOf_br_tsel === true) { 
   userEntered_Hou_tosel.both2_numOf_br_tsel = received_message.text;   // for both, number of bed room
     response = {
-      "text": "Please tell me land area of your house."
+      "text": "Please  tell me yard"
     }
     toselhou_byuser.both2_numOf_br_tsel = false;
   toselhou_byuser.landArea_ofHouse_tosell = true; // for land area of house 
@@ -1295,7 +1295,7 @@ else if (received_message.text && toselhou_byuser.sth_yes_toldbyCu === true ) { 
  else if (received_message.payload === "tselottlan" || received_message.payload === "tselpoblan" || received_message.payload === "tseldeklan" || received_message.payload === "tselzayalan" || received_message.payload === "tselzabulan" || received_message.payload === "toselpyinlan") {
       userEntered_land_tosel.twp_name_tosell_land = received_message.payload;  // for twp name to sell 
          response = {
-      "text":'Please tell me area of your land that you want to sell.'
+      "text":'Please tell me yard area:'
     }
     received_message.payload = false; 
     tosel_land_byuser.land_area_tosell_byCu = true; // for land area
@@ -1832,7 +1832,7 @@ else if (received_message.payload === "potwp") {
   // to buy house in pobba, RC, one floor,
   else if (received_message.payload === "onef_pobb") {
     response = {
-                  "text": "Do you want how much wide land area of house?",
+                  "text": "Please  choose yard area:",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -1855,7 +1855,7 @@ else if (received_message.payload === "potwp") {
   // to buy house in pobba, RC, two floor, area
   else if (received_message.payload === "twof_pobb") {
     response = {
-                  "text": "Do you want how much wide land area of house?",
+                  "text": "Please  choose yard area:",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -2485,7 +2485,7 @@ else if (received_message.payload === "zaytwp") {
   // to buy house in zayathi, RC, two floor, 
   else if (received_message.payload === "twof_zayathi") {
     response = {
-                  "text": "Please choose the land area of house you want to buy:",
+                  "text": "Please  choose yard area:",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -2742,7 +2742,7 @@ else if (received_message.payload === "zabtwp") {
    // to buy house in zabu, RC, one floor, 
   else if (received_message.payload === "onef_zabuthiri11aa") {
     response = {
-                  "text": "Please choosse the land area of house:",
+                  "text": "Please  choose yard area:",
                     "quick_replies": [
                         {
                           "content_type": "text",
@@ -3051,7 +3051,7 @@ else if (received_message.payload === "zabtwp") {
 // to buy house in pyinmana, RC, one floor, 
   else if (received_message.payload === "onef_pyinfloor11") {
     response = {
-                  "text": "Do you want how much wide land area of house?",
+                  "text": "Please  choose yard area:",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -3080,7 +3080,7 @@ else if (received_message.payload === "zabtwp") {
 // to buy house in pyinmana, RC, two floor
   else if (received_message.payload === "twoff_pyinfloora11") {
     response = {
-                  "text": "Do you want how much wide land area of house?",
+                  "text": "Please  choose yard area:",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -5944,7 +5944,7 @@ else if (received_message.payload === "tenandek") {
   // to rent house in dekkhina, RC 
   else if (received_message.payload === "rc_dekki1_tenant") {
     response = {
-                  "text": "Please choose you want to buy the house in which",
+                  "text": "Please choose number of floor:",
                     "quick_replies": [
                          {
                           "content_type": "text",
@@ -7020,7 +7020,7 @@ function handlePostback(sender_psid, received_postback) {
     // to buy house
    else if (payload === 'hou') {
          response = {
-                  "text": "Do you want to buy a house in what township?",
+                  "text": "Do you want to purchase a house in what township?",
                     "quick_replies": [
                         {
                           "content_type": "text",
@@ -7097,7 +7097,7 @@ else if (payload === 'innnter') {
   // to buy land 
       else if (payload === "lann") {
       response = {
-                  "text": "Do you want to buy land in what township?",
+                  "text": "Do you want to purchase land in what township?",
                     "quick_replies": [
                         {
                           "content_type": "text",
