@@ -6417,11 +6417,36 @@ function handlePostback(sender_psid, received_postback) {
   } else if (payload === 'get_started') {
   greetUser(sender_psid);
  } 
+
 // main menu
   else if (payload === 'mainmenu_me') {
-      greetUser(sender_psid);
+     response = { 
+            "attachment": {
+                "type": "template",
+                "payload": {
+                  "template_type": "button",
+                  "text": "How can we help you?",
+                  "buttons": [
+                    {
+                      "type": "postback",
+                      "title": "Purchase/Sell Property",
+                      "payload": "purchaseSellPp"
+                    },
+                    {
+                      "type": "postback",
+                      "title": "Rental Services",
+                      "payload": "rentalSer"
+                    },
+                    {
+                      "type": "postback",
+                      "title": "House Moving Services",
+                      "payload": "move_hou_service"
+                    }
+                  ]
+                }
+              }
+    }
   }
-
 
 // to buy or sell 
   else if (payload === 'purchaseSellPp') {
