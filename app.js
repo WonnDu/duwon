@@ -188,6 +188,12 @@ let torentland_tenant = {
 let userEntered_info_torentland_te = {};
 
 
+// admin to create property
+let createPropertyAd = {
+  dateByAdmin:false,
+  propertyIdByCu:false,
+}
+let adminEnteredall_info = {};
 
 
 /**********************************************************************/
@@ -6340,7 +6346,7 @@ else if (received_message.payload === "otherrrf_zabuthiri11_tenant1") {
 }
 /**********************************************************************************************************************************/
 /**********************************************************************************************************************************/
-  else if (received_message.text == "admin1234") {    
+  else if (received_message.text == "admin1234" || received_message.text == "Admin1234") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
@@ -6366,7 +6372,23 @@ else if (received_message.payload === "otherrrf_zabuthiri11_tenant1") {
     }
   }
 
+// to create property in all
+else if (received_message.text && createPropertyAd.dateByAdmin == true) {
+    adminEnteredall_info.dateByAdmin = received_message.text;
+    response  = {
+        "text" : "Firstly, Please enter the date in DD/MM/YYYY format"
+    }
+    createPropertyAd.dateByAdmin = false;
+    createPropertyAd.propertyIdByCu = false;
+ }
 
+else if (received_message.text && createPropertyAd.propertyIdByCu == true) {
+    adminEnteredall_info.propertyIdByCu = received_message.text;
+    response  = {
+        "text" : "Type verify/<property Id"
+    }
+    createPropertyAd.propertyIdByCu = false;
+ }    
 
 
   /*******************************************************************************************************************************/
@@ -7177,7 +7199,15 @@ else if (payload === 'admins_selling') {
                 }
         }
     }
- } 
+ }
+
+// to create property in selling
+else if (payload === 'createP_toselHouse' || payload === 'createPTosellLand') {
+    response  = {
+        "text" : "Firstly, Please enter the date in DD/MM/YYYY format"
+    }
+     createPropertyAd.dateByAdmin = true;
+ }  
 
 // to create property in renting
 else if (payload === 'adminr_renting') {
@@ -7204,6 +7234,13 @@ else if (payload === 'adminr_renting') {
     }
  } 
 
+// to create property in renting
+else if (payload === 'createHouse_torent' || payload === 'createLand_torent') {
+    response  = {
+        "text" : "Firstly, Please enter the date in DD/MM/YYYY format"
+    }
+    createPropertyAd.dateByAdmin = true;
+ }  
 
 
 
