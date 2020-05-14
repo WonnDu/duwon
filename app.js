@@ -6417,6 +6417,11 @@ function handlePostback(sender_psid, received_postback) {
   } else if (payload === 'get_started') {
   greetUser(sender_psid);
  } 
+// main menu
+  else if (payload === 'mainmenu_me') {
+      greetUser(sender_psid);
+  }
+
 
 // to buy or sell 
   else if (payload === 'purchaseSellPp') {
@@ -6873,6 +6878,11 @@ else if (payload === 'innnter') {
       }
     }
 
+
+
+
+
+    // for service charges
     else if (payload === 'servch') {
     let response1  = { "text": "Please chose one of the service charges that you want to know." };
     let response2 = { "attachment":{
@@ -6886,11 +6896,6 @@ else if (payload === 'innnter') {
                     "type":"postback",
                     "title":"Sell",
                     "payload": "se1"
-                    },
-                    {
-                    "type":"postback",
-                    "title":"Buy",
-                    "payload":"bu2"
                     },
                     {
                     "type":"postback",
@@ -6908,6 +6913,11 @@ else if (payload === 'innnter') {
     response  = { "text": "3% service charge for the property that has value below 1000 lakhs!!   And 2% service charge for the property that has value 1000 lakhs and above 1000 lakhs!!" };
  } else if (payload === 'ren3') {
     response  = { "text": "Take rent of a month from both sides whether the period is rented or not." };
+ } 
+
+// ways to contact us
+else if (payload === 'contactUsToduwon') {
+    response  = { "Duwon Real Estate Services Page  Duwon Real Estate Agent Email duwon119address@gmail.com Office Address No (1374), MyintZu Street, Paung Laung (3), Pyinmana township, Naypyitaw Phone 09 970 870 203" };
  } 
 
  // to sell house
@@ -7242,14 +7252,14 @@ function setupPersistentMenu(res){
                             {
                               "title":"Contact Us",
                               "type":"postback",
-                              "payload":"two2"
+                              "payload":"contactUsToduwon"
                             }
                         ]
                       },
                         {
                         "title":"Main Menu ",
                         "type":"postback",
-                        "payload":"onee"
+                        "payload":"mainmenu_me"
                     },
                        {
                         "title":"Service Charges",
