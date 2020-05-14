@@ -6383,6 +6383,7 @@ else if (received_message.text && createPropertyAd.dateByAdmin == true) {
  }
 else if (received_message.text && createPropertyAd.propertyIdByCu == true) {
     adminEnteredall_info.propertyIdByCu = received_message.text;
+    saveData_foradmin(sender_psid);
     response  = {
         "text" : "Success!"
     }
@@ -7643,21 +7644,13 @@ function saveData_torent_land_asTenant(sender_psid) {
   db.collection('cu_torent_land_asTenant').add(userEntered_info_torentland_te);
 }
 
-// to rent land in by user // as tenant
-/*
-let torentland_tenant = {
-  cu_say_yes_sthElse_tenant:false,
-  cu_say_no_sthElse_tenant:false,
-  phNumberByCu_torentHou_tenant:false,
-}
-let userEntered_info_torentland_te = {};
-*/
 
-// to rent land told by user // as tenant
-/*
-let torentland_told = {
-  land_yesyes_byuser:false,
-  leave_phno_land1:false,
+// admin to create property
+function saveData_foradmin(sender_psid) {
+  const saveByAd = {
+    id : sender_psid,
+    dateByAdmin : adminEnteredall_info.dateByAdmin,
+    propertyIdByCu : adminEnteredall_info.propertyIdByCu,
+  }
+  db.collection('savedata_byAdmin').add(adminEnteredall_info);
 }
-let userEntered_yes1_torentland = {};
-*/
