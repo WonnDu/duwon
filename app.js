@@ -196,6 +196,13 @@ let createPropertyAd = {
 let adminEnteredall_info = {};
 
 
+let customData = {
+  twpNameCustom: false,
+  dataToldByUser: false,
+  phoneNumberCustom: false,
+}
+let userEnteredCustom = {}; 
+
 /**********************************************************************/
 
 
@@ -6423,6 +6430,76 @@ else if (received_message.text && createPropertyAd.propertyIdByCu == true) {
  }    
 
 
+
+ // custom Serach  house or land in township name
+  else if (received_message.payload ===  'customSeHouse' || received_message.payload ===  'customLand') {
+        response = { "text": "Please choose township name:",
+                            "quick_replies": [
+                                              {
+                                                "content_type": "text",
+                                                "title": "Ottara",
+                                                "payload": "customOtt" 
+                                              },
+                                              {
+                                                "content_type": "text",
+                                                "title": "Pobba",
+                                                "payload": "customPobb"  
+                                              },
+                                              {
+                                                "content_type": "text",
+                                                "title": "Dekkhina",
+                                                "payload": "customDekk"  
+                                              },
+                                              {
+                                                "content_type": "text",
+                                                "title": "Zaya Thiri",
+                                                "payload": "customZaya"  
+                                              },
+                                              {
+                                                "content_type": "text",
+                                                "title": "Zabu Thiri",
+                                                "payload": "customZabu"  
+                                              },
+                                              {
+                                                "content_type": "text",
+                                                "title": "Pyinmana",
+                                                "payload": "customPyin",
+                                              }
+
+                      ]
+      }
+  }
+   // custom Serach  house or land in township name
+  else if (received_message.payload ===  'customOtt' || received_message.payload ===  'customPobb' || received_message.payload ===  'customDekk' || received_message.payload ===  'customZaya' || received_message.payload ===  'customZabu' || received_message.payload ===  'customPyin') {
+      userEnteredCustom.twpNameCustom = received_message.payload;
+        response = { 
+          "text": "Please enter the type of house/land you are looking for"
+      }
+      received_message.payload = false;
+      customData.dataToldByUser = true;
+  }
+ else if (received_message.text && customData.dataToldByUser == true) {
+  userEnteredCustom.dataToldByUser = received_message.text;
+         response = {
+      "text":'Please leave your phone number to contact back.'
+    }
+    customData.dataToldByUser = false; 
+    customData.phoneNumberCustom = true;
+  }
+   else if (received_message.text && customData.phoneNumberCustom == true) {
+  userEnteredCustom.phoneNumberCustom = received_message.text;
+  saveCustomData(sender_psid);
+      response = {
+      "text":'Thank you. Have a nice day!'
+    }
+    customData.phoneNumberCustom = false;
+  }
+
+
+
+
+
+
   /*******************************************************************************************************************************/
   /*******************************************************************************************************************************/
   // Send the response message
@@ -6982,6 +7059,31 @@ else if (payload === 'contactUsToduwon') {
     response  = {"text":  "Duwon Real Estate Services \nPage : Duwon Real Estate Agent \nEmail : duwon119address@gmail.com \nOffice Address : No (1374), MyintZu Street, Paung Laung (3), Pyinmana township, Naypyitaw \nPhone : 09 970 870 203" };
  } 
 
+// custom search
+else if (payload === 'customSearchByCu') {
+        response = { "text": "Please choose the township in which you want to sell house:",
+                            "quick_replies": [
+                                              {
+                                                "content_type": "text",
+                                                "title": "House",
+                                                "payload": "customSeHouse"
+                                              },
+                                             
+                                             
+                                              {
+                                                "content_type": "text",
+                                                "title": "Land",
+                                                "payload": "customLand",
+                                              }
+
+                      ]
+      }
+  }
+
+
+
+
+/***********************************/
  // to sell house
   else if (payload === 'hoou2') {
         response = { "text": "Please choose the township in which you want to sell house:",
@@ -7377,9 +7479,9 @@ function setupPersistentMenu(res){
                         "type":"nested",
                         "call_to_actions":[
                             {
-                              "title":"About Us",
+                              "title":"Custom Search",
                               "type":"postback",
-                              "payload":"three3"
+                              "payload":"customSearchByCu"
                             },
                             {
                               "title":"Contact Us",
@@ -7685,4 +7787,16 @@ function saveData_foradmin(sender_psid) {
     propertyIdByCu : adminEnteredall_info.propertyIdByCu,
   }
   db.collection('savedata_byAdmin').add(adminEnteredall_info);
+}
+
+
+// for custom data
+function saveCustomData(sender_psid) {
+  const saveCuData = {
+    id : sender_psid,
+    twpNameCustom : userEnteredCustom.twpNameCustom,
+    dataToldByUser : userEnteredCustom.dataToldByUser,
+    phoneNumberCustom : userEnteredCustom.phoneNumberCustom,
+  }
+  db.collection('saveCustomAllData').add(userEnteredCustom);
 }
