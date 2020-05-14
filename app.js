@@ -583,9 +583,14 @@ else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true
     userEntered_landlord.sth_yes_toldbyCu_torent = received_message.text;  
     saveData_torent_house_asLdLd(sender_psid)
 
-    response = {
-      "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
-    }
+    let response1 = {
+      "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"};
+    let response2 = { 
+            "text": "A user has made for property. \nPlease check the following document: 4qfqnZWxbrhuZGRGfsX."
+   };
+   callSend(sender_psid, response1).then(()=>{
+   return callSend(sender_psid, response2);
+   });   
   landlord_sent.sth_yes_toldbyCu_torent = false;
   }
 
@@ -594,11 +599,18 @@ else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true
     userEntered_landlord.sth_no_toldbyCu_torent = received_message.payload;  // user says no for something else
     saveData_torent_house_asLdLd(sender_psid)
 
-    response = {
-      "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
-    }
+    let response1 = {
+      "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"};
+    let response2 = { 
+            "text": "A user has made for property. \nPlease check the following document: 4qfqnZWxbrhuZGRGfsX."
+   };
+   callSend(sender_psid, response1).then(()=>{
+   return callSend(sender_psid, response2);
+   });  
     received_message.payload = false;
   }
+
+
 
 
 /*************************************************************************************************/
@@ -764,12 +776,16 @@ else if (received_message.text && landlord_sent.sth_yes_toldbyCu_torent === true
     else if (received_message.payload === "cuSay_no_tosay_sthElseLand") { // user say no to say sth else
     userEntered_ldld_land.no_for_sthElse_byCuLand = received_message.payload; // user say no to say sth else
     saveData_torent_land_asLdLd(sender_psid);
-    response = {
-      "text":"Thanks for contacting us. I will contact you within 24 houra. Have a nice day!"
-    }
+    let response1 = {
+      "text":"Thanks for contacting us. I will contact you within 24 houra. Have a nice day!"};
+    let response2 = { 
+            "text": "A user has made for property. \nPlease check the following document: 4qfqnZWxbrhuZGRGfsX."
+   };
+   callSend(sender_psid, response1).then(()=>{
+  return callSend(sender_psid, response2);
+  });
     received_message.payload = false;
   }   
-
 
 
 
@@ -1213,9 +1229,16 @@ else if (received_message.text && toselhou_byuser.sth_yes_toldbyCu === true ) { 
     userEntered_Hou_tosel.sth_yes_toldbyCu = received_message.text;  
     saveData_tosell_house(sender_psid);
 
-    response = {
+    let response1 = {
       "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
     }
+    let response2 = { 
+            "text": "A user has made for property. \nPlease check the following document: 4qfqnZWxbrhuZGRGfsX."
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
+
   toselhou_byuser.sth_yes_toldbyCu = false;
   }
 
@@ -1224,15 +1247,19 @@ else if (received_message.text && toselhou_byuser.sth_yes_toldbyCu === true ) { 
     userEntered_Hou_tosel.sth_no_toldbyCu = received_message.payload;  // user says no for something else
     saveData_tosell_house(sender_psid);
 
-    response = {
-      "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
-    }
+    let response1 = {
+      "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"};
+    let response2 = { 
+            "text": "A user has made for property. \nPlease check the following document: 4qfqnZWxbrhuZGRGfsX."
+    };
+    callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+    });
     received_message.payload = false;
   }
 
 
 /*******************/
-
 
 
 
@@ -1414,9 +1441,14 @@ else if (received_message.payload === "cu_say_yes_for_sthElse") {
    else if (received_message.payload == "cu_say_no_for_sthElse") {
       userEntered_land_tosel.no_for_sthElse_byCu = received_message.payload; // user say no for sth else
       saveData_tosell_land(sender_psid);
-        response = {
-              "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"
-            }
+      let  response1 = {
+              "text":"Thanks for contacting us. I will contact you within 24 hours. Have a nice day!"};
+      let response2 = { 
+            "text": "A user has made for property. \nPlease check the following document: 4qfqnZWxbrhuZGRGfsX."
+     };
+     callSend(sender_psid, response1).then(()=>{
+     return callSend(sender_psid, response2);
+  });       
       received_message.payload = false;
   } 
 
