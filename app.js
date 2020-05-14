@@ -6598,17 +6598,17 @@ else if (received_message.payload === 'startOttara' || received_message.payload 
  else if (received_message.text && movingHouseServiceData.appointmentDate == true) {
         userEnteredDataMoveHouseService.appointmentDate = received_message.text;
         response = { 
-                    "text": "Please leve us your phone number to contact you back.",
+                    "text": "Please leave us your phone number to contact you back."
               }
         movingHouseServiceData.appointmentDate = false;
-        movingHouseServiceData.customerPhoneNumber_mhs = false;
-
+        movingHouseServiceData.customerPhoneNumber_mhs = true;
 }
+
  else if (received_message.text && movingHouseServiceData.customerPhoneNumber_mhs == true) {
         userEnteredDataMoveHouseService.customerPhoneNumber_mhs = received_message.text;
         saveMoveHouseData(sender_psid);
         response = { 
-                    "text": "We are processing your appointment. We will get back to you soon. Thank you for working with our service"
+                    "text": "We are processing your appointment. \nWe will get back to you soon. \nThank you for working with our service"
               }
         movingHouseServiceData.customerPhoneNumber_mhs = false;
 }     
