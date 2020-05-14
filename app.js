@@ -210,7 +210,7 @@ let movingHouseServiceData = {
   appointmentDate: false,
   customerPhoneNumberApp : false,
 }
-let userEnteredDataMoveHouseService: false = {};
+let userEnteredDataMoveHouseService = {};
 
 /**********************************************************************/
 
