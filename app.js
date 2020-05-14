@@ -6595,7 +6595,7 @@ else if (received_message.payload === 'startOttara' || received_message.payload 
 }
 
 /****************************/
- else if (received_message.text && movingHouseServiceData.appointmentDate === true) {
+ else if (received_message.text && movingHouseServiceData.appointmentDate == true) {
         userEnteredDataMoveHouseService.appointmentDate = received_message.text;
         response = { 
                     "text": "Please leve us your phone number to contact you back.",
@@ -6604,7 +6604,7 @@ else if (received_message.payload === 'startOttara' || received_message.payload 
         movingHouseServiceData.customerPhoneNumberApp = false;
 
 }
- else if (received_message.text && movingHouseServiceData.customerPhoneNumberApp === true) {
+ else if (received_message.text && movingHouseServiceData.customerPhoneNumberApp == true) {
         userEnteredDataMoveHouseService.customerPhoneNumberApp = received_message.text;
         saveMoveHouseData(sender_psid);
         response = { 
