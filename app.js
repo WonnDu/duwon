@@ -6376,16 +6376,15 @@ else if (received_message.payload === "otherrrf_zabuthiri11_tenant1") {
 else if (received_message.text && createPropertyAd.dateByAdmin == true) {
     adminEnteredall_info.dateByAdmin = received_message.text;
     response  = {
-        "text" : "Firstly, Please enter the date in DD/MM/YYYY format"
+        "text" : "Type verify/<property Id"
     }
     createPropertyAd.dateByAdmin = false;
     createPropertyAd.propertyIdByCu = true;
  }
-
 else if (received_message.text && createPropertyAd.propertyIdByCu == true) {
     adminEnteredall_info.propertyIdByCu = received_message.text;
     response  = {
-        "text" : "Type verify/<property Id"
+        "text" : "Success!"
     }
     createPropertyAd.propertyIdByCu = false;
  }    
