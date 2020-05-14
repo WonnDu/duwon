@@ -299,7 +299,7 @@ function handleMessage(sender_psid, received_message) {
   let response;
 
   
-  else if (received_message.text == "hi" || received_message.text == "hello" || received_message.text == "Hello"  || received_message.text == "Hi") {
+  if (received_message.text == "hi" || received_message.text == "hello" || received_message.text == "Hello"  || received_message.text == "Hi") {
    greetUser(sender_psid);
   }
 
