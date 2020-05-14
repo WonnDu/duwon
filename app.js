@@ -208,7 +208,7 @@ let movingHouseServiceData = {
   startTwonshipName: false,
   destinationTwonshipName: false,
   appointmentDate: false,
-  customerPhoneNumberApp : false,
+  customerPhoneNumber_mhs: false,
 }
 let userEnteredDataMoveHouseService = {};
 
@@ -6601,16 +6601,16 @@ else if (received_message.payload === 'startOttara' || received_message.payload 
                     "text": "Please leve us your phone number to contact you back.",
               }
         movingHouseServiceData.appointmentDate = false;
-        movingHouseServiceData.customerPhoneNumberApp = false;
+        movingHouseServiceData.customerPhoneNumber_mhs = false;
 
 }
- else if (received_message.text && movingHouseServiceData.customerPhoneNumberApp == true) {
-        userEnteredDataMoveHouseService.customerPhoneNumberApp = received_message.text;
+ else if (received_message.text && movingHouseServiceData.customerPhoneNumber_mhs == true) {
+        userEnteredDataMoveHouseService.customerPhoneNumber_mhs = received_message.text;
         saveMoveHouseData(sender_psid);
         response = { 
                     "text": "We are processing your appointment. We will get back to you soon. Thank you for working with our service"
               }
-        movingHouseServiceData.customerPhoneNumberApp = false;
+        movingHouseServiceData.customerPhoneNumber_mhs = false;
 }     
 
 
@@ -7944,7 +7944,7 @@ function saveMoveHouseData(sender_psid) {
     startTwonshipName : userEnteredDataMoveHouseService.startTwonshipName,
     destinationTwonshipName : userEnteredDataMoveHouseService.destinationTwonshipName,
     appointmentDate : userEnteredDataMoveHouseService.appointmentDate,
-    customerPhoneNumberApp : userEnteredDataMoveHouseService.customerPhoneNumberApp,
+    customerPhoneNumber_mhs : userEnteredDataMoveHouseService.customerPhoneNumber_mhs,
   }
   db.collection('saveMoveHouse').add(userEnteredDataMoveHouseService);
 }
