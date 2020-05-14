@@ -299,41 +299,7 @@ function handleMessage(sender_psid, received_message) {
   let response;
 
   
-  // Checks if the message contains text
-  if (received_message.text == "ahii") {    
-    // Create the payload for a basic text message, which
-    // will be added to the body of our request to the Send API
-    response = {
-      "text": "Pick a color:",
-      "quick_replies":[
-      {
-        "content_type":"text",
-        "title":"Red",
-        "payload":"red-1",
-        "image_url":"http://example.com/img/red.png"
-      },
-      {
-        "content_type":"text",
-        "title":"Red",
-        "payload":"red-2",
-        "image_url":"http://example.com/img/red.png"
-      },
-      {
-        "content_type":"text",
-        "title":"Green",
-        "payload":"<POSTBACK_PAYLOAD>",
-        "image_url":"http://example.com/img/green.png"
-      }
-    ]
-    }
-  }
-  else if (received_message.text == "ahelloo") {
- /*   response = {
-      "text":'Say'
-    }   */
-    greetUser(sender_psid);
-  }
-  else if (received_message.text == "hi" || received_message.text == "hello" || received_message.text == "Hi") {
+  else if (received_message.text == "hi" || received_message.text == "hello" || received_message.text == "Hello"  || received_message.text == "Hi") {
    greetUser(sender_psid);
   }
 
@@ -6374,14 +6340,31 @@ else if (received_message.payload === "otherrrf_zabuthiri11_tenant1") {
 }
 /**********************************************************************************************************************************/
 /**********************************************************************************************************************************/
-/* else if (received_message.text && toselhou_byuser.landArea_ofHouse_tosell === true) { 
-  userEntered_Hou_tosel.landArea_ofHouse_tosell = received_message.text;   
+  else if (received_message.text == "admin1234") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
     response = {
-      "text": "Please tell me type of land on which your house that will be sold is bulit."
+      "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"button",
+        "text":"Welcome Admin! \nPlease choose one of options to create property:",
+         "buttons":[
+                    {
+                    "type":"postback",
+                    "title":"For selling",
+                    "payload": "admins_selling"
+                    },
+                    {
+                    "type":"postback",
+                    "title":"For renting",
+                    "payload": "adminr_renting"
+                    }                            
+                  ]  
+                }
+        }
     }
-    toselhou_byuser.landArea_ofHouse_tosell = false; 
-    toselhou_byuser.typeOf_land_ofHou_tsel = true; 
-*/
+  }
 
 
 
@@ -6935,9 +6918,9 @@ else if (payload === 'innnter') {
   return callSend(sender_psid, response2);
   });
  } else if (payload === 'se1') {
-    response  = { "text": "3% service charge for the property that has value below 1000 lakhs!!   And 2% service charge for the property that has value 1000 lakhs and above 1000 lakhs!!" };
+    response  = { "text": "3% service charge for the property that has value below 1000 lakhs.   \n2% service charge for the property that has value 1000 lakhs and above 1000 lakhs." };
  } else if (payload === 'ren3') {
-    response  = { "text": "Take rent of a month from both sides whether the period is rented or not." };
+    response  = { "text": "We take rent of a month from both sides whether the period is rented or not." };
  } 
 
 // ways to contact us
@@ -7170,6 +7153,61 @@ else if (payload === 'contactUsToduwon') {
     }
   }
 }
+
+// to create property in selling
+else if (payload === 'admins_selling') {
+    response  = {
+      "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"button",
+        "text":"Please choose one of options to create property:",
+         "buttons":[
+                    {
+                    "type":"postback",
+                    "title":"House",
+                    "payload": "createP_toselHouse"
+                    },
+                    {
+                    "type":"postback",
+                    "title":"Land",
+                    "payload": "createPTosellLand"
+                    }                            
+                  ]  
+                }
+        }
+    }
+ } 
+
+// to create property in renting
+else if (payload === 'adminr_renting') {
+    response  = {
+      "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"button",
+        "text":"Please choose one of options to create property:",
+         "buttons":[
+                    {
+                    "type":"postback",
+                    "title":"House",
+                    "payload": "createHouse_torent"
+                    },
+                    {
+                    "type":"postback",
+                    "title":"Land",
+                    "payload": "createLand_torent"
+                    }                            
+                  ]  
+                }
+        }
+    }
+ } 
+
+
+
+
+
 
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
