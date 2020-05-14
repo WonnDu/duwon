@@ -7371,11 +7371,13 @@ async function greetUser(sender_psid){
                       "type": "postback",
                       "title": "Purchase/Sell Property",
                       "payload": "purchaseSellPp"
-                    },{
+                    },
+                    {
                       "type": "postback",
                       "title": "Rental Services",
                       "payload": "rentalSer"
-                    },{
+                    },
+                    {
                       "type": "postback",
                       "title": "House Moving Services",
                       "payload": "move_hou_service"
@@ -7384,6 +7386,7 @@ async function greetUser(sender_psid){
                 }
               }
    }
+     callSendAPI(sender_psid, response);
 }
 
 
