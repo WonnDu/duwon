@@ -203,6 +203,15 @@ let customData = {
 }
 let userEnteredCustom = {}; 
 
+
+let movingHouseServiceData = {
+  startTwonshipName: false,
+  destinationTwonshipName: false,
+  appointmentDate: false,
+  customerPhoneNumberApp : false,
+}
+let userEnteredDataMoveHouseService: false = {};
+
 /**********************************************************************/
 
 
@@ -6496,6 +6505,114 @@ else if (received_message.text && createPropertyAd.propertyIdByCu == true) {
   }
 
 
+/*******************************************************************************************************************************/
+/*******************************************************************************************************************************/
+
+else if (received_message.payload === 'startOttara' || received_message.payload === 'startPobba' || received_message.payload === 'startDekk' || received_message.payload === 'startZaya' || received_message.payload === 'startZabu' || received_message.payload === 'startPyin') {
+        userEnteredDataMoveHouseService.startTwonshipName = received_message.payload;
+        response = { 
+                    "text": "Please choose destination township:",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Ottara",
+                          "payload": "destinationOtt",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "Pobba",
+                          "payload": "destinationPobb",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Dekkhina",
+                          "payload": "destinationDekk",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zaya Thiri",
+                          "payload": "destinationZaya",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zabu Thiri",
+                          "payload": "destinationZabu",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Pyinmana",
+                          "payload": "destinationPyin",
+                        }
+
+                      ]
+              }
+            received_message.payload = false;
+
+    }     
+/*************************************************************/
+
+ else if (received_message.payload === 'destinationOtt') {
+        userEnteredDataMoveHouseService.destinationTwonshipName = received_message.payload;
+        response = { 
+                    "text": "The price of relocation is 6000MKK. \nPlease enter the date of relocation in DD/MM/YYYY format",
+              }
+        movingHouseServiceData.appointmentDate = true;
+}
+ else if (received_message.payload === 'destinationPobb') {
+        userEnteredDataMoveHouseService.destinationTwonshipName = received_message.payload;
+        response = { 
+                    "text": "The price of relocation is 7000MKK. \nPlease enter the date of relocation in DD/MM/YYYY format",
+              }
+        movingHouseServiceData.appointmentDate = true;
+}
+ else if (received_message.payload === 'destinationDekk') {
+        userEnteredDataMoveHouseService.destinationTwonshipName = received_message.payload;
+        response = { 
+                    "text": "The price of relocation is 5000MKK. \nPlease enter the date of relocation in DD/MM/YYYY format",
+              }
+        movingHouseServiceData.appointmentDate = true;
+}      
+ else if (received_message.payload === 'destinationZaya') {
+        userEnteredDataMoveHouseService.destinationTwonshipName = received_message.payload;
+        response = { 
+                    "text": "The price of relocation is 6000MKK. \nPlease enter the date of relocation in DD/MM/YYYY format",
+              }
+        movingHouseServiceData.appointmentDate = true;
+}  
+ else if (received_message.payload === 'destinationZabu') {
+        userEnteredDataMoveHouseService.destinationTwonshipName = received_message.payload;
+        response = { 
+                    "text": "The price of relocation is 7000MKK. \nPlease enter the date of relocation in DD/MM/YYYY format",
+              }
+        movingHouseServiceData.appointmentDate = true;
+}  
+ else if (received_message.payload === 'destinationPyin') {
+        userEnteredDataMoveHouseService.destinationTwonshipName = received_message.payload;
+        response = { 
+                    "text": "The price of relocation is 9000MKK. \nPlease enter the date of relocation in DD/MM/YYYY format",
+              }
+        movingHouseServiceData.appointmentDate = true;
+}
+
+/****************************/
+ else if (received_message.text && movingHouseServiceData.appointmentDate === true) {
+        userEnteredDataMoveHouseService.appointmentDate = received_message.text;
+        response = { 
+                    "text": "Please leve us your phone number to contact you back.",
+              }
+        movingHouseServiceData.appointmentDate = false;
+        movingHouseServiceData.customerPhoneNumberApp = false;
+
+}
+ else if (received_message.text && movingHouseServiceData.customerPhoneNumberApp === true) {
+        userEnteredDataMoveHouseService.customerPhoneNumberApp = received_message.text;
+        saveMoveHouseData(sender_psid);
+        response = { 
+                    "text": "We are processing your appointment. \nWe will get back to you soon. \nThank you for working with our service",
+              }
+        movingHouseServiceData.customerPhoneNumberApp = false;
+}     
+
 
 
 
@@ -7258,28 +7375,6 @@ else if (payload === 'customSearchByCu') {
         "template_type":"generic",
         "elements": [ 
         
-          {
-            "title":"Thone Bane",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/87687473_131104698435330_2366752654857601024_n.jpg?_nc_cat=106&_nc_sid=0be424&_nc_ohc=QGhybKhq_M8AX-3UBKC&_nc_ht=scontent.fmdl2-1.fna&oh=6d483b8025968c5c6f6ff9ed71a9dfd5&oe=5ECE575D",
-            "subtitle":".",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1587913838063988&notif_t=page_message&ref=notif",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1587913838063988&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"move_hou_thone_bane"
-              }              
-            ]      
-          },
              {
             "title":"Light Truck",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/87529724_131104741768659_4560297288781529088_n.jpg?_nc_cat=103&_nc_sid=0be424&_nc_ohc=LLl2pFxuUMQAX9gxSpX&_nc_ht=scontent.fmdl2-1.fna&oh=94929c06c19eb4c27867db5fbec5656a&oe=5ECC9385",
@@ -7291,13 +7386,8 @@ else if (payload === 'customSearchByCu') {
             },
             "buttons":[
               {
-                "type":"web_url",
-                "url":"https://www.facebook.com/Du-Won-105772414301892/inbox/122710692609505/?source=diode&notif_id=1587913838063988&notif_t=page_message&ref=notif",
-                "title":"More Information"
-              },
-              {
                 "type":"postback",
-                "title":"Yes, I'm interested",
+                "title":"Choose",
                 "payload":"move_hou_light_truck"
               }              
             ]      
@@ -7309,6 +7399,50 @@ else if (payload === 'customSearchByCu') {
     }
   }
 }
+
+ else if (payload === 'move_hou_light_truck') {
+        response = { 
+                    "text": "Please choose following township:",
+                    "quick_replies": [
+                        {
+                          "content_type": "text",
+                          "title": "Ottara",
+                          "payload": "startOttara",
+                        },
+                         {
+                          "content_type": "text",
+                          "title": "Pobba",
+                          "payload": "startPobba",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Dekkhina",
+                          "payload": "startDekk",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zaya Thiri",
+                          "payload": "startZaya",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Zabu Thiri",
+                          "payload": "startZabu",
+                        },
+                        {
+                          "content_type": "text",
+                          "title": "Pyinmana",
+                          "payload": "startPyin",
+                        }
+
+                      ]  
+              }
+    } 
+
+
+
+
+/*************************************************************************************************/
 
 // to create property in selling
 else if (payload === 'admins_selling') {
@@ -7799,4 +7933,18 @@ function saveCustomData(sender_psid) {
     phoneNumberCustom : userEnteredCustom.phoneNumberCustom,
   }
   db.collection('saveCustomAllData').add(userEnteredCustom);
+}
+
+
+
+// for moving house service
+function saveMoveHouseData(sender_psid) {
+  const saveDataMh = {
+    id : sender_psid,
+    startTwonshipName : userEnteredDataMoveHouseService.startTwonshipName,
+    destinationTwonshipName : userEnteredDataMoveHouseService.destinationTwonshipName,
+    appointmentDate : userEnteredDataMoveHouseService.appointmentDate,
+    customerPhoneNumberApp : userEnteredDataMoveHouseService.customerPhoneNumberApp,
+  }
+  db.collection('saveMoveHouse').add(userEnteredDataMoveHouseService);
 }
