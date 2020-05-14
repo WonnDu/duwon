@@ -6608,7 +6608,7 @@ else if (received_message.payload === 'startOttara' || received_message.payload 
         userEnteredDataMoveHouseService.customerPhoneNumberApp = received_message.text;
         saveMoveHouseData(sender_psid);
         response = { 
-                    "text": "We are processing your appointment. \nWe will get back to you soon. \nThank you for working with our service",
+                    "text": "We are processing your appointment. \nWe will get back to you soon. \nThank you for working with our service"
               }
         movingHouseServiceData.customerPhoneNumberApp = false;
 }     
