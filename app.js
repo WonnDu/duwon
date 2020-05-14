@@ -6379,7 +6379,7 @@ else if (received_message.text && createPropertyAd.dateByAdmin == true) {
         "text" : "Firstly, Please enter the date in DD/MM/YYYY format"
     }
     createPropertyAd.dateByAdmin = false;
-    createPropertyAd.propertyIdByCu = false;
+    createPropertyAd.propertyIdByCu = true;
  }
 
 else if (received_message.text && createPropertyAd.propertyIdByCu == true) {
