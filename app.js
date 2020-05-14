@@ -338,14 +338,7 @@ function handleMessage(sender_psid, received_message) {
   }
 
     
-  else if (received_message.text == "ni hao") {    
-    // Create the payload for a basic text message, which
-    // will be added to the body of our request to the Send API
-    response = {
-      "text": `Hao Xie Xie. Ni Hao Mah!`
-    }
-  }
-   else if (received_message.text == "hhhhlp") {    
+  else if (received_message.text == "hhhhlp") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
@@ -6425,119 +6418,94 @@ function handlePostback(sender_psid, received_postback) {
   greetUser(sender_psid);
  } 
 
-  else if (payload === 'onee') {
-     response = { "attachment": {
-                  "type": "template",
-                  "payload": {
-                    "template_type": "button",
-                      "text": "To find the properties, please choose an option below:",
-                      "buttons": [
-                        {
-                          "type": "postback",
-                          "title": "To Sell",
-                          "payload": "tosel",
-                        },
-                        {
-                          "type": "postback",
-                          "title": "To Buy",
-                          "payload": "tobu",
-                        },
-                        {
-                          "type": "postback",
-                          "title": "To Rent",
-                          "payload": "tore",
-                        }
-                      ]
-            }
-        }
-    }
-  }
-
-  else if (payload === 'two2') {
-    response = { "attachment": {
-                  "type": "template",
-                  "payload": {
-                    "template_type": "generic",
-                    "elements": [{
-                      "text": "Office Address: No-117, Shwe Li Road, Pobba Thiri Township, Nyapyitaw, Myanmar. Contact bumber: (+95)-9-09970870200 Email: duwon119address@gmail.com",
-                    //  "image_url":"",
-                      "buttons": [
-                        {
-                          "type": "postback",
-                          "title": "Main Menu",
-                          "payload": "onee",
-                        },
-                        {
-                          "type": "postback",
-                          "title": "About us",
-                          "payload": "abus",
-                        },
-                        {
-                          "type": "postback",
-                          "title": "Talk to Admin",
-                          "payload": "talk_to_adminofduwon",
-                        }
-                      ],
-                    }]
-                  }
-                }
-              }              
-  }
-
-  // talk to admin
-    else if (payload === 'talk_to_adminofduwon') {
+// to buy or sell 
+  else if (payload === 'purchaseSellPp') {
     response = { 
-                "text": "Thanks for messaging us. We try to be as responsive as possible. We'll get back to you soon. You can also leave messages and your contact number. Have a nice day!",
-                  
-  }
-}
-// to rent in main menu
-  else if (payload === 'tore') {
-    response = { "attachment": {
-                  "type": "template",
-                  "payload": {
-                    "template_type": "button",
-                      "text": "Please choose below options:",
-                      "buttons": [
-                        {
-                          "type": "postback",
-                          "title": "Landlord",
-                          "payload": "ldld",
-                        },
-                        {
-                          "type": "postback",
-                          "title": "Tenant",
-                          "payload": "tenan",
-                        }
-                      ]
-                  }
+            "attachment": {
+                "type": "template",
+                "payload": {
+                  "template_type": "generic",
+                  "elements":[
+                      {
+                        "title":"House",
+                        "subtitle":"Purchase/Sell House",
+                        "buttons":[{
+                              "type": "postback",
+                              "title": "Purchase",
+                              "payload": "hou" // to buy house
+                          },{
+                            "type": "postback",
+                            "title": "Sell",
+                            "payload": "hoou2" // to sell house
+                          }
+                        ]      
+                      },
+                      {
+                        "title":"Land",
+                        "subtitle":"Purchase/Sell Land",
+                        "buttons":[{
+                              "type": "postback",
+                              "title": "Purchase",
+                              "payload": "lann" // to buy land
+                          },{
+                            "type": "postback",
+                            "title": "Sell",
+                            "payload": "laan2" // to sell land
+                          }
+                        ]      
+                      }
+                  ]
                 }
               }
+     }
   }
-  // landlord in to rent in main menu
-  else if (payload === 'ldld') {
-    response = { "attachment": {
-                  "type": "template",
-                  "payload": {
-                    "template_type": "button",
-                      "text": "Please choose one of  the options to tell what you want to rent",
-                      "buttons": [
+
+ // to rent
+  else if (payload === 'rentalSer') {
+    response = { 
+            "attachment": {
+                "type": "template",
+                "payload": {
+                  "template_type": "generic",
+                  "elements":[
                         {
-                          "type": "postback",
-                          "title": "House",
-                          "payload": "hou_option",
+                          "title":"House",
+                          "subtitle":"House Rental",
+                          "buttons":[{
+                                "type": "postback",
+                                "title": "Rent House",
+                                "payload": "tenanhou" // to rent house
+                            },{
+                              "type": "postback",
+                              "title": "Rent your House",
+                              "payload": "hou_option"  // to rent their house
+                            }
+                          ]      
                         },
-                        {
-                          "type": "postback",
-                          "title": "Land",
-                          "payload": "land_option",
-                        }
-                      ]
-                  }
+                      {
+                        "title":"Land",
+                        "subtitle":"Land Rental",
+                        "buttons":[{
+                            "type": "postback",
+                            "title": "Rent Land",
+                            "payload": "tenanlan" // to rent land
+                          },{
+                            "type": "postback",
+                            "title": "Rent your Land",
+                            "payload": "land_option"// torent their land
+                          }
+                        ]      
+                      }
+                  ]
                 }
               }
+     }
   }
-  // house in landlord
+
+
+
+
+  // house in landlord // to rent their house
   else if (payload === 'hou_option') {
     let response1 = { "text": "You have chose to rent out house as a Landlord." };
     let response2 = { 
@@ -6583,7 +6551,7 @@ function handlePostback(sender_psid, received_postback) {
 
 
 
-  // for land option
+  // for land option // to rent their land
     else if (payload === 'land_option') {
     let response1 = { "text": "You have chose to rent out land as a Landlord." };
     let response2 = { 
@@ -6704,31 +6672,6 @@ function handlePostback(sender_psid, received_postback) {
 }
 
 
-
-  // for tenant
-  else if (payload === 'tenan') {
-    response = { "attachment": {
-                  "type": "template",
-                  "payload": {
-                    "template_type": "button",
-                      "text": "Please choose the below options:",
-                      "buttons": [
-                        {
-                          "type": "postback",
-                          "title": "House",
-                          "payload": "tenanhou",
-                        },
-                         {
-                          "type": "postback",
-                          "title": "Land",
-                          "payload": "tenanlan",
-                        }
-                      ]
-                    
-                  }
-                }
-              }
-  }
   // to rent house as tenant
   else if (payload === 'tenanhou') {
     response = { 
@@ -6813,31 +6756,7 @@ function handlePostback(sender_psid, received_postback) {
 
 /***************************************************************************/
 
-  // to buy house 
-  else if (payload === 'tobu') {
-    response = { "attachment": {
-                  "type": "template",
-                  "payload": {
-                    "template_type": "button",
-                     "text": "Please choose below options to buy:",
-                      "buttons": [
-                        {
-                          "type": "postback",
-                          "title": "House",
-                          "payload": "hou",
-                        },
-                        {
-                          "type": "postback",
-                          "title": "Land",
-                          "payload": "lann",
-                        }
-                      ]
-                    
-                  }
-                }
-              }
-  }
-
+    // to buy house
    else if (payload === 'hou') {
          response = {
                   "text": "Do you want to buy a house in what township?",
@@ -6989,29 +6908,9 @@ else if (payload === 'innnter') {
     response  = { "text": "3% service charge for the property that has value below 1000 lakhs!!   And 2% service charge for the property that has value 1000 lakhs and above 1000 lakhs!!" };
  } else if (payload === 'ren3') {
     response  = { "text": "Take rent of a month from both sides whether the period is rented or not." };
- } else if (payload === 'tosel') {
-    response = { "attachment": {
-                  "type": "template",
-                  "payload": {
-                    "template_type": "button",
-                      "text": "Please choose one of the options to tell what you want to sell:",
-                      "buttons": [
-                        {
-                          "type": "postback",
-                          "title": "House",
-                          "payload": "hoou2",
-                        },
-                         {
-                          "type": "postback",
-                          "title": "Land",
-                          "payload": "laan2",
-                        }
-                      ]
-                  }
-                }
-              }
-} 
+ } 
 
+ // to sell house
   else if (payload === 'hoou2') {
         response = { "text": "Please choose the township in which you want to sell house:",
                             "quick_replies": [
@@ -7132,6 +7031,8 @@ else if (payload === 'innnter') {
 
 
 /*********************************************************/
+
+// to sell land
   else if (payload === 'laan2') {
          response = {
                   "text": "Please choose the township in which you want to sell land:",
@@ -7459,63 +7360,32 @@ FUNCTION TO GREET USER
 ************************/
 async function greetUser(sender_psid){  
   let user = await getUserProfile(sender_psid);   
-  let response1 = { 
-      "attachment":{
-
-      "type":"template",
-      "payload":{
-        "template_type":"button",
-        "text":"Hi "+user.first_name+" "+user.last_name+", you are warmly welcomed. Thank you for contacting us. Have a nice day!",
-         "buttons":[
-                    {
-                    "type":"postback",
-                    "title":"Main Menu",
-                    "payload": "onee"
-                    },
-                    {
-                    "type":"postback",
-                    "title":"Contact us",
-                    "payload":"two2"
-                    },
-                    {
-                    "type":"postback",
-                    "title":"About us",
-                    "payload":"three3"
-                    }                            
-                  ]  
-                }
-        }
-   };
-   let response2 = { "attachment":{
-
-      "type":"template",
-      "payload":{
-        "template_type":"button",
-        "text":". ",
-         "buttons":[
-                    {
-                    "type":"postback",
-                    "title":"Moving House Service",
-                    "payload": "move_hou_service"
-                    },
-                    {
-                    "type":"postback",
-                    "title":"Service charges",
-                    "payload": "servch"
-                    },
+  let response = {      
+            "attachment": {
+                "type": "template",
+                "payload": {
+                  "template_type": "button",
+                  "text": "Hi "+user.first_name+" "+user.last_name+", welcome to Du Won Real Estate Agent. How can we help you?",
+                  "buttons": [
                     {
                       "type": "postback",
-                      "title": "Talk to Admin",
-                      "payload": "talk_to_adminofduwon",
-                    }                          
-                  ]  
+                      "title": "Purchase/Sell Property",
+                      "payload": "purchaseSellPp"
+                    },{
+                      "type": "postback",
+                      "title": "Rental Services",
+                      "payload": "rentalSer"
+                    },{
+                      "type": "postback",
+                      "title": "House Moving Services",
+                      "payload": "move_hou_service"
+                    }
+                  ]
                 }
-        }
-   };
-   callSend(sender_psid, response1).then(()=>{
-  return callSend(sender_psid, response2);
-  });
+              }
+   }
 }
+
 
 
 /*function function save data to firebase*/
